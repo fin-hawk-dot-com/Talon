@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Stone of the Strike",
+    "function": "Melee Attack",
+    "description": "Imbues physical strike with Essence element.",
+    "rarity": "Common"
+  },
+  {
+    "name": "Stone of the Blast",
+    "function": "Ranged Attack",
+    "description": "Projects a bolt/beam of Essence.",
+    "rarity": "Common"
+  },
+  {
+    "name": "Stone of the Shield",
+    "function": "Defense",
+    "description": "Creates a barrier or armor buff.",
+    "rarity": "Common"
+  },
+  {
+    "name": "Stone of the Trap",
+    "function": "Area Denial",
+    "description": "Places a hidden rune/trigger.",
+    "rarity": "Uncommon"
+  },
+  {
+    "name": "Stone of the Familiar",
+    "function": "Summoning",
+    "description": "Spawns an AI minion based on Essence.",
+    "rarity": "Rare"
+  },
+  {
+    "name": "Stone of the Swarm",
+    "function": "Multi-Hit",
+    "description": "Splits effect into multiple small projectiles.",
+    "rarity": "Uncommon"
+  },
+  {
+    "name": "Stone of the Feast",
+    "function": "Drain/Sustain",
+    "description": "Drains enemy resource to refill user.",
+    "rarity": "Rare"
+  },
+  {
+    "name": "Stone of the Flesh",
+    "function": "Body Mod",
+    "description": "Alters user physiology (Passive/Active).",
+    "rarity": "Rare"
+  },
+  {
+    "name": "Stone of the Stars",
+    "function": "Celestial/Augment",
+    "description": "Adds light/cosmic properties or massive buff.",
+    "rarity": "Epic"
+  },
+  {
+    "name": "Stone of the Foot",
+    "function": "Mobility",
+    "description": "Enhances movement or adds teleportation.",
+    "rarity": "Common"
+  },
+  {
+    "name": "Stone of the Echo",
+    "function": "Replication",
+    "description": "Repeats previous action or creates decoy.",
+    "rarity": "Uncommon"
+  },
+  {
+    "name": "Stone of the Wall",
+    "function": "Terrain Control",
+    "description": "Creates physical obstacles.",
+    "rarity": "Uncommon"
+  },
+  {
+    "name": "Stone of Focus",
+    "function": "Perception",
+    "description": "Enhances sensory data.",
+    "rarity": "Common"
+  },
+  {
+    "name": "Stone of Judgment",
+    "function": "Execute",
+    "description": "Deals high dmg to low HP/Debuffed targets.",
+    "rarity": "Rare"
+  },
+  {
+    "name": "Stone of the Key",
+    "function": "Unlock/Access",
+    "description": "Opens sealed paths or reveals secrets.",
+    "rarity": "Epic"
+  },
+  {
+    "name": "Stone of the Void",
+    "function": "Banishment",
+    "description": "Removes targets from reality temporarily.",
+    "rarity": "Legendary"
+  },
+  {
+    "name": "Stone of the Legion",
+    "function": "Mass Summon",
+    "description": "Summons a horde of lesser entities.",
+    "rarity": "Epic"
+  },
+  {
+    "name": "Stone of the Teacher",
+    "function": "Skill Growth",
+    "description": "Accelerates learning and mastery.",
+    "rarity": "Rare"
+  },
+  {
+    "name": "Stone of the Savior",
+    "function": "Emergency Heal",
+    "description": "Triggers automatically to prevent death.",
+    "rarity": "Epic"
+  }
+]
