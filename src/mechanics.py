@@ -3,6 +3,7 @@ import os
 import random
 from typing import List, Optional
 from src.models import Essence, AwakeningStone, Ability, Character, RANKS
+from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
@@ -119,52 +120,47 @@ class ConfluenceManager:
         )
 
 class AbilityGenerator:
-    def generate(self, essence: Essence, stone: AwakeningStone, rank: str = "Iron") -> Ability:
-        name_templates = {
-            "Melee Attack": "{essence} Strike",
-            "Ranged Attack": "{essence} Bolt",
-            "Defense": "{essence} Shield",
-            "Area Denial": "{essence} Trap",
-            "Summoning": "Summon {essence} Spirit",
-            "Multi-Hit": "{essence} Swarm",
-            "Drain/Sustain": "Feast of {essence}",
-            "Body Mod": "{essence} Form",
-            "Celestial/Augment": "Avatar of {essence}",
-            "Mobility": "{essence} Step",
-            "Replication": "{essence} Clone",
-            "Terrain Control": "Wall of {essence}",
-            "Perception": "{essence} Sight",
-            "Execute": "{essence} Execution"
-        }
+    def generate(self, essence: Essence, stone: AwakeningStone, character_rank: str = "Iron", affinity: str = "General") -> Ability:
+        candidates = []
 
-        desc_templates = {
-            "Melee Attack": "Strikes the enemy with physical force imbued with {essence}.",
-            "Ranged Attack": "Fires a bolt of {essence} energy at the target.",
-            "Defense": "Surrounds the user in a protective layer of {essence}.",
-            "Area Denial": "Sets a trap that releases {essence} when triggered.",
-            "Summoning": "Summons a creature made of {essence}.",
-            "Multi-Hit": "Unleashes a flurry of {essence} projectiles.",
-            "Drain/Sustain": "Drains energy from the target to fuel {essence}.",
-            "Body Mod": "Transforms the user's body to take on properties of {essence}.",
-            "Celestial/Augment": "Channels the power of {essence} to greatly enhance stats.",
-            "Mobility": "Uses {essence} to move instantly or at great speed.",
-            "Replication": "Creates an illusory copy made of {essence}.",
-            "Terrain Control": "Raises a wall of {essence} to block movement.",
-            "Perception": "Allows the user to sense {essence} and hidden things.",
-            "Execute": "Delivers a fatal blow using the power of {essence}."
-        }
+        for tmpl in ABILITY_TEMPLATES:
+            # 1. Function match
+            if tmpl.function != stone.function:
+                continue
 
-        func = stone.function
-        template_name = name_templates.get(func, "{essence} Ability")
-        template_desc = desc_templates.get(func, "Uses {essence} to perform {function}.")
+            # 2. Tag Match (Essence must have all tags required by template)
+            if tmpl.essence_tags:
+                if not all(tag in essence.tags for tag in tmpl.essence_tags):
+                    continue
 
-        name = template_name.format(essence=essence.name, function=func)
-        description = template_desc.format(essence=essence.name, function=func)
+            candidates.append(tmpl)
+
+        selected_template = None
+
+        if not candidates:
+            # Fallback if no specific template matches
+            selected_template = AbilityTemplate(
+                pattern="{essence} " + stone.function.split(' ')[0], # Simple fallback
+                function=stone.function,
+                description_template=f"Uses {essence.name} to perform {stone.function}.",
+                affinity_weight={"General": 1.0}
+            )
+        else:
+            # Weighted Random Selection
+            weights = []
+            for c in candidates:
+                w = c.affinity_weight.get(affinity, c.affinity_weight.get("General", 1.0))
+                weights.append(w)
+
+            selected_template = random.choices(candidates, weights=weights, k=1)[0]
+
+        name = selected_template.pattern.format(essence=essence.name)
+        description = selected_template.description_template.format(essence=essence.name)
 
         return Ability(
             name=name,
             description=description,
-            rank=rank,
+            rank=character_rank,
             level=0,
             parent_essence=essence,
             parent_stone=stone

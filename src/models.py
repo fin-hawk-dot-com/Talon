@@ -84,6 +84,7 @@ class Attribute:
 class Character:
     name: str
     race: str
+    affinity: str = "General"  # Warrior, Mage, Rogue, Guardian, Support, General
     attributes: Dict[str, Attribute] = field(default_factory=lambda: {
         "Power": Attribute("Power", 10.0),
         "Speed": Attribute("Speed", 10.0),
