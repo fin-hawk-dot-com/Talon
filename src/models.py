@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Union
 
 RANKS = ["Iron", "Bronze", "Silver", "Gold", "Diamond"]
 
@@ -93,6 +93,7 @@ class Character:
     base_essences: List[Essence] = field(default_factory=list)
     confluence_essence: Optional[Essence] = None
     abilities: Dict[str, List[Optional[Ability]]] = field(default_factory=dict)
+    inventory: List[Union[Essence, AwakeningStone]] = field(default_factory=list)
 
     @property
     def rank(self) -> str:

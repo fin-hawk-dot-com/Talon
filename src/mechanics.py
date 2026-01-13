@@ -1,7 +1,7 @@
 import json
 import os
 import random
-from typing import List, Optional
+from typing import List, Optional, Union
 from src.models import Essence, AwakeningStone, Ability, Character, RANKS
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -236,3 +236,97 @@ class TrainingManager:
         ability.level = 0
         ability.xp = 0
         return f"Success! Ability ranked up to {ability.rank}."
+
+class LootManager:
+    def __init__(self, data_loader: DataLoader):
+        self.data_loader = data_loader
+
+    def generate_random_loot(self) -> Optional[Union[Essence, AwakeningStone]]:
+        """Generates a random Essence or Awakening Stone."""
+        roll = random.random()
+        if roll < 0.3: # 30% chance for Essence
+            essences = self.data_loader.get_all_base_essences()
+            if not essences: return None
+            name = random.choice(essences)
+            return self.data_loader.get_essence(name)
+        elif roll < 0.6: # 30% chance for Stone
+            stones = self.data_loader.get_all_stones()
+            if not stones: return None
+            name = random.choice(stones)
+            return self.data_loader.get_stone(name)
+        else:
+            return None # 40% chance for nothing
+
+class GameEngine:
+    def __init__(self):
+        self.data_loader = DataLoader()
+        self.confluence_mgr = ConfluenceManager(self.data_loader)
+        self.ability_gen = AbilityGenerator()
+        self.training_mgr = TrainingManager()
+        self.loot_mgr = LootManager(self.data_loader)
+        self.character = None
+
+    def create_character(self, name: str, race: str):
+        self.character = Character(name=name, race=race)
+        return self.character
+
+    def absorb_essence(self, essence_index: int, attribute: str) -> str:
+        if not self.character: return "No character."
+        if essence_index < 0 or essence_index >= len(self.character.inventory):
+            return "Invalid inventory index."
+
+        item = self.character.inventory[essence_index]
+        if not isinstance(item, Essence):
+            return "That is not an Essence."
+
+        try:
+            self.character.add_essence(item, attribute)
+            self.character.inventory.pop(essence_index)
+
+            # Check for Confluence
+            if len(self.character.base_essences) == 3 and not self.character.confluence_essence:
+                confluence = self.confluence_mgr.determine_confluence(self.character.base_essences)
+                # Auto-add confluence or let user choose? Spec says 3+1. Let's auto-add for now, but user needs to pick attribute.
+                # Actually, wait. Confluence usually manifests automatically. But it also needs a bonded attribute.
+                # For simplicity, let's just add it to inventory so user can bond it manually.
+                self.character.inventory.append(confluence)
+                return f"Absorbed {item.name}. A Confluence Essence has manifested in your inventory!"
+
+            return f"Absorbed {item.name}."
+        except ValueError as e:
+            return str(e)
+
+    def awaken_ability(self, essence_name: str, stone_index: int, slot_index: int) -> str:
+        if not self.character: return "No character."
+
+        # Validate Stone
+        if stone_index < 0 or stone_index >= len(self.character.inventory):
+            return "Invalid inventory index."
+        stone = self.character.inventory[stone_index]
+        if not isinstance(stone, AwakeningStone):
+            return "That is not an Awakening Stone."
+
+        # Validate Essence
+        if essence_name not in self.character.abilities:
+            return "You do not have that Essence bonded."
+
+        # Validate Slot
+        slots = self.character.abilities[essence_name]
+        if slot_index < 0 or slot_index >= 5:
+            return "Invalid slot index (0-4)."
+        if slots[slot_index] is not None:
+            return "Slot is already occupied."
+
+        # Find the essence object
+        essence = next((e for e in self.character.get_all_essences() if e.name == essence_name), None)
+        if not essence:
+            return "Essence data not found."
+
+        # Generate Ability
+        ability = self.ability_gen.generate(essence, stone, self.character.rank)
+        self.character.abilities[essence_name][slot_index] = ability
+
+        # Remove stone
+        self.character.inventory.pop(stone_index)
+
+        return f"Awakened {ability.name}!"
