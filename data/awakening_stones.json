@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Stone of the Strike",
+    "function": "Melee Attack",
+    "description": "Imbues physical strike with Essence element."
+  },
+  {
+    "name": "Stone of the Blast",
+    "function": "Ranged Attack",
+    "description": "Projects a bolt/beam of Essence."
+  },
+  {
+    "name": "Stone of the Shield",
+    "function": "Defense",
+    "description": "Creates a barrier or armor buff."
+  },
+  {
+    "name": "Stone of the Trap",
+    "function": "Area Denial",
+    "description": "Places a hidden rune/trigger."
+  },
+  {
+    "name": "Stone of the Familiar",
+    "function": "Summoning",
+    "description": "Spawns an AI minion based on Essence."
+  },
+  {
+    "name": "Stone of the Swarm",
+    "function": "Multi-Hit",
+    "description": "Splits effect into multiple small projectiles."
+  },
+  {
+    "name": "Stone of the Feast",
+    "function": "Drain/Sustain",
+    "description": "Drains enemy resource to refill user."
+  },
+  {
+    "name": "Stone of the Flesh",
+    "function": "Body Mod",
+    "description": "Alters user physiology (Passive/Active)."
+  },
+  {
+    "name": "Stone of the Stars",
+    "function": "Celestial/Augment",
+    "description": "Adds light/cosmic properties or massive buff."
+  },
+  {
+    "name": "Stone of the Foot",
+    "function": "Mobility",
+    "description": "Enhances movement or adds teleportation."
+  },
+  {
+    "name": "Stone of the Echo",
+    "function": "Replication",
+    "description": "Repeats previous action or creates decoy."
+  },
+  {
+    "name": "Stone of the Wall",
+    "function": "Terrain Control",
+    "description": "Creates physical obstacles."
+  },
+  {
+    "name": "Stone of Focus",
+    "function": "Perception",
+    "description": "Enhances sensory data."
+  },
+  {
+    "name": "Stone of Judgment",
+    "function": "Execute",
+    "description": "Deals high dmg to low HP/Debuffed targets."
+  }
+]
