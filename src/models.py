@@ -26,6 +26,8 @@ class Ability:
     parent_stone: AwakeningStone
     cooldown: int = 0
     cost: int = 0
+    tags: List[str] = field(default_factory=list)
+    affinity: Optional[str] = None
 
 @dataclass
 class Attribute:

@@ -1,8 +1,9 @@
 import json
 import os
 import random
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from src.models import Essence, AwakeningStone, Ability, Character
+from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
@@ -127,50 +128,89 @@ class ConfluenceManager:
         )
 
 class AbilityGenerator:
-    def generate(self, essence: Essence, stone: AwakeningStone, rank: str = "Iron") -> Ability:
-        # Simple template-based generation
+    def __init__(self):
+        self.templates = ABILITY_TEMPLATES
 
-        name_templates = {
-            "Melee Attack": "{essence} Strike",
-            "Ranged Attack": "{essence} Bolt",
-            "Defense": "{essence} Shield",
-            "Area Denial": "{essence} Trap",
-            "Summoning": "Summon {essence} Spirit",
-            "Multi-Hit": "{essence} Swarm",
-            "Drain/Sustain": "Feast of {essence}",
-            "Body Mod": "{essence} Form",
-            "Celestial/Augment": "Avatar of {essence}",
-            "Mobility": "{essence} Step",
-            "Replication": "{essence} Clone",
-            "Terrain Control": "Wall of {essence}",
-            "Perception": "{essence} Sight",
-            "Execute": "{essence} Execution"
-        }
+    def generate(self, essence: Essence, stone: AwakeningStone, rank: str = "Iron", focus: Optional[str] = None) -> Ability:
+        """
+        Generates an ability based on Essence, Stone, and optional Focus.
+        Uses a weighted random selection process to simulate 'magic' influenced by 'focus'.
+        """
 
-        desc_templates = {
-            "Melee Attack": "Strikes the enemy with physical force imbued with {essence}.",
-            "Ranged Attack": "Fires a bolt of {essence} energy at the target.",
-            "Defense": "Surrounds the user in a protective layer of {essence}.",
-            "Area Denial": "Sets a trap that releases {essence} when triggered.",
-            "Summoning": "Summons a creature made of {essence}.",
-            "Multi-Hit": "Unleashes a flurry of {essence} projectiles.",
-            "Drain/Sustain": "Drains energy from the target to fuel {essence}.",
-            "Body Mod": "Transforms the user's body to take on properties of {essence}.",
-            "Celestial/Augment": "Channels the power of {essence} to greatly enhance stats.",
-            "Mobility": "Uses {essence} to move instantly or at great speed.",
-            "Replication": "Creates an illusory copy made of {essence}.",
-            "Terrain Control": "Raises a wall of {essence} to block movement.",
-            "Perception": "Allows the user to sense {essence} and hidden things.",
-            "Execute": "Delivers a fatal blow using the power of {essence}."
-        }
+        valid_templates = []
 
-        func = stone.function
-        template_name = name_templates.get(func, "{essence} Ability")
-        template_desc = desc_templates.get(func, "Uses {essence} to perform {function}.")
+        for tmpl in self.templates:
+            # Check Stone Function Match
+            if tmpl.required_stone_function != stone.function:
+                continue
 
-        name = template_name.format(essence=essence.name, function=func)
-        description = template_desc.format(essence=essence.name, function=func)
+            # Check Essence Tag Match (if template has requirements)
+            if tmpl.required_essence_tags:
+                # Must match at least one of the required tags (or all? Usually ANY is flexible, ALL is specific)
+                # Let's assume ANY for now to allow "Elemental" template to match Fire or Water
+                # But my templates currently have specific lists like ["Fire"].
+                # Let's check if the essence has ALL the required tags from the template to be a candidate?
+                # Actually, usually specific templates require specific tags.
+                # Example: Template requires ["Fire"]. Essence must have "Fire".
 
+                # If template has ["Fire", "Melee"], Essence needs both? No, "Melee" is likely a tag added BY the template.
+                # The `required_essence_tags` in AbilityTemplate definition was:
+                # "required_essence_tags: List[str] # Empty list means "Generic""
+
+                has_all_requirements = True
+                for req_tag in tmpl.required_essence_tags:
+                    if req_tag not in essence.tags:
+                        has_all_requirements = False
+                        break
+
+                if not has_all_requirements:
+                    continue
+
+            valid_templates.append(tmpl)
+
+        if not valid_templates:
+            # Fallback to a basic generic generation if no templates match
+            # This shouldn't happen with good Generic templates, but safety first.
+            return self._generate_fallback(essence, stone, rank)
+
+        # Calculate Weights
+        weights = []
+        for tmpl in valid_templates:
+            w = tmpl.weight
+
+            # Influence: Attribute Focus
+            if focus and tmpl.affinity == focus:
+                w *= 3.0  # Significant boost for matching focus
+
+            # Influence: Tag Matching Specificity
+            # Reward templates that match more specific tags of the essence
+            # e.g. "Fire" template is better for Fire essence than "Generic" template
+            if tmpl.required_essence_tags:
+                w *= 2.0 # Specific templates are more likely than generic ones usually
+
+            weights.append(w)
+
+        # Select one
+        selected_template = random.choices(valid_templates, weights=weights, k=1)[0]
+
+        # Manifest the Ability
+        name = selected_template.name_pattern.format(essence=essence.name, function=stone.function)
+        description = selected_template.description_pattern.format(essence=essence.name, function=stone.function)
+
+        return Ability(
+            name=name,
+            description=description,
+            rank=rank,
+            level=0,
+            parent_essence=essence,
+            parent_stone=stone,
+            tags=selected_template.tags,
+            affinity=selected_template.affinity
+        )
+
+    def _generate_fallback(self, essence: Essence, stone: AwakeningStone, rank: str) -> Ability:
+        name = f"{essence.name} {stone.function}"
+        description = f"Uses {essence.name} to perform {stone.function}."
         return Ability(
             name=name,
             description=description,
@@ -179,3 +219,35 @@ class AbilityGenerator:
             parent_essence=essence,
             parent_stone=stone
         )
+
+class TrainingManager:
+    def __init__(self, data_loader: DataLoader):
+        self.ability_generator = AbilityGenerator()
+        self.data_loader = data_loader
+
+    def awaken_ability(self, character: Character, essence_name: str, stone_name: str, slot_index: int, focus: Optional[str] = None) -> Ability:
+        """
+        Attempts to awaken an ability for the character.
+        """
+        # validations
+        essence = next((e for e in character.get_all_essences() if e.name == essence_name), None)
+        if not essence:
+            raise ValueError(f"Character does not possess essence {essence_name}")
+
+        stone = self.data_loader.get_stone(stone_name)
+        if not stone:
+             raise ValueError(f"Stone {stone_name} not found")
+
+        if slot_index < 0 or slot_index >= 5:
+            raise ValueError("Slot index must be between 0 and 4")
+
+        if character.abilities[essence_name][slot_index] is not None:
+             raise ValueError("Slot is already occupied")
+
+        # Generate
+        ability = self.ability_generator.generate(essence, stone, character.rank, focus)
+
+        # Assign
+        character.abilities[essence_name][slot_index] = ability
+
+        return ability
