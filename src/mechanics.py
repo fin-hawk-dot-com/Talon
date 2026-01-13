@@ -2,7 +2,7 @@ import json
 import os
 import random
 from typing import List, Optional, Tuple
-from src.models import Essence, AwakeningStone, Ability, Character
+from src.models import Essence, AwakeningStone, Ability, Character, RANKS
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -251,3 +251,66 @@ class TrainingManager:
         character.abilities[essence_name][slot_index] = ability
 
         return ability
+
+    def train_attribute(self, character: Character, attribute_name: str):
+        if attribute_name not in character.attributes:
+            return
+
+        attr = character.attributes[attribute_name]
+
+        # Growth is slower as you rank up relative to the stat value
+        # But here we use a simple linear gain multiplied by the growth multiplier
+        gain = 1.0 * attr.growth_multiplier
+
+        # Optional: Diminishing returns based on rank?
+        # For now, keep it simple.
+        attr.value += gain
+
+    def practice_ability(self, character: Character, essence_name: str, slot_index: int):
+        if essence_name not in character.abilities:
+            return
+
+        abilities = character.abilities[essence_name]
+        if slot_index < 0 or slot_index >= len(abilities):
+            return
+
+        ability = abilities[slot_index]
+        if not ability:
+            return
+
+        # Gain XP
+        xp_gain = 10.0 # Base XP per practice
+        leveled_up = ability.gain_xp(xp_gain)
+
+        return leveled_up
+
+    def attempt_rank_up_ability(self, character: Character, essence_name: str, slot_index: int) -> str:
+        """
+        Attempts to rank up an ability (e.g., Iron -> Bronze).
+        Requires Ability to be at max level (9) and XP full (technically handled by cap).
+        And Character Rank must be higher than Ability Rank (can't have Bronze ability in Iron body typically,
+        unless using special items, but we stick to standard rules).
+        """
+        abilities = character.abilities.get(essence_name)
+        if not abilities: return "Essence not found."
+
+        ability = abilities[slot_index]
+        if not ability: return "No ability in slot."
+
+        if ability.level < 9:
+            return "Ability not at max level (9)."
+
+        current_rank_idx = RANKS.index(ability.rank)
+        char_rank_idx = RANKS.index(character.rank)
+
+        if current_rank_idx >= char_rank_idx:
+            return f"Character Rank ({character.rank}) is not high enough to support higher rank ability."
+
+        if current_rank_idx >= len(RANKS) - 1:
+            return "Already at max rank."
+
+        # Perform Rank Up
+        ability.rank = RANKS[current_rank_idx + 1]
+        ability.level = 0
+        ability.xp = 0
+        return f"Success! Ability ranked up to {ability.rank}."
