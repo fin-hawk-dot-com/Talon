@@ -1,0 +1,52 @@
+[
+  {
+    "bases": ["Fire", "Earth", "Potent"],
+    "result": "Volcano",
+    "archetype": "AoE Destruction / Tank"
+  },
+  {
+    "bases": ["Fire", "Renewal", "Wing"],
+    "result": "Phoenix",
+    "archetype": "Resurrection / Support"
+  },
+  {
+    "bases": ["Dark", "Blood", "Sin"],
+    "result": "Doom",
+    "archetype": "Affliction / Executioner"
+  },
+  {
+    "bases": ["Might", "Swift", "Light"],
+    "result": "Radiant Vanguard",
+    "archetype": "Holy Warrior / Paladin"
+  },
+  {
+    "bases": ["Light", "Dark", "Dimension"],
+    "result": "Eclipse",
+    "archetype": "Spatial Controller"
+  },
+  {
+    "bases": ["Swift", "Wind", "Directed"],
+    "result": "Storm",
+    "archetype": "Speedster / Evasion"
+  },
+  {
+    "bases": ["Gun", "Armor", "Technology"],
+    "result": "Technovore",
+    "archetype": "Ranged Tank / Artificer"
+  },
+  {
+    "bases": ["Iron", "Lightning", "Technology"],
+    "result": "Forge",
+    "archetype": "Crafter / Turret User"
+  },
+  {
+    "bases": ["Life", "Death", "Balance"],
+    "result": "Cycle",
+    "archetype": "Necromancer / Healer"
+  },
+  {
+    "bases": ["Dragon", "Sun", "Moon"],
+    "result": "Celestial Dragon",
+    "archetype": "Mythic Hybrid"
+  }
+]
