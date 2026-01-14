@@ -54,6 +54,8 @@ class ConfluenceManager:
     def __init__(self, data_loader: DataLoader):
         self.data_loader = data_loader
         self.recipes = self.data_loader.confluences_data
+        for recipe in self.recipes:
+            recipe['bases'] = sorted(recipe['bases'])
 
     def determine_confluence(self, essences: List[Essence]) -> Essence:
         if len(essences) != 3:
@@ -63,8 +65,7 @@ class ConfluenceManager:
 
         # 1. Exact Match
         for recipe in self.recipes:
-            recipe_bases = sorted(recipe['bases'])
-            if recipe_bases == essence_names:
+            if recipe['bases'] == essence_names:
                 return Essence(
                     name=recipe['result'],
                     type="Confluence",
