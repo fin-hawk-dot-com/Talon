@@ -45,6 +45,15 @@ def generate_library_md(filepath="LIBRARY.md"):
         cost_type = s.get('cost_type', "Mana")
         lines.append(f"| {s['name']} | {s['function']} | {s['description']} | {rarity} | {cooldown} | {cost_type} |")
 
+    lines.append("\n## Quests")
+    lines.append("| Title | Type | Description | Rewards |")
+    lines.append("|---|---|---|---|")
+
+    quests = sorted(loader.quests_data, key=lambda x: x['title'])
+    for q in quests:
+        rewards = ", ".join(q.get('rewards', []))
+        lines.append(f"| {q['title']} | {q['type']} | {q['description']} | {rewards} |")
+
     lines.append("\n## Example Builds")
 
     # Generate some random or preset builds

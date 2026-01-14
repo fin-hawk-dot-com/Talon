@@ -67,6 +67,16 @@
 | Stone of the Trap | Area Denial | Places a hidden rune/trigger. | Uncommon | Medium | Mana |
 | Stone of the Wall | Terrain Control | Creates physical obstacles. | Uncommon | Medium | Mana |
 
+## Quests
+| Title | Type | Description | Rewards |
+|---|---|---|---|
+| Herb Gathering | Side | The local alchemist needs Moonleaf. | Mana Stone |
+| The Ancient Ruins | Main | An ancient structure has been unearthed nearby. | Confluence Essence |
+| The Awakening | Main | You find yourself in a strange new world, with no memory of how you arrived. | Starter Essence |
+| The Duel | Side | A rival adventurer has challenged you. | Reputation |
+| The Lost Cat | Side | Mrs. Higgins has lost her cat, Mittens. | Healing Potion |
+| The Monster Surge | Main | Unusual monster activity is threatening the region. | Rare Awakening Stone |
+
 ## Example Builds
 
 ### Build 1: Volcano Archetype

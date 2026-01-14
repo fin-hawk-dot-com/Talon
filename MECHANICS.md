@@ -50,3 +50,10 @@ Abilities are unlocked ("Awakened") by using **Awakening Stones**.
 A Character's overall rank is determined by their **lowest** attribute.
 - To reach Bronze Rank, all 4 attributes must be at least 100.
 - Once the body (attributes) ranks up, abilities can then be ranked up to match.
+
+## Quest System
+The world of Aetheria offers various adventures for an Awakened individual.
+- **Discovery**: Quests can be found in the Quest Log menu. Some are available immediately, while others may require specific prerequisites.
+- **Branching Narratives**: Quests are not linear. You will be presented with choices at various stages.
+- **Consequences**: Your choices determine the outcome of the quest, the rewards you receive, and potentially your reputation with Factions.
+- **Rewards**: Completing a quest typically awards Essences, Awakening Stones, or other valuable items.
