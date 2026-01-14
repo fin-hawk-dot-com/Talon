@@ -33,6 +33,7 @@ class DataLoader:
         # Performance optimization: Create O(1) lookup maps
         self.essences_map = {e['name'].lower(): e for e in self.essences_data}
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
+        self.characters_map = {c['name'].lower(): c for c in self.characters_data}
         self.factions_map = {f['name'].lower(): f for f in self.factions_data}
 
     def get_essence(self, name: str) -> Optional[Essence]:
@@ -85,71 +86,71 @@ class DataLoader:
 
     def get_character_template(self, name: str) -> Optional[Character]:
         """Loads a pre-defined character. Note: Does not instantiate abilities fully yet."""
-        for c in self.characters_data:
-            if c['name'].lower() == name.lower():
-                char = Character(
-                    name=c['name'],
-                    race=c['race'],
-                    faction=c.get('faction'),
-                    affinity=c.get('affinity', 'General')
+        c = self.characters_map.get(name.lower())
+        if c:
+            char = Character(
+                name=c['name'],
+                race=c['race'],
+                faction=c.get('faction'),
+                affinity=c.get('affinity', 'General')
+            )
+
+            # Load Attributes
+            if 'attributes' in c:
+                for attr_name, value in c['attributes'].items():
+                    if attr_name in char.attributes:
+                        char.attributes[attr_name].value = value
+
+            # Load Base Essences
+            # We need to assign them to attributes. For simplicity, we might just assign them sequentially to Power, Speed, Spirit for now
+            # Or we need the data to specify it. The data I created doesn't specify bonded attribute.
+            # I will assign them arbitrarily to Power, Speed, Spirit for now since the JSON didn't specify.
+            # Wait, if I want to be robust, I should update the JSON to include bonded attribute info,
+            # or just assign them round-robin.
+
+            attributes = ["Power", "Speed", "Spirit", "Recovery"]
+
+            for i, ess_name in enumerate(c.get('base_essences', [])):
+                essence = self.get_essence(ess_name)
+                if essence:
+                    # Auto-bond
+                    bonded_attr = attributes[i % 4]
+                    try:
+                        char.add_essence(essence, bonded_attr)
+                    except ValueError:
+                        pass # Ignore if too many or whatever
+
+            # Load Confluence
+            conf_name = c.get('confluence_essence')
+            if conf_name:
+                # We need to construct the confluence essence.
+                # If it's a known one, we can try to find it in recipes or just make a placeholder?
+                # Ideally we find it in recipes.
+                # Or simpler: create a dummy confluence essence object if not found.
+                # But wait, `get_essence` searches `essences.json` which are base essences usually.
+                # Confluences are dynamically generated or in `confluences.json`.
+                # Let's try to simulate finding it.
+
+                # Search recipes to see if we can reconstruct it?
+                # Or maybe I should have put confluence essences in `essences.json`? No, they are generated.
+                # I'll create a generic loader for confluence if I can.
+
+                # For now, let's just make a basic object.
+                conf_essence = Essence(
+                     name=conf_name,
+                     type="Confluence",
+                     rarity="Rare",
+                     tags=["Confluence"],
+                     description=f"Pre-defined confluence: {conf_name}"
                 )
+                char.confluence_essence = conf_essence
+                # Also need to bond it.
+                char.confluence_essence.bonded_attribute = "Recovery" # Arbitrary
+                char._update_growth_multiplier("Recovery")
+                if conf_name not in char.abilities:
+                     char.abilities[conf_name] = [None] * 5
 
-                # Load Attributes
-                if 'attributes' in c:
-                    for attr_name, value in c['attributes'].items():
-                        if attr_name in char.attributes:
-                            char.attributes[attr_name].value = value
-
-                # Load Base Essences
-                # We need to assign them to attributes. For simplicity, we might just assign them sequentially to Power, Speed, Spirit for now
-                # Or we need the data to specify it. The data I created doesn't specify bonded attribute.
-                # I will assign them arbitrarily to Power, Speed, Spirit for now since the JSON didn't specify.
-                # Wait, if I want to be robust, I should update the JSON to include bonded attribute info,
-                # or just assign them round-robin.
-
-                attributes = ["Power", "Speed", "Spirit", "Recovery"]
-
-                for i, ess_name in enumerate(c.get('base_essences', [])):
-                    essence = self.get_essence(ess_name)
-                    if essence:
-                        # Auto-bond
-                        bonded_attr = attributes[i % 4]
-                        try:
-                            char.add_essence(essence, bonded_attr)
-                        except ValueError:
-                            pass # Ignore if too many or whatever
-
-                # Load Confluence
-                conf_name = c.get('confluence_essence')
-                if conf_name:
-                    # We need to construct the confluence essence.
-                    # If it's a known one, we can try to find it in recipes or just make a placeholder?
-                    # Ideally we find it in recipes.
-                    # Or simpler: create a dummy confluence essence object if not found.
-                    # But wait, `get_essence` searches `essences.json` which are base essences usually.
-                    # Confluences are dynamically generated or in `confluences.json`.
-                    # Let's try to simulate finding it.
-
-                    # Search recipes to see if we can reconstruct it?
-                    # Or maybe I should have put confluence essences in `essences.json`? No, they are generated.
-                    # I'll create a generic loader for confluence if I can.
-
-                    # For now, let's just make a basic object.
-                    conf_essence = Essence(
-                         name=conf_name,
-                         type="Confluence",
-                         rarity="Rare",
-                         tags=["Confluence"],
-                         description=f"Pre-defined confluence: {conf_name}"
-                    )
-                    char.confluence_essence = conf_essence
-                    # Also need to bond it.
-                    char.confluence_essence.bonded_attribute = "Recovery" # Arbitrary
-                    char._update_growth_multiplier("Recovery")
-                    if conf_name not in char.abilities:
-                         char.abilities[conf_name] = [None] * 5
-
-                return char
+            return char
         return None
 
     def get_all_base_essences(self) -> List[str]:
