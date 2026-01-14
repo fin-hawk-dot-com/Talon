@@ -35,8 +35,13 @@ def main():
     # Create Character
     name = input("Enter character name: ")
     race = "Human" # Simplified for now
-    character = Character(name=name, race=race)
-    print(f"Character {name} created.")
+
+    print("Select Affinity (Focus):")
+    affinities = ["Warrior", "Mage", "Rogue", "Guardian", "Support", "General"]
+    affinity = choose_option(affinities, "Choose affinity: ")
+
+    character = Character(name=name, race=race, affinity=affinity)
+    print(f"Character {name} created with affinity {affinity}.")
     print_separator()
 
     # Select Base Essences
@@ -132,7 +137,7 @@ def main():
                 stone = loader.get_stone(match_stone)
                 essence_obj = next(e for e in essences if e.name == target_ess_name)
 
-                new_ability = ability_gen.generate(essence_obj, stone, character.rank)
+                new_ability = ability_gen.generate(essence_obj, stone, character.rank, character.affinity)
                 character.abilities[target_ess_name][slot_idx] = new_ability
                 print(f"Awakened: {new_ability.name}!")
                 print(f"Effect: {new_ability.description}")
