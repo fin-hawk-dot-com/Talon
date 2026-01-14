@@ -340,5 +340,14 @@
     "description": "The essence of time itself.",
     "opposite": "Dimension",
     "synergy": ["Dimension", "Void", "Balance", "Chaos"]
+  },
+  {
+    "name": "Silence",
+    "type": "Base",
+    "rarity": "Uncommon",
+    "tags": ["Abstract", "Null", "Quiet"],
+    "description": "The essence of absence of sound.",
+    "opposite": "Sound",
+    "synergy": ["Void", "Dark", "Death", "Balance"]
   }
 ]

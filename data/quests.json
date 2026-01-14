@@ -5,7 +5,7 @@
     "description": "You find yourself in a strange new world, with no memory of how you arrived.",
     "type": "Main",
     "starting_stage_id": "stage_1",
-    "rewards": ["Starter Essence"],
+    "rewards": ["Starter Essence", "Lore: The Awakening"],
     "stages": {
       "stage_1": {
         "id": "stage_1",
@@ -44,7 +44,7 @@
     "description": "Unusual monster activity is threatening the region.",
     "type": "Main",
     "starting_stage_id": "stage_1",
-    "rewards": ["Rare Awakening Stone"],
+    "rewards": ["Rare Awakening Stone", "Lore: The Great Barrier", "Lore: Broodmother"],
     "stages": {
       "stage_1": {
         "id": "stage_1",
@@ -83,7 +83,7 @@
     "description": "An ancient structure has been unearthed nearby.",
     "type": "Main",
     "starting_stage_id": "stage_1",
-    "rewards": ["Confluence Essence"],
+    "rewards": ["Confluence Essence", "Lore: Awakening Stones"],
     "stages": {
       "stage_1": {
         "id": "stage_1",

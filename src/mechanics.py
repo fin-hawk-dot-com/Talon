@@ -2,7 +2,7 @@ import json
 import os
 import random
 from typing import List, Optional, Union, Dict
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, Location
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, Location, LoreEntry
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -23,6 +23,7 @@ class DataLoader:
             DataLoader._cache['characters'] = load_json('characters.json')
             DataLoader._cache['quests'] = load_json('quests.json')
             DataLoader._cache['locations'] = load_json('locations.json')
+            DataLoader._cache['lore'] = load_json('lore.json')
 
         self.essences_data = DataLoader._cache['essences']
         self.confluences_data = DataLoader._cache['confluences']
@@ -31,6 +32,7 @@ class DataLoader:
         self.characters_data = DataLoader._cache['characters']
         self.quests_data = DataLoader._cache['quests']
         self.locations_data = DataLoader._cache['locations']
+        self.lore_data = DataLoader._cache['lore']
         # Optimization: Pre-compute dictionary for O(1) lookup
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
@@ -41,6 +43,7 @@ class DataLoader:
         self.factions_map = {f['name'].lower(): f for f in self.factions_data}
         self.quests_map = {q['id']: q for q in self.quests_data}
         self.locations_map = {l['name'].lower(): l for l in self.locations_data}
+        self.lore_map = {l['id']: l for l in self.lore_data}
 
     def get_quest(self, quest_id: str) -> Optional[Quest]:
         q = self.quests_map.get(quest_id)
@@ -222,6 +225,20 @@ class DataLoader:
 
     def get_all_stones(self) -> List[str]:
         return [s['name'] for s in self.stones_data]
+
+    def get_lore_entry(self, entry_id: str) -> Optional[LoreEntry]:
+        l = self.lore_map.get(entry_id)
+        if l:
+            return LoreEntry(
+                id=l['id'],
+                category=l['category'],
+                title=l['title'],
+                text=l['text']
+            )
+        return None
+
+    def get_all_lore_ids(self) -> List[str]:
+        return list(self.lore_map.keys())
 
 class ConfluenceManager:
     def __init__(self, data_loader: DataLoader):
@@ -431,7 +448,23 @@ class QuestManager:
     def _grant_rewards(self, character: Character, rewards: List[str]):
         # Simple string parsing for now
         for reward in rewards:
-            if "Essence" in reward:
+            if reward.startswith("Lore: "):
+                # Unlock lore
+                lore_title = reward[6:].strip()
+                # Find ID by title (inefficient but fine for small dataset)
+                found_id = None
+                for lore in self.data_loader.lore_data:
+                    if lore['title'].lower() == lore_title.lower():
+                        found_id = lore['id']
+                        break
+
+                if found_id:
+                    if found_id not in character.discovered_lore:
+                        character.discovered_lore.append(found_id)
+                        # We might want to notify the user, but this method doesn't return text easily.
+                        # The consequence text usually handles user feedback.
+
+            elif "Essence" in reward:
                 # Give a random essence if generic, or specific?
                 # For now just text.
                 pass

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "history_awakening",
+    "category": "History",
+    "title": "The Awakening",
+    "text": "The Awakening is the event that brought magic to your world. It is said that the barriers between dimensions thinned, allowing Essence to bleed through. Those who could harness it became the first Essence Users. The event was chaotic, reshaping geography and mutating wildlife into monsters."
+  },
+  {
+    "id": "history_great_barrier",
+    "category": "History",
+    "title": "The Great Barrier",
+    "text": "To protect civilization from the Monster Surge, the Great Barrier was erected by the first Archmages. It is a massive magical field that repels high-rank monsters, creating safe zones where cities like Greenstone could flourish."
+  },
+  {
+    "id": "magic_essences",
+    "category": "Magic",
+    "title": "Essences",
+    "text": "Essences are the fundamental building blocks of magic. They come in three rarities: Common, Uncommon, Rare, Legendary and Epic. A user can bond with up to three Base Essences. These essences combine to form a Confluence Essence, which defines the user's specialized path."
+  },
+  {
+    "id": "location_greenstone",
+    "category": "Locations",
+    "title": "Greenstone City",
+    "text": "Greenstone City is named after the massive jade-like monolith at its center. The stone emits a soothing aura that accelerates healing. It is a hub for adventurers seeking to explore the nearby Whispering Woods."
+  },
+  {
+    "id": "location_ironhold",
+    "category": "Locations",
+    "title": "Ironhold",
+    "text": "Carved into the Living Mountain, Ironhold is the impregnable fortress of the Order of the Shield. Its walls are reinforced with Iron Essence, making them nearly indestructible. It serves as the primary defense against the horrors of the Scorched Wastes."
+  },
+  {
+    "id": "faction_adventure_society",
+    "category": "Factions",
+    "title": "The Adventure Society",
+    "text": "The Society is the lifeblood of the economy. They issue contracts for monster culling, resource gathering, and exploration. While mercenary in nature, they maintain a strict code of conduct to distinguish themselves from common sellswords."
+  },
+  {
+    "id": "faction_cult_reaper",
+    "category": "Factions",
+    "title": "Cult of the Reaper",
+    "text": "Worshippers of the Death Essence, the Cult believes that the Awakening was a mistake and that entropy is the only truth. They seek to hasten the end of the world, often by sabotaging the Great Barrier."
+  },
+  {
+    "id": "bestiary_broodmother",
+    "category": "Bestiary",
+    "title": "Broodmother",
+    "text": "A monstrous arachnid of Bronze rank. Broodmothers infest caves and command swarms of lesser spiders. Their venom is potent enough to dissolve iron armor."
+  },
+  {
+    "id": "magic_awakening_stones",
+    "category": "Magic",
+    "title": "Awakening Stones",
+    "text": "Stones used to unlock abilities from Essences. Each stone has a specific function (e.g., Strike, Shield, Element) that shapes how the Essence manifests. The rarity of the stone influences the potential power of the resulting ability."
+  }
+]

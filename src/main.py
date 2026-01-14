@@ -87,7 +87,8 @@ def main():
         print("5. Practice Ability")
         print("6. Simulate Training")
         print("7. Quest Log / Adventure")
-        print("8. Exit")
+        print("8. Grimoire (Lore)")
+        print("9. Exit")
 
         choice = input("\nSelect Action: ").strip()
 
@@ -302,6 +303,46 @@ def main():
                         print("Invalid input.")
 
         elif choice == "8":
+            # Grimoire
+            print("\n--- Grimoire ---")
+            if not char.discovered_lore:
+                print("The pages are blank. You have not discovered any lore yet.")
+                # Give a hint?
+                print("(Hint: Complete quests and explore to find pages.)")
+            else:
+                # Group by category
+                categories = {}
+                for lore_id in char.discovered_lore:
+                    entry = loader.get_lore_entry(lore_id)
+                    if entry:
+                        if entry.category not in categories:
+                            categories[entry.category] = []
+                        categories[entry.category].append(entry)
+
+                for cat, entries in categories.items():
+                    print(f"\n[{cat}]")
+                    for ent in entries:
+                        print(f"  - {ent.title}")
+
+                print("\nOptions:")
+                print("1. Read Entry")
+                print("2. Back")
+
+                g_choice = input("> ")
+                if g_choice == "1":
+                    title = input("Enter title to read (fuzzy match): ").strip().lower()
+                    found = False
+                    for lore_id in char.discovered_lore:
+                         entry = loader.get_lore_entry(lore_id)
+                         if entry and title in entry.title.lower():
+                             print(f"\n--- {entry.title} ---")
+                             print(entry.text)
+                             found = True
+                             break
+                    if not found:
+                        print("Entry not found.")
+
+        elif choice == "9":
             sys.exit()
 
 if __name__ == "__main__":

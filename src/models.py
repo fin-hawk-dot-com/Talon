@@ -16,6 +16,13 @@ class Essence:
     synergy: List[str] = field(default_factory=list)
 
 @dataclass
+class LoreEntry:
+    id: str
+    category: str
+    title: str
+    text: str
+
+@dataclass
 class Faction:
     name: str
     description: str
@@ -148,6 +155,7 @@ class Character:
     abilities: Dict[str, List[Optional[Ability]]] = field(default_factory=dict)
     inventory: List[Union[Essence, AwakeningStone]] = field(default_factory=list)
     quests: Dict[str, QuestProgress] = field(default_factory=dict)
+    discovered_lore: List[str] = field(default_factory=list)
 
     @property
     def rank(self) -> str:
