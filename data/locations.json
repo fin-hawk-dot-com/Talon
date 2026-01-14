@@ -19,5 +19,33 @@
     "type": "Dungeon",
     "image_prompt_positive": "Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k",
     "image_prompt_negative": "sky, sun, grass, trees, flat, boring, noise"
+  },
+  {
+    "name": "Ironhold",
+    "description": "A massive fortress city carved into the side of a mountain, headquarters of the Order of the Shield.",
+    "type": "City",
+    "image_prompt_positive": "Massive stone fortress carved into mountain, snow-capped peaks, iron gates, banners, defensive walls, soldier patrols, cold atmosphere, epic scale, 8k",
+    "image_prompt_negative": "forest, beach, warm, sunny, wooden buildings, ruins"
+  },
+  {
+    "name": "The Sunken Ruins",
+    "description": "An ancient city partially submerged in a vast underground lake, glowing with eerie phosphorescence.",
+    "type": "Dungeon",
+    "image_prompt_positive": "Underwater ruins, ancient stone architecture, bioluminescent algae, water reflections, submerged statues, mystical blue light, aquatic atmosphere, detailed",
+    "image_prompt_negative": "fire, desert, dry, sky, bright sun, modern"
+  },
+  {
+    "name": "The Scorched Wastes",
+    "description": "A desolate desert landscape scarred by ancient magical fires that never truly went out.",
+    "type": "Wilderness",
+    "image_prompt_positive": "Desert landscape, cracked earth, magical fire fissures, red and orange lighting, smoke, ruins of obsidian, heat haze, dangerous atmosphere",
+    "image_prompt_negative": "water, snow, green, trees, life, happy"
+  },
+  {
+    "name": "The Shadowfen",
+    "description": "A treacherous swamp shrouded in perpetual twilight, home to poisonous flora and dark secrets.",
+    "type": "Wilderness",
+    "image_prompt_positive": "Swamp, twisted trees, fog, dark water, purple and black tones, eerie, spooky, mysterious lights, moss, detailed textures",
+    "image_prompt_negative": "desert, bright sun, clean, dry, city, cheerful"
   }
 ]

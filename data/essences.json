@@ -277,5 +277,68 @@
     "description": "The essence of the moon.",
     "opposite": "Sun",
     "synergy": ["Dark", "Water", "Dragon", "Dimension", "Death"]
+  },
+  {
+    "name": "Void",
+    "type": "Base",
+    "rarity": "Rare",
+    "tags": ["Abstract", "Empty", "Null", "Space"],
+    "description": "The essence of nothingness.",
+    "opposite": "Mana",
+    "synergy": ["Dark", "Dimension", "Death", "Chaos"]
+  },
+  {
+    "name": "Chaos",
+    "type": "Base",
+    "rarity": "Rare",
+    "tags": ["Abstract", "Disorder", "Entropy"],
+    "description": "The essence of randomness and disorder.",
+    "opposite": "Knowledge",
+    "synergy": ["Void", "Fire", "Lightning", "Sin", "Doom"]
+  },
+  {
+    "name": "Nature",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": ["Biological", "Plants", "Growth"],
+    "description": "The essence of the natural world.",
+    "opposite": "Technology",
+    "synergy": ["Life", "Earth", "Water", "Sun", "Renewal"]
+  },
+  {
+    "name": "Doom",
+    "type": "Base",
+    "rarity": "Epic",
+    "tags": ["Abstract", "Fate", "Destruction"],
+    "description": "The essence of inevitable end.",
+    "opposite": "Hope",
+    "synergy": ["Death", "Sin", "Dark", "Chaos", "Fire"]
+  },
+  {
+    "name": "Hope",
+    "type": "Base",
+    "rarity": "Epic",
+    "tags": ["Abstract", "Emotion", "Future"],
+    "description": "The essence of belief in a better future.",
+    "opposite": "Doom",
+    "synergy": ["Light", "Life", "Renewal", "Sun", "Balance"]
+  },
+  {
+    "name": "Sound",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": ["Physical", "Vibration", "Wave"],
+    "description": "The essence of sound and vibration.",
+    "opposite": "Silence",
+    "synergy": ["Air", "Wind", "Void", "Thunder"]
+  },
+  {
+    "name": "Time",
+    "type": "Base",
+    "rarity": "Legendary",
+    "tags": ["Abstract", "Temporal", "Chronology"],
+    "description": "The essence of time itself.",
+    "opposite": "Dimension",
+    "synergy": ["Dimension", "Void", "Balance", "Chaos"]
   }
 ]

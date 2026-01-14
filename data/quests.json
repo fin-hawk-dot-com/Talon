@@ -195,5 +195,139 @@
         ]
       }
     }
+  },
+  {
+    "id": "side_syndicate_offer",
+    "title": "The Syndicate's Offer",
+    "description": "A shady figure approaches you with a job offer from the Iron Syndicate.",
+    "type": "Side",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Smuggled Goods", "Reputation (Criminal)"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "A cloaked man whispers, 'We need someone to move a package out of the city. No questions asked.'",
+        "choices": [
+          {"text": "Accept the job", "next_stage_id": "stage_2_deliver", "consequence": "You take the package, feeling its weight."},
+          {"text": "Report him to guards", "next_stage_id": "stage_2_snitch", "consequence": "The man vanishes before the guards arrive."}
+        ]
+      },
+      "stage_2_deliver": {
+        "id": "stage_2_deliver",
+        "description": "You sneak past the gates and deliver the package to a waiting cart.",
+        "choices": [
+          {"text": "Collect payment", "next_stage_id": "COMPLETED", "consequence": "The Syndicate pays well."}
+        ]
+      },
+      "stage_2_snitch": {
+        "id": "stage_2_snitch",
+        "description": "The guards find nothing, but you feel like you're being watched.",
+        "choices": [
+          {"text": "Leave quickly", "next_stage_id": "COMPLETED", "consequence": "You gained favor with the law, but made an enemy."}
+        ]
+      }
+    }
+  },
+  {
+    "id": "side_nature_wrath",
+    "title": "Nature's Wrath",
+    "description": "The Verdant Circle needs help calming a corrupted spirit.",
+    "type": "Side",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Nature Essence"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "A druidess pleads for aid. 'A tree spirit in the Whispering Woods has been maddened by dark magic.'",
+        "choices": [
+          {"text": "Offer to cleanse it", "next_stage_id": "stage_2_cleanse", "consequence": "You enter the woods with her."},
+          {"text": "Offer to destroy it", "next_stage_id": "stage_2_fight", "consequence": "She reluctantly accepts your help."}
+        ]
+      },
+      "stage_2_cleanse": {
+        "id": "stage_2_cleanse",
+        "description": "You find the spirit thrashing. You use soothing magic.",
+        "choices": [
+          {"text": "Channel peace", "next_stage_id": "COMPLETED", "consequence": "The spirit calms and grants you a boon."}
+        ]
+      },
+      "stage_2_fight": {
+        "id": "stage_2_fight",
+        "description": "The spirit attacks! It is strong.",
+        "choices": [
+          {"text": "Strike it down", "next_stage_id": "COMPLETED", "consequence": "The spirit fades. The druidess weeps but thanks you."}
+        ]
+      }
+    }
+  },
+  {
+    "id": "main_secrets_deep",
+    "title": "Secrets of the Deep",
+    "description": "Rumors of a submerged city draw you to the coast.",
+    "type": "Main",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Water Essence", "Ancient Relic"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "You stand at the edge of a great lake. The Sunken Ruins lie beneath.",
+        "choices": [
+          {"text": "Dive in", "next_stage_id": "stage_2_swim", "consequence": "The water is cold and dark."}
+        ]
+      },
+      "stage_2_swim": {
+        "id": "stage_2_swim",
+        "description": "You find an air pocket in a ruined tower. Phosphorescent writing covers the walls.",
+        "choices": [
+          {"text": "Decipher the writing", "next_stage_id": "stage_3_lore", "consequence": "It speaks of a lost civilization."}
+        ]
+      },
+      "stage_3_lore": {
+        "id": "stage_3_lore",
+        "description": "A guardian awakens! A construct of coral and stone.",
+        "choices": [
+          {"text": "Fight", "next_stage_id": "COMPLETED", "consequence": "You defeat the guardian and claim its core."}
+        ]
+      }
+    }
+  },
+  {
+    "id": "side_shadow_threat",
+    "title": "The Shadow Threat",
+    "description": "The Silent Hand has marked a target.",
+    "type": "Side",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Dark Essence"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "You find a note pinned to your door with a dagger. 'Meet us at midnight.'",
+        "choices": [
+          {"text": "Go to the meeting", "next_stage_id": "stage_2_meet", "consequence": "You meet a masked figure in the alley."}
+        ]
+      },
+      "stage_2_meet": {
+        "id": "stage_2_meet",
+        "description": "'We have a target who deals in forbidden tech. Remove them.'",
+        "choices": [
+          {"text": "Accept the contract", "next_stage_id": "stage_3_assassinate", "consequence": "You hunt the target down."},
+           {"text": "Refuse", "next_stage_id": "stage_3_refuse", "consequence": "The figure nods. 'Disappointing.'"}
+        ]
+      },
+      "stage_3_assassinate": {
+        "id": "stage_3_assassinate",
+        "description": "The target is cornered in the Shadowfen.",
+        "choices": [
+          {"text": "Eliminate", "next_stage_id": "COMPLETED", "consequence": "The deed is done. Payment is left for you."}
+        ]
+      },
+      "stage_3_refuse": {
+        "id": "stage_3_refuse",
+        "description": "You walk away, checking over your shoulder.",
+        "choices": [
+          {"text": "Stay alert", "next_stage_id": "COMPLETED", "consequence": "You survived the night."}
+        ]
+      }
+    }
   }
 ]
