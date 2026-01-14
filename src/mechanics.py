@@ -24,6 +24,7 @@ class DataLoader:
         # Performance optimization: Create O(1) lookup maps
         self.essences_map = {e['name'].lower(): e for e in self.essences_data}
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
+        self.factions_map = {f['name'].lower(): f for f in self.factions_data}
 
     def get_essence(self, name: str) -> Optional[Essence]:
         e = self.essences_map.get(name.lower())
@@ -53,14 +54,14 @@ class DataLoader:
         return None
 
     def get_faction(self, name: str) -> Optional[Faction]:
-        for f in self.factions_data:
-            if f['name'].lower() == name.lower():
-                return Faction(
-                    name=f['name'],
-                    description=f['description'],
-                    type=f['type'],
-                    rank_requirement=f.get('rank_requirement')
-                )
+        f = self.factions_map.get(name.lower())
+        if f:
+            return Faction(
+                name=f['name'],
+                description=f['description'],
+                type=f['type'],
+                rank_requirement=f.get('rank_requirement')
+            )
         return None
 
     def get_all_factions(self) -> List[Faction]:
