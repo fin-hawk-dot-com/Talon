@@ -16,6 +16,8 @@ class DataLoader:
         self.essences_data = load_json('essences.json')
         self.confluences_data = load_json('confluences.json')
         self.stones_data = load_json('awakening_stones.json')
+        # Optimization: Pre-compute dictionary for O(1) lookup
+        self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
     def get_essence(self, name: str) -> Optional[Essence]:
         for e in self.essences_data:
@@ -32,16 +34,16 @@ class DataLoader:
         return None
 
     def get_stone(self, name: str) -> Optional[AwakeningStone]:
-        for s in self.stones_data:
-            if s['name'].lower() == name.lower():
-                return AwakeningStone(
-                    name=s['name'],
-                    function=s['function'],
-                    description=s['description'],
-                    rarity=s.get('rarity', "Common"),
-                    cooldown=s.get('cooldown', "Medium"),
-                    cost_type=s.get('cost_type', "Mana")
-                )
+        s = self.stones_map.get(name.lower())
+        if s:
+            return AwakeningStone(
+                name=s['name'],
+                function=s['function'],
+                description=s['description'],
+                rarity=s.get('rarity', "Common"),
+                cooldown=s.get('cooldown', "Medium"),
+                cost_type=s.get('cost_type', "Mana")
+            )
         return None
 
     def get_all_base_essences(self) -> List[str]:
