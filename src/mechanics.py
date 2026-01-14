@@ -16,6 +16,8 @@ class DataLoader:
         self.essences_data = load_json('essences.json')
         self.confluences_data = load_json('confluences.json')
         self.stones_data = load_json('awakening_stones.json')
+        # Optimization: Pre-compute dictionary for O(1) lookup
+        self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
         # Performance optimization: Create O(1) lookup maps
         self.essences_map = {e['name'].lower(): e for e in self.essences_data}
