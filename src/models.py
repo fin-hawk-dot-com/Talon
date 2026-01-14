@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Dict, Optional, Union
 
 RANKS = ["Normal", "Iron", "Bronze", "Silver", "Gold", "Diamond"]
+RANK_INDICES = {rank: i for i, rank in enumerate(RANKS)}
 
 @dataclass
 class Essence:
@@ -45,7 +46,7 @@ class Ability:
     @property
     def max_xp(self) -> float:
         # Simple XP curve: 100 * (level + 1) * rank_multiplier
-        rank_idx = RANKS.index(self.rank)
+        rank_idx = RANK_INDICES[self.rank]
         return 100.0 * (self.level + 1) * (rank_idx + 1)
 
     def gain_xp(self, amount: float) -> bool:

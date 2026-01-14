@@ -2,7 +2,7 @@ import json
 import os
 import random
 from typing import List, Optional, Union
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -12,18 +12,28 @@ def load_json(filename):
         return json.load(f)
 
 class DataLoader:
+    _cache = {}
+
     def __init__(self):
-        self.essences_data = load_json('essences.json')
-        self.confluences_data = load_json('confluences.json')
-        self.stones_data = load_json('awakening_stones.json')
-        self.factions_data = load_json('factions.json')
-        self.characters_data = load_json('characters.json')
+        if not DataLoader._cache:
+            DataLoader._cache['essences'] = load_json('essences.json')
+            DataLoader._cache['confluences'] = load_json('confluences.json')
+            DataLoader._cache['stones'] = load_json('awakening_stones.json')
+            DataLoader._cache['factions'] = load_json('factions.json')
+            DataLoader._cache['characters'] = load_json('characters.json')
+
+        self.essences_data = DataLoader._cache['essences']
+        self.confluences_data = DataLoader._cache['confluences']
+        self.stones_data = DataLoader._cache['stones']
+        self.factions_data = DataLoader._cache['factions']
+        self.characters_data = DataLoader._cache['characters']
         # Optimization: Pre-compute dictionary for O(1) lookup
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
         # Performance optimization: Create O(1) lookup maps
         self.essences_map = {e['name'].lower(): e for e in self.essences_data}
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
+        self.factions_map = {f['name'].lower(): f for f in self.factions_data}
 
     def get_essence(self, name: str) -> Optional[Essence]:
         e = self.essences_map.get(name.lower())
@@ -53,14 +63,14 @@ class DataLoader:
         return None
 
     def get_faction(self, name: str) -> Optional[Faction]:
-        for f in self.factions_data:
-            if f['name'].lower() == name.lower():
-                return Faction(
-                    name=f['name'],
-                    description=f['description'],
-                    type=f['type'],
-                    rank_requirement=f.get('rank_requirement')
-                )
+        f = self.factions_map.get(name.lower())
+        if f:
+            return Faction(
+                name=f['name'],
+                description=f['description'],
+                type=f['type'],
+                rank_requirement=f.get('rank_requirement')
+            )
         return None
 
     def get_all_factions(self) -> List[Faction]:
@@ -331,8 +341,8 @@ class TrainingManager:
         if ability.level < 9:
             return "Ability not at max level (9)."
 
-        current_rank_idx = RANKS.index(ability.rank)
-        char_rank_idx = RANKS.index(character.rank)
+        current_rank_idx = RANK_INDICES[ability.rank]
+        char_rank_idx = RANK_INDICES[character.rank]
 
         if current_rank_idx >= char_rank_idx:
             return f"Character Rank ({character.rank}) is not high enough to support higher rank ability."
