@@ -26,7 +26,7 @@ def choose_option(options, prompt):
 def main():
     engine = GameEngine()
     print_separator()
-    print("Welcome to the HWFWM Progression Simulator")
+    print("Welcome to the Essence Bound Progression Simulator")
 
     # Load Data
     # Optimized: Use engine's loader and ability_gen

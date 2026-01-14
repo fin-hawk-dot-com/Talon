@@ -13,7 +13,7 @@ def generate_library_md(filepath="LIBRARY.md"):
     confluence_mgr = ConfluenceManager(loader)
 
     lines = []
-    lines.append("# HWFWM System Library")
+    lines.append("# Essence Bound System Library")
     lines.append("\n## Essences")
     lines.append("| Name | Type | Rarity | Tags | Description | Opposite | Synergy |")
     lines.append("|---|---|---|---|---|---|---|")
