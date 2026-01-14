@@ -77,6 +77,19 @@ def test_simulation():
         print("PASS: Ability Generation")
     else:
         print(f"FAIL: Expected {expected_name}, got {ability.name}")
+    # Set affinity to Warrior to bias towards "Strike" or "Smash"
+    char.affinity = "Warrior"
+    ability = ability_gen.generate(fire_essence, stone, char.rank, char.affinity)
+    print(f"Generated Ability (Warrior Affinity): {ability.name}")
+    print(f"Description: {ability.description}")
+
+    # The templates for Strike include "{essence} Strike", "{essence} Slash", "{essence} Smash", "{essence} Blade"
+    # "Fire Strike" is likely for Warrior/General.
+    # Just check if it's one of the valid templates or contains the Essence Name
+    if fire_essence.name in ability.name:
+        print("PASS: Ability Generation")
+    else:
+        print(f"FAIL: Ability name {ability.name} does not contain essence name {fire_essence.name}")
 
     # 7. Test Confluence Fallback
     print("\nTesting Confluence Fallback...")

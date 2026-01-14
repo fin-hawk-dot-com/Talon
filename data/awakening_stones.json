@@ -3,79 +3,105 @@
     "name": "Stone of the Strike",
     "function": "Melee Attack",
     "description": "Imbues physical strike with Essence element.",
-    "rarity": "Common"
+    "rarity": "Common",
+    "cooldown": "Low",
+    "cost_type": "Stamina"
   },
   {
     "name": "Stone of the Blast",
     "function": "Ranged Attack",
     "description": "Projects a bolt/beam of Essence.",
-    "rarity": "Common"
+    "rarity": "Common",
+    "cooldown": "Low",
+    "cost_type": "Mana"
   },
   {
     "name": "Stone of the Shield",
     "function": "Defense",
     "description": "Creates a barrier or armor buff.",
-    "rarity": "Common"
+    "rarity": "Common",
+    "cooldown": "Medium",
+    "cost_type": "Mana"
   },
   {
     "name": "Stone of the Trap",
     "function": "Area Denial",
     "description": "Places a hidden rune/trigger.",
-    "rarity": "Uncommon"
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Mana"
   },
   {
     "name": "Stone of the Familiar",
     "function": "Summoning",
     "description": "Spawns an AI minion based on Essence.",
-    "rarity": "Rare"
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana"
   },
   {
     "name": "Stone of the Swarm",
     "function": "Multi-Hit",
     "description": "Splits effect into multiple small projectiles.",
-    "rarity": "Uncommon"
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Mana"
   },
   {
     "name": "Stone of the Feast",
     "function": "Drain/Sustain",
     "description": "Drains enemy resource to refill user.",
-    "rarity": "Rare"
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Health"
   },
   {
     "name": "Stone of the Flesh",
     "function": "Body Mod",
     "description": "Alters user physiology (Passive/Active).",
-    "rarity": "Rare"
+    "rarity": "Epic",
+    "cooldown": "None",
+    "cost_type": "None"
   },
   {
     "name": "Stone of the Stars",
     "function": "Celestial/Augment",
     "description": "Adds light/cosmic properties or massive buff.",
-    "rarity": "Epic"
+    "rarity": "Epic",
+    "cooldown": "High",
+    "cost_type": "Mana"
   },
   {
     "name": "Stone of the Foot",
     "function": "Mobility",
     "description": "Enhances movement or adds teleportation.",
-    "rarity": "Common"
+    "rarity": "Common",
+    "cooldown": "Low",
+    "cost_type": "Stamina"
   },
   {
     "name": "Stone of the Echo",
     "function": "Replication",
     "description": "Repeats previous action or creates decoy.",
-    "rarity": "Uncommon"
+    "rarity": "Rare",
+    "cooldown": "Medium",
+    "cost_type": "Mana"
   },
   {
     "name": "Stone of the Wall",
     "function": "Terrain Control",
     "description": "Creates physical obstacles.",
-    "rarity": "Uncommon"
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Mana"
   },
   {
     "name": "Stone of Focus",
     "function": "Perception",
     "description": "Enhances sensory data.",
-    "rarity": "Common"
+    "rarity": "Common",
+    "cooldown": "None",
+    "cost_type": "Stamina"
   },
   {
     "name": "Stone of Judgment",
@@ -112,5 +138,8 @@
     "function": "Emergency Heal",
     "description": "Triggers automatically to prevent death.",
     "rarity": "Epic"
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana"
   }
 ]

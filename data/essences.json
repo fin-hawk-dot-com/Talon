@@ -1,11 +1,49 @@
 [
   {
+    "name": "Sword",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": ["Physical", "Weapon", "Blade", "Combat"],
+    "description": "The essence of the blade.",
+    "opposite": "Shield",
+    "synergy": ["Might", "Swift", "Iron", "Battle"]
+  },
+  {
+    "name": "Shield",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": ["Physical", "Armor", "Defense", "Protection"],
+    "description": "The essence of defense and blocking.",
+    "opposite": "Sword",
+    "synergy": ["Iron", "Earth", "Armor", "Life"]
+  },
+  {
+    "name": "Mana",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": ["Abstract", "Magic", "Energy", "Power"],
+    "description": "The essence of raw magical energy.",
+    "opposite": "Void",
+    "synergy": ["Potent", "Fire", "Water", "Air", "Earth", "Light", "Dark"]
+  },
+  {
+    "name": "Knowledge",
+    "type": "Base",
+    "rarity": "Uncommon",
+    "tags": ["Abstract", "Mind", "Information", "Learning"],
+    "description": "The essence of understanding and lore.",
+    "opposite": "Chaos",
+    "synergy": ["Mana", "Dimension", "Light", "Technology"]
+  },
+  {
     "name": "Fire",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Elemental", "Heat", "Energy", "Destruction"],
     "description": "The essence of combustion and heat.",
     "color": "Red"
+    "opposite": "Water",
+    "synergy": ["Earth", "Air", "Potent", "Renewal", "Wing", "Light"]
   },
   {
     "name": "Water",
@@ -14,6 +52,8 @@
     "tags": ["Elemental", "Liquid", "Flow", "Life"],
     "description": "The essence of fluidity and life.",
     "color": "Blue"
+    "opposite": "Fire",
+    "synergy": ["Earth", "Life", "Renewal", "Dark", "Moon"]
   },
   {
     "name": "Earth",
@@ -22,6 +62,8 @@
     "tags": ["Elemental", "Solid", "Defense", "Nature"],
     "description": "The essence of stability and stone.",
     "color": "Brown"
+    "opposite": "Air",
+    "synergy": ["Fire", "Iron", "Potent", "Life", "Armor"]
   },
   {
     "name": "Air",
@@ -30,6 +72,8 @@
     "tags": ["Elemental", "Gas", "Movement", "Wind"],
     "description": "The essence of wind and atmosphere.",
     "color": "White"
+    "opposite": "Earth",
+    "synergy": ["Fire", "Lightning", "Swift", "Wing", "Dimension"]
   },
   {
     "name": "Might",
@@ -38,6 +82,8 @@
     "tags": ["Physical", "Strength", "Force", "Body"],
     "description": "The essence of physical power.",
     "color": "Orange"
+    "opposite": "Directed",
+    "synergy": ["Swift", "Iron", "Potent", "Armor", "Light"]
   },
   {
     "name": "Swift",
@@ -46,6 +92,8 @@
     "tags": ["Physical", "Speed", "Velocity", "Reaction"],
     "description": "The essence of speed.",
     "color": "Cyan"
+    "opposite": "Iron",
+    "synergy": ["Might", "Wind", "Lightning", "Directed", "Wing"]
   },
   {
     "name": "Potent",
@@ -54,6 +102,8 @@
     "tags": ["Abstract", "Power", "Amplification", "Energy"],
     "description": "The essence of raw power and intensity.",
     "color": "Purple"
+    "opposite": "Balance",
+    "synergy": ["Fire", "Earth", "Might", "Sun", "Dragon"]
   },
   {
     "name": "Dark",
@@ -62,6 +112,8 @@
     "tags": ["Abstract", "Shadow", "Concealment", "Negative"],
     "description": "The essence of darkness and shadow.",
     "color": "Black"
+    "opposite": "Light",
+    "synergy": ["Blood", "Sin", "Death", "Moon", "Dimension"]
   },
   {
     "name": "Blood",
@@ -70,6 +122,8 @@
     "tags": ["Physical", "Biological", "Vitality", "Liquid", "Macabre"],
     "description": "The essence of lifeblood.",
     "color": "Crimson"
+    "opposite": "Technology",
+    "synergy": ["Dark", "Sin", "Life", "Death", "Renewal"]
   },
   {
     "name": "Sin",
@@ -78,6 +132,8 @@
     "tags": ["Abstract", "Concept", "Corruption", "Judgment"],
     "description": "The essence of transgression.",
     "color": "Vantablack"
+    "opposite": "Balance",
+    "synergy": ["Dark", "Blood", "Doom", "Fire", "Potent"]
   },
   {
     "name": "Dimension",
@@ -86,6 +142,8 @@
     "tags": ["Abstract", "Space", "Reality", "Travel"],
     "description": "The essence of spatial dimensions.",
     "color": "Indigo"
+    "opposite": "Earth",
+    "synergy": ["Air", "Light", "Dark", "Moon", "Sun"]
   },
   {
     "name": "Iron",
@@ -94,6 +152,8 @@
     "tags": ["Physical", "Metal", "Hardness", "Defense"],
     "description": "The essence of metal.",
     "color": "Silver"
+    "opposite": "Swift",
+    "synergy": ["Earth", "Might", "Technology", "Armor", "Lightning"]
   },
   {
     "name": "Lightning",
@@ -104,12 +164,18 @@
     "color": "Yellow"
   },
   {
+    "opposite": "Earth",
+    "synergy": ["Air", "Swift", "Iron", "Technology", "Sun"]
+  },
+   {
     "name": "Technology",
     "type": "Base",
     "rarity": "Uncommon",
     "tags": ["Artificial", "Machinery", "Logic"],
     "description": "The essence of machines and invention.",
     "color": "Copper"
+    "opposite": "Nature",
+    "synergy": ["Gun", "Armor", "Iron", "Lightning", "Directed"]
   },
   {
     "name": "Renewal",
@@ -118,6 +184,8 @@
     "tags": ["Recovery", "Life", "Healing"],
     "description": "The essence of rebirth and healing.",
     "color": "Emerald"
+    "opposite": "Death",
+    "synergy": ["Life", "Water", "Fire", "Wing", "Light"]
   },
   {
     "name": "Wing",
@@ -126,6 +194,8 @@
     "tags": ["Physical", "Flight", "Air"],
     "description": "The essence of flight.",
     "color": "Feather White"
+    "opposite": "Earth",
+    "synergy": ["Air", "Swift", "Fire", "Renewal", "Dragon"]
   },
   {
     "name": "Light",
@@ -134,6 +204,8 @@
     "tags": ["Abstract", "Illumination", "Holy", "Vision"],
     "description": "The essence of light.",
     "color": "Bright White"
+    "opposite": "Dark",
+    "synergy": ["Sun", "Fire", "Might", "Swift", "Renewal"]
   },
   {
     "name": "Wind",
@@ -142,6 +214,8 @@
     "tags": ["Elemental", "Gas", "Movement"],
     "description": "The essence of moving air.",
     "color": "Pale Green"
+    "opposite": "Earth",
+    "synergy": ["Air", "Swift", "Directed", "Lightning", "Wing"]
   },
   {
     "name": "Directed",
@@ -150,6 +224,8 @@
     "tags": ["Abstract", "Focus", "Aim"],
     "description": "The essence of precision.",
     "color": "Target Red"
+    "opposite": "Might",
+    "synergy": ["Gun", "Swift", "Wind", "Technology", "Potent"]
   },
   {
     "name": "Gun",
@@ -158,6 +234,8 @@
     "tags": ["Artificial", "Weapon", "Ranged"],
     "description": "The essence of firearms.",
     "color": "Gunmetal"
+    "opposite": "Shield",
+    "synergy": ["Technology", "Armor", "Directed", "Iron", "Fire"]
   },
   {
     "name": "Armor",
@@ -166,6 +244,8 @@
     "tags": ["Physical", "Defense", "Protection"],
     "description": "The essence of protection.",
     "color": "Steel Blue"
+    "opposite": "Gun",
+    "synergy": ["Iron", "Technology", "Earth", "Might", "Shield"]
   },
   {
     "name": "Life",
@@ -174,6 +254,8 @@
     "tags": ["Biological", "Vitality", "Nature"],
     "description": "The essence of living things.",
     "color": "Green"
+    "opposite": "Death",
+    "synergy": ["Renewal", "Water", "Earth", "Blood", "Sun"]
   },
   {
     "name": "Death",
@@ -182,6 +264,8 @@
     "tags": ["Abstract", "End", "Macabre"],
     "description": "The essence of the end.",
     "color": "Ashen"
+    "opposite": "Life",
+    "synergy": ["Dark", "Blood", "Sin", "Moon", "Balance"]
   },
   {
     "name": "Balance",
@@ -190,6 +274,8 @@
     "tags": ["Abstract", "Equilibrium"],
     "description": "The essence of equality.",
     "color": "Grey"
+    "opposite": "Potent",
+    "synergy": ["Life", "Death", "Sun", "Moon", "Light", "Dark"]
   },
   {
     "name": "Dragon",
@@ -198,6 +284,8 @@
     "tags": ["Biological", "Mythic", "Power"],
     "description": "The essence of the great drakes.",
     "color": "Gold"
+    "opposite": "None",
+    "synergy": ["Sun", "Moon", "Fire", "Potent", "Wing"]
   },
   {
     "name": "Sun",
@@ -206,6 +294,8 @@
     "tags": ["Celestial", "Light", "Heat", "Star"],
     "description": "The essence of the sun.",
     "color": "Golden Yellow"
+    "opposite": "Moon",
+    "synergy": ["Light", "Fire", "Dragon", "Potent", "Life"]
   },
   {
     "name": "Moon",
@@ -294,5 +384,7 @@
     "tags": ["Biological", "Entropy", "Rot", "End"],
     "description": "The essence of breaking down.",
     "color": "Brownish Green"
+    "opposite": "Sun",
+    "synergy": ["Dark", "Water", "Dragon", "Dimension", "Death"]
   }
 ]

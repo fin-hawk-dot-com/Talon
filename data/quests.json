@@ -1,0 +1,199 @@
+[
+  {
+    "id": "main_awakening",
+    "title": "The Awakening",
+    "description": "You find yourself in a strange new world, with no memory of how you arrived.",
+    "type": "Main",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Starter Essence"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "You wake up in a clearing. A strange blue box floats before your eyes, displaying your stats.",
+        "choices": [
+          {"text": "Look around", "next_stage_id": "stage_2", "consequence": "You see a small town in the distance."}
+        ]
+      },
+      "stage_2": {
+        "id": "stage_2",
+        "description": "You approach the town. A guard stops you at the gate. 'Halt! Identify yourself.'",
+        "choices": [
+          {"text": "Ask about Magic", "next_stage_id": "stage_3_mage", "consequence": "The guard eyes you suspiciously but points you to the Magic Society."},
+          {"text": "Ask about Combat", "next_stage_id": "stage_3_warrior", "consequence": "The guard nods approvingly and points you to the Adventure Society."}
+        ]
+      },
+      "stage_3_mage": {
+        "id": "stage_3_mage",
+        "description": "You visit the Magic Society. An elder mage senses your potential and offers you a Magic Essence.",
+        "choices": [
+           {"text": "Accept", "next_stage_id": "COMPLETED", "consequence": "You received a Magic Essence."}
+        ]
+      },
+      "stage_3_warrior": {
+        "id": "stage_3_warrior",
+        "description": "You visit the Adventure Society. A veteran fighter sizes you up and offers you a Might Essence.",
+        "choices": [
+           {"text": "Accept", "next_stage_id": "COMPLETED", "consequence": "You received a Might Essence."}
+        ]
+      }
+    }
+  },
+  {
+    "id": "main_monster_surge",
+    "title": "The Monster Surge",
+    "description": "Unusual monster activity is threatening the region.",
+    "type": "Main",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Rare Awakening Stone"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "Reports are coming in of monsters attacking outlying farms. The Adventure Society is looking for volunteers.",
+        "choices": [
+          {"text": "Volunteer to defend", "next_stage_id": "stage_2_defend", "consequence": "You are assigned to the western gate."},
+          {"text": "Volunteer to hunt", "next_stage_id": "stage_2_hunt", "consequence": "You are sent to track the beasts to their lair."}
+        ]
+      },
+      "stage_2_defend": {
+        "id": "stage_2_defend",
+        "description": "A wave of monsters attacks the gate! You fight bravely alongside the guards.",
+        "choices": [
+          {"text": "Hold the line", "next_stage_id": "stage_3_victory", "consequence": "You successfully repel the attack."}
+        ]
+      },
+      "stage_2_hunt": {
+        "id": "stage_2_hunt",
+        "description": "You track the monsters to a cave. Inside, you find a broodmother.",
+        "choices": [
+          {"text": "Slay the broodmother", "next_stage_id": "stage_3_victory", "consequence": "The monster threat is ended at its source."}
+        ]
+      },
+      "stage_3_victory": {
+        "id": "stage_3_victory",
+        "description": "The town is safe for now. The Mayor thanks you for your service.",
+        "choices": [
+          {"text": "Accept reward", "next_stage_id": "COMPLETED", "consequence": "You receive a Rare Awakening Stone."}
+        ]
+      }
+    }
+  },
+  {
+    "id": "main_ancient_ruins",
+    "title": "The Ancient Ruins",
+    "description": "An ancient structure has been unearthed nearby.",
+    "type": "Main",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Confluence Essence"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "Excavators have found a ruin that predates the current era. They need explorers.",
+        "choices": [
+          {"text": "Enter the ruins", "next_stage_id": "stage_2", "consequence": "The air inside is stale and heavy with magic."}
+        ]
+      },
+      "stage_2": {
+        "id": "stage_2",
+        "description": "You encounter a sealed door with a complex puzzle lock.",
+        "choices": [
+          {"text": "Force it open", "next_stage_id": "stage_3_brute", "consequence": "You smash the lock, triggering a trap but opening the door."},
+          {"text": "Solve the puzzle", "next_stage_id": "stage_3_smart", "consequence": "The door slides open silently."}
+        ]
+      },
+      "stage_3_brute": {
+        "id": "stage_3_brute",
+        "description": "You find a pedestal with a glowing artifact, but the room is collapsing!",
+        "choices": [
+           {"text": "Grab it and run", "next_stage_id": "COMPLETED", "consequence": "You escape with the artifact."}
+        ]
+      },
+      "stage_3_smart": {
+        "id": "stage_3_smart",
+        "description": "You find a pedestal with a glowing artifact. The room is pristine.",
+        "choices": [
+           {"text": "Take the artifact", "next_stage_id": "COMPLETED", "consequence": "You claim the artifact safely."}
+        ]
+      }
+    }
+  },
+  {
+    "id": "side_lost_cat",
+    "title": "The Lost Cat",
+    "description": "Mrs. Higgins has lost her cat, Mittens.",
+    "type": "Side",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Healing Potion"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "Mrs. Higgins is crying. 'Mittens ran into the forest!'",
+        "choices": [
+          {"text": "Look in the forest", "next_stage_id": "stage_2", "consequence": "You search the nearby woods."}
+        ]
+      },
+      "stage_2": {
+        "id": "stage_2",
+        "description": "You find Mittens stuck in a tree.",
+        "choices": [
+          {"text": "Climb up", "next_stage_id": "COMPLETED", "consequence": "You rescue the cat. Mrs. Higgins gives you a potion."}
+        ]
+      }
+    }
+  },
+  {
+    "id": "side_herb_gathering",
+    "title": "Herb Gathering",
+    "description": "The local alchemist needs Moonleaf.",
+    "type": "Side",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Mana Stone"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "The alchemist asks you to find 5 bundles of Moonleaf.",
+        "choices": [
+          {"text": "Go to the glade", "next_stage_id": "stage_2", "consequence": "The glade is full of herbs."}
+        ]
+      },
+      "stage_2": {
+        "id": "stage_2",
+        "description": "You find the Moonleaf, but a wolf guards it.",
+        "choices": [
+          {"text": "Fight the wolf", "next_stage_id": "COMPLETED", "consequence": "You defeat the wolf and collect the herbs."}
+        ]
+      }
+    }
+  },
+  {
+    "id": "side_rival_duel",
+    "title": "The Duel",
+    "description": "A rival adventurer has challenged you.",
+    "type": "Side",
+    "starting_stage_id": "stage_1",
+    "rewards": ["Reputation"],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "Garret, a pompous noble, challenges you to a duel for honor.",
+        "choices": [
+          {"text": "Accept", "next_stage_id": "stage_2_fight", "consequence": "You meet him in the square."},
+          {"text": "Decline", "next_stage_id": "stage_2_coward", "consequence": "He laughs at you."}
+        ]
+      },
+      "stage_2_fight": {
+        "id": "stage_2_fight",
+        "description": "Garret is quick, but predictable.",
+        "choices": [
+          {"text": "Strike hard", "next_stage_id": "COMPLETED", "consequence": "You knock him down. He yields."}
+        ]
+      },
+       "stage_2_coward": {
+        "id": "stage_2_coward",
+        "description": "Everyone mocks you.",
+        "choices": [
+          {"text": "Walk away", "next_stage_id": "COMPLETED", "consequence": "You lost reputation."}
+        ]
+      }
+    }
+  }
+]
