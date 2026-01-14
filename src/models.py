@@ -23,6 +23,35 @@ class Faction:
     rank_requirement: Optional[str] = None
 
 @dataclass
+class QuestChoice:
+    text: str
+    next_stage_id: str
+    consequence: str
+
+@dataclass
+class QuestStage:
+    id: str
+    description: str
+    choices: List[QuestChoice] = field(default_factory=list)
+
+@dataclass
+class Quest:
+    id: str
+    title: str
+    description: str
+    stages: Dict[str, QuestStage]
+    starting_stage_id: str
+    rewards: List[str]
+    type: str = "Side"
+
+@dataclass
+class QuestProgress:
+    quest_id: str
+    current_stage_id: str
+    status: str = "Active"  # Active, Completed, Failed
+    history: List[str] = field(default_factory=list)
+
+@dataclass
 class AwakeningStone:
     name: str
     function: str
@@ -110,6 +139,7 @@ class Character:
     confluence_essence: Optional[Essence] = None
     abilities: Dict[str, List[Optional[Ability]]] = field(default_factory=dict)
     inventory: List[Union[Essence, AwakeningStone]] = field(default_factory=list)
+    quests: Dict[str, QuestProgress] = field(default_factory=dict)
 
     @property
     def rank(self) -> str:
