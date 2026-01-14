@@ -71,7 +71,8 @@ def main():
         print("3. Absorb Essence (from Inventory)")
         print("4. Awaken Ability (using Stone)")
         print("5. Practice Ability")
-        print("6. Exit")
+        print("6. Simulate Training")
+        print("7. Exit")
 
         choice = input("\nSelect Action: ").strip()
 
@@ -190,16 +191,27 @@ def main():
             else:
                 print("Stone not found.")
 
-        elif action == "Train (Simulate Growth)":
-            # Simulate usage
+        elif choice == "6":
             print("Simulating training montage...")
-            # For simplicity, just add 1 to all bonded stats based on multiplier
-            for attr_name, attr in character.attributes.items():
-                gain = 1.0 * attr.growth_multiplier
-                attr.value += gain
-                print(f"{attr_name} gained {gain:.1f} points.")
+            # Simulate training all attributes
+            for attr_name in character.attributes:
+                engine.training_mgr.train_attribute(character, attr_name)
 
-            # TODO: Logic for ranking up abilities
+            # Simulate practicing all abilities and attempting rank up
+            for essence_name, abilities in character.abilities.items():
+                for i, ability in enumerate(abilities):
+                    if ability:
+                        leveled_up = engine.training_mgr.practice_ability(character, essence_name, i)
+                        if leveled_up:
+                            print(f"{ability.name} leveled up to {ability.level}!")
+
+                        if ability.level == 9:
+                            rank_up_msg = engine.training_mgr.attempt_rank_up_ability(character, essence_name, i)
+                            if "Success" in rank_up_msg:
+                                print(f"{ability.name} {rank_up_msg}")
+
+        elif choice == "7":
+            sys.exit()
 
 if __name__ == "__main__":
     main()
