@@ -86,7 +86,8 @@ def main():
         print("4. Awaken Ability (using Stone)")
         print("5. Practice Ability")
         print("6. Simulate Training")
-        print("7. Exit")
+        print("7. Quest Log / Adventure")
+        print("8. Exit")
 
         choice = input("\nSelect Action: ").strip()
 
@@ -228,6 +229,79 @@ def main():
                                 print(f"{ability.name} {rank_up_msg}")
 
         elif choice == "7":
+            # Quest Menu
+            print("\n--- Quest Log ---")
+
+            # Show Active Quests
+            active_quests = [q_id for q_id, prog in char.quests.items() if prog.status == "Active"]
+            if active_quests:
+                print("Active Quests:")
+                for q_id in active_quests:
+                    q = engine.quest_mgr.data_loader.get_quest(q_id)
+                    stage = q.stages.get(char.quests[q_id].current_stage_id)
+                    print(f"- {q.title}: {stage.description}")
+            else:
+                print("No active quests.")
+
+            print("\nOptions:")
+            print("1. Find New Quest")
+            print("2. Continue Quest")
+            print("3. Back")
+
+            q_choice = input("> ").strip()
+
+            if q_choice == "1":
+                available = engine.quest_mgr.get_available_quests(char)
+                if not available:
+                    print("No new quests available.")
+                else:
+                    print("Available Quests:")
+                    for i, q in enumerate(available):
+                        print(f"{i+1}. {q.title} ({q.type}) - {q.description}")
+
+                    try:
+                        idx = int(input("Select quest to start (0 to cancel): ")) - 1
+                        if 0 <= idx < len(available):
+                            res = engine.quest_mgr.start_quest(char, available[idx].id)
+                            print(res)
+                    except ValueError:
+                        pass
+
+            elif q_choice == "2":
+                if not active_quests:
+                    print("No active quests.")
+                else:
+                    print("Select Quest to continue:")
+                    active_list = []
+                    for q_id in active_quests:
+                         active_list.append(engine.quest_mgr.data_loader.get_quest(q_id))
+
+                    for i, q in enumerate(active_list):
+                        print(f"{i+1}. {q.title}")
+
+                    try:
+                        idx = int(input("> ")) - 1
+                        if 0 <= idx < len(active_list):
+                            q = active_list[idx]
+                            stage_id = char.quests[q.id].current_stage_id
+                            stage = q.stages.get(stage_id)
+
+                            print(f"\n--- {q.title} ---")
+                            print(stage.description)
+
+                            if not stage.choices:
+                                print("(No choices available - Stage might be end or broken)")
+                            else:
+                                for k, c in enumerate(stage.choices):
+                                    print(f"{k+1}. {c.text}")
+
+                                c_idx = int(input("Make a choice: ")) - 1
+                                res = engine.quest_mgr.make_choice(char, q.id, c_idx)
+                                print(f"\n> {res}")
+                    except ValueError:
+                        print("Invalid input.")
+
+        elif choice == "8":
             sys.exit()
 
 if __name__ == "__main__":

@@ -1,8 +1,8 @@
 import json
 import os
 import random
-from typing import List, Optional, Union
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES
+from typing import List, Optional, Union, Dict
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -21,12 +21,14 @@ class DataLoader:
             DataLoader._cache['stones'] = load_json('awakening_stones.json')
             DataLoader._cache['factions'] = load_json('factions.json')
             DataLoader._cache['characters'] = load_json('characters.json')
+            DataLoader._cache['quests'] = load_json('quests.json')
 
         self.essences_data = DataLoader._cache['essences']
         self.confluences_data = DataLoader._cache['confluences']
         self.stones_data = DataLoader._cache['stones']
         self.factions_data = DataLoader._cache['factions']
         self.characters_data = DataLoader._cache['characters']
+        self.quests_data = DataLoader._cache['quests']
         # Optimization: Pre-compute dictionary for O(1) lookup
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
@@ -35,6 +37,42 @@ class DataLoader:
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
         self.characters_map = {c['name'].lower(): c for c in self.characters_data}
         self.factions_map = {f['name'].lower(): f for f in self.factions_data}
+        self.quests_map = {q['id']: q for q in self.quests_data}
+
+    def get_quest(self, quest_id: str) -> Optional[Quest]:
+        q = self.quests_map.get(quest_id)
+        if q:
+            stages = {}
+            for stage_id, stage_data in q['stages'].items():
+                choices = []
+                for choice in stage_data.get('choices', []):
+                    choices.append(QuestChoice(
+                        text=choice['text'],
+                        next_stage_id=choice['next_stage_id'],
+                        consequence=choice.get('consequence', '')
+                    ))
+                stages[stage_id] = QuestStage(
+                    id=stage_data['id'],
+                    description=stage_data['description'],
+                    choices=choices
+                )
+
+            return Quest(
+                id=q['id'],
+                title=q['title'],
+                description=q['description'],
+                stages=stages,
+                starting_stage_id=q['starting_stage_id'],
+                rewards=q.get('rewards', []),
+                type=q.get('type', 'Side')
+            )
+        return None
+
+    def get_all_quests(self) -> List[Quest]:
+        quests = []
+        for q_data in self.quests_data:
+             quests.append(self.get_quest(q_data['id']))
+        return quests
 
     def get_essence(self, name: str) -> Optional[Essence]:
         e = self.essences_map.get(name.lower())
@@ -290,6 +328,92 @@ class AbilityGenerator:
             parent_stone=stone
         )
 
+class QuestManager:
+    def __init__(self, data_loader: DataLoader):
+        self.data_loader = data_loader
+
+    def get_available_quests(self, character: Character) -> List[Quest]:
+        # Return quests that are not started or completed
+        all_quests = self.data_loader.get_all_quests()
+        available = []
+        for q in all_quests:
+            if q.id not in character.quests:
+                available.append(q)
+        return available
+
+    def start_quest(self, character: Character, quest_id: str) -> str:
+        if quest_id in character.quests:
+            return "Quest already started."
+
+        quest = self.data_loader.get_quest(quest_id)
+        if not quest:
+            return "Quest not found."
+
+        character.quests[quest_id] = QuestProgress(
+            quest_id=quest_id,
+            current_stage_id=quest.starting_stage_id,
+            status="Active"
+        )
+        return f"Started quest: {quest.title}"
+
+    def get_quest_status(self, character: Character, quest_id: str) -> str:
+        if quest_id not in character.quests:
+            return "Not Started"
+        return character.quests[quest_id].status
+
+    def make_choice(self, character: Character, quest_id: str, choice_index: int) -> str:
+        if quest_id not in character.quests:
+            return "Quest not active."
+
+        progress = character.quests[quest_id]
+        if progress.status != "Active":
+            return f"Quest is {progress.status}."
+
+        quest = self.data_loader.get_quest(quest_id)
+        current_stage = quest.stages.get(progress.current_stage_id)
+
+        if not current_stage:
+            return "Invalid stage data."
+
+        if choice_index < 0 or choice_index >= len(current_stage.choices):
+            return "Invalid choice."
+
+        choice = current_stage.choices[choice_index]
+
+        # Apply consequence (Logic for rewards could go here)
+        result_text = choice.consequence
+
+        # Move to next stage
+        progress.history.append(progress.current_stage_id)
+
+        if choice.next_stage_id == "COMPLETED":
+            progress.status = "Completed"
+            progress.current_stage_id = "COMPLETED"
+            # Grant rewards
+            if quest.rewards:
+                 result_text += f"\nRewards: {', '.join(quest.rewards)}"
+                 # Logic to actually give items would go here.
+                 # For now, we assume simple text feedback or maybe hook into LootManager if we want to be fancy.
+                 # Let's try to give rewards if possible.
+                 self._grant_rewards(character, quest.rewards)
+
+        else:
+            progress.current_stage_id = choice.next_stage_id
+
+        return result_text
+
+    def _grant_rewards(self, character: Character, rewards: List[str]):
+        # Simple string parsing for now
+        for reward in rewards:
+            if "Essence" in reward:
+                # Give a random essence if generic, or specific?
+                # For now just text.
+                pass
+            elif "Stone" in reward:
+                pass
+            elif "Potion" in reward:
+                pass
+
 class TrainingManager:
     @staticmethod
     def train_attribute(character: Character, attribute_name: str):
@@ -384,6 +508,7 @@ class GameEngine:
         self.ability_gen = AbilityGenerator()
         self.training_mgr = TrainingManager()
         self.loot_mgr = LootManager(self.data_loader)
+        self.quest_mgr = QuestManager(self.data_loader)
         self.character = None
 
     def create_character(self, name: str, race: str):
