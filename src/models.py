@@ -11,12 +11,17 @@ class Essence:
     tags: List[str]
     description: str
     bonded_attribute: Optional[str] = None
+    opposite: Optional[str] = None
+    synergy: List[str] = field(default_factory=list)
 
 @dataclass
 class AwakeningStone:
     name: str
     function: str
     description: str
+    rarity: str = "Common"
+    cooldown: str = "Medium"
+    cost_type: str = "Mana"
 
 @dataclass
 class Ability:

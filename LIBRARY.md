@@ -1,35 +1,35 @@
 # HWFWM System Library
 
 ## Essences
-| Name | Type | Rarity | Tags | Description |
-|---|---|---|---|---|
-| Air | Base | Common | Elemental, Gas, Movement, Wind | The essence of wind and atmosphere. |
-| Armor | Base | Common | Physical, Defense, Protection | The essence of protection. |
-| Balance | Base | Rare | Abstract, Equilibrium | The essence of equality. |
-| Blood | Base | Rare | Physical, Biological, Vitality, Liquid, Macabre | The essence of lifeblood. |
-| Dark | Base | Rare | Abstract, Shadow, Concealment, Negative | The essence of darkness and shadow. |
-| Death | Base | Rare | Abstract, End, Macabre | The essence of the end. |
-| Dimension | Base | Epic | Abstract, Space, Reality, Travel | The essence of spatial dimensions. |
-| Directed | Base | Uncommon | Abstract, Focus, Aim | The essence of precision. |
-| Dragon | Base | Epic | Biological, Mythic, Power | The essence of the great drakes. |
-| Earth | Base | Common | Elemental, Solid, Defense, Nature | The essence of stability and stone. |
-| Fire | Base | Common | Elemental, Heat, Energy, Destruction | The essence of combustion and heat. |
-| Gun | Base | Uncommon | Artificial, Weapon, Ranged | The essence of firearms. |
-| Iron | Base | Uncommon | Physical, Metal, Hardness, Defense | The essence of metal. |
-| Life | Base | Common | Biological, Vitality, Nature | The essence of living things. |
-| Light | Base | Rare | Abstract, Illumination, Holy, Vision | The essence of light. |
-| Lightning | Base | Uncommon | Elemental, Electricity, Speed, Energy | The essence of storm and electricity. |
-| Might | Base | Common | Physical, Strength, Force, Body | The essence of physical power. |
-| Moon | Base | Epic | Celestial, Night, Tides | The essence of the moon. |
-| Potent | Base | Uncommon | Abstract, Power, Amplification, Energy | The essence of raw power and intensity. |
-| Renewal | Base | Uncommon | Recovery, Life, Healing | The essence of rebirth and healing. |
-| Sin | Base | Legendary | Abstract, Concept, Corruption, Judgment | The essence of transgression. |
-| Sun | Base | Epic | Celestial, Light, Heat, Star | The essence of the sun. |
-| Swift | Base | Common | Physical, Speed, Velocity, Reaction | The essence of speed. |
-| Technology | Base | Uncommon | Artificial, Machinery, Logic | The essence of machines and invention. |
-| Water | Base | Common | Elemental, Liquid, Flow, Life | The essence of fluidity and life. |
-| Wind | Base | Common | Elemental, Gas, Movement | The essence of moving air. |
-| Wing | Base | Common | Physical, Flight, Air | The essence of flight. |
+| Name | Type | Rarity | Tags | Description | Opposite | Synergy |
+|---|---|---|---|---|---|---|
+| Air | Base | Common | Elemental, Gas, Movement, Wind | The essence of wind and atmosphere. | Earth | Fire, Lightning, Swift, Wing, Dimension |
+| Armor | Base | Common | Physical, Defense, Protection | The essence of protection. | Gun | Iron, Technology, Earth, Might, Shield |
+| Balance | Base | Rare | Abstract, Equilibrium | The essence of equality. | Potent | Life, Death, Sun, Moon, Light, Dark |
+| Blood | Base | Rare | Physical, Biological, Vitality, Liquid, Macabre | The essence of lifeblood. | Technology | Dark, Sin, Life, Death, Renewal |
+| Dark | Base | Rare | Abstract, Shadow, Concealment, Negative | The essence of darkness and shadow. | Light | Blood, Sin, Death, Moon, Dimension |
+| Death | Base | Rare | Abstract, End, Macabre | The essence of the end. | Life | Dark, Blood, Sin, Moon, Balance |
+| Dimension | Base | Epic | Abstract, Space, Reality, Travel | The essence of spatial dimensions. | Earth | Air, Light, Dark, Moon, Sun |
+| Directed | Base | Uncommon | Abstract, Focus, Aim | The essence of precision. | Might | Gun, Swift, Wind, Technology, Potent |
+| Dragon | Base | Epic | Biological, Mythic, Power | The essence of the great drakes. | None | Sun, Moon, Fire, Potent, Wing |
+| Earth | Base | Common | Elemental, Solid, Defense, Nature | The essence of stability and stone. | Air | Fire, Iron, Potent, Life, Armor |
+| Fire | Base | Common | Elemental, Heat, Energy, Destruction | The essence of combustion and heat. | Water | Earth, Air, Potent, Renewal, Wing, Light |
+| Gun | Base | Uncommon | Artificial, Weapon, Ranged | The essence of firearms. | Shield | Technology, Armor, Directed, Iron, Fire |
+| Iron | Base | Uncommon | Physical, Metal, Hardness, Defense | The essence of metal. | Swift | Earth, Might, Technology, Armor, Lightning |
+| Life | Base | Common | Biological, Vitality, Nature | The essence of living things. | Death | Renewal, Water, Earth, Blood, Sun |
+| Light | Base | Rare | Abstract, Illumination, Holy, Vision | The essence of light. | Dark | Sun, Fire, Might, Swift, Renewal |
+| Lightning | Base | Uncommon | Elemental, Electricity, Speed, Energy | The essence of storm and electricity. | Earth | Air, Swift, Iron, Technology, Sun |
+| Might | Base | Common | Physical, Strength, Force, Body | The essence of physical power. | Directed | Swift, Iron, Potent, Armor, Light |
+| Moon | Base | Epic | Celestial, Night, Tides | The essence of the moon. | Sun | Dark, Water, Dragon, Dimension, Death |
+| Potent | Base | Uncommon | Abstract, Power, Amplification, Energy | The essence of raw power and intensity. | Balance | Fire, Earth, Might, Sun, Dragon |
+| Renewal | Base | Uncommon | Recovery, Life, Healing | The essence of rebirth and healing. | Death | Life, Water, Fire, Wing, Light |
+| Sin | Base | Legendary | Abstract, Concept, Corruption, Judgment | The essence of transgression. | Balance | Dark, Blood, Doom, Fire, Potent |
+| Sun | Base | Epic | Celestial, Light, Heat, Star | The essence of the sun. | Moon | Light, Fire, Dragon, Potent, Life |
+| Swift | Base | Common | Physical, Speed, Velocity, Reaction | The essence of speed. | Iron | Might, Wind, Lightning, Directed, Wing |
+| Technology | Base | Uncommon | Artificial, Machinery, Logic | The essence of machines and invention. | Nature | Gun, Armor, Iron, Lightning, Directed |
+| Water | Base | Common | Elemental, Liquid, Flow, Life | The essence of fluidity and life. | Fire | Earth, Life, Renewal, Dark, Moon |
+| Wind | Base | Common | Elemental, Gas, Movement | The essence of moving air. | Earth | Air, Swift, Directed, Lightning, Wing |
+| Wing | Base | Common | Physical, Flight, Air | The essence of flight. | Earth | Air, Swift, Fire, Renewal, Dragon |
 
 ## Confluences
 | Result | Base Essences | Archetype |
@@ -46,22 +46,22 @@
 | Volcano | Fire, Earth, Potent | AoE Destruction / Tank |
 
 ## Awakening Stones
-| Name | Function | Description |
-|---|---|---|
-| Stone of Focus | Perception | Enhances sensory data. |
-| Stone of Judgment | Execute | Deals high dmg to low HP/Debuffed targets. |
-| Stone of the Blast | Ranged Attack | Projects a bolt/beam of Essence. |
-| Stone of the Echo | Replication | Repeats previous action or creates decoy. |
-| Stone of the Familiar | Summoning | Spawns an AI minion based on Essence. |
-| Stone of the Feast | Drain/Sustain | Drains enemy resource to refill user. |
-| Stone of the Flesh | Body Mod | Alters user physiology (Passive/Active). |
-| Stone of the Foot | Mobility | Enhances movement or adds teleportation. |
-| Stone of the Shield | Defense | Creates a barrier or armor buff. |
-| Stone of the Stars | Celestial/Augment | Adds light/cosmic properties or massive buff. |
-| Stone of the Strike | Melee Attack | Imbues physical strike with Essence element. |
-| Stone of the Swarm | Multi-Hit | Splits effect into multiple small projectiles. |
-| Stone of the Trap | Area Denial | Places a hidden rune/trigger. |
-| Stone of the Wall | Terrain Control | Creates physical obstacles. |
+| Name | Function | Description | Rarity | Cooldown | Cost Type |
+|---|---|---|---|---|---|
+| Stone of Focus | Perception | Enhances sensory data. | Common | None | Stamina |
+| Stone of Judgment | Execute | Deals high dmg to low HP/Debuffed targets. | Rare | High | Mana |
+| Stone of the Blast | Ranged Attack | Projects a bolt/beam of Essence. | Common | Low | Mana |
+| Stone of the Echo | Replication | Repeats previous action or creates decoy. | Rare | Medium | Mana |
+| Stone of the Familiar | Summoning | Spawns an AI minion based on Essence. | Rare | High | Mana |
+| Stone of the Feast | Drain/Sustain | Drains enemy resource to refill user. | Rare | High | Health |
+| Stone of the Flesh | Body Mod | Alters user physiology (Passive/Active). | Epic | None | None |
+| Stone of the Foot | Mobility | Enhances movement or adds teleportation. | Common | Low | Stamina |
+| Stone of the Shield | Defense | Creates a barrier or armor buff. | Common | Medium | Mana |
+| Stone of the Stars | Celestial/Augment | Adds light/cosmic properties or massive buff. | Epic | High | Mana |
+| Stone of the Strike | Melee Attack | Imbues physical strike with Essence element. | Common | Low | Stamina |
+| Stone of the Swarm | Multi-Hit | Splits effect into multiple small projectiles. | Uncommon | Medium | Mana |
+| Stone of the Trap | Area Denial | Places a hidden rune/trigger. | Uncommon | Medium | Mana |
+| Stone of the Wall | Terrain Control | Creates physical obstacles. | Uncommon | Medium | Mana |
 
 ## Example Builds
 

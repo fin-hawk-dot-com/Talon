@@ -4,188 +4,242 @@
     "type": "Base",
     "rarity": "Common",
     "tags": ["Elemental", "Heat", "Energy", "Destruction"],
-    "description": "The essence of combustion and heat."
+    "description": "The essence of combustion and heat.",
+    "opposite": "Water",
+    "synergy": ["Earth", "Air", "Potent", "Renewal", "Wing", "Light"]
   },
   {
     "name": "Water",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Elemental", "Liquid", "Flow", "Life"],
-    "description": "The essence of fluidity and life."
+    "description": "The essence of fluidity and life.",
+    "opposite": "Fire",
+    "synergy": ["Earth", "Life", "Renewal", "Dark", "Moon"]
   },
   {
     "name": "Earth",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Elemental", "Solid", "Defense", "Nature"],
-    "description": "The essence of stability and stone."
+    "description": "The essence of stability and stone.",
+    "opposite": "Air",
+    "synergy": ["Fire", "Iron", "Potent", "Life", "Armor"]
   },
   {
     "name": "Air",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Elemental", "Gas", "Movement", "Wind"],
-    "description": "The essence of wind and atmosphere."
+    "description": "The essence of wind and atmosphere.",
+    "opposite": "Earth",
+    "synergy": ["Fire", "Lightning", "Swift", "Wing", "Dimension"]
   },
   {
     "name": "Might",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Physical", "Strength", "Force", "Body"],
-    "description": "The essence of physical power."
+    "description": "The essence of physical power.",
+    "opposite": "Directed",
+    "synergy": ["Swift", "Iron", "Potent", "Armor", "Light"]
   },
   {
     "name": "Swift",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Physical", "Speed", "Velocity", "Reaction"],
-    "description": "The essence of speed."
+    "description": "The essence of speed.",
+    "opposite": "Iron",
+    "synergy": ["Might", "Wind", "Lightning", "Directed", "Wing"]
   },
   {
     "name": "Potent",
     "type": "Base",
     "rarity": "Uncommon",
     "tags": ["Abstract", "Power", "Amplification", "Energy"],
-    "description": "The essence of raw power and intensity."
+    "description": "The essence of raw power and intensity.",
+    "opposite": "Balance",
+    "synergy": ["Fire", "Earth", "Might", "Sun", "Dragon"]
   },
   {
     "name": "Dark",
     "type": "Base",
     "rarity": "Rare",
     "tags": ["Abstract", "Shadow", "Concealment", "Negative"],
-    "description": "The essence of darkness and shadow."
+    "description": "The essence of darkness and shadow.",
+    "opposite": "Light",
+    "synergy": ["Blood", "Sin", "Death", "Moon", "Dimension"]
   },
   {
     "name": "Blood",
     "type": "Base",
     "rarity": "Rare",
     "tags": ["Physical", "Biological", "Vitality", "Liquid", "Macabre"],
-    "description": "The essence of lifeblood."
+    "description": "The essence of lifeblood.",
+    "opposite": "Technology",
+    "synergy": ["Dark", "Sin", "Life", "Death", "Renewal"]
   },
   {
     "name": "Sin",
     "type": "Base",
     "rarity": "Legendary",
     "tags": ["Abstract", "Concept", "Corruption", "Judgment"],
-    "description": "The essence of transgression."
+    "description": "The essence of transgression.",
+    "opposite": "Balance",
+    "synergy": ["Dark", "Blood", "Doom", "Fire", "Potent"]
   },
   {
     "name": "Dimension",
     "type": "Base",
     "rarity": "Epic",
     "tags": ["Abstract", "Space", "Reality", "Travel"],
-    "description": "The essence of spatial dimensions."
+    "description": "The essence of spatial dimensions.",
+    "opposite": "Earth",
+    "synergy": ["Air", "Light", "Dark", "Moon", "Sun"]
   },
   {
     "name": "Iron",
     "type": "Base",
     "rarity": "Uncommon",
     "tags": ["Physical", "Metal", "Hardness", "Defense"],
-    "description": "The essence of metal."
+    "description": "The essence of metal.",
+    "opposite": "Swift",
+    "synergy": ["Earth", "Might", "Technology", "Armor", "Lightning"]
   },
   {
     "name": "Lightning",
     "type": "Base",
     "rarity": "Uncommon",
     "tags": ["Elemental", "Electricity", "Speed", "Energy"],
-    "description": "The essence of storm and electricity."
+    "description": "The essence of storm and electricity.",
+    "opposite": "Earth",
+    "synergy": ["Air", "Swift", "Iron", "Technology", "Sun"]
   },
    {
     "name": "Technology",
     "type": "Base",
     "rarity": "Uncommon",
     "tags": ["Artificial", "Machinery", "Logic"],
-    "description": "The essence of machines and invention."
+    "description": "The essence of machines and invention.",
+    "opposite": "Nature",
+    "synergy": ["Gun", "Armor", "Iron", "Lightning", "Directed"]
   },
   {
     "name": "Renewal",
     "type": "Base",
     "rarity": "Uncommon",
     "tags": ["Recovery", "Life", "Healing"],
-    "description": "The essence of rebirth and healing."
+    "description": "The essence of rebirth and healing.",
+    "opposite": "Death",
+    "synergy": ["Life", "Water", "Fire", "Wing", "Light"]
   },
   {
     "name": "Wing",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Physical", "Flight", "Air"],
-    "description": "The essence of flight."
+    "description": "The essence of flight.",
+    "opposite": "Earth",
+    "synergy": ["Air", "Swift", "Fire", "Renewal", "Dragon"]
   },
   {
     "name": "Light",
     "type": "Base",
     "rarity": "Rare",
     "tags": ["Abstract", "Illumination", "Holy", "Vision"],
-    "description": "The essence of light."
+    "description": "The essence of light.",
+    "opposite": "Dark",
+    "synergy": ["Sun", "Fire", "Might", "Swift", "Renewal"]
   },
   {
     "name": "Wind",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Elemental", "Gas", "Movement"],
-    "description": "The essence of moving air."
+    "description": "The essence of moving air.",
+    "opposite": "Earth",
+    "synergy": ["Air", "Swift", "Directed", "Lightning", "Wing"]
   },
   {
     "name": "Directed",
     "type": "Base",
     "rarity": "Uncommon",
     "tags": ["Abstract", "Focus", "Aim"],
-    "description": "The essence of precision."
+    "description": "The essence of precision.",
+    "opposite": "Might",
+    "synergy": ["Gun", "Swift", "Wind", "Technology", "Potent"]
   },
   {
     "name": "Gun",
     "type": "Base",
     "rarity": "Uncommon",
     "tags": ["Artificial", "Weapon", "Ranged"],
-    "description": "The essence of firearms."
+    "description": "The essence of firearms.",
+    "opposite": "Shield",
+    "synergy": ["Technology", "Armor", "Directed", "Iron", "Fire"]
   },
   {
     "name": "Armor",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Physical", "Defense", "Protection"],
-    "description": "The essence of protection."
+    "description": "The essence of protection.",
+    "opposite": "Gun",
+    "synergy": ["Iron", "Technology", "Earth", "Might", "Shield"]
   },
   {
     "name": "Life",
     "type": "Base",
     "rarity": "Common",
     "tags": ["Biological", "Vitality", "Nature"],
-    "description": "The essence of living things."
+    "description": "The essence of living things.",
+    "opposite": "Death",
+    "synergy": ["Renewal", "Water", "Earth", "Blood", "Sun"]
   },
   {
     "name": "Death",
     "type": "Base",
     "rarity": "Rare",
     "tags": ["Abstract", "End", "Macabre"],
-    "description": "The essence of the end."
+    "description": "The essence of the end.",
+    "opposite": "Life",
+    "synergy": ["Dark", "Blood", "Sin", "Moon", "Balance"]
   },
   {
     "name": "Balance",
     "type": "Base",
     "rarity": "Rare",
     "tags": ["Abstract", "Equilibrium"],
-    "description": "The essence of equality."
+    "description": "The essence of equality.",
+    "opposite": "Potent",
+    "synergy": ["Life", "Death", "Sun", "Moon", "Light", "Dark"]
   },
   {
     "name": "Dragon",
     "type": "Base",
     "rarity": "Epic",
     "tags": ["Biological", "Mythic", "Power"],
-    "description": "The essence of the great drakes."
+    "description": "The essence of the great drakes.",
+    "opposite": "None",
+    "synergy": ["Sun", "Moon", "Fire", "Potent", "Wing"]
   },
   {
     "name": "Sun",
     "type": "Base",
     "rarity": "Epic",
     "tags": ["Celestial", "Light", "Heat", "Star"],
-    "description": "The essence of the sun."
+    "description": "The essence of the sun.",
+    "opposite": "Moon",
+    "synergy": ["Light", "Fire", "Dragon", "Potent", "Life"]
   },
   {
     "name": "Moon",
     "type": "Base",
     "rarity": "Epic",
     "tags": ["Celestial", "Night", "Tides"],
-    "description": "The essence of the moon."
+    "description": "The essence of the moon.",
+    "opposite": "Sun",
+    "synergy": ["Dark", "Water", "Dragon", "Dimension", "Death"]
   }
 ]
