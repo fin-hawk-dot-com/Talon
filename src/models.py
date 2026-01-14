@@ -148,6 +148,17 @@ class Character:
     abilities: Dict[str, List[Optional[Ability]]] = field(default_factory=dict)
     inventory: List[Union[Essence, AwakeningStone]] = field(default_factory=list)
     quests: Dict[str, QuestProgress] = field(default_factory=dict)
+    current_health: float = field(default=-1.0)
+    xp_reward: int = 0
+    loot_table: List[str] = field(default_factory=list)
+
+    def __post_init__(self):
+        if self.current_health < 0:
+            self.current_health = self.max_health
+
+    @property
+    def max_health(self) -> float:
+        return self.attributes["Recovery"].value * 10.0
 
     @property
     def rank(self) -> str:

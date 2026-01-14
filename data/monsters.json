@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Giant Rat",
+    "race": "Beast",
+    "attributes": {
+      "Power": 20,
+      "Speed": 30,
+      "Spirit": 5,
+      "Recovery": 15
+    },
+    "xp_reward": 10,
+    "loot_table": ["Stone of the Strike"]
+  },
+  {
+    "name": "Wild Boar",
+    "race": "Beast",
+    "attributes": {
+      "Power": 40,
+      "Speed": 20,
+      "Spirit": 10,
+      "Recovery": 50
+    },
+    "xp_reward": 20,
+    "loot_table": ["Might"]
+  },
+  {
+    "name": "Iron Wolf",
+    "race": "Magical Beast",
+    "attributes": {
+      "Power": 120,
+      "Speed": 140,
+      "Spirit": 80,
+      "Recovery": 110
+    },
+    "xp_reward": 100,
+    "loot_table": ["Swift", "Stone of the Reflex"]
+  },
+  {
+    "name": "Rock Golem",
+    "race": "Construct",
+    "attributes": {
+      "Power": 180,
+      "Speed": 50,
+      "Spirit": 50,
+      "Recovery": 190
+    },
+    "xp_reward": 150,
+    "loot_table": ["Earth", "Stone of the Shield"]
+  },
+  {
+    "name": "Bronze Drake",
+    "race": "Dragonkin",
+    "attributes": {
+      "Power": 250,
+      "Speed": 220,
+      "Spirit": 200,
+      "Recovery": 280
+    },
+    "xp_reward": 500,
+    "loot_table": ["Fire", "Dragon", "Stone of the Breath"]
+  }
+]
