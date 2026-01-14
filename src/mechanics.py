@@ -25,7 +25,9 @@ class DataLoader:
                     type=e['type'],
                     rarity=e['rarity'],
                     tags=e['tags'],
-                    description=e['description']
+                    description=e['description'],
+                    opposite=e.get('opposite'),
+                    synergy=e.get('synergy', [])
                 )
         return None
 
@@ -35,7 +37,10 @@ class DataLoader:
                 return AwakeningStone(
                     name=s['name'],
                     function=s['function'],
-                    description=s['description']
+                    description=s['description'],
+                    rarity=s.get('rarity', "Common"),
+                    cooldown=s.get('cooldown', "Medium"),
+                    cost_type=s.get('cost_type', "Mana")
                 )
         return None
 
@@ -65,7 +70,9 @@ class ConfluenceManager:
                     type="Confluence",
                     rarity="Rare",
                     tags=["Confluence", recipe['archetype']],
-                    description=f"A confluence of {', '.join(essence_names)}."
+                    description=f"A confluence of {', '.join(essence_names)}.",
+                    opposite=None,
+                    synergy=[]
                 )
 
         # 2. Thematic Dominance (Tag Matching)
@@ -81,7 +88,9 @@ class ConfluenceManager:
                     type="Confluence",
                     rarity="Epic",
                     tags=[tag, "Pure"],
-                    description=f"A pure manifestation of the {tag} aspect."
+                    description=f"A pure manifestation of the {tag} aspect.",
+                    opposite=None,
+                    synergy=[]
                 )
 
         # 3. Fallback
@@ -107,7 +116,9 @@ class ConfluenceManager:
                 type="Confluence",
                 rarity="Common",
                 tags=["Hybrid", dominant_stat],
-                description=f"A generic confluence based on {dominant_stat}."
+                description=f"A generic confluence based on {dominant_stat}.",
+                opposite=None,
+                synergy=[]
             )
 
         primary = essences[0].name
@@ -116,7 +127,9 @@ class ConfluenceManager:
             type="Confluence",
             rarity="Common",
             tags=["Hybrid"],
-            description=f"A hybrid confluence dominated by {primary}."
+            description=f"A hybrid confluence dominated by {primary}.",
+            opposite=None,
+            synergy=[]
         )
 
 class AbilityGenerator:
