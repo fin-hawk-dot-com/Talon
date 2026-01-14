@@ -15,6 +15,13 @@ class Essence:
     synergy: List[str] = field(default_factory=list)
 
 @dataclass
+class Faction:
+    name: str
+    description: str
+    type: str
+    rank_requirement: Optional[str] = None
+
+@dataclass
 class AwakeningStone:
     name: str
     function: str
@@ -89,6 +96,7 @@ class Attribute:
 class Character:
     name: str
     race: str
+    faction: Optional[str] = None
     affinity: str = "General"  # Warrior, Mage, Rogue, Guardian, Support, General
     attributes: Dict[str, Attribute] = field(default_factory=lambda: {
         "Power": Attribute("Power", 10.0),
