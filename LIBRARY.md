@@ -16,16 +16,20 @@
 | Fire | Base | Common | Elemental, Heat, Energy, Destruction | The essence of combustion and heat. | Water | Earth, Air, Potent, Renewal, Wing, Light |
 | Gun | Base | Uncommon | Artificial, Weapon, Ranged | The essence of firearms. | Shield | Technology, Armor, Directed, Iron, Fire |
 | Iron | Base | Uncommon | Physical, Metal, Hardness, Defense | The essence of metal. | Swift | Earth, Might, Technology, Armor, Lightning |
+| Knowledge | Base | Uncommon | Abstract, Mind, Information, Learning | The essence of understanding and lore. | Chaos | Mana, Dimension, Light, Technology |
 | Life | Base | Common | Biological, Vitality, Nature | The essence of living things. | Death | Renewal, Water, Earth, Blood, Sun |
 | Light | Base | Rare | Abstract, Illumination, Holy, Vision | The essence of light. | Dark | Sun, Fire, Might, Swift, Renewal |
 | Lightning | Base | Uncommon | Elemental, Electricity, Speed, Energy | The essence of storm and electricity. | Earth | Air, Swift, Iron, Technology, Sun |
+| Mana | Base | Common | Abstract, Magic, Energy, Power | The essence of raw magical energy. | Void | Potent, Fire, Water, Air, Earth, Light, Dark |
 | Might | Base | Common | Physical, Strength, Force, Body | The essence of physical power. | Directed | Swift, Iron, Potent, Armor, Light |
 | Moon | Base | Epic | Celestial, Night, Tides | The essence of the moon. | Sun | Dark, Water, Dragon, Dimension, Death |
 | Potent | Base | Uncommon | Abstract, Power, Amplification, Energy | The essence of raw power and intensity. | Balance | Fire, Earth, Might, Sun, Dragon |
 | Renewal | Base | Uncommon | Recovery, Life, Healing | The essence of rebirth and healing. | Death | Life, Water, Fire, Wing, Light |
+| Shield | Base | Common | Physical, Armor, Defense, Protection | The essence of defense and blocking. | Sword | Iron, Earth, Armor, Life |
 | Sin | Base | Legendary | Abstract, Concept, Corruption, Judgment | The essence of transgression. | Balance | Dark, Blood, Doom, Fire, Potent |
 | Sun | Base | Epic | Celestial, Light, Heat, Star | The essence of the sun. | Moon | Light, Fire, Dragon, Potent, Life |
 | Swift | Base | Common | Physical, Speed, Velocity, Reaction | The essence of speed. | Iron | Might, Wind, Lightning, Directed, Wing |
+| Sword | Base | Common | Physical, Weapon, Blade, Combat | The essence of the blade. | Shield | Might, Swift, Iron, Battle |
 | Technology | Base | Uncommon | Artificial, Machinery, Logic | The essence of machines and invention. | Nature | Gun, Armor, Iron, Lightning, Directed |
 | Water | Base | Common | Elemental, Liquid, Flow, Life | The essence of fluidity and life. | Fire | Earth, Life, Renewal, Dark, Moon |
 | Wind | Base | Common | Elemental, Gas, Movement | The essence of moving air. | Earth | Air, Swift, Directed, Lightning, Wing |
@@ -34,16 +38,16 @@
 ## Confluences
 | Result | Base Essences | Archetype |
 |---|---|---|
-| Celestial Dragon | Dragon, Sun, Moon | Mythic Hybrid |
-| Cycle | Life, Death, Balance | Necromancer / Healer |
-| Doom | Dark, Blood, Sin | Affliction / Executioner |
-| Eclipse | Light, Dark, Dimension | Spatial Controller |
+| Celestial Dragon | Dragon, Moon, Sun | Mythic Hybrid |
+| Cycle | Balance, Death, Life | Necromancer / Healer |
+| Doom | Blood, Dark, Sin | Affliction / Executioner |
+| Eclipse | Dark, Dimension, Light | Spatial Controller |
 | Forge | Iron, Lightning, Technology | Crafter / Turret User |
 | Phoenix | Fire, Renewal, Wing | Resurrection / Support |
-| Radiant Vanguard | Might, Swift, Light | Holy Warrior / Paladin |
-| Storm | Swift, Wind, Directed | Speedster / Evasion |
-| Technovore | Gun, Armor, Technology | Ranged Tank / Artificer |
-| Volcano | Fire, Earth, Potent | AoE Destruction / Tank |
+| Radiant Vanguard | Light, Might, Swift | Holy Warrior / Paladin |
+| Storm | Directed, Swift, Wind | Speedster / Evasion |
+| Technovore | Armor, Gun, Technology | Ranged Tank / Artificer |
+| Volcano | Earth, Fire, Potent | AoE Destruction / Tank |
 
 ## Awakening Stones
 | Name | Function | Description | Rarity | Cooldown | Cost Type |
@@ -62,6 +66,13 @@
 | Stone of the Swarm | Multi-Hit | Splits effect into multiple small projectiles. | Uncommon | Medium | Mana |
 | Stone of the Trap | Area Denial | Places a hidden rune/trigger. | Uncommon | Medium | Mana |
 | Stone of the Wall | Terrain Control | Creates physical obstacles. | Uncommon | Medium | Mana |
+
+## Locations
+| Name | Type | Description | Positive Prompt | Negative Prompt |
+|---|---|---|---|---|
+| Crystal Caverns | Dungeon | Deep underground caves filled with sharp, resonant crystals. | Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k | sky, sun, grass, trees, flat, boring, noise |
+| Greenstone City | City | A bustling city built around a massive, glowing green stone structure. | Fantasy city, large green glowing crystal monolith in center, medieval architecture, busy market streets, magical atmosphere, bright sunlight, detailed textures, 4k | dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts |
+| The Whispering Woods | Wilderness | A dense forest where the trees seem to murmur secrets to those who listen. | Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed | city, buildings, desert, bright day, plain, simple, cartoon |
 
 ## Example Builds
 

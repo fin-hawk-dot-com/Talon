@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Greenstone City",
+    "description": "A bustling city built around a massive, glowing green stone structure.",
+    "type": "City",
+    "image_prompt_positive": "Fantasy city, large green glowing crystal monolith in center, medieval architecture, busy market streets, magical atmosphere, bright sunlight, detailed textures, 4k",
+    "image_prompt_negative": "dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts"
+  },
+  {
+    "name": "The Whispering Woods",
+    "description": "A dense forest where the trees seem to murmur secrets to those who listen.",
+    "type": "Wilderness",
+    "image_prompt_positive": "Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed",
+    "image_prompt_negative": "city, buildings, desert, bright day, plain, simple, cartoon"
+  },
+  {
+    "name": "Crystal Caverns",
+    "description": "Deep underground caves filled with sharp, resonant crystals.",
+    "type": "Dungeon",
+    "image_prompt_positive": "Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k",
+    "image_prompt_negative": "sky, sun, grass, trees, flat, boring, noise"
+  }
+]

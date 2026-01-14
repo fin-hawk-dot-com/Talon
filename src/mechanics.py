@@ -2,7 +2,7 @@ import json
 import os
 import random
 from typing import List, Optional, Union, Dict
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, Location
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -22,6 +22,7 @@ class DataLoader:
             DataLoader._cache['factions'] = load_json('factions.json')
             DataLoader._cache['characters'] = load_json('characters.json')
             DataLoader._cache['quests'] = load_json('quests.json')
+            DataLoader._cache['locations'] = load_json('locations.json')
 
         self.essences_data = DataLoader._cache['essences']
         self.confluences_data = DataLoader._cache['confluences']
@@ -29,6 +30,7 @@ class DataLoader:
         self.factions_data = DataLoader._cache['factions']
         self.characters_data = DataLoader._cache['characters']
         self.quests_data = DataLoader._cache['quests']
+        self.locations_data = DataLoader._cache['locations']
         # Optimization: Pre-compute dictionary for O(1) lookup
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
@@ -38,6 +40,7 @@ class DataLoader:
         self.characters_map = {c['name'].lower(): c for c in self.characters_data}
         self.factions_map = {f['name'].lower(): f for f in self.factions_data}
         self.quests_map = {q['id']: q for q in self.quests_data}
+        self.locations_map = {l['name'].lower(): l for l in self.locations_data}
 
     def get_quest(self, quest_id: str) -> Optional[Quest]:
         q = self.quests_map.get(quest_id)
@@ -120,6 +123,29 @@ class DataLoader:
                 type=f['type'],
                 rank_requirement=f.get('rank_requirement')
             ) for f in self.factions_data
+        ]
+
+    def get_location(self, name: str) -> Optional[Location]:
+        l = self.locations_map.get(name.lower())
+        if l:
+            return Location(
+                name=l['name'],
+                description=l['description'],
+                type=l['type'],
+                image_prompt_positive=l['image_prompt_positive'],
+                image_prompt_negative=l['image_prompt_negative']
+            )
+        return None
+
+    def get_all_locations(self) -> List[Location]:
+        return [
+            Location(
+                name=l['name'],
+                description=l['description'],
+                type=l['type'],
+                image_prompt_positive=l['image_prompt_positive'],
+                image_prompt_negative=l['image_prompt_negative']
+            ) for l in self.locations_data
         ]
 
     def get_character_template(self, name: str) -> Optional[Character]:
