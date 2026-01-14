@@ -1,5 +1,41 @@
 [
   {
+    "name": "Sword",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": ["Physical", "Weapon", "Blade", "Combat"],
+    "description": "The essence of the blade.",
+    "opposite": "Shield",
+    "synergy": ["Might", "Swift", "Iron", "Battle"]
+  },
+  {
+    "name": "Shield",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": ["Physical", "Armor", "Defense", "Protection"],
+    "description": "The essence of defense and blocking.",
+    "opposite": "Sword",
+    "synergy": ["Iron", "Earth", "Armor", "Life"]
+  },
+  {
+    "name": "Mana",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": ["Abstract", "Magic", "Energy", "Power"],
+    "description": "The essence of raw magical energy.",
+    "opposite": "Void",
+    "synergy": ["Potent", "Fire", "Water", "Air", "Earth", "Light", "Dark"]
+  },
+  {
+    "name": "Knowledge",
+    "type": "Base",
+    "rarity": "Uncommon",
+    "tags": ["Abstract", "Mind", "Information", "Learning"],
+    "description": "The essence of understanding and lore.",
+    "opposite": "Chaos",
+    "synergy": ["Mana", "Dimension", "Light", "Technology"]
+  },
+  {
     "name": "Fire",
     "type": "Base",
     "rarity": "Common",

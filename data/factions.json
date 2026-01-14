@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Adventure Society",
+    "description": "A global organization that manages monster hunting and exploration tasks. They rank members by their capability.",
+    "type": "Guild",
+    "rank_requirement": "Iron"
+  },
+  {
+    "name": "Magic Association",
+    "description": "A collective of magic users dedicated to the research of essences and magical phenomena.",
+    "type": "Academic",
+    "rank_requirement": "Bronze"
+  },
+  {
+    "name": "Order of the Shield",
+    "description": "A militant order focused on the protection of the innocent and maintaining peace.",
+    "type": "Military",
+    "rank_requirement": "Iron"
+  }
+]

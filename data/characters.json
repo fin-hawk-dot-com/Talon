@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Rufus",
+    "race": "Human",
+    "faction": "Adventure Society",
+    "affinity": "Warrior",
+    "attributes": {
+      "Power": 120,
+      "Speed": 110,
+      "Spirit": 80,
+      "Recovery": 115
+    },
+    "base_essences": ["Sword", "Might", "Swift"],
+    "confluence_essence": "Blade"
+  },
+  {
+    "name": "Thadwick",
+    "race": "Elf",
+    "faction": "Magic Association",
+    "affinity": "Mage",
+    "attributes": {
+      "Power": 60,
+      "Speed": 90,
+      "Spirit": 150,
+      "Recovery": 70
+    },
+    "base_essences": ["Fire", "Mana", "Knowledge"],
+    "confluence_essence": "Inferno"
+  },
+  {
+    "name": "Elara",
+    "race": "Human",
+    "faction": "Order of the Shield",
+    "affinity": "Guardian",
+    "attributes": {
+      "Power": 100,
+      "Speed": 80,
+      "Spirit": 110,
+      "Recovery": 140
+    },
+    "base_essences": ["Iron", "Life", "Shield"],
+    "confluence_essence": "Bastion"
+  }
+]
