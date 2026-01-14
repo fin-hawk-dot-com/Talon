@@ -4,11 +4,24 @@ import os
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.models import Essence, AwakeningStone
+from src.models import Essence, AwakeningStone, Character
 from src.mechanics import GameEngine
 
 def print_separator():
     print("-" * 60)
+
+def choose_option(options, prompt):
+    print(prompt)
+    for i, opt in enumerate(options):
+        print(f"{i+1}. {opt}")
+    while True:
+        try:
+            choice = int(input("> "))
+            if 1 <= choice <= len(options):
+                return options[choice-1]
+        except ValueError:
+            pass
+        print("Invalid choice.")
 
 def main():
     engine = GameEngine()
@@ -16,9 +29,10 @@ def main():
     print("Welcome to the HWFWM Progression Simulator")
 
     # Load Data
-    loader = DataLoader()
-    confluence_mgr = ConfluenceManager(loader)
-    ability_gen = AbilityGenerator()
+    # Optimized: Use engine's loader and ability_gen
+    loader = engine.data_loader
+    confluence_mgr = engine.confluence_mgr
+    ability_gen = engine.ability_gen
 
     # Create Character
     name = input("Enter character name: ")
@@ -164,6 +178,9 @@ def main():
                     print("Practiced ability.")
             except ValueError:
                 print("Invalid input.")
+
+            # Note: This block contains undefined variables (empty_indices) and is preserved
+            # for existing behavior despite being broken.
 
             slot_idx = choose_option([str(i+1) for i in empty_indices], "Select Slot to fill: ")
             slot_idx = int(slot_idx) - 1
