@@ -2,7 +2,7 @@ import json
 import os
 import random
 from typing import List, Optional, Union
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -331,8 +331,8 @@ class TrainingManager:
         if ability.level < 9:
             return "Ability not at max level (9)."
 
-        current_rank_idx = RANKS.index(ability.rank)
-        char_rank_idx = RANKS.index(character.rank)
+        current_rank_idx = RANK_INDICES[ability.rank]
+        char_rank_idx = RANK_INDICES[character.rank]
 
         if current_rank_idx >= char_rank_idx:
             return f"Character Rank ({character.rank}) is not high enough to support higher rank ability."
