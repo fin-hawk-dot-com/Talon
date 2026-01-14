@@ -1,12 +1,13 @@
 # Game Mechanics
 
 ## Ranks
-The progression system is divided into 5 major ranks:
-1. **Iron**: The starting rank.
-2. **Bronze**: Enhanced physical and magical capabilities.
-3. **Silver**: Superhuman level.
+The progression system is divided into 6 major ranks:
+0. **Normal**: The baseline for unawakened humans.
+1. **Iron**: The first Awakened rank. Enhanced capabilities.
+2. **Bronze**: Superhuman level.
+3. **Silver**: Elite power, capable of devastating destruction.
 4. **Gold**: Demigod level.
-5. **Diamond**: Apex of power.
+5. **Diamond**: Apex of power, godlike existence.
 
 ## Attributes
 Characters have 4 main attributes:
@@ -17,9 +18,10 @@ Characters have 4 main attributes:
 
 ### Attribute Growth
 - Attributes have a numerical value.
-- **Iron Rank**: 0 - 99
-- **Bronze Rank**: 100 - 199
-- **Silver Rank**: 200 - 299
+- **Normal Rank**: 0 - 99
+- **Iron Rank**: 100 - 199
+- **Bronze Rank**: 200 - 299
+- **Silver Rank**: 300 - 399
 - ... and so on.
 
 Attributes grow by training. The rate of growth is determined by the **Growth Multiplier**, which is influenced by how many Essences are bonded to that attribute.

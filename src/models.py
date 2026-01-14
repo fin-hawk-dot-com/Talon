@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Dict, Optional, Union
 
-RANKS = ["Iron", "Bronze", "Silver", "Gold", "Diamond"]
+RANKS = ["Normal", "Iron", "Bronze", "Silver", "Gold", "Diamond"]
 
 @dataclass
 class Essence:
@@ -78,7 +78,10 @@ class Attribute:
 
     @property
     def rank(self) -> str:
-        # 0-99: Iron, 100-199: Bronze, etc.
+        # Normal: 0 - 99
+        # Iron: 100 - 199
+        # Bronze: 200 - 299
+        # ... and so on.
         idx = int(self.value / 100)
         if idx >= len(RANKS):
             return RANKS[-1]
@@ -86,9 +89,7 @@ class Attribute:
 
     @property
     def rank_level(self) -> int:
-        # Returns 0-99 representing progress through the rank
-        # Or maybe 0-9 to match the book style (Iron 1, Iron 2... Iron 9)
-        # Let's say every 10 points is a sub-rank.
+        # Returns 0-9 representing progress through the rank
         val_in_rank = self.value % 100
         return int(val_in_rank / 10)
 
