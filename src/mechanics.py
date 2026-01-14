@@ -12,12 +12,21 @@ def load_json(filename):
         return json.load(f)
 
 class DataLoader:
+    _cache = {}
+
     def __init__(self):
-        self.essences_data = load_json('essences.json')
-        self.confluences_data = load_json('confluences.json')
-        self.stones_data = load_json('awakening_stones.json')
-        self.factions_data = load_json('factions.json')
-        self.characters_data = load_json('characters.json')
+        if not DataLoader._cache:
+            DataLoader._cache['essences'] = load_json('essences.json')
+            DataLoader._cache['confluences'] = load_json('confluences.json')
+            DataLoader._cache['stones'] = load_json('awakening_stones.json')
+            DataLoader._cache['factions'] = load_json('factions.json')
+            DataLoader._cache['characters'] = load_json('characters.json')
+
+        self.essences_data = DataLoader._cache['essences']
+        self.confluences_data = DataLoader._cache['confluences']
+        self.stones_data = DataLoader._cache['stones']
+        self.factions_data = DataLoader._cache['factions']
+        self.characters_data = DataLoader._cache['characters']
         # Optimization: Pre-compute dictionary for O(1) lookup
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
