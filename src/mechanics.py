@@ -18,32 +18,38 @@ class DataLoader:
         self.stones_data = load_json('awakening_stones.json')
         self.factions_data = load_json('factions.json')
         self.characters_data = load_json('characters.json')
+        # Optimization: Pre-compute dictionary for O(1) lookup
+        self.stones_map = {s['name'].lower(): s for s in self.stones_data}
+
+        # Performance optimization: Create O(1) lookup maps
+        self.essences_map = {e['name'].lower(): e for e in self.essences_data}
+        self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
     def get_essence(self, name: str) -> Optional[Essence]:
-        for e in self.essences_data:
-            if e['name'].lower() == name.lower():
-                return Essence(
-                    name=e['name'],
-                    type=e['type'],
-                    rarity=e['rarity'],
-                    tags=e['tags'],
-                    description=e['description'],
-                    opposite=e.get('opposite'),
-                    synergy=e.get('synergy', [])
-                )
+        e = self.essences_map.get(name.lower())
+        if e:
+            return Essence(
+                name=e['name'],
+                type=e['type'],
+                rarity=e['rarity'],
+                tags=e['tags'],
+                description=e['description'],
+                opposite=e.get('opposite'),
+                synergy=e.get('synergy', [])
+            )
         return None
 
     def get_stone(self, name: str) -> Optional[AwakeningStone]:
-        for s in self.stones_data:
-            if s['name'].lower() == name.lower():
-                return AwakeningStone(
-                    name=s['name'],
-                    function=s['function'],
-                    description=s['description'],
-                    rarity=s.get('rarity', "Common"),
-                    cooldown=s.get('cooldown', "Medium"),
-                    cost_type=s.get('cost_type', "Mana")
-                )
+        s = self.stones_map.get(name.lower())
+        if s:
+            return AwakeningStone(
+                name=s['name'],
+                function=s['function'],
+                description=s['description'],
+                rarity=s.get('rarity', "Common"),
+                cooldown=s.get('cooldown', "Medium"),
+                cost_type=s.get('cost_type', "Mana")
+            )
         return None
 
     def get_faction(self, name: str) -> Optional[Faction]:
@@ -229,6 +235,7 @@ class AbilityGenerator:
     def generate(self, essence: Essence, stone: AwakeningStone, character_rank: str = "Iron", affinity: str = "General") -> Ability:
         candidates = []
 
+        essence_tags_set = set(essence.tags)
         for tmpl in ABILITY_TEMPLATES:
             # 1. Function match
             if tmpl.function != stone.function:
@@ -236,7 +243,7 @@ class AbilityGenerator:
 
             # 2. Tag Match (Essence must have all tags required by template)
             if tmpl.essence_tags:
-                if not all(tag in essence.tags for tag in tmpl.essence_tags):
+                if not all(tag in essence_tags_set for tag in tmpl.essence_tags):
                     continue
 
             candidates.append(tmpl)
