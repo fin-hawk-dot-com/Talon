@@ -137,6 +137,7 @@ class AbilityGenerator:
     def generate(self, essence: Essence, stone: AwakeningStone, character_rank: str = "Iron", affinity: str = "General") -> Ability:
         candidates = []
 
+        essence_tags_set = set(essence.tags)
         for tmpl in ABILITY_TEMPLATES:
             # 1. Function match
             if tmpl.function != stone.function:
@@ -144,7 +145,7 @@ class AbilityGenerator:
 
             # 2. Tag Match (Essence must have all tags required by template)
             if tmpl.essence_tags:
-                if not all(tag in essence.tags for tag in tmpl.essence_tags):
+                if not all(tag in essence_tags_set for tag in tmpl.essence_tags):
                     continue
 
             candidates.append(tmpl)
