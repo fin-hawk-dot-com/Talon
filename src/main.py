@@ -14,6 +14,22 @@ def main():
     engine = GameEngine()
     print_separator()
     print("Welcome to the HWFWM Progression Simulator")
+
+    # Load Data
+    loader = DataLoader()
+    confluence_mgr = ConfluenceManager(loader)
+    ability_gen = AbilityGenerator()
+
+    # Create Character
+    name = input("Enter character name: ")
+    race = "Human" # Simplified for now
+
+    print("Select Affinity (Focus):")
+    affinities = ["Warrior", "Mage", "Rogue", "Guardian", "Support", "General"]
+    affinity = choose_option(affinities, "Choose affinity: ")
+
+    character = Character(name=name, race=race, affinity=affinity)
+    print(f"Character {name} created with affinity {affinity}.")
     print_separator()
 
     # Character Creation
@@ -148,12 +164,42 @@ def main():
             except ValueError:
                 print("Invalid input.")
 
-        elif choice == "6":
-            print("Goodbye!")
-            break
+            slot_idx = choose_option([str(i+1) for i in empty_indices], "Select Slot to fill: ")
+            slot_idx = int(slot_idx) - 1
 
-        else:
-            print("Invalid choice.")
+            # Choose Awakening Stone
+            # For brevity, let's just list 5 random ones or search
+            all_stones = loader.get_all_stones()
+            print("Available Stones (Top 10):")
+            for k, s in enumerate(all_stones[:10]):
+                print(f"{k+1}. {s}")
+            print("...")
+
+            stone_name = input("Enter Awakening Stone name (exact or partial): ")
+            # Simple fuzzy match
+            match_stone = next((s for s in all_stones if stone_name.lower() in s.lower()), None)
+
+            if match_stone:
+                stone = loader.get_stone(match_stone)
+                essence_obj = next(e for e in essences if e.name == target_ess_name)
+
+                new_ability = ability_gen.generate(essence_obj, stone, character.rank, character.affinity)
+                character.abilities[target_ess_name][slot_idx] = new_ability
+                print(f"Awakened: {new_ability.name}!")
+                print(f"Effect: {new_ability.description}")
+            else:
+                print("Stone not found.")
+
+        elif action == "Train (Simulate Growth)":
+            # Simulate usage
+            print("Simulating training montage...")
+            # For simplicity, just add 1 to all bonded stats based on multiplier
+            for attr_name, attr in character.attributes.items():
+                gain = 1.0 * attr.growth_multiplier
+                attr.value += gain
+                print(f"{attr_name} gained {gain:.1f} points.")
+
+            # TODO: Logic for ranking up abilities
 
 if __name__ == "__main__":
     main()
