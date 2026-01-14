@@ -45,6 +45,14 @@ def generate_library_md(filepath="LIBRARY.md"):
         cost_type = s.get('cost_type', "Mana")
         lines.append(f"| {s['name']} | {s['function']} | {s['description']} | {rarity} | {cooldown} | {cost_type} |")
 
+    lines.append("\n## Locations")
+    lines.append("| Name | Type | Description | Positive Prompt | Negative Prompt |")
+    lines.append("|---|---|---|---|---|")
+
+    locations = sorted(loader.locations_data, key=lambda x: x['name'])
+    for l in locations:
+        lines.append(f"| {l['name']} | {l['type']} | {l['description']} | {l['image_prompt_positive']} | {l['image_prompt_negative']} |")
+
     lines.append("\n## Example Builds")
 
     # Generate some random or preset builds

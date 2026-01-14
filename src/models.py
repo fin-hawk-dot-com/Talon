@@ -23,6 +23,14 @@ class Faction:
     rank_requirement: Optional[str] = None
 
 @dataclass
+class Location:
+    name: str
+    description: str
+    type: str
+    image_prompt_positive: str
+    image_prompt_negative: str
+
+@dataclass
 class QuestChoice:
     text: str
     next_stage_id: str
