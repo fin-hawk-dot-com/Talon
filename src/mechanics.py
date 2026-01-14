@@ -24,6 +24,14 @@ class DataLoader:
         # Performance optimization: Create O(1) lookup maps
         self.essences_map = {e['name'].lower(): e for e in self.essences_data}
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
+        self.all_factions = [
+            Faction(
+                name=f['name'],
+                description=f['description'],
+                type=f['type'],
+                rank_requirement=f.get('rank_requirement')
+            ) for f in self.factions_data
+        ]
 
     def get_essence(self, name: str) -> Optional[Essence]:
         e = self.essences_map.get(name.lower())
@@ -64,14 +72,7 @@ class DataLoader:
         return None
 
     def get_all_factions(self) -> List[Faction]:
-        return [
-            Faction(
-                name=f['name'],
-                description=f['description'],
-                type=f['type'],
-                rank_requirement=f.get('rank_requirement')
-            ) for f in self.factions_data
-        ]
+        return self.all_factions
 
     def get_character_template(self, name: str) -> Optional[Character]:
         """Loads a pre-defined character. Note: Does not instantiate abilities fully yet."""
