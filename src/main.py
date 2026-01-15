@@ -1,5 +1,6 @@
 import sys
 import os
+import random
 
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -81,7 +82,7 @@ def main():
         print_separator()
         print("Actions:")
         print("1. Train Attribute")
-        print("2. Hunt for Loot")
+        print("2. Adventure (Combat)")
         print("3. Absorb Essence (from Inventory)")
         print("4. Awaken Ability (using Stone)")
         print("5. Practice Ability")
@@ -103,13 +104,62 @@ def main():
                 print("Invalid attribute.")
 
         elif choice == "2":
-            print("\nHunting...")
-            item = engine.loot_mgr.generate_random_loot()
-            if item:
-                char.inventory.append(item)
-                print(f"You found a {item.name}!")
-            else:
-                print("You found nothing.")
+            print("\nSearching for trouble...")
+            monsters = engine.data_loader.get_all_monsters()
+            if not monsters:
+                print("No monsters found.")
+                continue
+
+            # Pick a random monster
+            m_name = random.choice(monsters)
+            monster = engine.data_loader.get_monster(m_name)
+
+            print(f"You encountered a {monster.name} ({monster.rank})!")
+            print(f"Health: {monster.current_health:.1f}/{monster.max_health:.1f}")
+
+            while True:
+                print("\nCombat Options:")
+                print("1. Attack")
+                print("2. Flee")
+
+                c_choice = input("> ").strip()
+                if c_choice == "1":
+                    action = "Attack"
+                elif c_choice == "2":
+                    action = "Flee"
+                else:
+                    print("Invalid choice.")
+                    continue
+
+                logs, combat_over = engine.combat_mgr.combat_round(char, monster, action)
+                for line in logs:
+                    print(line)
+
+                if combat_over:
+                    if monster.current_health <= 0:
+                        # Victory
+                        print(f"You gained {monster.xp_reward} XP!")
+                        # Loot
+                        if monster.loot_table:
+                            print("Loot:")
+                            for loot_item_name in monster.loot_table:
+                                # Try to find as Essence or Stone
+                                item = engine.data_loader.get_essence(loot_item_name)
+                                if not item:
+                                    item = engine.data_loader.get_stone(loot_item_name)
+
+                                if item:
+                                    char.inventory.append(item)
+                                    print(f"- Found {item.name}!")
+                                else:
+                                    print(f"- Found unknown item: {loot_item_name}")
+
+                    elif char.current_health <= 0:
+                        print("You have been defeated. (Game Over - Reviving at temple...)")
+                        char.current_health = char.max_health # Reset for now
+
+                    # If fleeing, do nothing special (logs already printed)
+                    break
 
         elif choice == "3":
             if not char.inventory:

@@ -23,6 +23,7 @@ class DataLoader:
             DataLoader._cache['characters'] = load_json('characters.json')
             DataLoader._cache['quests'] = load_json('quests.json')
             DataLoader._cache['locations'] = load_json('locations.json')
+            DataLoader._cache['monsters'] = load_json('monsters.json')
 
         self.essences_data = DataLoader._cache['essences']
         self.confluences_data = DataLoader._cache['confluences']
@@ -31,6 +32,8 @@ class DataLoader:
         self.characters_data = DataLoader._cache['characters']
         self.quests_data = DataLoader._cache['quests']
         self.locations_data = DataLoader._cache['locations']
+        self.monsters_data = DataLoader._cache['monsters']
+
         # Optimization: Pre-compute dictionary for O(1) lookup
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
 
@@ -41,6 +44,7 @@ class DataLoader:
         self.factions_map = {f['name'].lower(): f for f in self.factions_data}
         self.quests_map = {q['id']: q for q in self.quests_data}
         self.locations_map = {l['name'].lower(): l for l in self.locations_data}
+        self.monsters_map = {m['name'].lower(): m for m in self.monsters_data}
 
     def get_quest(self, quest_id: str) -> Optional[Quest]:
         q = self.quests_map.get(quest_id)
@@ -222,6 +226,27 @@ class DataLoader:
 
     def get_all_stones(self) -> List[str]:
         return [s['name'] for s in self.stones_data]
+
+    def get_monster(self, name: str) -> Optional[Character]:
+        m = self.monsters_map.get(name.lower())
+        if m:
+            char = Character(
+                name=m['name'],
+                race=m['race'],
+                xp_reward=m.get('xp_reward', 0),
+                loot_table=m.get('loot_table', [])
+            )
+            if 'attributes' in m:
+                for attr_name, value in m['attributes'].items():
+                    if attr_name in char.attributes:
+                        char.attributes[attr_name].value = value
+            # Recalculate health
+            char.current_health = char.max_health
+            return char
+        return None
+
+    def get_all_monsters(self) -> List[str]:
+        return [m['name'] for m in self.monsters_data]
 
 class ConfluenceManager:
     def __init__(self, data_loader: DataLoader):
@@ -527,6 +552,69 @@ class LootManager:
         else:
             return None # 40% chance for nothing
 
+class CombatManager:
+    def __init__(self, data_loader: DataLoader):
+        self.data_loader = data_loader
+
+    def calculate_damage(self, attacker: Character, defender: Character, is_magical: bool = False) -> float:
+        # Simple damage formula
+        # Physical: Power vs 50% Speed (Evasion/Glancing) + Mitigation?
+        # Magical: Spirit vs Spirit?
+        # For simplicity: Damage = Attack - Defense/2
+        # Attacker Damage:
+        damage = 0.0
+        if is_magical:
+             damage = attacker.attributes["Spirit"].value * 1.5
+             # Defense
+             defense = defender.attributes["Spirit"].value * 0.5
+        else:
+             damage = attacker.attributes["Power"].value * 1.5
+             defense = defender.attributes["Recovery"].value * 0.5 # Toughness
+
+        final_damage = max(1.0, damage - defense)
+        # Variance
+        final_damage *= random.uniform(0.9, 1.1)
+        return final_damage
+
+    def combat_round(self, player: Character, enemy: Character, player_action: str) -> tuple[List[str], bool]:
+        log = []
+
+        # 1. Player Turn
+        if player_action == "Attack":
+            dmg = self.calculate_damage(player, enemy, is_magical=False)
+            enemy.current_health -= dmg
+            log.append(f"You attacked {enemy.name} for {dmg:.1f} damage.")
+        elif player_action == "Flee":
+            # Chance to flee based on Speed
+            p_speed = player.attributes["Speed"].value
+            e_speed = enemy.attributes["Speed"].value
+            chance = 0.5 + (p_speed - e_speed) * 0.01
+            if random.random() < chance:
+                log.append("You fled successfully!")
+                return log, True # Fled
+            else:
+                log.append("Failed to flee!")
+
+        # Check Enemy Death
+        if enemy.current_health <= 0:
+            log.append(f"{enemy.name} has been defeated!")
+            return log, True # Combat over (Win)
+
+        # 2. Enemy Turn (Simple AI: Always Attack)
+        # Decide physical or magical based on stats?
+        is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
+        dmg = self.calculate_damage(enemy, player, is_magical=is_magical)
+        player.current_health -= dmg
+        atk_type = "magically attacked" if is_magical else "attacked"
+        log.append(f"{enemy.name} {atk_type} you for {dmg:.1f} damage.")
+
+        # Check Player Death
+        if player.current_health <= 0:
+            log.append("You have been defeated!")
+            return log, True # Combat over (Loss)
+
+        return log, False # Continue
+
 class GameEngine:
     def __init__(self):
         self.data_loader = DataLoader()
@@ -535,6 +623,7 @@ class GameEngine:
         self.training_mgr = TrainingManager()
         self.loot_mgr = LootManager(self.data_loader)
         self.quest_mgr = QuestManager(self.data_loader)
+        self.combat_mgr = CombatManager(self.data_loader)
         self.character = None
 
     def create_character(self, name: str, race: str):
