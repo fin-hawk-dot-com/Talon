@@ -149,15 +149,29 @@ class Character:
     inventory: List[Union[Essence, AwakeningStone]] = field(default_factory=list)
     quests: Dict[str, QuestProgress] = field(default_factory=dict)
     current_health: float = field(default=-1.0)
+    current_mana: float = field(default=-1.0)
+    current_stamina: float = field(default=-1.0)
     xp_reward: int = 0
     loot_table: List[str] = field(default_factory=list)
 
     def __post_init__(self):
         if self.current_health < 0:
             self.current_health = self.max_health
+        if self.current_mana < 0:
+            self.current_mana = self.max_mana
+        if self.current_stamina < 0:
+            self.current_stamina = self.max_stamina
 
     @property
     def max_health(self) -> float:
+        return self.attributes["Recovery"].value * 10.0
+
+    @property
+    def max_mana(self) -> float:
+        return self.attributes["Spirit"].value * 10.0
+
+    @property
+    def max_stamina(self) -> float:
         return self.attributes["Recovery"].value * 10.0
 
     @property

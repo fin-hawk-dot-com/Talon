@@ -370,13 +370,20 @@ class AbilityGenerator:
         name = selected_template.pattern.format(essence=essence.name)
         description = selected_template.description_template.format(essence=essence.name)
 
+        # Calculate Cost
+        base_cost = 10
+        if stone.rarity == "Uncommon": base_cost = 20
+        elif stone.rarity == "Rare": base_cost = 40
+        elif stone.rarity == "Epic": base_cost = 80
+
         return Ability(
             name=name,
             description=description,
             rank=character_rank,
             level=0,
             parent_essence=essence,
-            parent_stone=stone
+            parent_stone=stone,
+            cost=base_cost
         )
 
 class QuestManager:
@@ -556,7 +563,7 @@ class CombatManager:
     def __init__(self, data_loader: DataLoader):
         self.data_loader = data_loader
 
-    def calculate_damage(self, attacker: Character, defender: Character, is_magical: bool = False) -> float:
+    def calculate_damage(self, attacker: Character, defender: Character, is_magical: bool = False, multiplier: float = 1.0) -> float:
         # Simple damage formula
         # Physical: Power vs 50% Speed (Evasion/Glancing) + Mitigation?
         # Magical: Spirit vs Spirit?
@@ -571,16 +578,84 @@ class CombatManager:
              damage = attacker.attributes["Power"].value * 1.5
              defense = defender.attributes["Recovery"].value * 0.5 # Toughness
 
+        damage *= multiplier
         final_damage = max(1.0, damage - defense)
         # Variance
         final_damage *= random.uniform(0.9, 1.1)
         return final_damage
 
-    def combat_round(self, player: Character, enemy: Character, player_action: str) -> tuple[List[str], bool]:
+    def execute_ability(self, user: Character, target: Character, ability: Ability) -> List[str]:
+        log = []
+
+        # Check Cost
+        cost = ability.cost
+        cost_type = ability.parent_stone.cost_type
+
+        if cost_type == "Mana":
+            if user.current_mana < cost:
+                return [f"Not enough Mana to use {ability.name}!"]
+            user.current_mana -= cost
+        elif cost_type == "Stamina":
+            if user.current_stamina < cost:
+                return [f"Not enough Stamina to use {ability.name}!"]
+            user.current_stamina -= cost
+        elif cost_type == "Health":
+             if user.current_health < cost:
+                 return [f"Not enough Health to use {ability.name}!"]
+             user.current_health -= cost
+
+        # Determine Effect based on Function
+        function = ability.parent_stone.function
+        rank_mult = 1.0 + (RANK_INDICES[ability.rank] * 0.5)
+        level_mult = 1.0 + (ability.level * 0.1)
+        power_mult = rank_mult * level_mult
+
+        if "Attack" in function:
+            is_magical = "Ranged" in function or "Blast" in ability.parent_stone.name
+            dmg = self.calculate_damage(user, target, is_magical, multiplier=1.5 * power_mult)
+            target.current_health -= dmg
+            log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage!")
+
+        elif "Defense" in function:
+            # Temporary defense buff or heal? Let's do a heal/shield hybrid for simplicity
+            # Or just restore health for now as a "Shield/Heal" abstraction
+            heal_amount = user.attributes["Spirit"].value * power_mult
+            user.current_health = min(user.max_health, user.current_health + heal_amount)
+            log.append(f"Used {ability.name} and restored {heal_amount:.1f} health/shield!")
+
+        elif "Heal" in function or "Sustain" in function:
+             heal_amount = user.attributes["Spirit"].value * power_mult
+             user.current_health = min(user.max_health, user.current_health + heal_amount)
+             log.append(f"Used {ability.name} and healed for {heal_amount:.1f}!")
+
+        elif "Summon" in function:
+             log.append(f"Used {ability.name}! A summon appears (flavor only for now).")
+             # Could implement actual summons later
+
+        else:
+             # Default fallback damage
+             dmg = self.calculate_damage(user, target, is_magical=True, multiplier=1.0 * power_mult)
+             target.current_health -= dmg
+             log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage!")
+
+        # Gain XP for ability usage
+        if user.abilities: # Only if user is player basically, or tracked
+             if ability.gain_xp(5):
+                 log.append(f"{ability.name} leveled up to {ability.level}!")
+
+        return log
+
+    def combat_round(self, player: Character, enemy: Character, player_action: Union[str, Ability]) -> tuple[List[str], bool]:
         log = []
 
         # 1. Player Turn
-        if player_action == "Attack":
+        if isinstance(player_action, Ability):
+             ability_log = self.execute_ability(player, enemy, player_action)
+             log.extend(ability_log)
+             if "Not enough" in ability_log[0]: # Failed to use
+                 return log, False
+
+        elif player_action == "Attack":
             dmg = self.calculate_damage(player, enemy, is_magical=False)
             enemy.current_health -= dmg
             log.append(f"You attacked {enemy.name} for {dmg:.1f} damage.")
