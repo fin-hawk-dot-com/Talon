@@ -118,15 +118,49 @@ def main():
             print(f"Health: {monster.current_health:.1f}/{monster.max_health:.1f}")
 
             while True:
+                # Refresh status display
+                print(f"\nYour Status: HP {char.current_health:.0f}/{char.max_health:.0f} | MP {char.current_mana:.0f}/{char.max_mana:.0f} | SP {char.current_stamina:.0f}/{char.max_stamina:.0f}")
+                print(f"Enemy Status: HP {monster.current_health:.0f}/{monster.max_health:.0f}")
+
                 print("\nCombat Options:")
                 print("1. Attack")
                 print("2. Flee")
+                print("3. Use Ability")
 
                 c_choice = input("> ").strip()
+                action = None
+
                 if c_choice == "1":
                     action = "Attack"
                 elif c_choice == "2":
                     action = "Flee"
+                elif c_choice == "3":
+                    # List abilities
+                    abilities_flat = []
+                    for ess_name, slots in char.abilities.items():
+                        for ab in slots:
+                            if ab:
+                                abilities_flat.append(ab)
+
+                    if not abilities_flat:
+                        print("No abilities available.")
+                        continue
+
+                    print("Select Ability:")
+                    for i, ab in enumerate(abilities_flat):
+                        cost_str = f"{ab.cost} {ab.parent_stone.cost_type}"
+                        print(f"{i+1}. {ab.name} ({cost_str}) - {ab.description}")
+
+                    try:
+                        ab_idx = int(input("> ")) - 1
+                        if 0 <= ab_idx < len(abilities_flat):
+                            action = abilities_flat[ab_idx]
+                        else:
+                            print("Invalid selection.")
+                            continue
+                    except ValueError:
+                        print("Invalid input.")
+                        continue
                 else:
                     print("Invalid choice.")
                     continue
