@@ -149,7 +149,8 @@ def main():
                     print("Select Ability:")
                     for i, ab in enumerate(abilities_flat):
                         cost_str = f"{ab.cost} {ab.parent_stone.cost_type}"
-                        print(f"{i+1}. {ab.name} ({cost_str}) - {ab.description}")
+                        cd_str = f" [CD: {ab.current_cooldown}]" if ab.current_cooldown > 0 else ""
+                        print(f"{i+1}. {ab.name} ({cost_str}){cd_str} - {ab.description}")
 
                     try:
                         ab_idx = int(input("> ")) - 1
@@ -173,6 +174,12 @@ def main():
                     if monster.current_health <= 0:
                         # Victory
                         print(f"You gained {monster.xp_reward} XP!")
+
+                        # Update Quests
+                        notifications = engine.quest_mgr.check_objectives(char, "kill", monster.name)
+                        for note in notifications:
+                            print(f"\n! {note} !")
+
                         # Loot
                         if monster.loot_table:
                             print("Loot:")
@@ -185,6 +192,11 @@ def main():
                                 if item:
                                     char.inventory.append(item)
                                     print(f"- Found {item.name}!")
+
+                                    # Quest Check for Collection
+                                    col_notes = engine.quest_mgr.check_objectives(char, "collect", item.name)
+                                    for note in col_notes:
+                                        print(f"\n! {note} !")
                                 else:
                                     print(f"- Found unknown item: {loot_item_name}")
 
@@ -322,8 +334,19 @@ def main():
                 print("Active Quests:")
                 for q_id in active_quests:
                     q = engine.quest_mgr.data_loader.get_quest(q_id)
-                    stage = q.stages.get(char.quests[q_id].current_stage_id)
-                    print(f"- {q.title}: {stage.description}")
+                    prog = char.quests[q_id]
+                    stage = q.stages.get(prog.current_stage_id)
+
+                    # Format Objectives
+                    objectives_text = ""
+                    if stage.objectives:
+                        objectives_text = "\n    Objectives:"
+                        for obj in stage.objectives:
+                            key = f"{obj.type}:{obj.target}"
+                            current = prog.objectives_progress.get(key, 0)
+                            objectives_text += f"\n    - {obj.type} {obj.target}: {current}/{obj.count}"
+
+                    print(f"- {q.title}: {stage.description}{objectives_text}")
             else:
                 print("No active quests.")
 
