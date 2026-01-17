@@ -35,23 +35,62 @@ def main():
     confluence_mgr = engine.confluence_mgr
     ability_gen = engine.ability_gen
 
-    # Create Character
-    name = input("Enter character name: ")
-    race = "Human" # Simplified for now
+    # Main Menu
+    print("1. New Game")
+    print("2. Load Game")
+    start_choice = input("Select: ").strip()
 
-    print("Select Affinity (Focus):")
-    affinities = ["Warrior", "Mage", "Rogue", "Guardian", "Support", "General"]
-    affinity = choose_option(affinities, "Choose affinity: ")
+    if start_choice == "2":
+        # Check for saves
+        saves = engine.get_save_files()
 
-    character = Character(name=name, race=race, affinity=affinity)
-    print(f"Character {name} created with affinity {affinity}.")
-    print_separator()
+        if not saves:
+            print("No save files found. Starting new game.")
+            start_choice = "1"
+        else:
+            print("Select Save File:")
+            for i, s in enumerate(saves):
+                print(f"{i+1}. {s}")
+            try:
+                idx = int(input("> ")) - 1
+                if 0 <= idx < len(saves):
+                    res = engine.load_game(saves[idx])
+                    print(res)
+                    if "Failed" in res:
+                        print("Starting new game instead.")
+                        start_choice = "1"
+                else:
+                    print("Invalid selection. Starting new game.")
+                    start_choice = "1"
+            except ValueError:
+                print("Invalid input. Starting new game.")
+                start_choice = "1"
 
-    # Character Creation
-    name = input("Enter Character Name: ").strip()
-    race = input("Enter Race: ").strip()
-    engine.create_character(name, race)
-    print(f"Character {name} created!")
+    if start_choice == "1" or not engine.character:
+        # New Character Creation
+        name = input("Enter Character Name: ").strip()
+        race = "Human" # Simplified for now, or could ask input
+
+        print("Select Affinity (Focus):")
+        affinities = ["Warrior", "Mage", "Rogue", "Guardian", "Support", "General"]
+        affinity = choose_option(affinities, "Choose affinity: ")
+
+        engine.create_character(name, race)
+        engine.character.affinity = affinity
+
+        print(f"Character {name} created with affinity {affinity}!")
+
+        # Give some starter items for testing
+        starter_essence = engine.data_loader.get_essence("Shadow")
+        if starter_essence:
+             engine.character.inventory.append(starter_essence)
+             print("Received starter item: Shadow Essence")
+
+        starter_stone = engine.data_loader.get_stone("Strike Stone")
+        if starter_stone:
+             engine.character.inventory.append(starter_stone)
+             print("Received starter item: Strike Stone")
+
     print_separator()
 
     while True:
@@ -88,7 +127,8 @@ def main():
         print("5. Practice Ability")
         print("6. Simulate Training")
         print("7. Quest Log / Adventure")
-        print("8. Exit")
+        print("8. Save Game")
+        print("9. Exit")
 
         choice = input("\nSelect Action: ").strip()
 
@@ -181,7 +221,8 @@ def main():
                             print(f"\n! {note} !")
 
                         # Loot
-                        if monster.loot_table:
+                        loot_items = engine.loot_mgr.get_loot_for_monster(monster)
+                        if loot_items:
                             print("Loot:")
                             for loot_item_name in monster.loot_table:
                                 # Try to find as Essence or Stone
@@ -409,6 +450,13 @@ def main():
                         print("Invalid input.")
 
         elif choice == "8":
+            filename = input("Enter save filename (e.g. save1.json): ").strip()
+            if not filename.endswith(".json"):
+                filename += ".json"
+            res = engine.save_game(filename)
+            print(res)
+
+        elif choice == "9":
             sys.exit()
 
 if __name__ == "__main__":
