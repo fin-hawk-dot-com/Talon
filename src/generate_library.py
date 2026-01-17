@@ -53,6 +53,14 @@ def generate_library_md(filepath="LIBRARY.md"):
     for l in locations:
         lines.append(f"| {l['name']} | {l['type']} | {l['description']} | {l['image_prompt_positive']} | {l['image_prompt_negative']} |")
 
+    lines.append("\n## Lore")
+    lines.append("| Title | Category | Text |")
+    lines.append("|---|---|---|")
+
+    lore = sorted(loader.lore_data, key=lambda x: x['title'])
+    for l in lore:
+        lines.append(f"| {l['title']} | {l['category']} | {l['text']} |")
+
     lines.append("\n## Example Builds")
 
     # Generate some random or preset builds

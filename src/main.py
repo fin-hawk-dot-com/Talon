@@ -30,28 +30,61 @@ def main():
     print("Welcome to the HWFWM Progression Simulator")
 
     # Load Data
-    # Optimized: Use engine's loader and ability_gen
     loader = engine.data_loader
-    confluence_mgr = engine.confluence_mgr
-    ability_gen = engine.ability_gen
 
-    # Create Character
-    name = input("Enter character name: ")
-    race = "Human" # Simplified for now
+    # Main Menu for New Game / Load Game
+    print("1. New Game")
+    print("2. Load Game")
+    start_choice = input("> ").strip()
 
-    print("Select Affinity (Focus):")
-    affinities = ["Warrior", "Mage", "Rogue", "Guardian", "Support", "General"]
-    affinity = choose_option(affinities, "Choose affinity: ")
+    if start_choice == "2":
+        saves = engine.get_save_files()
+        if not saves:
+            print("No save files found. Starting New Game.")
+            start_choice = "1"
+        else:
+            print("Select Save File:")
+            for i, s in enumerate(saves):
+                print(f"{i+1}. {s}")
+            try:
+                s_idx = int(input("> ")) - 1
+                if 0 <= s_idx < len(saves):
+                    res = engine.load_game(saves[s_idx])
+                    print(res)
+                    if "Error" in res:
+                        print("Starting New Game.")
+                        start_choice = "1"
+                else:
+                    print("Invalid selection. Starting New Game.")
+                    start_choice = "1"
+            except ValueError:
+                print("Invalid input. Starting New Game.")
+                start_choice = "1"
 
-    character = Character(name=name, race=race, affinity=affinity)
-    print(f"Character {name} created with affinity {affinity}.")
-    print_separator()
+    if start_choice != "2" or not engine.character:
+        # Create Character
+        name = input("Enter character name: ")
+        race = "Human" # Simplified for now
 
-    # Character Creation
-    name = input("Enter Character Name: ").strip()
-    race = input("Enter Race: ").strip()
-    engine.create_character(name, race)
-    print(f"Character {name} created!")
+        print("Select Affinity (Focus):")
+        affinities = ["Warrior", "Mage", "Rogue", "Guardian", "Support", "General"]
+        affinity = choose_option(affinities, "Choose affinity: ")
+
+        # Use engine to create character
+        engine.create_character(name, race)
+        engine.character.affinity = affinity
+
+        # Give some starter items for testing
+        starter_essence = engine.data_loader.get_essence("Dark")
+        if starter_essence:
+            engine.character.inventory.append(starter_essence)
+
+        starter_stone = engine.data_loader.get_stone("Stone of the Strike")
+        if starter_stone:
+            engine.character.inventory.append(starter_stone)
+
+        print(f"Character {name} created with affinity {affinity}.")
+
     print_separator()
 
     while True:
@@ -71,14 +104,6 @@ def main():
                 else:
                     print(f"    Slot {i}: [Empty]")
 
-        print("\nInventory:")
-        if not char.inventory:
-            print("  (Empty)")
-        else:
-            for i, item in enumerate(char.inventory):
-                type_name = "Essence" if isinstance(item, Essence) else "Stone"
-                print(f"  {i}. {item.name} ({type_name})")
-
         print_separator()
         print("Actions:")
         print("1. Train Attribute")
@@ -88,7 +113,9 @@ def main():
         print("5. Practice Ability")
         print("6. Simulate Training")
         print("7. Quest Log / Adventure")
-        print("8. Exit")
+        print("8. Grimoire (Lore)")
+        print("9. System (Save/Load)")
+        print("0. Exit")
 
         choice = input("\nSelect Action: ").strip()
 
@@ -129,6 +156,7 @@ def main():
 
                 c_choice = input("> ").strip()
                 action = None
+                combat_over = False
 
                 if c_choice == "1":
                     action = "Attack"
@@ -153,9 +181,9 @@ def main():
                         print(f"{i+1}. {ab.name} ({cost_str}){cd_str} - {ab.description}")
 
                     try:
-                        ab_idx = int(input("> ")) - 1
-                        if 0 <= ab_idx < len(abilities_flat):
-                            action = abilities_flat[ab_idx]
+                        ab_idx_input = int(input("> ")) - 1
+                        if 0 <= ab_idx_input < len(abilities_flat):
+                            action = abilities_flat[ab_idx_input]
                         else:
                             print("Invalid selection.")
                             continue
@@ -200,19 +228,34 @@ def main():
                                 else:
                                     print(f"- Found unknown item: {loot_item_name}")
 
+                        # Random Loot Chance
+                        random_loot = engine.loot_mgr.generate_random_loot()
+                        if random_loot:
+                             char.inventory.append(random_loot)
+                             print(f"Random Drop: Found {random_loot.name}!")
+
                     elif char.current_health <= 0:
                         print("You have been defeated. (Game Over - Reviving at temple...)")
                         char.current_health = char.max_health # Reset for now
 
-                    # If fleeing, do nothing special (logs already printed)
                     break
 
         elif choice == "3":
             if not char.inventory:
                 print("Inventory empty.")
                 continue
+
+            print("Inventory:")
+            for i, item in enumerate(char.inventory):
+                type_name = "Essence" if isinstance(item, Essence) else "Stone"
+                print(f"  {i}. {item.name} ({type_name})")
+
             try:
                 idx = int(input("Enter inventory item index to absorb: "))
+                if idx < 0 or idx >= len(char.inventory):
+                    print("Invalid index.")
+                    continue
+
                 item = char.inventory[idx]
                 if isinstance(item, Essence):
                     print("Select attribute to bond with (Power, Speed, Spirit, Recovery):")
@@ -231,8 +274,18 @@ def main():
             if not char.inventory:
                 print("Inventory empty.")
                 continue
+
+            print("Inventory:")
+            for i, item in enumerate(char.inventory):
+                type_name = "Essence" if isinstance(item, Essence) else "Stone"
+                print(f"  {i}. {item.name} ({type_name})")
+
             try:
                 stone_idx = int(input("Enter inventory index of Stone: "))
+                if stone_idx < 0 or stone_idx >= len(char.inventory):
+                    print("Invalid index.")
+                    continue
+
                 if not isinstance(char.inventory[stone_idx], AwakeningStone):
                     print("Not a stone.")
                     continue
@@ -267,6 +320,14 @@ def main():
                 if e_idx < 0 or e_idx >= len(essences): continue
                 essence_name = essences[e_idx].name
 
+                print("Select Ability Slot to Practice:")
+                abilities = char.abilities.get(essence_name, [])
+                for i, ab in enumerate(abilities):
+                    if ab:
+                         print(f"{i}. {ab.name} [Lvl {ab.level}]")
+                    else:
+                         print(f"{i}. [Empty]")
+
                 slot = int(input("Slot (0-4): "))
                 res = engine.training_mgr.practice_ability(char, essence_name, slot)
                 if res:
@@ -275,35 +336,6 @@ def main():
                     print("Practiced ability.")
             except ValueError:
                 print("Invalid input.")
-
-            # Note: This block contains undefined variables (empty_indices) and is preserved
-            # for existing behavior despite being broken.
-
-            slot_idx = choose_option([str(i+1) for i in empty_indices], "Select Slot to fill: ")
-            slot_idx = int(slot_idx) - 1
-
-            # Choose Awakening Stone
-            # For brevity, let's just list 5 random ones or search
-            all_stones = loader.get_all_stones()
-            print("Available Stones (Top 10):")
-            for k, s in enumerate(all_stones[:10]):
-                print(f"{k+1}. {s}")
-            print("...")
-
-            stone_name = input("Enter Awakening Stone name (exact or partial): ")
-            # Simple fuzzy match
-            match_stone = next((s for s in all_stones if stone_name.lower() in s.lower()), None)
-
-            if match_stone:
-                stone = loader.get_stone(match_stone)
-                essence_obj = next(e for e in essences if e.name == target_ess_name)
-
-                new_ability = ability_gen.generate(essence_obj, stone, character.rank, character.affinity)
-                character.abilities[target_ess_name][slot_idx] = new_ability
-                print(f"Awakened: {new_ability.name}!")
-                print(f"Effect: {new_ability.description}")
-            else:
-                print("Stone not found.")
 
         elif choice == "6":
             print("Simulating training montage...")
@@ -409,6 +441,54 @@ def main():
                         print("Invalid input.")
 
         elif choice == "8":
+            # Grimoire (Lore)
+            print("\n--- Grimoire ---")
+            if not char.lore:
+                print("You have not discovered any lore yet.")
+            else:
+                # Group by category
+                categories = {}
+                for lore_id in char.lore:
+                    entry = engine.data_loader.get_lore(lore_id)
+                    if entry:
+                        if entry.category not in categories:
+                            categories[entry.category] = []
+                        categories[entry.category].append(entry)
+
+                for cat, entries in categories.items():
+                    print(f"\n[{cat}]")
+                    for entry in entries:
+                        print(f"  - {entry.title}: {entry.text}")
+            input("\nPress Enter to continue...")
+
+        elif choice == "9":
+            print("\nSystem Menu:")
+            print("1. Save Game")
+            print("2. Load Game")
+            print("3. Back")
+            sys_choice = input("> ").strip()
+
+            if sys_choice == "1":
+                filename = input("Enter save filename (e.g., save1.json): ")
+                print(engine.save_game(filename))
+            elif sys_choice == "2":
+                saves = engine.get_save_files()
+                if not saves:
+                    print("No save files found.")
+                else:
+                    print("Select Save File:")
+                    for i, s in enumerate(saves):
+                        print(f"{i+1}. {s}")
+                    try:
+                        s_idx = int(input("> ")) - 1
+                        if 0 <= s_idx < len(saves):
+                            print(engine.load_game(saves[s_idx]))
+                        else:
+                            print("Invalid selection.")
+                    except ValueError:
+                        print("Invalid input.")
+
+        elif choice == "0":
             sys.exit()
 
 if __name__ == "__main__":

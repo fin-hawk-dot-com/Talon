@@ -2,8 +2,9 @@ import json
 import os
 import random
 from typing import List, Optional, Union, Dict
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
+import dataclasses
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
@@ -24,6 +25,7 @@ class DataLoader:
             DataLoader._cache['quests'] = load_json('quests.json')
             DataLoader._cache['locations'] = load_json('locations.json')
             DataLoader._cache['monsters'] = load_json('monsters.json')
+            DataLoader._cache['lore'] = load_json('lore.json')
 
         self.essences_data = DataLoader._cache['essences']
         self.confluences_data = DataLoader._cache['confluences']
@@ -33,6 +35,7 @@ class DataLoader:
         self.quests_data = DataLoader._cache['quests']
         self.locations_data = DataLoader._cache['locations']
         self.monsters_data = DataLoader._cache['monsters']
+        self.lore_data = DataLoader._cache['lore']
 
         # Optimization: Pre-compute dictionary for O(1) lookup
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
@@ -45,6 +48,30 @@ class DataLoader:
         self.quests_map = {q['id']: q for q in self.quests_data}
         self.locations_map = {l['name'].lower(): l for l in self.locations_data}
         self.monsters_map = {m['name'].lower(): m for m in self.monsters_data}
+        self.lore_map = {l['title'].lower(): l for l in self.lore_data}
+        self.lore_id_map = {l['id']: l for l in self.lore_data}
+
+    def get_lore(self, identifier: str) -> Optional[LoreEntry]:
+        # Try ID first
+        l = self.lore_id_map.get(identifier)
+        if not l:
+            # Try Title
+            l = self.lore_map.get(identifier.lower())
+
+        if l:
+            return LoreEntry(
+                id=l['id'],
+                title=l['title'],
+                category=l['category'],
+                text=l['text']
+            )
+        return None
+
+    def get_all_lore(self) -> List[LoreEntry]:
+        return [
+            LoreEntry(id=l['id'], title=l['title'], category=l['category'], text=l['text'])
+            for l in self.lore_data
+        ]
 
     def get_quest(self, quest_id: str) -> Optional[Quest]:
         q = self.quests_map.get(quest_id)
@@ -523,14 +550,63 @@ class QuestManager:
     def _grant_rewards(self, character: Character, rewards: List[str]):
         # Simple string parsing for now
         for reward in rewards:
-            if "Essence" in reward:
-                # Give a random essence if generic, or specific?
-                # For now just text.
-                pass
+            if reward.startswith("Lore:"):
+                lore_title = reward.split(":", 1)[1].strip()
+                lore_entry = self.data_loader.get_lore(lore_title)
+                if lore_entry:
+                    if lore_entry.id not in character.lore:
+                        character.lore.append(lore_entry.id)
+                        print(f"Lore Discovered: {lore_entry.title}")
+                    else:
+                        print(f"Lore already known: {lore_entry.title}")
+                else:
+                    print(f"Unknown Lore reward: {lore_title}")
+
+            elif reward.startswith("Essence:"):
+                name = reward.split(":", 1)[1].strip()
+                item = self.data_loader.get_essence(name)
+                if item:
+                    character.inventory.append(item)
+                    print(f"Received Reward: {item.name}")
+
+            elif reward.startswith("Stone:"):
+                name = reward.split(":", 1)[1].strip()
+                item = self.data_loader.get_stone(name)
+                if item:
+                    character.inventory.append(item)
+                    print(f"Received Reward: {item.name}")
+
+            elif reward.startswith("XP:"):
+                try:
+                    amount = int(reward.split(":", 1)[1].strip())
+                    print(f"Received {amount} XP (Not implemented on Character yet)")
+                except ValueError:
+                    pass
+
+            elif "Essence" in reward: # Fallback for generic strings like "Water Essence"
+                # Try to match exact name
+                item = self.data_loader.get_essence(reward)
+                if not item:
+                    # Try stripping " Essence"
+                    stripped = reward.replace(" Essence", "").strip()
+                    item = self.data_loader.get_essence(stripped)
+
+                if item:
+                    character.inventory.append(item)
+                    print(f"Received Reward: {item.name}")
+                else:
+                    # Give random essence? Or just log
+                    print(f"Reward text: {reward} (Item not found)")
+
             elif "Stone" in reward:
-                pass
-            elif "Potion" in reward:
-                pass
+                item = self.data_loader.get_stone(reward)
+                if item:
+                    character.inventory.append(item)
+                    print(f"Received Reward: {item.name}")
+                else:
+                    print(f"Reward text: {reward} (Item not found)")
+            else:
+                 print(f"Reward: {reward}")
 
 class TrainingManager:
     @staticmethod
@@ -846,3 +922,107 @@ class GameEngine:
         self.character.inventory.pop(stone_index)
 
         return f"Awakened {ability.name}!"
+
+    def save_game(self, filename: str):
+        if not self.character:
+            return "No character to save."
+
+        save_dir = os.path.join(DATA_DIR, 'saves')
+        os.makedirs(save_dir, exist_ok=True)
+        filepath = os.path.join(save_dir, filename)
+
+        try:
+            # Use dataclasses.asdict for serialization
+            data = dataclasses.asdict(self.character)
+            with open(filepath, 'w') as f:
+                json.dump(data, f, indent=2)
+            return f"Game saved to {filepath}"
+        except Exception as e:
+            return f"Error saving game: {e}"
+
+    def load_game(self, filename: str):
+        save_dir = os.path.join(DATA_DIR, 'saves')
+        filepath = os.path.join(save_dir, filename)
+
+        if not os.path.exists(filepath):
+            return f"Save file {filename} not found."
+
+        try:
+            with open(filepath, 'r') as f:
+                data = json.load(f)
+
+            # Reconstruct Character object manually because simple assignment won't restore nested dataclasses/objects
+            char = Character(
+                name=data['name'],
+                race=data['race'],
+                faction=data.get('faction'),
+                affinity=data.get('affinity', 'General'),
+                current_health=data.get('current_health', -1),
+                current_mana=data.get('current_mana', -1),
+                current_stamina=data.get('current_stamina', -1),
+                xp_reward=data.get('xp_reward', 0),
+                loot_table=data.get('loot_table', []),
+                lore=data.get('lore', [])
+            )
+
+            # Reconstruct Attributes
+            if 'attributes' in data:
+                for k, v in data['attributes'].items():
+                    char.attributes[k] = Attribute(**v)
+
+            # Reconstruct Essences
+            # Base
+            for e_data in data.get('base_essences', []):
+                char.base_essences.append(Essence(**e_data))
+            # Confluence
+            if data.get('confluence_essence'):
+                char.confluence_essence = Essence(**data['confluence_essence'])
+
+            # Reconstruct Inventory
+            for item_data in data.get('inventory', []):
+                if not item_data: continue
+                # Distinguish Essence vs AwakeningStone
+                if 'type' in item_data: # Essence
+                    char.inventory.append(Essence(**item_data))
+                else:
+                    char.inventory.append(AwakeningStone(**item_data))
+
+            # Reconstruct Abilities
+            # Dict[str, List[Optional[Ability]]]
+            if 'abilities' in data:
+                for ess_name, slots in data['abilities'].items():
+                    reconstructed_slots = []
+                    for slot in slots:
+                        if slot:
+                            # Reconstruct nested objects in Ability
+                            p_ess = Essence(**slot['parent_essence'])
+                            p_stone = AwakeningStone(**slot['parent_stone'])
+                            # Remove them from kwargs to avoid double assignment or error if Ability __init__ expects objects
+                            # Ability is a dataclass, so it expects fields.
+                            # We need to filter out keys that might not be in Ability definition if schema changed,
+                            # but assuming schema matches.
+                            # Need to convert nested dicts to objects
+                            slot['parent_essence'] = p_ess
+                            slot['parent_stone'] = p_stone
+                            reconstructed_slots.append(Ability(**slot))
+                        else:
+                            reconstructed_slots.append(None)
+                    char.abilities[ess_name] = reconstructed_slots
+
+            # Reconstruct Quests
+            if 'quests' in data:
+                for q_id, q_data in data['quests'].items():
+                    char.quests[q_id] = QuestProgress(**q_data)
+
+            self.character = char
+            return f"Game loaded from {filename}"
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            return f"Error loading game: {e}"
+
+    def get_save_files(self) -> List[str]:
+        save_dir = os.path.join(DATA_DIR, 'saves')
+        if not os.path.exists(save_dir):
+            return []
+        return [f for f in os.listdir(save_dir) if f.endswith('.json')]
