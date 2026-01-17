@@ -189,7 +189,8 @@ def main():
                     print("Select Ability:")
                     for i, ab in enumerate(abilities_flat):
                         cost_str = f"{ab.cost} {ab.parent_stone.cost_type}"
-                        print(f"{i+1}. {ab.name} ({cost_str}) - {ab.description}")
+                        cd_str = f" [CD: {ab.current_cooldown}]" if ab.current_cooldown > 0 else ""
+                        print(f"{i+1}. {ab.name} ({cost_str}){cd_str} - {ab.description}")
 
                     try:
                         ab_idx = int(input("> ")) - 1
@@ -213,16 +214,32 @@ def main():
                     if monster.current_health <= 0:
                         # Victory
                         print(f"You gained {monster.xp_reward} XP!")
+
+                        # Update Quests
+                        notifications = engine.quest_mgr.check_objectives(char, "kill", monster.name)
+                        for note in notifications:
+                            print(f"\n! {note} !")
+
                         # Loot
                         loot_items = engine.loot_mgr.get_loot_for_monster(monster)
                         if loot_items:
                             print("Loot:")
-                            for item in loot_items:
-                                char.inventory.append(item)
-                                type_name = "Essence" if isinstance(item, Essence) else "Stone"
-                                print(f"- Found {item.name} ({type_name})")
-                        else:
-                            print("No loot found.")
+                            for loot_item_name in monster.loot_table:
+                                # Try to find as Essence or Stone
+                                item = engine.data_loader.get_essence(loot_item_name)
+                                if not item:
+                                    item = engine.data_loader.get_stone(loot_item_name)
+
+                                if item:
+                                    char.inventory.append(item)
+                                    print(f"- Found {item.name}!")
+
+                                    # Quest Check for Collection
+                                    col_notes = engine.quest_mgr.check_objectives(char, "collect", item.name)
+                                    for note in col_notes:
+                                        print(f"\n! {note} !")
+                                else:
+                                    print(f"- Found unknown item: {loot_item_name}")
 
                     elif char.current_health <= 0:
                         print("You have been defeated. (Game Over - Reviving at temple...)")
@@ -358,8 +375,19 @@ def main():
                 print("Active Quests:")
                 for q_id in active_quests:
                     q = engine.quest_mgr.data_loader.get_quest(q_id)
-                    stage = q.stages.get(char.quests[q_id].current_stage_id)
-                    print(f"- {q.title}: {stage.description}")
+                    prog = char.quests[q_id]
+                    stage = q.stages.get(prog.current_stage_id)
+
+                    # Format Objectives
+                    objectives_text = ""
+                    if stage.objectives:
+                        objectives_text = "\n    Objectives:"
+                        for obj in stage.objectives:
+                            key = f"{obj.type}:{obj.target}"
+                            current = prog.objectives_progress.get(key, 0)
+                            objectives_text += f"\n    - {obj.type} {obj.target}: {current}/{obj.count}"
+
+                    print(f"- {q.title}: {stage.description}{objectives_text}")
             else:
                 print("No active quests.")
 
