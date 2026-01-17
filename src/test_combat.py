@@ -64,6 +64,8 @@ def test_combat_abilities():
 
     # Test Insufficient Mana
     char.current_mana = 10
+    # Reset cooldown manually for this test because execute_ability sets it
+    ability.current_cooldown = 0
     print("Testing Insufficient Mana...")
     log = engine.combat_mgr.execute_ability(char, enemy, ability)
     print(log[0])

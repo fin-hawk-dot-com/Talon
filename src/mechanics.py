@@ -2,7 +2,7 @@ import json
 import os
 import random
 from typing import List, Optional, Union, Dict
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, Location
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -58,10 +58,20 @@ class DataLoader:
                         next_stage_id=choice['next_stage_id'],
                         consequence=choice.get('consequence', '')
                     ))
+
+                objectives = []
+                for obj in stage_data.get('objectives', []):
+                    objectives.append(QuestObjective(
+                        type=obj['type'],
+                        target=obj['target'],
+                        count=obj.get('count', 1)
+                    ))
+
                 stages[stage_id] = QuestStage(
                     id=stage_data['id'],
                     description=stage_data['description'],
-                    choices=choices
+                    choices=choices,
+                    objectives=objectives
                 )
 
             return Quest(
@@ -376,6 +386,13 @@ class AbilityGenerator:
         elif stone.rarity == "Rare": base_cost = 40
         elif stone.rarity == "Epic": base_cost = 80
 
+        # Calculate Cooldown
+        base_cooldown = 2 # Rounds
+        if stone.cooldown == "Short": base_cooldown = 1
+        elif stone.cooldown == "Medium": base_cooldown = 3
+        elif stone.cooldown == "Long": base_cooldown = 5
+        elif stone.cooldown == "Very Long": base_cooldown = 8
+
         return Ability(
             name=name,
             description=description,
@@ -383,7 +400,9 @@ class AbilityGenerator:
             level=0,
             parent_essence=essence,
             parent_stone=stone,
-            cost=base_cost
+            cost=base_cost,
+            cooldown=base_cooldown,
+            current_cooldown=0
         )
 
 class QuestManager:
@@ -459,6 +478,47 @@ class QuestManager:
             progress.current_stage_id = choice.next_stage_id
 
         return result_text
+
+    def check_objectives(self, character: Character, event_type: str, target: str) -> List[str]:
+        """Updates quest objectives based on events (e.g. kill, collect)."""
+        notifications = []
+        for q_id, progress in character.quests.items():
+            if progress.status != "Active": continue
+
+            quest = self.data_loader.get_quest(q_id)
+            if not quest: continue
+
+            stage = quest.stages.get(progress.current_stage_id)
+            if not stage or not stage.objectives: continue
+
+            updated = False
+            for obj in stage.objectives:
+                if obj.type == event_type and obj.target.lower() == target.lower():
+                    key = f"{obj.type}:{obj.target}"
+                    current = progress.objectives_progress.get(key, 0)
+                    if current < obj.count:
+                        progress.objectives_progress[key] = current + 1
+                        updated = True
+                        notifications.append(f"Quest Update: [{quest.title}] {obj.type} {obj.target} ({current + 1}/{obj.count})")
+
+            if updated:
+                # Check if all objectives for this stage are met
+                all_met = True
+                for obj in stage.objectives:
+                    key = f"{obj.type}:{obj.target}"
+                    if progress.objectives_progress.get(key, 0) < obj.count:
+                        all_met = False
+                        break
+
+                if all_met:
+                    notifications.append(f"Quest Stage Complete: [{quest.title}] - Objectives Met!")
+                    if not stage.choices:
+                         # Auto-advance logic for stages without choices (linear)
+                         # This assumes linear quests might rely on 'next_stage_id' from somewhere,
+                         # but currently structure relies on choices.
+                         # If no choices, it's stuck unless we define a default transition or it is just waiting for user interaction.
+                         pass
+        return notifications
 
     def _grant_rewards(self, character: Character, rewards: List[str]):
         # Simple string parsing for now
@@ -587,6 +647,10 @@ class CombatManager:
     def execute_ability(self, user: Character, target: Character, ability: Ability) -> List[str]:
         log = []
 
+        # Check Cooldown
+        if ability.current_cooldown > 0:
+            return [f"{ability.name} is on cooldown ({ability.current_cooldown} rounds left)!"]
+
         # Check Cost
         cost = ability.cost
         cost_type = ability.parent_stone.cost_type
@@ -603,6 +667,9 @@ class CombatManager:
              if user.current_health < cost:
                  return [f"Not enough Health to use {ability.name}!"]
              user.current_health -= cost
+
+        # Set Cooldown
+        ability.current_cooldown = ability.cooldown + 1 # +1 because it decrements at start of next round/end of this one
 
         # Determine Effect based on Function
         function = ability.parent_stone.function
@@ -648,11 +715,20 @@ class CombatManager:
     def combat_round(self, player: Character, enemy: Character, player_action: Union[str, Ability]) -> tuple[List[str], bool]:
         log = []
 
+        # Decrement Cooldowns for Player
+        if player.abilities:
+            for ess_name, slots in player.abilities.items():
+                for ab in slots:
+                    if ab and ab.current_cooldown > 0:
+                        ab.current_cooldown -= 1
+
+        # Note: Enemy cooldowns are not tracked in this simplified model as enemies do not persist abilities deeply yet.
+
         # 1. Player Turn
         if isinstance(player_action, Ability):
              ability_log = self.execute_ability(player, enemy, player_action)
              log.extend(ability_log)
-             if "Not enough" in ability_log[0]: # Failed to use
+             if "Not enough" in ability_log[0] or "on cooldown" in ability_log[0]: # Failed to use
                  return log, False
 
         elif player_action == "Attack":
@@ -673,6 +749,7 @@ class CombatManager:
         # Check Enemy Death
         if enemy.current_health <= 0:
             log.append(f"{enemy.name} has been defeated!")
+            # Trigger Quest Update
             return log, True # Combat over (Win)
 
         # 2. Enemy Turn (Simple AI: Always Attack)
@@ -689,6 +766,10 @@ class CombatManager:
             return log, True # Combat over (Loss)
 
         return log, False # Continue
+
+    def check_combat_objectives(self, player: Character, enemy: Character):
+        # This should be called by GameEngine after combat
+        pass
 
 class GameEngine:
     def __init__(self):

@@ -37,10 +37,17 @@ class QuestChoice:
     consequence: str
 
 @dataclass
+class QuestObjective:
+    type: str # "kill", "collect", "visit"
+    target: str # Monster name, Item name, Location name
+    count: int = 1
+
+@dataclass
 class QuestStage:
     id: str
     description: str
     choices: List[QuestChoice] = field(default_factory=list)
+    objectives: List[QuestObjective] = field(default_factory=list)
 
 @dataclass
 class Quest:
@@ -58,6 +65,7 @@ class QuestProgress:
     current_stage_id: str
     status: str = "Active"  # Active, Completed, Failed
     history: List[str] = field(default_factory=list)
+    objectives_progress: Dict[str, int] = field(default_factory=dict) # key: "type:target", value: current_count
 
 @dataclass
 class AwakeningStone:
@@ -77,8 +85,9 @@ class Ability:
     parent_essence: Essence
     parent_stone: AwakeningStone
     xp: float = 0.0
-    cooldown: int = 0
+    cooldown: int = 0 # Static Max Cooldown from Stone/Rank
     cost: int = 0
+    current_cooldown: int = 0 # Dynamic Runtime Cooldown
 
     @property
     def max_xp(self) -> float:
