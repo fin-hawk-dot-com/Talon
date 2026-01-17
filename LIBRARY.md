@@ -85,6 +85,14 @@
 | The Sunken Ruins | Dungeon | An ancient city partially submerged in a vast underground lake, glowing with eerie phosphorescence. | Underwater ruins, ancient stone architecture, bioluminescent algae, water reflections, submerged statues, mystical blue light, aquatic atmosphere, detailed | fire, desert, dry, sky, bright sun, modern |
 | The Whispering Woods | Wilderness | A dense forest where the trees seem to murmur secrets to those who listen. | Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed | city, buildings, desert, bright day, plain, simple, cartoon |
 
+## Lore
+| Title | Category | Text |
+|---|---|---|
+| Basics of Magic | Magic | Magic is manipulated through Essences. Every mage begins with three Base Essences which eventually form a Confluence. |
+| Monsters | Bestiary | Monsters are creatures corrupted by chaotic mana. They are ranked similarly to Awakened individuals. |
+| The Awakening | History | The Awakening was a cataclysmic event that introduced magic to the world. It began with the appearance of the first rifts. |
+| The Lost Civilization | History | Before the current era, a civilization known as the Aethel thrived. They were masters of Confluence magic. |
+
 ## Example Builds
 
 ### Build 1: Volcano Archetype

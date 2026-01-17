@@ -31,6 +31,13 @@ class Location:
     image_prompt_negative: str
 
 @dataclass
+class LoreEntry:
+    id: str
+    title: str
+    category: str
+    text: str
+
+@dataclass
 class QuestChoice:
     text: str
     next_stage_id: str
@@ -162,6 +169,7 @@ class Character:
     current_stamina: float = field(default=-1.0)
     xp_reward: int = 0
     loot_table: List[str] = field(default_factory=list)
+    lore: List[str] = field(default_factory=list)
 
     def __post_init__(self):
         if self.current_health < 0:
