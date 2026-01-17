@@ -1,6 +1,7 @@
 import json
 import os
 import random
+from dataclasses import asdict
 from typing import List, Optional, Union, Dict
 from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
@@ -548,7 +549,13 @@ class QuestManager:
         return notifications
 
     def _grant_rewards(self, character: Character, rewards: List[str]):
-        # Simple string parsing for now
+        # Supported formats:
+        # "Essence: <Name>"
+        # "Stone: <Name>"
+        # "XP: <Amount>"
+        # "Random Essence"
+        # "Random Stone"
+
         for reward in rewards:
             if reward.startswith("Lore:"):
                 lore_title = reward.split(":", 1)[1].strip()
@@ -682,18 +689,37 @@ class LootManager:
     def generate_random_loot(self) -> Optional[Union[Essence, AwakeningStone]]:
         """Generates a random Essence or Awakening Stone."""
         roll = random.random()
-        if roll < 0.3: # 30% chance for Essence
+        if roll < 0.1: # 10% chance for Essence
             essences = self.data_loader.get_all_base_essences()
             if not essences: return None
             name = random.choice(essences)
             return self.data_loader.get_essence(name)
-        elif roll < 0.6: # 30% chance for Stone
+        elif roll < 0.2: # 10% chance for Stone
             stones = self.data_loader.get_all_stones()
             if not stones: return None
             name = random.choice(stones)
             return self.data_loader.get_stone(name)
         else:
-            return None # 40% chance for nothing
+            return None
+
+    def get_loot_for_monster(self, monster: Character) -> List[Union[Essence, AwakeningStone]]:
+        loot = []
+        # 1. Fixed Loot Table
+        for item_name in monster.loot_table:
+            item = self.data_loader.get_essence(item_name)
+            if not item:
+                item = self.data_loader.get_stone(item_name)
+            if item:
+                loot.append(item)
+
+        # 2. Random Drop Chance (based on Rank?)
+        # Higher rank = better chance?
+        # For now, flat small chance for extra random loot
+        random_item = self.generate_random_loot()
+        if random_item:
+            loot.append(random_item)
+
+        return loot
 
 class CombatManager:
     def __init__(self, data_loader: DataLoader):
@@ -828,13 +854,30 @@ class CombatManager:
             # Trigger Quest Update
             return log, True # Combat over (Win)
 
-        # 2. Enemy Turn (Simple AI: Always Attack)
-        # Decide physical or magical based on stats?
-        is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
-        dmg = self.calculate_damage(enemy, player, is_magical=is_magical)
-        player.current_health -= dmg
-        atk_type = "magically attacked" if is_magical else "attacked"
-        log.append(f"{enemy.name} {atk_type} you for {dmg:.1f} damage.")
+        # 2. Enemy Turn
+        # Simple AI: 20% chance to use a special ability if available (simulated), else Attack
+        ai_action = "Attack"
+        if random.random() < 0.2:
+             # Simulate an ability usage
+             ai_action = "Special"
+
+        if ai_action == "Special":
+             # Flavor text for enemy ability
+             ability_names = ["Power Strike", "Shadow Blast", "Roar", "Bite"]
+             ab_name = random.choice(ability_names)
+
+             # Calculate slightly higher damage
+             is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
+             dmg = self.calculate_damage(enemy, player, is_magical=is_magical, multiplier=1.3)
+             player.current_health -= dmg
+             log.append(f"{enemy.name} used {ab_name} on you for {dmg:.1f} damage!")
+        else:
+             # Standard Attack
+             is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
+             dmg = self.calculate_damage(enemy, player, is_magical=is_magical)
+             player.current_health -= dmg
+             atk_type = "magically attacked" if is_magical else "attacked"
+             log.append(f"{enemy.name} {atk_type} you for {dmg:.1f} damage.")
 
         # Check Player Death
         if player.current_health <= 0:
@@ -861,6 +904,115 @@ class GameEngine:
     def create_character(self, name: str, race: str):
         self.character = Character(name=name, race=race)
         return self.character
+
+    def get_save_files(self) -> List[str]:
+        save_dir = os.path.join(DATA_DIR, 'saves')
+        if not os.path.exists(save_dir):
+            return []
+        return [f for f in os.listdir(save_dir) if f.endswith('.json')]
+
+    def save_game(self, filename: str = "savegame.json") -> str:
+        if not self.character:
+            return "No character to save."
+
+        save_dir = os.path.join(DATA_DIR, 'saves')
+        if not os.path.exists(save_dir):
+            os.makedirs(save_dir)
+
+        save_path = os.path.join(save_dir, filename)
+        data = asdict(self.character)
+
+        try:
+            with open(save_path, 'w') as f:
+                json.dump(data, f, indent=4)
+            return f"Game saved to {save_path}"
+        except Exception as e:
+            return f"Failed to save game: {str(e)}"
+
+    def load_game(self, filename: str = "savegame.json") -> str:
+        save_path = os.path.join(DATA_DIR, 'saves', filename)
+        if not os.path.exists(save_path):
+            return "Save file not found."
+
+        try:
+            with open(save_path, 'r') as f:
+                data = json.load(f)
+
+            # Reconstruct Character object manually to ensure types are correct
+            char = Character(
+                name=data['name'],
+                race=data['race'],
+                faction=data.get('faction'),
+                affinity=data.get('affinity', "General"),
+                xp_reward=data.get('xp_reward', 0),
+                loot_table=data.get('loot_table', [])
+            )
+
+            # Restore Attributes
+            if 'attributes' in data:
+                char.attributes = {}
+                for k, v in data['attributes'].items():
+                    char.attributes[k] = Attribute(**v)
+
+            # Restore Base Essences
+            char.base_essences = []
+            for e_data in data.get('base_essences', []):
+                char.base_essences.append(Essence(**e_data))
+
+            # Restore Confluence Essence
+            if data.get('confluence_essence'):
+                char.confluence_essence = Essence(**data['confluence_essence'])
+
+            # Restore Inventory (Mixed types)
+            char.inventory = []
+            for item in data.get('inventory', []):
+                # Distinguish between Essence and Stone based on fields
+                if 'function' in item: # Stone
+                    char.inventory.append(AwakeningStone(**item))
+                else: # Essence
+                    char.inventory.append(Essence(**item))
+
+            # Restore Abilities
+            # Dictionary of list of (Ability or None)
+            char.abilities = {}
+            for ess_name, slots in data.get('abilities', {}).items():
+                restored_slots = []
+                for slot in slots:
+                    if slot:
+                        # Reconstruct Essence and Stone inside Ability
+                        p_ess = Essence(**slot['parent_essence'])
+                        p_stone = AwakeningStone(**slot['parent_stone'])
+
+                        ab = Ability(
+                            name=slot['name'],
+                            description=slot['description'],
+                            rank=slot['rank'],
+                            level=slot['level'],
+                            parent_essence=p_ess,
+                            parent_stone=p_stone,
+                            xp=slot.get('xp', 0.0),
+                            cooldown=slot.get('cooldown', 0),
+                            cost=slot.get('cost', 0)
+                        )
+                        restored_slots.append(ab)
+                    else:
+                        restored_slots.append(None)
+                char.abilities[ess_name] = restored_slots
+
+            # Restore Quests
+            char.quests = {}
+            for q_id, q_data in data.get('quests', {}).items():
+                char.quests[q_id] = QuestProgress(**q_data)
+
+            # Restore Stats
+            char.current_health = data.get('current_health', -1)
+            char.current_mana = data.get('current_mana', -1)
+            char.current_stamina = data.get('current_stamina', -1)
+
+            self.character = char
+            return f"Game loaded from {save_path}"
+        except Exception as e:
+            return f"Failed to load game: {str(e)}"
 
     def absorb_essence(self, essence_index: int, attribute: str) -> str:
         if not self.character: return "No character."

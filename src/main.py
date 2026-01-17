@@ -209,7 +209,8 @@ def main():
                             print(f"\n! {note} !")
 
                         # Loot
-                        if monster.loot_table:
+                        loot_items = engine.loot_mgr.get_loot_for_monster(monster)
+                        if loot_items:
                             print("Loot:")
                             for loot_item_name in monster.loot_table:
                                 # Try to find as Essence or Stone
