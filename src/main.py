@@ -178,8 +178,8 @@ class GameInterface:
         attr_choice = input("> ").strip().lower()
         mapping = {'p': 'Power', 's': 'Speed', 'm': 'Spirit', 'r': 'Recovery'}
         if attr_choice in mapping:
-            self.engine.training_mgr.train_attribute(self.engine.character, mapping[attr_choice])
-            print(f"Trained {mapping[attr_choice]}!")
+            result = self.engine.training_mgr.train_attribute(self.engine.character, mapping[attr_choice])
+            print(f"\n{result}")
         else:
             print("Invalid attribute.")
 
@@ -413,7 +413,9 @@ class GameInterface:
         char = self.engine.character
         # Simulate training all attributes
         for attr_name in char.attributes:
-            self.engine.training_mgr.train_attribute(char, attr_name)
+            res = self.engine.training_mgr.train_attribute(char, attr_name)
+            if "*** BREAKTHROUGH ***" in res:
+                print(res)
 
         # Simulate practicing all abilities and attempting rank up
         for essence_name, abilities in char.abilities.items():
