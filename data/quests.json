@@ -2,7 +2,7 @@
   {
     "id": "main_awakening",
     "title": "The Awakening",
-    "description": "You find yourself in a strange new world, with no memory of how you arrived.",
+    "description": "You stir from a deep, dreamless slumber to find yourself in a realm unlike any you know. The air hums with unseen energy, and your memories are but a haze.",
     "type": "Main",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -11,50 +11,50 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "You wake up in a clearing. A strange blue box floats before your eyes, displaying your stats.",
+        "description": "You wake in a sun-dappled clearing, the grass soft beneath you. Before your eyes, a spectral blue interface flickers into existence, displaying arcane statistics about your own being.",
         "choices": [
           {
-            "text": "Look around",
+            "text": "Survey the surroundings",
             "next_stage_id": "stage_2",
-            "consequence": "You see a small town in the distance."
+            "consequence": "You push yourself up, spotting the smoking chimneys of a small town in the distance."
           }
         ]
       },
       "stage_2": {
         "id": "stage_2",
-        "description": "You approach the town. A guard stops you at the gate. 'Halt! Identify yourself.'",
+        "description": "A worn path leads you to the outskirts of a bustling settlement. A guard in polished iron armor bars your path, his hand resting on the hilt of his sword. 'Halt, traveler! State your business and your trade.'",
         "choices": [
           {
-            "text": "Ask about Magic",
+            "text": "Inquire about the Arcane Arts",
             "next_stage_id": "stage_3_mage",
-            "consequence": "The guard eyes you suspiciously but points you to the Magic Society."
+            "consequence": "The guard eyes you suspiciously, noting the spark in your eyes, but points you toward the Spire of the Magi."
           },
           {
-            "text": "Ask about Combat",
+            "text": "Inquire about Martial Prowess",
             "next_stage_id": "stage_3_warrior",
-            "consequence": "The guard nods approvingly and points you to the Adventure Society."
+            "consequence": "The guard nods approvingly at your stance and directs you to the Hall of Champions."
           }
         ]
       },
       "stage_3_mage": {
         "id": "stage_3_mage",
-        "description": "You visit the Magic Society. An elder mage senses your potential and offers you a Magic Essence.",
+        "description": "You find your way to the Sanctum of the Arcane. The air smells of ozone and old parchment. An elderly mage with eyes like nebulas studies you.",
         "choices": [
           {
-            "text": "Accept",
+            "text": "Accept their guidance",
             "next_stage_id": "COMPLETED",
-            "consequence": "You received a Magic Essence."
+            "consequence": "The mage hands you a glowing crystal. 'Your journey begins now.' You received a Magic Essence."
           }
         ]
       },
       "stage_3_warrior": {
         "id": "stage_3_warrior",
-        "description": "You visit the Adventure Society. A veteran fighter sizes you up and offers you a Might Essence.",
+        "description": "The Hall of Champions smells of sweat, steel, and ale. A battle-scarred veteran looks you over, measuring your worth with a glance.",
         "choices": [
           {
-            "text": "Accept",
+            "text": "Accept the challenge",
             "next_stage_id": "COMPLETED",
-            "consequence": "You received a Might Essence."
+            "consequence": "The veteran grins and tosses you a heavy stone. 'Prove yourself.' You received a Might Essence."
           }
         ]
       }
@@ -64,7 +64,7 @@
   {
     "id": "main_monster_surge",
     "title": "The Monster Surge",
-    "description": "Unusual monster activity is threatening the region.",
+    "description": "The fragile peace of the region is shattering as beasts grow bold and aggressive. Whispers speak of a dark influence driving them.",
     "type": "Main",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -73,50 +73,50 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "Reports are coming in of monsters attacking outlying farms. The Adventure Society is looking for volunteers.",
+        "description": "Frantic messengers arrive with reports of monstrous incursions on the borderlands. The Adventure Society is overwhelmed and calls for aid.",
         "choices": [
           {
-            "text": "Volunteer to defend",
+            "text": "Volunteer to defend the walls",
             "next_stage_id": "stage_2_defend",
-            "consequence": "You are assigned to the western gate."
+            "consequence": "You are assigned to the western gate, where the fighting is fiercest."
           },
           {
-            "text": "Volunteer to hunt",
+            "text": "Volunteer to hunt the source",
             "next_stage_id": "stage_2_hunt",
-            "consequence": "You are sent to track the beasts to their lair."
+            "consequence": "You are sent into the wilds to track the beasts to their lair."
           }
         ]
       },
       "stage_2_defend": {
         "id": "stage_2_defend",
-        "description": "A wave of monsters attacks the gate! You fight bravely alongside the guards.",
+        "description": "The western gate buckles under the assault of gnashing teeth and claws. The guards are faltering against the relentless wave.",
         "choices": [
           {
             "text": "Hold the line",
             "next_stage_id": "stage_3_victory",
-            "consequence": "You successfully repel the attack."
+            "consequence": "With a rallying cry, you push back the horde, inspiring the guards to victory."
           }
         ]
       },
       "stage_2_hunt": {
         "id": "stage_2_hunt",
-        "description": "You track the monsters to a cave. Inside, you find a broodmother.",
+        "description": "You track the beasts through the dense thicket, finding strange, corrupted markings leading to a cavernous lair where a massive broodmother resides.",
         "choices": [
           {
             "text": "Slay the broodmother",
             "next_stage_id": "stage_3_victory",
-            "consequence": "The monster threat is ended at its source."
+            "consequence": "You strike the beast down, ending the unnatural coordination of the monsters."
           }
         ]
       },
       "stage_3_victory": {
         "id": "stage_3_victory",
-        "description": "The town is safe for now. The Mayor thanks you for your service.",
+        "description": "The immediate threat is quelled. The town breathes a collective sigh of relief, and the Mayor personally commends your bravery.",
         "choices": [
           {
             "text": "Accept reward",
             "next_stage_id": "COMPLETED",
-            "consequence": "You receive a Rare Awakening Stone."
+            "consequence": "You receive a Rare Awakening Stone as a token of the town's gratitude."
           }
         ]
       }
@@ -126,7 +126,7 @@
   {
     "id": "main_ancient_ruins",
     "title": "The Ancient Ruins",
-    "description": "An ancient structure has been unearthed nearby.",
+    "description": "A tremor has revealed the entrance to a buried structure from the Age of Myths. Its secrets beckon to the brave and the foolish alike.",
     "type": "Main",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -135,50 +135,50 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "Excavators have found a ruin that predates the current era. They need explorers.",
+        "description": "The excavation site is buzzing with activity, but the workers refuse to go deeper. A foreboding darkness swallows the light from their torches.",
         "choices": [
           {
-            "text": "Enter the ruins",
+            "text": "Descend into the darkness",
             "next_stage_id": "stage_2",
-            "consequence": "The air inside is stale and heavy with magic."
+            "consequence": "The air inside is stale, heavy with the weight of centuries and dormant magic."
           }
         ]
       },
       "stage_2": {
         "id": "stage_2",
-        "description": "You encounter a sealed door with a complex puzzle lock.",
+        "description": "A massive stone door blocks the way, inscribed with shifting runes. A complex mechanism sits at its center, pulsating with faint light.",
         "choices": [
           {
-            "text": "Force it open",
+            "text": "Force the door open",
             "next_stage_id": "stage_3_brute",
-            "consequence": "You smash the lock, triggering a trap but opening the door."
+            "consequence": "You smash the lock mechanism. The door groans open, but the ceiling begins to crumble."
           },
           {
-            "text": "Solve the puzzle",
+            "text": "Decipher the puzzle",
             "next_stage_id": "stage_3_smart",
-            "consequence": "The door slides open silently."
+            "consequence": "You align the runes. The door slides open silently, revealing a pristine chamber."
           }
         ]
       },
       "stage_3_brute": {
         "id": "stage_3_brute",
-        "description": "You find a pedestal with a glowing artifact, but the room is collapsing!",
+        "description": "You spot a pedestal holding a glowing artifact amidst the falling debris. There isn't much time!",
         "choices": [
           {
-            "text": "Grab it and run",
+            "text": "Snatch the artifact and run",
             "next_stage_id": "COMPLETED",
-            "consequence": "You escape with the artifact."
+            "consequence": "You barely escape with the artifact as the room collapses behind you."
           }
         ]
       },
       "stage_3_smart": {
         "id": "stage_3_smart",
-        "description": "You find a pedestal with a glowing artifact. The room is pristine.",
+        "description": "The chamber is untouched by time. A pedestal in the center holds a glowing artifact, humming with power.",
         "choices": [
           {
-            "text": "Take the artifact",
+            "text": "Claim the artifact",
             "next_stage_id": "COMPLETED",
-            "consequence": "You claim the artifact safely."
+            "consequence": "You carefully take the artifact. It pulses warmly in your hand."
           }
         ]
       }
@@ -188,7 +188,7 @@
   {
     "id": "side_lost_cat",
     "title": "The Lost Cat",
-    "description": "Mrs. Higgins has lost her cat, Mittens.",
+    "description": "Mrs. Higgins, the local baker, is distraught. Her beloved cat, Mittens, has gone missing.",
     "type": "Side",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -197,23 +197,23 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "Mrs. Higgins is crying. 'Mittens ran into the forest!'",
+        "description": "Mrs. Higgins is sobbing into her apron. 'Mittens chased a butterfly into the Whispering Woods! He's never been gone this long!'",
         "choices": [
           {
-            "text": "Look in the forest",
+            "text": "Search the Whispering Woods",
             "next_stage_id": "stage_2",
-            "consequence": "You search the nearby woods."
+            "consequence": "You head into the woods, calling out the cat's name."
           }
         ]
       },
       "stage_2": {
         "id": "stage_2",
-        "description": "You find Mittens stuck in a tree.",
+        "description": "You hear a faint meow from above. Mittens is clinging to a high branch, looking terrified.",
         "choices": [
           {
-            "text": "Climb up",
+            "text": "Climb the tree",
             "next_stage_id": "COMPLETED",
-            "consequence": "You rescue the cat. Mrs. Higgins gives you a potion."
+            "consequence": "You retrieve the cat. Mrs. Higgins is overjoyed and presses a potion into your hand."
           }
         ]
       }
@@ -223,7 +223,7 @@
   {
     "id": "side_herb_gathering",
     "title": "Herb Gathering",
-    "description": "The local alchemist needs Moonleaf.",
+    "description": "The local alchemist, Elara, is in dire need of Moonleaf for a critical brew.",
     "type": "Side",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -232,23 +232,23 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "The alchemist asks you to find 5 bundles of Moonleaf.",
+        "description": "Elara looks exhausted. 'I need five bundles of Moonleaf. It only grows in the Twilight Glade, but I cannot leave my cauldron.'",
         "choices": [
           {
-            "text": "Go to the glade",
+            "text": "Head to Twilight Glade",
             "next_stage_id": "stage_2",
-            "consequence": "The glade is full of herbs."
+            "consequence": "The glade is beautiful, illuminated by glowing flora."
           }
         ]
       },
       "stage_2": {
         "id": "stage_2",
-        "description": "You find the Moonleaf, but a wolf guards it.",
+        "description": "You spot the Moonleaf, but a territorial Dire Wolf guards the patch, growling low in its throat.",
         "choices": [
           {
-            "text": "Fight the wolf",
+            "text": "Defeat the Dire Wolf",
             "next_stage_id": "COMPLETED",
-            "consequence": "You defeat the wolf and collect the herbs."
+            "consequence": "You drive the wolf away and harvest the herbs. Elara rewards you with a Mana Stone."
           }
         ]
       }
@@ -258,7 +258,7 @@
   {
     "id": "side_rival_duel",
     "title": "The Duel",
-    "description": "A rival adventurer has challenged you.",
+    "description": "Garret, a pompous adventurer from a noble house, has publicly challenged your honor.",
     "type": "Side",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -267,39 +267,39 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "Garret, a pompous noble, challenges you to a duel for honor.",
+        "description": "Garret sneers at you in the town square. 'You call yourself an adventurer? I challenge you to a duel! First blood wins!'",
         "choices": [
           {
-            "text": "Accept",
+            "text": "Accept the duel",
             "next_stage_id": "stage_2_fight",
-            "consequence": "You meet him in the square."
+            "consequence": "The crowd gathers, murmuring with excitement."
           },
           {
-            "text": "Decline",
+            "text": "Decline and walk away",
             "next_stage_id": "stage_2_coward",
-            "consequence": "He laughs at you."
+            "consequence": "Garret laughs loudly. 'Coward! Run back to your mother!'"
           }
         ]
       },
       "stage_2_fight": {
         "id": "stage_2_fight",
-        "description": "Garret is quick, but predictable.",
+        "description": "Garret is fast, but his technique is flashy and leaves him open.",
         "choices": [
           {
-            "text": "Strike hard",
+            "text": "Exploit his opening",
             "next_stage_id": "COMPLETED",
-            "consequence": "You knock him down. He yields."
+            "consequence": "You disarm him with a swift strike. He yields, humiliated. Your reputation grows."
           }
         ]
       },
       "stage_2_coward": {
         "id": "stage_2_coward",
-        "description": "Everyone mocks you.",
+        "description": "The crowd jeers as you turn your back.",
         "choices": [
           {
-            "text": "Walk away",
+            "text": "Ignore them",
             "next_stage_id": "COMPLETED",
-            "consequence": "You lost reputation."
+            "consequence": "You kept your health, but lost face in the town."
           }
         ]
       }
@@ -309,7 +309,7 @@
   {
     "id": "side_syndicate_offer",
     "title": "The Syndicate's Offer",
-    "description": "A shady figure approaches you with a job offer from the Iron Syndicate.",
+    "description": "A shady figure approaches you with a job offer from the Iron Syndicate, a notorious criminal organization.",
     "type": "Side",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -319,39 +319,39 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "A cloaked man whispers, 'We need someone to move a package out of the city. No questions asked.'",
+        "description": "A man in a hooded cloak sidles up to you in the tavern. 'We need a courier for a... sensitive package. High pay, no questions. Interested?'",
         "choices": [
           {
             "text": "Accept the job",
             "next_stage_id": "stage_2_deliver",
-            "consequence": "You take the package, feeling its weight."
+            "consequence": "You take the package. It feels unusually heavy."
           },
           {
-            "text": "Report him to guards",
+            "text": "Report him to the guards",
             "next_stage_id": "stage_2_snitch",
-            "consequence": "The man vanishes before the guards arrive."
+            "consequence": "You signal a guard, but the man vanishes into the crowd."
           }
         ]
       },
       "stage_2_deliver": {
         "id": "stage_2_deliver",
-        "description": "You sneak past the gates and deliver the package to a waiting cart.",
+        "description": "You navigate the back alleys to the drop-off point, avoiding patrols.",
         "choices": [
           {
-            "text": "Collect payment",
+            "text": "Deliver the package",
             "next_stage_id": "COMPLETED",
-            "consequence": "The Syndicate pays well."
+            "consequence": "The recipient grunts and tosses you a bag of coins. The Syndicate remembers your service."
           }
         ]
       },
       "stage_2_snitch": {
         "id": "stage_2_snitch",
-        "description": "The guards find nothing, but you feel like you're being watched.",
+        "description": "The guards search the area but find nothing. You feel eyes watching you from the shadows.",
         "choices": [
           {
-            "text": "Leave quickly",
+            "text": "Watch your back",
             "next_stage_id": "COMPLETED",
-            "consequence": "You gained favor with the law, but made an enemy."
+            "consequence": "You gained favor with the law, but the Syndicate does not forgive easily."
           }
         ]
       }
@@ -361,7 +361,7 @@
   {
     "id": "side_nature_wrath",
     "title": "Nature's Wrath",
-    "description": "The Verdant Circle needs help calming a corrupted spirit.",
+    "description": "The Verdant Circle needs help calming a corrupted spirit that is ravaging the woodlands.",
     "type": "Side",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -370,39 +370,39 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "A druidess pleads for aid. 'A tree spirit in the Whispering Woods has been maddened by dark magic.'",
+        "description": "A frantic druidess pleads for aid. 'A Great Oak spirit has been twisted by dark magic! It attacks anything that draws near!'",
         "choices": [
           {
-            "text": "Offer to cleanse it",
+            "text": "Offer to cleanse the corruption",
             "next_stage_id": "stage_2_cleanse",
-            "consequence": "You enter the woods with her."
+            "consequence": "You agree to try and save the spirit."
           },
           {
-            "text": "Offer to destroy it",
+            "text": "Offer to destroy the spirit",
             "next_stage_id": "stage_2_fight",
-            "consequence": "She reluctantly accepts your help."
+            "consequence": "The druidess hesitates but agrees that it may be the only way."
           }
         ]
       },
       "stage_2_cleanse": {
         "id": "stage_2_cleanse",
-        "description": "You find the spirit thrashing. You use soothing magic.",
+        "description": "The spirit thrashes wildly, its vines lashing out. You attempt to weave a soothing spell.",
         "choices": [
           {
-            "text": "Channel peace",
+            "text": "Channel nature magic",
             "next_stage_id": "COMPLETED",
-            "consequence": "The spirit calms and grants you a boon."
+            "consequence": "The darkness recedes. The spirit calms and gifts you a portion of its essence."
           }
         ]
       },
       "stage_2_fight": {
         "id": "stage_2_fight",
-        "description": "The spirit attacks! It is strong.",
+        "description": "The corrupted spirit roars, wood splintering as it charges.",
         "choices": [
           {
             "text": "Strike it down",
             "next_stage_id": "COMPLETED",
-            "consequence": "The spirit fades. The druidess weeps but thanks you."
+            "consequence": "The spirit collapses into a pile of deadwood. The druidess mourns, but the forest is safe."
           }
         ]
       }
@@ -412,7 +412,7 @@
   {
     "id": "main_secrets_deep",
     "title": "Secrets of the Deep",
-    "description": "Rumors of a submerged city draw you to the coast.",
+    "description": "Fishermen speak of strange lights beneath the waves. Rumors of a submerged city draw you to the coast.",
     "type": "Main",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -422,34 +422,34 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "You stand at the edge of a great lake. The Sunken Ruins lie beneath.",
+        "description": "You stand at the edge of the Sapphire Lake. The water is unnaturally still. Below, the faint outline of the Sunken Ruins beckons.",
         "choices": [
           {
-            "text": "Dive in",
+            "text": "Dive into the depths",
             "next_stage_id": "stage_2_swim",
-            "consequence": "The water is cold and dark."
+            "consequence": "The water is freezing, and the pressure builds as you descend."
           }
         ]
       },
       "stage_2_swim": {
         "id": "stage_2_swim",
-        "description": "You find an air pocket in a ruined tower. Phosphorescent writing covers the walls.",
+        "description": "You discover an ancient tower that remains air-filled thanks to a magical barrier. The walls are covered in phosphorescent writing.",
         "choices": [
           {
             "text": "Decipher the writing",
             "next_stage_id": "stage_3_lore",
-            "consequence": "It speaks of a lost civilization."
+            "consequence": "It tells the tragedy of a civilization that sought to control the tides."
           }
         ]
       },
       "stage_3_lore": {
         "id": "stage_3_lore",
-        "description": "A guardian awakens! A construct of coral and stone.",
+        "description": "Your presence awakens a Guardian! A construct made of coral and enchanted stone rises to defend the city's secrets.",
         "choices": [
           {
-            "text": "Fight",
+            "text": "Defeat the Guardian",
             "next_stage_id": "COMPLETED",
-            "consequence": "You defeat the guardian and claim its core."
+            "consequence": "The construct shatters. You retrieve its power core and an ancient relic."
           }
         ]
       }
@@ -459,7 +459,7 @@
   {
     "id": "side_shadow_threat",
     "title": "The Shadow Threat",
-    "description": "The Silent Hand has marked a target.",
+    "description": "The Silent Hand, a guild of assassins, has marked a target in the city. You've been invited to participate.",
     "type": "Side",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -468,59 +468,60 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "You find a note pinned to your door with a dagger. 'Meet us at midnight.'",
+        "description": "You find a black envelope pinned to your door with a jagged dagger. Inside is a location and a time: 'Midnight. The Old Belltower.'",
         "choices": [
           {
-            "text": "Go to the meeting",
+            "text": "Attend the meeting",
             "next_stage_id": "stage_2_meet",
-            "consequence": "You meet a masked figure in the alley."
+            "consequence": "You find a masked figure waiting in the shadows of the bell."
           }
         ]
       },
       "stage_2_meet": {
         "id": "stage_2_meet",
-        "description": "'We have a target who deals in forbidden tech. Remove them.'",
+        "description": "'We have a target who deals in forbidden tech,' the figure hisses. 'They threaten the balance. Remove them.'",
         "choices": [
           {
             "text": "Accept the contract",
             "next_stage_id": "stage_3_assassinate",
-            "consequence": "You hunt the target down."
+            "consequence": "You receive the target's dossier. It's a rogue artificer."
           },
           {
-            "text": "Refuse",
+            "text": "Refuse the contract",
             "next_stage_id": "stage_3_refuse",
-            "consequence": "The figure nods. 'Disappointing.'"
+            "consequence": "The figure stiffens. 'Disappointing. Do not speak of this.'"
           }
         ]
       },
       "stage_3_assassinate": {
         "id": "stage_3_assassinate",
-        "description": "The target is cornered in the Shadowfen.",
+        "description": "You track the artificer to the Shadowfen. They are cornered and dangerous.",
         "choices": [
           {
-            "text": "Eliminate",
+            "text": "Eliminate the target",
             "next_stage_id": "COMPLETED",
-            "consequence": "The deed is done. Payment is left for you."
+            "consequence": "The deed is done. You find your payment left at a drop point."
           }
         ]
       },
       "stage_3_refuse": {
         "id": "stage_3_refuse",
-        "description": "You walk away, checking over your shoulder.",
+        "description": "You walk away, the hair on your neck standing up. You feel watched.",
         "choices": [
           {
             "text": "Stay alert",
             "next_stage_id": "COMPLETED",
-            "consequence": "You survived the night."
+            "consequence": "You survive the night, but the Silent Hand will be watching you."
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target."
   },
   {
     "id": "main_void_call",
     "title": "The Void's Call",
-    "description": "The fabric of reality is thinning in the Scorched Wastes.",
+    "description": "The fabric of reality is thinning in the Scorched Wastes. A tear in the world threatens to consume everything.",
     "type": "Main",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -530,59 +531,60 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "Mages in the capital are unsettled. Readings from the Scorched Wastes show a massive spike in void energy.",
+        "description": "Royal Mages are in a panic. Readings from the Scorched Wastes show a massive spike in void energy, destabilizing the region.",
         "choices": [
           {
             "text": "Investigate the Wastes",
             "next_stage_id": "stage_2",
-            "consequence": "You travel to the desolate region."
+            "consequence": "You travel to the desolate region, where the sky is a bruised purple."
           }
         ]
       },
       "stage_2": {
         "id": "stage_2",
-        "description": "You reach the Ancient Spire. The air vibrates with a low hum. A tear in the sky pulses above.",
+        "description": "You reach the Ancient Spire. The air vibrates with a low, bone-shaking hum. A tear in the sky pulses directly above the spire's peak.",
         "choices": [
           {
             "text": "Climb the Spire",
             "next_stage_id": "stage_3_climb",
-            "consequence": "You ascend the tower, fighting off void-touched constructs."
+            "consequence": "You ascend the tower, fighting off void-touched constructs that phase in and out of existence."
           },
           {
             "text": "Enter the Rift",
             "next_stage_id": "stage_3_rift",
-            "consequence": "You step directly into the tear, braving the unknown."
+            "consequence": "You step directly into the tear, braving the unknown dimensions beyond."
           }
         ]
       },
       "stage_3_climb": {
         "id": "stage_3_climb",
-        "description": "At the summit, a device is amplifying the rift. It's guarded by a Void Sentinel.",
+        "description": "At the summit, a chaotic device is amplifying the rift. It is guarded by a Void Sentinel, a being of pure emptiness.",
         "choices": [
           {
             "text": "Destroy the device",
             "next_stage_id": "COMPLETED",
-            "consequence": "The rift closes, but the Sentinel explodes, leaving behind a Void Essence."
+            "consequence": "The device explodes. The rift seals shut. You collect the essence left behind by the Sentinel."
           }
         ]
       },
       "stage_3_rift": {
         "id": "stage_3_rift",
-        "description": "You float in a non-space. A presence watches you. It offers power in exchange for an anchor in reality.",
+        "description": "You float in a non-space of swirling colors and silence. A massive presence watches you. It offers power in exchange for an anchor in reality.",
         "choices": [
           {
             "text": "Reject and fight",
             "next_stage_id": "COMPLETED",
-            "consequence": "You force yourself back to reality, clutching a fragment of the void."
+            "consequence": "You will your mind to resist and force yourself back to reality, clutching a fragment of the void you tore away."
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Void's Call'. The fabric of reality is thinning in the Scorched Wastes."
   },
   {
     "id": "side_merchant_cargo",
     "title": "Merchant's Dilemma",
-    "description": "A shipment was lost in the Shadowfen.",
+    "description": "A valuable shipment was lost in the treacherous Shadowfen swamp. The merchant offers a rich reward for its recovery.",
     "type": "Side",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -592,32 +594,33 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "A frantic merchant in Mistfall Village grabs your arm. 'My cart! The swamp took it!'",
+        "description": "A frantic merchant in Mistfall Village grabs your arm. 'My cart! The swamp took it! It holds my entire livelihood!'",
         "choices": [
           {
             "text": "Search the swamp",
             "next_stage_id": "stage_2",
-            "consequence": "The swamp is thick with fog."
+            "consequence": "The swamp is thick with fog and the smell of decay."
           }
         ]
       },
       "stage_2": {
         "id": "stage_2",
-        "description": "You find the cart half-sunk. Giant leeches are attached to the cargo crates.",
+        "description": "You find the cart half-sunk in muck. Giant, blood-sucking leeches are pulsating on the cargo crates.",
         "choices": [
           {
             "text": "Burn them off",
             "next_stage_id": "COMPLETED",
-            "consequence": "You save the cargo, though some is scorched. The merchant is grateful."
+            "consequence": "You carefully burn the leeches away and salvage the cargo. The merchant weeps with gratitude."
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'Merchant's Dilemma'. A shipment was lost in the Shadowfen."
   },
   {
     "id": "side_frozen_silence",
     "title": "The Frozen Silence",
-    "description": "Highland Watch has stopped sending reports.",
+    "description": "Highland Watch, a remote outpost, has stopped sending reports. Fears of an unnatural freeze are growing.",
     "type": "Side",
     "starting_stage_id": "stage_1",
     "rewards": [
@@ -627,27 +630,27 @@
     "stages": {
       "stage_1": {
         "id": "stage_1",
-        "description": "Commander Kael at Ironhold is worried. 'The Watch hasn't signaled in three days. The cold there is unnatural.'",
+        "description": "Commander Kael at Ironhold is pacing. 'The Watch hasn't signaled in three days. The cold coming from the mountains is... wrong.'",
         "choices": [
           {
             "text": "Trek to the Watch",
             "next_stage_id": "stage_2",
-            "consequence": "The wind cuts like a knife as you climb."
+            "consequence": "The wind cuts like a knife as you climb, the temperature dropping rapidly."
           }
         ]
       },
       "stage_2": {
         "id": "stage_2",
-        "description": "The outpost is encased in ice. The guards are frozen solid, but alive. An Ice Wraith floats above.",
+        "description": "The outpost is encased in magical ice. The guards are frozen solid statues, but alive. An Ice Wraith floats above, feeding on their warmth.",
         "choices": [
           {
             "text": "Slay the Wraith",
             "next_stage_id": "COMPLETED",
-            "consequence": "The ice shatters as the Wraith dies. The guards gasp for air."
+            "consequence": "You shatter the Wraith. The ice instantly cracks and melts. The guards gasp, shivering but safe."
           }
         ]
       }
     },
-    "image_prompt": "Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target."
+    "image_prompt": "Fantasy illustration depicting the quest 'The Frozen Silence'. Highland Watch has stopped sending reports."
   }
 ]

@@ -203,19 +203,19 @@ When an Essence and Stone are combined, one of the following templates is chosen
 ## Quests
 | Title | Type | Description | Visual Prompt | Rewards |
 |---|---|---|---|---|
-| Herb Gathering | Side | The local alchemist needs Moonleaf. | Fantasy illustration depicting the quest 'Herb Gathering'. The local alchemist needs Moonleaf. | Mana Stone |
-| Merchant's Dilemma | Side | A shipment was lost in the Shadowfen. |  | Reputation, Stone of the Foot |
-| Nature's Wrath | Side | The Verdant Circle needs help calming a corrupted spirit. | Fantasy illustration depicting the quest 'Nature's Wrath'. The Verdant Circle needs help calming a corrupted spirit. | Nature Essence |
-| Secrets of the Deep | Main | Rumors of a submerged city draw you to the coast. | Fantasy illustration depicting the quest 'Secrets of the Deep'. Rumors of a submerged city draw you to the coast. | Water Essence, Ancient Relic |
-| The Ancient Ruins | Main | An ancient structure has been unearthed nearby. | Fantasy illustration depicting the quest 'The Ancient Ruins'. An ancient structure has been unearthed nearby. | Confluence Essence |
-| The Awakening | Main | You find yourself in a strange new world, with no memory of how you arrived. | Fantasy illustration depicting the quest 'The Awakening'. You find yourself in a strange new world, with no memory of how you arrived. | Starter Essence |
-| The Duel | Side | A rival adventurer has challenged you. | Fantasy illustration depicting the quest 'The Duel'. A rival adventurer has challenged you. | Reputation |
-| The Frozen Silence | Side | Highland Watch has stopped sending reports. | Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target. | Wind Essence, Stone of the Wall |
-| The Lost Cat | Side | Mrs. Higgins has lost her cat, Mittens. | Fantasy illustration depicting the quest 'The Lost Cat'. Mrs. Higgins has lost her cat, Mittens. | Healing Potion |
-| The Monster Surge | Main | Unusual monster activity is threatening the region. | Fantasy illustration depicting the quest 'The Monster Surge'. Unusual monster activity is threatening the region. | Rare Awakening Stone |
-| The Shadow Threat | Side | The Silent Hand has marked a target. |  | Dark Essence |
-| The Syndicate's Offer | Side | A shady figure approaches you with a job offer from the Iron Syndicate. | Fantasy illustration depicting the quest 'The Syndicate's Offer'. A shady figure approaches you with a job offer from the Iron Syndicate. | Smuggled Goods, Reputation (Criminal) |
-| The Void's Call | Main | The fabric of reality is thinning in the Scorched Wastes. |  | Void Essence, Stone of the Echo |
+| Herb Gathering | Side | The local alchemist, Elara, is in dire need of Moonleaf for a critical brew. | Fantasy illustration depicting the quest 'Herb Gathering'. The local alchemist needs Moonleaf. | Mana Stone |
+| Merchant's Dilemma | Side | A valuable shipment was lost in the treacherous Shadowfen swamp. The merchant offers a rich reward for its recovery. | Fantasy illustration depicting the quest 'Merchant's Dilemma'. A shipment was lost in the Shadowfen. | Reputation, Stone of the Foot |
+| Nature's Wrath | Side | The Verdant Circle needs help calming a corrupted spirit that is ravaging the woodlands. | Fantasy illustration depicting the quest 'Nature's Wrath'. The Verdant Circle needs help calming a corrupted spirit. | Nature Essence |
+| Secrets of the Deep | Main | Fishermen speak of strange lights beneath the waves. Rumors of a submerged city draw you to the coast. | Fantasy illustration depicting the quest 'Secrets of the Deep'. Rumors of a submerged city draw you to the coast. | Water Essence, Ancient Relic |
+| The Ancient Ruins | Main | A tremor has revealed the entrance to a buried structure from the Age of Myths. Its secrets beckon to the brave and the foolish alike. | Fantasy illustration depicting the quest 'The Ancient Ruins'. An ancient structure has been unearthed nearby. | Confluence Essence |
+| The Awakening | Main | You stir from a deep, dreamless slumber to find yourself in a realm unlike any you know. The air hums with unseen energy, and your memories are but a haze. | Fantasy illustration depicting the quest 'The Awakening'. You find yourself in a strange new world, with no memory of how you arrived. | Starter Essence |
+| The Duel | Side | Garret, a pompous adventurer from a noble house, has publicly challenged your honor. | Fantasy illustration depicting the quest 'The Duel'. A rival adventurer has challenged you. | Reputation |
+| The Frozen Silence | Side | Highland Watch, a remote outpost, has stopped sending reports. Fears of an unnatural freeze are growing. | Fantasy illustration depicting the quest 'The Frozen Silence'. Highland Watch has stopped sending reports. | Wind Essence, Stone of the Wall |
+| The Lost Cat | Side | Mrs. Higgins, the local baker, is distraught. Her beloved cat, Mittens, has gone missing. | Fantasy illustration depicting the quest 'The Lost Cat'. Mrs. Higgins has lost her cat, Mittens. | Healing Potion |
+| The Monster Surge | Main | The fragile peace of the region is shattering as beasts grow bold and aggressive. Whispers speak of a dark influence driving them. | Fantasy illustration depicting the quest 'The Monster Surge'. Unusual monster activity is threatening the region. | Rare Awakening Stone |
+| The Shadow Threat | Side | The Silent Hand, a guild of assassins, has marked a target in the city. You've been invited to participate. | Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target. | Dark Essence |
+| The Syndicate's Offer | Side | A shady figure approaches you with a job offer from the Iron Syndicate, a notorious criminal organization. | Fantasy illustration depicting the quest 'The Syndicate's Offer'. A shady figure approaches you with a job offer from the Iron Syndicate. | Smuggled Goods, Reputation (Criminal) |
+| The Void's Call | Main | The fabric of reality is thinning in the Scorched Wastes. A tear in the world threatens to consume everything. | Fantasy illustration depicting the quest 'The Void's Call'. The fabric of reality is thinning in the Scorched Wastes. | Void Essence, Stone of the Echo |
 
 ## Locations
 
