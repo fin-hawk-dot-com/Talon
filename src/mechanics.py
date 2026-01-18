@@ -3,7 +3,7 @@ import os
 import random
 from dataclasses import asdict
 from typing import List, Optional, Union, Dict
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry, PointOfInterest
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 import dataclasses
 
@@ -180,6 +180,15 @@ class DataLoader:
     def get_location(self, name: str) -> Optional[Location]:
         l = self.locations_map.get(name.lower())
         if l:
+            pois = []
+            for p in l.get('points_of_interest', []):
+                pois.append(PointOfInterest(
+                    name=p['name'],
+                    description=p['description'],
+                    type=p['type'],
+                    image_prompt=p.get('image_prompt', "")
+                ))
+
             return Location(
                 name=l['name'],
                 description=l['description'],
@@ -190,13 +199,24 @@ class DataLoader:
                 danger_rank=l.get('danger_rank', "Iron"),
                 connected_locations=l.get('connected_locations', []),
                 resources=l.get('resources', []),
-                npcs=l.get('npcs', [])
+                npcs=l.get('npcs', []),
+                points_of_interest=pois
             )
         return None
 
     def get_all_locations(self) -> List[Location]:
-        return [
-            Location(
+        result = []
+        for l in self.locations_data:
+            pois = []
+            for p in l.get('points_of_interest', []):
+                pois.append(PointOfInterest(
+                    name=p['name'],
+                    description=p['description'],
+                    type=p['type'],
+                    image_prompt=p.get('image_prompt', "")
+                ))
+
+            result.append(Location(
                 name=l['name'],
                 description=l['description'],
                 type=l['type'],
@@ -206,9 +226,10 @@ class DataLoader:
                 danger_rank=l.get('danger_rank', "Iron"),
                 connected_locations=l.get('connected_locations', []),
                 resources=l.get('resources', []),
-                npcs=l.get('npcs', [])
-            ) for l in self.locations_data
-        ]
+                npcs=l.get('npcs', []),
+                points_of_interest=pois
+            ))
+        return result
 
     def get_character_template(self, name: str) -> Optional[Character]:
         """Loads a pre-defined character. Note: Does not instantiate abilities fully yet."""
