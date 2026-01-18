@@ -214,6 +214,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | The Awakening | Main | You stir from a deep, dreamless slumber to find yourself in a realm unlike any you know. The air hums with unseen energy, and your memories are but a haze. | Fantasy illustration depicting the quest 'The Awakening'. You find yourself in a strange new world, with no memory of how you arrived. | Starter Essence |
 | The Duel | Side | Garret, a pompous adventurer from a noble house, has publicly challenged your honor. | Fantasy illustration depicting the quest 'The Duel'. A rival adventurer has challenged you. | Reputation |
 | The Frozen Silence | Side | Highland Watch, a remote outpost, has stopped sending reports. Fears of an unnatural freeze are growing. | Fantasy illustration depicting the quest 'The Frozen Silence'. Highland Watch has stopped sending reports. | Wind Essence, Stone of the Wall |
+| The Glass Sanctum Case | Side | Silver-Rank System Auditor Cassian Thorne needs assistance investigating the 'impossible' death of Commodore Elara in Orizon. | A detective standing in a glass room floating above a neon city, rain falling, mystery noir atmosphere. | Spirit Coins, Null-Silk Cloak |
 | The Lost Cat | Side | Mrs. Higgins, the local baker, is distraught. Her beloved cat, Mittens, has gone missing. | Fantasy illustration depicting the quest 'The Lost Cat'. Mrs. Higgins has lost her cat, Mittens. | Healing Potion |
 | The Monster Surge | Main | The fragile peace of the region is shattering as beasts grow bold and aggressive. Whispers speak of a dark influence driving them. | Fantasy illustration depicting the quest 'The Monster Surge'. Unusual monster activity is threatening the region. | Rare Awakening Stone |
 | The Shadow Threat | Side | The Silent Hand, a guild of assassins, has marked a target in the city. You've been invited to participate. | Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target. | Dark Essence |
@@ -246,7 +247,7 @@ Beneath the earth lies a world of sharp angles and refracted light. The Crystal 
 - **Region**: Central Plains
 - **Danger Rank**: Iron
 - **Resources**: Basic Supplies, Iron Essence
-- **Connected To**: The Whispering Woods, Crystal Caverns, Azure Coast, Ironhold, The Scorched Wastes
+- **Connected To**: The Whispering Woods, Crystal Caverns, Azure Coast, Ironhold, The Scorched Wastes, Orizon
 
 The heart of the Central Plains, Greenstone City is a marvel of both magic and engineering. Dominated by the Colossal Emerald Monolith at its center, the city bathes in a perpetual, gentle green hum that seems to suppress violent emotions within the city walls. Market stalls bustle with traders selling goods from across the continent, while the prestigious Academy of Arcane Arts trains the next generation of spellcasters under the Monolith's watchful gaze.
 
@@ -281,6 +282,16 @@ Carved directly into the granite face of the Northern Peaks, Ironhold is a testa
 Suspended above the murky waters of the Shadowfen on sturdy ironwood stilts, Mistfall Village is a sanctuary of lanterns and fog. The villagers, expert herbalists and fishermen, live in harmony with the swamp, harvesting its rare poisons for medicines. Ropes and walkways connect the huts, and the air smells of roasting fish and damp wood. It is a quiet, eerie place, but one of the few safe havens in the dangerous east.
 
 > **Visual Prompt**: Wooden houses on stilts, swamp water, lanterns, mist, evening light, cozy but mysterious, reflections
+
+### Orizon (City)
+- **Region**: The Edge
+- **Danger Rank**: Silver
+- **Resources**: Arcane Salt, Spirit Coins
+- **Connected To**: Greenstone City
+
+The city doesn't just sit on the coast; it hangs off the edge of the world. Built into the spiraling, calcified shell of a dead leviathan, Orizon is a vertical maze of white marble and corroded iron. Below churns the Luminous Deep, an ocean so rich in raw mana that the spray creates 'Arcane Salt'. The city breathes. A constant, low-frequency thrum vibrates through the cobblestones—the heartbeat of the city’s wards keeping the ocean’s toxicity at bay.
+
+> **Visual Prompt**: Vertical city built into a giant shell hanging off a cliff, white marble, iron, neon blue ocean below, detailed, fantasy, cinematic lighting
 
 ### The Ancient Spire (Dungeon)
 - **Region**: Southern Badlands
@@ -346,6 +357,10 @@ Physics dissolves at the edge of the Void Rift. It is a tear in the fabric of re
 
 ### Artifacts
 
+#### Null-Silk
+A rare fabric that dampens magical energy. Used by System Auditors and sensitive individuals to block out background mana radiation. It is expensive and difficult to weave, as magic cannot be used in its creation.
+> **Visual Prompt**: Grey, matte fabric, smooth texture, absorbing light.
+
 #### The Glass Shield
 A legendary shield said to be forged from a single piece of transparent diamond by the Titans. It is invisible until struck, at which point it flashes with blinding light. Its current location is unknown, though many claim to have seen it in the hands of a wandering mute knight.
 > **Visual Prompt**: A warrior holding an invisible shield, impact ripple of light visible, epic stance.
@@ -403,6 +418,20 @@ Colossal, peaceful beasts that drift through the upper atmosphere, feeding on cl
 #### Void Demon
 Abominations from beyond the rift. Their forms are constantly shifting, and their touch corrupts living matter.
 > **Visual Prompt**: A shifting mass of tentacles and eyes, purple and black void energy.
+
+### Character
+
+#### Cassian Thorne
+A Silver-Rank System Auditor. Cassian finds 'magic' exhausting. To him, a fireball is a thermal hazard requiring three forms of paperwork. He wears a coat lined with Null-Silk to dampen the city’s background mana noise because he suffers from 'Aura Migraines'. He investigates System Errors with the weary precision of a janitor for the laws of physics.
+> **Visual Prompt**: A tired detective in a grey coat, glasses, holding a clipboard, standing in a rainy neon city.
+
+#### Commodore Elara
+A Gold Ranker and the city's hope. She was the first person in a century predicted to reach Diamond Rank. Her face adorns recruitment posters across Orizon. Her recent death in the Glass Sanctum has shaken the city's faith in its own safety.
+> **Visual Prompt**: Propaganda poster of a heroic woman in gold armor, saluting, bright and hopeful.
+
+#### The Sentinel
+The city’s lone, immobile Diamond Ranker atop the Spire. The Sentinel is the linchpin of Orizon's defenses. Citizens believe the Sentinel watches over them, a sleepless guardian against the horrors of the Deep. The truth of the Sentinel's existence is known only to the Spire Authority.
+> **Visual Prompt**: A glowing figure sitting on a throne at the top of a tower, silent, powerful, overlooking the city.
 
 ### Culture
 
@@ -584,6 +613,10 @@ The capital of the Central Plains, named after the massive emerald monolith at i
 Carved directly into the granite of the Northern Peaks, Ironhold is considered impregnable. It houses the legendary Anvil of Crom, where the first magical weapons were forged.
 > **Visual Prompt**: Massive fortress carved into a mountain, snowy peaks, fortified walls, dwarf-inspired architecture.
 
+#### Orizon, City of Salt and Static
+The city doesn't just sit on the coast; it hangs off the edge of the world. Built into the spiraling, calcified shell of a dead leviathan, Orizon is a vertical maze of white marble and corroded iron. It breathes with a constant, low-frequency thrum—the heartbeat of the city’s wards keeping the ocean’s toxicity at bay. The people worship Stability, paying taxes in Spirit Coins and praying the Sentinel doesn't blink.
+> **Visual Prompt**: Vertical city built into a giant shell hanging off a cliff, white marble, iron, neon blue ocean below.
+
 #### The Ancient Spire
 A tower that defies gravity, floating segments held together by Arcane chains. It is said to contain the library of the First Archmage.
 > **Visual Prompt**: A broken tower with floating sections, magical blue chains, sky background, high fantasy.
@@ -591,6 +624,14 @@ A tower that defies gravity, floating segments held together by Arcane chains. I
 #### The Frozen Wastes
 To the far north lies a land of eternal ice and snow, where Crystal Golems roam. It is said to be the source of the purest Ice Essence.
 > **Visual Prompt**: An ancient illustration or text related to The Frozen Wastes (Location). Parchment style or historical scene.
+
+#### The Glass Sanctum
+A spherical meditation chamber suspended by gravity magic, three hundred feet above Orizon's plaza. It is a 'Null-State' environment designed for high-level cultivation. The floor is made of perfect Titan-glass, and the room is soundproofed against the city's eternal thrum.
+> **Visual Prompt**: A floating glass sphere in the sky, minimalist interior, meditation mat, view of the city below.
+
+#### The Luminous Deep
+Below Orizon churns an ocean so rich in raw mana that the spray creates 'Arcane Salt'. The toxicity is lethal to the unwarded. It is the source of the city's power and its greatest threat. The deep glow of the water illuminates the underbelly of the city day and night.
+> **Visual Prompt**: Glowing neon blue ocean, turbulent waves, magical energy mist.
 
 #### The Scorched Wastes
 A desert of black sand and cracked earth. Legend says a battle between two Ascended mages incinerated the land centuries ago, leaving behind pockets of volatile Fire Essence.
@@ -617,6 +658,14 @@ Travelers claim the trees here speak with the voices of the lost. The woods are 
 #### Air Essence
 Freedom and movement. Air magic grants speed and flight, allowing mages to strike from above or dodge attacks with supernatural reflexes.
 > **Visual Prompt**: A swirling vortex of white and grey wind, ethereal and transparent.
+
+#### Arcane Salt
+Crystals that form on skin and surfaces exposed to the spray of the Luminous Deep. They are highly conductive to mana and can cause mana burns if not washed off. Local dockworkers scrape them off hulls to sell as reagents.
+> **Visual Prompt**: Crystals growing on a rusty metal surface, glowing faintly blue.
+
+#### Ascension (Orizon)
+In Orizon, Ascension is not just personal growth; it is a conscription. The city requires high-ranking souls to power its wards. The Spire Authority manages the 'uploading' of these souls, a process euphemistically called 'Ascension'.
+> **Visual Prompt**: Abstract art of a soul leaving a body and entering a machine or crystal.
 
 #### Awakening Stones
 Crystallized mana used to unlock specific abilities. They are often found in the remains of powerful monsters.
