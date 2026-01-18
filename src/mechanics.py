@@ -68,13 +68,14 @@ class DataLoader:
                 id=l['id'],
                 title=l['title'],
                 category=l['category'],
-                text=l['text']
+                text=l['text'],
+                image_prompt=l.get('image_prompt', "")
             )
         return None
 
     def get_all_lore(self) -> List[LoreEntry]:
         return [
-            LoreEntry(id=l['id'], title=l['title'], category=l['category'], text=l['text'])
+            LoreEntry(id=l['id'], title=l['title'], category=l['category'], text=l['text'], image_prompt=l.get('image_prompt', ""))
             for l in self.lore_data
         ]
 
@@ -113,7 +114,8 @@ class DataLoader:
                 stages=stages,
                 starting_stage_id=q['starting_stage_id'],
                 rewards=q.get('rewards', []),
-                type=q.get('type', 'Side')
+                type=q.get('type', 'Side'),
+                image_prompt=q.get('image_prompt', "")
             )
         return None
 
@@ -132,6 +134,7 @@ class DataLoader:
                 rarity=e['rarity'],
                 tags=e['tags'],
                 description=e['description'],
+                image_prompt=e.get('image_prompt', ""),
                 opposite=e.get('opposite'),
                 synergy=e.get('synergy', [])
             )
@@ -144,6 +147,7 @@ class DataLoader:
                 name=s['name'],
                 function=s['function'],
                 description=s['description'],
+                image_prompt=s.get('image_prompt', ""),
                 rarity=s.get('rarity', "Common"),
                 cooldown=s.get('cooldown', "Medium"),
                 cost_type=s.get('cost_type', "Mana")
@@ -157,6 +161,7 @@ class DataLoader:
                 name=f['name'],
                 description=f['description'],
                 type=f['type'],
+                image_prompt=f.get('image_prompt', ""),
                 rank_requirement=f.get('rank_requirement')
             )
         return None
@@ -167,6 +172,7 @@ class DataLoader:
                 name=f['name'],
                 description=f['description'],
                 type=f['type'],
+                image_prompt=f.get('image_prompt', ""),
                 rank_requirement=f.get('rank_requirement')
             ) for f in self.factions_data
         ]
@@ -214,6 +220,7 @@ class DataLoader:
                 faction=c.get('faction'),
                 affinity=c.get('affinity', 'General'),
                 description=c.get('description', ""),
+                image_prompt=c.get('image_prompt', ""),
                 dialogue=c.get('dialogue', {})
             )
 
@@ -287,6 +294,8 @@ class DataLoader:
             char = Character(
                 name=m['name'],
                 race=m['race'],
+                description=m.get('description', ""),
+                image_prompt=m.get('image_prompt', ""),
                 xp_reward=m.get('xp_reward', 0),
                 loot_table=m.get('loot_table', [])
             )
@@ -324,6 +333,7 @@ class ConfluenceManager:
                     rarity="Rare",
                     tags=["Confluence", recipe['archetype']],
                     description=f"A confluence of {', '.join(essence_names)}.",
+                    image_prompt=f"Abstract representation of {recipe['result']}, combining elements of {', '.join(essence_names)}.",
                     opposite=None,
                     synergy=[]
                 )
@@ -342,6 +352,7 @@ class ConfluenceManager:
                     rarity="Epic",
                     tags=[tag, "Pure"],
                     description=f"A pure manifestation of the {tag} aspect.",
+                    image_prompt=f"A pure, intense manifestation of {tag}, radiating power.",
                     opposite=None,
                     synergy=[]
                 )
@@ -370,6 +381,7 @@ class ConfluenceManager:
                 rarity="Common",
                 tags=["Hybrid", dominant_stat],
                 description=f"A generic confluence based on {dominant_stat}.",
+                image_prompt=f"A swirling mix of energies dominated by {dominant_stat}.",
                 opposite=None,
                 synergy=[]
             )
@@ -381,6 +393,7 @@ class ConfluenceManager:
             rarity="Common",
             tags=["Hybrid"],
             description=f"A hybrid confluence dominated by {primary}.",
+            image_prompt=f"A chaotic blend of essences, with {primary} being the most visible.",
             opposite=None,
             synergy=[]
         )

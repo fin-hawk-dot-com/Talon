@@ -5,7 +5,8 @@
     "description": "Imbues physical strike with Essence element.",
     "rarity": "Common",
     "cooldown": "Low",
-    "cost_type": "Stamina"
+    "cost_type": "Stamina",
+    "image_prompt": "A Common Awakening Stone named Stone of the Strike, inscribed with runes of Melee Attack. Imbues physical strike with Essence element. Glowing magical artifact."
   },
   {
     "name": "Stone of the Blast",
@@ -13,7 +14,8 @@
     "description": "Projects a bolt/beam of Essence.",
     "rarity": "Common",
     "cooldown": "Low",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Common Awakening Stone named Stone of the Blast, inscribed with runes of Ranged Attack. Projects a bolt/beam of Essence. Glowing magical artifact."
   },
   {
     "name": "Stone of the Shield",
@@ -21,7 +23,8 @@
     "description": "Creates a barrier or armor buff.",
     "rarity": "Common",
     "cooldown": "Medium",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Common Awakening Stone named Stone of the Shield, inscribed with runes of Defense. Creates a barrier or armor buff. Glowing magical artifact."
   },
   {
     "name": "Stone of the Trap",
@@ -29,7 +32,8 @@
     "description": "Places a hidden rune/trigger.",
     "rarity": "Uncommon",
     "cooldown": "Medium",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Trap, inscribed with runes of Area Denial. Places a hidden rune/trigger. Glowing magical artifact."
   },
   {
     "name": "Stone of the Familiar",
@@ -37,7 +41,8 @@
     "description": "Spawns an AI minion based on Essence.",
     "rarity": "Rare",
     "cooldown": "High",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Familiar, inscribed with runes of Summoning. Spawns an AI minion based on Essence. Glowing magical artifact."
   },
   {
     "name": "Stone of the Swarm",
@@ -45,7 +50,8 @@
     "description": "Splits effect into multiple small projectiles.",
     "rarity": "Uncommon",
     "cooldown": "Medium",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Swarm, inscribed with runes of Multi-Hit. Splits effect into multiple small projectiles. Glowing magical artifact."
   },
   {
     "name": "Stone of the Feast",
@@ -53,7 +59,8 @@
     "description": "Drains enemy resource to refill user.",
     "rarity": "Rare",
     "cooldown": "High",
-    "cost_type": "Health"
+    "cost_type": "Health",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Feast, inscribed with runes of Drain/Sustain. Drains enemy resource to refill user. Glowing magical artifact."
   },
   {
     "name": "Stone of the Flesh",
@@ -61,7 +68,8 @@
     "description": "Alters user physiology (Passive/Active).",
     "rarity": "Epic",
     "cooldown": "None",
-    "cost_type": "None"
+    "cost_type": "None",
+    "image_prompt": "A Epic Awakening Stone named Stone of the Flesh, inscribed with runes of Body Mod. Alters user physiology (Passive/Active). Glowing magical artifact."
   },
   {
     "name": "Stone of the Stars",
@@ -69,7 +77,8 @@
     "description": "Adds light/cosmic properties or massive buff.",
     "rarity": "Epic",
     "cooldown": "High",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Epic Awakening Stone named Stone of the Stars, inscribed with runes of Celestial/Augment. Adds light/cosmic properties or massive buff. Glowing magical artifact."
   },
   {
     "name": "Stone of the Foot",
@@ -77,7 +86,8 @@
     "description": "Enhances movement or adds teleportation.",
     "rarity": "Common",
     "cooldown": "Low",
-    "cost_type": "Stamina"
+    "cost_type": "Stamina",
+    "image_prompt": "A Common Awakening Stone named Stone of the Foot, inscribed with runes of Mobility. Enhances movement or adds teleportation. Glowing magical artifact."
   },
   {
     "name": "Stone of the Echo",
@@ -85,7 +95,8 @@
     "description": "Repeats previous action or creates decoy.",
     "rarity": "Rare",
     "cooldown": "Medium",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Echo, inscribed with runes of Replication. Repeats previous action or creates decoy. Glowing magical artifact."
   },
   {
     "name": "Stone of the Wall",
@@ -93,7 +104,8 @@
     "description": "Creates physical obstacles.",
     "rarity": "Uncommon",
     "cooldown": "Medium",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Wall, inscribed with runes of Terrain Control. Creates physical obstacles. Glowing magical artifact."
   },
   {
     "name": "Stone of Focus",
@@ -101,7 +113,8 @@
     "description": "Enhances sensory data.",
     "rarity": "Common",
     "cooldown": "None",
-    "cost_type": "Stamina"
+    "cost_type": "Stamina",
+    "image_prompt": "A Common Awakening Stone named Stone of Focus, inscribed with runes of Perception. Enhances sensory data. Glowing magical artifact."
   },
   {
     "name": "Stone of Judgment",
@@ -109,6 +122,7 @@
     "description": "Deals high dmg to low HP/Debuffed targets.",
     "rarity": "Rare",
     "cooldown": "High",
-    "cost_type": "Mana"
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of Judgment, inscribed with runes of Execute. Deals high dmg to low HP/Debuffed targets. Glowing magical artifact."
   }
 ]
