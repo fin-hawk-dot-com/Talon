@@ -3,8 +3,8 @@ import os
 import sys
 import random
 from dataclasses import asdict
-from typing import List, Optional, Union, Dict, Tuple
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry, PointOfInterest, StatusEffect
+from typing import List, Optional, Union, Dict, Tuple, Any
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry, PointOfInterest, StatusEffect, DialogueNode, DialogueChoice
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 from src.narrative import NarrativeGenerator
 import dataclasses
@@ -36,6 +36,7 @@ class DataLoader:
             DataLoader._cache['locations'] = load_json('locations.json')
             DataLoader._cache['monsters'] = load_json('monsters.json')
             DataLoader._cache['lore'] = load_json('lore.json')
+            DataLoader._cache['dialogues'] = load_json('dialogues.json')
 
         self.essences_data = DataLoader._cache['essences']
         self.confluences_data = DataLoader._cache['confluences']
@@ -46,6 +47,7 @@ class DataLoader:
         self.locations_data = DataLoader._cache['locations']
         self.monsters_data = DataLoader._cache['monsters']
         self.lore_data = DataLoader._cache['lore']
+        self.dialogues_data = DataLoader._cache['dialogues']
 
         # Optimization: Pre-compute dictionary for O(1) lookup
         self.stones_map = {s['name'].lower(): s for s in self.stones_data}
@@ -338,6 +340,9 @@ class DataLoader:
 
     def get_all_monsters(self) -> List[str]:
         return [m['name'] for m in self.monsters_data]
+
+    def get_dialogue_tree(self, npc_name: str) -> Dict[str, Any]:
+        return self.dialogues_data.get(npc_name)
 
 class ConfluenceManager:
     def __init__(self, data_loader: DataLoader):
@@ -1104,7 +1109,16 @@ class InteractionManager:
 
         rel = player.relationships.get(npc_name, 0)
 
-        # Determine dialogue key
+        # Legacy behavior for simple interact call, or fallback
+        # Ideally we want the caller to use get_dialogue_node for full tree
+        # But this function returns a string.
+        # We can fetch the 'root' node text if available.
+
+        tree = self.data_loader.get_dialogue_tree(npc_name)
+        if tree and 'root' in tree:
+            return f"{npc.name}: \"{tree['root']['text']}\" (Use interaction menu for options)"
+
+        # Fallback to old system
         key = "default"
         if rel >= 50:
             key = "friendly"
@@ -1118,6 +1132,25 @@ class InteractionManager:
              self.modify_relationship(player, npc_name, 1)
 
         return f"{npc.name}: \"{dialogue}\""
+
+    def get_dialogue_node(self, npc_name: str, node_id: str) -> Optional[DialogueNode]:
+        tree = self.data_loader.get_dialogue_tree(npc_name)
+
+        if not tree:
+             # Legacy fallback: Create a dummy node from character.dialogue
+             npc = self.get_npc(npc_name)
+             if npc and npc.dialogue:
+                 if node_id == "root":
+                     text = npc.dialogue.get("default", "...")
+                     return DialogueNode(text, [DialogueChoice("Leave", "exit")])
+             return None
+
+        node_data = tree.get(node_id)
+        if not node_data:
+            return None
+
+        choices = [DialogueChoice(**c) for c in node_data['choices']]
+        return DialogueNode(text=node_data['text'], choices=choices)
 
     def modify_relationship(self, player: Character, npc_name: str, amount: int):
         current = player.relationships.get(npc_name, 0)

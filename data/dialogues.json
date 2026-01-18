@@ -1,0 +1,251 @@
+{
+  "Rufus": {
+    "root": {
+      "text": "Hmph. You look fresh. The Adventure Society doesn't baby newcomers. Keep your weapon sharp and your wits sharper. What do you want?",
+      "choices": [
+        {
+          "text": "Who are you?",
+          "next_id": "about_rufus"
+        },
+        {
+          "text": "Tell me about the Adventure Society.",
+          "next_id": "about_faction"
+        },
+        {
+          "text": "Any advice for a rookie?",
+          "next_id": "advice"
+        },
+        {
+          "text": "Just passing through.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "about_rufus": {
+      "text": "Name's Rufus. I've been clearing dungeons and hunting beasts since before you were born. Got this scar from a Shadow Stalker in the Deep Caverns. Nasty piece of work, but I mounted its head on the guild wall.",
+      "choices": [
+        {
+          "text": "Impressive.",
+          "next_id": "root"
+        },
+        {
+          "text": "Shadow Stalker?",
+          "next_id": "about_stalker"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "about_stalker": {
+      "text": "A nasty predator that blends into the darkness. If you ever see the shadows move when there's no light source... run. Or pray you have a Light Essence handy.",
+      "choices": [
+        {
+          "text": "I'll keep that in mind.",
+          "next_id": "about_rufus"
+        }
+      ]
+    },
+    "about_faction": {
+      "text": "We're the backbone of civilization. We handle the threats the city guards can't. Monsters, rogue awakener, confluences gone wrong. It's dangerous work, but the pay is good and the glory is better.",
+      "choices": [
+        {
+          "text": "How do I join?",
+          "next_id": "join_info"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "join_info": {
+      "text": "Prove your worth. Bring us trophies, complete contracts. Don't die. Simple as that.",
+      "choices": [
+        {
+          "text": "Understood.",
+          "next_id": "about_faction"
+        }
+      ]
+    },
+    "advice": {
+      "text": "Don't rely on just one Attribute. A warrior with no Spirit falls to the first mind trick. A mage with no Recovery dies from a stiff breeze. Balance, kid. And always carry potions.",
+      "choices": [
+        {
+          "text": "Thanks for the tip.",
+          "next_id": "root"
+        }
+      ]
+    }
+  },
+  "Thadwick": {
+    "root": {
+      "text": "Hmm? Oh, pardon me! I was just calculating the etheric resonance of this location. It's quite fascinating, isn't it? The way the ley lines intersect here...",
+      "choices": [
+        {
+          "text": "What are you working on?",
+          "next_id": "research"
+        },
+        {
+          "text": "Etheric resonance?",
+          "next_id": "lore_magic"
+        },
+        {
+          "text": "Can you teach me about Magic?",
+          "next_id": "training_info"
+        },
+        {
+          "text": "I'll leave you to it.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "research": {
+      "text": "I'm attempting to map the fluctuations in the ambient mana field. I believe that recent monster aggressions are linked to a subtle shift in the planetary alignment relative to the Void Plane.",
+      "choices": [
+        {
+          "text": "That sounds... complicated.",
+          "next_id": "simple_research"
+        },
+        {
+          "text": "Have you found anything concrete?",
+          "next_id": "research_findings"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "simple_research": {
+      "text": "In layman's terms: Bad stars make monsters angry. I'm trying to predict where they'll get angry next.",
+      "choices": [
+        {
+          "text": "Ah, I see.",
+          "next_id": "research"
+        }
+      ]
+    },
+    "research_findings": {
+      "text": "Preliminary data suggests a localized spike in the Northern Wastes. I wouldn't go there without significant protection against Cold and Void damage.",
+      "choices": [
+        {
+          "text": "Noted.",
+          "next_id": "research"
+        }
+      ]
+    },
+    "lore_magic": {
+      "text": "Everything is vibration. Essence is just the frequency at which reality vibrates. By attuning our souls\u2014our Spirit attribute\u2014we can manipulate those frequencies. Fire, Ice, Time... all just notes in the cosmic symphony.",
+      "choices": [
+        {
+          "text": "Poetic.",
+          "next_id": "root"
+        },
+        {
+          "text": "How do I increase my Spirit?",
+          "next_id": "training_info"
+        }
+      ]
+    },
+    "training_info": {
+      "text": "Meditation is key. Also, exposure to raw mana sources, though that can be dangerous. Awakening Stones help focus the mind, but true power comes from understanding the Essence you bond with.",
+      "choices": [
+        {
+          "text": "Thank you.",
+          "next_id": "root"
+        }
+      ]
+    }
+  },
+  "Elara": {
+    "root": {
+      "text": "Halt. State your business with the Order of the Shield. We are currently on high alert.",
+      "choices": [
+        {
+          "text": "I'm an adventurer looking to help.",
+          "next_id": "adventurer_path"
+        },
+        {
+          "text": "I seek protection.",
+          "next_id": "protection_path"
+        },
+        {
+          "text": "Just admiring the armor.",
+          "next_id": "flavor"
+        },
+        {
+          "text": "Nothing, just passing by.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "adventurer_path": {
+      "text": "Adventurers... wild cards. But useful. If you wish to aid the Order, keep the roads safe. We are stretched thin protecting the outer settlements.",
+      "choices": [
+        {
+          "text": "I can handle myself.",
+          "next_id": "confidence"
+        },
+        {
+          "text": "What threats are out there?",
+          "next_id": "threats"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "confidence": {
+      "text": "Confidence is good. Arrogance is fatal. Remember that.",
+      "choices": [
+        {
+          "text": "I will.",
+          "next_id": "adventurer_path"
+        }
+      ]
+    },
+    "threats": {
+      "text": "Bandits, mostly. But we've had reports of a corrupted beast near the old ruins. If you see it, do not engage alone.",
+      "choices": [
+        {
+          "text": "I'll be careful.",
+          "next_id": "adventurer_path"
+        }
+      ]
+    },
+    "protection_path": {
+      "text": "The Order protects all citizens. If you are in danger, stay within the city walls. The guards are posted at every gate.",
+      "choices": [
+        {
+          "text": "Thank you.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "flavor": {
+      "text": "It is standard issue Plate of the Sanctum. Forged with Iron and Light essence. It is not for show.",
+      "choices": [
+        {
+          "text": "It looks heavy.",
+          "next_id": "heavy"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "heavy": {
+      "text": "The weight is a reminder of our burden. We bear it so others do not have to.",
+      "choices": [
+        {
+          "text": "A noble sentiment.",
+          "next_id": "root"
+        }
+      ]
+    }
+  }
+}

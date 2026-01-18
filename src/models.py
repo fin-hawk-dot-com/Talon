@@ -63,6 +63,17 @@ class StatusEffect:
     description: str
 
 @dataclass
+class DialogueChoice:
+    text: str
+    next_id: str
+    consequence: Optional[str] = None
+
+@dataclass
+class DialogueNode:
+    text: str
+    choices: List[DialogueChoice]
+
+@dataclass
 class QuestChoice:
     text: str
     next_stage_id: str
