@@ -14,6 +14,10 @@ def load_json(filename):
         return json.load(f)
 
 class DataLoader:
+    """
+    Loads game data from JSON files.
+    Used by generate_library.py to populate the library with Essences, Stones, Monsters, Quests, etc.
+    """
     _cache = {}
 
     def __init__(self):
