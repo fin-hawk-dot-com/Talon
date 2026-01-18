@@ -7,7 +7,10 @@ from src.models import Essence, AwakeningStone, Ability, Character, Faction, Att
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 import dataclasses
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+if hasattr(sys, '_MEIPASS'):
+    DATA_DIR = os.path.join(sys._MEIPASS, 'data')
+else:
+    DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
 def load_json(filename):
     with open(os.path.join(DATA_DIR, filename), 'r') as f:
@@ -569,7 +572,9 @@ class QuestManager:
                  # Logic to actually give items would go here.
                  # For now, we assume simple text feedback or maybe hook into LootManager if we want to be fancy.
                  # Let's try to give rewards if possible.
-                 self._grant_rewards(character, quest.rewards)
+                 reward_msgs = self._grant_rewards(character, quest.rewards)
+                 if reward_msgs:
+                     result_text += "\n" + "\n".join(reward_msgs)
 
         else:
             progress.current_stage_id = choice.next_stage_id
@@ -617,13 +622,15 @@ class QuestManager:
                          pass
         return notifications
 
-    def _grant_rewards(self, character: Character, rewards: List[str]):
+    def _grant_rewards(self, character: Character, rewards: List[str]) -> List[str]:
         # Supported formats:
         # "Essence: <Name>"
         # "Stone: <Name>"
         # "XP: <Amount>"
         # "Random Essence"
         # "Random Stone"
+
+        msgs = []
 
         for reward in rewards:
             if reward.startswith("Lore:"):
@@ -632,30 +639,30 @@ class QuestManager:
                 if lore_entry:
                     if lore_entry.id not in character.lore:
                         character.lore.append(lore_entry.id)
-                        print(f"Lore Discovered: {lore_entry.title}")
+                        msgs.append(f"Lore Discovered: {lore_entry.title}")
                     else:
-                        print(f"Lore already known: {lore_entry.title}")
+                        msgs.append(f"Lore already known: {lore_entry.title}")
                 else:
-                    print(f"Unknown Lore reward: {lore_title}")
+                    msgs.append(f"Unknown Lore reward: {lore_title}")
 
             elif reward.startswith("Essence:"):
                 name = reward.split(":", 1)[1].strip()
                 item = self.data_loader.get_essence(name)
                 if item:
                     character.inventory.append(item)
-                    print(f"Received Reward: {item.name}")
+                    msgs.append(f"Received Reward: {item.name}")
 
             elif reward.startswith("Stone:"):
                 name = reward.split(":", 1)[1].strip()
                 item = self.data_loader.get_stone(name)
                 if item:
                     character.inventory.append(item)
-                    print(f"Received Reward: {item.name}")
+                    msgs.append(f"Received Reward: {item.name}")
 
             elif reward.startswith("XP:"):
                 try:
                     amount = int(reward.split(":", 1)[1].strip())
-                    print(f"Received {amount} XP (Not implemented on Character yet)")
+                    msgs.append(f"Received {amount} XP (Not implemented on Character yet)")
                 except ValueError:
                     pass
 
@@ -669,20 +676,22 @@ class QuestManager:
 
                 if item:
                     character.inventory.append(item)
-                    print(f"Received Reward: {item.name}")
+                    msgs.append(f"Received Reward: {item.name}")
                 else:
                     # Give random essence? Or just log
-                    print(f"Reward text: {reward} (Item not found)")
+                    msgs.append(f"Reward text: {reward} (Item not found)")
 
             elif "Stone" in reward:
                 item = self.data_loader.get_stone(reward)
                 if item:
                     character.inventory.append(item)
-                    print(f"Received Reward: {item.name}")
+                    msgs.append(f"Received Reward: {item.name}")
                 else:
-                    print(f"Reward text: {reward} (Item not found)")
+                    msgs.append(f"Reward text: {reward} (Item not found)")
             else:
-                 print(f"Reward: {reward}")
+                 msgs.append(f"Reward: {reward}")
+
+        return msgs
 
 class TrainingManager:
     @staticmethod
