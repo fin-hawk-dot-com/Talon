@@ -9,6 +9,30 @@ from src.models import Character, Essence, RANKS
 from src.mechanics import DataLoader, ConfluenceManager
 from src.ability_templates import ABILITY_TEMPLATES
 
+def get_lore_sort_key(entry):
+    cat = entry['category']
+    title = entry['title']
+
+    # Special sorting for Chronicles to handle Roman numerals
+    if title.startswith("Chronicle "):
+        try:
+            # Extract Roman numeral (e.g., "Chronicle VII: ...")
+            parts = title.split(' ')
+            if len(parts) > 1:
+                roman = parts[1].rstrip(':')
+                roman_map = {
+                    'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5,
+                    'VI': 6, 'VII': 7, 'VIII': 8, 'IX': 9, 'X': 10
+                }
+                if roman in roman_map:
+                    # Sort Chronicles first (0) by number
+                    return (cat, 0, roman_map[roman])
+        except Exception:
+            pass
+
+    # Default sort
+    return (cat, 1, title)
+
 def generate_library_md(filepath="LIBRARY.md"):
     loader = DataLoader()
     confluence_mgr = ConfluenceManager(loader)
@@ -141,13 +165,20 @@ def generate_library_md(filepath="LIBRARY.md"):
 
     # --- Lore ---
     lines.append("\n## Lore")
-    lines.append("| Title | Category | Text | Visual Prompt |")
-    lines.append("|---|---|---|---|")
 
-    lore = sorted(loader.lore_data, key=lambda x: x['title'])
-    for l in lore:
+    lore_entries = sorted(loader.lore_data, key=get_lore_sort_key)
+
+    current_category = None
+    for l in lore_entries:
+        if l['category'] != current_category:
+            current_category = l['category']
+            lines.append(f"\n### {current_category}")
+
         prompt = l.get('image_prompt', '')
-        lines.append(f"| {l['title']} | {l['category']} | {l['text']} | {prompt} |")
+        lines.append(f"\n#### {l['title']}")
+        lines.append(f"{l['text']}")
+        if prompt:
+            lines.append(f"> **Visual Prompt**: {prompt}")
 
     # --- Characters ---
     lines.append("\n## Characters")
