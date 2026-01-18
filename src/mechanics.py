@@ -421,6 +421,29 @@ class AbilityGenerator:
         elif stone.cooldown == "Long": base_cooldown = 5
         elif stone.cooldown == "Very Long": base_cooldown = 8
 
+            weights.append(w)
+
+        # Select one
+        selected_template = random.choices(valid_templates, weights=weights, k=1)[0]
+
+        # Manifest the Ability
+        name = selected_template.name_pattern.format(essence=essence.name, function=stone.function)
+        description = selected_template.description_pattern.format(essence=essence.name, function=stone.function)
+
+        return Ability(
+            name=name,
+            description=description,
+            rank=rank,
+            level=0,
+            parent_essence=essence,
+            parent_stone=stone,
+            tags=selected_template.tags,
+            affinity=selected_template.affinity
+        )
+
+    def _generate_fallback(self, essence: Essence, stone: AwakeningStone, rank: str) -> Ability:
+        name = f"{essence.name} {stone.function}"
+        description = f"Uses {essence.name} to perform {stone.function}."
         return Ability(
             name=name,
             description=description,

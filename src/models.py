@@ -4,6 +4,8 @@ from typing import List, Dict, Optional, Union
 RANKS = ["Normal", "Iron", "Bronze", "Silver", "Gold", "Diamond"]
 RANK_INDICES = {rank: i for i, rank in enumerate(RANKS)}
 
+RANKS = ["Iron", "Bronze", "Silver", "Gold", "Diamond"]
+
 @dataclass
 class Essence:
     name: str
@@ -190,6 +192,15 @@ class Character:
     @property
     def max_stamina(self) -> float:
         return self.attributes["Recovery"].value * 10.0
+
+    @property
+    def rank(self) -> str:
+        # Character rank is the lowest rank of their attributes
+        min_val = min(attr.value for attr in self.attributes.values())
+        idx = int(min_val / 100)
+        if idx >= len(RANKS):
+            return RANKS[-1]
+        return RANKS[idx]
 
     @property
     def rank(self) -> str:
