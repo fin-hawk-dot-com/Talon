@@ -43,6 +43,7 @@ class Location:
     connected_locations: List[str] = field(default_factory=list)
     resources: List[str] = field(default_factory=list)
     npcs: List[str] = field(default_factory=list)
+    narrative: str = ""
     points_of_interest: List[PointOfInterest] = field(default_factory=list)
 
 @dataclass

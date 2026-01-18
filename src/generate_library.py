@@ -128,12 +128,16 @@ def generate_library_md(filepath="LIBRARY.md"):
 
     # --- Locations ---
     lines.append("\n## Locations")
-    lines.append("| Name | Type | Description | Positive Prompt | Negative Prompt |")
-    lines.append("|---|---|---|---|---|")
 
     locations = sorted(loader.locations_data, key=lambda x: x['name'])
     for l in locations:
-        lines.append(f"| {l['name']} | {l['type']} | {l['description']} | {l['image_prompt_positive']} | {l['image_prompt_negative']} |")
+        lines.append(f"\n### {l['name']} ({l['type']})")
+        lines.append(f"- **Region**: {l.get('region', 'Unknown')}")
+        lines.append(f"- **Danger Rank**: {l.get('danger_rank', 'Iron')}")
+        lines.append(f"- **Resources**: {', '.join(l.get('resources', []))}")
+        lines.append(f"- **Connected To**: {', '.join(l.get('connected_locations', []))}")
+        lines.append(f"\n{l.get('narrative', l['description'])}")
+        lines.append(f"\n> **Visual Prompt**: {l.get('image_prompt_positive', '')}")
 
     # --- Lore ---
     lines.append("\n## Lore")

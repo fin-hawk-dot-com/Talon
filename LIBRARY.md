@@ -218,20 +218,126 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | The Void's Call | Main | The fabric of reality is thinning in the Scorched Wastes. |  | Void Essence, Stone of the Echo |
 
 ## Locations
-| Name | Type | Description | Positive Prompt | Negative Prompt |
-|---|---|---|---|---|
-| Azure Coast | Wilderness | A beautiful coastline with sparkling blue waters and white sand, seemingly peaceful but hiding deep sea threats. | Tropical beach, blue ocean, white sand, palm trees, bright sun, seagulls, crystal clear water | dark, snow, city, forest, night |
-| Crystal Caverns | Dungeon | Deep underground caves filled with sharp, resonant crystals. | Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k | sky, sun, grass, trees, flat, boring, noise |
-| Greenstone City | City | A bustling city built around a massive, glowing green stone structure. | Fantasy city, large green glowing crystal monolith in center, medieval architecture, busy market streets, magical atmosphere, bright sunlight, detailed textures, 4k | dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts |
-| Highland Watch | Outpost | A small outpost perched on a cliff edge, monitoring the northern passes for threats. | Stone tower on cliff edge, snowy mountains background, wind flags, solitary guard, vast view, cold blue sky | forest, warm, city, crowd, underground |
-| Ironhold | City | A massive fortress city carved into the side of a mountain, headquarters of the Order of the Shield. | Massive stone fortress carved into mountain, snow-capped peaks, iron gates, banners, defensive walls, soldier patrols, cold atmosphere, epic scale, 8k | forest, beach, warm, sunny, wooden buildings, ruins |
-| Mistfall Village | Village | A secluded village of fishermen and herbalists living on stilts above the swamp waters. | Wooden houses on stilts, swamp water, lanterns, mist, evening light, cozy but mysterious, reflections | city, stone buildings, desert, mountains |
-| The Ancient Spire | Dungeon | A monolithic tower rising from the center of the Scorched Wastes, pulsing with unstable energy. | Tall black tower, glowing red runes, desert background, magical lightning, menacing, epic scale, low angle shot | nature, water, happy, bright colors, small |
-| The Scorched Wastes | Wilderness | A desolate desert landscape scarred by ancient magical fires that never truly went out. | Desert landscape, cracked earth, magical fire fissures, red and orange lighting, smoke, ruins of obsidian, heat haze, dangerous atmosphere | water, snow, green, trees, life, happy |
-| The Shadowfen | Wilderness | A treacherous swamp shrouded in perpetual twilight, home to poisonous flora and dark secrets. | Swamp, twisted trees, fog, dark water, purple and black tones, eerie, spooky, mysterious lights, moss, detailed textures | desert, bright sun, clean, dry, city, cheerful |
-| The Sunken Ruins | Dungeon | An ancient city partially submerged in a vast underground lake, glowing with eerie phosphorescence. | Underwater ruins, ancient stone architecture, bioluminescent algae, water reflections, submerged statues, mystical blue light, aquatic atmosphere, detailed | fire, desert, dry, sky, bright sun, modern |
-| The Whispering Woods | Wilderness | A dense forest where the trees seem to murmur secrets to those who listen. | Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed | city, buildings, desert, bright day, plain, simple, cartoon |
-| Void Rift | Dimension | A tear in reality where the laws of physics break down. Only the strongest dare enter. | Abstract landscape, floating rocks, purple and black swirling portal, stars, cosmic horror, surreal, dreamlike | normal world, ground, sky, buildings, trees |
+
+### Azure Coast (Wilderness)
+- **Region**: Western Coast
+- **Danger Rank**: Iron
+- **Resources**: Water Essence, Pearls
+- **Connected To**: Greenstone City
+
+At first glance, the Azure Coast is paradise. White sands meet crystal-clear blue waters under a radiant sun. Palm trees sway in the gentle breeze, and the ocean teems with colorful life. However, veterans know that the beauty is a lure. The tides are controlled by temperamental water spirits, and the deep trenches just offshore harbor leviathans that view the beachgoers not as tourists, but as a buffet.
+
+> **Visual Prompt**: Tropical beach, blue ocean, white sand, palm trees, bright sun, seagulls, crystal clear water
+
+### Crystal Caverns (Dungeon)
+- **Region**: Central Plains
+- **Danger Rank**: Silver
+- **Resources**: Crystal Essence, Rare Gems
+- **Connected To**: Greenstone City, The Sunken Ruins
+
+Beneath the earth lies a world of sharp angles and refracted light. The Crystal Caverns are a labyrinth of jagged tunnels where massive gemstone formations grow like organic life. The air is cool and vibrates with a resonant frequency that can shatter glass. Adventurers flock here for the valuable essence-infused crystals, but many fall prey to the crystalline entities that detach from the walls to defend their glittering home.
+
+> **Visual Prompt**: Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k
+
+### Greenstone City (City)
+- **Region**: Central Plains
+- **Danger Rank**: Iron
+- **Resources**: Basic Supplies, Iron Essence
+- **Connected To**: The Whispering Woods, Crystal Caverns, Azure Coast, Ironhold, The Scorched Wastes
+
+The heart of the Central Plains, Greenstone City is a marvel of both magic and engineering. Dominated by the Colossal Emerald Monolith at its center, the city bathes in a perpetual, gentle green hum that seems to suppress violent emotions within the city walls. Market stalls bustle with traders selling goods from across the continent, while the prestigious Academy of Arcane Arts trains the next generation of spellcasters under the Monolith's watchful gaze.
+
+> **Visual Prompt**: Fantasy city, large green glowing crystal monolith in center, medieval architecture, busy market streets, magical atmosphere, bright sunlight, detailed textures, 4k
+
+### Highland Watch (Outpost)
+- **Region**: Northern Peaks
+- **Danger Rank**: Iron
+- **Resources**: Wind Essence, Scout Reports
+- **Connected To**: Ironhold
+
+Perched precariously on a knife-edge cliff of the Northern Peaks, Highland Watch is the first line of defense against threats from the frozen wastes beyond. The wind here screams constantly, biting through even the thickest furs. It is a lonely, austere assignment for the soldiers stationed here, offering a panoramic view of the snow-swept mountains and the encroaching storms that often herald the arrival of frost giants or ice drakes.
+
+> **Visual Prompt**: Stone tower on cliff edge, snowy mountains background, wind flags, solitary guard, vast view, cold blue sky
+
+### Ironhold (City)
+- **Region**: Northern Peaks
+- **Danger Rank**: Bronze
+- **Resources**: Iron Essence, Weapons
+- **Connected To**: Highland Watch, Greenstone City
+
+Carved directly into the granite face of the Northern Peaks, Ironhold is a testament to dwarven endurance and human ingenuity. It serves as the unyielding headquarters of the Order of the Shield. Massive iron gates, reinforced with defensive runes, bar entry to all but the authorized. Inside, the city is a vertical marvel of stone bridges, foundries, and barracks, constantly echoing with the ring of hammers on anvils.
+
+> **Visual Prompt**: Massive stone fortress carved into mountain, snow-capped peaks, iron gates, banners, defensive walls, soldier patrols, cold atmosphere, epic scale, 8k
+
+### Mistfall Village (Village)
+- **Region**: Eastern Swamps
+- **Danger Rank**: Iron
+- **Resources**: Fish, Herbal Medicine
+- **Connected To**: The Shadowfen
+
+Suspended above the murky waters of the Shadowfen on sturdy ironwood stilts, Mistfall Village is a sanctuary of lanterns and fog. The villagers, expert herbalists and fishermen, live in harmony with the swamp, harvesting its rare poisons for medicines. Ropes and walkways connect the huts, and the air smells of roasting fish and damp wood. It is a quiet, eerie place, but one of the few safe havens in the dangerous east.
+
+> **Visual Prompt**: Wooden houses on stilts, swamp water, lanterns, mist, evening light, cozy but mysterious, reflections
+
+### The Ancient Spire (Dungeon)
+- **Region**: Southern Badlands
+- **Danger Rank**: Gold
+- **Resources**: Arcane Essence, Ancient Technology
+- **Connected To**: The Scorched Wastes, Void Rift
+
+Rising like a black needle from the center of the Scorched Wastes, the Ancient Spire defies gravity and architectural logic. Its surface is smooth, seamless obsidian, etched with glowing red runes that pulse like a heartbeat. No door exists at its base; entry must be forced or found through magical means. Inside, the geometry is non-Euclidean, and the tower is said to house the unstable core of the cataclysm that destroyed the region.
+
+> **Visual Prompt**: Tall black tower, glowing red runes, desert background, magical lightning, menacing, epic scale, low angle shot
+
+### The Scorched Wastes (Wilderness)
+- **Region**: Southern Badlands
+- **Danger Rank**: Silver
+- **Resources**: Fire Essence, Obsidian
+- **Connected To**: The Ancient Spire, Greenstone City
+
+A scarred wound on the face of the world, the Scorched Wastes are the aftermath of a magical cataclysm that evaporated the sea that once lay here. The ground is cracked, dry, and hot to the touch. Fissures spew magical fire that burns without fuel, and the wind carries the taste of ash and sulfur. Obsidian shards litter the landscape, remnants of glassed sand, and only creatures forged in fire can survive this desolate hellscape.
+
+> **Visual Prompt**: Desert landscape, cracked earth, magical fire fissures, red and orange lighting, smoke, ruins of obsidian, heat haze, dangerous atmosphere
+
+### The Shadowfen (Wilderness)
+- **Region**: Eastern Swamps
+- **Danger Rank**: Bronze
+- **Resources**: Decay Essence, Poisonous Plants
+- **Connected To**: The Whispering Woods, Mistfall Village
+
+A place of perpetual twilight, the Shadowfen is a choking expanse of brackish water, twisted mangrove roots, and hanging moss. The sun never fully penetrates the canopy, leaving the swamp in a grey gloom. The water is still and dark, hiding predators that strike without a ripple. Poisonous spores drift in the air, and the ground itself is treacherous, eager to swallow the boots of the unwary.
+
+> **Visual Prompt**: Swamp, twisted trees, fog, dark water, purple and black tones, eerie, spooky, mysterious lights, moss, detailed textures
+
+### The Sunken Ruins (Dungeon)
+- **Region**: Deep Earth
+- **Danger Rank**: Gold
+- **Resources**: Water Essence, Ancient Artifacts
+- **Connected To**: Crystal Caverns
+
+Once a thriving metropolis of a forgotten era, this city now rests in the depths of a colossal underground lake. The water glows with an eerie blue phosphorescence, illuminating the preserved architecture of a civilization that drowned in its own hubris. Aquatic monsters roam the flooded boulevards, and the pressure is crushing, yet the allure of ancient artifacts draws the brave and the foolish alike into the watery abyss.
+
+> **Visual Prompt**: Underwater ruins, ancient stone architecture, bioluminescent algae, water reflections, submerged statues, mystical blue light, aquatic atmosphere, detailed
+
+### The Whispering Woods (Wilderness)
+- **Region**: Central Plains
+- **Danger Rank**: Bronze
+- **Resources**: Wood Essence, Herbs
+- **Connected To**: Greenstone City, The Shadowfen
+
+Step past the tree line, and the silence doesn't fall; it multiplies. The Whispering Woods are named for the incessant, unintelligible murmurs that seem to emanate from the ancient oaks themselves. Travelers speak of hearing the voices of lost loved ones or the taunts of their worst fears. The deeper one goes, the louder the whispers become, until they drown out thought itself. Bioluminescent fungi light the path, but they also attract the forest's strange, shifting inhabitants.
+
+> **Visual Prompt**: Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed
+
+### Void Rift (Dimension)
+- **Region**: Void
+- **Danger Rank**: Diamond
+- **Resources**: Void Essence, Chaos Stone
+- **Connected To**: The Ancient Spire
+
+Physics dissolves at the edge of the Void Rift. It is a tear in the fabric of reality, a swirling vortex of purple and black energy that hovers in a null-gravity field. Debris from the material world floats into it and disintegrates, while alien geometries seep out. Those who approach report a sensation of falling while standing still, and the whispers here are not from the past, but from entities that have never known existence in our universe.
+
+> **Visual Prompt**: Abstract landscape, floating rocks, purple and black swirling portal, stars, cosmic horror, surreal, dreamlike
 
 ## Lore
 | Title | Category | Text | Visual Prompt |
