@@ -1,10 +1,12 @@
 import json
 import os
+import sys
 import random
 from dataclasses import asdict
 from typing import List, Optional, Union, Dict
 from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry, PointOfInterest
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
+from src.narrative import NarrativeGenerator
 import dataclasses
 
 if hasattr(sys, '_MEIPASS'):
@@ -693,11 +695,12 @@ class QuestManager:
 
 class TrainingManager:
     @staticmethod
-    def train_attribute(character: Character, attribute_name: str):
+    def train_attribute(character: Character, attribute_name: str) -> str:
         if attribute_name not in character.attributes:
-            return
+            return "Invalid attribute."
 
         attr = character.attributes[attribute_name]
+        old_rank = attr.rank
 
         # Growth is slower as you rank up relative to the stat value
         # But here we use a simple linear gain multiplied by the growth multiplier
@@ -706,6 +709,14 @@ class TrainingManager:
         # Optional: Diminishing returns based on rank?
         # For now, keep it simple.
         attr.value += gain
+
+        narrative = NarrativeGenerator.get_training_narrative(attribute_name, attr.value)
+
+        new_rank = attr.rank
+        if new_rank != old_rank:
+            narrative += NarrativeGenerator.get_rank_up_narrative(new_rank, f"{attribute_name} Attribute")
+
+        return narrative
 
     @staticmethod
     def practice_ability(character: Character, essence_name: str, slot_index: int):
@@ -1032,16 +1043,16 @@ class GameEngine:
             self.character.add_essence(item, attribute)
             self.character.inventory.pop(essence_index)
 
+            result_msg = f"Absorbed {item.name}."
+
             # Check for Confluence
             if len(self.character.base_essences) == 3 and not self.character.confluence_essence:
                 confluence = self.confluence_mgr.determine_confluence(self.character.base_essences)
-                # Auto-add confluence or let user choose? Spec says 3+1. Let's auto-add for now, but user needs to pick attribute.
-                # Actually, wait. Confluence usually manifests automatically. But it also needs a bonded attribute.
-                # For simplicity, let's just add it to inventory so user can bond it manually.
                 self.character.inventory.append(confluence)
-                return f"Absorbed {item.name}. A Confluence Essence has manifested in your inventory!"
 
-            return f"Absorbed {item.name}."
+                result_msg += NarrativeGenerator.get_confluence_narrative(confluence)
+
+            return result_msg
         except ValueError as e:
             return str(e)
 
@@ -1078,7 +1089,7 @@ class GameEngine:
         # Remove stone
         self.character.inventory.pop(stone_index)
 
-        return f"Awakened {ability.name}!"
+        return NarrativeGenerator.get_awakening_narrative(essence, stone, ability.name)
 
     def save_game(self, filename: str):
         if not self.character:
