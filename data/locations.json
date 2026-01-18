@@ -4,7 +4,8 @@
     "description": "A bustling city built around a massive, glowing green stone structure.",
     "type": "City",
     "image_prompt_positive": "Fantasy city, large green glowing crystal monolith in center, medieval architecture, busy market streets, magical atmosphere, bright sunlight, detailed textures, 4k",
-    "image_prompt_negative": "dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts"
+    "image_prompt_negative": "dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts",
+    "npcs": ["Rufus", "Thadwick"]
   },
   {
     "name": "The Whispering Woods",
@@ -25,7 +26,8 @@
     "description": "A massive fortress city carved into the side of a mountain, headquarters of the Order of the Shield.",
     "type": "City",
     "image_prompt_positive": "Massive stone fortress carved into mountain, snow-capped peaks, iron gates, banners, defensive walls, soldier patrols, cold atmosphere, epic scale, 8k",
-    "image_prompt_negative": "forest, beach, warm, sunny, wooden buildings, ruins"
+    "image_prompt_negative": "forest, beach, warm, sunny, wooden buildings, ruins",
+    "npcs": ["Elara"]
   },
   {
     "name": "The Sunken Ruins",

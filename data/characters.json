@@ -4,6 +4,12 @@
     "race": "Human",
     "faction": "Adventure Society",
     "affinity": "Warrior",
+    "description": "A battle-hardened veteran of the Adventure Society. He has a scar running down his left cheek.",
+    "dialogue": {
+        "default": "Hmph. Keep your weapon sharp and your wits sharper.",
+        "friendly": "You've got a good arm. Maybe we can spar sometime.",
+        "hostile": "Get out of my face before I make you."
+    },
     "attributes": {
       "Power": 120,
       "Speed": 110,
@@ -18,6 +24,12 @@
     "race": "Elf",
     "faction": "Magic Association",
     "affinity": "Mage",
+    "description": "An inquisitive elf with spectacles that seem to magnify his eyes a bit too much.",
+    "dialogue": {
+        "default": "The flow of essence... it's quite fascinating, isn't it?",
+        "friendly": "I've discovered a new resonance pattern! Would you like to see?",
+        "hostile": "Your understanding of magic is... primitive. Leave me to my studies."
+    },
     "attributes": {
       "Power": 60,
       "Speed": 90,
@@ -32,6 +44,12 @@
     "race": "Human",
     "faction": "Order of the Shield",
     "affinity": "Guardian",
+    "description": "A stoic woman in polished plate armor, bearing the crest of the Shield.",
+    "dialogue": {
+        "default": "The Order protects those who cannot protect themselves.",
+        "friendly": "You have a noble heart. The Order would welcome your aid.",
+        "hostile": "Your actions threaten the peace. Walk away."
+    },
     "attributes": {
       "Power": 100,
       "Speed": 80,

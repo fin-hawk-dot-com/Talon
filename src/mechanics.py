@@ -175,7 +175,8 @@ class DataLoader:
                 description=l['description'],
                 type=l['type'],
                 image_prompt_positive=l['image_prompt_positive'],
-                image_prompt_negative=l['image_prompt_negative']
+                image_prompt_negative=l['image_prompt_negative'],
+                npcs=l.get('npcs', [])
             )
         return None
 
@@ -186,7 +187,8 @@ class DataLoader:
                 description=l['description'],
                 type=l['type'],
                 image_prompt_positive=l['image_prompt_positive'],
-                image_prompt_negative=l['image_prompt_negative']
+                image_prompt_negative=l['image_prompt_negative'],
+                npcs=l.get('npcs', [])
             ) for l in self.locations_data
         ]
 
@@ -198,7 +200,9 @@ class DataLoader:
                 name=c['name'],
                 race=c['race'],
                 faction=c.get('faction'),
-                affinity=c.get('affinity', 'General')
+                affinity=c.get('affinity', 'General'),
+                description=c.get('description', ""),
+                dialogue=c.get('dialogue', {})
             )
 
             # Load Attributes
@@ -421,24 +425,16 @@ class AbilityGenerator:
         elif stone.cooldown == "Long": base_cooldown = 5
         elif stone.cooldown == "Very Long": base_cooldown = 8
 
-            weights.append(w)
-
-        # Select one
-        selected_template = random.choices(valid_templates, weights=weights, k=1)[0]
-
-        # Manifest the Ability
-        name = selected_template.name_pattern.format(essence=essence.name, function=stone.function)
-        description = selected_template.description_pattern.format(essence=essence.name, function=stone.function)
-
         return Ability(
             name=name,
             description=description,
-            rank=rank,
+            rank=character_rank,
             level=0,
             parent_essence=essence,
             parent_stone=stone,
-            tags=selected_template.tags,
-            affinity=selected_template.affinity
+            cost=base_cost,
+            cooldown=base_cooldown,
+            current_cooldown=0
         )
 
     def _generate_fallback(self, essence: Essence, stone: AwakeningStone, rank: str) -> Ability:
@@ -913,6 +909,43 @@ class CombatManager:
         # This should be called by GameEngine after combat
         pass
 
+class InteractionManager:
+    def __init__(self, data_loader: DataLoader):
+        self.data_loader = data_loader
+
+    def get_npc(self, name: str) -> Optional[Character]:
+        return self.data_loader.get_character_template(name)
+
+    def interact(self, player: Character, npc_name: str) -> str:
+        npc = self.get_npc(npc_name)
+        if not npc:
+            return "That person is not here."
+
+        rel = player.relationships.get(npc_name, 0)
+
+        # Determine dialogue key
+        key = "default"
+        if rel >= 50:
+            key = "friendly"
+        elif rel <= -50:
+            key = "hostile"
+
+        dialogue = npc.dialogue.get(key, npc.dialogue.get("default", "..."))
+
+        # Small relationship boost for talking (capped)
+        if rel < 10:
+             self.modify_relationship(player, npc_name, 1)
+
+        return f"{npc.name}: \"{dialogue}\""
+
+    def modify_relationship(self, player: Character, npc_name: str, amount: int):
+        current = player.relationships.get(npc_name, 0)
+        player.relationships[npc_name] = max(-100, min(100, current + amount))
+
+    def modify_reputation(self, player: Character, faction_name: str, amount: int):
+        current = player.reputation.get(faction_name, 0)
+        player.reputation[faction_name] = max(-100, min(100, current + amount))
+
 class GameEngine:
     def __init__(self):
         self.data_loader = DataLoader()
@@ -922,6 +955,7 @@ class GameEngine:
         self.loot_mgr = LootManager(self.data_loader)
         self.quest_mgr = QuestManager(self.data_loader)
         self.combat_mgr = CombatManager(self.data_loader)
+        self.interaction_mgr = InteractionManager(self.data_loader)
         self.character = None
 
     def create_character(self, name: str, race: str):
@@ -1188,6 +1222,12 @@ class GameEngine:
             if 'quests' in data:
                 for q_id, q_data in data['quests'].items():
                     char.quests[q_id] = QuestProgress(**q_data)
+
+            # Reconstruct Relationships
+            if 'relationships' in data:
+                char.relationships = data['relationships']
+            if 'reputation' in data:
+                char.reputation = data['reputation']
 
             self.character = char
             return f"Game loaded from {filename}"
