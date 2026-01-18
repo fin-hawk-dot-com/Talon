@@ -495,5 +495,47 @@
         "category": "Magic",
         "text": "The interface that overlays reality for all Awakened. It quantifies abstract concepts like strength and soul into numbers. Scholars debate its origin. Some say it's a defense mechanism of the planet; others believe it's an alien construct designed to gamify our evolution. Regardless, it is the lens through which we now view the world.",
         "image_prompt": "A first-person view of a holographic blue interface overlaying a forest scene, stats and health bars visible."
+    },
+    {
+        "id": "lore_essence_tea",
+        "title": "Essence Tea",
+        "category": "Culture",
+        "text": "A popular beverage among the upper class of Greenstone City. Brewed from the leaves of the Mana-fern, it glows faintly in the cup. It is said to restore mental clarity and slightly replenish mana reserves, though drinking too much can cause 'thejitters', a state of hyper-awareness where one hears colors.",
+        "image_prompt": "A porcelain teacup with glowing blue liquid, steam forming magical shapes, elegant setting."
+    },
+    {
+        "id": "lore_mana_moths",
+        "title": "Mana Moths",
+        "category": "Bestiary",
+        "text": "Small, harmless insects that are naturally attracted to high concentrations of magic. They are often used by adventurers as a primitive danger sense; if a swarm of Mana Moths suddenly disperses, a predator or a mana storm is likely approaching.",
+        "image_prompt": "Swarm of small glowing moths, blue and purple wings, forest night background."
+    },
+    {
+        "id": "lore_festival_broken_moon",
+        "title": "Festival of the Broken Moon",
+        "category": "Culture",
+        "text": "Held annually to mark the anniversary of the Awakening. Citizens light floating lanterns to guide the souls lost during the chaos. It is a time of reflection, but also of celebration, symbolizing that even a broken world can shine.",
+        "image_prompt": "Night city scene, thousands of floating paper lanterns, crowd looking up, emotional atmosphere."
+    },
+    {
+        "id": "lore_bardic_college",
+        "title": "College of Silver Strings",
+        "category": "Faction",
+        "text": "A guild of bards who have discovered that specific musical frequencies can resonate with the System. They use music to buff allies or sow confusion in enemies. They are headquartered in a magically acoustic amphitheater in the hills east of Greenstone.",
+        "image_prompt": "Bards playing glowing instruments in a stone amphitheater, magical sound waves visible."
+    },
+    {
+        "id": "lore_glass_shield",
+        "title": "The Glass Shield",
+        "category": "Artifacts",
+        "text": "A legendary shield said to be forged from a single piece of transparent diamond by the Titans. It is invisible until struck, at which point it flashes with blinding light. Its current location is unknown, though many claim to have seen it in the hands of a wandering mute knight.",
+        "image_prompt": "A warrior holding an invisible shield, impact ripple of light visible, epic stance."
+    },
+    {
+        "id": "lore_sky_whales",
+        "title": "Sky Whales",
+        "category": "Bestiary",
+        "text": "Colossal, peaceful beasts that drift through the upper atmosphere, feeding on cloud-mana. They are rarely seen from the ground, but airship travelers sometimes report hearing their mournful, resonant songs vibrating through the hull.",
+        "image_prompt": "Giant whale with four wings flying in the clouds, tiny airship for scale, sunset."
     }
 ]
