@@ -548,6 +548,39 @@ class GameInterface:
         elif sys_choice == "2":
             self.load_game_menu()
 
+    def handle_conversation(self, npc_name):
+        node_id = "root"
+        print(f"\n--- Talking to {npc_name} ---")
+
+        while True:
+            node = self.engine.interaction_mgr.get_dialogue_node(npc_name, node_id)
+            if not node:
+                print(f"{npc_name} has nothing more to say.")
+                break
+
+            print(f"\n{npc_name}: \"{node.text}\"")
+
+            if not node.choices:
+                input("[Press Enter to end conversation]")
+                break
+
+            print("\nOptions:")
+            for i, choice in enumerate(node.choices):
+                print(f"{i+1}. {choice.text}")
+
+            try:
+                c_idx = int(input("> ")) - 1
+                if 0 <= c_idx < len(node.choices):
+                    choice = node.choices[c_idx]
+                    if choice.next_id == "exit":
+                        print(f"You end the conversation with {npc_name}.")
+                        break
+                    node_id = choice.next_id
+                else:
+                    print("Invalid choice.")
+            except ValueError:
+                print("Invalid input.")
+
     def action_travel(self):
         char = self.engine.character
         print("\n--- Travel ---")
@@ -592,7 +625,7 @@ class GameInterface:
                                 npc_idx = int(input("Select person number: ")) - 1
                                 if 0 <= npc_idx < len(loc.npcs):
                                     npc_name = loc.npcs[npc_idx]
-                                    print(f"\n{self.engine.interaction_mgr.interact(char, npc_name)}")
+                                    self.handle_conversation(npc_name)
                                 else:
                                     print("Invalid selection.")
                             except ValueError:
