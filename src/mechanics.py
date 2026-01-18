@@ -3,9 +3,10 @@ import os
 import sys
 import random
 from dataclasses import asdict
-from typing import List, Optional, Union, Dict
+from typing import List, Optional, Union, Dict, Tuple
 from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry, PointOfInterest, StatusEffect
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
+from src.narrative import NarrativeGenerator
 import dataclasses
 
 if hasattr(sys, '_MEIPASS'):
@@ -694,11 +695,12 @@ class QuestManager:
 
 class TrainingManager:
     @staticmethod
-    def train_attribute(character: Character, attribute_name: str):
+    def train_attribute(character: Character, attribute_name: str) -> str:
         if attribute_name not in character.attributes:
-            return
+            return "Invalid attribute."
 
         attr = character.attributes[attribute_name]
+        old_rank = attr.rank
 
         # Growth is slower as you rank up relative to the stat value
         # But here we use a simple linear gain multiplied by the growth multiplier
@@ -707,6 +709,14 @@ class TrainingManager:
         # Optional: Diminishing returns based on rank?
         # For now, keep it simple.
         attr.value += gain
+
+        narrative = NarrativeGenerator.get_training_narrative(attribute_name, attr.value)
+
+        new_rank = attr.rank
+        if new_rank != old_rank:
+            narrative += NarrativeGenerator.get_rank_up_narrative(new_rank, f"{attribute_name} Attribute")
+
+        return narrative
 
     @staticmethod
     def practice_ability(character: Character, essence_name: str, slot_index: int):
@@ -802,26 +812,77 @@ class CombatManager:
     def __init__(self, data_loader: DataLoader):
         self.data_loader = data_loader
 
-    def calculate_damage(self, attacker: Character, defender: Character, is_magical: bool = False, multiplier: float = 1.0) -> float:
-        # Simple damage formula
-        # Physical: Power vs 50% Speed (Evasion/Glancing) + Mitigation?
-        # Magical: Spirit vs Spirit?
-        # For simplicity: Damage = Attack - Defense/2
-        # Attacker Damage:
+    def process_effects(self, character: Character) -> Tuple[List[str], bool]:
+        """
+        Process active status effects.
+        Returns (log_messages, is_stunned)
+        """
+        log = []
+        is_stunned = False
+        active_effects = []
+
+        for effect in character.status_effects:
+            # Apply Effect
+            if effect.type == "DoT":
+                character.current_health -= effect.value
+                log.append(f"{character.name} takes {effect.value:.1f} damage from {effect.name}!")
+            elif effect.type == "CC":
+                if "Stun" in effect.name or "Sleep" in effect.name:
+                    is_stunned = True
+                    log.append(f"{character.name} is {effect.name} and cannot act!")
+            elif effect.type == "Heal":
+                 character.current_health = min(character.max_health, character.current_health + effect.value)
+                 log.append(f"{character.name} heals {effect.value:.1f} from {effect.name}.")
+
+            # Decrement Duration
+            effect.duration -= 1
+            if effect.duration > 0:
+                active_effects.append(effect)
+            else:
+                log.append(f"{effect.name} on {character.name} has worn off.")
+
+        character.status_effects = active_effects
+        return log, is_stunned
+
+    def calculate_hit_chance(self, attacker: Character, defender: Character) -> float:
+        # Base 90% chance
+        base = 0.90
+        # Speed modifier: +1% per 5 Speed difference
+        diff = attacker.attributes["Speed"].value - defender.attributes["Speed"].value
+        return max(0.2, min(1.0, base + (diff / 500.0)))
+
+    def calculate_crit_chance(self, attacker: Character) -> float:
+        # Base 5%
+        # Spirit/Perception adds to it
+        return 0.05 + (attacker.attributes["Spirit"].value / 1000.0)
+
+    def calculate_damage(self, attacker: Character, defender: Character, is_magical: bool = False, multiplier: float = 1.0) -> Tuple[float, bool, bool]:
+        """Returns (damage, is_crit, is_miss)"""
+        # Hit Check
+        hit_chance = self.calculate_hit_chance(attacker, defender)
+        if random.random() > hit_chance:
+            return 0.0, False, True # Miss
+
         damage = 0.0
         if is_magical:
              damage = attacker.attributes["Spirit"].value * 1.5
-             # Defense
              defense = defender.attributes["Spirit"].value * 0.5
         else:
              damage = attacker.attributes["Power"].value * 1.5
-             defense = defender.attributes["Recovery"].value * 0.5 # Toughness
+             defense = defender.attributes["Recovery"].value * 0.5
 
         damage *= multiplier
         final_damage = max(1.0, damage - defense)
+
+        # Crit Check
+        is_crit = False
+        if random.random() < self.calculate_crit_chance(attacker):
+            final_damage *= 1.5
+            is_crit = True
+
         # Variance
         final_damage *= random.uniform(0.9, 1.1)
-        return final_damage
+        return final_damage, is_crit, False
 
     def process_status_effects(self, character: Character) -> List[str]:
         log = []
@@ -892,7 +953,7 @@ class CombatManager:
              user.current_health -= cost
 
         # Set Cooldown
-        ability.current_cooldown = ability.cooldown + 1 # +1 because it decrements at start of next round/end of this one
+        ability.current_cooldown = ability.cooldown + 1
 
         # Determine Effect based on Function
         function = ability.parent_stone.function
@@ -900,11 +961,41 @@ class CombatManager:
         level_mult = 1.0 + (ability.level * 0.1)
         power_mult = rank_mult * level_mult
 
+        effect_applied = None
+
         if "Attack" in function:
             is_magical = "Ranged" in function or "Blast" in ability.parent_stone.name
-            dmg = self.calculate_damage(user, target, is_magical, multiplier=1.5 * power_mult)
-            target.current_health -= dmg
-            log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage!")
+            dmg, is_crit, is_miss = self.calculate_damage(user, target, is_magical, multiplier=1.5 * power_mult)
+
+            if is_miss:
+                log.append(f"{user.name} used {ability.name} but missed!")
+            else:
+                target.current_health -= dmg
+                crit_text = " (CRITICAL!)" if is_crit else ""
+                log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage{crit_text}!")
+
+                # Apply Status Effects based on Flavor Keywords
+                desc = ability.description.lower() + " " + function.lower()
+                if "fire" in desc or "burn" in desc or "ember" in ability.parent_essence.name.lower():
+                    burn_val = 5.0 * power_mult
+                    target.status_effects.append(StatusEffect("Burn", 3, burn_val, "DoT", "Burns the target."))
+                    effect_applied = "Burn"
+                elif "ice" in desc or "frost" in desc or "cold" in ability.parent_essence.name.lower():
+                    # Simplified as DoT for now, ideally Speed Debuff
+                    chill_val = 3.0 * power_mult
+                    target.status_effects.append(StatusEffect("Frostbite", 3, chill_val, "DoT", "Freezes the target."))
+                    effect_applied = "Frostbite"
+                elif "stun" in desc or "shock" in desc:
+                     if random.random() < 0.3: # 30% chance to stun
+                         target.status_effects.append(StatusEffect("Stun", 1, 0, "CC", "Stunned."))
+                         effect_applied = "Stun"
+                elif "poison" in desc or "venom" in desc:
+                     poison_val = 4.0 * power_mult
+                     target.status_effects.append(StatusEffect("Poison", 5, poison_val, "DoT", "Poison damage."))
+                     effect_applied = "Poison"
+
+                if effect_applied:
+                    log.append(f"{ability.name} applied {effect_applied} to {target.name}!")
 
             # Chance for status effect
             effect = self.determine_status_effect(ability, power_mult)
@@ -913,11 +1004,13 @@ class CombatManager:
                 log.append(f"Applied {effect.name} to {target.name}!")
 
         elif "Defense" in function:
-            # Temporary defense buff or heal? Let's do a heal/shield hybrid for simplicity
-            # Or just restore health for now as a "Shield/Heal" abstraction
             heal_amount = user.attributes["Spirit"].value * power_mult
             user.current_health = min(user.max_health, user.current_health + heal_amount)
             log.append(f"Used {ability.name} and restored {heal_amount:.1f} health/shield!")
+
+            # Apply Defensive Buff
+            user.status_effects.append(StatusEffect("Regen", 3, heal_amount * 0.2, "Heal", "Regenerating health."))
+            log.append(f"{user.name} gains Regen!")
 
         elif "Heal" in function or "Sustain" in function:
              heal_amount = user.attributes["Spirit"].value * power_mult
@@ -930,17 +1023,18 @@ class CombatManager:
                  log.append(f"Applied {effect.name} to self!")
 
         elif "Summon" in function:
-             log.append(f"Used {ability.name}! A summon appears (flavor only for now).")
-             # Could implement actual summons later
+             log.append(f"Used {ability.name}! A summon appears to aid you!")
 
         else:
-             # Default fallback damage
-             dmg = self.calculate_damage(user, target, is_magical=True, multiplier=1.0 * power_mult)
-             target.current_health -= dmg
-             log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage!")
+             dmg, is_crit, is_miss = self.calculate_damage(user, target, is_magical=True, multiplier=1.0 * power_mult)
+             if is_miss:
+                 log.append(f"{user.name} used {ability.name} but missed!")
+             else:
+                 target.current_health -= dmg
+                 crit_text = " (CRITICAL!)" if is_crit else ""
+                 log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage{crit_text}!")
 
-        # Gain XP for ability usage
-        if user.abilities: # Only if user is player basically, or tracked
+        if user.abilities:
              if ability.gain_xp(5):
                  log.append(f"{ability.name} leveled up to {ability.level}!")
 
@@ -949,9 +1043,11 @@ class CombatManager:
     def combat_round(self, player: Character, enemy: Character, player_action: Union[str, Ability]) -> tuple[List[str], bool]:
         log = []
 
-        # Process Status Effects (Start of Round)
-        log.extend(self.process_status_effects(player))
-        log.extend(self.process_status_effects(enemy))
+        # 0. Start of Round Effects
+        p_eff_log, p_stunned = self.process_effects(player)
+        log.extend(p_eff_log)
+        e_eff_log, e_stunned = self.process_effects(enemy)
+        log.extend(e_eff_log)
 
         # Check deaths from DoTs
         if player.current_health <= 0:
@@ -968,67 +1064,82 @@ class CombatManager:
                     if ab and ab.current_cooldown > 0:
                         ab.current_cooldown -= 1
 
-        # Note: Enemy cooldowns are not tracked in this simplified model as enemies do not persist abilities deeply yet.
-
         # 1. Player Turn
-        if isinstance(player_action, Ability):
-             ability_log = self.execute_ability(player, enemy, player_action)
-             log.extend(ability_log)
-             if "Not enough" in ability_log[0] or "on cooldown" in ability_log[0]: # Failed to use
-                 return log, False
+        if not p_stunned:
+            if isinstance(player_action, Ability):
+                ability_log = self.execute_ability(player, enemy, player_action)
+                log.extend(ability_log)
+                if ability_log and ("Not enough" in ability_log[0] or "on cooldown" in ability_log[0]):
+                    return log, False # Failed action, retry input (handled by UI usually, but here we just return)
 
-        elif player_action == "Attack":
-            dmg = self.calculate_damage(player, enemy, is_magical=False)
-            enemy.current_health -= dmg
-            log.append(f"You attacked {enemy.name} for {dmg:.1f} damage.")
-        elif player_action == "Flee":
-            # Chance to flee based on Speed
-            p_speed = player.attributes["Speed"].value
-            e_speed = enemy.attributes["Speed"].value
-            chance = 0.5 + (p_speed - e_speed) * 0.01
-            if random.random() < chance:
-                log.append("You fled successfully!")
-                return log, True # Fled
-            else:
-                log.append("Failed to flee!")
+            elif player_action == "Attack":
+                dmg, is_crit, is_miss = self.calculate_damage(player, enemy, is_magical=False)
+                if is_miss:
+                    log.append(f"You attacked {enemy.name} but missed!")
+                else:
+                    enemy.current_health -= dmg
+                    crit_text = " CRITICAL HIT!" if is_crit else ""
+                    log.append(f"You attacked {enemy.name} for {dmg:.1f} damage.{crit_text}")
 
-        # Check Enemy Death
+            elif player_action == "Flee":
+                p_speed = player.attributes["Speed"].value
+                e_speed = enemy.attributes["Speed"].value
+                chance = 0.5 + (p_speed - e_speed) * 0.01
+                if random.random() < chance:
+                    log.append("You fled successfully!")
+                    return log, True
+                else:
+                    log.append("Failed to flee!")
+        else:
+            log.append("You are stunned and cannot act!")
+
         if enemy.current_health <= 0:
             log.append(f"{enemy.name} has been defeated!")
-            # Trigger Quest Update
-            return log, True # Combat over (Win)
+            return log, True
 
         # 2. Enemy Turn
-        # Simple AI: 20% chance to use a special ability if available (simulated), else Attack
-        ai_action = "Attack"
-        if random.random() < 0.2:
-             # Simulate an ability usage
-             ai_action = "Special"
+        if not e_stunned:
+            ai_action = "Attack"
+            if random.random() < 0.2:
+                ai_action = "Special"
 
-        if ai_action == "Special":
-             # Flavor text for enemy ability
-             ability_names = ["Power Strike", "Shadow Blast", "Roar", "Bite"]
-             ab_name = random.choice(ability_names)
+            if ai_action == "Special":
+                ability_names = ["Power Strike", "Shadow Blast", "Roar", "Bite"]
+                ab_name = random.choice(ability_names)
+                is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
+                dmg, is_crit, is_miss = self.calculate_damage(enemy, player, is_magical=is_magical, multiplier=1.3)
 
-             # Calculate slightly higher damage
-             is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
-             dmg = self.calculate_damage(enemy, player, is_magical=is_magical, multiplier=1.3)
-             player.current_health -= dmg
-             log.append(f"{enemy.name} used {ab_name} on you for {dmg:.1f} damage!")
+                if is_miss:
+                    log.append(f"{enemy.name} used {ab_name} but missed you!")
+                else:
+                    player.current_health -= dmg
+                    crit_text = " (CRITICAL!)" if is_crit else ""
+                    log.append(f"{enemy.name} used {ab_name} on you for {dmg:.1f} damage{crit_text}!")
+
+                    # Enemy Special Effect Chance
+                    if random.random() < 0.3:
+                         player.status_effects.append(StatusEffect("Bleed", 3, 2.0, "DoT", "Bleeding."))
+                         log.append(f"{enemy.name}'s attack caused you to Bleed!")
+
+            else:
+                is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
+                dmg, is_crit, is_miss = self.calculate_damage(enemy, player, is_magical=is_magical)
+                atk_type = "magically attacked" if is_magical else "attacked"
+
+                if is_miss:
+                    log.append(f"{enemy.name} {atk_type} you but missed!")
+                else:
+                    player.current_health -= dmg
+                    crit_text = " (CRITICAL!)" if is_crit else ""
+                    log.append(f"{enemy.name} {atk_type} you for {dmg:.1f} damage{crit_text}.")
         else:
-             # Standard Attack
-             is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
-             dmg = self.calculate_damage(enemy, player, is_magical=is_magical)
-             player.current_health -= dmg
-             atk_type = "magically attacked" if is_magical else "attacked"
-             log.append(f"{enemy.name} {atk_type} you for {dmg:.1f} damage.")
+            log.append(f"{enemy.name} is stunned!")
 
-        # Check Player Death
         if player.current_health <= 0:
             log.append("You have been defeated!")
-            return log, True # Combat over (Loss)
+            return log, True
 
-        return log, False # Continue
+        return log, False
 
     def check_combat_objectives(self, player: Character, enemy: Character):
         # This should be called by GameEngine after combat
@@ -1100,16 +1211,16 @@ class GameEngine:
             self.character.add_essence(item, attribute)
             self.character.inventory.pop(essence_index)
 
+            result_msg = f"Absorbed {item.name}."
+
             # Check for Confluence
             if len(self.character.base_essences) == 3 and not self.character.confluence_essence:
                 confluence = self.confluence_mgr.determine_confluence(self.character.base_essences)
-                # Auto-add confluence or let user choose? Spec says 3+1. Let's auto-add for now, but user needs to pick attribute.
-                # Actually, wait. Confluence usually manifests automatically. But it also needs a bonded attribute.
-                # For simplicity, let's just add it to inventory so user can bond it manually.
                 self.character.inventory.append(confluence)
-                return f"Absorbed {item.name}. A Confluence Essence has manifested in your inventory!"
 
-            return f"Absorbed {item.name}."
+                result_msg += NarrativeGenerator.get_confluence_narrative(confluence)
+
+            return result_msg
         except ValueError as e:
             return str(e)
 
@@ -1146,7 +1257,7 @@ class GameEngine:
         # Remove stone
         self.character.inventory.pop(stone_index)
 
-        return f"Awakened {ability.name}!"
+        return NarrativeGenerator.get_awakening_narrative(essence, stone, ability.name)
 
     def save_game(self, filename: str):
         if not self.character:
@@ -1248,6 +1359,8 @@ class GameEngine:
             # Reconstruct Status Effects
             if 'status_effects' in data:
                 char.status_effects = [StatusEffect(**se) for se in data['status_effects']]
+                 for se in data['status_effects']:
+                     char.status_effects.append(StatusEffect(**se))
 
             self.character = char
             return f"Game loaded from {filename}"

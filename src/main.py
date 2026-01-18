@@ -7,7 +7,7 @@ from typing import Dict, Any, Callable
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.models import Essence, AwakeningStone, Character
+from src.models import Essence, AwakeningStone, Character, StatusEffect
 from src.mechanics import GameEngine
 from src.world_map import MapVisualizer
 
@@ -183,8 +183,8 @@ class GameInterface:
         attr_choice = input("> ").strip().lower()
         mapping = {'p': 'Power', 's': 'Speed', 'm': 'Spirit', 'r': 'Recovery'}
         if attr_choice in mapping:
-            self.engine.training_mgr.train_attribute(self.engine.character, mapping[attr_choice])
-            print(f"Trained {mapping[attr_choice]}!")
+            result = self.engine.training_mgr.train_attribute(self.engine.character, mapping[attr_choice])
+            print(f"\n{result}")
         else:
             print("Invalid attribute.")
 
@@ -205,15 +205,20 @@ class GameInterface:
         char = self.engine.character
         while True:
             # Refresh status display
-            print(f"\nYour Status: HP {char.current_health:.0f}/{char.max_health:.0f} | MP {char.current_mana:.0f}/{char.max_mana:.0f} | SP {char.current_stamina:.0f}/{char.max_stamina:.0f}")
+            char_status_str = f"Your Status: HP {char.current_health:.0f}/{char.max_health:.0f} | MP {char.current_mana:.0f}/{char.max_mana:.0f} | SP {char.current_stamina:.0f}/{char.max_stamina:.0f}"
             if char.status_effects:
-                 effects_str = ", ".join([f"{e.name} ({e.duration})" for e in char.status_effects])
-                 print(f"  Effects: {effects_str}")
+                effects_str = " ".join([f"[{e.name} {e.duration}]" for e in char.status_effects])
+                char_status_str += f" | Effects: {effects_str}"
 
-            print(f"Enemy Status: HP {monster.current_health:.0f}/{monster.max_health:.0f}")
+            enemy_status_str = f"Enemy Status: HP {monster.current_health:.0f}/{monster.max_health:.0f}"
             if monster.status_effects:
-                 effects_str = ", ".join([f"{e.name} ({e.duration})" for e in monster.status_effects])
-                 print(f"  Effects: {effects_str}")
+                 effects_str = " ".join([f"[{e.name} {e.duration}]" for e in monster.status_effects])
+                 enemy_status_str += f" | Effects: {effects_str}"
+
+            print("\n" + "="*60)
+            print(char_status_str)
+            print(enemy_status_str)
+            print("="*60)
 
             print("\nCombat Options:")
             print("1. Attack")
@@ -413,7 +418,9 @@ class GameInterface:
         char = self.engine.character
         # Simulate training all attributes
         for attr_name in char.attributes:
-            self.engine.training_mgr.train_attribute(char, attr_name)
+            res = self.engine.training_mgr.train_attribute(char, attr_name)
+            if "*** BREAKTHROUGH ***" in res:
+                print(res)
 
         # Simulate practicing all abilities and attempting rank up
         for essence_name, abilities in char.abilities.items():
