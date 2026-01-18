@@ -21,6 +21,32 @@
     "npcs": [
       "Rufus",
       "Thadwick"
+    ],
+    "points_of_interest": [
+      {
+        "name": "Market District",
+        "description": "A crowded maze of stalls selling everything from fresh produce to minor magical trinkets. The scent of roasted meats and spices fills the air.",
+        "type": "District",
+        "image_prompt": "Medieval market, crowded, colorful stalls, spices, sunlight, fantasy city"
+      },
+      {
+        "name": "The Greenstone Monolith",
+        "description": "The massive, glowing green crystal for which the city is named. It hums with a low resonance that can be felt in your bones.",
+        "type": "Landmark",
+        "image_prompt": "Huge glowing green crystal monolith, city square, people worshipping, magical light"
+      },
+      {
+        "name": "City Gates",
+        "description": "Imposing iron-reinforced wooden gates manned by the city guard. Banners of the ruling council hang from the battlements.",
+        "type": "Building",
+        "image_prompt": "Large wooden gates, stone walls, guards, banners, fantasy city entrance"
+      },
+      {
+        "name": "The Guild Hall",
+        "description": "A grand stone building where adventurers gather to take contracts and trade information.",
+        "type": "Building",
+        "image_prompt": "Stone guild hall, adventurer gathering, notice board, interior tavern style"
+      }
     ]
   },
   {
@@ -38,7 +64,27 @@
       "Herbs"
     ],
     "image_prompt_positive": "Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed",
-    "image_prompt_negative": "city, buildings, desert, bright day, plain, simple, cartoon"
+    "image_prompt_negative": "city, buildings, desert, bright day, plain, simple, cartoon",
+    "points_of_interest": [
+      {
+        "name": "Ancient Grove",
+        "description": "A circle of massive, ancient trees that seem to watch you. The air here is still and heavy with magic.",
+        "type": "Landmark",
+        "image_prompt": "Ancient trees, circle layout, magical atmosphere, fireflies, moss"
+      },
+      {
+        "name": "The Singing Stream",
+        "description": "A crystal-clear stream that makes melodic sounds as it flows over smooth stones.",
+        "type": "Area",
+        "image_prompt": "Forest stream, clear water, magical sparkles, peaceful"
+      },
+      {
+        "name": "Shadowed Clearing",
+        "description": "A part of the woods where the canopy is so thick that it is always twilight. Unsettling movements can be seen in the corners of your vision.",
+        "type": "Area",
+        "image_prompt": "Dark forest clearing, spooky, shadows, twilight, mysterious"
+      }
+    ]
   },
   {
     "name": "Crystal Caverns",
@@ -55,7 +101,27 @@
       "Rare Gems"
     ],
     "image_prompt_positive": "Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k",
-    "image_prompt_negative": "sky, sun, grass, trees, flat, boring, noise"
+    "image_prompt_negative": "sky, sun, grass, trees, flat, boring, noise",
+    "points_of_interest": [
+      {
+        "name": "The Great Hall",
+        "description": "A natural cavern of immense size, illuminated by thousands of bioluminescent fungi and crystals.",
+        "type": "Area",
+        "image_prompt": "Huge underground cavern, glowing mushrooms, crystals, stalactites"
+      },
+      {
+        "name": "Echo Chamber",
+        "description": "A narrow passage where every sound is amplified and repeated, potentially disorienting travelers.",
+        "type": "Area",
+        "image_prompt": "Narrow cave tunnel, crystals on walls, claustrophobic"
+      },
+      {
+        "name": "Deep Shaft",
+        "description": "A vertical drop into the unknown depths. Cold air drafts up from below.",
+        "type": "Landmark",
+        "image_prompt": "Deep pit in cave, darkness below, edge of cliff, danger"
+      }
+    ]
   },
   {
     "name": "Ironhold",
@@ -75,6 +141,26 @@
     "image_prompt_negative": "forest, beach, warm, sunny, wooden buildings, ruins",
     "npcs": [
       "Elara"
+    ],
+    "points_of_interest": [
+      {
+        "name": "The Forge",
+        "description": "The heart of the city, a massive foundry where weapons and armor are crafted day and night using volcanic heat.",
+        "type": "Building",
+        "image_prompt": "Giant forge, lava, blacksmiths, anvils, fire, industrial fantasy"
+      },
+      {
+        "name": "High Command",
+        "description": "The headquarters of the Order of the Shield, strictly guarded and imposing.",
+        "type": "Building",
+        "image_prompt": "Military fortress, stone command center, flags, tactical maps"
+      },
+      {
+        "name": "The Ramparts",
+        "description": "The outer walls offering a view of the snowy peaks and the valleys below.",
+        "type": "Area",
+        "image_prompt": "Castle walls, snow, mountains view, guard patrol"
+      }
     ]
   },
   {
@@ -91,7 +177,27 @@
       "Ancient Artifacts"
     ],
     "image_prompt_positive": "Underwater ruins, ancient stone architecture, bioluminescent algae, water reflections, submerged statues, mystical blue light, aquatic atmosphere, detailed",
-    "image_prompt_negative": "fire, desert, dry, sky, bright sun, modern"
+    "image_prompt_negative": "fire, desert, dry, sky, bright sun, modern",
+    "points_of_interest": [
+      {
+        "name": "The Submerged Temple",
+        "description": "A temple half-buried in water, dedicated to a forgotten sea god.",
+        "type": "Building",
+        "image_prompt": "Underwater temple, ruins, seaweed, fish, ancient statues"
+      },
+      {
+        "name": "Plaza of Tides",
+        "description": "A large open area that floods periodically. Currently accessible.",
+        "type": "Area",
+        "image_prompt": "Ruined plaza, wet stone, puddles, algae, ancient architecture"
+      },
+      {
+        "name": "The Air Pocket",
+        "description": "A magical dome maintaining a dry area deep within the ruins.",
+        "type": "Landmark",
+        "image_prompt": "Magical bubble underwater, dry inside, campfire, adventurers resting"
+      }
+    ]
   },
   {
     "name": "The Scorched Wastes",
@@ -108,7 +214,27 @@
       "Obsidian"
     ],
     "image_prompt_positive": "Desert landscape, cracked earth, magical fire fissures, red and orange lighting, smoke, ruins of obsidian, heat haze, dangerous atmosphere",
-    "image_prompt_negative": "water, snow, green, trees, life, happy"
+    "image_prompt_negative": "water, snow, green, trees, life, happy",
+    "points_of_interest": [
+      {
+        "name": "The Cracked Earth",
+        "description": "Miles of dry, cracked ground where heat radiates visibly.",
+        "type": "Area",
+        "image_prompt": "Desert, dry cracked ground, heat haze, red sky"
+      },
+      {
+        "name": "Obsidian Fields",
+        "description": "A field of sharp, jagged black glass formed by intense magical heat.",
+        "type": "Area",
+        "image_prompt": "Black sharp rocks, obsidian, dangerous terrain, volcanic"
+      },
+      {
+        "name": "The Fire Pits",
+        "description": "Natural vents spewing magical fire and smoke.",
+        "type": "Landmark",
+        "image_prompt": "Ground vents, fire, smoke, lava, hellish landscape"
+      }
+    ]
   },
   {
     "name": "The Shadowfen",
@@ -125,7 +251,27 @@
       "Poisonous Plants"
     ],
     "image_prompt_positive": "Swamp, twisted trees, fog, dark water, purple and black tones, eerie, spooky, mysterious lights, moss, detailed textures",
-    "image_prompt_negative": "desert, bright sun, clean, dry, city, cheerful"
+    "image_prompt_negative": "desert, bright sun, clean, dry, city, cheerful",
+    "points_of_interest": [
+      {
+        "name": "Rotting Boardwalk",
+        "description": "Treacherous wooden paths laid over the worst of the bog.",
+        "type": "Area",
+        "image_prompt": "Swamp, broken wooden path, fog, dark water"
+      },
+      {
+        "name": "The Mire",
+        "description": "Deep, sticky mud that threatens to swallow anyone who steps off the path.",
+        "type": "Area",
+        "image_prompt": "Muddy swamp, quicksand, dead trees, bubbles"
+      },
+      {
+        "name": "Glowing Pools",
+        "description": "Pools of water emitting a sickly green light, likely poisonous.",
+        "type": "Landmark",
+        "image_prompt": "Green glowing swamp water, toxic, eerie mist"
+      }
+    ]
   },
   {
     "name": "Highland Watch",
@@ -141,7 +287,27 @@
       "Scout Reports"
     ],
     "image_prompt_positive": "Stone tower on cliff edge, snowy mountains background, wind flags, solitary guard, vast view, cold blue sky",
-    "image_prompt_negative": "forest, warm, city, crowd, underground"
+    "image_prompt_negative": "forest, warm, city, crowd, underground",
+    "points_of_interest": [
+      {
+        "name": "The Lookout Tower",
+        "description": "The highest point, offering a strategic view of the north.",
+        "type": "Building",
+        "image_prompt": "Tall stone tower, mountains, snow, telescope"
+      },
+      {
+        "name": "Soldiers' Quarters",
+        "description": "Barracks for the stationed troops, warm and smelling of stew.",
+        "type": "Building",
+        "image_prompt": "Barracks interior, bunks, fireplace, soldiers"
+      },
+      {
+        "name": "The Signal Fire",
+        "description": "A large pyre ready to be lit in case of invasion.",
+        "type": "Landmark",
+        "image_prompt": "Huge wood pile, unlit bonfire, mountaintop"
+      }
+    ]
   },
   {
     "name": "The Ancient Spire",
@@ -158,7 +324,27 @@
       "Ancient Technology"
     ],
     "image_prompt_positive": "Tall black tower, glowing red runes, desert background, magical lightning, menacing, epic scale, low angle shot",
-    "image_prompt_negative": "nature, water, happy, bright colors, small"
+    "image_prompt_negative": "nature, water, happy, bright colors, small",
+    "points_of_interest": [
+      {
+        "name": "Base Camp",
+        "description": "A temporary settlement of scholars and treasure hunters outside the tower.",
+        "type": "Area",
+        "image_prompt": "Tents, campfire, desert background, tower in distance"
+      },
+      {
+        "name": "The Runed Door",
+        "description": "The massive, sealed entrance to the spire covered in glowing glyphs.",
+        "type": "Landmark",
+        "image_prompt": "Giant metal door, glowing magical runes, mysterious"
+      },
+      {
+        "name": "The Ascending Stairs",
+        "description": "A spiral staircase inside the tower that seems to go on forever.",
+        "type": "Area",
+        "image_prompt": "Spiral stairs, interior tower, floating steps, magical void"
+      }
+    ]
   },
   {
     "name": "Void Rift",
@@ -174,7 +360,27 @@
       "Chaos Stone"
     ],
     "image_prompt_positive": "Abstract landscape, floating rocks, purple and black swirling portal, stars, cosmic horror, surreal, dreamlike",
-    "image_prompt_negative": "normal world, ground, sky, buildings, trees"
+    "image_prompt_negative": "normal world, ground, sky, buildings, trees",
+    "points_of_interest": [
+      {
+        "name": "The Edge of Reality",
+        "description": "Where the ground simply ends and dissolves into the void.",
+        "type": "Landmark",
+        "image_prompt": "Cliff edge, dissolving into space, stars, purple nebula"
+      },
+      {
+        "name": "Floating Islands",
+        "description": "Chunks of land defying gravity, connected by magical tethers.",
+        "type": "Area",
+        "image_prompt": "Floating rocks, purple sky, magical bridges"
+      },
+      {
+        "name": "The Swirling Vortex",
+        "description": "The center of the rift, a terrifying maelstrom of raw energy.",
+        "type": "Landmark",
+        "image_prompt": "Black hole, energy swirl, destruction, cosmic horror"
+      }
+    ]
   },
   {
     "name": "Mistfall Village",
@@ -190,7 +396,27 @@
       "Herbal Medicine"
     ],
     "image_prompt_positive": "Wooden houses on stilts, swamp water, lanterns, mist, evening light, cozy but mysterious, reflections",
-    "image_prompt_negative": "city, stone buildings, desert, mountains"
+    "image_prompt_negative": "city, stone buildings, desert, mountains",
+    "points_of_interest": [
+      {
+        "name": "The Docks",
+        "description": "Rickety piers where fishing boats are moored.",
+        "type": "Area",
+        "image_prompt": "Wooden docks, fishing boats, nets, swamp water"
+      },
+      {
+        "name": "Elder's Hut",
+        "description": "The largest stilt-house, hung with dried herbs and charms.",
+        "type": "Building",
+        "image_prompt": "Large wooden hut on stilts, herbs hanging, mystical decorations"
+      },
+      {
+        "name": "The Herbalist's Garden",
+        "description": "A floating garden cultivating rare swamp plants.",
+        "type": "Area",
+        "image_prompt": "Floating garden beds, strange plants, mist"
+      }
+    ]
   },
   {
     "name": "Azure Coast",
@@ -206,6 +432,26 @@
       "Pearls"
     ],
     "image_prompt_positive": "Tropical beach, blue ocean, white sand, palm trees, bright sun, seagulls, crystal clear water",
-    "image_prompt_negative": "dark, snow, city, forest, night"
+    "image_prompt_negative": "dark, snow, city, forest, night",
+    "points_of_interest": [
+      {
+        "name": "The White Sands",
+        "description": "Pristine beaches stretching for miles.",
+        "type": "Area",
+        "image_prompt": "White sand beach, blue ocean, sunny, palm trees"
+      },
+      {
+        "name": "Coral Reefs",
+        "description": "Vibrant underwater ecosystems visible just off the shore.",
+        "type": "Area",
+        "image_prompt": "Underwater coral reef, colorful fish, clear water"
+      },
+      {
+        "name": "The Lighthouse",
+        "description": "An old, automated magical lighthouse guiding ships away from the reefs.",
+        "type": "Building",
+        "image_prompt": "Old stone lighthouse, coast, ocean waves, sunset"
+      }
+    ]
   }
 ]

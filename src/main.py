@@ -515,25 +515,60 @@ def main():
                     if loc.resources:
                         print(f"Resources: {', '.join(loc.resources)}")
 
-                    if loc.npcs:
-                        print("\nPeople here:")
-                        for k, npc_name in enumerate(loc.npcs):
-                            print(f"{k+1}. {npc_name}")
+                    while True:
+                        print("\nPoints of Interest:")
+                        if loc.points_of_interest:
+                            for k, poi in enumerate(loc.points_of_interest):
+                                print(f"{k+1}. {poi.name} ({poi.type})")
+                        else:
+                            print("No specific points of interest.")
+
+                        if loc.npcs:
+                            print("\nPeople here:")
+                            for k, npc_name in enumerate(loc.npcs):
+                                print(f"{k+1}. {npc_name}")
 
                         print("\nOptions:")
                         print("1. Talk to someone")
-                        print("2. Leave")
+                        print("2. Explore Point of Interest")
+                        print("3. Leave")
 
                         sub_choice = input("> ").strip()
                         if sub_choice == "1":
-                            npc_idx = int(input("Select number: ")) - 1
-                            if 0 <= npc_idx < len(loc.npcs):
-                                npc_name = loc.npcs[npc_idx]
-                                print(f"\n{engine.interaction_mgr.interact(char, npc_name)}")
+                            if loc.npcs:
+                                try:
+                                    npc_idx = int(input("Select person number: ")) - 1
+                                    if 0 <= npc_idx < len(loc.npcs):
+                                        npc_name = loc.npcs[npc_idx]
+                                        print(f"\n{engine.interaction_mgr.interact(char, npc_name)}")
+                                    else:
+                                        print("Invalid selection.")
+                                except ValueError:
+                                    print("Invalid input.")
                             else:
-                                print("Invalid selection.")
-                    else:
-                        print("\nThere is no one here to talk to.")
+                                print("No one to talk to.")
+
+                        elif sub_choice == "2":
+                             if loc.points_of_interest:
+                                 try:
+                                     poi_idx = int(input("Select POI number: ")) - 1
+                                     if 0 <= poi_idx < len(loc.points_of_interest):
+                                         poi = loc.points_of_interest[poi_idx]
+                                         print(f"\n[{poi.name}]")
+                                         print(poi.description)
+                                     else:
+                                         print("Invalid selection.")
+                                 except ValueError:
+                                     print("Invalid input.")
+                             else:
+                                 print("No points of interest to explore.")
+
+                        elif sub_choice == "3":
+                            print("Leaving location...")
+                            break
+
+                        else:
+                            print("Invalid choice.")
                 else:
                     print("Invalid selection.")
             except ValueError:
