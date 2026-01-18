@@ -203,7 +203,7 @@ class DataLoader:
                 connected_locations=l.get('connected_locations', []),
                 resources=l.get('resources', []),
                 npcs=l.get('npcs', []),
-                narrative=l.get('narrative', "")
+                narrative=l.get('narrative', ""),
                 points_of_interest=pois
             )
         return None
@@ -231,9 +231,7 @@ class DataLoader:
                 connected_locations=l.get('connected_locations', []),
                 resources=l.get('resources', []),
                 npcs=l.get('npcs', []),
-                narrative=l.get('narrative', "")
-            ) for l in self.locations_data
-        ]
+                narrative=l.get('narrative', ""),
                 points_of_interest=pois
             ))
         return result
