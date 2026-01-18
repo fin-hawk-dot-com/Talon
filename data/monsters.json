@@ -1,122 +1,873 @@
 [
-  {
-    "name": "Giant Rat",
-    "race": "Beast",
-    "attributes": {
-      "Power": 20,
-      "Speed": 30,
-      "Spirit": 5,
-      "Recovery": 15
+    {
+        "name": "Giant Rat",
+        "race": "Beast",
+        "attributes": {
+            "Power": 20,
+            "Speed": 30,
+            "Spirit": 5,
+            "Recovery": 15
+        },
+        "xp_reward": 10,
+        "loot_table": [
+            "Stone of the Strike"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Giant Rat. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Giant Rat."
     },
-    "xp_reward": 10,
-    "loot_table": [
-      "Stone of the Strike"
-    ],
-    "image_prompt": "A dangerous Beast creature known as Giant Rat. High fantasy art style, detailed creature design.",
-    "description": "A Beast known as Giant Rat."
-  },
-  {
-    "name": "Wild Boar",
-    "race": "Beast",
-    "attributes": {
-      "Power": 40,
-      "Speed": 20,
-      "Spirit": 10,
-      "Recovery": 50
+    {
+        "name": "Wild Boar",
+        "race": "Beast",
+        "attributes": {
+            "Power": 40,
+            "Speed": 20,
+            "Spirit": 10,
+            "Recovery": 50
+        },
+        "xp_reward": 20,
+        "loot_table": [
+            "Might"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Wild Boar. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Wild Boar."
     },
-    "xp_reward": 20,
-    "loot_table": [
-      "Might"
-    ],
-    "image_prompt": "A dangerous Beast creature known as Wild Boar. High fantasy art style, detailed creature design.",
-    "description": "A Beast known as Wild Boar."
-  },
-  {
-    "name": "Iron Wolf",
-    "race": "Magical Beast",
-    "attributes": {
-      "Power": 120,
-      "Speed": 140,
-      "Spirit": 80,
-      "Recovery": 110
+    {
+        "name": "Iron Wolf",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 120,
+            "Speed": 140,
+            "Spirit": 80,
+            "Recovery": 110
+        },
+        "xp_reward": 100,
+        "loot_table": [
+            "Swift",
+            "Stone of the Reflex"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Iron Wolf. High fantasy art style, detailed creature design.",
+        "description": "A Magical Beast known as Iron Wolf."
     },
-    "xp_reward": 100,
-    "loot_table": [
-      "Swift",
-      "Stone of the Reflex"
-    ],
-    "image_prompt": "A dangerous Magical Beast creature known as Iron Wolf. High fantasy art style, detailed creature design.",
-    "description": "A Magical Beast known as Iron Wolf."
-  },
-  {
-    "name": "Rock Golem",
-    "race": "Construct",
-    "attributes": {
-      "Power": 180,
-      "Speed": 50,
-      "Spirit": 50,
-      "Recovery": 190
+    {
+        "name": "Rock Golem",
+        "race": "Construct",
+        "attributes": {
+            "Power": 180,
+            "Speed": 50,
+            "Spirit": 50,
+            "Recovery": 190
+        },
+        "xp_reward": 150,
+        "loot_table": [
+            "Earth",
+            "Stone of the Shield"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Rock Golem. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Rock Golem."
     },
-    "xp_reward": 150,
-    "loot_table": [
-      "Earth",
-      "Stone of the Shield"
-    ],
-    "image_prompt": "A dangerous Construct creature known as Rock Golem. High fantasy art style, detailed creature design.",
-    "description": "A Construct known as Rock Golem."
-  },
-  {
-    "name": "Bronze Drake",
-    "race": "Dragonkin",
-    "attributes": {
-      "Power": 250,
-      "Speed": 220,
-      "Spirit": 200,
-      "Recovery": 280
+    {
+        "name": "Bronze Drake",
+        "race": "Dragonkin",
+        "attributes": {
+            "Power": 250,
+            "Speed": 220,
+            "Spirit": 200,
+            "Recovery": 280
+        },
+        "xp_reward": 500,
+        "loot_table": [
+            "Fire",
+            "Dragon",
+            "Stone of the Breath"
+        ],
+        "image_prompt": "A dangerous Dragonkin creature known as Bronze Drake. High fantasy art style, detailed creature design.",
+        "description": "A Dragonkin known as Bronze Drake."
     },
-    "xp_reward": 500,
-    "loot_table": [
-      "Fire",
-      "Dragon",
-      "Stone of the Breath"
-    ],
-    "image_prompt": "A dangerous Dragonkin creature known as Bronze Drake. High fantasy art style, detailed creature design.",
-    "description": "A Dragonkin known as Bronze Drake."
-  },
-  {
-    "name": "Crystal Golem",
-    "race": "Construct",
-    "attributes": {
-      "Power": 200,
-      "Speed": 60,
-      "Spirit": 150,
-      "Recovery": 100
+    {
+        "name": "Crystal Golem",
+        "race": "Construct",
+        "attributes": {
+            "Power": 200,
+            "Speed": 60,
+            "Spirit": 150,
+            "Recovery": 100
+        },
+        "xp_reward": 200,
+        "loot_table": [
+            "Ice",
+            "Earth",
+            "Stone of the Shield"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Crystal Golem. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Crystal Golem made of shimmering ice crystals."
     },
-    "xp_reward": 200,
-    "loot_table": [
-      "Ice",
-      "Earth",
-      "Stone of the Shield"
-    ],
-    "image_prompt": "A dangerous Construct creature known as Crystal Golem. High fantasy art style, detailed creature design.",
-    "description": "A Construct known as Crystal Golem made of shimmering ice crystals."
-  },
-  {
-    "name": "Shadow Stalker",
-    "race": "Magical Beast",
-    "attributes": {
-      "Power": 100,
-      "Speed": 250,
-      "Spirit": 120,
-      "Recovery": 80
+    {
+        "name": "Shadow Stalker",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 100,
+            "Speed": 250,
+            "Spirit": 120,
+            "Recovery": 80
+        },
+        "xp_reward": 180,
+        "loot_table": [
+            "Dark",
+            "Poison",
+            "Stone of the Strike"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Shadow Stalker. High fantasy art style, detailed creature design.",
+        "description": "A Magical Beast known as Shadow Stalker that blends into the darkness."
     },
-    "xp_reward": 180,
-    "loot_table": [
-      "Dark",
-      "Poison",
-      "Stone of the Strike"
-    ],
-    "image_prompt": "A dangerous Magical Beast creature known as Shadow Stalker. High fantasy art style, detailed creature design.",
-    "description": "A Magical Beast known as Shadow Stalker that blends into the darkness."
-  }
+    {
+        "name": "Blood Devil",
+        "race": "Demon",
+        "attributes": {
+            "Power": 39,
+            "Speed": 20,
+            "Spirit": 33,
+            "Recovery": 58
+        },
+        "xp_reward": 31,
+        "loot_table": [
+            "Stone of the Anchor"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Blood Devil. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Blood Devil."
+    },
+    {
+        "name": "Blood Spirit",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 44,
+            "Speed": 90,
+            "Spirit": 83,
+            "Recovery": 22
+        },
+        "xp_reward": 39,
+        "loot_table": [
+            "Dark"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Blood Spirit. High fantasy art style, detailed creature design.",
+        "description": "A Elemental known as Blood Spirit."
+    },
+    {
+        "name": "Wild Elemental",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 24,
+            "Speed": 61,
+            "Spirit": 57,
+            "Recovery": 47
+        },
+        "xp_reward": 34,
+        "loot_table": [
+            "Stone of the Judgment"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Wild Elemental. High fantasy art style, detailed creature design.",
+        "description": "A Elemental known as Wild Elemental."
+    },
+    {
+        "name": "Frost Devil",
+        "race": "Demon",
+        "attributes": {
+            "Power": 46,
+            "Speed": 49,
+            "Spirit": 23,
+            "Recovery": 73
+        },
+        "xp_reward": 35,
+        "loot_table": [
+            "Air"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Frost Devil. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Frost Devil."
+    },
+    {
+        "name": "Corrupted Wraith",
+        "race": "Undead",
+        "attributes": {
+            "Power": 80,
+            "Speed": 43,
+            "Spirit": 34,
+            "Recovery": 38
+        },
+        "xp_reward": 35,
+        "loot_table": [
+            "Poison"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Corrupted Wraith. High fantasy art style, detailed creature design.",
+        "description": "A Undead known as Corrupted Wraith."
+    },
+    {
+        "name": "Mechanical Wyrm",
+        "race": "Dragonkin",
+        "attributes": {
+            "Power": 99,
+            "Speed": 46,
+            "Spirit": 35,
+            "Recovery": 56
+        },
+        "xp_reward": 39,
+        "loot_table": [
+            "Renewal"
+        ],
+        "image_prompt": "A dangerous Dragonkin creature known as Mechanical Wyrm. High fantasy art style, detailed creature design.",
+        "description": "A Dragonkin known as Mechanical Wyrm."
+    },
+    {
+        "name": "Ghostly Rat",
+        "race": "Beast",
+        "attributes": {
+            "Power": 75,
+            "Speed": 34,
+            "Spirit": 70,
+            "Recovery": 91
+        },
+        "xp_reward": 43,
+        "loot_table": [
+            "Stone of the Flesh"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Ghostly Rat. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Ghostly Rat."
+    },
+    {
+        "name": "Swift Bandit",
+        "race": "Humanoid",
+        "attributes": {
+            "Power": 89,
+            "Speed": 51,
+            "Spirit": 50,
+            "Recovery": 47
+        },
+        "xp_reward": 39,
+        "loot_table": [
+            "Stone of the Flesh"
+        ],
+        "image_prompt": "A dangerous Humanoid creature known as Swift Bandit. High fantasy art style, detailed creature design.",
+        "description": "A Humanoid known as Swift Bandit."
+    },
+    {
+        "name": "Noble Phoenix",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 53,
+            "Speed": 24,
+            "Spirit": 93,
+            "Recovery": 35
+        },
+        "xp_reward": 36,
+        "loot_table": [
+            "Nature"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Noble Phoenix. High fantasy art style, detailed creature design.",
+        "description": "A Magical Beast known as Noble Phoenix."
+    },
+    {
+        "name": "Celestial Fiend",
+        "race": "Demon",
+        "attributes": {
+            "Power": 58,
+            "Speed": 66,
+            "Spirit": 55,
+            "Recovery": 77
+        },
+        "xp_reward": 41,
+        "loot_table": [
+            "Knowledge"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Celestial Fiend. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Celestial Fiend."
+    },
+    {
+        "name": "Storm Fiend",
+        "race": "Demon",
+        "attributes": {
+            "Power": 135,
+            "Speed": 177,
+            "Spirit": 132,
+            "Recovery": 113
+        },
+        "xp_reward": 143,
+        "loot_table": [
+            "Mana"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Storm Fiend. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Storm Fiend."
+    },
+    {
+        "name": "Void Demon",
+        "race": "Demon",
+        "attributes": {
+            "Power": 177,
+            "Speed": 150,
+            "Spirit": 134,
+            "Recovery": 130
+        },
+        "xp_reward": 147,
+        "loot_table": [
+            "Directed"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Void Demon. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Void Demon."
+    },
+    {
+        "name": "Feral Skeleton",
+        "race": "Undead",
+        "attributes": {
+            "Power": 156,
+            "Speed": 151,
+            "Spirit": 176,
+            "Recovery": 114
+        },
+        "xp_reward": 147,
+        "loot_table": [
+            "Armor"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Feral Skeleton. High fantasy art style, detailed creature design.",
+        "description": "A Undead known as Feral Skeleton."
+    },
+    {
+        "name": "Runed Wisp",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 169,
+            "Speed": 167,
+            "Spirit": 110,
+            "Recovery": 129
+        },
+        "xp_reward": 145,
+        "loot_table": [
+            "Knowledge"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Runed Wisp. High fantasy art style, detailed creature design.",
+        "description": "A Elemental known as Runed Wisp."
+    },
+    {
+        "name": "Ghostly Griffin",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 153,
+            "Speed": 175,
+            "Spirit": 161,
+            "Recovery": 128
+        },
+        "xp_reward": 149,
+        "loot_table": [
+            "Swift"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Ghostly Griffin. High fantasy art style, detailed creature design.",
+        "description": "A Magical Beast known as Ghostly Griffin."
+    },
+    {
+        "name": "Rabid Automaton",
+        "race": "Construct",
+        "attributes": {
+            "Power": 131,
+            "Speed": 140,
+            "Spirit": 119,
+            "Recovery": 161
+        },
+        "xp_reward": 143,
+        "loot_table": [
+            "Moon"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Rabid Automaton. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Rabid Automaton."
+    },
+    {
+        "name": "Shadow Automaton",
+        "race": "Construct",
+        "attributes": {
+            "Power": 126,
+            "Speed": 139,
+            "Spirit": 114,
+            "Recovery": 115
+        },
+        "xp_reward": 137,
+        "loot_table": [
+            "Stone of the Feast"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Shadow Automaton. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Shadow Automaton."
+    },
+    {
+        "name": "Savage Zombie",
+        "race": "Undead",
+        "attributes": {
+            "Power": 149,
+            "Speed": 153,
+            "Spirit": 157,
+            "Recovery": 162
+        },
+        "xp_reward": 150,
+        "loot_table": [
+            "Stone of the Shield"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Savage Zombie. High fantasy art style, detailed creature design.",
+        "description": "A Undead known as Savage Zombie."
+    },
+    {
+        "name": "Mechanical Knight",
+        "race": "Humanoid",
+        "attributes": {
+            "Power": 182,
+            "Speed": 150,
+            "Spirit": 131,
+            "Recovery": 161
+        },
+        "xp_reward": 150,
+        "loot_table": [
+            "Moon"
+        ],
+        "image_prompt": "A dangerous Humanoid creature known as Mechanical Knight. High fantasy art style, detailed creature design.",
+        "description": "A Humanoid known as Mechanical Knight."
+    },
+    {
+        "name": "Cursed Snake",
+        "race": "Beast",
+        "attributes": {
+            "Power": 180,
+            "Speed": 186,
+            "Spirit": 171,
+            "Recovery": 188
+        },
+        "xp_reward": 160,
+        "loot_table": [
+            "Armor"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Cursed Snake. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Cursed Snake."
+    },
+    {
+        "name": "Ancient Bat",
+        "race": "Beast",
+        "attributes": {
+            "Power": 251,
+            "Speed": 228,
+            "Spirit": 235,
+            "Recovery": 240
+        },
+        "xp_reward": 263,
+        "loot_table": [
+            "Air",
+            "Technology"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Ancient Bat. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Ancient Bat."
+    },
+    {
+        "name": "Noble Demon",
+        "race": "Demon",
+        "attributes": {
+            "Power": 266,
+            "Speed": 259,
+            "Spirit": 234,
+            "Recovery": 258
+        },
+        "xp_reward": 269,
+        "loot_table": [
+            "Stone of the Wall",
+            "Earth"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Noble Demon. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Noble Demon."
+    },
+    {
+        "name": "Mechanical Phoenix",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 245,
+            "Speed": 263,
+            "Spirit": 225,
+            "Recovery": 214
+        },
+        "xp_reward": 262,
+        "loot_table": [
+            "Stone of the Trap",
+            "Iron"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Mechanical Phoenix. High fantasy art style, detailed creature design.",
+        "description": "A Magical Beast known as Mechanical Phoenix."
+    },
+    {
+        "name": "Crystal Wyrm",
+        "race": "Dragonkin",
+        "attributes": {
+            "Power": 212,
+            "Speed": 256,
+            "Spirit": 214,
+            "Recovery": 250
+        },
+        "xp_reward": 261,
+        "loot_table": [
+            "Doom",
+            "Technology"
+        ],
+        "image_prompt": "A dangerous Dragonkin creature known as Crystal Wyrm. High fantasy art style, detailed creature design.",
+        "description": "A Dragonkin known as Crystal Wyrm."
+    },
+    {
+        "name": "Corrupted Skeleton",
+        "race": "Undead",
+        "attributes": {
+            "Power": 283,
+            "Speed": 219,
+            "Spirit": 249,
+            "Recovery": 253
+        },
+        "xp_reward": 268,
+        "loot_table": [
+            "Moon",
+            "Stone of the Trap"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Corrupted Skeleton. High fantasy art style, detailed creature design.",
+        "description": "A Undead known as Corrupted Skeleton."
+    },
+    {
+        "name": "Noble Hawk",
+        "race": "Beast",
+        "attributes": {
+            "Power": 247,
+            "Speed": 266,
+            "Spirit": 240,
+            "Recovery": 222
+        },
+        "xp_reward": 265,
+        "loot_table": [
+            "Directed",
+            "Gun"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Noble Hawk. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Noble Hawk."
+    },
+    {
+        "name": "Mystic Scarecrow",
+        "race": "Construct",
+        "attributes": {
+            "Power": 289,
+            "Speed": 280,
+            "Spirit": 232,
+            "Recovery": 223
+        },
+        "xp_reward": 270,
+        "loot_table": [
+            "Dark",
+            "Wing"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Mystic Scarecrow. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Mystic Scarecrow."
+    },
+    {
+        "name": "Noble Imp",
+        "race": "Demon",
+        "attributes": {
+            "Power": 241,
+            "Speed": 288,
+            "Spirit": 215,
+            "Recovery": 237
+        },
+        "xp_reward": 266,
+        "loot_table": [
+            "Balance",
+            "Fire"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Noble Imp. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Noble Imp."
+    },
+    {
+        "name": "Rabid Spirit",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 220,
+            "Speed": 258,
+            "Spirit": 288,
+            "Recovery": 262
+        },
+        "xp_reward": 270,
+        "loot_table": [
+            "Stone of the Blast",
+            "Sound"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Rabid Spirit. High fantasy art style, detailed creature design.",
+        "description": "A Elemental known as Rabid Spirit."
+    },
+    {
+        "name": "Dark Devil",
+        "race": "Demon",
+        "attributes": {
+            "Power": 276,
+            "Speed": 234,
+            "Spirit": 246,
+            "Recovery": 225
+        },
+        "xp_reward": 266,
+        "loot_table": [
+            "Stone of the Echo",
+            "Stone of the Shield"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Dark Devil. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Dark Devil."
+    },
+    {
+        "name": "Shadow Unicorn",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 374,
+            "Speed": 351,
+            "Spirit": 338,
+            "Recovery": 341
+        },
+        "xp_reward": 388,
+        "loot_table": [
+            "Stone of the Feast",
+            "Stone of the Flesh"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Shadow Unicorn. High fantasy art style, detailed creature design.",
+        "description": "A Magical Beast known as Shadow Unicorn."
+    },
+    {
+        "name": "Swift Bat",
+        "race": "Beast",
+        "attributes": {
+            "Power": 376,
+            "Speed": 374,
+            "Spirit": 360,
+            "Recovery": 315
+        },
+        "xp_reward": 390,
+        "loot_table": [
+            "Balance",
+            "Moon"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Swift Bat. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Swift Bat."
+    },
+    {
+        "name": "Armored Ghost",
+        "race": "Undead",
+        "attributes": {
+            "Power": 323,
+            "Speed": 382,
+            "Spirit": 355,
+            "Recovery": 368
+        },
+        "xp_reward": 390,
+        "loot_table": [
+            "Life",
+            "Mana"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Armored Ghost. High fantasy art style, detailed creature design.",
+        "description": "A Undead known as Armored Ghost."
+    },
+    {
+        "name": "Chaotic Hawk",
+        "race": "Beast",
+        "attributes": {
+            "Power": 370,
+            "Speed": 332,
+            "Spirit": 337,
+            "Recovery": 384
+        },
+        "xp_reward": 390,
+        "loot_table": [
+            "Stone of the Feast",
+            "Wind"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Chaotic Hawk. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Chaotic Hawk."
+    },
+    {
+        "name": "Rabid Elemental",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 343,
+            "Speed": 385,
+            "Spirit": 368,
+            "Recovery": 350
+        },
+        "xp_reward": 392,
+        "loot_table": [
+            "Swift",
+            "Shield"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Rabid Elemental. High fantasy art style, detailed creature design.",
+        "description": "A Elemental known as Rabid Elemental."
+    },
+    {
+        "name": "Mystic Wyrm",
+        "race": "Dragonkin",
+        "attributes": {
+            "Power": 331,
+            "Speed": 362,
+            "Spirit": 368,
+            "Recovery": 375
+        },
+        "xp_reward": 391,
+        "loot_table": [
+            "Might"
+        ],
+        "image_prompt": "A dangerous Dragonkin creature known as Mystic Wyrm. High fantasy art style, detailed creature design.",
+        "description": "A Dragonkin known as Mystic Wyrm."
+    },
+    {
+        "name": "Armored Lion",
+        "race": "Beast",
+        "attributes": {
+            "Power": 316,
+            "Speed": 318,
+            "Spirit": 369,
+            "Recovery": 346
+        },
+        "xp_reward": 382,
+        "loot_table": [
+            "Swift",
+            "Water"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Armored Lion. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Armored Lion."
+    },
+    {
+        "name": "Storm Spirit",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 344,
+            "Speed": 320,
+            "Spirit": 338,
+            "Recovery": 333
+        },
+        "xp_reward": 381,
+        "loot_table": [
+            "Stone of the Anchor",
+            "Stone of the Foot"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Storm Spirit. High fantasy art style, detailed creature design.",
+        "description": "A Elemental known as Storm Spirit."
+    },
+    {
+        "name": "Corrupted Scarecrow",
+        "race": "Construct",
+        "attributes": {
+            "Power": 417,
+            "Speed": 422,
+            "Spirit": 482,
+            "Recovery": 470
+        },
+        "xp_reward": 507,
+        "loot_table": [
+            "Stone of the Wall",
+            "Stone of Focus",
+            "Renewal"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Corrupted Scarecrow. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Corrupted Scarecrow."
+    },
+    {
+        "name": "Celestial Lich",
+        "race": "Undead",
+        "attributes": {
+            "Power": 475,
+            "Speed": 470,
+            "Spirit": 436,
+            "Recovery": 435
+        },
+        "xp_reward": 509,
+        "loot_table": [
+            "Stone of the Feast",
+            "Chaos",
+            "Time"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Celestial Lich. High fantasy art style, detailed creature design.",
+        "description": "A Undead known as Celestial Lich."
+    },
+    {
+        "name": "Chaotic Pegasus",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 443,
+            "Speed": 454,
+            "Spirit": 456,
+            "Recovery": 455
+        },
+        "xp_reward": 508,
+        "loot_table": [
+            "Stone of the Blast",
+            "Poison",
+            "Directed"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Chaotic Pegasus. High fantasy art style, detailed creature design.",
+        "description": "A Magical Beast known as Chaotic Pegasus."
+    },
+    {
+        "name": "Frost Fiend",
+        "race": "Demon",
+        "attributes": {
+            "Power": 476,
+            "Speed": 444,
+            "Spirit": 456,
+            "Recovery": 470
+        },
+        "xp_reward": 512,
+        "loot_table": [
+            "Light",
+            "Dimension",
+            "Technology"
+        ],
+        "image_prompt": "A dangerous Demon creature known as Frost Fiend. High fantasy art style, detailed creature design.",
+        "description": "A Demon known as Frost Fiend."
+    },
+    {
+        "name": "Crystal Gargoyle",
+        "race": "Construct",
+        "attributes": {
+            "Power": 461,
+            "Speed": 477,
+            "Spirit": 478,
+            "Recovery": 451
+        },
+        "xp_reward": 514,
+        "loot_table": [
+            "Stone of the Wall",
+            "Stone of the Swarm",
+            "Stone of the Trap"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Crystal Gargoyle. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Crystal Gargoyle."
+    },
+    {
+        "name": "Armored Elemental",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 524,
+            "Speed": 557,
+            "Spirit": 543,
+            "Recovery": 589
+        },
+        "xp_reward": 629,
+        "loot_table": [
+            "Life",
+            "Sin",
+            "Mana"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Armored Elemental. High fantasy art style, detailed creature design.",
+        "description": "A Elemental known as Armored Elemental."
+    },
+    {
+        "name": "Cursed Wyrm",
+        "race": "Dragonkin",
+        "attributes": {
+            "Power": 580,
+            "Speed": 517,
+            "Spirit": 552,
+            "Recovery": 518
+        },
+        "xp_reward": 624,
+        "loot_table": [
+            "Stone of Focus",
+            "Light",
+            "Lightning"
+        ],
+        "image_prompt": "A dangerous Dragonkin creature known as Cursed Wyrm. High fantasy art style, detailed creature design.",
+        "description": "A Dragonkin known as Cursed Wyrm."
+    }
 ]
