@@ -446,5 +446,54 @@
         "category": "History",
         "text": "Contentment breeds ambition. The High Archons of Aethel were not satisfied with mastery; they sought divinity. They theorized that if two essences could form a Confluence, then *all* essences combined would create the 'Omni-Essence'\u2014the power of creation itself. They constructed the Omega Spire, a massive focusing lens designed to draw mana from the planet's core and the sun simultaneously. They intended to overwrite the laws of physics, making themselves eternal gods of a new reality. They did not understand that some laws are load-bearing.",
         "image_prompt": "A massive crystal spire glowing with blinding multicolored light, mages channeling energy into it, cracks appearing in the sky."
+    },
+    {
+        "id": "lore_chronicle_x",
+        "title": "Chronicle X: The First Wave",
+        "category": "History",
+        "text": "The first year after the Awakening is known simply as 'The Cull'. When the System integrated with the collective consciousness of humanity, chaos ensued. It wasn't just the monsters; it was the people. Suddenly, office workers could throw fireballs, and farmers could lift wagons. Governments collapsed within weeks as traditional hierarchies were upended by raw power. The initial mortality rate was forty percent. Cities became battlegrounds. It was in this anarchy that the first Warlords rose, hoarding Essences and enforcing their own brutal laws. The concept of 'levels' and 'stats' replaced currency. Humanity survived, but it lost its innocence.",
+        "image_prompt": "A modern city in ruins, cars burning, civilians using magic against monsters, chaotic street scene."
+    },
+    {
+        "id": "lore_chronicle_xi",
+        "title": "Chronicle XI: The Siege of Greenstone",
+        "category": "History",
+        "text": "Five years post-Awakening, a massive Horde Event occurred. A Confluence of Decay and Beast magic birthed the Plague Lord Malakor. He led an army of mutated rats and zombies against the settlement of Greenstone. The siege lasted forty days. It was the first time Awakened of different factions\u2014The Iron Vanguard, The Arcane Assembly, and freelance adventurers\u2014fought side by side. The defense was successful, but at a terrible cost. The 'Heroes of Greenstone' are still celebrated today, their statues standing in the city square as a reminder that unity is the only path to survival.",
+        "image_prompt": "A massive siege battle at city walls, undead rats and zombies attacking, heroes glowing with light and fire defending."
+    },
+    {
+        "id": "lore_chronicle_xii",
+        "title": "Chronicle XII: The Treaty of Thorns",
+        "category": "History",
+        "text": "As the dust settled, territorial disputes threatened to start a civil war. The Druids' Circle, angered by the industrial expansion of the Iron Vanguard into the Whispering Woods, threatened to unleash a viral bloom that would consume the continent. Mediation was held in the neutral ground of the Sunken Ruins. The resulting 'Treaty of Thorns' established the current borders and Laws of Essence usage. It mandated that all Confluence-tier magic be registered and that nature preserves remain untouched. It is an uneasy peace, held together by the threat of mutual destruction.",
+        "image_prompt": "Leaders of different factions signing a glowing magical scroll in an underwater ruin, tense atmosphere."
+    },
+    {
+        "id": "lore_chronicle_xiii",
+        "title": "Chronicle XIII: The Current Era",
+        "category": "History",
+        "text": "We are now in the thirtieth year of the New Age. Society has rebuilt itself around the System. Schools now teach Mana Theory alongside Mathematics. The economy runs on Essence shards. The Adventurer's Guild regulates the population of 'Delvers' who enter the Rifts to harvest resources. While the major cities are safe, the wilderness remains deadly. Rumors whisper that the Seal is weakening again. New, unknown monster types are appearing, and the Void Rift in the badlands is pulsating with a rhythm that matches the heartbeat of something... massive.",
+        "image_prompt": "A futuristic yet fantasy cityscape, magitech vehicles, people with glowing accessories, peaceful but alert."
+    },
+    {
+        "id": "lore_black_sun",
+        "title": "The Day of Black Sun",
+        "category": "History",
+        "text": "Ten years ago, a solar eclipse coincided with a mana surge. For seven minutes, all Light magic ceased to function, while Dark and Void magic became uncontrollably potent. Thousands of low-ranked healers lost their connection to the light, while shadow mages inadvertently opened portals to the nether. It is remembered as a day of mourning, and many superstitious folk still hide indoors during any eclipse.",
+        "image_prompt": "A solar eclipse, black sun with purple corona, dark shadows stretching across the land, people cowering."
+    },
+    {
+        "id": "lore_adventurer_guild",
+        "title": "The Adventurer's Guild",
+        "category": "Faction",
+        "text": "Originally a loose coalition of mercenaries, the Guild is now a global institution. They assign ranks (Iron to Diamond), distribute quests, and buy monster parts. They are the de facto law in the borderlands. Their motto, 'Ad Astra Per Aspera' (To the Stars Through Difficulties), reflects the belief that humanity's destiny lies in mastering the System.",
+        "image_prompt": "A busy guild hall, adventurers looking at a quest board, receptionists handling loot, fantasy tavern vibe."
+    },
+    {
+        "id": "lore_the_system",
+        "title": "The System",
+        "category": "Magic",
+        "text": "The interface that overlays reality for all Awakened. It quantifies abstract concepts like strength and soul into numbers. Scholars debate its origin. Some say it's a defense mechanism of the planet; others believe it's an alien construct designed to gamify our evolution. Regardless, it is the lens through which we now view the world.",
+        "image_prompt": "A first-person view of a holographic blue interface overlaying a forest scene, stats and health bars visible."
     }
 ]
