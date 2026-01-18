@@ -13,6 +13,15 @@ MEDIA_MOUNT_DST="/mnt/media"
 
 echo "=== Setting up Plex LXC on Troubadour ==="
 
+# 0. Check if Container is already fully configured
+# We check for the existence of the Plex apt list as a proxy for a completed installation
+if pct list | grep -q "$CT_ID"; then
+    if pct exec $CT_ID -- test -f /etc/apt/sources.list.d/plexmediaserver.list; then
+        echo "Plex Container $CT_ID appears to be already configured. Exiting."
+        exit 0
+    fi
+fi
+
 # 1. Check if template exists, download if not
 pveam update
 if ! pveam list local | grep -q "$TEMPLATE_URN"; then
