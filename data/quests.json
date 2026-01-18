@@ -515,6 +515,138 @@
           }
         ]
       }
+    }
+  },
+  {
+    "id": "main_void_call",
+    "title": "The Void's Call",
+    "description": "The fabric of reality is thinning in the Scorched Wastes.",
+    "type": "Main",
+    "starting_stage_id": "stage_1",
+    "rewards": [
+      "Void Essence",
+      "Stone of the Echo"
+    ],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "Mages in the capital are unsettled. Readings from the Scorched Wastes show a massive spike in void energy.",
+        "choices": [
+          {
+            "text": "Investigate the Wastes",
+            "next_stage_id": "stage_2",
+            "consequence": "You travel to the desolate region."
+          }
+        ]
+      },
+      "stage_2": {
+        "id": "stage_2",
+        "description": "You reach the Ancient Spire. The air vibrates with a low hum. A tear in the sky pulses above.",
+        "choices": [
+          {
+            "text": "Climb the Spire",
+            "next_stage_id": "stage_3_climb",
+            "consequence": "You ascend the tower, fighting off void-touched constructs."
+          },
+          {
+            "text": "Enter the Rift",
+            "next_stage_id": "stage_3_rift",
+            "consequence": "You step directly into the tear, braving the unknown."
+          }
+        ]
+      },
+      "stage_3_climb": {
+        "id": "stage_3_climb",
+        "description": "At the summit, a device is amplifying the rift. It's guarded by a Void Sentinel.",
+        "choices": [
+          {
+            "text": "Destroy the device",
+            "next_stage_id": "COMPLETED",
+            "consequence": "The rift closes, but the Sentinel explodes, leaving behind a Void Essence."
+          }
+        ]
+      },
+      "stage_3_rift": {
+        "id": "stage_3_rift",
+        "description": "You float in a non-space. A presence watches you. It offers power in exchange for an anchor in reality.",
+        "choices": [
+          {
+            "text": "Reject and fight",
+            "next_stage_id": "COMPLETED",
+            "consequence": "You force yourself back to reality, clutching a fragment of the void."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "side_merchant_cargo",
+    "title": "Merchant's Dilemma",
+    "description": "A shipment was lost in the Shadowfen.",
+    "type": "Side",
+    "starting_stage_id": "stage_1",
+    "rewards": [
+      "Reputation",
+      "Stone of the Foot"
+    ],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "A frantic merchant in Mistfall Village grabs your arm. 'My cart! The swamp took it!'",
+        "choices": [
+          {
+            "text": "Search the swamp",
+            "next_stage_id": "stage_2",
+            "consequence": "The swamp is thick with fog."
+          }
+        ]
+      },
+      "stage_2": {
+        "id": "stage_2",
+        "description": "You find the cart half-sunk. Giant leeches are attached to the cargo crates.",
+        "choices": [
+          {
+            "text": "Burn them off",
+            "next_stage_id": "COMPLETED",
+            "consequence": "You save the cargo, though some is scorched. The merchant is grateful."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "side_frozen_silence",
+    "title": "The Frozen Silence",
+    "description": "Highland Watch has stopped sending reports.",
+    "type": "Side",
+    "starting_stage_id": "stage_1",
+    "rewards": [
+      "Wind Essence",
+      "Stone of the Wall"
+    ],
+    "stages": {
+      "stage_1": {
+        "id": "stage_1",
+        "description": "Commander Kael at Ironhold is worried. 'The Watch hasn't signaled in three days. The cold there is unnatural.'",
+        "choices": [
+          {
+            "text": "Trek to the Watch",
+            "next_stage_id": "stage_2",
+            "consequence": "The wind cuts like a knife as you climb."
+          }
+        ]
+      },
+      "stage_2": {
+        "id": "stage_2",
+        "description": "The outpost is encased in ice. The guards are frozen solid, but alive. An Ice Wraith floats above.",
+        "choices": [
+          {
+            "text": "Slay the Wraith",
+            "next_stage_id": "COMPLETED",
+            "consequence": "The ice shatters as the Wraith dies. The guards gasp for air."
+          }
+        ]
+      }
     },
     "image_prompt": "Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target."
   }
