@@ -3,6 +3,10 @@
     "name": "Greenstone City",
     "description": "A bustling city built around a massive, glowing green stone structure.",
     "type": "City",
+    "region": "Central Plains",
+    "danger_rank": "Iron",
+    "connected_locations": ["The Whispering Woods", "Crystal Caverns", "Azure Coast"],
+    "resources": ["Basic Supplies", "Iron Essence"],
     "image_prompt_positive": "Fantasy city, large green glowing crystal monolith in center, medieval architecture, busy market streets, magical atmosphere, bright sunlight, detailed textures, 4k",
     "image_prompt_negative": "dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts",
     "npcs": ["Rufus", "Thadwick"]
@@ -11,6 +15,10 @@
     "name": "The Whispering Woods",
     "description": "A dense forest where the trees seem to murmur secrets to those who listen.",
     "type": "Wilderness",
+    "region": "Central Plains",
+    "danger_rank": "Bronze",
+    "connected_locations": ["Greenstone City", "The Shadowfen"],
+    "resources": ["Wood Essence", "Herbs"],
     "image_prompt_positive": "Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed",
     "image_prompt_negative": "city, buildings, desert, bright day, plain, simple, cartoon"
   },
@@ -18,6 +26,10 @@
     "name": "Crystal Caverns",
     "description": "Deep underground caves filled with sharp, resonant crystals.",
     "type": "Dungeon",
+    "region": "Central Plains",
+    "danger_rank": "Silver",
+    "connected_locations": ["Greenstone City", "The Sunken Ruins"],
+    "resources": ["Crystal Essence", "Rare Gems"],
     "image_prompt_positive": "Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k",
     "image_prompt_negative": "sky, sun, grass, trees, flat, boring, noise"
   },
@@ -25,6 +37,10 @@
     "name": "Ironhold",
     "description": "A massive fortress city carved into the side of a mountain, headquarters of the Order of the Shield.",
     "type": "City",
+    "region": "Northern Peaks",
+    "danger_rank": "Bronze",
+    "connected_locations": ["Highland Watch"],
+    "resources": ["Iron Essence", "Weapons"],
     "image_prompt_positive": "Massive stone fortress carved into mountain, snow-capped peaks, iron gates, banners, defensive walls, soldier patrols, cold atmosphere, epic scale, 8k",
     "image_prompt_negative": "forest, beach, warm, sunny, wooden buildings, ruins",
     "npcs": ["Elara"]
@@ -33,6 +49,10 @@
     "name": "The Sunken Ruins",
     "description": "An ancient city partially submerged in a vast underground lake, glowing with eerie phosphorescence.",
     "type": "Dungeon",
+    "region": "Deep Earth",
+    "danger_rank": "Gold",
+    "connected_locations": ["Crystal Caverns"],
+    "resources": ["Water Essence", "Ancient Artifacts"],
     "image_prompt_positive": "Underwater ruins, ancient stone architecture, bioluminescent algae, water reflections, submerged statues, mystical blue light, aquatic atmosphere, detailed",
     "image_prompt_negative": "fire, desert, dry, sky, bright sun, modern"
   },
@@ -40,6 +60,10 @@
     "name": "The Scorched Wastes",
     "description": "A desolate desert landscape scarred by ancient magical fires that never truly went out.",
     "type": "Wilderness",
+    "region": "Southern Badlands",
+    "danger_rank": "Silver",
+    "connected_locations": ["The Ancient Spire"],
+    "resources": ["Fire Essence", "Obsidian"],
     "image_prompt_positive": "Desert landscape, cracked earth, magical fire fissures, red and orange lighting, smoke, ruins of obsidian, heat haze, dangerous atmosphere",
     "image_prompt_negative": "water, snow, green, trees, life, happy"
   },
@@ -47,7 +71,66 @@
     "name": "The Shadowfen",
     "description": "A treacherous swamp shrouded in perpetual twilight, home to poisonous flora and dark secrets.",
     "type": "Wilderness",
+    "region": "Eastern Swamps",
+    "danger_rank": "Bronze",
+    "connected_locations": ["The Whispering Woods", "Mistfall Village"],
+    "resources": ["Decay Essence", "Poisonous Plants"],
     "image_prompt_positive": "Swamp, twisted trees, fog, dark water, purple and black tones, eerie, spooky, mysterious lights, moss, detailed textures",
     "image_prompt_negative": "desert, bright sun, clean, dry, city, cheerful"
+  },
+  {
+    "name": "Highland Watch",
+    "description": "A small outpost perched on a cliff edge, monitoring the northern passes for threats.",
+    "type": "Outpost",
+    "region": "Northern Peaks",
+    "danger_rank": "Iron",
+    "connected_locations": ["Ironhold"],
+    "resources": ["Wind Essence", "Scout Reports"],
+    "image_prompt_positive": "Stone tower on cliff edge, snowy mountains background, wind flags, solitary guard, vast view, cold blue sky",
+    "image_prompt_negative": "forest, warm, city, crowd, underground"
+  },
+  {
+    "name": "The Ancient Spire",
+    "description": "A monolithic tower rising from the center of the Scorched Wastes, pulsing with unstable energy.",
+    "type": "Dungeon",
+    "region": "Southern Badlands",
+    "danger_rank": "Gold",
+    "connected_locations": ["The Scorched Wastes", "Void Rift"],
+    "resources": ["Arcane Essence", "Ancient Technology"],
+    "image_prompt_positive": "Tall black tower, glowing red runes, desert background, magical lightning, menacing, epic scale, low angle shot",
+    "image_prompt_negative": "nature, water, happy, bright colors, small"
+  },
+  {
+    "name": "Void Rift",
+    "description": "A tear in reality where the laws of physics break down. Only the strongest dare enter.",
+    "type": "Dimension",
+    "region": "Void",
+    "danger_rank": "Diamond",
+    "connected_locations": ["The Ancient Spire"],
+    "resources": ["Void Essence", "Chaos Stone"],
+    "image_prompt_positive": "Abstract landscape, floating rocks, purple and black swirling portal, stars, cosmic horror, surreal, dreamlike",
+    "image_prompt_negative": "normal world, ground, sky, buildings, trees"
+  },
+  {
+    "name": "Mistfall Village",
+    "description": "A secluded village of fishermen and herbalists living on stilts above the swamp waters.",
+    "type": "Village",
+    "region": "Eastern Swamps",
+    "danger_rank": "Iron",
+    "connected_locations": ["The Shadowfen"],
+    "resources": ["Fish", "Herbal Medicine"],
+    "image_prompt_positive": "Wooden houses on stilts, swamp water, lanterns, mist, evening light, cozy but mysterious, reflections",
+    "image_prompt_negative": "city, stone buildings, desert, mountains"
+  },
+  {
+    "name": "Azure Coast",
+    "description": "A beautiful coastline with sparkling blue waters and white sand, seemingly peaceful but hiding deep sea threats.",
+    "type": "Wilderness",
+    "region": "Western Coast",
+    "danger_rank": "Iron",
+    "connected_locations": ["Greenstone City"],
+    "resources": ["Water Essence", "Pearls"],
+    "image_prompt_positive": "Tropical beach, blue ocean, white sand, palm trees, bright sun, seagulls, crystal clear water",
+    "image_prompt_negative": "dark, snow, city, forest, night"
   }
 ]

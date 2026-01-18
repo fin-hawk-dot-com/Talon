@@ -31,6 +31,10 @@ class Location:
     type: str
     image_prompt_positive: str
     image_prompt_negative: str
+    region: str = "Unknown"
+    danger_rank: str = "Iron"
+    connected_locations: List[str] = field(default_factory=list)
+    resources: List[str] = field(default_factory=list)
     npcs: List[str] = field(default_factory=list)
 
 @dataclass
