@@ -776,5 +776,47 @@
       "Chaos"
     ],
     "image_prompt": "An ethereal essence orb representing Time. Visual style: Legendary magic, glowing with Abstract, Temporal, Chronology energy. The essence of time itself."
+  },
+  {
+    "name": "Ice",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": [
+      "Elemental",
+      "Cold",
+      "Solid",
+      "Water"
+    ],
+    "description": "The essence of cold and freezing.",
+    "opposite": "Fire",
+    "synergy": [
+      "Water",
+      "Earth",
+      "Air",
+      "Iron",
+      "Shield"
+    ],
+    "image_prompt": "An ethereal essence orb representing Ice. Visual style: Common magic, glowing with Elemental, Cold, Solid, Water energy. The essence of cold and freezing."
+  },
+  {
+    "name": "Poison",
+    "type": "Base",
+    "rarity": "Uncommon",
+    "tags": [
+      "Biological",
+      "Toxin",
+      "Death",
+      "Liquid"
+    ],
+    "description": "The essence of toxicity and venom.",
+    "opposite": "Renewal",
+    "synergy": [
+      "Death",
+      "Water",
+      "Nature",
+      "Blood",
+      "Dark"
+    ],
+    "image_prompt": "An ethereal essence orb representing Poison. Visual style: Uncommon magic, glowing with Biological, Toxin, Death, Liquid energy. The essence of toxicity and venom."
   }
 ]

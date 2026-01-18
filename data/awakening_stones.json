@@ -124,5 +124,23 @@
     "cooldown": "High",
     "cost_type": "Mana",
     "image_prompt": "A Rare Awakening Stone named Stone of Judgment, inscribed with runes of Execute. Deals high dmg to low HP/Debuffed targets. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Phantom",
+    "function": "Evasion",
+    "description": "Grants temporary intangibility or invisibility.",
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Phantom, inscribed with runes of Evasion. Grants temporary intangibility or invisibility. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Anchor",
+    "function": "Stability",
+    "description": "Prevents knockback and increases resistance.",
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Stamina",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Anchor, inscribed with runes of Stability. Prevents knockback and increases resistance. Glowing magical artifact."
   }
 ]

@@ -26,5 +26,19 @@
     "category": "Bestiary",
     "text": "Monsters are creatures corrupted by chaotic mana. They are ranked similarly to Awakened individuals.",
     "image_prompt": "An ancient illustration or text related to Monsters (Bestiary). Parchment style or historical scene."
+  },
+  {
+    "id": "lore_frozen_wastes",
+    "title": "The Frozen Wastes",
+    "category": "Location",
+    "text": "To the far north lies a land of eternal ice and snow, where Crystal Golems roam. It is said to be the source of the purest Ice Essence.",
+    "image_prompt": "An ancient illustration or text related to The Frozen Wastes (Location). Parchment style or historical scene."
+  },
+  {
+    "id": "lore_essence_sickness",
+    "title": "Essence Sickness",
+    "category": "Magic",
+    "text": "Overexposure to conflicting essences can cause Essence Sickness, a condition where the body rejects the magical energy, often manifesting as poison.",
+    "image_prompt": "An ancient illustration or text related to Essence Sickness (Magic). Parchment style or historical scene."
   }
 ]

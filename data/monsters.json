@@ -82,5 +82,41 @@
     ],
     "image_prompt": "A dangerous Dragonkin creature known as Bronze Drake. High fantasy art style, detailed creature design.",
     "description": "A Dragonkin known as Bronze Drake."
+  },
+  {
+    "name": "Crystal Golem",
+    "race": "Construct",
+    "attributes": {
+      "Power": 200,
+      "Speed": 60,
+      "Spirit": 150,
+      "Recovery": 100
+    },
+    "xp_reward": 200,
+    "loot_table": [
+      "Ice",
+      "Earth",
+      "Stone of the Shield"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Crystal Golem. High fantasy art style, detailed creature design.",
+    "description": "A Construct known as Crystal Golem made of shimmering ice crystals."
+  },
+  {
+    "name": "Shadow Stalker",
+    "race": "Magical Beast",
+    "attributes": {
+      "Power": 100,
+      "Speed": 250,
+      "Spirit": 120,
+      "Recovery": 80
+    },
+    "xp_reward": 180,
+    "loot_table": [
+      "Dark",
+      "Poison",
+      "Stone of the Strike"
+    ],
+    "image_prompt": "A dangerous Magical Beast creature known as Shadow Stalker. High fantasy art style, detailed creature design.",
+    "description": "A Magical Beast known as Shadow Stalker that blends into the darkness."
   }
 ]

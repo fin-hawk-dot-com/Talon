@@ -248,4 +248,20 @@ ABILITY_TEMPLATES = [
         affinity_weight={"Warrior": 10.0, "Rogue": 8.0, "General": 5.0},
         essence_tags=["Physical", "Metal", "Wind"]
     ),
+
+    # --- Area Attack ---
+    AbilityTemplate(
+        pattern="{essence} Breath",
+        function="Area Attack",
+        description_template="Exhales a cone of {essence}, engulfing enemies.",
+        affinity_weight={"Mage": 8.0, "General": 5.0},
+        essence_tags=["Elemental", "Gas", "Liquid"]
+    ),
+    AbilityTemplate(
+        pattern="{essence} Nova",
+        function="Area Attack",
+        description_template="Explodes with {essence} energy in all directions.",
+        affinity_weight={"Mage": 10.0, "Warrior": 5.0, "General": 5.0},
+        essence_tags=["Energy", "Elemental", "Destruction"]
+    ),
 ]
