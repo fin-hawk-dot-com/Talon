@@ -68,5 +68,19 @@
     "type": "Assassin",
     "rank_requirement": "Iron",
     "image_prompt": "Emblem or headquarters of The Silent Hand, a Assassin faction. A secretive guild of assassins and spies who sell their services to the highest bidder. Fantasy setting."
+  },
+  {
+    "name": "The Council of Six",
+    "description": "The governing body of Greenstone City, composed of representatives from major guilds and the common folk.",
+    "type": "Political",
+    "rank_requirement": "Iron",
+    "image_prompt": "Emblem of The Council of Six, a Political faction. Six distinct symbols arranged in a circle. Fantasy setting."
+  },
+  {
+    "name": "Merchant's Coalition",
+    "description": "An alliance of wealthy trading families controlling the economy.",
+    "type": "Merchant",
+    "rank_requirement": "Normal",
+    "image_prompt": "Emblem of Merchant's Coalition, a Merchant faction. Scales of commerce balanced with mana crystals. Fantasy setting."
   }
 ]

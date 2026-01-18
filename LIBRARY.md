@@ -414,6 +414,22 @@ A popular beverage among the upper class of Greenstone City. Brewed from the lea
 Held annually to mark the anniversary of the Awakening. Citizens light floating lanterns to guide the souls lost during the chaos. It is a time of reflection, but also of celebration, symbolizing that even a broken world can shine.
 > **Visual Prompt**: Night city scene, thousands of floating paper lanterns, crowd looking up, emotional atmosphere.
 
+#### Mage-Marking
+A social custom where mages tattoo their rank and affinity onto their skin using ink mixed with Essence. These marks glow when the mage casts a spell. While not legally required, an unmarked mage is often viewed with suspicion, as it implies they have something to hide—or are an unregistered hedge wizard.
+> **Visual Prompt**: Close up of a mage's arm or face with glowing geometric tattoos, casting a spell.
+
+#### Saint Elara's Day
+A holiday celebrating the saint who discovered Life Essence. On this day, all healing services are free, and citizens plant trees and flowers in the streets. It is considered bad luck to spill blood on Saint Elara's Day, so even the Adventurer's Guild pauses its monster-hunting contracts.
+> **Visual Prompt**: City streets filled with flowers, people planting saplings, festive and peaceful atmosphere.
+
+#### Sky Burials
+In the mountainous regions controlled by the Iron Vanguard, the dead are not buried. They are taken to high peaks and left for the griffins and giant eagles. It is believed that by feeding the beasts of the sky, the soul is carried upward to the Aethel's ancient domain. To be buried in the ground is considered a curse, trapping the soul in the dark.
+> **Visual Prompt**: A high mountain peak with a stone altar, birds circling overhead, solemn ceremony.
+
+#### The Dram
+The universal currency of Aetheria. A 'Dram' is a standardized weight of crystallized mana. Unlike gold, which has no intrinsic value, a Dram can be consumed to restore a small amount of mana, making it a commodity with practical use. Inflation is controlled by the simple fact that people literally eat their money when times are tough.
+> **Visual Prompt**: A pile of glowing blue crystal coins or small bars, stamped with magical runes.
+
 ### Faction
 
 #### Circle of Thorns
@@ -435,6 +451,10 @@ A loose confederation of mages and scholars who seek to understand the nature of
 #### The Iron Vanguard
 The Iron Vanguard is a military order dedicated to the protection of the realm through physical might and defensive magic. Based in Ironhold, they value discipline and strength above all.
 > **Visual Prompt**: A regiment of heavily armored knights standing in formation, banners waving, fortress in background, steel and gold colors.
+
+#### The Merchant's Coalition
+An alliance of the wealthiest trading families in Greenstone. They control the flow of Essence shards, monster parts, and foodstuffs. While they lack standing armies, their ability to freeze a city's economy gives them power rivaling kings. 'Gold talks, but Dram screams,' is their unofficial motto.
+> **Visual Prompt**: Wealthy merchants in fine silks negotiating in a lavish room, maps and coins on the table.
 
 #### The Shadow Syndicate
 An underground criminal network that deals in forbidden essences and secrets. Their influence reaches every major city, though few know who truly leads them.
@@ -665,6 +685,42 @@ The power of nothingness. Void magic deletes matter and energy, but its use come
 #### Water Essence
 The essence of adaptability and healing. Water magic flows around obstacles, eroding defenses over time or restoring vitality to the wounded.
 > **Visual Prompt**: A fluid sphere of water essence, blue and clear, ripples and droplets.
+
+### Religion
+
+#### The Church of the Healer
+The most widespread religion in the post-Awakening world. They worship the concept of 'Restoration'. They believe that the Awakening broke the world, and it is the duty of the faithful to mend it—both physically and spiritually. Their clerics provide free healing to the poor, funded by the exorbitant fees they charge adventurers for resurrection services.
+> **Visual Prompt**: Interior of a cathedral with stained glass depicting healing hands, clerics in white and gold robes.
+
+#### The Cult of the Reaper
+A nihilistic sect that views the System as a cage and Death as the only true freedom. They do not seek to destroy the world, but to 'liberate' souls from the cycle of violence and rebirth. They are outlawed in most major cities but operate openly in the lawless borderlands.
+> **Visual Prompt**: Hooded figures in a dark cave performing a ritual before a statue of a skeletal figure, purple candles.
+
+#### The Old Ways
+Before the Awakening and the System, there were the Primordials. Small pockets of rural folk still worship these ancient concepts—Stasis, Silence, and Depth. They reject the use of System-based magic, claiming it is 'loud' and offensive to the true gods. These communities are often immune to scrying magic.
+> **Visual Prompt**: A rustic village shrine with simple stone idols, no magical glow, peaceful and quiet.
+
+### Society
+
+#### Grand Archon Solus
+The current leader of the Arcane Assembly. A mage of unknown age who specializes in Light and Time magic. Rumors say he is actually a construct projected from the Ancient Spire, as he has not been seen to eat or sleep in forty years. He advocates for the complete regulation of all magic usage.
+> **Visual Prompt**: A stern wizard with glowing eyes, floating slightly off the ground, wearing robes of starlight.
+
+#### High King Thorian
+The ruler of Ironhold. A giant of a man, even by mountain standards. He wields the hammer 'Earth-Shaker', a weapon so heavy that no other man can lift it. He despises politics and prefers to solve disputes through trial by combat. Under his rule, Ironhold has become isolationist but impregnable.
+> **Visual Prompt**: A massive warrior king with a beard, holding a giant hammer, sitting on a throne.
+
+#### Matriarch Verna
+The head of the Church of the Healer. A kind-faced elderly woman who is secretly a Diamond-rank Life Mage. She is the only person in the world known to have resurrected someone who had been dead for over a year. She acts as the moral compass of the Council of Six.
+> **Visual Prompt**: An elderly woman with a gentle smile, wearing high priestess robes, glowing aura of warmth.
+
+#### The Council of Six
+The governing body of Greenstone City. Composed of representatives from the major guilds: The Adventurer's Guild, The Merchant's Coalition, The Arcane Assembly, The Iron Vanguard, The Church of the Healer, and a representative for the Common Folk. They meet in the Emerald Hall to decide on trade tariffs, defense budgets, and city laws. Debates are known to be heated, often requiring magical suppression fields to prevent 'accidental' duels.
+> **Visual Prompt**: Six distinct figures sitting around a circular table in a grand hall with green banners, fantasy politics.
+
+#### The Iron Court
+The absolute monarchy of Ironhold. While King Thorian sits on the throne, his decisions are advised by the Iron Court—a collection of generals and smith-lords. Access to the court is determined by one's contribution to the Kingdom's armory or defenses. In Ironhold, political power is directly proportional to military utility.
+> **Visual Prompt**: A dwarven/human king on an iron throne surrounded by armored generals, stone hall, fire braziers.
 
 ## Characters
 | Name | Race | Faction | Description | Visual Prompt |
