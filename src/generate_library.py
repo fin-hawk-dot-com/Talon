@@ -47,15 +47,16 @@ def generate_library_md(filepath="LIBRARY.md"):
             all_tags.add(t)
 
     lines.append(f"\n**Known Tags**: {', '.join(sorted(list(all_tags)))}")
-    lines.append("\n| Name | Type | Rarity | Tags | Description | Opposite | Synergy |")
-    lines.append("|---|---|---|---|---|---|---|")
+    lines.append("\n| Name | Type | Rarity | Tags | Description | Visual Prompt | Opposite | Synergy |")
+    lines.append("|---|---|---|---|---|---|---|---|")
 
     essences = sorted(loader.essences_data, key=lambda x: x['name'])
     for e in essences:
         tags = ", ".join(e['tags'])
         opposite = e.get('opposite', '-') or '-'
         synergy = ", ".join(e.get('synergy', []))
-        lines.append(f"| {e['name']} | {e['type']} | {e['rarity']} | {tags} | {e['description']} | {opposite} | {synergy} |")
+        prompt = e.get('image_prompt', '')
+        lines.append(f"| {e['name']} | {e['type']} | {e['rarity']} | {tags} | {e['description']} | {prompt} | {opposite} | {synergy} |")
 
     # --- Confluences ---
     lines.append("\n## Confluences")
@@ -69,15 +70,16 @@ def generate_library_md(filepath="LIBRARY.md"):
 
     # --- Awakening Stones ---
     lines.append("\n## Awakening Stones")
-    lines.append("| Name | Function | Description | Rarity | Cooldown | Cost Type |")
-    lines.append("|---|---|---|---|---|---|")
+    lines.append("| Name | Function | Description | Visual Prompt | Rarity | Cooldown | Cost Type |")
+    lines.append("|---|---|---|---|---|---|---|")
 
     stones = sorted(loader.stones_data, key=lambda x: x['name'])
     for s in stones:
         rarity = s.get('rarity', "Common")
         cooldown = s.get('cooldown', "Medium")
         cost_type = s.get('cost_type', "Mana")
-        lines.append(f"| {s['name']} | {s['function']} | {s['description']} | {rarity} | {cooldown} | {cost_type} |")
+        prompt = s.get('image_prompt', '')
+        lines.append(f"| {s['name']} | {s['function']} | {s['description']} | {prompt} | {rarity} | {cooldown} | {cost_type} |")
 
     # --- Ability Templates ---
     lines.append("\n## Ability Templates")
@@ -101,25 +103,28 @@ def generate_library_md(filepath="LIBRARY.md"):
 
     # --- Bestiary ---
     lines.append("\n## Bestiary")
-    lines.append("| Name | Race | Attributes (P/S/Sp/R) | XP | Loot |")
-    lines.append("|---|---|---|---|---|")
+    lines.append("| Name | Race | Description | Visual Prompt | Attributes (P/S/Sp/R) | XP | Loot |")
+    lines.append("|---|---|---|---|---|---|---|")
 
     monsters = sorted(loader.monsters_data, key=lambda x: x['name'])
     for m in monsters:
         attrs = m.get('attributes', {})
         attr_str = f"{attrs.get('Power',0)}/{attrs.get('Speed',0)}/{attrs.get('Spirit',0)}/{attrs.get('Recovery',0)}"
         loot = ", ".join(m.get('loot_table', []))
-        lines.append(f"| {m['name']} | {m['race']} | {attr_str} | {m.get('xp_reward',0)} | {loot} |")
+        desc = m.get('description', '')
+        prompt = m.get('image_prompt', '')
+        lines.append(f"| {m['name']} | {m['race']} | {desc} | {prompt} | {attr_str} | {m.get('xp_reward',0)} | {loot} |")
 
     # --- Quests ---
     lines.append("\n## Quests")
-    lines.append("| Title | Type | Description | Rewards |")
-    lines.append("|---|---|---|---|")
+    lines.append("| Title | Type | Description | Visual Prompt | Rewards |")
+    lines.append("|---|---|---|---|---|")
 
     quests = sorted(loader.quests_data, key=lambda x: x['title'])
     for q in quests:
         rewards = ", ".join(q.get('rewards', []))
-        lines.append(f"| {q['title']} | {q.get('type','Side')} | {q['description']} | {rewards} |")
+        prompt = q.get('image_prompt', '')
+        lines.append(f"| {q['title']} | {q.get('type','Side')} | {q['description']} | {prompt} | {rewards} |")
 
     # --- Locations ---
     lines.append("\n## Locations")
@@ -132,12 +137,25 @@ def generate_library_md(filepath="LIBRARY.md"):
 
     # --- Lore ---
     lines.append("\n## Lore")
-    lines.append("| Title | Category | Text |")
-    lines.append("|---|---|---|")
+    lines.append("| Title | Category | Text | Visual Prompt |")
+    lines.append("|---|---|---|---|")
 
     lore = sorted(loader.lore_data, key=lambda x: x['title'])
     for l in lore:
-        lines.append(f"| {l['title']} | {l['category']} | {l['text']} |")
+        prompt = l.get('image_prompt', '')
+        lines.append(f"| {l['title']} | {l['category']} | {l['text']} | {prompt} |")
+
+    # --- Characters ---
+    lines.append("\n## Characters")
+    lines.append("| Name | Race | Faction | Description | Visual Prompt |")
+    lines.append("|---|---|---|---|---|")
+
+    chars = sorted(loader.characters_data, key=lambda x: x['name'])
+    for c in chars:
+        prompt = c.get('image_prompt', '')
+        desc = c.get('description', '')
+        faction = c.get('faction', 'None')
+        lines.append(f"| {c['name']} | {c['race']} | {faction} | {desc} | {prompt} |")
 
     # --- Example Builds ---
     lines.append("\n## Example Builds")

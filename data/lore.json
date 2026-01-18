@@ -3,24 +3,28 @@
     "id": "lore_awakening",
     "title": "The Awakening",
     "category": "History",
-    "text": "The Awakening was a cataclysmic event that introduced magic to the world. It began with the appearance of the first rifts."
+    "text": "The Awakening was a cataclysmic event that introduced magic to the world. It began with the appearance of the first rifts.",
+    "image_prompt": "An ancient illustration or text related to The Awakening (History). Parchment style or historical scene."
   },
   {
     "id": "lore_ancient_civilization",
     "title": "The Lost Civilization",
     "category": "History",
-    "text": "Before the current era, a civilization known as the Aethel thrived. They were masters of Confluence magic."
+    "text": "Before the current era, a civilization known as the Aethel thrived. They were masters of Confluence magic.",
+    "image_prompt": "An ancient illustration or text related to The Lost Civilization (History). Parchment style or historical scene."
   },
   {
     "id": "lore_magic_basics",
     "title": "Basics of Magic",
     "category": "Magic",
-    "text": "Magic is manipulated through Essences. Every mage begins with three Base Essences which eventually form a Confluence."
+    "text": "Magic is manipulated through Essences. Every mage begins with three Base Essences which eventually form a Confluence.",
+    "image_prompt": "An ancient illustration or text related to Basics of Magic (Magic). Parchment style or historical scene."
   },
   {
     "id": "lore_monsters",
     "title": "Monsters",
     "category": "Bestiary",
-    "text": "Monsters are creatures corrupted by chaotic mana. They are ranked similarly to Awakened individuals."
+    "text": "Monsters are creatures corrupted by chaotic mana. They are ranked similarly to Awakened individuals.",
+    "image_prompt": "An ancient illustration or text related to Monsters (Bestiary). Parchment style or historical scene."
   }
 ]

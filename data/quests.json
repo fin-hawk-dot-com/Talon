@@ -58,7 +58,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Awakening'. You find yourself in a strange new world, with no memory of how you arrived."
   },
   {
     "id": "main_monster_surge",
@@ -119,7 +120,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Monster Surge'. Unusual monster activity is threatening the region."
   },
   {
     "id": "main_ancient_ruins",
@@ -180,7 +182,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Ancient Ruins'. An ancient structure has been unearthed nearby."
   },
   {
     "id": "side_lost_cat",
@@ -214,7 +217,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Lost Cat'. Mrs. Higgins has lost her cat, Mittens."
   },
   {
     "id": "side_herb_gathering",
@@ -248,7 +252,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'Herb Gathering'. The local alchemist needs Moonleaf."
   },
   {
     "id": "side_rival_duel",
@@ -298,7 +303,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Duel'. A rival adventurer has challenged you."
   },
   {
     "id": "side_syndicate_offer",
@@ -349,7 +355,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Syndicate's Offer'. A shady figure approaches you with a job offer from the Iron Syndicate."
   },
   {
     "id": "side_nature_wrath",
@@ -399,7 +406,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'Nature's Wrath'. The Verdant Circle needs help calming a corrupted spirit."
   },
   {
     "id": "main_secrets_deep",
@@ -445,7 +453,8 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'Secrets of the Deep'. Rumors of a submerged city draw you to the coast."
   },
   {
     "id": "side_shadow_threat",
@@ -638,6 +647,7 @@
           }
         ]
       }
-    }
+    },
+    "image_prompt": "Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target."
   }
 ]

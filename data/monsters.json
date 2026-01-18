@@ -9,7 +9,11 @@
       "Recovery": 15
     },
     "xp_reward": 10,
-    "loot_table": ["Stone of the Strike"]
+    "loot_table": [
+      "Stone of the Strike"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Giant Rat. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Giant Rat."
   },
   {
     "name": "Wild Boar",
@@ -21,7 +25,11 @@
       "Recovery": 50
     },
     "xp_reward": 20,
-    "loot_table": ["Might"]
+    "loot_table": [
+      "Might"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Wild Boar. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Wild Boar."
   },
   {
     "name": "Iron Wolf",
@@ -33,7 +41,12 @@
       "Recovery": 110
     },
     "xp_reward": 100,
-    "loot_table": ["Swift", "Stone of the Reflex"]
+    "loot_table": [
+      "Swift",
+      "Stone of the Reflex"
+    ],
+    "image_prompt": "A dangerous Magical Beast creature known as Iron Wolf. High fantasy art style, detailed creature design.",
+    "description": "A Magical Beast known as Iron Wolf."
   },
   {
     "name": "Rock Golem",
@@ -45,7 +58,12 @@
       "Recovery": 190
     },
     "xp_reward": 150,
-    "loot_table": ["Earth", "Stone of the Shield"]
+    "loot_table": [
+      "Earth",
+      "Stone of the Shield"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Rock Golem. High fantasy art style, detailed creature design.",
+    "description": "A Construct known as Rock Golem."
   },
   {
     "name": "Bronze Drake",
@@ -57,6 +75,12 @@
       "Recovery": 280
     },
     "xp_reward": 500,
-    "loot_table": ["Fire", "Dragon", "Stone of the Breath"]
+    "loot_table": [
+      "Fire",
+      "Dragon",
+      "Stone of the Breath"
+    ],
+    "image_prompt": "A dangerous Dragonkin creature known as Bronze Drake. High fantasy art style, detailed creature design.",
+    "description": "A Dragonkin known as Bronze Drake."
   }
 ]

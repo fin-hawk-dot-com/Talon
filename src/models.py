@@ -4,8 +4,6 @@ from typing import List, Dict, Optional, Union
 RANKS = ["Normal", "Iron", "Bronze", "Silver", "Gold", "Diamond"]
 RANK_INDICES = {rank: i for i, rank in enumerate(RANKS)}
 
-RANKS = ["Iron", "Bronze", "Silver", "Gold", "Diamond"]
-
 @dataclass
 class Essence:
     name: str
@@ -13,6 +11,7 @@ class Essence:
     rarity: str
     tags: List[str]
     description: str
+    image_prompt: str = ""
     bonded_attribute: Optional[str] = None
     opposite: Optional[str] = None
     synergy: List[str] = field(default_factory=list)
@@ -22,6 +21,7 @@ class Faction:
     name: str
     description: str
     type: str
+    image_prompt: str = ""
     rank_requirement: Optional[str] = None
 
 @dataclass
@@ -43,6 +43,7 @@ class LoreEntry:
     title: str
     category: str
     text: str
+    image_prompt: str = ""
 
 @dataclass
 class QuestChoice:
@@ -71,6 +72,7 @@ class Quest:
     stages: Dict[str, QuestStage]
     starting_stage_id: str
     rewards: List[str]
+    image_prompt: str = ""
     type: str = "Side"
 
 @dataclass
@@ -86,6 +88,7 @@ class AwakeningStone:
     name: str
     function: str
     description: str
+    image_prompt: str = ""
     rarity: str = "Common"
     cooldown: str = "Medium"
     cost_type: str = "Mana"
@@ -181,6 +184,7 @@ class Character:
     reputation: Dict[str, int] = field(default_factory=dict) # key: Faction Name, value: -100 to 100
     dialogue: Dict[str, str] = field(default_factory=dict) # key: trigger/status, value: text
     description: str = "" # NPC Description
+    image_prompt: str = ""
 
     def __post_init__(self):
         if self.current_health < 0:
@@ -201,15 +205,6 @@ class Character:
     @property
     def max_stamina(self) -> float:
         return self.attributes["Recovery"].value * 10.0
-
-    @property
-    def rank(self) -> str:
-        # Character rank is the lowest rank of their attributes
-        min_val = min(attr.value for attr in self.attributes.values())
-        idx = int(min_val / 100)
-        if idx >= len(RANKS):
-            return RANKS[-1]
-        return RANKS[idx]
 
     @property
     def rank(self) -> str:

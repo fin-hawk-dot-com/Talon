@@ -3,60 +3,70 @@
     "name": "Adventure Society",
     "description": "A global organization that manages monster hunting and exploration tasks. They rank members by their capability.",
     "type": "Guild",
-    "rank_requirement": "Iron"
+    "rank_requirement": "Iron",
+    "image_prompt": "Emblem or headquarters of Adventure Society, a Guild faction. A global organization that manages monster hunting and exploration tasks. They rank members by their capability. Fantasy setting."
   },
   {
     "name": "Magic Society",
     "description": "A collective of magic users dedicated to the research of essences, awakening stones, and magical phenomena. Often rivals with the Adventure Society for influence.",
     "type": "Academic",
-    "rank_requirement": "Bronze"
+    "rank_requirement": "Bronze",
+    "image_prompt": "Emblem or headquarters of Magic Society, a Academic faction. A collective of magic users dedicated to the research of essences, awakening stones, and magical phenomena. Often rivals with the Adventure Society for influence. Fantasy setting."
   },
   {
     "name": "Order of the Shield",
     "description": "A militant order focused on the protection of the innocent and maintaining peace.",
     "type": "Military",
-    "rank_requirement": "Iron"
+    "rank_requirement": "Iron",
+    "image_prompt": "Emblem or headquarters of Order of the Shield, a Military faction. A militant order focused on the protection of the innocent and maintaining peace. Fantasy setting."
   },
   {
     "name": "Mercenary Guild",
     "description": "A loose association of soldiers of fortune. While less regulated than the Adventure Society, they handle contracts that others won't touch.",
     "type": "Guild",
-    "rank_requirement": "Normal"
+    "rank_requirement": "Normal",
+    "image_prompt": "Emblem or headquarters of Mercenary Guild, a Guild faction. A loose association of soldiers of fortune. While less regulated than the Adventure Society, they handle contracts that others won't touch. Fantasy setting."
   },
   {
     "name": "Church of the Healer",
     "description": "Dedicated to healing and recovery. They operate hospitals and clinics across Pallimustus.",
     "type": "Religious",
-    "rank_requirement": "Normal"
+    "rank_requirement": "Normal",
+    "image_prompt": "Emblem or headquarters of Church of the Healer, a Religious faction. Dedicated to healing and recovery. They operate hospitals and clinics across Pallimustus. Fantasy setting."
   },
   {
     "name": "House Remore",
     "description": "A powerful noble family known for their strict discipline and high standards.",
     "type": "Noble",
-    "rank_requirement": "Iron"
+    "rank_requirement": "Iron",
+    "image_prompt": "Emblem or headquarters of House Remore, a Noble faction. A powerful noble family known for their strict discipline and high standards. Fantasy setting."
   },
   {
     "name": "Cult of the Reaper",
     "description": "A forbidden organization worshipping death and entropy.",
     "type": "Cult",
-    "rank_requirement": "Normal"
+    "rank_requirement": "Normal",
+    "image_prompt": "Emblem or headquarters of Cult of the Reaper, a Cult faction. A forbidden organization worshipping death and entropy. Fantasy setting."
   },
   {
     "name": "The Iron Syndicate",
     "description": "A clandestine criminal organization that controls the black market and illicit trade.",
     "type": "Criminal",
-    "rank_requirement": "Normal"
+    "rank_requirement": "Normal",
+    "image_prompt": "Emblem or headquarters of The Iron Syndicate, a Criminal faction. A clandestine criminal organization that controls the black market and illicit trade. Fantasy setting."
   },
   {
     "name": "The Verdant Circle",
     "description": "A group of druids and rangers dedicated to preserving nature and stopping the encroachment of civilization.",
     "type": "Druidic",
-    "rank_requirement": "Normal"
+    "rank_requirement": "Normal",
+    "image_prompt": "Emblem or headquarters of The Verdant Circle, a Druidic faction. A group of druids and rangers dedicated to preserving nature and stopping the encroachment of civilization. Fantasy setting."
   },
   {
     "name": "The Silent Hand",
     "description": "A secretive guild of assassins and spies who sell their services to the highest bidder.",
     "type": "Assassin",
-    "rank_requirement": "Iron"
+    "rank_requirement": "Iron",
+    "image_prompt": "Emblem or headquarters of The Silent Hand, a Assassin faction. A secretive guild of assassins and spies who sell their services to the highest bidder. Fantasy setting."
   }
 ]
