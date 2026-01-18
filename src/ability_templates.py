@@ -3,6 +3,10 @@ from typing import List, Dict, Optional
 
 @dataclass
 class AbilityTemplate:
+    """
+    Template for generating abilities.
+    Used by generate_library.py to document available ability patterns.
+    """
     pattern: str
     function: str
     description_template: str
