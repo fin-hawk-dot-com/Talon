@@ -494,14 +494,19 @@ def main():
             print("\n--- Travel ---")
             locations = engine.data_loader.get_all_locations()
             for i, loc in enumerate(locations):
-                print(f"{i+1}. {loc.name} ({loc.type})")
+                print(f"{i+1}. {loc.name} ({loc.type}) [Rank: {loc.danger_rank}]")
 
             try:
                 l_idx = int(input("Select location: ")) - 1
                 if 0 <= l_idx < len(locations):
                     loc = locations[l_idx]
-                    print(f"\nArrived at {loc.name}.")
+                    print(f"\nArrived at {loc.name} [{loc.region}].")
                     print(loc.description)
+
+                    if loc.connected_locations:
+                        print(f"Connected to: {', '.join(loc.connected_locations)}")
+                    if loc.resources:
+                        print(f"Resources: {', '.join(loc.resources)}")
 
                     if loc.npcs:
                         print("\nPeople here:")

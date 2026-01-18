@@ -176,6 +176,10 @@ class DataLoader:
                 type=l['type'],
                 image_prompt_positive=l['image_prompt_positive'],
                 image_prompt_negative=l['image_prompt_negative'],
+                region=l.get('region', "Unknown"),
+                danger_rank=l.get('danger_rank', "Iron"),
+                connected_locations=l.get('connected_locations', []),
+                resources=l.get('resources', []),
                 npcs=l.get('npcs', [])
             )
         return None
@@ -188,6 +192,10 @@ class DataLoader:
                 type=l['type'],
                 image_prompt_positive=l['image_prompt_positive'],
                 image_prompt_negative=l['image_prompt_negative'],
+                region=l.get('region', "Unknown"),
+                danger_rank=l.get('danger_rank', "Iron"),
+                connected_locations=l.get('connected_locations', []),
+                resources=l.get('resources', []),
                 npcs=l.get('npcs', [])
             ) for l in self.locations_data
         ]
