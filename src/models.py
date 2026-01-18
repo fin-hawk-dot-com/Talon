@@ -36,6 +36,7 @@ class Location:
     connected_locations: List[str] = field(default_factory=list)
     resources: List[str] = field(default_factory=list)
     npcs: List[str] = field(default_factory=list)
+    narrative: str = ""
 
 @dataclass
 class LoreEntry:

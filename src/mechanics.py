@@ -190,7 +190,8 @@ class DataLoader:
                 danger_rank=l.get('danger_rank', "Iron"),
                 connected_locations=l.get('connected_locations', []),
                 resources=l.get('resources', []),
-                npcs=l.get('npcs', [])
+                npcs=l.get('npcs', []),
+                narrative=l.get('narrative', "")
             )
         return None
 
@@ -206,7 +207,8 @@ class DataLoader:
                 danger_rank=l.get('danger_rank', "Iron"),
                 connected_locations=l.get('connected_locations', []),
                 resources=l.get('resources', []),
-                npcs=l.get('npcs', [])
+                npcs=l.get('npcs', []),
+                narrative=l.get('narrative', "")
             ) for l in self.locations_data
         ]
 
