@@ -31,6 +31,7 @@ class Location:
     type: str
     image_prompt_positive: str
     image_prompt_negative: str
+    npcs: List[str] = field(default_factory=list)
 
 @dataclass
 class LoreEntry:
@@ -172,6 +173,10 @@ class Character:
     xp_reward: int = 0
     loot_table: List[str] = field(default_factory=list)
     lore: List[str] = field(default_factory=list)
+    relationships: Dict[str, int] = field(default_factory=dict) # key: NPC Name, value: -100 to 100
+    reputation: Dict[str, int] = field(default_factory=dict) # key: Faction Name, value: -100 to 100
+    dialogue: Dict[str, str] = field(default_factory=dict) # key: trigger/status, value: text
+    description: str = "" # NPC Description
 
     def __post_init__(self):
         if self.current_health < 0:

@@ -115,6 +115,7 @@ def main():
         print("7. Quest Log / Adventure")
         print("8. Grimoire (Lore)")
         print("9. System (Save/Load)")
+        print("10. Travel / Interact")
         print("0. Exit")
 
         choice = input("\nSelect Action: ").strip()
@@ -341,19 +342,19 @@ def main():
         elif choice == "6":
             print("Simulating training montage...")
             # Simulate training all attributes
-            for attr_name in character.attributes:
-                engine.training_mgr.train_attribute(character, attr_name)
+            for attr_name in char.attributes:
+                engine.training_mgr.train_attribute(char, attr_name)
 
             # Simulate practicing all abilities and attempting rank up
-            for essence_name, abilities in character.abilities.items():
+            for essence_name, abilities in char.abilities.items():
                 for i, ability in enumerate(abilities):
                     if ability:
-                        leveled_up = engine.training_mgr.practice_ability(character, essence_name, i)
+                        leveled_up = engine.training_mgr.practice_ability(char, essence_name, i)
                         if leveled_up:
                             print(f"{ability.name} leveled up to {ability.level}!")
 
                         if ability.level == 9:
-                            rank_up_msg = engine.training_mgr.attempt_rank_up_ability(character, essence_name, i)
+                            rank_up_msg = engine.training_mgr.attempt_rank_up_ability(char, essence_name, i)
                             if "Success" in rank_up_msg:
                                 print(f"{ability.name} {rank_up_msg}")
 
@@ -488,6 +489,43 @@ def main():
                             print("Invalid selection.")
                     except ValueError:
                         print("Invalid input.")
+
+        elif choice == "10":
+            print("\n--- Travel ---")
+            locations = engine.data_loader.get_all_locations()
+            for i, loc in enumerate(locations):
+                print(f"{i+1}. {loc.name} ({loc.type})")
+
+            try:
+                l_idx = int(input("Select location: ")) - 1
+                if 0 <= l_idx < len(locations):
+                    loc = locations[l_idx]
+                    print(f"\nArrived at {loc.name}.")
+                    print(loc.description)
+
+                    if loc.npcs:
+                        print("\nPeople here:")
+                        for k, npc_name in enumerate(loc.npcs):
+                            print(f"{k+1}. {npc_name}")
+
+                        print("\nOptions:")
+                        print("1. Talk to someone")
+                        print("2. Leave")
+
+                        sub_choice = input("> ").strip()
+                        if sub_choice == "1":
+                            npc_idx = int(input("Select number: ")) - 1
+                            if 0 <= npc_idx < len(loc.npcs):
+                                npc_name = loc.npcs[npc_idx]
+                                print(f"\n{engine.interaction_mgr.interact(char, npc_name)}")
+                            else:
+                                print("Invalid selection.")
+                    else:
+                        print("\nThere is no one here to talk to.")
+                else:
+                    print("Invalid selection.")
+            except ValueError:
+                print("Invalid input.")
 
         elif choice == "0":
             sys.exit()
