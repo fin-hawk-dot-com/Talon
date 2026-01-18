@@ -7,6 +7,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.models import Essence, AwakeningStone, Character
 from src.mechanics import GameEngine
+from src.world_map import MapVisualizer
 
 def print_separator():
     print("-" * 60)
@@ -26,6 +27,7 @@ def choose_option(options, prompt):
 
 def main():
     engine = GameEngine()
+    map_viz = MapVisualizer(engine.data_loader)
     print_separator()
     print("Welcome to the HWFWM Progression Simulator")
 
@@ -116,6 +118,7 @@ def main():
         print("8. Grimoire (Lore)")
         print("9. System (Save/Load)")
         print("10. Travel / Interact")
+        print("11. View World Map")
         print("0. Exit")
 
         choice = input("\nSelect Action: ").strip()
@@ -489,6 +492,10 @@ def main():
                             print("Invalid selection.")
                     except ValueError:
                         print("Invalid input.")
+
+        elif choice == "11":
+            map_viz.display_map()
+            input("\nPress Enter to continue...")
 
         elif choice == "10":
             print("\n--- Travel ---")
