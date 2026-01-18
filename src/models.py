@@ -25,6 +25,13 @@ class Faction:
     rank_requirement: Optional[str] = None
 
 @dataclass
+class PointOfInterest:
+    name: str
+    description: str
+    type: str  # "Landmark", "Shop", "Building", "Area"
+    image_prompt: str = ""
+
+@dataclass
 class Location:
     name: str
     description: str
@@ -37,6 +44,7 @@ class Location:
     resources: List[str] = field(default_factory=list)
     npcs: List[str] = field(default_factory=list)
     narrative: str = ""
+    points_of_interest: List[PointOfInterest] = field(default_factory=list)
 
 @dataclass
 class LoreEntry:

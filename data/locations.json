@@ -23,6 +23,32 @@
       "Thadwick"
     ],
     "narrative": "The heart of the Central Plains, Greenstone City is a marvel of both magic and engineering. Dominated by the Colossal Emerald Monolith at its center, the city bathes in a perpetual, gentle green hum that seems to suppress violent emotions within the city walls. Market stalls bustle with traders selling goods from across the continent, while the prestigious Academy of Arcane Arts trains the next generation of spellcasters under the Monolith's watchful gaze."
+    "points_of_interest": [
+      {
+        "name": "Market District",
+        "description": "A crowded maze of stalls selling everything from fresh produce to minor magical trinkets. The scent of roasted meats and spices fills the air.",
+        "type": "District",
+        "image_prompt": "Medieval market, crowded, colorful stalls, spices, sunlight, fantasy city"
+      },
+      {
+        "name": "The Greenstone Monolith",
+        "description": "The massive, glowing green crystal for which the city is named. It hums with a low resonance that can be felt in your bones.",
+        "type": "Landmark",
+        "image_prompt": "Huge glowing green crystal monolith, city square, people worshipping, magical light"
+      },
+      {
+        "name": "City Gates",
+        "description": "Imposing iron-reinforced wooden gates manned by the city guard. Banners of the ruling council hang from the battlements.",
+        "type": "Building",
+        "image_prompt": "Large wooden gates, stone walls, guards, banners, fantasy city entrance"
+      },
+      {
+        "name": "The Guild Hall",
+        "description": "A grand stone building where adventurers gather to take contracts and trade information.",
+        "type": "Building",
+        "image_prompt": "Stone guild hall, adventurer gathering, notice board, interior tavern style"
+      }
+    ]
   },
   {
     "name": "The Whispering Woods",
@@ -41,6 +67,26 @@
     "image_prompt_positive": "Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed",
     "image_prompt_negative": "city, buildings, desert, bright day, plain, simple, cartoon",
     "narrative": "Step past the tree line, and the silence doesn't fall; it multiplies. The Whispering Woods are named for the incessant, unintelligible murmurs that seem to emanate from the ancient oaks themselves. Travelers speak of hearing the voices of lost loved ones or the taunts of their worst fears. The deeper one goes, the louder the whispers become, until they drown out thought itself. Bioluminescent fungi light the path, but they also attract the forest's strange, shifting inhabitants."
+    "points_of_interest": [
+      {
+        "name": "Ancient Grove",
+        "description": "A circle of massive, ancient trees that seem to watch you. The air here is still and heavy with magic.",
+        "type": "Landmark",
+        "image_prompt": "Ancient trees, circle layout, magical atmosphere, fireflies, moss"
+      },
+      {
+        "name": "The Singing Stream",
+        "description": "A crystal-clear stream that makes melodic sounds as it flows over smooth stones.",
+        "type": "Area",
+        "image_prompt": "Forest stream, clear water, magical sparkles, peaceful"
+      },
+      {
+        "name": "Shadowed Clearing",
+        "description": "A part of the woods where the canopy is so thick that it is always twilight. Unsettling movements can be seen in the corners of your vision.",
+        "type": "Area",
+        "image_prompt": "Dark forest clearing, spooky, shadows, twilight, mysterious"
+      }
+    ]
   },
   {
     "name": "Crystal Caverns",
@@ -59,6 +105,26 @@
     "image_prompt_positive": "Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k",
     "image_prompt_negative": "sky, sun, grass, trees, flat, boring, noise",
     "narrative": "Beneath the earth lies a world of sharp angles and refracted light. The Crystal Caverns are a labyrinth of jagged tunnels where massive gemstone formations grow like organic life. The air is cool and vibrates with a resonant frequency that can shatter glass. Adventurers flock here for the valuable essence-infused crystals, but many fall prey to the crystalline entities that detach from the walls to defend their glittering home."
+    "points_of_interest": [
+      {
+        "name": "The Great Hall",
+        "description": "A natural cavern of immense size, illuminated by thousands of bioluminescent fungi and crystals.",
+        "type": "Area",
+        "image_prompt": "Huge underground cavern, glowing mushrooms, crystals, stalactites"
+      },
+      {
+        "name": "Echo Chamber",
+        "description": "A narrow passage where every sound is amplified and repeated, potentially disorienting travelers.",
+        "type": "Area",
+        "image_prompt": "Narrow cave tunnel, crystals on walls, claustrophobic"
+      },
+      {
+        "name": "Deep Shaft",
+        "description": "A vertical drop into the unknown depths. Cold air drafts up from below.",
+        "type": "Landmark",
+        "image_prompt": "Deep pit in cave, darkness below, edge of cliff, danger"
+      }
+    ]
   },
   {
     "name": "Ironhold",
@@ -80,6 +146,26 @@
       "Elara"
     ],
     "narrative": "Carved directly into the granite face of the Northern Peaks, Ironhold is a testament to dwarven endurance and human ingenuity. It serves as the unyielding headquarters of the Order of the Shield. Massive iron gates, reinforced with defensive runes, bar entry to all but the authorized. Inside, the city is a vertical marvel of stone bridges, foundries, and barracks, constantly echoing with the ring of hammers on anvils."
+    "points_of_interest": [
+      {
+        "name": "The Forge",
+        "description": "The heart of the city, a massive foundry where weapons and armor are crafted day and night using volcanic heat.",
+        "type": "Building",
+        "image_prompt": "Giant forge, lava, blacksmiths, anvils, fire, industrial fantasy"
+      },
+      {
+        "name": "High Command",
+        "description": "The headquarters of the Order of the Shield, strictly guarded and imposing.",
+        "type": "Building",
+        "image_prompt": "Military fortress, stone command center, flags, tactical maps"
+      },
+      {
+        "name": "The Ramparts",
+        "description": "The outer walls offering a view of the snowy peaks and the valleys below.",
+        "type": "Area",
+        "image_prompt": "Castle walls, snow, mountains view, guard patrol"
+      }
+    ]
   },
   {
     "name": "The Sunken Ruins",
@@ -97,6 +183,26 @@
     "image_prompt_positive": "Underwater ruins, ancient stone architecture, bioluminescent algae, water reflections, submerged statues, mystical blue light, aquatic atmosphere, detailed",
     "image_prompt_negative": "fire, desert, dry, sky, bright sun, modern",
     "narrative": "Once a thriving metropolis of a forgotten era, this city now rests in the depths of a colossal underground lake. The water glows with an eerie blue phosphorescence, illuminating the preserved architecture of a civilization that drowned in its own hubris. Aquatic monsters roam the flooded boulevards, and the pressure is crushing, yet the allure of ancient artifacts draws the brave and the foolish alike into the watery abyss."
+    "points_of_interest": [
+      {
+        "name": "The Submerged Temple",
+        "description": "A temple half-buried in water, dedicated to a forgotten sea god.",
+        "type": "Building",
+        "image_prompt": "Underwater temple, ruins, seaweed, fish, ancient statues"
+      },
+      {
+        "name": "Plaza of Tides",
+        "description": "A large open area that floods periodically. Currently accessible.",
+        "type": "Area",
+        "image_prompt": "Ruined plaza, wet stone, puddles, algae, ancient architecture"
+      },
+      {
+        "name": "The Air Pocket",
+        "description": "A magical dome maintaining a dry area deep within the ruins.",
+        "type": "Landmark",
+        "image_prompt": "Magical bubble underwater, dry inside, campfire, adventurers resting"
+      }
+    ]
   },
   {
     "name": "The Scorched Wastes",
@@ -115,6 +221,26 @@
     "image_prompt_positive": "Desert landscape, cracked earth, magical fire fissures, red and orange lighting, smoke, ruins of obsidian, heat haze, dangerous atmosphere",
     "image_prompt_negative": "water, snow, green, trees, life, happy",
     "narrative": "A scarred wound on the face of the world, the Scorched Wastes are the aftermath of a magical cataclysm that evaporated the sea that once lay here. The ground is cracked, dry, and hot to the touch. Fissures spew magical fire that burns without fuel, and the wind carries the taste of ash and sulfur. Obsidian shards litter the landscape, remnants of glassed sand, and only creatures forged in fire can survive this desolate hellscape."
+    "points_of_interest": [
+      {
+        "name": "The Cracked Earth",
+        "description": "Miles of dry, cracked ground where heat radiates visibly.",
+        "type": "Area",
+        "image_prompt": "Desert, dry cracked ground, heat haze, red sky"
+      },
+      {
+        "name": "Obsidian Fields",
+        "description": "A field of sharp, jagged black glass formed by intense magical heat.",
+        "type": "Area",
+        "image_prompt": "Black sharp rocks, obsidian, dangerous terrain, volcanic"
+      },
+      {
+        "name": "The Fire Pits",
+        "description": "Natural vents spewing magical fire and smoke.",
+        "type": "Landmark",
+        "image_prompt": "Ground vents, fire, smoke, lava, hellish landscape"
+      }
+    ]
   },
   {
     "name": "The Shadowfen",
@@ -133,6 +259,26 @@
     "image_prompt_positive": "Swamp, twisted trees, fog, dark water, purple and black tones, eerie, spooky, mysterious lights, moss, detailed textures",
     "image_prompt_negative": "desert, bright sun, clean, dry, city, cheerful",
     "narrative": "A place of perpetual twilight, the Shadowfen is a choking expanse of brackish water, twisted mangrove roots, and hanging moss. The sun never fully penetrates the canopy, leaving the swamp in a grey gloom. The water is still and dark, hiding predators that strike without a ripple. Poisonous spores drift in the air, and the ground itself is treacherous, eager to swallow the boots of the unwary."
+    "points_of_interest": [
+      {
+        "name": "Rotting Boardwalk",
+        "description": "Treacherous wooden paths laid over the worst of the bog.",
+        "type": "Area",
+        "image_prompt": "Swamp, broken wooden path, fog, dark water"
+      },
+      {
+        "name": "The Mire",
+        "description": "Deep, sticky mud that threatens to swallow anyone who steps off the path.",
+        "type": "Area",
+        "image_prompt": "Muddy swamp, quicksand, dead trees, bubbles"
+      },
+      {
+        "name": "Glowing Pools",
+        "description": "Pools of water emitting a sickly green light, likely poisonous.",
+        "type": "Landmark",
+        "image_prompt": "Green glowing swamp water, toxic, eerie mist"
+      }
+    ]
   },
   {
     "name": "Highland Watch",
@@ -150,6 +296,26 @@
     "image_prompt_positive": "Stone tower on cliff edge, snowy mountains background, wind flags, solitary guard, vast view, cold blue sky",
     "image_prompt_negative": "forest, warm, city, crowd, underground",
     "narrative": "Perched precariously on a knife-edge cliff of the Northern Peaks, Highland Watch is the first line of defense against threats from the frozen wastes beyond. The wind here screams constantly, biting through even the thickest furs. It is a lonely, austere assignment for the soldiers stationed here, offering a panoramic view of the snow-swept mountains and the encroaching storms that often herald the arrival of frost giants or ice drakes."
+    "points_of_interest": [
+      {
+        "name": "The Lookout Tower",
+        "description": "The highest point, offering a strategic view of the north.",
+        "type": "Building",
+        "image_prompt": "Tall stone tower, mountains, snow, telescope"
+      },
+      {
+        "name": "Soldiers' Quarters",
+        "description": "Barracks for the stationed troops, warm and smelling of stew.",
+        "type": "Building",
+        "image_prompt": "Barracks interior, bunks, fireplace, soldiers"
+      },
+      {
+        "name": "The Signal Fire",
+        "description": "A large pyre ready to be lit in case of invasion.",
+        "type": "Landmark",
+        "image_prompt": "Huge wood pile, unlit bonfire, mountaintop"
+      }
+    ]
   },
   {
     "name": "The Ancient Spire",
@@ -168,6 +334,26 @@
     "image_prompt_positive": "Tall black tower, glowing red runes, desert background, magical lightning, menacing, epic scale, low angle shot",
     "image_prompt_negative": "nature, water, happy, bright colors, small",
     "narrative": "Rising like a black needle from the center of the Scorched Wastes, the Ancient Spire defies gravity and architectural logic. Its surface is smooth, seamless obsidian, etched with glowing red runes that pulse like a heartbeat. No door exists at its base; entry must be forced or found through magical means. Inside, the geometry is non-Euclidean, and the tower is said to house the unstable core of the cataclysm that destroyed the region."
+    "points_of_interest": [
+      {
+        "name": "Base Camp",
+        "description": "A temporary settlement of scholars and treasure hunters outside the tower.",
+        "type": "Area",
+        "image_prompt": "Tents, campfire, desert background, tower in distance"
+      },
+      {
+        "name": "The Runed Door",
+        "description": "The massive, sealed entrance to the spire covered in glowing glyphs.",
+        "type": "Landmark",
+        "image_prompt": "Giant metal door, glowing magical runes, mysterious"
+      },
+      {
+        "name": "The Ascending Stairs",
+        "description": "A spiral staircase inside the tower that seems to go on forever.",
+        "type": "Area",
+        "image_prompt": "Spiral stairs, interior tower, floating steps, magical void"
+      }
+    ]
   },
   {
     "name": "Void Rift",
@@ -185,6 +371,26 @@
     "image_prompt_positive": "Abstract landscape, floating rocks, purple and black swirling portal, stars, cosmic horror, surreal, dreamlike",
     "image_prompt_negative": "normal world, ground, sky, buildings, trees",
     "narrative": "Physics dissolves at the edge of the Void Rift. It is a tear in the fabric of reality, a swirling vortex of purple and black energy that hovers in a null-gravity field. Debris from the material world floats into it and disintegrates, while alien geometries seep out. Those who approach report a sensation of falling while standing still, and the whispers here are not from the past, but from entities that have never known existence in our universe."
+    "points_of_interest": [
+      {
+        "name": "The Edge of Reality",
+        "description": "Where the ground simply ends and dissolves into the void.",
+        "type": "Landmark",
+        "image_prompt": "Cliff edge, dissolving into space, stars, purple nebula"
+      },
+      {
+        "name": "Floating Islands",
+        "description": "Chunks of land defying gravity, connected by magical tethers.",
+        "type": "Area",
+        "image_prompt": "Floating rocks, purple sky, magical bridges"
+      },
+      {
+        "name": "The Swirling Vortex",
+        "description": "The center of the rift, a terrifying maelstrom of raw energy.",
+        "type": "Landmark",
+        "image_prompt": "Black hole, energy swirl, destruction, cosmic horror"
+      }
+    ]
   },
   {
     "name": "Mistfall Village",
@@ -202,6 +408,26 @@
     "image_prompt_positive": "Wooden houses on stilts, swamp water, lanterns, mist, evening light, cozy but mysterious, reflections",
     "image_prompt_negative": "city, stone buildings, desert, mountains",
     "narrative": "Suspended above the murky waters of the Shadowfen on sturdy ironwood stilts, Mistfall Village is a sanctuary of lanterns and fog. The villagers, expert herbalists and fishermen, live in harmony with the swamp, harvesting its rare poisons for medicines. Ropes and walkways connect the huts, and the air smells of roasting fish and damp wood. It is a quiet, eerie place, but one of the few safe havens in the dangerous east."
+    "points_of_interest": [
+      {
+        "name": "The Docks",
+        "description": "Rickety piers where fishing boats are moored.",
+        "type": "Area",
+        "image_prompt": "Wooden docks, fishing boats, nets, swamp water"
+      },
+      {
+        "name": "Elder's Hut",
+        "description": "The largest stilt-house, hung with dried herbs and charms.",
+        "type": "Building",
+        "image_prompt": "Large wooden hut on stilts, herbs hanging, mystical decorations"
+      },
+      {
+        "name": "The Herbalist's Garden",
+        "description": "A floating garden cultivating rare swamp plants.",
+        "type": "Area",
+        "image_prompt": "Floating garden beds, strange plants, mist"
+      }
+    ]
   },
   {
     "name": "Azure Coast",
@@ -219,5 +445,25 @@
     "image_prompt_positive": "Tropical beach, blue ocean, white sand, palm trees, bright sun, seagulls, crystal clear water",
     "image_prompt_negative": "dark, snow, city, forest, night",
     "narrative": "At first glance, the Azure Coast is paradise. White sands meet crystal-clear blue waters under a radiant sun. Palm trees sway in the gentle breeze, and the ocean teems with colorful life. However, veterans know that the beauty is a lure. The tides are controlled by temperamental water spirits, and the deep trenches just offshore harbor leviathans that view the beachgoers not as tourists, but as a buffet."
+    "points_of_interest": [
+      {
+        "name": "The White Sands",
+        "description": "Pristine beaches stretching for miles.",
+        "type": "Area",
+        "image_prompt": "White sand beach, blue ocean, sunny, palm trees"
+      },
+      {
+        "name": "Coral Reefs",
+        "description": "Vibrant underwater ecosystems visible just off the shore.",
+        "type": "Area",
+        "image_prompt": "Underwater coral reef, colorful fish, clear water"
+      },
+      {
+        "name": "The Lighthouse",
+        "description": "An old, automated magical lighthouse guiding ships away from the reefs.",
+        "type": "Building",
+        "image_prompt": "Old stone lighthouse, coast, ocean waves, sunset"
+      }
+    ]
   }
 ]
