@@ -146,6 +146,11 @@ class GameInterface:
         for attr in char.attributes.values():
             print(f"  {attr.name}: {attr.value:.1f} ({attr.rank}) [Mult: {attr.growth_multiplier}x]")
 
+        if char.status_effects:
+            print("Status Effects:")
+            for effect in char.status_effects:
+                print(f"  [{effect.name}] ({effect.duration} rounds left) - {effect.description}")
+
         print("\nEssences:")
         for e in char.get_all_essences():
             print(f"  {e.name} ({e.bonded_attribute})")
@@ -201,7 +206,14 @@ class GameInterface:
         while True:
             # Refresh status display
             print(f"\nYour Status: HP {char.current_health:.0f}/{char.max_health:.0f} | MP {char.current_mana:.0f}/{char.max_mana:.0f} | SP {char.current_stamina:.0f}/{char.max_stamina:.0f}")
+            if char.status_effects:
+                 effects_str = ", ".join([f"{e.name} ({e.duration})" for e in char.status_effects])
+                 print(f"  Effects: {effects_str}")
+
             print(f"Enemy Status: HP {monster.current_health:.0f}/{monster.max_health:.0f}")
+            if monster.status_effects:
+                 effects_str = ", ".join([f"{e.name} ({e.duration})" for e in monster.status_effects])
+                 print(f"  Effects: {effects_str}")
 
             print("\nCombat Options:")
             print("1. Attack")

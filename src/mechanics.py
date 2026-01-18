@@ -1,9 +1,10 @@
 import json
 import os
+import sys
 import random
 from dataclasses import asdict
 from typing import List, Optional, Union, Dict
-from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry, PointOfInterest
+from src.models import Essence, AwakeningStone, Ability, Character, Faction, Attribute, RANKS, RANK_INDICES, Quest, QuestStage, QuestProgress, QuestChoice, QuestObjective, Location, LoreEntry, PointOfInterest, StatusEffect
 from src.ability_templates import ABILITY_TEMPLATES, AbilityTemplate
 import dataclasses
 
@@ -822,6 +823,50 @@ class CombatManager:
         final_damage *= random.uniform(0.9, 1.1)
         return final_damage
 
+    def process_status_effects(self, character: Character) -> List[str]:
+        log = []
+        if not character.status_effects:
+            return log
+
+        remaining_effects = []
+        for effect in character.status_effects:
+            effect.duration -= 1
+
+            if effect.type == "DoT":
+                character.current_health -= effect.value
+                log.append(f"{character.name} took {effect.value:.1f} damage from {effect.name}!")
+            elif effect.type == "HoT":
+                character.current_health = min(character.max_health, character.current_health + effect.value)
+                log.append(f"{character.name} healed {effect.value:.1f} from {effect.name}!")
+            # Buffs/Debuffs logic could be here (applied during calculation usually), or just flavor
+
+            if effect.duration > 0:
+                remaining_effects.append(effect)
+            else:
+                log.append(f"{effect.name} on {character.name} has worn off.")
+
+        character.status_effects = remaining_effects
+        return log
+
+    def apply_status_effect(self, target: Character, effect: StatusEffect):
+        # Check if effect already exists, if so refresh or stack? For simplicity, stack or refresh logic
+        # Here we just append
+        target.status_effects.append(effect)
+
+    def determine_status_effect(self, ability: Ability, power_mult: float) -> Optional[StatusEffect]:
+        essence = ability.parent_essence
+        tags = set(essence.tags)
+
+        # Simple Logic
+        if "Fire" in tags and "Attack" in ability.parent_stone.function:
+            return StatusEffect("Burn", 3, 5.0 * power_mult, "DoT", "Burns the target over time.")
+        if "Poison" in tags or "Decay" in tags:
+            return StatusEffect("Poison", 3, 3.0 * power_mult, "DoT", "Poisons the target over time.")
+        if "Water" in tags and "Heal" in ability.parent_stone.function:
+            return StatusEffect("Regen", 3, 5.0 * power_mult, "HoT", "Heals over time.")
+
+        return None
+
     def execute_ability(self, user: Character, target: Character, ability: Ability) -> List[str]:
         log = []
 
@@ -861,6 +906,12 @@ class CombatManager:
             target.current_health -= dmg
             log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage!")
 
+            # Chance for status effect
+            effect = self.determine_status_effect(ability, power_mult)
+            if effect:
+                self.apply_status_effect(target, effect)
+                log.append(f"Applied {effect.name} to {target.name}!")
+
         elif "Defense" in function:
             # Temporary defense buff or heal? Let's do a heal/shield hybrid for simplicity
             # Or just restore health for now as a "Shield/Heal" abstraction
@@ -872,6 +923,11 @@ class CombatManager:
              heal_amount = user.attributes["Spirit"].value * power_mult
              user.current_health = min(user.max_health, user.current_health + heal_amount)
              log.append(f"Used {ability.name} and healed for {heal_amount:.1f}!")
+
+             effect = self.determine_status_effect(ability, power_mult)
+             if effect:
+                 self.apply_status_effect(user, effect)
+                 log.append(f"Applied {effect.name} to self!")
 
         elif "Summon" in function:
              log.append(f"Used {ability.name}! A summon appears (flavor only for now).")
@@ -892,6 +948,18 @@ class CombatManager:
 
     def combat_round(self, player: Character, enemy: Character, player_action: Union[str, Ability]) -> tuple[List[str], bool]:
         log = []
+
+        # Process Status Effects (Start of Round)
+        log.extend(self.process_status_effects(player))
+        log.extend(self.process_status_effects(enemy))
+
+        # Check deaths from DoTs
+        if player.current_health <= 0:
+             log.append("You succumbed to your injuries!")
+             return log, True
+        if enemy.current_health <= 0:
+             log.append(f"{enemy.name} succumbed to injuries!")
+             return log, True
 
         # Decrement Cooldowns for Player
         if player.abilities:
@@ -1176,6 +1244,10 @@ class GameEngine:
                 char.relationships = data['relationships']
             if 'reputation' in data:
                 char.reputation = data['reputation']
+
+            # Reconstruct Status Effects
+            if 'status_effects' in data:
+                char.status_effects = [StatusEffect(**se) for se in data['status_effects']]
 
             self.character = char
             return f"Game loaded from {filename}"

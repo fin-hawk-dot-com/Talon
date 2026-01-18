@@ -5,8 +5,51 @@ import os
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.models import Essence, AwakeningStone, Character, Ability
+from src.models import Essence, AwakeningStone, Character, Ability, StatusEffect
 from src.mechanics import GameEngine, CombatManager
+
+def test_status_effects():
+    print("\nTesting Status Effects...")
+    engine = GameEngine()
+
+    # Create Character
+    char = engine.create_character("TestChar", "Human")
+    char.attributes["Recovery"].value = 20.0 # 200 HP
+    char.__post_init__()
+    char.current_health = char.max_health # ensure full health
+
+    # Apply DoT
+    effect = StatusEffect("Burn", 3, 10.0, "DoT", "Burns")
+    engine.combat_mgr.apply_status_effect(char, effect)
+
+    print(f"Applied Burn: {char.status_effects}")
+
+    if len(char.status_effects) != 1:
+        print("FAIL: Effect not applied")
+        return
+
+    # Process Round 1
+    log = engine.combat_mgr.process_status_effects(char)
+    print(f"Round 1 Log: {log}")
+    print(f"HP: {char.current_health}")
+
+    if char.current_health == 190.0:
+        print("PASS: Damage tick 1")
+    else:
+        print(f"FAIL: Wrong damage (Expected 190, got {char.current_health})")
+
+    if char.status_effects[0].duration != 2:
+         print(f"FAIL: Duration not decremented (Expected 2, got {char.status_effects[0].duration})")
+
+    # Process Round 2
+    engine.combat_mgr.process_status_effects(char)
+    # Process Round 3
+    engine.combat_mgr.process_status_effects(char)
+
+    if not char.status_effects:
+        print("PASS: Effect expired")
+    else:
+        print(f"FAIL: Effect did not expire ({char.status_effects})")
 
 def test_combat_abilities():
     print("Testing Combat Ability Integration...")
@@ -76,3 +119,4 @@ def test_combat_abilities():
 
 if __name__ == "__main__":
     test_combat_abilities()
+    test_status_effects()

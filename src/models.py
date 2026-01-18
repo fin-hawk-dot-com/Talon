@@ -167,6 +167,14 @@ class Attribute:
         return int(val_in_rank / 10)
 
 @dataclass
+class StatusEffect:
+    name: str
+    duration: int # Rounds
+    value: float
+    type: str # "DoT", "Buff", "Debuff", "HoT"
+    description: str
+
+@dataclass
 class Character:
     name: str
     race: str
@@ -186,6 +194,7 @@ class Character:
     current_health: float = field(default=-1.0)
     current_mana: float = field(default=-1.0)
     current_stamina: float = field(default=-1.0)
+    status_effects: List[StatusEffect] = field(default_factory=list)
     xp_reward: int = 0
     loot_table: List[str] = field(default_factory=list)
     lore: List[str] = field(default_factory=list)
