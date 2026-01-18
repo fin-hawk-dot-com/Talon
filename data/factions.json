@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Adventure Society",
+    "description": "A global organization that manages monster hunting and exploration tasks. They rank members by their capability.",
+    "type": "Guild",
+    "rank_requirement": "Iron"
+  },
+  {
+    "name": "Magic Society",
+    "description": "A collective of magic users dedicated to the research of essences, awakening stones, and magical phenomena. Often rivals with the Adventure Society for influence.",
+    "type": "Academic",
+    "rank_requirement": "Bronze"
+  },
+  {
+    "name": "Order of the Shield",
+    "description": "A militant order focused on the protection of the innocent and maintaining peace.",
+    "type": "Military",
+    "rank_requirement": "Iron"
+  },
+  {
+    "name": "Mercenary Guild",
+    "description": "A loose association of soldiers of fortune. While less regulated than the Adventure Society, they handle contracts that others won't touch.",
+    "type": "Guild",
+    "rank_requirement": "Normal"
+  },
+  {
+    "name": "Church of the Healer",
+    "description": "Dedicated to healing and recovery. They operate hospitals and clinics across Pallimustus.",
+    "type": "Religious",
+    "rank_requirement": "Normal"
+  },
+  {
+    "name": "House Remore",
+    "description": "A powerful noble family known for their strict discipline and high standards.",
+    "type": "Noble",
+    "rank_requirement": "Iron"
+  },
+  {
+    "name": "Cult of the Reaper",
+    "description": "A forbidden organization worshipping death and entropy.",
+    "type": "Cult",
+    "rank_requirement": "Normal"
+  },
+  {
+    "name": "The Iron Syndicate",
+    "description": "A clandestine criminal organization that controls the black market and illicit trade.",
+    "type": "Criminal",
+    "rank_requirement": "Normal"
+  },
+  {
+    "name": "The Verdant Circle",
+    "description": "A group of druids and rangers dedicated to preserving nature and stopping the encroachment of civilization.",
+    "type": "Druidic",
+    "rank_requirement": "Normal"
+  },
+  {
+    "name": "The Silent Hand",
+    "description": "A secretive guild of assassins and spies who sell their services to the highest bidder.",
+    "type": "Assassin",
+    "rank_requirement": "Iron"
+  }
+]

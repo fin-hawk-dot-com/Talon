@@ -15,13 +15,15 @@ def generate_library_md(filepath="LIBRARY.md"):
     lines = []
     lines.append("# HWFWM System Library")
     lines.append("\n## Essences")
-    lines.append("| Name | Type | Rarity | Tags | Description |")
-    lines.append("|---|---|---|---|---|")
+    lines.append("| Name | Type | Rarity | Tags | Description | Opposite | Synergy |")
+    lines.append("|---|---|---|---|---|---|---|")
 
     essences = sorted(loader.essences_data, key=lambda x: x['name'])
     for e in essences:
         tags = ", ".join(e['tags'])
-        lines.append(f"| {e['name']} | {e['type']} | {e['rarity']} | {tags} | {e['description']} |")
+        opposite = e.get('opposite', '-')
+        synergy = ", ".join(e.get('synergy', []))
+        lines.append(f"| {e['name']} | {e['type']} | {e['rarity']} | {tags} | {e['description']} | {opposite} | {synergy} |")
 
     lines.append("\n## Confluences")
     lines.append("| Result | Base Essences | Archetype |")
@@ -33,12 +35,31 @@ def generate_library_md(filepath="LIBRARY.md"):
         lines.append(f"| {c['result']} | {bases} | {c['archetype']} |")
 
     lines.append("\n## Awakening Stones")
-    lines.append("| Name | Function | Description |")
-    lines.append("|---|---|---|")
+    lines.append("| Name | Function | Description | Rarity | Cooldown | Cost Type |")
+    lines.append("|---|---|---|---|---|---|")
 
     stones = sorted(loader.stones_data, key=lambda x: x['name'])
     for s in stones:
-        lines.append(f"| {s['name']} | {s['function']} | {s['description']} |")
+        rarity = s.get('rarity', "Common")
+        cooldown = s.get('cooldown', "Medium")
+        cost_type = s.get('cost_type', "Mana")
+        lines.append(f"| {s['name']} | {s['function']} | {s['description']} | {rarity} | {cooldown} | {cost_type} |")
+
+    lines.append("\n## Locations")
+    lines.append("| Name | Type | Description | Positive Prompt | Negative Prompt |")
+    lines.append("|---|---|---|---|---|")
+
+    locations = sorted(loader.locations_data, key=lambda x: x['name'])
+    for l in locations:
+        lines.append(f"| {l['name']} | {l['type']} | {l['description']} | {l['image_prompt_positive']} | {l['image_prompt_negative']} |")
+
+    lines.append("\n## Lore")
+    lines.append("| Title | Category | Text |")
+    lines.append("|---|---|---|")
+
+    lore = sorted(loader.lore_data, key=lambda x: x['title'])
+    for l in lore:
+        lines.append(f"| {l['title']} | {l['category']} | {l['text']} |")
 
     lines.append("\n## Example Builds")
 

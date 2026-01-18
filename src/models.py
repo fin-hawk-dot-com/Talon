@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Union
+
+RANKS = ["Normal", "Iron", "Bronze", "Silver", "Gold", "Diamond"]
+RANK_INDICES = {rank: i for i, rank in enumerate(RANKS)}
 
 RANKS = ["Iron", "Bronze", "Silver", "Gold", "Diamond"]
 
@@ -11,12 +14,76 @@ class Essence:
     tags: List[str]
     description: str
     bonded_attribute: Optional[str] = None
+    opposite: Optional[str] = None
+    synergy: List[str] = field(default_factory=list)
+
+@dataclass
+class Faction:
+    name: str
+    description: str
+    type: str
+    rank_requirement: Optional[str] = None
+
+@dataclass
+class Location:
+    name: str
+    description: str
+    type: str
+    image_prompt_positive: str
+    image_prompt_negative: str
+
+@dataclass
+class LoreEntry:
+    id: str
+    title: str
+    category: str
+    text: str
+
+@dataclass
+class QuestChoice:
+    text: str
+    next_stage_id: str
+    consequence: str
+
+@dataclass
+class QuestObjective:
+    type: str # "kill", "collect", "visit"
+    target: str # Monster name, Item name, Location name
+    count: int = 1
+
+@dataclass
+class QuestStage:
+    id: str
+    description: str
+    choices: List[QuestChoice] = field(default_factory=list)
+    objectives: List[QuestObjective] = field(default_factory=list)
+
+@dataclass
+class Quest:
+    id: str
+    title: str
+    description: str
+    stages: Dict[str, QuestStage]
+    starting_stage_id: str
+    rewards: List[str]
+    type: str = "Side"
+
+@dataclass
+class QuestProgress:
+    quest_id: str
+    current_stage_id: str
+    status: str = "Active"  # Active, Completed, Failed
+    history: List[str] = field(default_factory=list)
+    objectives_progress: Dict[str, int] = field(default_factory=dict) # key: "type:target", value: current_count
 
 @dataclass
 class AwakeningStone:
     name: str
     function: str
     description: str
+    rarity: str = "Common"
+    cooldown: str = "Medium"
+    cost_type: str = "Mana"
 
 @dataclass
 class Ability:
@@ -27,15 +94,14 @@ class Ability:
     parent_essence: Essence
     parent_stone: AwakeningStone
     xp: float = 0.0
-    cooldown: int = 0
+    cooldown: int = 0 # Static Max Cooldown from Stone/Rank
     cost: int = 0
-    tags: List[str] = field(default_factory=list)
-    affinity: Optional[str] = None
+    current_cooldown: int = 0 # Dynamic Runtime Cooldown
 
     @property
     def max_xp(self) -> float:
         # Simple XP curve: 100 * (level + 1) * rank_multiplier
-        rank_idx = RANKS.index(self.rank)
+        rank_idx = RANK_INDICES[self.rank]
         return 100.0 * (self.level + 1) * (rank_idx + 1)
 
     def gain_xp(self, amount: float) -> bool:
@@ -68,7 +134,10 @@ class Attribute:
 
     @property
     def rank(self) -> str:
-        # 0-99: Iron, 100-199: Bronze, etc.
+        # Normal: 0 - 99
+        # Iron: 100 - 199
+        # Bronze: 200 - 299
+        # ... and so on.
         idx = int(self.value / 100)
         if idx >= len(RANKS):
             return RANKS[-1]
@@ -76,9 +145,7 @@ class Attribute:
 
     @property
     def rank_level(self) -> int:
-        # Returns 0-99 representing progress through the rank
-        # Or maybe 0-9 to match the book style (Iron 1, Iron 2... Iron 9)
-        # Let's say every 10 points is a sub-rank.
+        # Returns 0-9 representing progress through the rank
         val_in_rank = self.value % 100
         return int(val_in_rank / 10)
 
@@ -86,6 +153,8 @@ class Attribute:
 class Character:
     name: str
     race: str
+    faction: Optional[str] = None
+    affinity: str = "General"  # Warrior, Mage, Rogue, Guardian, Support, General
     attributes: Dict[str, Attribute] = field(default_factory=lambda: {
         "Power": Attribute("Power", 10.0),
         "Speed": Attribute("Speed", 10.0),
@@ -95,6 +164,43 @@ class Character:
     base_essences: List[Essence] = field(default_factory=list)
     confluence_essence: Optional[Essence] = None
     abilities: Dict[str, List[Optional[Ability]]] = field(default_factory=dict)
+    inventory: List[Union[Essence, AwakeningStone]] = field(default_factory=list)
+    quests: Dict[str, QuestProgress] = field(default_factory=dict)
+    current_health: float = field(default=-1.0)
+    current_mana: float = field(default=-1.0)
+    current_stamina: float = field(default=-1.0)
+    xp_reward: int = 0
+    loot_table: List[str] = field(default_factory=list)
+    lore: List[str] = field(default_factory=list)
+
+    def __post_init__(self):
+        if self.current_health < 0:
+            self.current_health = self.max_health
+        if self.current_mana < 0:
+            self.current_mana = self.max_mana
+        if self.current_stamina < 0:
+            self.current_stamina = self.max_stamina
+
+    @property
+    def max_health(self) -> float:
+        return self.attributes["Recovery"].value * 10.0
+
+    @property
+    def max_mana(self) -> float:
+        return self.attributes["Spirit"].value * 10.0
+
+    @property
+    def max_stamina(self) -> float:
+        return self.attributes["Recovery"].value * 10.0
+
+    @property
+    def rank(self) -> str:
+        # Character rank is the lowest rank of their attributes
+        min_val = min(attr.value for attr in self.attributes.values())
+        idx = int(min_val / 100)
+        if idx >= len(RANKS):
+            return RANKS[-1]
+        return RANKS[idx]
 
     @property
     def rank(self) -> str:
