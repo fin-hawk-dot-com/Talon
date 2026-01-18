@@ -387,6 +387,12 @@ Predators that exist partially in the shadow plane. They are invisible in dim li
 Abominations from beyond the rift. Their forms are constantly shifting, and their touch corrupts living matter.
 > **Visual Prompt**: A shifting mass of tentacles and eyes, purple and black void energy.
 
+### Culture
+
+#### Festival of the Spark
+Celebrated on the winter solstice, this holiday commemorates the 'Solar Spark' that first brought light to the world. It is a day of truce where no offensive magic is allowed within city limits. Citizens release thousands of 'Sky-Lanterns'—small paper constructs animated by minor Fire and Air essences—into the night sky. It is said that if your lantern flies higher than the Spire, you will have a year of good fortune. The festival ends with a grand fireworks display courtesy of the Arcane Assembly.
+> **Visual Prompt**: Night scene of a fantasy city filled with thousands of glowing floating lanterns, crowds watching, warm atmosphere.
+
 ### Faction
 
 #### Circle of Thorns
@@ -466,6 +472,10 @@ As the dust settled, territorial disputes threatened to start a civil war. The D
 #### Chronicle XIII: The Current Era
 We are now in the thirtieth year of the New Age. Society has rebuilt itself around the System. Schools now teach Mana Theory alongside Mathematics. The economy runs on Essence shards. The Adventurer's Guild regulates the population of 'Delvers' who enter the Rifts to harvest resources. While the major cities are safe, the wilderness remains deadly. Rumors whisper that the Seal is weakening again. New, unknown monster types are appearing, and the Void Rift in the badlands is pulsating with a rhythm that matches the heartbeat of something... massive.
 > **Visual Prompt**: A futuristic yet fantasy cityscape, magitech vehicles, people with glowing accessories, peaceful but alert.
+
+#### Legend: The Void Walkers
+Official history states that anything entering the Void is erased. However, spacers and border-guards tell tales of the 'Void Walkers'—beings in tattered grey cloaks who walk out of the Rift and vanish into the badlands. They possess no System signature and register as 'Unknown' to appraisal skills. Some say they are the ghosts of the Aethel; others claim they are future echoes of Adventurers who failed. The Shadow Syndicate pays a high price for any confirmed sighting.
+> **Visual Prompt**: A mysterious figure in a tattered grey cloak walking through a purple wasteland, face obscured, distortion effect around them.
 
 #### Origin of Essences
 Theories suggest Essences are the shards of a shattered creator deity, each representing a facet of their power.
@@ -615,6 +625,10 @@ A condition caused by draining one's mana reserves too completely. Symptoms incl
 The ladder of power: Iron, Bronze, Silver, Gold, and Diamond. Each rank represents a qualitative shift in the density of one's mana soul.
 > **Visual Prompt**: A stepped pyramid or ladder, each step glowing with a different intensity/color.
 
+#### Rift Ecology
+Rifts (or Dungeons) are not just caves full of monsters; they are invasive pocket dimensions. When a Rift opens, it terraforms the surrounding area to match its internal logic. A Fire Rift will turn a forest into a volcano within days. Monsters inside are not born; they are 'spawned' by the Rift Core to defend itself. If a Core is not destroyed, the Rift will eventually 'Break', permanently merging its reality with Aetheria. This is why the Adventurer's Guild mandates the culling of Rifts before they reach critical mass.
+> **Visual Prompt**: A landscape split down the middle, one side green forest, the other side alien purple terrain spreading like an infection.
+
 #### Soul Binding
 A forbidden technique to bind a monster's soul to an item, creating intelligent weapons. The practice is outlawed by the Arcane Assembly.
 > **Visual Prompt**: A glowing sword with a face or eye in the hilt, dark background.
@@ -634,6 +648,22 @@ The power of nothingness. Void magic deletes matter and energy, but its use come
 #### Water Essence
 The essence of adaptability and healing. Water magic flows around obstacles, eroding defenses over time or restoring vitality to the wounded.
 > **Visual Prompt**: A fluid sphere of water essence, blue and clear, ripples and droplets.
+
+### Society
+
+#### The Essence Standard
+Before the Awakening, gold was the measure of wealth. Today, it is merely a conductor. The global economy now runs on the 'Essence Standard'. The primary currency is the 'Dram', a standardized weight of crystallized mana. Because Essence is required for everything—from powering city lights to leveling up—it has intrinsic value that fiat currency lacks. Inflation is strictly controlled by the Adventurer's Guild, which regulates the amount of raw mana introduced into the market from Rifts. A single pure Iron-rank Essence can feed a family for a year, while a Diamond-rank core could buy a small kingdom.
+> **Visual Prompt**: A fantasy bank vault filled with glowing colorful crystals instead of gold coins, merchants weighing glowing stones.
+
+#### The Stagnant
+Not everyone ascends. The 'Stagnant' are those who, due to lack of talent, resources, or courage, cap out at the Normal or Iron rank. They form the working class of Aetheria—the farmers, clerks, and laborers who support the high-flying Adventurers. While laws protect them, a subtle caste system has emerged. Higher-ranked individuals often view the Stagnant as 'fragile', while the Stagnant view Adventurers as dangerous ticking time bombs. This social friction is a breeding ground for groups like the 'Humanity First' movement.
+> **Visual Prompt**: A street scene showing a contrast between a glowing, armored adventurer and a group of plain-clothed, tired-looking workers.
+
+### Technology
+
+#### Aether-Technology
+The integration of magic and machine has birthed the age of 'Aether-Tech'. In Greenstone City, skyships kept afloat by Levitation Stones dock at high-altitude piers. The Iron Vanguard uses 'Thunder-Trains'—locomotives powered by captive Lightning Elementals—to transport troops across the continent in hours. Even the common household has benefited; 'Heat-Sinks' (enchanted stones) have replaced wood fires, and 'Lumen-Orbs' provide smokeless light. However, this reliance on magic makes infrastructure vulnerable to anti-magic pulses or Essence Sickness.
+> **Visual Prompt**: Steampunk-style airship with glowing blue runes on the balloon, docking at a high tower, magical city background.
 
 ## Characters
 | Name | Race | Faction | Description | Visual Prompt |

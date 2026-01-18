@@ -495,5 +495,47 @@
         "category": "Magic",
         "text": "The interface that overlays reality for all Awakened. It quantifies abstract concepts like strength and soul into numbers. Scholars debate its origin. Some say it's a defense mechanism of the planet; others believe it's an alien construct designed to gamify our evolution. Regardless, it is the lens through which we now view the world.",
         "image_prompt": "A first-person view of a holographic blue interface overlaying a forest scene, stats and health bars visible."
+    },
+    {
+        "id": "lore_economy_essence",
+        "title": "The Essence Standard",
+        "category": "Society",
+        "text": "Before the Awakening, gold was the measure of wealth. Today, it is merely a conductor. The global economy now runs on the 'Essence Standard'. The primary currency is the 'Dram', a standardized weight of crystallized mana. Because Essence is required for everything\u2014from powering city lights to leveling up\u2014it has intrinsic value that fiat currency lacks. Inflation is strictly controlled by the Adventurer's Guild, which regulates the amount of raw mana introduced into the market from Rifts. A single pure Iron-rank Essence can feed a family for a year, while a Diamond-rank core could buy a small kingdom.",
+        "image_prompt": "A fantasy bank vault filled with glowing colorful crystals instead of gold coins, merchants weighing glowing stones."
+    },
+    {
+        "id": "lore_magitech",
+        "title": "Aether-Technology",
+        "category": "Technology",
+        "text": "The integration of magic and machine has birthed the age of 'Aether-Tech'. In Greenstone City, skyships kept afloat by Levitation Stones dock at high-altitude piers. The Iron Vanguard uses 'Thunder-Trains'\u2014locomotives powered by captive Lightning Elementals\u2014to transport troops across the continent in hours. Even the common household has benefited; 'Heat-Sinks' (enchanted stones) have replaced wood fires, and 'Lumen-Orbs' provide smokeless light. However, this reliance on magic makes infrastructure vulnerable to anti-magic pulses or Essence Sickness.",
+        "image_prompt": "Steampunk-style airship with glowing blue runes on the balloon, docking at a high tower, magical city background."
+    },
+    {
+        "id": "lore_society_stagnant",
+        "title": "The Stagnant",
+        "category": "Society",
+        "text": "Not everyone ascends. The 'Stagnant' are those who, due to lack of talent, resources, or courage, cap out at the Normal or Iron rank. They form the working class of Aetheria\u2014the farmers, clerks, and laborers who support the high-flying Adventurers. While laws protect them, a subtle caste system has emerged. Higher-ranked individuals often view the Stagnant as 'fragile', while the Stagnant view Adventurers as dangerous ticking time bombs. This social friction is a breeding ground for groups like the 'Humanity First' movement.",
+        "image_prompt": "A street scene showing a contrast between a glowing, armored adventurer and a group of plain-clothed, tired-looking workers."
+    },
+    {
+        "id": "lore_ecology_dungeon",
+        "title": "Rift Ecology",
+        "category": "Magic",
+        "text": "Rifts (or Dungeons) are not just caves full of monsters; they are invasive pocket dimensions. When a Rift opens, it terraforms the surrounding area to match its internal logic. A Fire Rift will turn a forest into a volcano within days. Monsters inside are not born; they are 'spawned' by the Rift Core to defend itself. If a Core is not destroyed, the Rift will eventually 'Break', permanently merging its reality with Aetheria. This is why the Adventurer's Guild mandates the culling of Rifts before they reach critical mass.",
+        "image_prompt": "A landscape split down the middle, one side green forest, the other side alien purple terrain spreading like an infection."
+    },
+    {
+        "id": "lore_culture_festival",
+        "title": "Festival of the Spark",
+        "category": "Culture",
+        "text": "Celebrated on the winter solstice, this holiday commemorates the 'Solar Spark' that first brought light to the world. It is a day of truce where no offensive magic is allowed within city limits. Citizens release thousands of 'Sky-Lanterns'\u2014small paper constructs animated by minor Fire and Air essences\u2014into the night sky. It is said that if your lantern flies higher than the Spire, you will have a year of good fortune. The festival ends with a grand fireworks display courtesy of the Arcane Assembly.",
+        "image_prompt": "Night scene of a fantasy city filled with thousands of glowing floating lanterns, crowds watching, warm atmosphere."
+    },
+    {
+        "id": "lore_myth_voidwalkers",
+        "title": "Legend: The Void Walkers",
+        "category": "History",
+        "text": "Official history states that anything entering the Void is erased. However, spacers and border-guards tell tales of the 'Void Walkers'\u2014beings in tattered grey cloaks who walk out of the Rift and vanish into the badlands. They possess no System signature and register as 'Unknown' to appraisal skills. Some say they are the ghosts of the Aethel; others claim they are future echoes of Adventurers who failed. The Shadow Syndicate pays a high price for any confirmed sighting.",
+        "image_prompt": "A mysterious figure in a tattered grey cloak walking through a purple wasteland, face obscured, distortion effect around them."
     }
 ]
