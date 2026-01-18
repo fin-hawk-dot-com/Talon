@@ -55,6 +55,14 @@ class LoreEntry:
     image_prompt: str = ""
 
 @dataclass
+class StatusEffect:
+    name: str
+    duration: int # Rounds
+    value: float # Magnitude (damage per turn, stat reduction amount, etc.)
+    type: str # "DoT", "Buff", "Debuff", "CC" (Crowd Control)
+    description: str
+
+@dataclass
 class QuestChoice:
     text: str
     next_stage_id: str
@@ -194,6 +202,7 @@ class Character:
     dialogue: Dict[str, str] = field(default_factory=dict) # key: trigger/status, value: text
     description: str = "" # NPC Description
     image_prompt: str = ""
+    status_effects: List[StatusEffect] = field(default_factory=list)
 
     def __post_init__(self):
         if self.current_health < 0:

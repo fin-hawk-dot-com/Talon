@@ -7,7 +7,7 @@ from typing import Dict, Any, Callable
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.models import Essence, AwakeningStone, Character
+from src.models import Essence, AwakeningStone, Character, StatusEffect
 from src.mechanics import GameEngine
 from src.world_map import MapVisualizer
 
@@ -200,8 +200,20 @@ class GameInterface:
         char = self.engine.character
         while True:
             # Refresh status display
-            print(f"\nYour Status: HP {char.current_health:.0f}/{char.max_health:.0f} | MP {char.current_mana:.0f}/{char.max_mana:.0f} | SP {char.current_stamina:.0f}/{char.max_stamina:.0f}")
-            print(f"Enemy Status: HP {monster.current_health:.0f}/{monster.max_health:.0f}")
+            char_status_str = f"Your Status: HP {char.current_health:.0f}/{char.max_health:.0f} | MP {char.current_mana:.0f}/{char.max_mana:.0f} | SP {char.current_stamina:.0f}/{char.max_stamina:.0f}"
+            if char.status_effects:
+                effects_str = " ".join([f"[{e.name} {e.duration}]" for e in char.status_effects])
+                char_status_str += f" | Effects: {effects_str}"
+
+            enemy_status_str = f"Enemy Status: HP {monster.current_health:.0f}/{monster.max_health:.0f}"
+            if monster.status_effects:
+                 effects_str = " ".join([f"[{e.name} {e.duration}]" for e in monster.status_effects])
+                 enemy_status_str += f" | Effects: {effects_str}"
+
+            print("\n" + "="*60)
+            print(char_status_str)
+            print(enemy_status_str)
+            print("="*60)
 
             print("\nCombat Options:")
             print("1. Attack")
