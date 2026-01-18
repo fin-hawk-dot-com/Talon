@@ -393,6 +393,10 @@ Abominations from beyond the rift. Their forms are constantly shifting, and thei
 Guardians of the deep forests who believe civilization is an encroachment on the natural order. They wield Nature and Poison essences to deter intruders.
 > **Visual Prompt**: Druids with antler headdresses performing a ritual in a dense forest, glowing green runes, nature magic.
 
+#### The Adventurer's Guild
+Originally a loose coalition of mercenaries, the Guild is now a global institution. They assign ranks (Iron to Diamond), distribute quests, and buy monster parts. They are the de facto law in the borderlands. Their motto, 'Ad Astra Per Aspera' (To the Stars Through Difficulties), reflects the belief that humanity's destiny lies in mastering the System.
+> **Visual Prompt**: A busy guild hall, adventurers looking at a quest board, receptionists handling loot, fantasy tavern vibe.
+
 #### The Arcane Assembly
 A loose confederation of mages and scholars who seek to understand the nature of Essence. They operate from the Floating Spire and are often at odds with the Iron Vanguard regarding the use of dangerous artifacts.
 > **Visual Prompt**: A group of wizards in robes debating in a library filled with floating books and glowing orbs, mystical atmosphere.
@@ -443,9 +447,25 @@ With the Titans dormant and the Aethel gone, magic faded from the world. The Sea
 Thirty years ago, the Seal cracked. It began with the meteor shower known as the Starfall. The influx of cosmic mana overwhelmed the degrading Seal, causing it to leak. Magic returned, but violently. Animals mutated into Monsters. People began to 'Awaken', their souls forcibly adapting to the high-density mana, gaining the ability to quantify their power (the System). The Rift pulsed, and new, smaller tears appeared across the world. We are now in the Second Age of Magic. It is a time of chaos, but also of opportunity. Adventurers rise to do what the Aethel could not: master the power without being destroyed by it.
 > **Visual Prompt**: A modern adventurer glowing with blue aura, holding a magical sword, standing before a glowing rift.
 
+#### Chronicle X: The First Wave
+The first year after the Awakening is known simply as 'The Cull'. When the System integrated with the collective consciousness of humanity, chaos ensued. It wasn't just the monsters; it was the people. Suddenly, office workers could throw fireballs, and farmers could lift wagons. Governments collapsed within weeks as traditional hierarchies were upended by raw power. The initial mortality rate was forty percent. Cities became battlegrounds. It was in this anarchy that the first Warlords rose, hoarding Essences and enforcing their own brutal laws. The concept of 'levels' and 'stats' replaced currency. Humanity survived, but it lost its innocence.
+> **Visual Prompt**: A modern city in ruins, cars burning, civilians using magic against monsters, chaotic street scene.
+
 #### Celestial Fall
 When a star fell from the sky, creating the crater that is now the Sunken Ruins. The impact released strange cosmic energies.
 > **Visual Prompt**: A meteor striking the earth, explosion, shockwave, night sky.
+
+#### Chronicle XI: The Siege of Greenstone
+Five years post-Awakening, a massive Horde Event occurred. A Confluence of Decay and Beast magic birthed the Plague Lord Malakor. He led an army of mutated rats and zombies against the settlement of Greenstone. The siege lasted forty days. It was the first time Awakened of different factions—The Iron Vanguard, The Arcane Assembly, and freelance adventurers—fought side by side. The defense was successful, but at a terrible cost. The 'Heroes of Greenstone' are still celebrated today, their statues standing in the city square as a reminder that unity is the only path to survival.
+> **Visual Prompt**: A massive siege battle at city walls, undead rats and zombies attacking, heroes glowing with light and fire defending.
+
+#### Chronicle XII: The Treaty of Thorns
+As the dust settled, territorial disputes threatened to start a civil war. The Druids' Circle, angered by the industrial expansion of the Iron Vanguard into the Whispering Woods, threatened to unleash a viral bloom that would consume the continent. Mediation was held in the neutral ground of the Sunken Ruins. The resulting 'Treaty of Thorns' established the current borders and Laws of Essence usage. It mandated that all Confluence-tier magic be registered and that nature preserves remain untouched. It is an uneasy peace, held together by the threat of mutual destruction.
+> **Visual Prompt**: Leaders of different factions signing a glowing magical scroll in an underwater ruin, tense atmosphere.
+
+#### Chronicle XIII: The Current Era
+We are now in the thirtieth year of the New Age. Society has rebuilt itself around the System. Schools now teach Mana Theory alongside Mathematics. The economy runs on Essence shards. The Adventurer's Guild regulates the population of 'Delvers' who enter the Rifts to harvest resources. While the major cities are safe, the wilderness remains deadly. Rumors whisper that the Seal is weakening again. New, unknown monster types are appearing, and the Void Rift in the badlands is pulsating with a rhythm that matches the heartbeat of something... massive.
+> **Visual Prompt**: A futuristic yet fantasy cityscape, magitech vehicles, people with glowing accessories, peaceful but alert.
 
 #### Origin of Essences
 Theories suggest Essences are the shards of a shattered creator deity, each representing a facet of their power.
@@ -470,6 +490,10 @@ The year following the Sundering was known as the Ashen Year. Volcanic ash blott
 #### The Dark Winter
 A year where the sun did not rise. Ice Essence proliferated, creating the Frozen Wastes in the north.
 > **Visual Prompt**: Snowy landscape, dark sky, ice sculptures, cold atmosphere.
+
+#### The Day of Black Sun
+Ten years ago, a solar eclipse coincided with a mana surge. For seven minutes, all Light magic ceased to function, while Dark and Void magic became uncontrollably potent. Thousands of low-ranked healers lost their connection to the light, while shadow mages inadvertently opened portals to the nether. It is remembered as a day of mourning, and many superstitious folk still hide indoors during any eclipse.
+> **Visual Prompt**: A solar eclipse, black sun with purple corona, dark shadows stretching across the land, people cowering.
 
 #### The First Archmage
 Valerius the Wise, the first human to successfully bind multiple essences without going mad. He founded the Arcane Assembly.
@@ -594,6 +618,10 @@ The ladder of power: Iron, Bronze, Silver, Gold, and Diamond. Each rank represen
 #### Soul Binding
 A forbidden technique to bind a monster's soul to an item, creating intelligent weapons. The practice is outlawed by the Arcane Assembly.
 > **Visual Prompt**: A glowing sword with a face or eye in the hilt, dark background.
+
+#### The System
+The interface that overlays reality for all Awakened. It quantifies abstract concepts like strength and soul into numbers. Scholars debate its origin. Some say it's a defense mechanism of the planet; others believe it's an alien construct designed to gamify our evolution. Regardless, it is the lens through which we now view the world.
+> **Visual Prompt**: A first-person view of a holographic blue interface overlaying a forest scene, stats and health bars visible.
 
 #### Time Essence
 One of the rarest essences. It allows for the manipulation of causality, slowing enemies or accelerating recovery, but paradoxes are a constant danger.
