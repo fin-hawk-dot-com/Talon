@@ -203,10 +203,13 @@ When an Essence and Stone are combined, one of the following templates is chosen
 ## Quests
 | Title | Type | Description | Visual Prompt | Rewards |
 |---|---|---|---|---|
+| Culinary Chaos | Side | Chef Gordo of the Silver Spoon Inn needs 'Spicy Fire-Ant Eggs' for his famous chili. | A fat chef in a kitchen panic, holding a ladle, fire in the background. | Gordo's Special Chili, Reputation |
+| Echoes of the Past | Side | Travelers report a ghostly figure weeping in the Whispering Woods, not attacking, just mourning. | Ghostly woman in a dark forest, glowing blue, standing by a large tree root. | Old Locket, Spirit Essence |
 | Herb Gathering | Side | The local alchemist, Elara, is in dire need of Moonleaf for a critical brew. | Fantasy illustration depicting the quest 'Herb Gathering'. The local alchemist needs Moonleaf. | Mana Stone |
 | Merchant's Dilemma | Side | A valuable shipment was lost in the treacherous Shadowfen swamp. The merchant offers a rich reward for its recovery. | Fantasy illustration depicting the quest 'Merchant's Dilemma'. A shipment was lost in the Shadowfen. | Reputation, Stone of the Foot |
 | Nature's Wrath | Side | The Verdant Circle needs help calming a corrupted spirit that is ravaging the woodlands. | Fantasy illustration depicting the quest 'Nature's Wrath'. The Verdant Circle needs help calming a corrupted spirit. | Nature Essence |
 | Secrets of the Deep | Main | Fishermen speak of strange lights beneath the waves. Rumors of a submerged city draw you to the coast. | Fantasy illustration depicting the quest 'Secrets of the Deep'. Rumors of a submerged city draw you to the coast. | Water Essence, Ancient Relic |
+| The Alchemist's Mistake | Side | A novice alchemist has accidentally released a cloud of 'Laughing Gas' into the market square. It needs to be neutralized before everyone passes out from giggling. | Fantasy market square filled with pink mist, people laughing, chaotic but funny scene. | Potion of Clarity, 50 Dram |
 | The Ancient Ruins | Main | A tremor has revealed the entrance to a buried structure from the Age of Myths. Its secrets beckon to the brave and the foolish alike. | Fantasy illustration depicting the quest 'The Ancient Ruins'. An ancient structure has been unearthed nearby. | Confluence Essence |
 | The Awakening | Main | You stir from a deep, dreamless slumber to find yourself in a realm unlike any you know. The air hums with unseen energy, and your memories are but a haze. | Fantasy illustration depicting the quest 'The Awakening'. You find yourself in a strange new world, with no memory of how you arrived. | Starter Essence |
 | The Duel | Side | Garret, a pompous adventurer from a noble house, has publicly challenged your honor. | Fantasy illustration depicting the quest 'The Duel'. A rival adventurer has challenged you. | Reputation |
@@ -341,6 +344,12 @@ Physics dissolves at the edge of the Void Rift. It is a tear in the fabric of re
 
 ## Lore
 
+### Artifacts
+
+#### The Glass Shield
+A legendary shield said to be forged from a single piece of transparent diamond by the Titans. It is invisible until struck, at which point it flashes with blinding light. Its current location is unknown, though many claim to have seen it in the hands of a wandering mute knight.
+> **Visual Prompt**: A warrior holding an invisible shield, impact ripple of light visible, epic stance.
+
 ### Bestiary
 
 #### Ancient Bat
@@ -363,6 +372,10 @@ Constructs animated by rogue magic in the Crystal Caverns. Their bodies reflect 
 Wolves native to the metallic mountains of the north. Their fur contains traces of iron, granting them natural armor and razor-sharp claws.
 > **Visual Prompt**: A wolf with metallic grey fur, glowing yellow eyes, snowy background.
 
+#### Mana Moths
+Small, harmless insects that are naturally attracted to high concentrations of magic. They are often used by adventurers as a primitive danger sense; if a swarm of Mana Moths suddenly disperses, a predator or a mana storm is likely approaching.
+> **Visual Prompt**: Swarm of small glowing moths, blue and purple wings, forest night background.
+
 #### Mechanical Knight
 Ancient automatons left behind by the Aethel. They follow their last orders relentlessly, often patrolling ruins for centuries.
 > **Visual Prompt**: A clockwork knight in rusted armor, gears visible, glowing blue eye slit.
@@ -383,15 +396,33 @@ Simple constructs of animated stone. Slow and stupid, but possessing immense str
 Predators that exist partially in the shadow plane. They are invisible in dim light and strike with paralyzing venom.
 > **Visual Prompt**: A vague, panther-like silhouette with glowing purple eyes, blending into shadows.
 
+#### Sky Whales
+Colossal, peaceful beasts that drift through the upper atmosphere, feeding on cloud-mana. They are rarely seen from the ground, but airship travelers sometimes report hearing their mournful, resonant songs vibrating through the hull.
+> **Visual Prompt**: Giant whale with four wings flying in the clouds, tiny airship for scale, sunset.
+
 #### Void Demon
 Abominations from beyond the rift. Their forms are constantly shifting, and their touch corrupts living matter.
 > **Visual Prompt**: A shifting mass of tentacles and eyes, purple and black void energy.
+
+### Culture
+
+#### Essence Tea
+A popular beverage among the upper class of Greenstone City. Brewed from the leaves of the Mana-fern, it glows faintly in the cup. It is said to restore mental clarity and slightly replenish mana reserves, though drinking too much can cause 'thejitters', a state of hyper-awareness where one hears colors.
+> **Visual Prompt**: A porcelain teacup with glowing blue liquid, steam forming magical shapes, elegant setting.
+
+#### Festival of the Broken Moon
+Held annually to mark the anniversary of the Awakening. Citizens light floating lanterns to guide the souls lost during the chaos. It is a time of reflection, but also of celebration, symbolizing that even a broken world can shine.
+> **Visual Prompt**: Night city scene, thousands of floating paper lanterns, crowd looking up, emotional atmosphere.
 
 ### Faction
 
 #### Circle of Thorns
 Guardians of the deep forests who believe civilization is an encroachment on the natural order. They wield Nature and Poison essences to deter intruders.
 > **Visual Prompt**: Druids with antler headdresses performing a ritual in a dense forest, glowing green runes, nature magic.
+
+#### College of Silver Strings
+A guild of bards who have discovered that specific musical frequencies can resonate with the System. They use music to buff allies or sow confusion in enemies. They are headquartered in a magically acoustic amphitheater in the hills east of Greenstone.
+> **Visual Prompt**: Bards playing glowing instruments in a stone amphitheater, magical sound waves visible.
 
 #### The Adventurer's Guild
 Originally a loose coalition of mercenaries, the Guild is now a global institution. They assign ranks (Iron to Diamond), distribute quests, and buy monster parts. They are the de facto law in the borderlands. Their motto, 'Ad Astra Per Aspera' (To the Stars Through Difficulties), reflects the belief that humanity's destiny lies in mastering the System.
