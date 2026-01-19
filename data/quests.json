@@ -814,5 +814,101 @@
             }
         },
         "image_prompt": "A fat chef in a kitchen panic, holding a ladle, fire in the background."
+    },
+    {
+        "id": "side_glass_sanctum",
+        "title": "The Glass Sanctum Case",
+        "description": "Silver-Rank System Auditor Cassian Thorne needs assistance investigating the 'impossible' death of Commodore Elara in Orizon.",
+        "type": "Side",
+        "starting_stage_id": "stage_1",
+        "rewards": [
+            "Spirit Coins",
+            "Null-Silk Cloak"
+        ],
+        "stages": {
+            "stage_1": {
+                "id": "stage_1",
+                "description": "Cassian Thorne stands in the rain, looking at the Spire. 'The city's heartbeat skipped,' he says. 'Right when she died. The anomaly came from the Docks.'",
+                "choices": [
+                    {
+                        "text": "Investigate the Docks",
+                        "next_stage_id": "stage_2",
+                        "consequence": "You descend to the lower levels, where the neon-glowing barnacles cling to the piers."
+                    }
+                ]
+            },
+            "stage_2": {
+                "id": "stage_2",
+                "description": "The Docks are loud, but the acoustic signature points to one place: The Bell-Tower of the Drowned. A massive structure used to warn ships... or something else.",
+                "choices": [
+                    {
+                        "text": "Confront the Bell-Ringer",
+                        "next_stage_id": "stage_3",
+                        "consequence": "You find a blind monk trembling in the belfry."
+                    }
+                ]
+            },
+            "stage_3": {
+                "id": "stage_3",
+                "description": "The monk confesses. 'I didn't ring a warning! I rang the Welcome Song! The Authority gave me the schedule!' The frequency was meant to open a door, not kill.",
+                "choices": [
+                    {
+                        "text": "Inspect the Glass Sanctum",
+                        "next_stage_id": "stage_4",
+                        "consequence": "You return to the crime scene with this new knowledge."
+                    }
+                ]
+            },
+            "stage_4": {
+                "id": "stage_4",
+                "description": "The Glass Sanctum. The 'wrinkle' in the floor wasn't from a fight. The room vibrated like a tuning fork. Elara wasn't meditating; she was being shaken loose from her body. She was fighting Ascension.",
+                "choices": [
+                    {
+                        "text": "Climb the Spire",
+                        "next_stage_id": "stage_5",
+                        "consequence": "You ascend to the highest point of Orizon to confront the Authority."
+                    }
+                ]
+            },
+            "stage_5": {
+                "id": "stage_5",
+                "description": "You find the Sentinel. It is not a guardian. It is a corpse on a throne, a biological battery for the city's wards. Ascension is a lie. It's conscription for fuel.",
+                "choices": [
+                    {
+                        "text": "Expose the Truth",
+                        "next_stage_id": "stage_6_expose",
+                        "consequence": "You broadcast the truth to the city below. Panic ensues, but the lie is broken."
+                    },
+                    {
+                        "text": "Close the Ticket",
+                        "next_stage_id": "stage_6_close",
+                        "consequence": "You and Cassian agree. The city needs its wards. You mark the file 'Accidental Death'."
+                    }
+                ]
+            },
+            "stage_6_expose": {
+                "id": "stage_6_expose",
+                "description": "Chaos erupts in Orizon. The wards flicker as faith wavers. Cassian looks out at the burning city. 'Well,' he says, 'at least the paperwork is done.'",
+                "choices": [
+                    {
+                        "text": "Walk away",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "You leave Orizon behind, forever changed. You receive the 'Shard of Truth'."
+                    }
+                ]
+            },
+            "stage_6_close": {
+                "id": "stage_6_close",
+                "description": "Cassian files the report. The city hums on, eating its heroes to keep the lights on. He hands you a heavy cloak. 'For the migraines,' he mutters.",
+                "choices": [
+                    {
+                        "text": "Accept the payment",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "You receive the Null-Silk Cloak and a bag of Spirit Coins."
+                    }
+                ]
+            }
+        },
+        "image_prompt": "A detective standing in a glass room floating above a neon city, rain falling, mystery noir atmosphere."
     }
 ]

@@ -247,5 +247,79 @@
         }
       ]
     }
+  },
+  "Cassian Thorne": {
+    "root": {
+      "text": "Don't touch anything. I'm measuring the background mana flux. Wait... you're not from the Authority.",
+      "choices": [
+        {
+          "text": "Who are you?",
+          "next_id": "about_cassian"
+        },
+        {
+          "text": "What happened here?",
+          "next_id": "about_crime"
+        },
+        {
+          "text": "I'll leave you to it.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "about_cassian": {
+      "text": "Cassian Thorne, Silver-Rank System Auditor. I handle the problems the city pretends don't exist. Mostly, I try to keep the laws of physics from snapping like a cheap rubber band.",
+      "choices": [
+        {
+          "text": "Sounds stressful.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "about_crime": {
+      "text": "Commodore Elara. Gold Rank. Dead in a sealed room. No wounds, no mana drain. Just... ceased. And the only clue is a wrinkle in the floor. A wrinkle in diamond-hard glass.",
+      "choices": [
+        {
+          "text": "Strange.",
+          "next_id": "root"
+        }
+      ]
+    }
+  },
+  "The Bell-Ringer": {
+    "root": {
+      "text": "I... I just ring the bell! That's all I do! The Authority gave me the schedule!",
+      "choices": [
+        {
+          "text": "Calm down.",
+          "next_id": "calm_down"
+        },
+        {
+          "text": "What schedule?",
+          "next_id": "schedule"
+        },
+        {
+          "text": "Leave.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "calm_down": {
+      "text": "I can't! The thrum... it skipped a beat. I heard it! The Welcome Song... it wasn't a warning!",
+      "choices": [
+        {
+          "text": "Welcome Song?",
+          "next_id": "schedule"
+        }
+      ]
+    },
+    "schedule": {
+      "text": "They told me to hit the frequency for Ascension. To open the door. I didn't know she was fighting it! I didn't know!",
+      "choices": [
+        {
+          "text": "Who is 'They'?",
+          "next_id": "root"
+        }
+      ]
+    }
   }
 }

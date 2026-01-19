@@ -82,5 +82,19 @@
     "type": "Merchant",
     "rank_requirement": "Normal",
     "image_prompt": "Emblem of Merchant's Coalition, a Merchant faction. Scales of commerce balanced with mana crystals. Fantasy setting."
+  },
+  {
+    "name": "Spire Authority",
+    "description": "The ruling body of Orizon, responsible for maintaining the city's wards and managing the Ascension schedule. They prioritize stability above all else.",
+    "type": "Political",
+    "rank_requirement": "Gold",
+    "image_prompt": "Emblem of the Spire Authority, a Political faction. Geometric shapes, white marble, rigid structure. Fantasy setting."
+  },
+  {
+    "name": "System Auditors",
+    "description": "Bureaucrats tasked with investigating magical anomalies and enforcing the laws of physics. They view magic as a hazardous utility.",
+    "type": "Government",
+    "rank_requirement": "Silver",
+    "image_prompt": "Emblem of the System Auditors. A stylized eye or scale, minimalist, clean lines, metallic. Fantasy setting."
   }
 ]

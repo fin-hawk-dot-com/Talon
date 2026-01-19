@@ -628,5 +628,68 @@
         "category": "Faction",
         "text": "An alliance of the wealthiest trading families in Greenstone. They control the flow of Essence shards, monster parts, and foodstuffs. While they lack standing armies, their ability to freeze a city's economy gives them power rivaling kings. 'Gold talks, but Dram screams,' is their unofficial motto.",
         "image_prompt": "Wealthy merchants in fine silks negotiating in a lavish room, maps and coins on the table."
+    },
+    {
+        "id": "lore_orizon",
+        "title": "Orizon, City of Salt and Static",
+        "category": "Location",
+        "text": "The city doesn't just sit on the coast; it hangs off the edge of the world. Built into the spiraling, calcified shell of a dead leviathan, Orizon is a vertical maze of white marble and corroded iron. It breathes with a constant, low-frequency thrum\u2014the heartbeat of the city\u2019s wards keeping the ocean\u2019s toxicity at bay. The people worship Stability, paying taxes in Spirit Coins and praying the Sentinel doesn't blink.",
+        "image_prompt": "Vertical city built into a giant shell hanging off a cliff, white marble, iron, neon blue ocean below."
+    },
+    {
+        "id": "lore_luminous_deep",
+        "title": "The Luminous Deep",
+        "category": "Location",
+        "text": "Below Orizon churns an ocean so rich in raw mana that the spray creates 'Arcane Salt'. The toxicity is lethal to the unwarded. It is the source of the city's power and its greatest threat. The deep glow of the water illuminates the underbelly of the city day and night.",
+        "image_prompt": "Glowing neon blue ocean, turbulent waves, magical energy mist."
+    },
+    {
+        "id": "lore_sentinel",
+        "title": "The Sentinel",
+        "category": "Character",
+        "text": "The city\u2019s lone, immobile Diamond Ranker atop the Spire. The Sentinel is the linchpin of Orizon's defenses. Citizens believe the Sentinel watches over them, a sleepless guardian against the horrors of the Deep. The truth of the Sentinel's existence is known only to the Spire Authority.",
+        "image_prompt": "A glowing figure sitting on a throne at the top of a tower, silent, powerful, overlooking the city."
+    },
+    {
+        "id": "lore_cassian",
+        "title": "Cassian Thorne",
+        "category": "Character",
+        "text": "A Silver-Rank System Auditor. Cassian finds 'magic' exhausting. To him, a fireball is a thermal hazard requiring three forms of paperwork. He wears a coat lined with Null-Silk to dampen the city\u2019s background mana noise because he suffers from 'Aura Migraines'. He investigates System Errors with the weary precision of a janitor for the laws of physics.",
+        "image_prompt": "A tired detective in a grey coat, glasses, holding a clipboard, standing in a rainy neon city."
+    },
+    {
+        "id": "lore_elara_commodore",
+        "title": "Commodore Elara",
+        "category": "Character",
+        "text": "A Gold Ranker and the city's hope. She was the first person in a century predicted to reach Diamond Rank. Her face adorns recruitment posters across Orizon. Her recent death in the Glass Sanctum has shaken the city's faith in its own safety.",
+        "image_prompt": "Propaganda poster of a heroic woman in gold armor, saluting, bright and hopeful."
+    },
+    {
+        "id": "lore_glass_sanctum",
+        "title": "The Glass Sanctum",
+        "category": "Location",
+        "text": "A spherical meditation chamber suspended by gravity magic, three hundred feet above Orizon's plaza. It is a 'Null-State' environment designed for high-level cultivation. The floor is made of perfect Titan-glass, and the room is soundproofed against the city's eternal thrum.",
+        "image_prompt": "A floating glass sphere in the sky, minimalist interior, meditation mat, view of the city below."
+    },
+    {
+        "id": "lore_ascension_orizon",
+        "title": "Ascension (Orizon)",
+        "category": "Magic",
+        "text": "In Orizon, Ascension is not just personal growth; it is a conscription. The city requires high-ranking souls to power its wards. The Spire Authority manages the 'uploading' of these souls, a process euphemistically called 'Ascension'.",
+        "image_prompt": "Abstract art of a soul leaving a body and entering a machine or crystal."
+    },
+    {
+        "id": "lore_arcane_salt",
+        "title": "Arcane Salt",
+        "category": "Magic",
+        "text": "Crystals that form on skin and surfaces exposed to the spray of the Luminous Deep. They are highly conductive to mana and can cause mana burns if not washed off. Local dockworkers scrape them off hulls to sell as reagents.",
+        "image_prompt": "Crystals growing on a rusty metal surface, glowing faintly blue."
+    },
+    {
+        "id": "lore_null_silk",
+        "title": "Null-Silk",
+        "category": "Artifacts",
+        "text": "A rare fabric that dampens magical energy. Used by System Auditors and sensitive individuals to block out background mana radiation. It is expensive and difficult to weave, as magic cannot be used in its creation.",
+        "image_prompt": "Grey, matte fabric, smooth texture, absorbing light."
     }
 ]
