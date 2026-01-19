@@ -96,5 +96,12 @@
     "type": "Government",
     "rank_requirement": "Silver",
     "image_prompt": "Emblem of the System Auditors. A stylized eye or scale, minimalist, clean lines, metallic. Fantasy setting."
+  },
+  {
+    "name": "The Star-Seekers",
+    "description": "A monastic order of astronomers who believe the System is a cosmic signal. They study the stars to predict the future.",
+    "type": "Academic",
+    "rank_requirement": "Silver",
+    "image_prompt": "Emblem of The Star-Seekers, a Academic faction. A telescope over a star field. Fantasy setting."
   }
 ]
