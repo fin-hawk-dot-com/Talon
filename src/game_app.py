@@ -63,14 +63,14 @@ class GameApp:
         self.left_panel.pack_propagate(False) # Don't shrink
 
         ttk.Label(self.left_panel, text="Character Status", style="Title.TLabel").pack(pady=10)
-        self.status_text = tk.Text(self.left_panel, wrap=tk.WORD, height=30, bg="#f0f0f0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
+        self.status_text = tk.Text(self.left_panel, wrap=tk.WORD, height=30, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
         self.status_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
         # 3. Center Panel: Game Log / Output
         self.center_panel = ttk.Frame(self.main_container, relief=tk.SUNKEN, borderwidth=2)
         self.center_panel.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=5, pady=5)
 
-        self.log_text = tk.Text(self.center_panel, wrap=tk.WORD, state=tk.DISABLED, font=('Georgia', 11))
+        self.log_text = tk.Text(self.center_panel, wrap=tk.WORD, state=tk.DISABLED, font=('Georgia', 11), bg="#1e1e1e", fg="#cccccc")
         self.log_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
         log_scroll = ttk.Scrollbar(self.center_panel, orient=tk.VERTICAL, command=self.log_text.yview)
@@ -78,11 +78,11 @@ class GameApp:
         self.log_text.configure(yscrollcommand=log_scroll.set)
 
         # Tag configs for coloring text
-        self.log_text.tag_config("info", foreground="black")
-        self.log_text.tag_config("combat", foreground="red")
-        self.log_text.tag_config("gain", foreground="green")
-        self.log_text.tag_config("event", foreground="blue")
-        self.log_text.tag_config("error", foreground="orange")
+        self.log_text.tag_config("info", foreground="#cccccc")
+        self.log_text.tag_config("combat", foreground="#ff5555")
+        self.log_text.tag_config("gain", foreground="#55ff55")
+        self.log_text.tag_config("event", foreground="#55aaff")
+        self.log_text.tag_config("error", foreground="#ffaaff")
 
         # 4. Right Panel: Actions
         self.right_panel = ttk.Frame(self.main_container, width=200, relief=tk.RIDGE, borderwidth=2)
