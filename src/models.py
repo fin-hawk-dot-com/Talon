@@ -214,6 +214,7 @@ class Character:
     description: str = "" # NPC Description
     image_prompt: str = ""
     status_effects: List[StatusEffect] = field(default_factory=list)
+    current_location: str = "Greenstone City"
 
     def __post_init__(self):
         if self.current_health < 0:

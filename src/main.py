@@ -128,6 +128,10 @@ class GameInterface:
 
     def print_status(self):
         char = self.engine.character
+        print_separator()
+        print(f"\nName: {char.name} | Race: {char.race} | Rank: {char.rank}")
+        print(f"Location: {char.current_location}")
+        print("Attributes:")
         ui.print_header(f"{char.name} the {char.race} | Rank: {char.rank}")
 
         print(ui.colored("Attributes:", Colors.BOLD))
@@ -183,17 +187,18 @@ class GameInterface:
             ui.print_error("Invalid attribute.")
 
     def action_adventure(self):
-        ui.clear()
-        ui.print_header("Adventure")
-        ui.slow_print("Searching for trouble...", speed=0.03)
+        char = self.engine.character
+        print(f"\nSearching for trouble in {char.current_location}...")
 
-        monsters = self.engine.data_loader.get_all_monsters()
-        if not monsters:
-            ui.print_error("No monsters found.")
+        # Get monsters specific to location
+        possible_monsters = self.engine.get_monsters_for_location(char.current_location)
+
+        if not possible_monsters:
+            print("No monsters found in this area.")
             return
 
-        m_name = random.choice(monsters)
-        monster = self.engine.data_loader.get_monster(m_name)
+        # Pick a random monster from the filtered list
+        monster = random.choice(possible_monsters)
 
         ui.print_warning(f"\nYou encountered a {monster.name} ({monster.rank})!")
         print(f"Health: {monster.current_health:.1f}/{monster.max_health:.1f}")
@@ -550,12 +555,74 @@ class GameInterface:
 
     def action_travel(self):
         char = self.engine.character
-        ui.clear()
-        ui.print_header("Travel")
-        locations = self.engine.data_loader.get_all_locations()
+        print("\n--- Travel ---")
+        print(f"Current Location: {char.current_location}")
 
-        loc_opts = [f"{loc.name} ({loc.type}) [Rank: {loc.danger_rank}]" for loc in locations]
-        l_idx = ui.menu_choice(loc_opts, "Select location")
+        current_loc_data = self.engine.data_loader.get_location(char.current_location)
+        if not current_loc_data:
+            print("Unknown location data.")
+            return
+
+        print("\nConnected Locations (Travel):")
+        connected = current_loc_data.connected_locations
+
+        # Display connected locations
+        options = connected[:]
+        # Option to stay/explore current is implicitly handled by not traveling
+
+        for i, loc_name in enumerate(options):
+            l_data = self.engine.data_loader.get_location(loc_name)
+            rank_str = f"[Rank: {l_data.danger_rank}]" if l_data else ""
+            print(f"{i+1}. {loc_name} {rank_str}")
+
+        print("\nActions:")
+        print(f"{len(options)+1}. Explore {char.current_location}")
+        print(f"{len(options)+2}. Cheat Travel (All Locations)")
+        print("0. Back")
+
+        try:
+            choice = int(input("> "))
+            if choice == 0:
+                return
+
+            if 1 <= choice <= len(options):
+                # Travel
+                target = options[choice-1]
+                res = self.engine.travel(target)
+                print(f"\n{res}")
+
+            elif choice == len(options) + 1:
+                # Explore current (Logic below)
+                self._explore_location(current_loc_data)
+
+            elif choice == len(options) + 2:
+                # Cheat Travel
+                all_locs = self.engine.data_loader.get_all_locations()
+                for i, l in enumerate(all_locs):
+                    print(f"{i+1}. {l.name}")
+                c2 = int(input("Cheat Travel to: ")) - 1
+                if 0 <= c2 < len(all_locs):
+                    # Bypass connectivity check manually
+                    char.current_location = all_locs[c2].name
+                    print(f"Teleported to {char.current_location}.")
+
+        except ValueError:
+            print("Invalid input.")
+
+    def _explore_location(self, loc):
+        print(f"\nExploring {loc.name} [{loc.region}].")
+        print(loc.description)
+
+        if loc.resources:
+            print(f"Resources: {', '.join(loc.resources)}")
+
+        while True:
+            print("\nPoints of Interest:")
+                    if loc.points_of_interest:
+                        for k, poi in enumerate(loc.points_of_interest):
+                            print(f"{k+1}. {poi.name} ({poi.type})")
+                    else:
+                        print("No specific points of interest.")
 
         if l_idx is not None:
             loc = locations[l_idx]
