@@ -192,6 +192,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Shadow Automaton | Construct | A Construct known as Shadow Automaton. | A dangerous Construct creature known as Shadow Automaton. High fantasy art style, detailed creature design. | 126/139/114/115 | 137 | Stone of the Feast |
 | Shadow Stalker | Magical Beast | A Magical Beast known as Shadow Stalker that blends into the darkness. | A dangerous Magical Beast creature known as Shadow Stalker. High fantasy art style, detailed creature design. | 100/250/120/80 | 180 | Dark, Poison, Stone of the Strike |
 | Shadow Unicorn | Magical Beast | A Magical Beast known as Shadow Unicorn. | A dangerous Magical Beast creature known as Shadow Unicorn. High fantasy art style, detailed creature design. | 374/351/338/341 | 388 | Stone of the Feast, Stone of the Flesh |
+| Star-Eater | Cosmic Beast | A beast from beyond the sky. It feeds on light and mana. Its body is translucent, showing a swirling nebula inside. | A wolf-like creature made of nebula and starlight, glowing eyes, floating in the air, cosmic background. | 150/120/200/100 | 5000 | Star-Metal, Cosmic Essence |
 | Storm Fiend | Demon | A Demon known as Storm Fiend. | A dangerous Demon creature known as Storm Fiend. High fantasy art style, detailed creature design. | 135/177/132/113 | 143 | Mana |
 | Storm Spirit | Elemental | A Elemental known as Storm Spirit. | A dangerous Elemental creature known as Storm Spirit. High fantasy art style, detailed creature design. | 344/320/338/333 | 381 | Stone of the Anchor, Stone of the Foot |
 | Swift Bandit | Humanoid | A Humanoid known as Swift Bandit. | A dangerous Humanoid creature known as Swift Bandit. High fantasy art style, detailed creature design. | 89/51/50/47 | 39 | Stone of the Flesh |
@@ -267,7 +268,7 @@ Perched precariously on a knife-edge cliff of the Northern Peaks, Highland Watch
 - **Region**: Northern Peaks
 - **Danger Rank**: Bronze
 - **Resources**: Iron Essence, Weapons
-- **Connected To**: Highland Watch, Greenstone City
+- **Connected To**: Highland Watch, Greenstone City, The Celestial Observatory
 
 Carved directly into the granite face of the Northern Peaks, Ironhold is a testament to dwarven endurance and human ingenuity. It serves as the unyielding headquarters of the Order of the Shield. Massive iron gates, reinforced with defensive runes, bar entry to all but the authorized. Inside, the city is a vertical marvel of stone bridges, foundries, and barracks, constantly echoing with the ring of hammers on anvils.
 
@@ -302,6 +303,16 @@ The city doesn't just sit on the coast; it hangs off the edge of the world. Buil
 Rising like a black needle from the center of the Scorched Wastes, the Ancient Spire defies gravity and architectural logic. Its surface is smooth, seamless obsidian, etched with glowing red runes that pulse like a heartbeat. No door exists at its base; entry must be forced or found through magical means. Inside, the geometry is non-Euclidean, and the tower is said to house the unstable core of the cataclysm that destroyed the region.
 
 > **Visual Prompt**: Tall black tower, glowing red runes, desert background, magical lightning, menacing, epic scale, low angle shot
+
+### The Celestial Observatory (Landmark)
+- **Region**: Northern Peaks
+- **Danger Rank**: Silver
+- **Resources**: Star-Metal, Cosmic Essence
+- **Connected To**: Ironhold
+
+The air here is thin and cold, but the view is unparalleled. The Celestial Observatory stands as a testament to humanity's need to understand the unknown. Massive brass gears turn silently, aligning the crystal lenses with the shifting constellations. The Star-Seekers move through the halls with hushed reverence, recording the pulses of the System Stars. It is said that if one looks long enough through the Great Lens, the System stares back.
+
+> **Visual Prompt**: High fantasy observatory on a mountain peak, giant telescope, night sky with strange stars, snow, magical barrier, detailed, 8k
 
 ### The Scorched Wastes (Wilderness)
 - **Region**: Southern Badlands
@@ -360,6 +371,10 @@ Physics dissolves at the edge of the Void Rift. It is a tear in the fabric of re
 #### Null-Silk
 A rare fabric that dampens magical energy. Used by System Auditors and sensitive individuals to block out background mana radiation. It is expensive and difficult to weave, as magic cannot be used in its creation.
 > **Visual Prompt**: Grey, matte fabric, smooth texture, absorbing light.
+
+#### Star-Metal
+A rare, iridescent metal found only in the craters of meteors. It is incredibly heavy and disrupts magical flows. Weapons forged from Star-Metal are highly effective against magical beasts and constructs, as they can cut through mana barriers.
+> **Visual Prompt**: A glowing iridescent metal ingot or sword, space background, magical sparkles.
 
 #### The Glass Shield
 A legendary shield said to be forged from a single piece of transparent diamond by the Titans. It is invisible until struck, at which point it flashes with blinding light. Its current location is unknown, though many claim to have seen it in the hands of a wandering mute knight.
@@ -489,6 +504,10 @@ An alliance of the wealthiest trading families in Greenstone. They control the f
 An underground criminal network that deals in forbidden essences and secrets. Their influence reaches every major city, though few know who truly leads them.
 > **Visual Prompt**: A dark alley meeting, hooded figures exchanging glowing vials, shadows, thieves guild atmosphere.
 
+#### The Star-Seekers
+A monastic order of astronomers and diviners who believe that the System is not a native phenomenon but a cosmic signal. They study the stars to predict Mana Surges and System Updates. They are neutral in political conflicts but fiercely protective of their knowledge.
+> **Visual Prompt**: Robed scholars looking through telescopes, star charts, glowing astrological symbols, serene atmosphere.
+
 ### History
 
 #### Chronicle I: The Age of Starlight
@@ -567,6 +586,10 @@ How the scattered mountain clans united under King Ironheart to build the great 
 The year following the Sundering was known as the Ashen Year. Volcanic ash blotted out the sun, killing crops and freezing the rivers. Famine was rampant. It was during this time that the 'Essence of Life' was first discovered by a humble herbalist named Elara, who used it to grow food in the dark. She was later canonized as a saint by the common folk, though the Arcane Assembly dismisses her methods as 'wild magic'.
 > **Visual Prompt**: A dark snowy village, a woman with glowing green hands growing wheat from frozen ground.
 
+#### The Constellation of the Void
+A patch of the night sky where no stars shine. The Star-Seekers claim it is growing. Ancient texts call it 'The Maw of Silence'. It is believed to be the physical location of the Void Plane in our universe.
+> **Visual Prompt**: Night sky with a noticeable empty black patch in the shape of a maw or eye, scary.
+
 #### The Dark Winter
 A year where the sun did not rise. Ice Essence proliferated, creating the Frozen Wastes in the north.
 > **Visual Prompt**: Snowy landscape, dark sky, ice sculptures, cold atmosphere.
@@ -620,6 +643,10 @@ The city doesn't just sit on the coast; it hangs off the edge of the world. Buil
 #### The Ancient Spire
 A tower that defies gravity, floating segments held together by Arcane chains. It is said to contain the library of the First Archmage.
 > **Visual Prompt**: A broken tower with floating sections, magical blue chains, sky background, high fantasy.
+
+#### The Celestial Observatory
+Perched on the highest peak of the jagged Spine of the World, above the cloud layer, sits the Celestial Observatory. Built by the Star-Seekers, it is a place of silence and thin air. Here, giant telescopes of brass and crystal are trained constantly on the heavens, searching for the source of the Starfall and monitoring the movements of the 'System Stars'—new constellations that appeared after the Awakening.
+> **Visual Prompt**: A high fantasy observatory on a snowy mountain peak, night sky filled with strange constellations, giant telescope, brass and crystal.
 
 #### The Frozen Wastes
 To the far north lies a land of eternal ice and snow, where Crystal Golems roam. It is said to be the source of the purest Ice Essence.
@@ -734,6 +761,18 @@ The power of nothingness. Void magic deletes matter and energy, but its use come
 #### Water Essence
 The essence of adaptability and healing. Water magic flows around obstacles, eroding defenses over time or restoring vitality to the wounded.
 > **Visual Prompt**: A fluid sphere of water essence, blue and clear, ripples and droplets.
+
+### Mystery
+
+#### System Glitch: Error 404
+Rumors persist of Awakened who see a 'System Error' message before disappearing. The System Auditors deny these reports, classifying them as hallucinations caused by mana sickness. However, graffiti found in the slums of Orizon depicts a fragmented interface and the number 404.
+> **Visual Prompt**: Glitch art style, fantasy character dissolving into pixels, error message box '404 Entity Not Found'.
+
+### Phenomenon
+
+#### The Null-Static
+A weather phenomenon unique to the area around Orizon. It is a storm not of rain, but of anti-magic. During a Null-Static storm, all magic fails, and mana-powered technology shuts down. Citizens must rely on physical clockwork and oil lamps until it passes.
+> **Visual Prompt**: A city under a grey static storm, lights out, people holding lanterns, magical devices sparking.
 
 ### Religion
 

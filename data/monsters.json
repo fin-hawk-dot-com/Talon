@@ -869,5 +869,23 @@
         ],
         "image_prompt": "A dangerous Dragonkin creature known as Cursed Wyrm. High fantasy art style, detailed creature design.",
         "description": "A Dragonkin known as Cursed Wyrm."
+    },
+    {
+        "name": "Star-Eater",
+        "race": "Cosmic Beast",
+        "attributes": {
+            "Power": 150,
+            "Speed": 120,
+            "Spirit": 200,
+            "Recovery": 100,
+            "Luck": 50
+        },
+        "xp_reward": 5000,
+        "loot_table": [
+            "Star-Metal",
+            "Cosmic Essence"
+        ],
+        "image_prompt": "A wolf-like creature made of nebula and starlight, glowing eyes, floating in the air, cosmic background.",
+        "description": "A beast from beyond the sky. It feeds on light and mana. Its body is translucent, showing a swirling nebula inside."
     }
 ]

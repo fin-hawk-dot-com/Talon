@@ -147,7 +147,8 @@
         "danger_rank": "Bronze",
         "connected_locations": [
             "Highland Watch",
-            "Greenstone City"
+            "Greenstone City",
+            "The Celestial Observatory"
         ],
         "resources": [
             "Iron Essence",
@@ -523,6 +524,46 @@
                 "description": "Where low-rankers scrape barnacles that bleed neon light. The air tastes of salt and ozone.",
                 "type": "District",
                 "image_prompt": "Sci-fi fantasy docks, glowing water, barnacles, ships"
+            }
+        ]
+    },
+    {
+        "name": "The Celestial Observatory",
+        "description": "A high-altitude sanctuary of knowledge, where telescopes aim at the cosmos.",
+        "type": "Landmark",
+        "region": "Northern Peaks",
+        "danger_rank": "Silver",
+        "connected_locations": [
+            "Ironhold"
+        ],
+        "resources": [
+            "Star-Metal",
+            "Cosmic Essence"
+        ],
+        "image_prompt_positive": "High fantasy observatory on a mountain peak, giant telescope, night sky with strange stars, snow, magical barrier, detailed, 8k",
+        "image_prompt_negative": "jungle, beach, city, crowd, day, sunny",
+        "npcs": [
+            "Orion"
+        ],
+        "narrative": "The air here is thin and cold, but the view is unparalleled. The Celestial Observatory stands as a testament to humanity's need to understand the unknown. Massive brass gears turn silently, aligning the crystal lenses with the shifting constellations. The Star-Seekers move through the halls with hushed reverence, recording the pulses of the System Stars. It is said that if one looks long enough through the Great Lens, the System stares back.",
+        "points_of_interest": [
+            {
+                "name": "The Great Lens",
+                "description": "A massive telescope that can see mana currents in the upper atmosphere.",
+                "type": "Device",
+                "image_prompt": "Giant brass telescope, glowing crystal lens, star chart background"
+            },
+            {
+                "name": "Star-Map Chamber",
+                "description": "A room where the ceiling is a perfect illusion of the night sky, updating in real-time.",
+                "type": "Room",
+                "image_prompt": "Circular room, ceiling is night sky, glowing constellations, scholars"
+            },
+            {
+                "name": "The Orrery",
+                "description": "A mechanical model of the solar system, but with new planets that shouldn't exist.",
+                "type": "Device",
+                "image_prompt": "Complex mechanical solar system model, floating planets, gold and silver gears"
             }
         ]
     }

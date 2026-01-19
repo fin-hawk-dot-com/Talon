@@ -691,5 +691,47 @@
         "category": "Artifacts",
         "text": "A rare fabric that dampens magical energy. Used by System Auditors and sensitive individuals to block out background mana radiation. It is expensive and difficult to weave, as magic cannot be used in its creation.",
         "image_prompt": "Grey, matte fabric, smooth texture, absorbing light."
+    },
+    {
+        "id": "lore_celestial_observatory",
+        "title": "The Celestial Observatory",
+        "category": "Location",
+        "text": "Perched on the highest peak of the jagged Spine of the World, above the cloud layer, sits the Celestial Observatory. Built by the Star-Seekers, it is a place of silence and thin air. Here, giant telescopes of brass and crystal are trained constantly on the heavens, searching for the source of the Starfall and monitoring the movements of the 'System Stars'\u2014new constellations that appeared after the Awakening.",
+        "image_prompt": "A high fantasy observatory on a snowy mountain peak, night sky filled with strange constellations, giant telescope, brass and crystal."
+    },
+    {
+        "id": "lore_star_seekers",
+        "title": "The Star-Seekers",
+        "category": "Faction",
+        "text": "A monastic order of astronomers and diviners who believe that the System is not a native phenomenon but a cosmic signal. They study the stars to predict Mana Surges and System Updates. They are neutral in political conflicts but fiercely protective of their knowledge.",
+        "image_prompt": "Robed scholars looking through telescopes, star charts, glowing astrological symbols, serene atmosphere."
+    },
+    {
+        "id": "lore_star_metal",
+        "title": "Star-Metal",
+        "category": "Artifacts",
+        "text": "A rare, iridescent metal found only in the craters of meteors. It is incredibly heavy and disrupts magical flows. Weapons forged from Star-Metal are highly effective against magical beasts and constructs, as they can cut through mana barriers.",
+        "image_prompt": "A glowing iridescent metal ingot or sword, space background, magical sparkles."
+    },
+    {
+        "id": "lore_constellation_void",
+        "title": "The Constellation of the Void",
+        "category": "History",
+        "text": "A patch of the night sky where no stars shine. The Star-Seekers claim it is growing. Ancient texts call it 'The Maw of Silence'. It is believed to be the physical location of the Void Plane in our universe.",
+        "image_prompt": "Night sky with a noticeable empty black patch in the shape of a maw or eye, scary."
+    },
+    {
+        "id": "lore_system_glitch_404",
+        "title": "System Glitch: Error 404",
+        "category": "Mystery",
+        "text": "Rumors persist of Awakened who see a 'System Error' message before disappearing. The System Auditors deny these reports, classifying them as hallucinations caused by mana sickness. However, graffiti found in the slums of Orizon depicts a fragmented interface and the number 404.",
+        "image_prompt": "Glitch art style, fantasy character dissolving into pixels, error message box '404 Entity Not Found'."
+    },
+    {
+        "id": "lore_null_static",
+        "title": "The Null-Static",
+        "category": "Phenomenon",
+        "text": "A weather phenomenon unique to the area around Orizon. It is a storm not of rain, but of anti-magic. During a Null-Static storm, all magic fails, and mana-powered technology shuts down. Citizens must rely on physical clockwork and oil lamps until it passes.",
+        "image_prompt": "A city under a grey static storm, lights out, people holding lanterns, magical devices sparking."
     }
 ]

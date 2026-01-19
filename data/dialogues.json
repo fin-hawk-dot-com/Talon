@@ -321,5 +321,99 @@
         }
       ]
     }
+  },
+  "Orion": {
+    "root": {
+      "text": "Greetings, traveler. You have climbed high to reach the roof of the world. Do you seek the stars, or merely the silence?",
+      "choices": [
+        {
+          "text": "I seek knowledge of the stars.",
+          "next_id": "about_stars"
+        },
+        {
+          "text": "What is this place?",
+          "next_id": "about_observatory"
+        },
+        {
+          "text": "What do you know about the System?",
+          "next_id": "about_system"
+        },
+        {
+          "text": "Just passing through.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "about_stars": {
+      "text": "The stars have changed since the Awakening. New constellations have formed... geometric patterns that shouldn't exist. We call them the System Stars. They pulse in binary.",
+      "choices": [
+        {
+          "text": "In binary?",
+          "next_id": "binary_stars"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "binary_stars": {
+      "text": "On. Off. One. Zero. It is a language of light. We are still deciphering it, but it seems to be... a countdown.",
+      "choices": [
+        {
+          "text": "A countdown to what?",
+          "next_id": "countdown"
+        }
+      ]
+    },
+    "countdown": {
+      "text": "We do not know. But the Void Constellation grows larger with every tick.",
+      "choices": [
+        {
+          "text": "That sounds ominous.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "about_observatory": {
+      "text": "The Celestial Observatory. We are the Star-Seekers. While the mages below squabble over Essences, we look up. The answers to the Awakening are not in the earth, but in the sky.",
+      "choices": [
+        {
+          "text": "Who leads you?",
+          "next_id": "leader"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "leader": {
+      "text": "We have no leader but the Truth. I am merely the First Observer.",
+      "choices": [
+        {
+          "text": "I see.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "about_system": {
+      "text": "The System... a cage or a shield? It gamifies our reality, quantifying our souls. Some say it protects us from the raw chaos of magic. I believe it is a training program. Preparing us for something.",
+      "choices": [
+        {
+          "text": "Preparing us for what?",
+          "next_id": "preparation"
+        }
+      ]
+    },
+    "preparation": {
+      "text": "War. A war not against monsters, but against the Void itself. Why else would it reward violence with power?",
+      "choices": [
+        {
+          "text": "A chilling thought.",
+          "next_id": "root"
+        }
+      ]
+    }
   }
 }
