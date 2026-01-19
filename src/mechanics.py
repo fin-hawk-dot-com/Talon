@@ -1176,6 +1176,75 @@ class GameEngine:
         self.character = Character(name=name, race=race)
         return self.character
 
+    def travel(self, location_name: str) -> str:
+        if not self.character: return "No character."
+
+        current_loc_name = self.character.current_location
+        current_loc = self.data_loader.get_location(current_loc_name)
+
+        if not current_loc:
+            # Fallback if somehow current location is invalid, allow travel to valid ones?
+            # Or just reset to Greenstone City.
+            self.character.current_location = "Greenstone City"
+            current_loc = self.data_loader.get_location("Greenstone City")
+
+        if location_name == current_loc_name:
+            return f"You are already at {location_name}."
+
+        # Check connectivity
+        # Note: We compare exact strings, assuming data integrity.
+        # Connected locations in JSON are list of strings.
+        if location_name not in current_loc.connected_locations:
+            return f"You cannot travel to {location_name} directly from {current_loc_name}."
+
+        target_loc = self.data_loader.get_location(location_name)
+        if not target_loc:
+            return "Location data not found."
+
+        self.character.current_location = location_name
+        return f"Traveled to {location_name}."
+
+    def get_monsters_for_location(self, location_name: str) -> List[Character]:
+        loc = self.data_loader.get_location(location_name)
+        if not loc: return []
+
+        # Danger Rank Mapping
+        # Iron: < 200 total stats? Or specific ranks.
+        # Let's use string matching for now since monsters don't have explicit ranks in JSON,
+        # but Character.rank property exists.
+
+        target_rank = loc.danger_rank # e.g. "Iron", "Bronze"
+
+        # We can also map ranks to indices to allow lower rank monsters in higher rank zones (maybe)
+        # But for now, let's try to match rank or -1 rank.
+
+        rank_idx = RANK_INDICES.get(target_rank, 0)
+
+        valid_monsters = []
+        all_monsters = self.data_loader.get_all_monsters()
+
+        for m_name in all_monsters:
+            m = self.data_loader.get_monster(m_name)
+            if not m: continue
+
+            # Use Character.rank property
+            m_rank = m.rank
+            m_rank_idx = RANK_INDICES.get(m_rank, 0)
+
+            # Allow monsters of same rank or one rank lower/higher?
+            # Ideally: Zone Rank Iron -> Iron Monsters.
+            # Zone Rank Bronze -> Bronze Monsters.
+            if m_rank == target_rank:
+                valid_monsters.append(m)
+            elif m_rank_idx == rank_idx - 1: # Also allow slightly weaker ones
+                valid_monsters.append(m)
+
+        # If no monsters found for rank, fallback to all (or random subset) to avoid empty list
+        if not valid_monsters:
+            return [self.data_loader.get_monster(m) for m in all_monsters]
+
+        return valid_monsters
+
     def absorb_essence(self, essence_index: int, attribute: str) -> str:
         if not self.character: return "No character."
         if essence_index < 0 or essence_index >= len(self.character.inventory):
@@ -1338,6 +1407,10 @@ class GameEngine:
             if 'status_effects' in data:
                  for se in data['status_effects']:
                      char.status_effects.append(StatusEffect(**se))
+
+            # Reconstruct Location
+            if 'current_location' in data:
+                char.current_location = data['current_location']
 
             self.character = char
             return f"Game loaded from {filename}"
