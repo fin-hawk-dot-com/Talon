@@ -691,5 +691,26 @@
         "category": "Artifacts",
         "text": "A rare fabric that dampens magical energy. Used by System Auditors and sensitive individuals to block out background mana radiation. It is expensive and difficult to weave, as magic cannot be used in its creation.",
         "image_prompt": "Grey, matte fabric, smooth texture, absorbing light."
+    },
+    {
+        "id": "lore_void_incursion",
+        "title": "The Void Incursion",
+        "category": "History",
+        "text": "Centuries ago, the fabric of reality tore open in the northern wastes, allowing the Void to bleed into our world. This event, known as the Void Incursion, brought with it aberrant monstrosities that defied natural laws. While the rift was eventually sealed by the combined efforts of the Archmages and the Guardian Order, pockets of unstable reality remain. Creatures like the Void Stalker are remnants of this dark time, phasing in and out of existence as they hunt for Essence to sustain their unnatural forms.",
+        "image_prompt": "A tear in the sky with purple void energy spilling out, monsters emerging. Fantasy history art."
+    },
+    {
+        "id": "lore_gravitation_magic",
+        "title": "Gravitation Magic",
+        "category": "Magic",
+        "text": "Gravitation is considered one of the Fundamental Essences, governing the attraction between all things. Mastery over Gravity allows a cultivator to increase the weight of their strikes, pin enemies to the ground, or even fly by negating the pull of the earth. It is a difficult path, often requiring the user to meditate on the movement of celestial bodies. Those who unlock the Gravity Essence often develop a stoic, grounded personality, unshakeable in the face of adversity.",
+        "image_prompt": "A mage manipulating gravity, floating rocks and bending light. Magical effect visualization."
+    },
+    {
+        "id": "lore_obsidian_golems",
+        "title": "Obsidian Golems",
+        "category": "Bestiary",
+        "text": "Unlike their rock or iron cousins, Obsidian Golems are not merely animated matter but are often created through volcanic rituals involving Fire and Earth Essences. Their bodies are made of razor-sharp volcanic glass, making them dangerous even to touch. They are typically found guarding ancient volcanic forges or the lairs of powerful fire-aligned entities. An Obsidian Golem's core is usually a piece of superheated magma that never cools, serving as its heart.",
+        "image_prompt": "A golem made of shiny black obsidian with magma veins. Fantasy creature design."
     }
 ]

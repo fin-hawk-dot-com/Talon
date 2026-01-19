@@ -25,23 +25,27 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 
 ## Essences
 
-**Known Tags**: Abstract, Aim, Air, Amplification, Armor, Artificial, Biological, Blade, Body, Celestial, Chronology, Cold, Combat, Concealment, Concept, Corruption, Death, Defense, Destruction, Disorder, Electricity, Elemental, Emotion, Empty, End, Energy, Entropy, Equilibrium, Fate, Flight, Flow, Focus, Force, Future, Gas, Growth, Hardness, Healing, Heat, Holy, Illumination, Information, Judgment, Learning, Life, Light, Liquid, Logic, Macabre, Machinery, Magic, Metal, Mind, Movement, Mythic, Nature, Negative, Night, Null, Physical, Plants, Power, Protection, Ranged, Reaction, Reality, Recovery, Shadow, Solid, Space, Speed, Star, Strength, Temporal, Tides, Toxin, Travel, Velocity, Vibration, Vision, Vitality, Water, Wave, Weapon, Wind
+**Known Tags**: Abstract, Aim, Air, Amplification, Armor, Artificial, Attraction, Biological, Blade, Body, Celestial, Chemical, Chronology, Cold, Combat, Concealment, Concept, Corrosion, Corruption, Death, Defense, Destruction, Disorder, Electricity, Elemental, Emotion, Empty, End, Energy, Entropy, Equilibrium, Fate, Flight, Flow, Focus, Force, Fundamental, Future, Gas, Growth, Hardness, Healing, Heat, Holy, Illumination, Illusion, Information, Judgment, Learning, Life, Light, Liquid, Logic, Macabre, Machinery, Magic, Metal, Mind, Movement, Mythic, Nature, Negative, Night, Null, Physical, Plants, Power, Protection, Ranged, Reaction, Reality, Recovery, Refraction, Shadow, Sleep, Solid, Space, Speed, Star, Strength, Structure, Temporal, Tides, Toxin, Travel, Velocity, Vibration, Vision, Vitality, Water, Wave, Weapon, Weight, Wind
 
 | Name | Type | Rarity | Tags | Description | Visual Prompt | Opposite | Synergy |
 |---|---|---|---|---|---|---|---|
+| Acid | Base | Uncommon | Elemental, Liquid, Corrosion, Chemical | The essence of corrosive fluids. | An ethereal essence orb representing Acid. Visual style: Uncommon magic, glowing with Elemental, Liquid, Corrosion, Chemical energy. The essence of corrosive fluids. | Iron | Water, Poison, Earth, Death |
 | Air | Base | Common | Elemental, Gas, Movement, Wind | The essence of wind and atmosphere. | An ethereal essence orb representing Air. Visual style: Common magic, glowing with Elemental, Gas, Movement, Wind energy. The essence of wind and atmosphere. | Earth | Fire, Lightning, Swift, Wing, Dimension |
 | Armor | Base | Common | Physical, Defense, Protection | The essence of protection. | An ethereal essence orb representing Armor. Visual style: Common magic, glowing with Physical, Defense, Protection energy. The essence of protection. | Gun | Iron, Technology, Earth, Might, Shield |
 | Balance | Base | Rare | Abstract, Equilibrium | The essence of equality. | An ethereal essence orb representing Balance. Visual style: Rare magic, glowing with Abstract, Equilibrium energy. The essence of equality. | Potent | Life, Death, Sun, Moon, Light, Dark |
 | Blood | Base | Rare | Physical, Biological, Vitality, Liquid, Macabre | The essence of lifeblood. | An ethereal essence orb representing Blood. Visual style: Rare magic, glowing with Physical, Biological, Vitality, Liquid, Macabre energy. The essence of lifeblood. | Technology | Dark, Sin, Life, Death, Renewal |
 | Chaos | Base | Rare | Abstract, Disorder, Entropy | The essence of randomness and disorder. | An ethereal essence orb representing Chaos. Visual style: Rare magic, glowing with Abstract, Disorder, Entropy energy. The essence of randomness and disorder. | Knowledge | Void, Fire, Lightning, Sin, Doom |
+| Crystal | Base | Common | Elemental, Solid, Structure, Refraction | The essence of ordered structure and gems. | An ethereal essence orb representing Crystal. Visual style: Common magic, glowing with Elemental, Solid, Structure, Refraction energy. The essence of ordered structure and gems. | Sound | Earth, Light, Ice, Iron, Order |
 | Dark | Base | Rare | Abstract, Shadow, Concealment, Negative | The essence of darkness and shadow. | An ethereal essence orb representing Dark. Visual style: Rare magic, glowing with Abstract, Shadow, Concealment, Negative energy. The essence of darkness and shadow. | Light | Blood, Sin, Death, Moon, Dimension |
 | Death | Base | Rare | Abstract, End, Macabre | The essence of the end. | An ethereal essence orb representing Death. Visual style: Rare magic, glowing with Abstract, End, Macabre energy. The essence of the end. | Life | Dark, Blood, Sin, Moon, Balance |
 | Dimension | Base | Epic | Abstract, Space, Reality, Travel | The essence of spatial dimensions. | An ethereal essence orb representing Dimension. Visual style: Epic magic, glowing with Abstract, Space, Reality, Travel energy. The essence of spatial dimensions. | Earth | Air, Light, Dark, Moon, Sun |
 | Directed | Base | Uncommon | Abstract, Focus, Aim | The essence of precision. | An ethereal essence orb representing Directed. Visual style: Uncommon magic, glowing with Abstract, Focus, Aim energy. The essence of precision. | Might | Gun, Swift, Wind, Technology, Potent |
 | Doom | Base | Epic | Abstract, Fate, Destruction | The essence of inevitable end. | An ethereal essence orb representing Doom. Visual style: Epic magic, glowing with Abstract, Fate, Destruction energy. The essence of inevitable end. | Hope | Death, Sin, Dark, Chaos, Fire |
 | Dragon | Base | Epic | Biological, Mythic, Power | The essence of the great drakes. | An ethereal essence orb representing Dragon. Visual style: Epic magic, glowing with Biological, Mythic, Power energy. The essence of the great drakes. | None | Sun, Moon, Fire, Potent, Wing |
+| Dream | Base | Rare | Abstract, Mind, Illusion, Sleep | The essence of the subconscious. | An ethereal essence orb representing Dream. Visual style: Rare magic, glowing with Abstract, Mind, Illusion, Sleep energy. The essence of the subconscious. | Iron | Moon, Dark, Knowledge, Dimension, Chaos |
 | Earth | Base | Common | Elemental, Solid, Defense, Nature | The essence of stability and stone. | An ethereal essence orb representing Earth. Visual style: Common magic, glowing with Elemental, Solid, Defense, Nature energy. The essence of stability and stone. | Air | Fire, Iron, Potent, Life, Armor |
 | Fire | Base | Common | Elemental, Heat, Energy, Destruction | The essence of combustion and heat. | An ethereal essence orb representing Fire. Visual style: Common magic, glowing with Elemental, Heat, Energy, Destruction energy. The essence of combustion and heat. | Water | Earth, Air, Potent, Renewal, Wing, Light |
+| Gravity | Base | Epic | Fundamental, Force, Weight, Attraction | The essence of gravitational pull. | An ethereal essence orb representing Gravity. Visual style: Epic magic, glowing with Fundamental, Force, Weight, Attraction energy. The essence of gravitational pull. | Wing | Earth, Void, Star, Moon, Sun |
 | Gun | Base | Uncommon | Artificial, Weapon, Ranged | The essence of firearms. | An ethereal essence orb representing Gun. Visual style: Uncommon magic, glowing with Artificial, Weapon, Ranged energy. The essence of firearms. | Shield | Technology, Armor, Directed, Iron, Fire |
 | Hope | Base | Epic | Abstract, Emotion, Future | The essence of belief in a better future. | An ethereal essence orb representing Hope. Visual style: Epic magic, glowing with Abstract, Emotion, Future energy. The essence of belief in a better future. | Doom | Light, Life, Renewal, Sun, Balance |
 | Ice | Base | Common | Elemental, Cold, Solid, Water | The essence of cold and freezing. | An ethereal essence orb representing Ice. Visual style: Common magic, glowing with Elemental, Cold, Solid, Water energy. The essence of cold and freezing. | Fire | Water, Earth, Air, Iron, Shield |
@@ -91,12 +95,16 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 | Stone of Judgment | Execute | Deals high dmg to low HP/Debuffed targets. | A Rare Awakening Stone named Stone of Judgment, inscribed with runes of Execute. Deals high dmg to low HP/Debuffed targets. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Anchor | Stability | Prevents knockback and increases resistance. | A Uncommon Awakening Stone named Stone of the Anchor, inscribed with runes of Stability. Prevents knockback and increases resistance. Glowing magical artifact. | Uncommon | Medium | Stamina |
 | Stone of the Blast | Ranged Attack | Projects a bolt/beam of Essence. | A Common Awakening Stone named Stone of the Blast, inscribed with runes of Ranged Attack. Projects a bolt/beam of Essence. Glowing magical artifact. | Common | Low | Mana |
+| Stone of the Breath | Area Attack | Exhales a cone of Essence. | A Uncommon Awakening Stone named Stone of the Breath, inscribed with runes of Area Attack. Exhales a cone of Essence. Glowing magical artifact. | Uncommon | Medium | Mana |
 | Stone of the Echo | Replication | Repeats previous action or creates decoy. | A Rare Awakening Stone named Stone of the Echo, inscribed with runes of Replication. Repeats previous action or creates decoy. Glowing magical artifact. | Rare | Medium | Mana |
 | Stone of the Familiar | Summoning | Spawns an AI minion based on Essence. | A Rare Awakening Stone named Stone of the Familiar, inscribed with runes of Summoning. Spawns an AI minion based on Essence. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Feast | Drain/Sustain | Drains enemy resource to refill user. | A Rare Awakening Stone named Stone of the Feast, inscribed with runes of Drain/Sustain. Drains enemy resource to refill user. Glowing magical artifact. | Rare | High | Health |
 | Stone of the Flesh | Body Mod | Alters user physiology (Passive/Active). | A Epic Awakening Stone named Stone of the Flesh, inscribed with runes of Body Mod. Alters user physiology (Passive/Active). Glowing magical artifact. | Epic | None | None |
 | Stone of the Foot | Mobility | Enhances movement or adds teleportation. | A Common Awakening Stone named Stone of the Foot, inscribed with runes of Mobility. Enhances movement or adds teleportation. Glowing magical artifact. | Common | Low | Stamina |
+| Stone of the Lens | Perception | Allows the user to sense Essence and hidden things. | A Rare Awakening Stone named Stone of the Lens, inscribed with runes of Perception. Allows the user to sense Essence and hidden things. Glowing magical artifact. | Rare | None | Stamina |
+| Stone of the Nova | Area Attack | Explodes with Essence energy in all directions. | A Rare Awakening Stone named Stone of the Nova, inscribed with runes of Area Attack. Explodes with Essence energy in all directions. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Phantom | Evasion | Grants temporary intangibility or invisibility. | A Rare Awakening Stone named Stone of the Phantom, inscribed with runes of Evasion. Grants temporary intangibility or invisibility. Glowing magical artifact. | Rare | High | Mana |
+| Stone of the Prison | Terrain Control | Encases the enemy in a structure of Essence. | A Rare Awakening Stone named Stone of the Prison, inscribed with runes of Terrain Control. Encases the enemy in a structure of Essence. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Shield | Defense | Creates a barrier or armor buff. | A Common Awakening Stone named Stone of the Shield, inscribed with runes of Defense. Creates a barrier or armor buff. Glowing magical artifact. | Common | Medium | Mana |
 | Stone of the Stars | Celestial/Augment | Adds light/cosmic properties or massive buff. | A Epic Awakening Stone named Stone of the Stars, inscribed with runes of Celestial/Augment. Adds light/cosmic properties or massive buff. Glowing magical artifact. | Epic | High | Mana |
 | Stone of the Strike | Melee Attack | Imbues physical strike with Essence element. | A Common Awakening Stone named Stone of the Strike, inscribed with runes of Melee Attack. Imbues physical strike with Essence element. Glowing magical artifact. | Common | Low | Stamina |
@@ -163,6 +171,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Corrupted Wraith | Undead | A Undead known as Corrupted Wraith. | A dangerous Undead creature known as Corrupted Wraith. High fantasy art style, detailed creature design. | 80/43/34/38 | 35 | Poison |
 | Crystal Gargoyle | Construct | A Construct known as Crystal Gargoyle. | A dangerous Construct creature known as Crystal Gargoyle. High fantasy art style, detailed creature design. | 461/477/478/451 | 514 | Stone of the Wall, Stone of the Swarm, Stone of the Trap |
 | Crystal Golem | Construct | A Construct known as Crystal Golem made of shimmering ice crystals. | A dangerous Construct creature known as Crystal Golem. High fantasy art style, detailed creature design. | 200/60/150/100 | 200 | Ice, Earth, Stone of the Shield |
+| Crystal Spider | Beast | A Beast known as Crystal Spider with a carapace of sharp gems. | A dangerous Beast creature known as Crystal Spider. High fantasy art style, detailed creature design. | 150/220/180/160 | 180 | Crystal, Poison, Stone of the Trap |
 | Crystal Wyrm | Dragonkin | A Dragonkin known as Crystal Wyrm. | A dangerous Dragonkin creature known as Crystal Wyrm. High fantasy art style, detailed creature design. | 212/256/214/250 | 261 | Doom, Technology |
 | Cursed Snake | Beast | A Beast known as Cursed Snake. | A dangerous Beast creature known as Cursed Snake. High fantasy art style, detailed creature design. | 180/186/171/188 | 160 | Armor |
 | Cursed Wyrm | Dragonkin | A Dragonkin known as Cursed Wyrm. | A dangerous Dragonkin creature known as Cursed Wyrm. High fantasy art style, detailed creature design. | 580/517/552/518 | 624 | Stone of Focus, Light, Lightning |
@@ -173,6 +182,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Ghostly Griffin | Magical Beast | A Magical Beast known as Ghostly Griffin. | A dangerous Magical Beast creature known as Ghostly Griffin. High fantasy art style, detailed creature design. | 153/175/161/128 | 149 | Swift |
 | Ghostly Rat | Beast | A Beast known as Ghostly Rat. | A dangerous Beast creature known as Ghostly Rat. High fantasy art style, detailed creature design. | 75/34/70/91 | 43 | Stone of the Flesh |
 | Giant Rat | Beast | A Beast known as Giant Rat. | A dangerous Beast creature known as Giant Rat. High fantasy art style, detailed creature design. | 20/30/5/15 | 10 | Stone of the Strike |
+| Inferno Demon | Demon | A Demon known as Inferno Demon wrapped in hellfire. | A dangerous Demon creature known as Inferno Demon. High fantasy art style, detailed creature design. | 350/280/300/320 | 400 | Fire, Sin, Stone of the Nova |
 | Iron Wolf | Magical Beast | A Magical Beast known as Iron Wolf. | A dangerous Magical Beast creature known as Iron Wolf. High fantasy art style, detailed creature design. | 120/140/80/110 | 100 | Swift, Stone of the Reflex |
 | Mechanical Knight | Humanoid | A Humanoid known as Mechanical Knight. | A dangerous Humanoid creature known as Mechanical Knight. High fantasy art style, detailed creature design. | 182/150/131/161 | 150 | Moon |
 | Mechanical Phoenix | Magical Beast | A Magical Beast known as Mechanical Phoenix. | A dangerous Magical Beast creature known as Mechanical Phoenix. High fantasy art style, detailed creature design. | 245/263/225/214 | 262 | Stone of the Trap, Iron |
@@ -183,6 +193,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Noble Hawk | Beast | A Beast known as Noble Hawk. | A dangerous Beast creature known as Noble Hawk. High fantasy art style, detailed creature design. | 247/266/240/222 | 265 | Directed, Gun |
 | Noble Imp | Demon | A Demon known as Noble Imp. | A dangerous Demon creature known as Noble Imp. High fantasy art style, detailed creature design. | 241/288/215/237 | 266 | Balance, Fire |
 | Noble Phoenix | Magical Beast | A Magical Beast known as Noble Phoenix. | A dangerous Magical Beast creature known as Noble Phoenix. High fantasy art style, detailed creature design. | 53/24/93/35 | 36 | Nature |
+| Obsidian Golem | Construct | A Construct known as Obsidian Golem made of volcanic glass. | A dangerous Construct creature known as Obsidian Golem. High fantasy art style, detailed creature design. | 220/80/100/250 | 220 | Earth, Fire, Stone of the Shield, Stone of the Wall |
 | Rabid Automaton | Construct | A Construct known as Rabid Automaton. | A dangerous Construct creature known as Rabid Automaton. High fantasy art style, detailed creature design. | 131/140/119/161 | 143 | Moon |
 | Rabid Elemental | Elemental | A Elemental known as Rabid Elemental. | A dangerous Elemental creature known as Rabid Elemental. High fantasy art style, detailed creature design. | 343/385/368/350 | 392 | Swift, Shield |
 | Rabid Spirit | Elemental | A Elemental known as Rabid Spirit. | A dangerous Elemental creature known as Rabid Spirit. High fantasy art style, detailed creature design. | 220/258/288/262 | 270 | Stone of the Blast, Sound |
@@ -192,11 +203,13 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Shadow Automaton | Construct | A Construct known as Shadow Automaton. | A dangerous Construct creature known as Shadow Automaton. High fantasy art style, detailed creature design. | 126/139/114/115 | 137 | Stone of the Feast |
 | Shadow Stalker | Magical Beast | A Magical Beast known as Shadow Stalker that blends into the darkness. | A dangerous Magical Beast creature known as Shadow Stalker. High fantasy art style, detailed creature design. | 100/250/120/80 | 180 | Dark, Poison, Stone of the Strike |
 | Shadow Unicorn | Magical Beast | A Magical Beast known as Shadow Unicorn. | A dangerous Magical Beast creature known as Shadow Unicorn. High fantasy art style, detailed creature design. | 374/351/338/341 | 388 | Stone of the Feast, Stone of the Flesh |
+| Storm Drake | Dragonkin | A Dragonkin known as Storm Drake, crackling with electricity. | A dangerous Dragonkin creature known as Storm Drake. High fantasy art style, detailed creature design. | 300/350/320/280 | 450 | Lightning, Wind, Dragon, Stone of the Breath |
 | Storm Fiend | Demon | A Demon known as Storm Fiend. | A dangerous Demon creature known as Storm Fiend. High fantasy art style, detailed creature design. | 135/177/132/113 | 143 | Mana |
 | Storm Spirit | Elemental | A Elemental known as Storm Spirit. | A dangerous Elemental creature known as Storm Spirit. High fantasy art style, detailed creature design. | 344/320/338/333 | 381 | Stone of the Anchor, Stone of the Foot |
 | Swift Bandit | Humanoid | A Humanoid known as Swift Bandit. | A dangerous Humanoid creature known as Swift Bandit. High fantasy art style, detailed creature design. | 89/51/50/47 | 39 | Stone of the Flesh |
 | Swift Bat | Beast | A Beast known as Swift Bat. | A dangerous Beast creature known as Swift Bat. High fantasy art style, detailed creature design. | 376/374/360/315 | 390 | Balance, Moon |
 | Void Demon | Demon | A Demon known as Void Demon. | A dangerous Demon creature known as Void Demon. High fantasy art style, detailed creature design. | 177/150/134/130 | 147 | Directed |
+| Void Stalker | Magical Beast | A Magical Beast known as Void Stalker that shifts between dimensions. | A dangerous Magical Beast creature known as Void Stalker. High fantasy art style, detailed creature design. | 180/400/250/150 | 300 | Void, Dark, Dimension, Stone of the Phantom |
 | Wild Boar | Beast | A Beast known as Wild Boar. | A dangerous Beast creature known as Wild Boar. High fantasy art style, detailed creature design. | 40/20/10/50 | 20 | Might |
 | Wild Elemental | Elemental | A Elemental known as Wild Elemental. | A dangerous Elemental creature known as Wild Elemental. High fantasy art style, detailed creature design. | 24/61/57/47 | 34 | Stone of the Judgment |
 
@@ -403,6 +416,10 @@ Monsters are creatures corrupted by chaotic mana. They are ranked similarly to A
 A majestic bird wreathed in holy fire. It is said that a feather from a Noble Phoenix can cure any disease.
 > **Visual Prompt**: A large bird made of gold and red fire, flying in the sky.
 
+#### Obsidian Golems
+Unlike their rock or iron cousins, Obsidian Golems are not merely animated matter but are often created through volcanic rituals involving Fire and Earth Essences. Their bodies are made of razor-sharp volcanic glass, making them dangerous even to touch. They are typically found guarding ancient volcanic forges or the lairs of powerful fire-aligned entities. An Obsidian Golem's core is usually a piece of superheated magma that never cools, serving as its heart.
+> **Visual Prompt**: A golem made of shiny black obsidian with magma veins. Fantasy creature design.
+
 #### Rock Golem
 Simple constructs of animated stone. Slow and stupid, but possessing immense strength and durability. Often used as guardians.
 > **Visual Prompt**: A golem made of boulders and moss, heavy and solid.
@@ -587,6 +604,10 @@ Before the current era, a civilization known as the Aethel thrived. They were ma
 The event that split the continent. It is believed to have been caused by an overloaded Confluence of Fire and Earth magic.
 > **Visual Prompt**: A map showing a cracked continent, lava flowing in the cracks, disaster scene.
 
+#### The Void Incursion
+Centuries ago, the fabric of reality tore open in the northern wastes, allowing the Void to bleed into our world. This event, known as the Void Incursion, brought with it aberrant monstrosities that defied natural laws. While the rift was eventually sealed by the combined efforts of the Archmages and the Guardian Order, pockets of unstable reality remain. Creatures like the Void Stalker are remnants of this dark time, phasing in and out of existence as they hunt for Essence to sustain their unnatural forms.
+> **Visual Prompt**: A tear in the sky with purple void energy spilling out, monsters emerging. Fantasy history art.
+
 #### Treaty of Greenstone
 The document that established Greenstone City as a neutral ground for all factions to trade and negotiate.
 > **Visual Prompt**: A scroll with seals lying on a table, dagger and quill next to it.
@@ -698,6 +719,10 @@ Overexposure to conflicting essences can cause Essence Sickness, a condition whe
 #### Fire Essence
 Associated with passion, destruction, and renewal. Fire Mages are often impulsive but possess devastating offensive power.
 > **Visual Prompt**: A burning ball of fire essence, red and orange flames, dynamic and energetic.
+
+#### Gravitation Magic
+Gravitation is considered one of the Fundamental Essences, governing the attraction between all things. Mastery over Gravity allows a cultivator to increase the weight of their strikes, pin enemies to the ground, or even fly by negating the pull of the earth. It is a difficult path, often requiring the user to meditate on the movement of celestial bodies. Those who unlock the Gravity Essence often develop a stoic, grounded personality, unshakeable in the face of adversity.
+> **Visual Prompt**: A mage manipulating gravity, floating rocks and bending light. Magical effect visualization.
 
 #### Hope Essence
 A unique essence generated by collective belief. It empowers allies and weakens creatures of the Void, shining brightest in the darkest hours.

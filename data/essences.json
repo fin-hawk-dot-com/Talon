@@ -818,5 +818,88 @@
       "Dark"
     ],
     "image_prompt": "An ethereal essence orb representing Poison. Visual style: Uncommon magic, glowing with Biological, Toxin, Death, Liquid energy. The essence of toxicity and venom."
+  },
+  {
+    "name": "Acid",
+    "type": "Base",
+    "rarity": "Uncommon",
+    "tags": [
+      "Elemental",
+      "Liquid",
+      "Corrosion",
+      "Chemical"
+    ],
+    "description": "The essence of corrosive fluids.",
+    "opposite": "Iron",
+    "synergy": [
+      "Water",
+      "Poison",
+      "Earth",
+      "Death"
+    ],
+    "image_prompt": "An ethereal essence orb representing Acid. Visual style: Uncommon magic, glowing with Elemental, Liquid, Corrosion, Chemical energy. The essence of corrosive fluids."
+  },
+  {
+    "name": "Crystal",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": [
+      "Elemental",
+      "Solid",
+      "Structure",
+      "Refraction"
+    ],
+    "description": "The essence of ordered structure and gems.",
+    "opposite": "Sound",
+    "synergy": [
+      "Earth",
+      "Light",
+      "Ice",
+      "Iron",
+      "Order"
+    ],
+    "image_prompt": "An ethereal essence orb representing Crystal. Visual style: Common magic, glowing with Elemental, Solid, Structure, Refraction energy. The essence of ordered structure and gems."
+  },
+  {
+    "name": "Gravity",
+    "type": "Base",
+    "rarity": "Epic",
+    "tags": [
+      "Fundamental",
+      "Force",
+      "Weight",
+      "Attraction"
+    ],
+    "description": "The essence of gravitational pull.",
+    "opposite": "Wing",
+    "synergy": [
+      "Earth",
+      "Void",
+      "Star",
+      "Moon",
+      "Sun"
+    ],
+    "image_prompt": "An ethereal essence orb representing Gravity. Visual style: Epic magic, glowing with Fundamental, Force, Weight, Attraction energy. The essence of gravitational pull."
+  },
+  {
+    "name": "Dream",
+    "type": "Base",
+    "rarity": "Rare",
+    "tags": [
+      "Abstract",
+      "Mind",
+      "Illusion",
+      "Sleep"
+    ],
+    "description": "The essence of the subconscious.",
+    "opposite": "Iron",
+    "synergy": [
+      "Moon",
+      "Dark",
+      "Knowledge",
+      "Dimension",
+      "Chaos"
+    ],
+    "image_prompt": "An ethereal essence orb representing Dream. Visual style: Rare magic, glowing with Abstract, Mind, Illusion, Sleep energy. The essence of the subconscious."
   }
 ]
