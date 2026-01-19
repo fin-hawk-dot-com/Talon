@@ -142,5 +142,41 @@
     "cooldown": "Medium",
     "cost_type": "Stamina",
     "image_prompt": "A Uncommon Awakening Stone named Stone of the Anchor, inscribed with runes of Stability. Prevents knockback and increases resistance. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Breath",
+    "function": "Area Attack",
+    "description": "Exhales a cone of Essence.",
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Mana",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Breath, inscribed with runes of Area Attack. Exhales a cone of Essence. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Nova",
+    "function": "Area Attack",
+    "description": "Explodes with Essence energy in all directions.",
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Nova, inscribed with runes of Area Attack. Explodes with Essence energy in all directions. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Prison",
+    "function": "Terrain Control",
+    "description": "Encases the enemy in a structure of Essence.",
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Prison, inscribed with runes of Terrain Control. Encases the enemy in a structure of Essence. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Lens",
+    "function": "Perception",
+    "description": "Allows the user to sense Essence and hidden things.",
+    "rarity": "Rare",
+    "cooldown": "None",
+    "cost_type": "Stamina",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Lens, inscribed with runes of Perception. Allows the user to sense Essence and hidden things. Glowing magical artifact."
   }
 ]
