@@ -910,5 +910,79 @@
             }
         },
         "image_prompt": "A detective standing in a glass room floating above a neon city, rain falling, mystery noir atmosphere."
+    },
+    {
+        "id": "side_silent_hum",
+        "title": "The Silent Hum",
+        "description": "Rumors of a dark secret behind Greenstone's peace are circulating in the market. An old man named Silas claims to hear what others cannot.",
+        "type": "Side",
+        "starting_stage_id": "stage_1",
+        "rewards": [
+            "Mind Shield Trait",
+            "Reputation"
+        ],
+        "stages": {
+            "stage_1": {
+                "id": "stage_1",
+                "description": "You find Old Man Silas cowering near a fruit stall. He clutches his homemade helmet. 'The green! The green is screaming!'",
+                "choices": [
+                    {
+                        "text": "Listen to Silas",
+                        "next_stage_id": "stage_2",
+                        "consequence": "He hands you a pair of crude lead earplugs. 'Wear these! Go to the Academy Basement! Section D! See the truth!'"
+                    }
+                ]
+            },
+            "stage_2": {
+                "id": "stage_2",
+                "description": "You sneak into the Academy. The air in Section D is thick and heavy. A low hum vibrates in your teeth. You find a lab filled with tuning forks and a map of the city overlayed with wave patterns.",
+                "choices": [
+                    {
+                        "text": "Read the journals",
+                        "next_stage_id": "stage_3",
+                        "consequence": "The journals belong to Professor Vane. They detail 'Project Harmony': using the Monolith to overwrite free will."
+                    }
+                ]
+            },
+            "stage_3": {
+                "id": "stage_3",
+                "description": "Professor Vane discovers you. He doesn't look angry; he looks disappointed. 'You have seen the score. Now, will you play your part?'",
+                "choices": [
+                    {
+                        "text": "Refuse and fight",
+                        "next_stage_id": "stage_4_fight",
+                        "consequence": "Vane sighs and raises his baton. 'Then you must be silenced.'"
+                    },
+                    {
+                        "text": "Agree to join",
+                        "next_stage_id": "stage_4_join",
+                        "consequence": "Vane smiles. 'A wise choice. Harmony requires sacrifice.'"
+                    }
+                ]
+            },
+            "stage_4_fight": {
+                "id": "stage_4_fight",
+                "description": "You manage to smash the resonance crystal in the lab. The hum spikes, then fades. Vane flees, vowing revenge. The city's 'peace' feels a little more fragile, but also more real.",
+                "choices": [
+                    {
+                        "text": "Escape",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "You escape the Academy. Silas is vindicated, though still crazy. You have gained a resistance to mind control."
+                    }
+                ]
+            },
+            "stage_4_join": {
+                "id": "stage_4_join",
+                "description": "Vane gives you a ring made of dampening metal. You are now part of the choir. You will help maintain the peace, no matter the cost.",
+                "choices": [
+                    {
+                        "text": "Accept the ring",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "You received the Harmonist Ring. The hum no longer bothers you; it comforts you."
+                    }
+                ]
+            }
+        },
+        "image_prompt": "Fantasy illustration depicting the quest 'The Silent Hum'. A glowing green monolith looming over a city, with sound waves visualized."
     }
 ]
