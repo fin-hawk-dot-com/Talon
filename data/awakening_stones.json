@@ -178,5 +178,32 @@
     "cooldown": "None",
     "cost_type": "Stamina",
     "image_prompt": "A Rare Awakening Stone named Stone of the Lens, inscribed with runes of Perception. Allows the user to sense Essence and hidden things. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Leap",
+    "function": "Mobility",
+    "description": "Allows the user to jump great distances.",
+    "rarity": "Common",
+    "cooldown": "Low",
+    "cost_type": "Stamina",
+    "image_prompt": "A Common Awakening Stone named Stone of the Leap, inscribed with runes of Mobility. Allows the user to jump great distances. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Void",
+    "function": "Area Denial",
+    "description": "Creates a zone of emptiness that damages enemies.",
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Void, inscribed with runes of Area Denial. Creates a zone of emptiness that damages enemies. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Shell",
+    "function": "Defense",
+    "description": "Summons a hardened carapace around the user.",
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Mana",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Shell, inscribed with runes of Defense. Summons a hardened carapace around the user. Glowing magical artifact."
   }
 ]

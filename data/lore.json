@@ -712,5 +712,33 @@
         "category": "Bestiary",
         "text": "Unlike their rock or iron cousins, Obsidian Golems are not merely animated matter but are often created through volcanic rituals involving Fire and Earth Essences. Their bodies are made of razor-sharp volcanic glass, making them dangerous even to touch. They are typically found guarding ancient volcanic forges or the lairs of powerful fire-aligned entities. An Obsidian Golem's core is usually a piece of superheated magma that never cools, serving as its heart.",
         "image_prompt": "A golem made of shiny black obsidian with magma veins. Fantasy creature design."
+    },
+    {
+        "id": "lore_magma_crab",
+        "title": "Magma Crab",
+        "category": "Bestiary",
+        "text": "Native to volcanic regions, these crustaceans have shells made of cooling lava rock. They are surprisingly fast despite their heavy armor and can spew molten rock at attackers.",
+        "image_prompt": "A crab with a shell of glowing black rock and lava, volcanic background."
+    },
+    {
+        "id": "lore_void_wisp",
+        "title": "Void Wisp",
+        "category": "Bestiary",
+        "text": "Small, flickering entities of pure Void energy. They are often found near tears in reality. They feed on background mana and are difficult to hit with physical weapons.",
+        "image_prompt": "A small floating ball of purple and black energy, flickering, dark background."
+    },
+    {
+        "id": "lore_ancient_sentinel",
+        "title": "Ancient Sentinel",
+        "category": "Bestiary",
+        "text": "Towering constructs left behind by the Aethel to guard their secrets. Powered by an eternal core, they do not rust or decay, standing vigil for thousands of years.",
+        "image_prompt": "A giant robot/golem made of white stone and gold metal, standing still in ruins."
+    },
+    {
+        "id": "lore_great_barrier",
+        "title": "The Great Barrier",
+        "category": "Location",
+        "text": "A massive energy shield erected by the Iron Vanguard to contain the spread of the Void Rift. It consumes a tremendous amount of mana daily, requiring a constant supply of Essence crystals from the mines.",
+        "image_prompt": "A giant translucent blue wall stretching across a wasteland, stopping purple void monsters."
     }
 ]

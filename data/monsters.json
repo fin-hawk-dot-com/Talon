@@ -962,5 +962,60 @@
         ],
         "image_prompt": "A dangerous Demon creature known as Inferno Demon. High fantasy art style, detailed creature design.",
         "description": "A Demon known as Inferno Demon wrapped in hellfire."
+    },
+    {
+        "name": "Magma Crab",
+        "race": "Beast",
+        "attributes": {
+            "Power": 150,
+            "Speed": 40,
+            "Spirit": 80,
+            "Recovery": 200
+        },
+        "xp_reward": 120,
+        "loot_table": [
+            "Fire",
+            "Armor",
+            "Stone of the Shell"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Magma Crab. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Magma Crab with a shell of hardened lava."
+    },
+    {
+        "name": "Void Wisp",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 100,
+            "Speed": 250,
+            "Spirit": 200,
+            "Recovery": 50
+        },
+        "xp_reward": 130,
+        "loot_table": [
+            "Void",
+            "Swift",
+            "Stone of the Void",
+            "Stone of the Leap"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Void Wisp. High fantasy art style, detailed creature design.",
+        "description": "A Elemental known as Void Wisp that flickers in and out of existence."
+    },
+    {
+        "name": "Ancient Sentinel",
+        "race": "Construct",
+        "attributes": {
+            "Power": 220,
+            "Speed": 60,
+            "Spirit": 100,
+            "Recovery": 250
+        },
+        "xp_reward": 180,
+        "loot_table": [
+            "Iron",
+            "Stone of the Wall",
+            "Stone of the Shield"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Ancient Sentinel. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Ancient Sentinel guarding forgotten ruins."
     }
 ]
