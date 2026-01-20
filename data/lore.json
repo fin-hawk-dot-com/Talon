@@ -740,5 +740,33 @@
         "category": "Location",
         "text": "A massive energy shield erected by the Iron Vanguard to contain the spread of the Void Rift. It consumes a tremendous amount of mana daily, requiring a constant supply of Essence crystals from the mines.",
         "image_prompt": "A giant translucent blue wall stretching across a wasteland, stopping purple void monsters."
+    },
+    {
+        "id": "lore_hawksley_history",
+        "title": "History of Clan Hawksley",
+        "category": "History",
+        "text": "Founded over two centuries ago by Silas 'Iron-Grip' Hawksley, the clan rose to prominence during the Great Beast Migration. Silas, originally a common trapper, earned his nobility by strangling a rampaging Bear-King that had terrorized the northern duchies. Since then, the Hawksleys have served as the realm's premier beast hunters. Unlike the Adventure Society, which takes contracts for coin, the Hawksleys choose their targets based on the threat level and the 'honor' of the hunt. They faced a near-extinction event fifty years ago during the 'Red Winter', losing half their number to a hydra, but have since rebuilt their strength under the current Patriarch.",
+        "image_prompt": "An oil painting of a rugged man wrestling a giant bear, historical style."
+    },
+    {
+        "id": "lore_hawksley_family_tree",
+        "title": "The Hawksley Lineage",
+        "category": "Society",
+        "text": "The clan is currently led by Lord Alaric Hawksley (Gold Rank), a stoic spear-master known for his absolute silence in the field. His wife, Lady Seraphina (Silver Rank), manages the clan's intelligence network. Their heir, Garrick (Bronze Rank), is often criticized for his lack of natural talent but is respected for his relentless work ethic. The true prodigy is the younger daughter, Elara (Bronze Rank), who awakened a Rare 'Sight' ability at age ten. The family's 'black sheep' is Vane Hawksley, Alaric's brother, who was exiled for using poisoned bait\u2014a violation of the clan's code that demands a 'clean kill'.",
+        "image_prompt": "A family portrait of noble hunters, father with a spear, mother with a map, son and daughter looking determined."
+    },
+    {
+        "id": "lore_hawksley_tradition",
+        "title": "The Silent Hunt",
+        "category": "Culture",
+        "text": "The most sacred tradition of Clan Hawksley is the 'Silent Hunt'. To reach adulthood, a clan member must track and kill a beast of at least Bronze rank without using any offensive Essence abilities\u2014relying solely on physical skill, traps, and their bonded hunting hound. This rite ensures that a Hawksley never becomes over-reliant on magic. Those who fail are not exiled but are relegated to support roles within the estate, a shame that drives many to attempt the trial multiple times.",
+        "image_prompt": "A young hunter crouching in the bushes with a hound, tracking a beast, tense atmosphere."
+    },
+    {
+        "id": "lore_clan_hawksley",
+        "title": "Clan Hawksley",
+        "category": "Faction",
+        "text": "An ancient noble family of monster hunters who view beast slaying as a sacred art. They value precision and honor over brute force. While technically a noble house, they operate more like a guild, training their own in the ways of the hunt and maintaining a vast archive of monster lore.",
+        "image_prompt": "Emblem of Clan Hawksley. A stylized hawk holding a spear in its talons, green and silver colors. Fantasy setting."
     }
 ]

@@ -101,15 +101,18 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 | Stone of the Feast | Drain/Sustain | Drains enemy resource to refill user. | A Rare Awakening Stone named Stone of the Feast, inscribed with runes of Drain/Sustain. Drains enemy resource to refill user. Glowing magical artifact. | Rare | High | Health |
 | Stone of the Flesh | Body Mod | Alters user physiology (Passive/Active). | A Epic Awakening Stone named Stone of the Flesh, inscribed with runes of Body Mod. Alters user physiology (Passive/Active). Glowing magical artifact. | Epic | None | None |
 | Stone of the Foot | Mobility | Enhances movement or adds teleportation. | A Common Awakening Stone named Stone of the Foot, inscribed with runes of Mobility. Enhances movement or adds teleportation. Glowing magical artifact. | Common | Low | Stamina |
+| Stone of the Leap | Mobility | Allows the user to jump great distances. | A Common Awakening Stone named Stone of the Leap, inscribed with runes of Mobility. Allows the user to jump great distances. Glowing magical artifact. | Common | Low | Stamina |
 | Stone of the Lens | Perception | Allows the user to sense Essence and hidden things. | A Rare Awakening Stone named Stone of the Lens, inscribed with runes of Perception. Allows the user to sense Essence and hidden things. Glowing magical artifact. | Rare | None | Stamina |
 | Stone of the Nova | Area Attack | Explodes with Essence energy in all directions. | A Rare Awakening Stone named Stone of the Nova, inscribed with runes of Area Attack. Explodes with Essence energy in all directions. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Phantom | Evasion | Grants temporary intangibility or invisibility. | A Rare Awakening Stone named Stone of the Phantom, inscribed with runes of Evasion. Grants temporary intangibility or invisibility. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Prison | Terrain Control | Encases the enemy in a structure of Essence. | A Rare Awakening Stone named Stone of the Prison, inscribed with runes of Terrain Control. Encases the enemy in a structure of Essence. Glowing magical artifact. | Rare | High | Mana |
+| Stone of the Shell | Defense | Summons a hardened carapace around the user. | A Uncommon Awakening Stone named Stone of the Shell, inscribed with runes of Defense. Summons a hardened carapace around the user. Glowing magical artifact. | Uncommon | Medium | Mana |
 | Stone of the Shield | Defense | Creates a barrier or armor buff. | A Common Awakening Stone named Stone of the Shield, inscribed with runes of Defense. Creates a barrier or armor buff. Glowing magical artifact. | Common | Medium | Mana |
 | Stone of the Stars | Celestial/Augment | Adds light/cosmic properties or massive buff. | A Epic Awakening Stone named Stone of the Stars, inscribed with runes of Celestial/Augment. Adds light/cosmic properties or massive buff. Glowing magical artifact. | Epic | High | Mana |
 | Stone of the Strike | Melee Attack | Imbues physical strike with Essence element. | A Common Awakening Stone named Stone of the Strike, inscribed with runes of Melee Attack. Imbues physical strike with Essence element. Glowing magical artifact. | Common | Low | Stamina |
 | Stone of the Swarm | Multi-Hit | Splits effect into multiple small projectiles. | A Uncommon Awakening Stone named Stone of the Swarm, inscribed with runes of Multi-Hit. Splits effect into multiple small projectiles. Glowing magical artifact. | Uncommon | Medium | Mana |
 | Stone of the Trap | Area Denial | Places a hidden rune/trigger. | A Uncommon Awakening Stone named Stone of the Trap, inscribed with runes of Area Denial. Places a hidden rune/trigger. Glowing magical artifact. | Uncommon | Medium | Mana |
+| Stone of the Void | Area Denial | Creates a zone of emptiness that damages enemies. | A Rare Awakening Stone named Stone of the Void, inscribed with runes of Area Denial. Creates a zone of emptiness that damages enemies. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Wall | Terrain Control | Creates physical obstacles. | A Uncommon Awakening Stone named Stone of the Wall, inscribed with runes of Terrain Control. Creates physical obstacles. Glowing magical artifact. | Uncommon | Medium | Mana |
 
 ## Ability Templates
@@ -156,6 +159,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Name | Race | Description | Visual Prompt | Attributes (P/S/Sp/R) | XP | Loot |
 |---|---|---|---|---|---|---|
 | Ancient Bat | Beast | A Beast known as Ancient Bat. | A dangerous Beast creature known as Ancient Bat. High fantasy art style, detailed creature design. | 251/228/235/240 | 263 | Air, Technology |
+| Ancient Sentinel | Construct | A Construct known as Ancient Sentinel guarding forgotten ruins. | A dangerous Construct creature known as Ancient Sentinel. High fantasy art style, detailed creature design. | 220/60/100/250 | 180 | Iron, Stone of the Wall, Stone of the Shield |
 | Armored Elemental | Elemental | A Elemental known as Armored Elemental. | A dangerous Elemental creature known as Armored Elemental. High fantasy art style, detailed creature design. | 524/557/543/589 | 629 | Life, Sin, Mana |
 | Armored Ghost | Undead | A Undead known as Armored Ghost. | A dangerous Undead creature known as Armored Ghost. High fantasy art style, detailed creature design. | 323/382/355/368 | 390 | Life, Mana |
 | Armored Lion | Beast | A Beast known as Armored Lion. | A dangerous Beast creature known as Armored Lion. High fantasy art style, detailed creature design. | 316/318/369/346 | 382 | Swift, Water |
@@ -182,8 +186,10 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Ghostly Griffin | Magical Beast | A Magical Beast known as Ghostly Griffin. | A dangerous Magical Beast creature known as Ghostly Griffin. High fantasy art style, detailed creature design. | 153/175/161/128 | 149 | Swift |
 | Ghostly Rat | Beast | A Beast known as Ghostly Rat. | A dangerous Beast creature known as Ghostly Rat. High fantasy art style, detailed creature design. | 75/34/70/91 | 43 | Stone of the Flesh |
 | Giant Rat | Beast | A Beast known as Giant Rat. | A dangerous Beast creature known as Giant Rat. High fantasy art style, detailed creature design. | 20/30/5/15 | 10 | Stone of the Strike |
+| Gloomstalker Bear | Beast | A massive ursine predator that absorbs light. It is a favored target for elite Hawksley hunters due to its cunning. | A giant bear with fur like shadows, glowing purple eyes, in a dark forest. | 300/200/150/400 | 450 | Dark, Stone of the Phantom |
 | Inferno Demon | Demon | A Demon known as Inferno Demon wrapped in hellfire. | A dangerous Demon creature known as Inferno Demon. High fantasy art style, detailed creature design. | 350/280/300/320 | 400 | Fire, Sin, Stone of the Nova |
 | Iron Wolf | Magical Beast | A Magical Beast known as Iron Wolf. | A dangerous Magical Beast creature known as Iron Wolf. High fantasy art style, detailed creature design. | 120/140/80/110 | 100 | Swift, Stone of the Reflex |
+| Magma Crab | Beast | A Beast known as Magma Crab with a shell of hardened lava. | A dangerous Beast creature known as Magma Crab. High fantasy art style, detailed creature design. | 150/40/80/200 | 120 | Fire, Armor, Stone of the Shell |
 | Mechanical Knight | Humanoid | A Humanoid known as Mechanical Knight. | A dangerous Humanoid creature known as Mechanical Knight. High fantasy art style, detailed creature design. | 182/150/131/161 | 150 | Moon |
 | Mechanical Phoenix | Magical Beast | A Magical Beast known as Mechanical Phoenix. | A dangerous Magical Beast creature known as Mechanical Phoenix. High fantasy art style, detailed creature design. | 245/263/225/214 | 262 | Stone of the Trap, Iron |
 | Mechanical Wyrm | Dragonkin | A Dragonkin known as Mechanical Wyrm. | A dangerous Dragonkin creature known as Mechanical Wyrm. High fantasy art style, detailed creature design. | 99/46/35/56 | 39 | Renewal |
@@ -197,6 +203,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Rabid Automaton | Construct | A Construct known as Rabid Automaton. | A dangerous Construct creature known as Rabid Automaton. High fantasy art style, detailed creature design. | 131/140/119/161 | 143 | Moon |
 | Rabid Elemental | Elemental | A Elemental known as Rabid Elemental. | A dangerous Elemental creature known as Rabid Elemental. High fantasy art style, detailed creature design. | 343/385/368/350 | 392 | Swift, Shield |
 | Rabid Spirit | Elemental | A Elemental known as Rabid Spirit. | A dangerous Elemental creature known as Rabid Spirit. High fantasy art style, detailed creature design. | 220/258/288/262 | 270 | Stone of the Blast, Sound |
+| Razor-Tusk Boar | Beast | A boar whose tusks have calcified into organic steel. Hunting one is the standard rite of passage for Hawksley initiates. | A wild boar with metallic silver tusks, charging through underbrush. | 150/180/50/200 | 200 | Iron, Stone of the Strike |
 | Rock Golem | Construct | A Construct known as Rock Golem. | A dangerous Construct creature known as Rock Golem. High fantasy art style, detailed creature design. | 180/50/50/190 | 150 | Earth, Stone of the Shield |
 | Runed Wisp | Elemental | A Elemental known as Runed Wisp. | A dangerous Elemental creature known as Runed Wisp. High fantasy art style, detailed creature design. | 169/167/110/129 | 145 | Knowledge |
 | Savage Zombie | Undead | A Undead known as Savage Zombie. | A dangerous Undead creature known as Savage Zombie. High fantasy art style, detailed creature design. | 149/153/157/162 | 150 | Stone of the Shield |
@@ -206,10 +213,12 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Storm Drake | Dragonkin | A Dragonkin known as Storm Drake, crackling with electricity. | A dangerous Dragonkin creature known as Storm Drake. High fantasy art style, detailed creature design. | 300/350/320/280 | 450 | Lightning, Wind, Dragon, Stone of the Breath |
 | Storm Fiend | Demon | A Demon known as Storm Fiend. | A dangerous Demon creature known as Storm Fiend. High fantasy art style, detailed creature design. | 135/177/132/113 | 143 | Mana |
 | Storm Spirit | Elemental | A Elemental known as Storm Spirit. | A dangerous Elemental creature known as Storm Spirit. High fantasy art style, detailed creature design. | 344/320/338/333 | 381 | Stone of the Anchor, Stone of the Foot |
+| Storm-Winged Eagle | Magical Beast | The apex predator of the high peaks. Its feathers are prized fletching for Hawksley archers, but few survive the climb to its nest. | A colossal eagle with lightning arcing across its wings, flying in a storm. | 250/400/350/200 | 600 | Air, Lightning, Stone of the Stars |
 | Swift Bandit | Humanoid | A Humanoid known as Swift Bandit. | A dangerous Humanoid creature known as Swift Bandit. High fantasy art style, detailed creature design. | 89/51/50/47 | 39 | Stone of the Flesh |
 | Swift Bat | Beast | A Beast known as Swift Bat. | A dangerous Beast creature known as Swift Bat. High fantasy art style, detailed creature design. | 376/374/360/315 | 390 | Balance, Moon |
 | Void Demon | Demon | A Demon known as Void Demon. | A dangerous Demon creature known as Void Demon. High fantasy art style, detailed creature design. | 177/150/134/130 | 147 | Directed |
 | Void Stalker | Magical Beast | A Magical Beast known as Void Stalker that shifts between dimensions. | A dangerous Magical Beast creature known as Void Stalker. High fantasy art style, detailed creature design. | 180/400/250/150 | 300 | Void, Dark, Dimension, Stone of the Phantom |
+| Void Wisp | Elemental | A Elemental known as Void Wisp that flickers in and out of existence. | A dangerous Elemental creature known as Void Wisp. High fantasy art style, detailed creature design. | 100/250/200/50 | 130 | Void, Swift, Stone of the Void, Stone of the Leap |
 | Wild Boar | Beast | A Beast known as Wild Boar. | A dangerous Beast creature known as Wild Boar. High fantasy art style, detailed creature design. | 40/20/10/50 | 20 | Might |
 | Wild Elemental | Elemental | A Elemental known as Wild Elemental. | A dangerous Elemental creature known as Wild Elemental. High fantasy art style, detailed creature design. | 24/61/57/47 | 34 | Stone of the Judgment |
 
@@ -384,6 +393,10 @@ A legendary shield said to be forged from a single piece of transparent diamond 
 Giant bats that have lived for centuries in the deep caverns, absorbing background magic until they grew to monstrous sizes.
 > **Visual Prompt**: A massive bat hanging from a cave ceiling, leather wings, dark atmosphere.
 
+#### Ancient Sentinel
+Towering constructs left behind by the Aethel to guard their secrets. Powered by an eternal core, they do not rust or decay, standing vigil for thousands of years.
+> **Visual Prompt**: A giant robot/golem made of white stone and gold metal, standing still in ruins.
+
 #### Blood Devil
 Small, red-skinned demons that swarm their prey. They are drawn to the scent of blood and frenzy when wounded.
 > **Visual Prompt**: A small, grotesque red demon with sharp claws and teeth, jumping.
@@ -399,6 +412,10 @@ Constructs animated by rogue magic in the Crystal Caverns. Their bodies reflect 
 #### Iron Wolf
 Wolves native to the metallic mountains of the north. Their fur contains traces of iron, granting them natural armor and razor-sharp claws.
 > **Visual Prompt**: A wolf with metallic grey fur, glowing yellow eyes, snowy background.
+
+#### Magma Crab
+Native to volcanic regions, these crustaceans have shells made of cooling lava rock. They are surprisingly fast despite their heavy armor and can spew molten rock at attackers.
+> **Visual Prompt**: A crab with a shell of glowing black rock and lava, volcanic background.
 
 #### Mana Moths
 Small, harmless insects that are naturally attracted to high concentrations of magic. They are often used by adventurers as a primitive danger sense; if a swarm of Mana Moths suddenly disperses, a predator or a mana storm is likely approaching.
@@ -435,6 +452,10 @@ Colossal, peaceful beasts that drift through the upper atmosphere, feeding on cl
 #### Void Demon
 Abominations from beyond the rift. Their forms are constantly shifting, and their touch corrupts living matter.
 > **Visual Prompt**: A shifting mass of tentacles and eyes, purple and black void energy.
+
+#### Void Wisp
+Small, flickering entities of pure Void energy. They are often found near tears in reality. They feed on background mana and are difficult to hit with physical weapons.
+> **Visual Prompt**: A small floating ball of purple and black energy, flickering, dark background.
 
 ### Character
 
@@ -476,11 +497,19 @@ In the mountainous regions controlled by the Iron Vanguard, the dead are not bur
 The universal currency of Aetheria. A 'Dram' is a standardized weight of crystallized mana. Unlike gold, which has no intrinsic value, a Dram can be consumed to restore a small amount of mana, making it a commodity with practical use. Inflation is controlled by the simple fact that people literally eat their money when times are tough.
 > **Visual Prompt**: A pile of glowing blue crystal coins or small bars, stamped with magical runes.
 
+#### The Silent Hunt
+The most sacred tradition of Clan Hawksley is the 'Silent Hunt'. To reach adulthood, a clan member must track and kill a beast of at least Bronze rank without using any offensive Essence abilities—relying solely on physical skill, traps, and their bonded hunting hound. This rite ensures that a Hawksley never becomes over-reliant on magic. Those who fail are not exiled but are relegated to support roles within the estate, a shame that drives many to attempt the trial multiple times.
+> **Visual Prompt**: A young hunter crouching in the bushes with a hound, tracking a beast, tense atmosphere.
+
 ### Faction
 
 #### Circle of Thorns
 Guardians of the deep forests who believe civilization is an encroachment on the natural order. They wield Nature and Poison essences to deter intruders.
 > **Visual Prompt**: Druids with antler headdresses performing a ritual in a dense forest, glowing green runes, nature magic.
+
+#### Clan Hawksley
+An ancient noble family of monster hunters who view beast slaying as a sacred art. They value precision and honor over brute force. While technically a noble house, they operate more like a guild, training their own in the ways of the hunt and maintaining a vast archive of monster lore.
+> **Visual Prompt**: Emblem of Clan Hawksley. A stylized hawk holding a spear in its talons, green and silver colors. Fantasy setting.
 
 #### College of Silver Strings
 A guild of bards who have discovered that specific musical frequencies can resonate with the System. They use music to buff allies or sow confusion in enemies. They are headquartered in a magically acoustic amphitheater in the hills east of Greenstone.
@@ -563,6 +592,10 @@ As the dust settled, territorial disputes threatened to start a civil war. The D
 #### Chronicle XIII: The Current Era
 We are now in the thirtieth year of the New Age. Society has rebuilt itself around the System. Schools now teach Mana Theory alongside Mathematics. The economy runs on Essence shards. The Adventurer's Guild regulates the population of 'Delvers' who enter the Rifts to harvest resources. While the major cities are safe, the wilderness remains deadly. Rumors whisper that the Seal is weakening again. New, unknown monster types are appearing, and the Void Rift in the badlands is pulsating with a rhythm that matches the heartbeat of something... massive.
 > **Visual Prompt**: A futuristic yet fantasy cityscape, magitech vehicles, people with glowing accessories, peaceful but alert.
+
+#### History of Clan Hawksley
+Founded over two centuries ago by Silas 'Iron-Grip' Hawksley, the clan rose to prominence during the Great Beast Migration. Silas, originally a common trapper, earned his nobility by strangling a rampaging Bear-King that had terrorized the northern duchies. Since then, the Hawksleys have served as the realm's premier beast hunters. Unlike the Adventure Society, which takes contracts for coin, the Hawksleys choose their targets based on the threat level and the 'honor' of the hunt. They faced a near-extinction event fifty years ago during the 'Red Winter', losing half their number to a hydra, but have since rebuilt their strength under the current Patriarch.
+> **Visual Prompt**: An oil painting of a rugged man wrestling a giant bear, historical style.
 
 #### Origin of Essences
 Theories suggest Essences are the shards of a shattered creator deity, each representing a facet of their power.
@@ -649,6 +682,10 @@ To the far north lies a land of eternal ice and snow, where Crystal Golems roam.
 #### The Glass Sanctum
 A spherical meditation chamber suspended by gravity magic, three hundred feet above Orizon's plaza. It is a 'Null-State' environment designed for high-level cultivation. The floor is made of perfect Titan-glass, and the room is soundproofed against the city's eternal thrum.
 > **Visual Prompt**: A floating glass sphere in the sky, minimalist interior, meditation mat, view of the city below.
+
+#### The Great Barrier
+A massive energy shield erected by the Iron Vanguard to contain the spread of the Void Rift. It consumes a tremendous amount of mana daily, requiring a constant supply of Essence crystals from the mines.
+> **Visual Prompt**: A giant translucent blue wall stretching across a wasteland, stopping purple void monsters.
 
 #### The Luminous Deep
 Below Orizon churns an ocean so rich in raw mana that the spray creates 'Arcane Salt'. The toxicity is lethal to the unwarded. It is the source of the city's power and its greatest threat. The deep glow of the water illuminates the underbelly of the city day and night.
@@ -791,6 +828,10 @@ The head of the Church of the Healer. A kind-faced elderly woman who is secretly
 #### The Council of Six
 The governing body of Greenstone City. Composed of representatives from the major guilds: The Adventurer's Guild, The Merchant's Coalition, The Arcane Assembly, The Iron Vanguard, The Church of the Healer, and a representative for the Common Folk. They meet in the Emerald Hall to decide on trade tariffs, defense budgets, and city laws. Debates are known to be heated, often requiring magical suppression fields to prevent 'accidental' duels.
 > **Visual Prompt**: Six distinct figures sitting around a circular table in a grand hall with green banners, fantasy politics.
+
+#### The Hawksley Lineage
+The clan is currently led by Lord Alaric Hawksley (Gold Rank), a stoic spear-master known for his absolute silence in the field. His wife, Lady Seraphina (Silver Rank), manages the clan's intelligence network. Their heir, Garrick (Bronze Rank), is often criticized for his lack of natural talent but is respected for his relentless work ethic. The true prodigy is the younger daughter, Elara (Bronze Rank), who awakened a Rare 'Sight' ability at age ten. The family's 'black sheep' is Vane Hawksley, Alaric's brother, who was exiled for using poisoned bait—a violation of the clan's code that demands a 'clean kill'.
+> **Visual Prompt**: A family portrait of noble hunters, father with a spear, mother with a map, son and daughter looking determined.
 
 #### The Iron Court
 The absolute monarchy of Ironhold. While King Thorian sits on the throne, his decisions are advised by the Iron Court—a collection of generals and smith-lords. Access to the court is determined by one's contribution to the Kingdom's armory or defenses. In Ironhold, political power is directly proportional to military utility.
