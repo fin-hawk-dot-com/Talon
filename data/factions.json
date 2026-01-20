@@ -103,5 +103,19 @@
     "type": "Noble",
     "rank_requirement": "Bronze",
     "image_prompt": "Emblem of Clan Hawksley. A stylized hawk holding a spear in its talons, green and silver colors. Fantasy setting."
+  },
+  {
+    "name": "Clan Telcontar",
+    "description": "A lineage of rangers and fallen nobility who guard the northern frontiers. They claim descent from the ancient Kings of the West and operate in secret to protect the realms of men.",
+    "type": "Noble",
+    "rank_requirement": "Silver",
+    "image_prompt": "Emblem of Clan Telcontar. A silver tree under seven stars on a black field. Fantasy setting."
+  },
+  {
+    "name": "Clan Oakenshield",
+    "description": "A displaced clan of dwarven warriors and smiths seeking to reclaim their ancestral mountain home from a great calamity. They are known for their stubbornness and loyalty.",
+    "type": "Guild",
+    "rank_requirement": "Bronze",
+    "image_prompt": "Emblem of Clan Oakenshield. A lone mountain peak with a dragon circling it, gold and grey colors. Fantasy setting."
   }
 ]
