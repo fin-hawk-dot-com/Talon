@@ -908,5 +908,73 @@
         "category": "Artifacts",
         "text": "Also known as the Heart of the Mountain, the Arkenstone is a gem of impossible brilliance. It shines with its own inner light and reflects all other light in a thousand rainbow hues. It is the symbol of the King under the Mountain's divine right to rule. Clan Oakenshield believes that possessing it will compel all other dwarven clans to answer their call to war.",
         "image_prompt": "A large, glowing white gem held in a gloved hand, radiating light."
+        "id": "lore_sovereign_band",
+        "title": "The Sovereign Band",
+        "category": "Artifacts",
+        "text": "The Sovereign Band is an ancient ring artifact forged in the fires of the Black Mountain. It was designed to harmonize all conflicting Essences, granting the wearer mastery over every element without the need for affinity. However, it contains a fragment of the Void Lord's will. It whispers to the wearer, promising absolute power in exchange for control. 'One Essence to rule them all,' the inscription reads in the Black Speech. It is said to have the power to dominate the minds of other Essence users, binding them to the wearer's will, but at the cost of the user's soul.",
+        "image_prompt": "A simple gold ring glowing with fiery script, lying on black volcanic rock."
+    },
+    {
+        "id": "lore_war_of_shadow",
+        "title": "The War of the Shadow",
+        "category": "History",
+        "text": "The War of the Shadow was a legendary conflict that took place at the end of the Second Age. The Dark Lord, seeking to cover Aetheria in eternal darkness, launched a massive invasion from his fortress in the Ashlands. An alliance of Men, the Ironhold Dwarves, and the Elven ancestors of the Whispering Woods united to stop him. The war ended on the slopes of the Black Mountain, where the Dark Lord was defeated, but not destroyed. His spirit is said to endure, bound to his lost ring, waiting for the day he can take physical form again.",
+        "image_prompt": "A massive battle scene at the foot of a volcano, armies of light fighting shadow monsters, a giant armored figure falling."
+    },
+    {
+        "id": "lore_mithrandir",
+        "title": "Mithrandir the Grey",
+        "category": "History",
+        "text": "Mithrandir the Grey was a wandering Archmage of the Third Age, known for his grey cloak, pointed hat, and staff of white wood. Unlike the stationary scholars of the Arcane Assembly, he traveled constantly, inciting rebellion against tyranny and guiding heroes to their destiny. He was a master of Light and Fire magic, but primarily used his wisdom to solve problems. He was known for his magical fireworks and his friendship with the Great Eagles. He disappeared into the West after the War of the Shadow, his task completed.",
+        "image_prompt": "An old wizard in grey robes with a pointed hat, holding a glowing staff, smoking a pipe."
+    },
+    {
+        "id": "lore_black_mountain",
+        "title": "The Black Mountain",
+        "category": "Location",
+        "text": "The Black Mountain, also known as Mount Cinder, is a solitary, massive volcano located in the heart of the Ashlands. It is the only place in Aetheria hot enough to forge\u2014or destroy\u2014artifacts of the Sovereign tier. The air around it is poisonous, thick with sulfur and ash. It is a nexus of Fire and Void Essence. The mountain is said to be sentient, reacting to the presence of the Sovereign Band with eruptions and tremors. Deep within its Cracks of Doom, the Dark Lord forged his master weapon.",
+        "image_prompt": "A tall, jagged volcano spewing red lava and black smoke, dark lightning in the sky."
+    },
+    {
+        "id": "lore_watchers_north",
+        "title": "The Watchers of the North",
+        "category": "Faction",
+        "text": "The Watchers of the North are a secretive order of rangers who patrol the frozen borders of the civilized world. They are the descendants of a fallen kingdom, sworn to protect the realms of men from the horrors of the Frozen Wastes. They are master trackers, survivalists, and guerilla fighters. Grim and solitary, they are often mistrusted by the common folk, who do not realize that the Watchers are the only thing standing between them and the ancient evils of the North. They await the return of their true King, who wanders in exile.",
+        "image_prompt": "A hooded ranger with a bow standing on a snowy hill, looking out over a bleak landscape."
+    },
+    {
+        "id": "lore_treant_shepherds",
+        "title": "Treant Shepherds",
+        "category": "Bestiary",
+        "text": "Treant Shepherds, or 'Tree-Herders', are ancient, sentient plant-beings that inhabit the deepest groves of the Whispering Woods. Standing over thirty feet tall, they look like walking trees. They are the guardians of the forest, slow to anger but terrifying when roused. They view themselves as shepherds of the trees, protecting them from industrial expansion. They speak in a slow, rumbling language that can take hours to say 'hello'. In times of great war, they have been known to march on fortresses, tearing down stone walls like paper.",
+        "image_prompt": "A giant tree with a face and limbs, walking through a forest, mossy and ancient."
+    },
+    {
+        "id": "lore_halfling_culture",
+        "title": "Halfling Culture",
+        "category": "Culture",
+        "text": "The 'Small Folk' or Halflings of the Green Valleys are a peaceful, agrarian culture known for their love of food, ale, and pipe-weed. They are remarkably resistant to the corruption of Void Essence, perhaps due to their lack of ambition for power. Their culture revolves around comfort and community. They famously eat seven meals a day: Breakfast, Second Breakfast, Elevenses, Luncheon, Afternoon Tea, Dinner, and Supper. Adventurers often find Halfling villages to be the best places to rest and recover morale.",
+        "image_prompt": "A cozy hobbit-hole interior, round door, table full of food, happy small people eating."
+    },
+    {
+        "id": "lore_star_phial",
+        "title": "The Star Phial",
+        "category": "Artifacts",
+        "text": "The Star Phial is a crystal vessel containing the captured light of the Evening Star, Earendil. It shines with a pure, cold white light that is painful to creatures of the Shadow. It was gifted to a legendary hero by the Elf Queen of the Woods. It is said to be a light for when all other lights go out. The phial not only provides illumination but can also break illusions and repel high-ranking Void demons.",
+        "image_prompt": "A small crystal bottle glowing with intense white star-light, held in a hand."
+    },
+    {
+        "id": "lore_white_tree",
+        "title": "The White Tree",
+        "category": "Location",
+        "text": "In the courtyard of the Citadel of Kings stands the White Tree, a symbol of the line of kings. It has not bloomed in centuries, standing as a withered skeleton of white wood. Legend says that when the true King returns to the throne, the tree will blossom again. It is a descendant of the Telperion, the Silver Tree of the Aethel. Its sap is said to have miraculous healing properties.",
+        "image_prompt": "A dead white tree standing in a stone courtyard, high white tower in background."
+    },
+    {
+        "id": "lore_palantir_stones",
+        "title": "Seeing Stones",
+        "category": "Artifacts",
+        "text": "The Seeing Stones, or Palantiri, are ancient spherical artifacts created by the Aethel. They allow the user to see across vast distances and communicate with other stones. However, many of the stones have been lost or captured by the Dark Lord. Using a Seeing Stone is dangerous, as one never knows who might be watching from the other side. Strong wills can dominate weaker ones through the link, driving the user to madness.",
+        "image_prompt": "A dark crystal sphere on a pedestal, glowing with a fiery eye inside."
     }
 ]
