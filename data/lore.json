@@ -852,5 +852,19 @@
         "category": "Magic",
         "text": "A forbidden branch of magic that uses sound waves to alter brain chemistry. Unlike standard illusion magic which tricks the senses, Psycho-Acoustics physically reshapes the neural pathways. It can cure trauma, or it can erase a personality entirely.",
         "image_prompt": "Diagram of a brain with sound waves entering and changing the color of the neurons."
+    },
+    {
+        "id": "lore_nature_of_magic",
+        "title": "The Nature of Magic",
+        "category": "Magic",
+        "text": "Magic is not merely a force; it is the blood of the cosmos. Known as 'Mana', it flows through Ley Lines that crisscross the world like veins. When the Great Seal shattered, this flow became a torrent. Magic seeks a vessel. In humans, it collects in the soul, forming a 'Core'. In beasts, it creates 'Monster Cores'. The manipulation of this energy requires Will (Spirit) and Form (Essence). Without Essence to shape it, raw mana is volatile and destructive, capable of mutating flesh and rending space.",
+        "image_prompt": "Diagram of a human silhouette with glowing blue ley lines flowing into a core in the chest."
+    },
+    {
+        "id": "lore_laws_of_essence",
+        "title": "The Laws of Essence",
+        "category": "Magic",
+        "text": "The First Law of Essence states: 'Like attracts Like'. A Fire Essence will naturally bond with a soul that burns with passion or anger. The Second Law: 'Opposites Destabilize'. Trying to hold Fire and Water Essences simultaneously without a mediating agent (like Steam or Earth) will cause 'Soul Shear', tearing the mage apart. The Third Law: 'Power has a Price'. Every spell burns mana, which is the caster's own vitality converted into energy. Overuse leads to Mana Sickness, where the body begins to cannibalize itself to fuel the magic.",
+        "image_prompt": "An ancient scroll displaying three rules with magical symbols: a magnet, an explosion, and a skull."
     }
 ]

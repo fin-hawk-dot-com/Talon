@@ -984,5 +984,99 @@
             }
         },
         "image_prompt": "Fantasy illustration depicting the quest 'The Silent Hum'. A glowing green monolith looming over a city, with sound waves visualized."
+    },
+    {
+        "id": "side_lost_chronicles",
+        "title": "The Lost Chronicles",
+        "description": "Archivist Aris in the Greenstone Library seeks to restore the fragmented history of the world. He tasks you with recovering ancient tablets from the Sunken Ruins.",
+        "type": "Side",
+        "starting_stage_id": "stage_1",
+        "rewards": [
+            "Lore: The Nature of Magic",
+            "Lore: The Laws of Essence",
+            "Lore: Chronicle I: The Age of Starlight",
+            "Lore: Chronicle II: The Solar Spark",
+            "Lore: Chronicle III: The Rise of Aethel",
+            "Lore: Chronicle IV: The Great Hubris",
+            "Lore: Chronicle V: The Fall",
+            "Lore: Chronicle VI: The First Breach",
+            "Lore: Chronicle VII: The Titans' Sacrifice",
+            "Lore: Chronicle VIII: The Age of Silence",
+            "Lore: Chronicle IX: The Awakening",
+            "XP: 500"
+        ],
+        "stages": {
+            "stage_1": {
+                "id": "stage_1",
+                "description": "Aris pushes his glasses up his nose. 'The history we teach is incomplete. The Aethel left records, imperishable tablets. I believe a cache is located in the Sunken Ruins. Will you retrieve them?'",
+                "choices": [
+                    {
+                        "text": "Accept the mission",
+                        "next_stage_id": "stage_2_ruins",
+                        "consequence": "You head to the Sunken Ruins, diving into the murky depths."
+                    },
+                    {
+                        "text": "Ask for payment upfront",
+                        "next_stage_id": "stage_1_greedy",
+                        "consequence": "Aris scowls. 'Knowledge is the reward! But fine, I will owe you a favor.'"
+                    }
+                ]
+            },
+            "stage_1_greedy": {
+                "id": "stage_1_greedy",
+                "description": "Aris is annoyed but desperate. 'Just go. The tablets are vital.'",
+                "choices": [
+                    {
+                        "text": "Go to the Ruins",
+                        "next_stage_id": "stage_2_ruins",
+                        "consequence": "You travel to the ruins."
+                    }
+                ]
+            },
+            "stage_2_ruins": {
+                "id": "stage_2_ruins",
+                "description": "Inside the ruins, you find a sealed vault. The door requires a magical signature to open.",
+                "choices": [
+                    {
+                        "text": "Channel Mana",
+                        "next_stage_id": "stage_3_vault",
+                        "consequence": "You pour mana into the seal. It glows blue and clicks open."
+                    },
+                    {
+                        "text": "Force it open",
+                        "next_stage_id": "stage_3_vault",
+                        "consequence": "You pry the door open with brute strength. The ancient hinges shriek."
+                    }
+                ]
+            },
+            "stage_3_vault": {
+                "id": "stage_3_vault",
+                "description": "The vault is filled with stone tablets. However, a Guardian Construct activates, its eyes glowing red.",
+                "choices": [
+                    {
+                        "text": "Destroy the Guardian",
+                        "next_stage_id": "stage_4_return",
+                        "consequence": "You shatter the construct and gather the tablets."
+                    },
+                    {
+                        "text": "Sneak past it",
+                        "next_stage_id": "stage_4_return",
+                        "consequence": "You distract it with a sound illusion and steal the tablets."
+                    }
+                ]
+            },
+            "stage_4_return": {
+                "id": "stage_4_return",
+                "description": "You return to Aris with the heavy tablets. He trembles with excitement as he translates the first lines.",
+                "choices": [
+                    {
+                        "text": "Hand them over",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "Aris begins to read aloud. As you listen, the history of the world unfolds in your mind. You feel enlightened."
+                    }
+                ]
+            }
+        },
+        "image_prompt": "A scholar in a library examining glowing ancient stone tablets, dusty atmosphere."
     }
 ]
