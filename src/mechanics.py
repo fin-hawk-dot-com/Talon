@@ -718,6 +718,12 @@ class TrainingManager:
         if attribute_name not in character.attributes:
             return "Invalid attribute."
 
+        # XP Cost
+        xp_cost = 100
+        if character.current_xp < xp_cost:
+            return f"Not enough XP to train. Need {xp_cost}, have {character.current_xp}."
+
+        character.current_xp -= xp_cost
         attr = character.attributes[attribute_name]
         old_rank = attr.rank
 
@@ -730,6 +736,7 @@ class TrainingManager:
         attr.value += gain
 
         narrative = NarrativeGenerator.get_training_narrative(attribute_name, attr.value)
+        narrative = f"[XP -{xp_cost}] " + narrative
 
         new_rank = attr.rank
         if new_rank != old_rank:
@@ -1130,9 +1137,12 @@ class CombatManager:
 
         return log, False
 
-    def check_combat_objectives(self, player: Character, enemy: Character):
-        # This should be called by GameEngine after combat
-        pass
+    def check_combat_objectives(self, player: Character, enemy: Character, quest_mgr) -> List[str]:
+        """
+        Checks for quest objectives related to the defeated enemy.
+        Delegates to QuestManager.
+        """
+        return quest_mgr.check_objectives(player, "kill", enemy.name)
 
 class InteractionManager:
     def __init__(self, data_loader: DataLoader):
@@ -1334,6 +1344,35 @@ class GameEngine:
         self.character = Character(name=name, race=race)
         return self.character
 
+    def rest(self) -> str:
+        if not self.character: return "No character."
+
+        # Check location type
+        loc = self.data_loader.get_location(self.character.current_location)
+        is_safe = False
+        if loc and loc.type in ["City", "Village", "Outpost"]:
+            is_safe = True
+
+        msg = ""
+        if is_safe:
+            self.character.current_health = self.character.max_health
+            self.character.current_mana = self.character.max_mana
+            self.character.current_stamina = self.character.max_stamina
+            msg = f"Rested at {self.character.current_location}. Health, Mana, and Stamina fully restored."
+        else:
+            # Wilderness Rest - Partial restore
+            h_gain = self.character.max_health * 0.5
+            m_gain = self.character.max_mana * 0.5
+            s_gain = self.character.max_stamina * 0.5
+
+            self.character.current_health = min(self.character.max_health, self.character.current_health + h_gain)
+            self.character.current_mana = min(self.character.max_mana, self.character.current_mana + m_gain)
+            self.character.current_stamina = min(self.character.max_stamina, self.character.current_stamina + s_gain)
+
+            msg = f"Camped in the wilderness ({self.character.current_location}). Recovered some vitality."
+
+        return msg
+
     def travel(self, location_name: str) -> str:
         if not self.character: return "No character."
 
@@ -1503,7 +1542,8 @@ class GameEngine:
                 current_stamina=data.get('current_stamina', -1),
                 xp_reward=data.get('xp_reward', 0),
                 loot_table=data.get('loot_table', []),
-                lore=data.get('lore', [])
+                lore=data.get('lore', []),
+                current_xp=data.get('current_xp', 0)
             )
 
             # Reconstruct Attributes
