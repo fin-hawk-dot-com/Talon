@@ -817,5 +817,40 @@
         "category": "History",
         "text": "The Creation War was an ancient conflict that predates the Aethel. It was fought between the Shapers, who sought to change the world to fit their desires, and the Knowers, who sought to understand the world as it was. The war broke the world, creating the Fae Realm and leaving behind ruins that still defy the laws of physics. It is the root of the division between Naming (Knowing) and Shaping (Changing) magic, a philosophical schism that persists to this day.",
         "image_prompt": "Abstract battle scene, reality bending, two armies of glowing figures."
+    },
+    {
+        "id": "lore_silent_hum",
+        "title": "The Silent Hum",
+        "category": "Magic",
+        "text": "A phenomenon unique to Greenstone City. Most citizens describe it as a feeling of safety, a gentle pressure in the back of the mind that soothes anger. However, a few 'Resonants' claim it is a scream too low to hear, a constant psychic broadcasting that rewrites thoughts. They say the Monolith doesn't just suppress violence; it suppresses dissent.",
+        "image_prompt": "A view of Greenstone City with sound waves visible as faint green ripples distorting the air."
+    },
+    {
+        "id": "lore_harmonists",
+        "title": "The Harmonists",
+        "category": "Faction",
+        "text": "A secret society embedded within the Academy of Arcane Arts. They believe the Monolith is a divine instrument of Order. Their goal is to amplify the Silent Hum to encompass the entire continent, creating a world without war, but also without free will. They wear rings of sound-dampening metal to protect their own minds while they manipulate others.",
+        "image_prompt": "Robed figures standing in a circle around a tuning fork, wearing heavy metal collars."
+    },
+    {
+        "id": "lore_silas",
+        "title": "Old Man Silas",
+        "category": "Character",
+        "text": "Once a respected professor of acoustic magic, Silas was fired for 'unethical research' when he discovered the true nature of the Monolith. Now he lives in the market, wearing a helmet made of scraps to block the Hum. Most think him mad, but he is the only one who truly hears.",
+        "image_prompt": "A crazy-looking old man with a helmet made of pots and copper wire, clutching notes."
+    },
+    {
+        "id": "lore_vane",
+        "title": "Professor Vane",
+        "category": "Character",
+        "text": "The current Dean of Acoustics at the Academy. Charming, brilliant, and utterly ruthless. He is the High Conductor of the Harmonists. He views the human mind as a discordant instrument that must be tuned to the 'correct' key.",
+        "image_prompt": "A handsome professor in fine robes, holding a conductor's baton, cold eyes."
+    },
+    {
+        "id": "lore_psycho_acoustics",
+        "title": "Psycho-Acoustics",
+        "category": "Magic",
+        "text": "A forbidden branch of magic that uses sound waves to alter brain chemistry. Unlike standard illusion magic which tricks the senses, Psycho-Acoustics physically reshapes the neural pathways. It can cure trauma, or it can erase a personality entirely.",
+        "image_prompt": "Diagram of a brain with sound waves entering and changing the color of the neurons."
     }
 ]

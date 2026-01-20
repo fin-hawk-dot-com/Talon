@@ -21,7 +21,9 @@
         "image_prompt_negative": "dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts",
         "npcs": [
             "Rufus",
-            "Thadwick"
+            "Thadwick",
+            "Old Man Silas",
+            "Professor Vane"
         ],
         "narrative": "The heart of the Central Plains, Greenstone City is a marvel of both magic and engineering. Dominated by the Colossal Emerald Monolith at its center, the city bathes in a perpetual, gentle green hum that seems to suppress violent emotions within the city walls. Market stalls bustle with traders selling goods from across the continent, while the prestigious Academy of Arcane Arts trains the next generation of spellcasters under the Monolith's watchful gaze.",
         "points_of_interest": [

@@ -321,5 +321,158 @@
         }
       ]
     }
+  },
+  "Old Man Silas": {
+    "root": {
+      "text": "WHAT? Speak up! No, wait, don't speak! The Hum... it's too loud today. Can't you hear it? Screaming! Screaming in green!",
+      "choices": [
+        {
+          "text": "Who are you?",
+          "next_id": "about_silas"
+        },
+        {
+          "text": "What Hum?",
+          "next_id": "about_hum"
+        },
+        {
+          "text": "You look like you need help.",
+          "next_id": "help_offer"
+        },
+        {
+          "text": "Just a crazy old man.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "about_silas": {
+      "text": "I was Dean! Dean of Acoustics! Before Vane... before the 'accident'. Now I'm just static in the signal. That's good. Static is safe.",
+      "choices": [
+        {
+          "text": "Who is Vane?",
+          "next_id": "about_vane"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "about_hum": {
+      "text": "The Monolith! It's not a battery, it's a fork! A tuning fork for souls! It vibrates at the frequency of 'obedience'. I found the schematics! In the basement of the Academy!",
+      "choices": [
+        {
+          "text": "That sounds like a conspiracy theory.",
+          "next_id": "conspiracy"
+        },
+        {
+          "text": "Where in the basement?",
+          "next_id": "quest_hook"
+        }
+      ]
+    },
+    "quest_hook": {
+      "text": "Section D. The 'dampened' zone. Vane keeps the truth there. If you go... wear these. Copper and lead. Blocks the signal.",
+      "choices": [
+        {
+          "text": "Take the earplugs.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "conspiracy": {
+      "text": "They want you to think that! It's Psycho-Acoustics! They are smoothing out our brains until we are all just happy little notes in their song!",
+      "choices": [
+        {
+          "text": "Okay, calm down.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "about_vane": {
+      "text": "He's the Conductor. He wants to play the world like a violin. And he doesn't care if the strings snap.",
+      "choices": [
+        {
+          "text": "I see.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "help_offer": {
+      "text": "I don't need help! I need silence! Pure, unadulterated silence!",
+      "choices": [
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    }
+  },
+  "Professor Vane": {
+    "root": {
+      "text": "Ah, a new student? Or perhaps a wanderer drawn by the city's... harmony? I am Professor Vane. Welcome to the Academy.",
+      "choices": [
+        {
+          "text": "I'm looking for information on the Monolith.",
+          "next_id": "monolith_inquiry"
+        },
+        {
+          "text": "Do you know Silas?",
+          "next_id": "about_silas_vane"
+        },
+        {
+          "text": "Just looking around.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "monolith_inquiry": {
+      "text": "A magnificent structure, isn't it? It anchors the peace of our great city. Without it, we would be savages, ruled by chaotic emotions.",
+      "choices": [
+        {
+          "text": "Some say it suppresses free will.",
+          "next_id": "suppression_defense"
+        },
+        {
+          "text": "Agreed.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "suppression_defense": {
+      "text": "Free will to do what? Murder? Steal? If the cost of peace is a slight tempering of our darker impulses, is that not a price worth paying? Harmony requires a conductor.",
+      "choices": [
+        {
+          "text": "That sounds dangerous.",
+          "next_id": "threat"
+        }
+      ]
+    },
+    "about_silas_vane": {
+      "text": "Poor Silas. A brilliant mind fractured by stress. He sees demons in the shadows and conspiracies in the sunlight. We tried to help him, but he refused treatment.",
+      "choices": [
+        {
+          "text": "He said you stole his research.",
+          "next_id": "stolen_research"
+        }
+      ]
+    },
+    "stolen_research": {
+      "text": "His 'research' was the rambling of a madman. I merely cataloged it to prevent others from falling into the same delusions. I suggest you stay away from him. Madness can be contagious.",
+      "choices": [
+        {
+          "text": "I'll keep that in mind.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "threat": {
+      "text": "Only to those who play out of tune. Be careful, stranger. Discord is not tolerated in Greenstone.",
+      "choices": [
+        {
+          "text": "Is that a threat?",
+          "next_id": "root"
+        }
+      ]
+    }
   }
 }
