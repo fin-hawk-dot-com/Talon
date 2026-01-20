@@ -15,6 +15,7 @@ class Essence:
     bonded_attribute: Optional[str] = None
     opposite: Optional[str] = None
     synergy: List[str] = field(default_factory=list)
+    value: int = 0
 
 @dataclass
 class Faction:
@@ -61,6 +62,7 @@ class StatusEffect:
     value: float # Magnitude (damage per turn, stat reduction amount, etc.)
     type: str # "DoT", "Buff", "Debuff", "CC" (Crowd Control)
     description: str
+    source_name: Optional[str] = None
 
 @dataclass
 class DialogueChoice:
@@ -120,6 +122,16 @@ class AwakeningStone:
     rarity: str = "Common"
     cooldown: str = "Medium"
     cost_type: str = "Mana"
+    value: int = 0
+
+@dataclass
+class Consumable:
+    name: str
+    effect_type: str # "Heal", "RestoreMana", "Buff", "Cure"
+    value: float
+    description: str
+    duration: int = 0
+    price: int = 0
 
 @dataclass
 class Ability:
@@ -200,7 +212,7 @@ class Character:
     base_essences: List[Essence] = field(default_factory=list)
     confluence_essence: Optional[Essence] = None
     abilities: Dict[str, List[Optional[Ability]]] = field(default_factory=dict)
-    inventory: List[Union[Essence, AwakeningStone]] = field(default_factory=list)
+    inventory: List[Union[Essence, AwakeningStone, Consumable]] = field(default_factory=list)
     quests: Dict[str, QuestProgress] = field(default_factory=dict)
     current_health: float = field(default=-1.0)
     current_mana: float = field(default=-1.0)
@@ -215,6 +227,8 @@ class Character:
     image_prompt: str = ""
     status_effects: List[StatusEffect] = field(default_factory=list)
     current_location: str = "Greenstone City"
+    currency: int = 0
+    materials: Dict[str, int] = field(default_factory=dict)
 
     def __post_init__(self):
         if self.current_health < 0:

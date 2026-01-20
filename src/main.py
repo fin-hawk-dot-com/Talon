@@ -8,7 +8,7 @@ from typing import Dict, Any, Callable
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.models import Essence, AwakeningStone, Character, StatusEffect
+from src.models import Essence, AwakeningStone, Character, StatusEffect, Consumable
 from src.mechanics import GameEngine
 from src.world_map import MapVisualizer
 from src.console_ui import ui, Colors
@@ -30,6 +30,8 @@ class GameInterface:
             "9": self.action_system,
             "10": self.action_travel,
             "11": self.action_view_map,
+            "12": self.action_crafting,
+            "13": self.action_inventory,
             "0": self.action_exit
         }
 
@@ -155,7 +157,8 @@ class GameInterface:
         options = [
             "Train Attribute", "Adventure (Combat)", "Absorb Essence",
             "Awaken Ability", "Practice Ability", "Simulate Training",
-            "Quest Log", "Grimoire", "System", "Travel / Interact", "View Map"
+            "Quest Log", "Grimoire", "System", "Travel / Interact", "View Map",
+            "Crafting", "Inventory"
         ]
 
         # Split into two columns
@@ -164,8 +167,10 @@ class GameInterface:
             left = f"{i+1}. {options[i]}"
             right_idx = i + half
             right = f"{right_idx+1}. {options[right_idx]}" if right_idx < len(options) else ""
-            if right_idx == 9: right = "10. Travel / Interact" # Fix alignment manually if needed or just simple
+            if right_idx == 9: right = "10. Travel / Interact"
             if right_idx == 10: right = "11. View Map"
+            if right_idx == 11: right = "12. Crafting"
+            if right_idx == 12: right = "13. Inventory"
 
             print(f"{left:<30} {right}")
 
@@ -610,63 +615,146 @@ class GameInterface:
             print("Invalid input.")
 
     def _explore_location(self, loc):
-        print(f"\nExploring {loc.name} [{loc.region}].")
-        print(loc.description)
+        ui.clear()
+        ui.print_header(f"{loc.name} [{loc.region}]")
+        ui.slow_print(loc.description)
 
         if loc.resources:
             print(f"Resources: {', '.join(loc.resources)}")
 
         while True:
-            print("\nPoints of Interest:")
-                    if loc.points_of_interest:
-                        for k, poi in enumerate(loc.points_of_interest):
-                            print(f"{k+1}. {poi.name} ({poi.type})")
+            print(ui.colored("\n--- Location Menu ---", Colors.BLUE))
+            options = ["Talk to someone", "Explore Point of Interest", "Gather Resources", "Leave"]
+            choice_idx = ui.menu_choice(options, "What do you want to do?")
+
+            if choice_idx == 0: # Talk
+                if loc.npcs:
+                    npc_idx = ui.menu_choice(loc.npcs, "Select person")
+                    if npc_idx is not None:
+                        self.handle_conversation(loc.npcs[npc_idx])
+                        ui.clear()
+                        ui.print_header(f"{loc.name}")
+                else:
+                    ui.print_info("No one here.")
+
+            elif choice_idx == 1: # POI
+                if loc.points_of_interest:
+                    poi_opts = [f"{p.name} ({p.type})" for p in loc.points_of_interest]
+                    poi_idx = ui.menu_choice(poi_opts, "Select POI")
+                    if poi_idx is not None:
+                        poi = loc.points_of_interest[poi_idx]
+                        if poi.type == "Shop":
+                            self.action_market(loc.name, poi.name)
+                        else:
+                            print(f"\n[{ui.colored(poi.name, Colors.BOLD)}]")
+                            ui.slow_print(poi.description)
+                else:
+                    ui.print_info("No points of interest.")
+
+            elif choice_idx == 2: # Gather
+                ui.loading_effect("Gathering")
+                res = self.engine.crafting_mgr.gather_resources(self.engine.character, loc.name)
+                ui.print_success(res)
+
+            elif choice_idx == 3: # Leave
+                break
+
+    def action_market(self, location_name, shop_name):
+        ui.clear()
+        ui.print_header(f"{shop_name} (Market)")
+
+        while True:
+            char = self.engine.character
+            print(f"\nYour Dram: {char.currency}")
+            choice = ui.menu_choice(["Buy", "Sell", "Exit"], "Market Actions")
+
+            if choice == 0: # Buy
+                inventory = self.engine.market_mgr.get_shop_inventory(location_name)
+                opts = []
+                for item in inventory:
+                    price = getattr(item, 'price', getattr(item, 'value', 0))
+                    opts.append(f"{item.name} - {price} Dram")
+
+                idx = ui.menu_choice(opts, "Buy Item")
+                if idx is not None:
+                    res = self.engine.market_mgr.buy_item(char, inventory[idx])
+                    if "Bought" in res:
+                        ui.print_success(res)
                     else:
-                        print("No specific points of interest.")
+                        ui.print_error(res)
 
-        if l_idx is not None:
-            loc = locations[l_idx]
-            ui.loading_effect("Traveling")
-            ui.clear()
-            ui.print_header(f"{loc.name} [{loc.region}]")
-            ui.slow_print(loc.description)
+            elif choice == 1: # Sell
+                if not char.inventory:
+                    ui.print_warning("Nothing to sell.")
+                    continue
 
-            if loc.connected_locations:
-                print(f"\nConnected to: {', '.join(loc.connected_locations)}")
-            if loc.resources:
-                print(f"Resources: {', '.join(loc.resources)}")
+                opts = []
+                for item in char.inventory:
+                    val = getattr(item, 'price', getattr(item, 'value', 0)) // 2
+                    opts.append(f"{item.name} - {val} Dram")
 
-            while True:
-                print(ui.colored("\n--- Location Menu ---", Colors.BLUE))
+                idx = ui.menu_choice(opts, "Sell Item")
+                if idx is not None:
+                    res = self.engine.market_mgr.sell_item(char, idx)
+                    ui.print_success(res)
 
-                # Dynamic menu building
-                options = ["Talk to someone", "Explore Point of Interest", "Leave"]
-                choice_idx = ui.menu_choice(options, "What do you want to do?")
+            elif choice == 2:
+                break
 
-                if choice_idx == 0: # Talk
-                    if loc.npcs:
-                        npc_idx = ui.menu_choice(loc.npcs, "Select person")
-                        if npc_idx is not None:
-                            self.handle_conversation(loc.npcs[npc_idx])
-                            ui.clear() # Re-clear after talking
-                            ui.print_header(f"{loc.name}") # Reprint header
+    def action_crafting(self):
+        ui.print_header("Crafting")
+        recipes = self.engine.crafting_mgr.recipes
+        recipe_names = list(recipes.keys())
+
+        while True:
+            print(f"\nYour Materials: {self.engine.character.materials}")
+            idx = ui.menu_choice(recipe_names + ["Back"], "Select Recipe")
+
+            if idx == len(recipe_names):
+                break
+
+            if idx is not None:
+                r_name = recipe_names[idx]
+                reqs = recipes[r_name]
+                print(f"\nRequirements for {r_name}: {reqs}")
+                if input("Craft this item? (y/n) ").lower() == 'y':
+                    res = self.engine.crafting_mgr.craft_item(self.engine.character, r_name)
+                    if "Crafted" in res:
+                        ui.print_success(res)
                     else:
-                        ui.print_info("No one here.")
+                        ui.print_error(res)
 
-                elif choice_idx == 1: # POI
-                     if loc.points_of_interest:
-                         poi_opts = [f"{p.name} ({p.type})" for p in loc.points_of_interest]
-                         poi_idx = ui.menu_choice(poi_opts, "Select POI")
-                         if poi_idx is not None:
-                             poi = loc.points_of_interest[poi_idx]
-                             print(f"\n[{ui.colored(poi.name, Colors.BOLD)}]")
-                             ui.slow_print(poi.description)
-                     else:
-                         ui.print_info("No points of interest.")
+    def action_inventory(self):
+        char = self.engine.character
 
-                elif choice_idx == 2: # Leave
-                    print("Leaving location...")
-                    break
+        consumables = [(i, item) for i, item in enumerate(char.inventory) if isinstance(item, Consumable)]
+
+        if not consumables:
+            ui.print_warning("No usable items in inventory.")
+            return
+
+        opts = [f"{item.name} ({item.description})" for _, item in consumables]
+        idx = ui.menu_choice(opts, "Use Item")
+
+        if idx is not None:
+            inv_idx, item = consumables[idx]
+            # Use item logic
+            if item.effect_type == "Heal":
+                char.current_health = min(char.max_health, char.current_health + item.value)
+                ui.print_success(f"Used {item.name}, healed {item.value}.")
+            elif item.effect_type == "RestoreMana":
+                char.current_mana = min(char.max_mana, char.current_mana + item.value)
+                ui.print_success(f"Used {item.name}, restored {item.value} Mana.")
+            elif item.effect_type == "Cure":
+                # Remove negative status effects
+                char.status_effects = [e for e in char.status_effects if e.type != "DoT" and e.type != "Debuff"] # Simplified cure
+                ui.print_success(f"Used {item.name}, cured negative effects.")
+            elif item.effect_type == "Buff":
+                char.status_effects.append(StatusEffect(item.name, item.duration, item.value, "Buff", item.description, source_name=char.name))
+                ui.print_success(f"Used {item.name}.")
+
+            # Consume
+            char.inventory.pop(inv_idx)
 
     def action_view_map(self):
         ui.clear()
