@@ -101,15 +101,18 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 | Stone of the Feast | Drain/Sustain | Drains enemy resource to refill user. | A Rare Awakening Stone named Stone of the Feast, inscribed with runes of Drain/Sustain. Drains enemy resource to refill user. Glowing magical artifact. | Rare | High | Health |
 | Stone of the Flesh | Body Mod | Alters user physiology (Passive/Active). | A Epic Awakening Stone named Stone of the Flesh, inscribed with runes of Body Mod. Alters user physiology (Passive/Active). Glowing magical artifact. | Epic | None | None |
 | Stone of the Foot | Mobility | Enhances movement or adds teleportation. | A Common Awakening Stone named Stone of the Foot, inscribed with runes of Mobility. Enhances movement or adds teleportation. Glowing magical artifact. | Common | Low | Stamina |
+| Stone of the Leap | Mobility | Allows the user to jump great distances. | A Common Awakening Stone named Stone of the Leap, inscribed with runes of Mobility. Allows the user to jump great distances. Glowing magical artifact. | Common | Low | Stamina |
 | Stone of the Lens | Perception | Allows the user to sense Essence and hidden things. | A Rare Awakening Stone named Stone of the Lens, inscribed with runes of Perception. Allows the user to sense Essence and hidden things. Glowing magical artifact. | Rare | None | Stamina |
 | Stone of the Nova | Area Attack | Explodes with Essence energy in all directions. | A Rare Awakening Stone named Stone of the Nova, inscribed with runes of Area Attack. Explodes with Essence energy in all directions. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Phantom | Evasion | Grants temporary intangibility or invisibility. | A Rare Awakening Stone named Stone of the Phantom, inscribed with runes of Evasion. Grants temporary intangibility or invisibility. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Prison | Terrain Control | Encases the enemy in a structure of Essence. | A Rare Awakening Stone named Stone of the Prison, inscribed with runes of Terrain Control. Encases the enemy in a structure of Essence. Glowing magical artifact. | Rare | High | Mana |
+| Stone of the Shell | Defense | Summons a hardened carapace around the user. | A Uncommon Awakening Stone named Stone of the Shell, inscribed with runes of Defense. Summons a hardened carapace around the user. Glowing magical artifact. | Uncommon | Medium | Mana |
 | Stone of the Shield | Defense | Creates a barrier or armor buff. | A Common Awakening Stone named Stone of the Shield, inscribed with runes of Defense. Creates a barrier or armor buff. Glowing magical artifact. | Common | Medium | Mana |
 | Stone of the Stars | Celestial/Augment | Adds light/cosmic properties or massive buff. | A Epic Awakening Stone named Stone of the Stars, inscribed with runes of Celestial/Augment. Adds light/cosmic properties or massive buff. Glowing magical artifact. | Epic | High | Mana |
 | Stone of the Strike | Melee Attack | Imbues physical strike with Essence element. | A Common Awakening Stone named Stone of the Strike, inscribed with runes of Melee Attack. Imbues physical strike with Essence element. Glowing magical artifact. | Common | Low | Stamina |
 | Stone of the Swarm | Multi-Hit | Splits effect into multiple small projectiles. | A Uncommon Awakening Stone named Stone of the Swarm, inscribed with runes of Multi-Hit. Splits effect into multiple small projectiles. Glowing magical artifact. | Uncommon | Medium | Mana |
 | Stone of the Trap | Area Denial | Places a hidden rune/trigger. | A Uncommon Awakening Stone named Stone of the Trap, inscribed with runes of Area Denial. Places a hidden rune/trigger. Glowing magical artifact. | Uncommon | Medium | Mana |
+| Stone of the Void | Area Denial | Creates a zone of emptiness that damages enemies. | A Rare Awakening Stone named Stone of the Void, inscribed with runes of Area Denial. Creates a zone of emptiness that damages enemies. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Wall | Terrain Control | Creates physical obstacles. | A Uncommon Awakening Stone named Stone of the Wall, inscribed with runes of Terrain Control. Creates physical obstacles. Glowing magical artifact. | Uncommon | Medium | Mana |
 
 ## Ability Templates
@@ -156,6 +159,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Name | Race | Description | Visual Prompt | Attributes (P/S/Sp/R) | XP | Loot |
 |---|---|---|---|---|---|---|
 | Ancient Bat | Beast | A Beast known as Ancient Bat. | A dangerous Beast creature known as Ancient Bat. High fantasy art style, detailed creature design. | 251/228/235/240 | 263 | Air, Technology |
+| Ancient Sentinel | Construct | A Construct known as Ancient Sentinel guarding forgotten ruins. | A dangerous Construct creature known as Ancient Sentinel. High fantasy art style, detailed creature design. | 220/60/100/250 | 180 | Iron, Stone of the Wall, Stone of the Shield |
 | Armored Elemental | Elemental | A Elemental known as Armored Elemental. | A dangerous Elemental creature known as Armored Elemental. High fantasy art style, detailed creature design. | 524/557/543/589 | 629 | Life, Sin, Mana |
 | Armored Ghost | Undead | A Undead known as Armored Ghost. | A dangerous Undead creature known as Armored Ghost. High fantasy art style, detailed creature design. | 323/382/355/368 | 390 | Life, Mana |
 | Armored Lion | Beast | A Beast known as Armored Lion. | A dangerous Beast creature known as Armored Lion. High fantasy art style, detailed creature design. | 316/318/369/346 | 382 | Swift, Water |
@@ -184,6 +188,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Giant Rat | Beast | A Beast known as Giant Rat. | A dangerous Beast creature known as Giant Rat. High fantasy art style, detailed creature design. | 20/30/5/15 | 10 | Stone of the Strike |
 | Inferno Demon | Demon | A Demon known as Inferno Demon wrapped in hellfire. | A dangerous Demon creature known as Inferno Demon. High fantasy art style, detailed creature design. | 350/280/300/320 | 400 | Fire, Sin, Stone of the Nova |
 | Iron Wolf | Magical Beast | A Magical Beast known as Iron Wolf. | A dangerous Magical Beast creature known as Iron Wolf. High fantasy art style, detailed creature design. | 120/140/80/110 | 100 | Swift, Stone of the Reflex |
+| Magma Crab | Beast | A Beast known as Magma Crab with a shell of hardened lava. | A dangerous Beast creature known as Magma Crab. High fantasy art style, detailed creature design. | 150/40/80/200 | 120 | Fire, Armor, Stone of the Shell |
 | Mechanical Knight | Humanoid | A Humanoid known as Mechanical Knight. | A dangerous Humanoid creature known as Mechanical Knight. High fantasy art style, detailed creature design. | 182/150/131/161 | 150 | Moon |
 | Mechanical Phoenix | Magical Beast | A Magical Beast known as Mechanical Phoenix. | A dangerous Magical Beast creature known as Mechanical Phoenix. High fantasy art style, detailed creature design. | 245/263/225/214 | 262 | Stone of the Trap, Iron |
 | Mechanical Wyrm | Dragonkin | A Dragonkin known as Mechanical Wyrm. | A dangerous Dragonkin creature known as Mechanical Wyrm. High fantasy art style, detailed creature design. | 99/46/35/56 | 39 | Renewal |
@@ -210,6 +215,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Swift Bat | Beast | A Beast known as Swift Bat. | A dangerous Beast creature known as Swift Bat. High fantasy art style, detailed creature design. | 376/374/360/315 | 390 | Balance, Moon |
 | Void Demon | Demon | A Demon known as Void Demon. | A dangerous Demon creature known as Void Demon. High fantasy art style, detailed creature design. | 177/150/134/130 | 147 | Directed |
 | Void Stalker | Magical Beast | A Magical Beast known as Void Stalker that shifts between dimensions. | A dangerous Magical Beast creature known as Void Stalker. High fantasy art style, detailed creature design. | 180/400/250/150 | 300 | Void, Dark, Dimension, Stone of the Phantom |
+| Void Wisp | Elemental | A Elemental known as Void Wisp that flickers in and out of existence. | A dangerous Elemental creature known as Void Wisp. High fantasy art style, detailed creature design. | 100/250/200/50 | 130 | Void, Swift, Stone of the Void, Stone of the Leap |
 | Wild Boar | Beast | A Beast known as Wild Boar. | A dangerous Beast creature known as Wild Boar. High fantasy art style, detailed creature design. | 40/20/10/50 | 20 | Might |
 | Wild Elemental | Elemental | A Elemental known as Wild Elemental. | A dangerous Elemental creature known as Wild Elemental. High fantasy art style, detailed creature design. | 24/61/57/47 | 34 | Stone of the Judgment |
 
@@ -374,6 +380,14 @@ Physics dissolves at the edge of the Void Rift. It is a tear in the fabric of re
 A rare fabric that dampens magical energy. Used by System Auditors and sensitive individuals to block out background mana radiation. It is expensive and difficult to weave, as magic cannot be used in its creation.
 > **Visual Prompt**: Grey, matte fabric, smooth texture, absorbing light.
 
+#### Spider's Bane
+An elven dagger of ancient make. It glows with a cold blue light whenever creatures of the Void or Orc-kin are nearby. It was famous for cutting the webs of the Great Spiders of the Dark Wood.
+> **Visual Prompt**: A glowing blue dagger on a forest floor, cutting through thick webs.
+
+#### The Band of Void
+The master ring forged by Mal'Gzar. It appears as a simple band of gold, but when heated, it reveals runes of the Black Speech. It grants invisibility and heightened senses but drains the user's sanity, eventually turning them into a wraith.
+> **Visual Prompt**: A gold ring glowing with fiery runes on a stone table.
+
 #### The Glass Shield
 A legendary shield said to be forged from a single piece of transparent diamond by the Titans. It is invisible until struck, at which point it flashes with blinding light. Its current location is unknown, though many claim to have seen it in the hands of a wandering mute knight.
 > **Visual Prompt**: A warrior holding an invisible shield, impact ripple of light visible, epic stance.
@@ -383,6 +397,10 @@ A legendary shield said to be forged from a single piece of transparent diamond 
 #### Ancient Bat
 Giant bats that have lived for centuries in the deep caverns, absorbing background magic until they grew to monstrous sizes.
 > **Visual Prompt**: A massive bat hanging from a cave ceiling, leather wings, dark atmosphere.
+
+#### Ancient Sentinel
+Towering constructs left behind by the Aethel to guard their secrets. Powered by an eternal core, they do not rust or decay, standing vigil for thousands of years.
+> **Visual Prompt**: A giant robot/golem made of white stone and gold metal, standing still in ruins.
 
 #### Blood Devil
 Small, red-skinned demons that swarm their prey. They are drawn to the scent of blood and frenzy when wounded.
@@ -399,6 +417,10 @@ Constructs animated by rogue magic in the Crystal Caverns. Their bodies reflect 
 #### Iron Wolf
 Wolves native to the metallic mountains of the north. Their fur contains traces of iron, granting them natural armor and razor-sharp claws.
 > **Visual Prompt**: A wolf with metallic grey fur, glowing yellow eyes, snowy background.
+
+#### Magma Crab
+Native to volcanic regions, these crustaceans have shells made of cooling lava rock. They are surprisingly fast despite their heavy armor and can spew molten rock at attackers.
+> **Visual Prompt**: A crab with a shell of glowing black rock and lava, volcanic background.
 
 #### Mana Moths
 Small, harmless insects that are naturally attracted to high concentrations of magic. They are often used by adventurers as a primitive danger sense; if a swarm of Mana Moths suddenly disperses, a predator or a mana storm is likely approaching.
@@ -432,9 +454,17 @@ Predators that exist partially in the shadow plane. They are invisible in dim li
 Colossal, peaceful beasts that drift through the upper atmosphere, feeding on cloud-mana. They are rarely seen from the ground, but airship travelers sometimes report hearing their mournful, resonant songs vibrating through the hull.
 > **Visual Prompt**: Giant whale with four wings flying in the clouds, tiny airship for scale, sunset.
 
+#### The Tree Shepherds
+Ancient tree-like giants known as Ents. They are the shepherds of the forest, slow to anger but devastating when roused. They marched on the wizard Saruman's tower when he began destroying their woods to fuel his war machines.
+> **Visual Prompt**: A giant walking tree with a face, tearing down a stone wall.
+
 #### Void Demon
 Abominations from beyond the rift. Their forms are constantly shifting, and their touch corrupts living matter.
 > **Visual Prompt**: A shifting mass of tentacles and eyes, purple and black void energy.
+
+#### Void Wisp
+Small, flickering entities of pure Void energy. They are often found near tears in reality. They feed on background mana and are difficult to hit with physical weapons.
+> **Visual Prompt**: A small floating ball of purple and black energy, flickering, dark background.
 
 ### Character
 
@@ -564,6 +594,10 @@ As the dust settled, territorial disputes threatened to start a civil war. The D
 We are now in the thirtieth year of the New Age. Society has rebuilt itself around the System. Schools now teach Mana Theory alongside Mathematics. The economy runs on Essence shards. The Adventurer's Guild regulates the population of 'Delvers' who enter the Rifts to harvest resources. While the major cities are safe, the wilderness remains deadly. Rumors whisper that the Seal is weakening again. New, unknown monster types are appearing, and the Void Rift in the badlands is pulsating with a rhythm that matches the heartbeat of something... massive.
 > **Visual Prompt**: A futuristic yet fantasy cityscape, magitech vehicles, people with glowing accessories, peaceful but alert.
 
+#### Chronicle XIV: The Shadow of Mal'Gzar
+Centuries ago, the sorcerer Mal'Gzar sought to dominate Aetheria. He forged the Bands of Void, artifacts that promised power to the leaders of the realms but enslaved their wills to his. His armies of Orc-kin swept across the lands until the Alliance of the Free broke his power at the foot of the Ash Mountains.
+> **Visual Prompt**: A towering armored figure in spiky black armor holding a mace, overlooking an army of monsters.
+
 #### Origin of Essences
 Theories suggest Essences are the shards of a shattered creator deity, each representing a facet of their power.
 > **Visual Prompt**: Abstract art of a glowing figure shattering into colored shards.
@@ -592,9 +626,17 @@ A year where the sun did not rise. Ice Essence proliferated, creating the Frozen
 Ten years ago, a solar eclipse coincided with a mana surge. For seven minutes, all Light magic ceased to function, while Dark and Void magic became uncontrollably potent. Thousands of low-ranked healers lost their connection to the light, while shadow mages inadvertently opened portals to the nether. It is remembered as a day of mourning, and many superstitious folk still hide indoors during any eclipse.
 > **Visual Prompt**: A solar eclipse, black sun with purple corona, dark shadows stretching across the land, people cowering.
 
+#### The Fellowship of Nine
+A legendary group formed to destroy the Band of Void. It consisted of a wizard, two men, an elf, a dwarf, and four halflings. Their journey took them from the shire-lands to the very heart of Mal'Gzar's domain to cast the ring into the volcanic fires where it was forged.
+> **Visual Prompt**: Nine silhouettes walking in a single file across a mountain ridge, sun setting behind them.
+
 #### The First Archmage
 Valerius the Wise, the first human to successfully bind multiple essences without going mad. He founded the Arcane Assembly.
 > **Visual Prompt**: Portrait of an old wizard with a glowing staff, robes, benevolent expression.
+
+#### The Grey Pilgrim
+Mithrandir, the Grey Wizard, was a wandering sage who aided the free peoples in their fight against Mal'Gzar. He wielded a staff of light and the sword Glamdring. He famously fell fighting the Balrog of Khardum but returned as the White Wizard to finish his task.
+> **Visual Prompt**: An old wizard in grey robes and a pointy hat holding a glowing staff.
 
 #### The Lost Civilization
 Before the current era, a civilization known as the Aethel thrived. They were masters of Confluence magic.
@@ -634,6 +676,10 @@ The capital of the Central Plains, named after the massive emerald monolith at i
 Carved directly into the granite of the Northern Peaks, Ironhold is considered impregnable. It houses the legendary Anvil of Crom, where the first magical weapons were forged.
 > **Visual Prompt**: Massive fortress carved into a mountain, snowy peaks, fortified walls, dwarf-inspired architecture.
 
+#### Mines of Khardum
+Once the greatest kingdom of the Dwarves, Khardum fell when they delved too greedily and too deep, awakening a Balrog—a demon of shadow and flame. Now, it is a dark pit inhabited by goblins and cave trolls.
+> **Visual Prompt**: Massive underground pillared hall, dark, with a fiery demon in the distance.
+
 #### Orizon, City of Salt and Static
 The city doesn't just sit on the coast; it hangs off the edge of the world. Built into the spiraling, calcified shell of a dead leviathan, Orizon is a vertical maze of white marble and corroded iron. It breathes with a constant, low-frequency thrum—the heartbeat of the city’s wards keeping the ocean’s toxicity at bay. The people worship Stability, paying taxes in Spirit Coins and praying the Sentinel doesn't blink.
 > **Visual Prompt**: Vertical city built into a giant shell hanging off a cliff, white marble, iron, neon blue ocean below.
@@ -649,6 +695,10 @@ To the far north lies a land of eternal ice and snow, where Crystal Golems roam.
 #### The Glass Sanctum
 A spherical meditation chamber suspended by gravity magic, three hundred feet above Orizon's plaza. It is a 'Null-State' environment designed for high-level cultivation. The floor is made of perfect Titan-glass, and the room is soundproofed against the city's eternal thrum.
 > **Visual Prompt**: A floating glass sphere in the sky, minimalist interior, meditation mat, view of the city below.
+
+#### The Great Barrier
+A massive energy shield erected by the Iron Vanguard to contain the spread of the Void Rift. It consumes a tremendous amount of mana daily, requiring a constant supply of Essence crystals from the mines.
+> **Visual Prompt**: A giant translucent blue wall stretching across a wasteland, stopping purple void monsters.
 
 #### The Luminous Deep
 Below Orizon churns an ocean so rich in raw mana that the spray creates 'Arcane Salt'. The toxicity is lethal to the unwarded. It is the source of the city's power and its greatest threat. The deep glow of the water illuminates the underbelly of the city day and night.
@@ -673,6 +723,10 @@ A tear in the fabric of reality located in the deepest part of the badlands. It 
 #### The Whispering Woods
 Travelers claim the trees here speak with the voices of the lost. The woods are rich in Wood Essence but navigating them requires a strong will to resist the beguiling whispers.
 > **Visual Prompt**: A spooky forest path, mist, trees with subtle faces in the bark, glowing eyes in the dark.
+
+#### The White Citadel
+The capital of the Western Kingdoms. Built in seven tiers into the side of Mount Mindoll, it stands as a beacon of hope. At its summit grows the White Tree, a sapling of the ancient Trees of Light, which blooms only when the true king returns.
+> **Visual Prompt**: A white multi-tiered city built against a mountain, white tree in a courtyard at the top.
 
 ### Magic
 

@@ -740,5 +740,61 @@
         "category": "Location",
         "text": "A massive energy shield erected by the Iron Vanguard to contain the spread of the Void Rift. It consumes a tremendous amount of mana daily, requiring a constant supply of Essence crystals from the mines.",
         "image_prompt": "A giant translucent blue wall stretching across a wasteland, stopping purple void monsters."
+    },
+    {
+        "id": "lore_malgzar_shadow",
+        "title": "Chronicle XIV: The Shadow of Mal'Gzar",
+        "category": "History",
+        "text": "Centuries ago, the sorcerer Mal'Gzar sought to dominate Aetheria. He forged the Bands of Void, artifacts that promised power to the leaders of the realms but enslaved their wills to his. His armies of Orc-kin swept across the lands until the Alliance of the Free broke his power at the foot of the Ash Mountains.",
+        "image_prompt": "A towering armored figure in spiky black armor holding a mace, overlooking an army of monsters."
+    },
+    {
+        "id": "lore_band_of_void",
+        "title": "The Band of Void",
+        "category": "Artifacts",
+        "text": "The master ring forged by Mal'Gzar. It appears as a simple band of gold, but when heated, it reveals runes of the Black Speech. It grants invisibility and heightened senses but drains the user's sanity, eventually turning them into a wraith.",
+        "image_prompt": "A gold ring glowing with fiery runes on a stone table."
+    },
+    {
+        "id": "lore_white_citadel",
+        "title": "The White Citadel",
+        "category": "Location",
+        "text": "The capital of the Western Kingdoms. Built in seven tiers into the side of Mount Mindoll, it stands as a beacon of hope. At its summit grows the White Tree, a sapling of the ancient Trees of Light, which blooms only when the true king returns.",
+        "image_prompt": "A white multi-tiered city built against a mountain, white tree in a courtyard at the top."
+    },
+    {
+        "id": "lore_khardum_mines",
+        "title": "Mines of Khardum",
+        "category": "Location",
+        "text": "Once the greatest kingdom of the Dwarves, Khardum fell when they delved too greedily and too deep, awakening a Balrog\u2014a demon of shadow and flame. Now, it is a dark pit inhabited by goblins and cave trolls.",
+        "image_prompt": "Massive underground pillared hall, dark, with a fiery demon in the distance."
+    },
+    {
+        "id": "lore_spider_bane",
+        "title": "Spider's Bane",
+        "category": "Artifacts",
+        "text": "An elven dagger of ancient make. It glows with a cold blue light whenever creatures of the Void or Orc-kin are nearby. It was famous for cutting the webs of the Great Spiders of the Dark Wood.",
+        "image_prompt": "A glowing blue dagger on a forest floor, cutting through thick webs."
+    },
+    {
+        "id": "lore_fellowship_nine",
+        "title": "The Fellowship of Nine",
+        "category": "History",
+        "text": "A legendary group formed to destroy the Band of Void. It consisted of a wizard, two men, an elf, a dwarf, and four halflings. Their journey took them from the shire-lands to the very heart of Mal'Gzar's domain to cast the ring into the volcanic fires where it was forged.",
+        "image_prompt": "Nine silhouettes walking in a single file across a mountain ridge, sun setting behind them."
+    },
+    {
+        "id": "lore_grey_wizard",
+        "title": "The Grey Pilgrim",
+        "category": "History",
+        "text": "Mithrandir, the Grey Wizard, was a wandering sage who aided the free peoples in their fight against Mal'Gzar. He wielded a staff of light and the sword Glamdring. He famously fell fighting the Balrog of Khardum but returned as the White Wizard to finish his task.",
+        "image_prompt": "An old wizard in grey robes and a pointy hat holding a glowing staff."
+    },
+    {
+        "id": "lore_ent_folk",
+        "title": "The Tree Shepherds",
+        "category": "Bestiary",
+        "text": "Ancient tree-like giants known as Ents. They are the shepherds of the forest, slow to anger but devastating when roused. They marched on the wizard Saruman's tower when he began destroying their woods to fuel his war machines.",
+        "image_prompt": "A giant walking tree with a face, tearing down a stone wall."
     }
 ]
