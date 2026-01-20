@@ -9,7 +9,7 @@ from typing import Dict, Any, Callable
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.models import Essence, AwakeningStone, Character, StatusEffect, Consumable
-from src.mechanics import GameEngine
+from src.game_engine import GameEngine
 from src.world_map import MapVisualizer
 from src.console_ui import ui, Colors
 
