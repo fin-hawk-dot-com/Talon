@@ -768,5 +768,54 @@
         "category": "Faction",
         "text": "An ancient noble family of monster hunters who view beast slaying as a sacred art. They value precision and honor over brute force. While technically a noble house, they operate more like a guild, training their own in the ways of the hunt and maintaining a vast archive of monster lore.",
         "image_prompt": "Emblem of Clan Hawksley. A stylized hawk holding a spear in its talons, green and silver colors. Fantasy setting."
+    },
+    {
+        "id": "lore_resonance_magic",
+        "title": "The Doctrine of Resonance",
+        "category": "Magic",
+        "text": "An esoteric branch of magic practiced in the Arcanum of Whispers. It posits that all things are connected by invisible threads of energy. By establishing a sympathetic link between two objects\u2014say, a wax doll and a person\u2014a mage can affect one by manipulating the other. This requires immense mental fortitude, known as 'Alar', to hold the belief of the link against the reality of separation.",
+        "image_prompt": "A mage holding a coin and a doll, magical thread connecting them, intense concentration."
+    },
+    {
+        "id": "lore_pale_walkers",
+        "title": "The Pale Walkers",
+        "category": "History",
+        "text": "A group of seven ancient entities who are said to have erased their true names from the world's memory. They are harbingers of disaster, appearing only when the blue flame burns. Legend says they destroyed the ancient cities of the Aethel not with armies, but with silence. To speak their names is to invite their attention, so they are referred to only by euphemisms like 'The Seven' or 'The Chandrian'.",
+        "image_prompt": "Seven shadowy figures standing in blue fire, faces obscured, ominous atmosphere."
+    },
+    {
+        "id": "lore_arcanum_whispers",
+        "title": "The Arcanum of Whispers",
+        "category": "Location",
+        "text": "Located on a secluded island in the Azure Coast, this fortress-university is where the dangerous arts of Naming and Sympathy are taught. Unlike the Arcane Assembly, which focuses on raw elemental power, the Arcanum teaches the subtle manipulation of reality. Its masters are eccentric and dangerous, and its students often go mad trying to learn the names of the wind and stone.",
+        "image_prompt": "A massive stone university on a cliff, bridges, towers, mysterious atmosphere."
+    },
+    {
+        "id": "lore_wind_touched",
+        "title": "The Wind-Touched Troupes",
+        "category": "Culture",
+        "text": "Nomadic performers who travel the roads of Aetheria in colorful wagons. While often mistrusted by villagers as thieves, they are actually the keepers of the world's oral history. They believe that a story is not true unless it is told, and they possess songs that can calm storms or incite riots. To be a guest at their campfire is a rare honor.",
+        "image_prompt": "Colorful wagons around a campfire at night, musicians playing lutes, happy scene."
+    },
+    {
+        "id": "lore_archives_still",
+        "title": "The Archives of the Still",
+        "category": "Location",
+        "text": "The central library of the Arcanum of Whispers. It is a massive, windowless building containing millions of books. Open flame is strictly forbidden inside, and the silence is enforced by magical wards. It is said to contain the 'Four-Plate Door', a sealed vault that holds the secrets of the Pale Walkers, though no one has ever opened it.",
+        "image_prompt": "Endless rows of bookshelves, stone interior, magical light orbs, a heavy stone door in the background."
+    },
+    {
+        "id": "lore_naming_magic",
+        "title": "The Art of Naming",
+        "category": "Magic",
+        "text": "The oldest and most dangerous form of magic. It is based on the belief that everything has a 'True Name' that defines its existence. If a mage can speak the True Name of fire, they command fire itself\u2014not by force, but by understanding. Mastery of a Name grants absolute control, but the human mind is rarely capable of holding such total understanding without breaking.",
+        "image_prompt": "A mage speaking a word, wind swirling violently around them, eyes glowing."
+    },
+    {
+        "id": "lore_creation_war",
+        "title": "The Creation War",
+        "category": "History",
+        "text": "An ancient conflict that predates the Aethel. It was fought between the Shapers, who sought to change the world to fit their desires, and the Knowers, who sought to understand the world as it was. The war broke the world, creating the Fae Realm and leaving behind ruins that still defy the laws of physics.",
+        "image_prompt": "Abstract battle scene, reality bending, two armies of glowing figures."
     }
 ]
