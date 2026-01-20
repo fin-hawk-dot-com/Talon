@@ -501,6 +501,10 @@ The universal currency of Aetheria. A 'Dram' is a standardized weight of crystal
 The most sacred tradition of Clan Hawksley is the 'Silent Hunt'. To reach adulthood, a clan member must track and kill a beast of at least Bronze rank without using any offensive Essence abilities—relying solely on physical skill, traps, and their bonded hunting hound. This rite ensures that a Hawksley never becomes over-reliant on magic. Those who fail are not exiled but are relegated to support roles within the estate, a shame that drives many to attempt the trial multiple times.
 > **Visual Prompt**: A young hunter crouching in the bushes with a hound, tracking a beast, tense atmosphere.
 
+#### The Wind-Touched Troupes
+Nomadic performers who travel the roads of Aetheria in colorful wagons. While often mistrusted by villagers as thieves, they are actually the keepers of the world's oral history. They believe that a story is not true unless it is told, and they possess songs that can calm storms or incite riots. To be a guest at their campfire is a rare honor.
+> **Visual Prompt**: Colorful wagons around a campfire at night, musicians playing lutes, happy scene.
+
 ### Faction
 
 #### Circle of Thorns
@@ -617,6 +621,10 @@ How the scattered mountain clans united under King Ironheart to build the great 
 The year following the Sundering was known as the Ashen Year. Volcanic ash blotted out the sun, killing crops and freezing the rivers. Famine was rampant. It was during this time that the 'Essence of Life' was first discovered by a humble herbalist named Elara, who used it to grow food in the dark. She was later canonized as a saint by the common folk, though the Arcane Assembly dismisses her methods as 'wild magic'.
 > **Visual Prompt**: A dark snowy village, a woman with glowing green hands growing wheat from frozen ground.
 
+#### The Creation War
+An ancient conflict that predates the Aethel. It was fought between the Shapers, who sought to change the world to fit their desires, and the Knowers, who sought to understand the world as it was. The war broke the world, creating the Fae Realm and leaving behind ruins that still defy the laws of physics.
+> **Visual Prompt**: Abstract battle scene, reality bending, two armies of glowing figures.
+
 #### The Dark Winter
 A year where the sun did not rise. Ice Essence proliferated, creating the Frozen Wastes in the north.
 > **Visual Prompt**: Snowy landscape, dark sky, ice sculptures, cold atmosphere.
@@ -632,6 +640,10 @@ Valerius the Wise, the first human to successfully bind multiple essences withou
 #### The Lost Civilization
 Before the current era, a civilization known as the Aethel thrived. They were masters of Confluence magic.
 > **Visual Prompt**: An ancient illustration or text related to The Lost Civilization (History). Parchment style or historical scene.
+
+#### The Pale Walkers
+A group of seven ancient entities who are said to have erased their true names from the world's memory. They are harbingers of disaster, appearing only when the blue flame burns. Legend says they destroyed the ancient cities of the Aethel not with armies, but with silence. To speak their names is to invite their attention, so they are referred to only by euphemisms like 'The Seven' or 'The Chandrian'.
+> **Visual Prompt**: Seven shadowy figures standing in blue fire, faces obscured, ominous atmosphere.
 
 #### The Sundering
 The event that split the continent. It is believed to have been caused by an overloaded Confluence of Fire and Earth magic.
@@ -674,6 +686,14 @@ The city doesn't just sit on the coast; it hangs off the edge of the world. Buil
 #### The Ancient Spire
 A tower that defies gravity, floating segments held together by Arcane chains. It is said to contain the library of the First Archmage.
 > **Visual Prompt**: A broken tower with floating sections, magical blue chains, sky background, high fantasy.
+
+#### The Arcanum of Whispers
+Located on a secluded island in the Azure Coast, this fortress-university is where the dangerous arts of Naming and Sympathy are taught. Unlike the Arcane Assembly, which focuses on raw elemental power, the Arcanum teaches the subtle manipulation of reality. Its masters are eccentric and dangerous, and its students often go mad trying to learn the names of the wind and stone.
+> **Visual Prompt**: A massive stone university on a cliff, bridges, towers, mysterious atmosphere.
+
+#### The Archives of the Still
+The central library of the Arcanum of Whispers. It is a massive, windowless building containing millions of books. Open flame is strictly forbidden inside, and the silence is enforced by magical wards. It is said to contain the 'Four-Plate Door', a sealed vault that holds the secrets of the Pale Walkers, though no one has ever opened it.
+> **Visual Prompt**: Endless rows of bookshelves, stone interior, magical light orbs, a heavy stone door in the background.
 
 #### The Frozen Wastes
 To the far north lies a land of eternal ice and snow, where Crystal Golems roam. It is said to be the source of the purest Ice Essence.
@@ -780,6 +800,14 @@ The ladder of power: Iron, Bronze, Silver, Gold, and Diamond. Each rank represen
 #### Soul Binding
 A forbidden technique to bind a monster's soul to an item, creating intelligent weapons. The practice is outlawed by the Arcane Assembly.
 > **Visual Prompt**: A glowing sword with a face or eye in the hilt, dark background.
+
+#### The Art of Naming
+The oldest and most dangerous form of magic. It is based on the belief that everything has a 'True Name' that defines its existence. If a mage can speak the True Name of fire, they command fire itself—not by force, but by understanding. Mastery of a Name grants absolute control, but the human mind is rarely capable of holding such total understanding without breaking.
+> **Visual Prompt**: A mage speaking a word, wind swirling violently around them, eyes glowing.
+
+#### The Doctrine of Resonance
+An esoteric branch of magic practiced in the Arcanum of Whispers. It posits that all things are connected by invisible threads of energy. By establishing a sympathetic link between two objects—say, a wax doll and a person—a mage can affect one by manipulating the other. This requires immense mental fortitude, known as 'Alar', to hold the belief of the link against the reality of separation.
+> **Visual Prompt**: A mage holding a coin and a doll, magical thread connecting them, intense concentration.
 
 #### The System
 The interface that overlays reality for all Awakened. It quantifies abstract concepts like strength and soul into numbers. Scholars debate its origin. Some say it's a defense mechanism of the planet; others believe it's an alien construct designed to gamify our evolution. Regardless, it is the lens through which we now view the world.
