@@ -96,6 +96,10 @@
           "next_id": "training_info"
         },
         {
+          "text": "What's that glowing stone?",
+          "next_id": "artifact_quest_intro"
+        },
+        {
           "text": "I'll leave you to it.",
           "next_id": "exit"
         }
@@ -157,6 +161,15 @@
           "next_id": "root"
         }
       ]
+    },
+    "artifact_quest_intro": {
+      "text": "It's this geode! We found it in the Crystal Caverns. Vane claims it's unstable, but he just wants it for himself. If you're looking for work, check the Guild's request log.",
+      "choices": [
+        {
+          "text": "I'll take a look.",
+          "next_id": "root"
+        }
+      ]
     }
   },
   "Elara": {
@@ -174,6 +187,10 @@
         {
           "text": "Just admiring the armor.",
           "next_id": "flavor"
+        },
+        {
+          "text": "You look troubled.",
+          "next_id": "supply_issue"
         },
         {
           "text": "Nothing, just passing by.",
@@ -243,6 +260,15 @@
       "choices": [
         {
           "text": "A noble sentiment.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "supply_issue": {
+      "text": "It is the cold. We need Sun-Stones to keep the watchtowers warm, but that snake Midas has tripled the price. I cannot abandon my post to haggle.",
+      "choices": [
+        {
+          "text": "Maybe I can help.",
           "next_id": "root"
         }
       ]
@@ -420,6 +446,10 @@
           "next_id": "about_silas_vane"
         },
         {
+          "text": "Thadwick has a new artifact.",
+          "next_id": "artifact_complaint"
+        },
+        {
           "text": "Just looking around.",
           "next_id": "exit"
         }
@@ -470,6 +500,106 @@
       "choices": [
         {
           "text": "Is that a threat?",
+          "next_id": "root"
+        }
+      ]
+    },
+    "artifact_complaint": {
+      "text": "The Adventure Society are children playing with fire. They found a Void-Resonant Geode. It must be contained, not displayed as a trophy!",
+      "choices": [
+        {
+          "text": "I understand.",
+          "next_id": "root"
+        }
+      ]
+    }
+  },
+  "Trader Midas": {
+    "root": {
+      "text": "Welcome! Welcome! Finest goods in Ironhold! Though, supply is a bit... tight these days.",
+      "choices": [
+        {
+          "text": "Why are prices so high?",
+          "next_id": "prices"
+        },
+        {
+          "text": "Show me your wares.",
+          "next_id": "exit"
+        },
+        {
+          "text": "Goodbye.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "prices": {
+      "text": "The passes are blocked! Monsters everywhere! Risk pay, my friend. Purely economics.",
+      "choices": [
+        {
+          "text": "The Order is suffering.",
+          "next_id": "order_suffering"
+        },
+        {
+          "text": "Back.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "order_suffering": {
+      "text": "And? They have swords. Let them cut a path. If you want to help, maybe *you* clear the pass?",
+      "choices": [
+        {
+          "text": "Maybe I will.",
+          "next_id": "root"
+        }
+      ]
+    }
+  },
+  "Huntsman Valerius": {
+    "root": {
+      "text": "The air smells of prey today. Are you a hunter, stranger? Or just another city-dweller?",
+      "choices": [
+        {
+          "text": "I can handle myself.",
+          "next_id": "hunt_talk"
+        },
+        {
+          "text": "Who are you?",
+          "next_id": "intro"
+        },
+        {
+          "text": "Goodbye.",
+          "next_id": "exit"
+        }
+      ]
+    },
+    "intro": {
+      "text": "Valerius. First Spear of Clan Hawksley. We do not just kill beasts; we honor them through combat.",
+      "choices": [
+        {
+          "text": "I see.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "hunt_talk": {
+      "text": "Good. Then you might appreciate the rumors. The White Hart. A beast of legend. I intend to claim its antlers.",
+      "choices": [
+        {
+          "text": "The Verdant Circle won't like that.",
+          "next_id": "verdant_clash"
+        },
+        {
+          "text": "Sounds like a challenge.",
+          "next_id": "root"
+        }
+      ]
+    },
+    "verdant_clash": {
+      "text": "The Circle? Pah! They would let the world overgrow. A beast like that deserves a warrior's death, not to rot of old age.",
+      "choices": [
+        {
+          "text": "To each their own.",
           "next_id": "root"
         }
       ]

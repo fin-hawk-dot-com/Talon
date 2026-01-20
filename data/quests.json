@@ -984,5 +984,172 @@
             }
         },
         "image_prompt": "Fantasy illustration depicting the quest 'The Silent Hum'. A glowing green monolith looming over a city, with sound waves visualized."
+    },
+    {
+        "id": "faction_artifact_dispute",
+        "title": "A Question of Ownership",
+        "description": "The Adventure Society has recovered a volatile artifact from the Crystal Caverns. The Magic Society claims it is too dangerous for 'amateurs' and demands it be handed over.",
+        "type": "Side",
+        "starting_stage_id": "stage_1",
+        "rewards": [
+            "Reputation",
+            "Rare Awakening Stone"
+        ],
+        "stages": {
+            "stage_1": {
+                "id": "stage_1",
+                "description": "Thadwick is polishing a strange, humming geode. 'A beauty, isn't she? Professor Vane has been pestering me all morning to hand it over. Says we'll blow up the city.'",
+                "choices": [
+                    {
+                        "text": "Support Thadwick (Adventure Society)",
+                        "next_stage_id": "stage_2_adventure",
+                        "consequence": "You agree that the Society found it, so they keep it."
+                    },
+                    {
+                        "text": "Support Vane (Magic Society)",
+                        "next_stage_id": "stage_2_magic",
+                        "consequence": "You agree that such power belongs in the hands of experts."
+                    }
+                ]
+            },
+            "stage_2_adventure": {
+                "id": "stage_2_adventure",
+                "description": "You help Thadwick secure the artifact in the Guild's vault. Vane arrives, furious. 'You fools! You have no idea what you are toying with!'",
+                "choices": [
+                    {
+                        "text": "Stand your ground",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "Vane storms off. Thadwick grins. 'Let him sulk. We earned this.' You gain Adventure Society Reputation."
+                    }
+                ]
+            },
+            "stage_2_magic": {
+                "id": "stage_2_magic",
+                "description": "You convince Thadwick that the risk is too high. Reluctantly, he hands the geode to Vane. Vane nods approvingly. 'A wise decision. Science thanks you.'",
+                "choices": [
+                    {
+                        "text": "Accept gratitude",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "Thadwick is annoyed, but the city is safe. You gain Magic Society Reputation."
+                    }
+                ]
+            }
+        },
+        "image_prompt": "Two wizards arguing over a glowing blue crystal in a guild hall."
+    },
+    {
+        "id": "faction_cold_commerce",
+        "title": "Cold Commerce",
+        "description": "The Order of the Shield at Ironhold is freezing. The Merchant's Coalition has monopolized the heating stone supply and hiked the prices.",
+        "type": "Side",
+        "starting_stage_id": "stage_1",
+        "rewards": [
+            "Reputation",
+            "Fire Essence"
+        ],
+        "stages": {
+            "stage_1": {
+                "id": "stage_1",
+                "description": "Elara is shivering despite her armor. 'Trader Midas refuses to lower the price of Sun-Stones. Our patrols are suffering frostbite. Go to him. Make him see reason.'",
+                "choices": [
+                    {
+                        "text": "Confront Trader Midas",
+                        "next_stage_id": "stage_2",
+                        "consequence": "You find Midas warming his hands by a massive brazier."
+                    }
+                ]
+            },
+            "stage_2": {
+                "id": "stage_2",
+                "description": "Midas smirks. 'Supply and demand, my friend. It's cold, so heat is expensive. Simple economics.'",
+                "choices": [
+                    {
+                        "text": "Threaten him (Order)",
+                        "next_stage_id": "stage_3_force",
+                        "consequence": "You remind him who keeps the roads safe for his caravans."
+                    },
+                    {
+                        "text": "Negotiate a deal (Merchant)",
+                        "next_stage_id": "stage_3_deal",
+                        "consequence": "You offer to clear a blocked trade route in exchange for a discount."
+                    }
+                ]
+            },
+            "stage_3_force": {
+                "id": "stage_3_force",
+                "description": "Midas pales. 'Fine! Fine! I'll lower the prices! Just keep the soldiers away from me!'",
+                "choices": [
+                    {
+                        "text": "Report back to Elara",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "Elara is relieved. 'You have the Order's thanks.' You gain Order of the Shield Reputation."
+                    }
+                ]
+            },
+            "stage_3_deal": {
+                "id": "stage_3_deal",
+                "description": "Midas's eyes light up. 'Deal! You clear the pass, I give the discount. Everyone wins.'",
+                "choices": [
+                    {
+                        "text": "Clear the pass",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "You clear the snow and monsters. Trade flows, and the soldiers get their heat. You gain Merchant's Coalition Reputation."
+                    }
+                ]
+            }
+        },
+        "image_prompt": "A merchant in fine furs arguing with a knight in a snowy fortress."
+    },
+    {
+        "id": "faction_beast_honor",
+        "title": "The Beast of Honor",
+        "description": "Clan Hawksley seeks to hunt the legendary White Hart of the Whispering Woods. The Verdant Circle claims the beast is a guardian spirit.",
+        "type": "Side",
+        "starting_stage_id": "stage_1",
+        "rewards": [
+            "Reputation",
+            "Epic Awakening Stone"
+        ],
+        "stages": {
+            "stage_1": {
+                "id": "stage_1",
+                "description": "Huntsman Valerius is sharpening a spear. 'The White Hart has been spotted. It is the ultimate prize. Will you join the hunt, or stand with those tree-hugging druids?'",
+                "choices": [
+                    {
+                        "text": "Join the Hunt (Clan Hawksley)",
+                        "next_stage_id": "stage_2_hunt",
+                        "consequence": "You grab a spear. Glory awaits."
+                    },
+                    {
+                        "text": "Protect the Hart (Verdant Circle)",
+                        "next_stage_id": "stage_2_protect",
+                        "consequence": "You rush to the woods to warn the druids."
+                    }
+                ]
+            },
+            "stage_2_hunt": {
+                "id": "stage_2_hunt",
+                "description": "You track the Hart to a moonlit glade. It is magnificent. Valerius raises his spear.",
+                "choices": [
+                    {
+                        "text": "Strike true",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "The beast falls. The Clan feasts tonight. You gain Clan Hawksley Reputation."
+                    }
+                ]
+            },
+            "stage_2_protect": {
+                "id": "stage_2_protect",
+                "description": "You intercept Valerius just as he spots the Hart. You stand between him and the beast.",
+                "choices": [
+                    {
+                        "text": "Drive him away",
+                        "next_stage_id": "COMPLETED",
+                        "consequence": "Valerius scoffs but retreats, unwilling to fight a fellow warrior over a beast. The Hart bows to you and vanishes. You gain Verdant Circle Reputation."
+                    }
+                ]
+            }
+        },
+        "image_prompt": "A glowing white deer in a dark forest, with a hunter aiming a spear."
     }
 ]

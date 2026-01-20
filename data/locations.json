@@ -23,7 +23,8 @@
             "Rufus",
             "Thadwick",
             "Old Man Silas",
-            "Professor Vane"
+            "Professor Vane",
+            "Huntsman Valerius"
         ],
         "narrative": "The heart of the Central Plains, Greenstone City is a marvel of both magic and engineering. Dominated by the Colossal Emerald Monolith at its center, the city bathes in a perpetual, gentle green hum that seems to suppress violent emotions within the city walls. Market stalls bustle with traders selling goods from across the continent, while the prestigious Academy of Arcane Arts trains the next generation of spellcasters under the Monolith's watchful gaze.",
         "points_of_interest": [
@@ -158,7 +159,8 @@
         "image_prompt_positive": "Massive stone fortress carved into mountain, snow-capped peaks, iron gates, banners, defensive walls, soldier patrols, cold atmosphere, epic scale, 8k",
         "image_prompt_negative": "forest, beach, warm, sunny, wooden buildings, ruins",
         "npcs": [
-            "Elara"
+            "Elara",
+            "Trader Midas"
         ],
         "narrative": "Carved directly into the granite face of the Northern Peaks, Ironhold is a testament to dwarven endurance and human ingenuity. It serves as the unyielding headquarters of the Order of the Shield. Massive iron gates, reinforced with defensive runes, bar entry to all but the authorized. Inside, the city is a vertical marvel of stone bridges, foundries, and barracks, constantly echoing with the ring of hammers on anvils.",
         "points_of_interest": [
