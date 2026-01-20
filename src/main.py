@@ -131,13 +131,28 @@ class GameInterface:
 
     def print_status(self):
         char = self.engine.character
-        print_separator()
-        print(f"\nName: {char.name} | Race: {char.race} | Rank: {char.rank}")
-        print(f"Location: {char.current_location} | XP: {char.current_xp}")
-        print("Attributes:")
+        ui.print_separator()
         ui.print_header(f"{char.name} the {char.race} | Rank: {char.rank}")
 
-        print(ui.colored("Attributes:", Colors.BOLD))
+        print(f"Location: {ui.colored(char.current_location, Colors.CYAN)}")
+        print(f"XP: {char.current_xp} | Dram: {ui.colored(str(char.currency), Colors.YELLOW)}")
+
+        hp_pct = char.current_health / char.max_health if char.max_health > 0 else 0
+        hp_color = Colors.RED if hp_pct < 0.3 else Colors.GREEN
+
+        print(f"HP: {ui.colored(f'{int(char.current_health)}/{int(char.max_health)}', hp_color)} | "
+              f"MP: {ui.colored(f'{int(char.current_mana)}/{int(char.max_mana)}', Colors.BLUE)} | "
+              f"SP: {ui.colored(f'{int(char.current_stamina)}/{int(char.max_stamina)}', Colors.GREEN)}")
+
+        if char.status_effects:
+             effects_str = ", ".join([f"{e.name} ({e.duration})" for e in char.status_effects])
+             print(f"Status Effects: {ui.colored(effects_str, Colors.RED)}")
+
+        active_quests = [q_id for q_id, prog in char.quests.items() if prog.status == "Active"]
+        if active_quests:
+             print(f"Active Quests: {len(active_quests)}")
+
+        print(ui.colored("\nAttributes:", Colors.BOLD))
         for attr in char.attributes.values():
             val_str = f"{attr.value:.1f}"
             print(f"  {ui.colored(attr.name, Colors.CYAN)}: {val_str} ({attr.rank}) [Mult: {attr.growth_multiplier}x]")

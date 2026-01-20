@@ -121,10 +121,23 @@ class GameApp:
         text = f"Name: {char.name}\n"
         text += f"Race: {char.race}\n"
         text += f"Rank: {char.rank}\n"
+        text += f"XP: {char.current_xp}\n"
+        text += f"Dram: {char.currency}\n"
         text += "-"*20 + "\n"
         text += f"HP: {char.current_health:.0f}/{char.max_health:.0f}\n"
         text += f"MP: {char.current_mana:.0f}/{char.max_mana:.0f}\n"
         text += f"SP: {char.current_stamina:.0f}/{char.max_stamina:.0f}\n"
+
+        if char.status_effects:
+            text += "-"*10 + "\n"
+            text += "Status Effects:\n"
+            for e in char.status_effects:
+                text += f"[{e.name} {e.duration}]\n"
+
+        active_q_count = len([q for q in char.quests.values() if q.status == "Active"])
+        if active_q_count > 0:
+            text += f"Active Quests: {active_q_count}\n"
+
         text += "-"*20 + "\n"
         text += "Attributes:\n"
         for attr in char.attributes.values():
