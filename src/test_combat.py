@@ -6,7 +6,8 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.models import Essence, AwakeningStone, Character, Ability
-from src.mechanics import GameEngine, CombatManager
+from src.game_engine import GameEngine
+from src.combat_system import CombatManager
 
 def test_combat_abilities():
     print("Testing Combat Ability Integration...")
