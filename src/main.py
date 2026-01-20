@@ -32,6 +32,7 @@ class GameInterface:
             "11": self.action_view_map,
             "12": self.action_crafting,
             "13": self.action_inventory,
+            "14": self.action_rest,
             "0": self.action_exit
         }
 
@@ -132,7 +133,7 @@ class GameInterface:
         char = self.engine.character
         print_separator()
         print(f"\nName: {char.name} | Race: {char.race} | Rank: {char.rank}")
-        print(f"Location: {char.current_location}")
+        print(f"Location: {char.current_location} | XP: {char.current_xp}")
         print("Attributes:")
         ui.print_header(f"{char.name} the {char.race} | Rank: {char.rank}")
 
@@ -158,7 +159,7 @@ class GameInterface:
             "Train Attribute", "Adventure (Combat)", "Absorb Essence",
             "Awaken Ability", "Practice Ability", "Simulate Training",
             "Quest Log", "Grimoire", "System", "Travel / Interact", "View Map",
-            "Crafting", "Inventory"
+            "Crafting", "Inventory", "Rest"
         ]
 
         # Split into two columns
@@ -171,6 +172,7 @@ class GameInterface:
             if right_idx == 10: right = "11. View Map"
             if right_idx == 11: right = "12. Crafting"
             if right_idx == 12: right = "13. Inventory"
+            if right_idx == 13: right = "14. Rest"
 
             print(f"{left:<30} {right}")
 
@@ -297,10 +299,13 @@ class GameInterface:
 
     def handle_combat_victory(self, monster):
         char = self.engine.character
-        ui.print_success(f"You gained {monster.xp_reward} XP!")
 
-        # Update Quests
-        notifications = self.engine.quest_mgr.check_objectives(char, "kill", monster.name)
+        # Award XP
+        char.current_xp += monster.xp_reward
+        ui.print_success(f"You gained {monster.xp_reward} XP! (Total: {char.current_xp})")
+
+        # Update Quests (delegated to CombatManager)
+        notifications = self.engine.combat_mgr.check_combat_objectives(char, monster, self.engine.quest_mgr)
         for note in notifications:
             ui.print_info(f"! {note} !")
 
@@ -723,6 +728,11 @@ class GameInterface:
                         ui.print_success(res)
                     else:
                         ui.print_error(res)
+
+    def action_rest(self):
+        ui.loading_effect("Resting")
+        res = self.engine.rest()
+        ui.print_success(res)
 
     def action_inventory(self):
         char = self.engine.character

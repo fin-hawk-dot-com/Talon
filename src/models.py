@@ -229,6 +229,7 @@ class Character:
     current_location: str = "Greenstone City"
     currency: int = 0
     materials: Dict[str, int] = field(default_factory=dict)
+    current_xp: int = 0
 
     def __post_init__(self):
         if self.current_health < 0:
