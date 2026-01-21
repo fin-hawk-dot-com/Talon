@@ -901,5 +901,67 @@
       "Chaos"
     ],
     "image_prompt": "An ethereal essence orb representing Dream. Visual style: Rare magic, glowing with Abstract, Mind, Illusion, Sleep energy. The essence of the subconscious."
+  },
+  {
+    "name": "Sand",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": [
+      "Elemental",
+      "Solid",
+      "Flow",
+      "Desiccation"
+    ],
+    "description": "The essence of erosion and granules.",
+    "opposite": "Water",
+    "synergy": [
+      "Earth",
+      "Wind",
+      "Time",
+      "Heat"
+    ],
+    "image_prompt": "An ethereal essence orb representing Sand. Visual style: Common magic, glowing with Elemental, Solid, Flow, Desiccation energy. The essence of erosion and granules."
+  },
+  {
+    "name": "Steam",
+    "type": "Base",
+    "rarity": "Uncommon",
+    "tags": [
+      "Elemental",
+      "Gas",
+      "Heat",
+      "Pressure"
+    ],
+    "description": "The essence of heated vapor.",
+    "opposite": "Ice",
+    "synergy": [
+      "Water",
+      "Fire",
+      "Air",
+      "Technology",
+      "Cloud"
+    ],
+    "image_prompt": "An ethereal essence orb representing Steam. Visual style: Uncommon magic, glowing with Elemental, Gas, Heat, Pressure energy. The essence of heated vapor."
+  },
+  {
+    "name": "Flesh",
+    "type": "Base",
+    "rarity": "Uncommon",
+    "tags": [
+      "Physical",
+      "Biological",
+      "Body",
+      "Mutation"
+    ],
+    "description": "The essence of muscle and tissue.",
+    "opposite": "Spirit",
+    "synergy": [
+      "Blood",
+      "Bone",
+      "Life",
+      "Might",
+      "Renewal"
+    ],
+    "image_prompt": "An ethereal essence orb representing Flesh. Visual style: Uncommon magic, glowing with Physical, Biological, Body, Mutation energy. The essence of muscle and tissue."
   }
 ]
