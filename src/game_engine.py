@@ -289,6 +289,23 @@ class GameEngine:
             if 'current_location' in data:
                 char.current_location = data['current_location']
 
+            # Reconstruct Summons
+            if 'summons' in data:
+                for s_data in data['summons']:
+                    # Basic reconstruction for summons
+                    summon = Character(
+                        name=s_data['name'],
+                        race=s_data['race'],
+                        current_health=s_data.get('current_health', -1),
+                        current_mana=s_data.get('current_mana', -1),
+                        current_stamina=s_data.get('current_stamina', -1),
+                        summon_duration=s_data.get('summon_duration', 0)
+                    )
+                    if 'attributes' in s_data:
+                        for k, v in s_data['attributes'].items():
+                            summon.attributes[k] = Attribute(**v)
+                    char.summons.append(summon)
+
             self.character = char
             return f"Game loaded from {filename}"
         except Exception as e:
