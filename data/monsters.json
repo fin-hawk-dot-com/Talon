@@ -1069,5 +1069,59 @@
         ],
         "image_prompt": "A colossal eagle with lightning arcing across its wings, flying in a storm.",
         "description": "The apex predator of the high peaks. Its feathers are prized fletching for Hawksley archers, but few survive the climb to its nest."
+    },
+    {
+        "name": "Void Weaver",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 160,
+            "Speed": 200,
+            "Spirit": 220,
+            "Recovery": 140
+        },
+        "xp_reward": 210,
+        "loot_table": [
+            "Void",
+            "Stone of the Web",
+            "Stone of the Blink"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Void Weaver. A spider-like creature made of purple void energy.",
+        "description": "A Magical Beast known as Void Weaver that spins webs of pure nothingness."
+    },
+    {
+        "name": "Clockwork Sentinel",
+        "race": "Construct",
+        "attributes": {
+            "Power": 210,
+            "Speed": 110,
+            "Spirit": 130,
+            "Recovery": 250
+        },
+        "xp_reward": 230,
+        "loot_table": [
+            "Time",
+            "Iron",
+            "Stone of the Shield"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Clockwork Sentinel. A brass automaton with ticking gears visible in its chest.",
+        "description": "A Construct known as Clockwork Sentinel that guards ancient vaults."
+    },
+    {
+        "name": "Blighted Treant",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 240,
+            "Speed": 60,
+            "Spirit": 180,
+            "Recovery": 300
+        },
+        "xp_reward": 250,
+        "loot_table": [
+            "Nature",
+            "Poison",
+            "Stone of the Anchor"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Blighted Treant. A rotting tree creature oozing black ichor.",
+        "description": "A Elemental known as Blighted Treant corrupted by foul magic."
     }
 ]

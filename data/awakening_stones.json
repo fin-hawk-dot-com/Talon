@@ -205,5 +205,32 @@
     "cooldown": "Medium",
     "cost_type": "Mana",
     "image_prompt": "A Uncommon Awakening Stone named Stone of the Shell, inscribed with runes of Defense. Summons a hardened carapace around the user. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Blink",
+    "function": "Mobility",
+    "description": "Instantly teleports the user a short distance.",
+    "rarity": "Rare",
+    "cooldown": "Medium",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Blink, inscribed with runes of Mobility. Instantly teleports the user a short distance. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Roar",
+    "function": "Control",
+    "description": "Emits a terrifying sound that stuns or fears enemies.",
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Stamina",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Roar, inscribed with runes of Control. Emits a terrifying sound that stuns or fears enemies. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Web",
+    "function": "Area Denial",
+    "description": "Creates sticky strands that slow or root targets.",
+    "rarity": "Common",
+    "cooldown": "Low",
+    "cost_type": "Mana",
+    "image_prompt": "A Common Awakening Stone named Stone of the Web, inscribed with runes of Area Denial. Creates sticky strands that slow or root targets. Glowing magical artifact."
   }
 ]

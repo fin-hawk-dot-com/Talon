@@ -922,5 +922,33 @@
         "category": "Artifacts",
         "text": "The Seeing Stones, or Palantiri, are ancient spherical artifacts created by the Aethel. They allow the user to see across vast distances and communicate with other stones. However, many of the stones have been lost or captured by the Dark Lord. Using a Seeing Stone is dangerous, as one never knows who might be watching from the other side. Strong wills can dominate weaker ones through the link, driving the user to madness.",
         "image_prompt": "A dark crystal sphere on a pedestal, glowing with a fiery eye inside."
+    },
+    {
+        "id": "lore_void_weaver",
+        "title": "Void Weaver",
+        "category": "Bestiary",
+        "text": "Void Weavers are terrifying predators that dwell near the edges of the Void Rift. Resembling giant arachnids composed of shifting shadows and purple light, they do not spin silk, but rather threads of concentrated Void essence. These webs do not just trap prey; they slowly erase them from existence. A Void Weaver can blink in and out of reality, making them incredibly difficult to target. Their fangs inject a venom that destabilizes the victim's mana, causing their own spells to backfire.",
+        "image_prompt": "A spider-like monster made of purple shadows and void energy, spinning a black web."
+    },
+    {
+        "id": "lore_clockwork_sentinel",
+        "title": "Clockwork Sentinel",
+        "category": "Bestiary",
+        "text": "The Clockwork Sentinels are the eternal guardians of the Aethel's time-locked vaults. Unlike other constructs, they are powered by Time Essence, allowing them to perceive moments before they happen. This limited precognition makes them master duelists, as they can parry attacks that haven't seemingly begun. They are built of brass and star-metal, with a ticking core that acts as their heartbeat. Rumor has it that if one listens closely to the ticking, they can hear the countdown to their own death.",
+        "image_prompt": "A brass robot soldier with gears, glowing blue eyes, holding a halberd."
+    },
+    {
+        "id": "lore_singing_dunes",
+        "title": "The Singing Dunes",
+        "category": "Location",
+        "text": "South of the Scorched Wastes lie the Singing Dunes, a vast desert of golden sand that hums a constant, low-frequency melody. This phenomenon is caused by the high concentration of Sound and Sand Essences. The dunes shift constantly, not by wind, but by the music of the earth. Travelers report hearing beautiful symphonies that lure them off the path, leading them into the waiting maws of Sandworms. At night, the sand glows with trapped starlight, creating a breathtaking, deadly landscape.",
+        "image_prompt": "Golden desert dunes at night, glowing sand, musical notes visually represented in the air."
+    },
+    {
+        "id": "lore_essence_sand",
+        "title": "Sand Essence",
+        "category": "Magic",
+        "text": "Sand Essence is often mistaken for a sub-type of Earth, but it is distinct in its fluidity. It embodies erosion, time, and the power of the many over the one. Sand Mages can strip flesh from bone with abrasive storms or bury entire cities under shifting dunes. It is a patient magic, one that wins through attrition. It has a strong synergy with Time Essence, as sand is the measure of the hourglass.",
+        "image_prompt": "A flowing stream of golden sand floating in the air, forming shapes."
     }
 ]
