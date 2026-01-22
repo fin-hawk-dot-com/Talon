@@ -188,7 +188,23 @@ class CombatManager:
              log.append(f"Used {ability.name} and healed for {heal_amount:.1f}!")
 
         elif "Summon" in function:
-             log.append(f"Used {ability.name}! A summon appears to aid you!")
+             summon_name = f"{ability.parent_essence.name} Construct"
+             summon = Character(name=summon_name, race="Summon")
+
+             # Scale stats based on user and ability power
+             for attr_name, attr in summon.attributes.items():
+                 user_val = user.attributes[attr_name].value
+                 attr.value = user_val * 0.4 * power_mult # 40% of user stats scaled by rank/level
+
+             # Reset health/mana based on new attributes
+             summon.current_health = summon.max_health
+             summon.current_mana = summon.max_mana
+             summon.current_stamina = summon.max_stamina
+
+             summon.summon_duration = 3 + int(ability.level / 3)
+
+             user.summons.append(summon)
+             log.append(f"Used {ability.name}! {summon_name} appears to aid you for {summon.summon_duration} rounds!")
 
         else:
              dmg, is_crit, is_miss = self.calculate_damage(user, target, is_magical=True, multiplier=1.0 * power_mult)
@@ -260,6 +276,32 @@ class CombatManager:
 
         if enemy.current_health <= 0:
             log.append(f"{enemy.name} has been defeated!")
+            return log, True
+
+        # 1.5 Summons Turn
+        active_summons = []
+        for summon in player.summons:
+            if summon.summon_duration > 0:
+                # Summons attack randomly or target enemy
+                # For now, simple attack on enemy
+                s_dmg, s_crit, s_miss = self.calculate_damage(summon, enemy, is_magical=True)
+
+                if s_miss:
+                    log.append(f"{summon.name} attacked {enemy.name} but missed!")
+                else:
+                    enemy.current_health -= s_dmg
+                    crit_text = " (CRITICAL!)" if s_crit else ""
+                    log.append(f"{summon.name} attacked {enemy.name} for {s_dmg:.1f} damage{crit_text}!")
+
+                summon.summon_duration -= 1
+                if summon.summon_duration > 0:
+                    active_summons.append(summon)
+                else:
+                    log.append(f"{summon.name} has unsummoned.")
+        player.summons = active_summons
+
+        if enemy.current_health <= 0:
+            log.append(f"{enemy.name} has been defeated by your summons!")
             return log, True
 
         # 2. Enemy Turn
