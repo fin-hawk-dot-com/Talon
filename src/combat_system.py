@@ -126,17 +126,39 @@ class CombatManager:
 
         effect_applied = None
 
-        if "Attack" in function:
-            is_magical = "Ranged" in function or "Blast" in ability.parent_stone.name
-            dmg, is_crit, is_miss = self.calculate_damage(user, target, is_magical, multiplier=1.5 * power_mult)
+        if "Attack" in function or "Execute" in function or "Area" in function or "Multi-Hit" in function:
+            is_magical = "Ranged" in function or "Blast" in ability.parent_stone.name or "Area" in function
 
-            if is_miss:
-                log.append(f"{user.name} used {ability.name} but missed!")
-            else:
-                target.current_health -= dmg
-                crit_text = " (CRITICAL!)" if is_crit else ""
-                log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage{crit_text}!")
+            damage_multiplier = 1.5
+            hits = 1
 
+            if "Multi-Hit" in function:
+                hits = 3
+                damage_multiplier = 0.6  # 3 * 0.6 = 1.8x total if all hit
+            elif "Execute" in function:
+                if target.current_health / target.max_health < 0.3:
+                    damage_multiplier = 3.0
+                    log.append(f"{ability.name} deals execution damage!")
+                else:
+                    damage_multiplier = 1.2
+            elif "Area Attack" in function or "Nova" in ability.name:
+                damage_multiplier = 1.2 # Slightly weaker single target but implied AoE
+
+            damage_multiplier *= power_mult
+
+            hits_landed = 0
+            for i in range(hits):
+                dmg, is_crit, is_miss = self.calculate_damage(user, target, is_magical, multiplier=damage_multiplier)
+
+                if is_miss:
+                    log.append(f"{user.name} used {ability.name} but missed!")
+                else:
+                    hits_landed += 1
+                    target.current_health -= dmg
+                    crit_text = " (CRITICAL!)" if is_crit else ""
+                    log.append(f"Used {ability.name} on {target.name} for {dmg:.1f} damage{crit_text}!")
+
+            if hits_landed > 0:
                 # Apply Status Effects based on Flavor Keywords
                 desc = ability.description.lower() + " " + function.lower()
                 if "fire" in desc or "burn" in desc or "ember" in ability.parent_essence.name.lower():
@@ -144,36 +166,35 @@ class CombatManager:
                     target.status_effects.append(StatusEffect("Burn", 3, burn_val, "DoT", "Burns the target.", source_name=user.name))
                     effect_applied = "Burn"
                 elif "ice" in desc or "frost" in desc or "cold" in ability.parent_essence.name.lower():
-                    # Simplified as DoT for now, ideally Speed Debuff
                     chill_val = 3.0 * power_mult
                     target.status_effects.append(StatusEffect("Frostbite", 3, chill_val, "DoT", "Freezes the target.", source_name=user.name))
                     effect_applied = "Frostbite"
                 elif "stun" in desc or "shock" in desc:
-                     if random.random() < 0.3: # 30% chance to stun
-                         target.status_effects.append(StatusEffect("Stun", 1, 0, "CC", "Stunned.", source_name=user.name))
-                         effect_applied = "Stun"
+                    if random.random() < 0.3: # 30% chance to stun
+                        target.status_effects.append(StatusEffect("Stun", 1, 0, "CC", "Stunned.", source_name=user.name))
+                        effect_applied = "Stun"
                 elif "poison" in desc or "venom" in desc:
-                     poison_val = 4.0 * power_mult
-                     target.status_effects.append(StatusEffect("Poison", 5, poison_val, "DoT", "Poison damage.", source_name=user.name))
-                     effect_applied = "Poison"
+                    poison_val = 4.0 * power_mult
+                    target.status_effects.append(StatusEffect("Poison", 5, poison_val, "DoT", "Poison damage.", source_name=user.name))
+                    effect_applied = "Poison"
                 elif "bleed" in desc or "blood" in desc or "lacerate" in function.lower():
-                     bleed_val = 3.0 * power_mult
-                     target.status_effects.append(StatusEffect("Bleed", 3, bleed_val, "DoT", "Bleeding.", source_name=user.name))
-                     effect_applied = "Bleed"
+                    bleed_val = 3.0 * power_mult
+                    target.status_effects.append(StatusEffect("Bleed", 3, bleed_val, "DoT", "Bleeding.", source_name=user.name))
+                    effect_applied = "Bleed"
                 elif "leech" in desc or "drain" in desc or "vampire" in ability.parent_essence.name.lower():
-                     if "mana" in desc:
-                         leech_val = 2.0 * power_mult
-                         target.status_effects.append(StatusEffect("Mana Leech", 3, leech_val, "DoT", "Draining mana.", source_name=user.name))
-                         effect_applied = "Mana Leech"
-                     else:
-                         leech_val = 4.0 * power_mult
-                         target.status_effects.append(StatusEffect("Life Leech", 3, leech_val, "DoT", "Draining life.", source_name=user.name))
-                         effect_applied = "Life Leech"
+                    if "mana" in desc:
+                        leech_val = 2.0 * power_mult
+                        target.status_effects.append(StatusEffect("Mana Leech", 3, leech_val, "DoT", "Draining mana.", source_name=user.name))
+                        effect_applied = "Mana Leech"
+                    else:
+                        leech_val = 4.0 * power_mult
+                        target.status_effects.append(StatusEffect("Life Leech", 3, leech_val, "DoT", "Draining life.", source_name=user.name))
+                        effect_applied = "Life Leech"
 
                 if effect_applied:
                     log.append(f"{ability.name} applied {effect_applied} to {target.name}!")
 
-        elif "Defense" in function:
+        elif "Defense" in function or "Shield" in function:
             heal_amount = user.attributes["Spirit"].value * power_mult
             user.current_health = min(user.max_health, user.current_health + heal_amount)
             log.append(f"Used {ability.name} and restored {heal_amount:.1f} health/shield!")
@@ -184,8 +205,21 @@ class CombatManager:
 
         elif "Heal" in function or "Sustain" in function:
              heal_amount = user.attributes["Spirit"].value * power_mult
+
+             if "Drain" in function or "Sustain" in function:
+                  # Deal damage then heal
+                  dmg, is_crit, is_miss = self.calculate_damage(user, target, is_magical=True, multiplier=1.0 * power_mult)
+                  if not is_miss:
+                       target.current_health -= dmg
+                       heal_amount = dmg * 0.5 # Heal for 50% of damage
+                       log.append(f"Drained {dmg:.1f} life from {target.name}!")
+                  else:
+                       heal_amount = 0
+                       log.append(f"{user.name} missed the drain!")
+
              user.current_health = min(user.max_health, user.current_health + heal_amount)
-             log.append(f"Used {ability.name} and healed for {heal_amount:.1f}!")
+             if heal_amount > 0:
+                log.append(f"Used {ability.name} and healed for {heal_amount:.1f}!")
 
         elif "Summon" in function:
              summon_name = f"{ability.parent_essence.name} Construct"
@@ -205,6 +239,28 @@ class CombatManager:
 
              user.summons.append(summon)
              log.append(f"Used {ability.name}! {summon_name} appears to aid you for {summon.summon_duration} rounds!")
+
+        elif "Celestial" in function or "Augment" in function or "Body Mod" in function:
+            # Buff Stats
+            buff_val = 5.0 * power_mult
+            user.status_effects.append(StatusEffect("Empowered", 5, buff_val, "Buff", "Stats Increased.", source_name=user.name))
+            log.append(f"{user.name} is Empowered by {ability.name}!")
+
+        elif "Mobility" in function:
+             # Buff Speed/Dodge
+             buff_val = 10.0 * power_mult
+             user.status_effects.append(StatusEffect("Haste", 3, buff_val, "Buff", "Speed Increased.", source_name=user.name))
+             log.append(f"{user.name} gains Haste!")
+
+        elif "Perception" in function:
+             # Buff Crit
+             user.status_effects.append(StatusEffect("Focus", 3, 0.2, "Buff", "Crit Chance Increased.", source_name=user.name))
+             log.append(f"{user.name} enters a state of Focus!")
+
+        elif "Terrain" in function or "Control" in function:
+             # Debuff Enemy
+             target.status_effects.append(StatusEffect("Slow", 3, 10.0, "Debuff", "Speed Reduced.", source_name=user.name))
+             log.append(f"{ability.name} slows {target.name}!")
 
         else:
              dmg, is_crit, is_miss = self.calculate_damage(user, target, is_magical=True, multiplier=1.0 * power_mult)

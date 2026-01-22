@@ -308,7 +308,9 @@ class GameInterface:
                 if monster.current_health <= 0:
                     self.handle_combat_victory(monster)
                 elif char.current_health <= 0:
-                    ui.print_error("You have been defeated. (Game Over - Reviving at temple...)")
+                    loss = int(char.current_xp * 0.10)
+                    char.current_xp = max(0, char.current_xp - loss)
+                    ui.print_error(f"You have been defeated. (Game Over - Reviving at temple... Lost {loss} XP)")
                     char.current_health = char.max_health
                 break
 

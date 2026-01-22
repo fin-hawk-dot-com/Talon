@@ -79,11 +79,11 @@ class CraftingManager:
 
         # Check materials
         for mat, qty in recipe.items():
-            # Check inventory for Essence
-            if "Essence" in mat:
-                target_name = mat.replace(" Essence", "")
-                # Count essences in inventory
-                count = sum(1 for i in character.inventory if isinstance(i, Essence) and (i.name == mat or i.name == target_name))
+            # Check if material is an Essence
+            essence_data = self.data_loader.get_essence(mat)
+            if essence_data:
+                # Count essences in inventory matching the name
+                count = sum(1 for i in character.inventory if isinstance(i, Essence) and i.name == essence_data.name)
                 if count < qty:
                     return f"Not enough {mat} (Need {qty})."
             else:
@@ -92,12 +92,12 @@ class CraftingManager:
 
         # Consume materials
         for mat, qty in recipe.items():
-            if "Essence" in mat:
-                target_name = mat.replace(" Essence", "")
+            essence_data = self.data_loader.get_essence(mat)
+            if essence_data:
                 removed = 0
                 to_remove = []
                 for idx, item in enumerate(character.inventory):
-                    if isinstance(item, Essence) and (item.name == mat or item.name == target_name):
+                    if isinstance(item, Essence) and item.name == essence_data.name:
                         to_remove.append(idx)
                         removed += 1
                         if removed >= qty:
