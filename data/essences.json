@@ -963,5 +963,45 @@
       "Renewal"
     ],
     "image_prompt": "An ethereal essence orb representing Flesh. Visual style: Uncommon magic, glowing with Physical, Biological, Body, Mutation energy. The essence of muscle and tissue."
+  },
+  {
+    "name": "Glass",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": [
+      "Elemental",
+      "Solid",
+      "Sharp",
+      "Transparent"
+    ],
+    "description": "The essence of amorphous solid and clarity.",
+    "opposite": "Stone",
+    "synergy": [
+      "Fire",
+      "Sand",
+      "Light",
+      "Crystal"
+    ],
+    "image_prompt": "An ethereal essence orb representing Glass. Visual style: Common magic, glowing with Elemental, Solid, Sharp, Transparent energy."
+  },
+  {
+    "name": "Fungus",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": [
+      "Biological",
+      "Decay",
+      "Growth",
+      "Spore"
+    ],
+    "description": "The essence of fungal life and decay.",
+    "opposite": "Fire",
+    "synergy": [
+      "Nature",
+      "Death",
+      "Poison",
+      "Dark"
+    ],
+    "image_prompt": "An ethereal essence orb representing Fungus. Visual style: Common magic, glowing with Biological, Decay, Growth, Spore energy."
   }
 ]

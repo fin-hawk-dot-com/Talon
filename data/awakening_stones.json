@@ -232,5 +232,41 @@
     "cooldown": "Low",
     "cost_type": "Mana",
     "image_prompt": "A Common Awakening Stone named Stone of the Web, inscribed with runes of Area Denial. Creates sticky strands that slow or root targets. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Mirror",
+    "function": "Replication",
+    "description": "Reflects a portion of incoming damage back to the attacker.",
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Mirror. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Spore",
+    "function": "Area Denial",
+    "description": "Releases a cloud of choking spores.",
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Stamina",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Spore. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Prism",
+    "function": "Multi-Hit",
+    "description": "Refracts magical energy into multiple beams.",
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Prism. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Shatter",
+    "function": "Area Attack",
+    "description": "Shatters the ground or air, causing widespread damage.",
+    "rarity": "Common",
+    "cooldown": "Medium",
+    "cost_type": "Stamina",
+    "image_prompt": "A Common Awakening Stone named Stone of the Shatter. Glowing magical artifact."
   }
 ]

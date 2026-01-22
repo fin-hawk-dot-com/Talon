@@ -950,5 +950,54 @@
         "category": "Magic",
         "text": "Sand Essence is often mistaken for a sub-type of Earth, but it is distinct in its fluidity. It embodies erosion, time, and the power of the many over the one. Sand Mages can strip flesh from bone with abrasive storms or bury entire cities under shifting dunes. It is a patient magic, one that wins through attrition. It has a strong synergy with Time Essence, as sand is the measure of the hourglass.",
         "image_prompt": "A flowing stream of golden sand floating in the air, forming shapes."
+  },
+  {
+    "id": "lore_glass_serpent",
+    "title": "Glass Serpent",
+    "category": "Bestiary",
+    "text": "Glass Serpents are native to the Mirror Plains, evolving to blend in with the shimmering landscape. Their bodies are composed of living glass segments held together by a strong magnetic field. They hunt by coiling around their prey and constricting, their sharp scales slicing through armor with ease. Some theorize they are not natural beasts, but constructs left behind by an ancient glass-shaper.",
+    "image_prompt": "A snake made of clear glass segments, background of reflective salt flats."
+  },
+  {
+    "id": "lore_spore_walker",
+    "title": "Spore Walker",
+    "category": "Bestiary",
+    "text": "Spore Walkers are mobile fungal colonies that have achieved a hive-mind intelligence. They roam damp, dark places like the Fungal Depths, spreading their spores to convert all organic matter into more fungus. A Spore Walker's touch can accelerate decay instantly, rotting wood and flesh in seconds. They are immune to pain and fear, making them relentless pursuers.",
+    "image_prompt": "A humanoid shape made of mushrooms and moss, releasing green spore clouds."
+  },
+  {
+    "id": "lore_mirror_mimic",
+    "title": "Mirror Mimic",
+    "category": "Bestiary",
+    "text": "Mirror Mimics are insidious constructs found in ruins where high-level illusion magic has leaked. They appear as pools of mercury or polished metal until a victim approaches. Then, they rise up, assuming the shape and abilities of their target. While they cannot copy complex spells, their physical mimicry is perfect. The only way to tell the original from the mimic is that the mimic's reflection is always inverted.",
+    "image_prompt": "A silver, liquid metal humanoid reflecting the viewer, featureless face."
+  },
+  {
+    "id": "lore_crystal_scorpion",
+    "title": "Crystal Scorpion",
+    "category": "Bestiary",
+    "text": "Crystal Scorpions are terrifying predators of the Crystal Caverns. Their carapace is made of diamond-hard crystal that refracts light, making them difficult to target with spells. Their stinger delivers a unique venom that doesn't kill, but crystallizes the victim's blood, slowly turning them into a statue. These statues are then harvested by the scorpion's young for food.",
+    "image_prompt": "A giant scorpion made of jagged purple crystals, glowing stinger."
+  },
+  {
+    "id": "lore_void_jellyfish",
+    "title": "Void Jellyfish",
+    "category": "Bestiary",
+    "text": "Void Jellyfish are airborne horrors that drift on mana currents. They originate from the Void Rift, resembling their aquatic counterparts but composed of dark energy and starlight. Their tentacles trail for meters, invisible to the naked eye, and drain the mana of anything they touch. Swarms of them can leave an entire region magically barren for weeks.",
+    "image_prompt": "Floating jellyfish in the sky, dark purple bodies, long glowing tentacles."
+  },
+  {
+    "id": "lore_mirror_plains",
+    "title": "The Mirror Plains",
+    "category": "Location",
+    "text": "The Mirror Plains are a vast expanse of flat, polished salt that reflects the sky perfectly. Located to the east of the Scorched Wastes, the ground is so smooth that travelers often lose their sense of direction, unable to tell the earth from the sky. It is a place of intense light during the day, blinding the unwary. At night, it reflects the stars, making one feel as if they are walking through space. It is home to crystalline life forms and is a favored training ground for Light and Illusion mages.",
+    "image_prompt": "A vast salt flat reflecting the sky perfectly, horizon blurred, bright and surreal."
+  },
+  {
+    "id": "lore_fungal_depths",
+    "title": "The Fungal Depths",
+    "category": "Location",
+    "text": "Beneath the Whispering Woods lies a subterranean network known as the Fungal Depths. It is a bio-luminescent wonderland of giant mushrooms, phosphorescent moss, and deadly spores. The air is thick and humid, requiring filtration masks to breathe safely. The ecosystem here is aggressive; even the plants are predatory. It is the domain of the Spore Walkers and other decay-based entities. Alchemists brave the dangers to harvest rare molds found nowhere else.",
+    "image_prompt": "Underground cave forest of giant glowing mushrooms, green and purple lighting."
     }
 ]

@@ -1123,5 +1123,90 @@
         ],
         "image_prompt": "A dangerous Elemental creature known as Blighted Treant. A rotting tree creature oozing black ichor.",
         "description": "A Elemental known as Blighted Treant corrupted by foul magic."
+    },
+    {
+        "name": "Glass Serpent",
+        "race": "Construct",
+        "attributes": {
+            "Power": 220,
+            "Speed": 250,
+            "Spirit": 150,
+            "Recovery": 100
+        },
+        "xp_reward": 240,
+        "loot_table": [
+            "Glass",
+            "Stone of the Prism"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Glass Serpent. A snake made of transparent glass segments.",
+        "description": "A Construct known as Glass Serpent that refracts light to hide itself."
+    },
+    {
+        "name": "Spore Walker",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 180,
+            "Speed": 120,
+            "Spirit": 200,
+            "Recovery": 300
+        },
+        "xp_reward": 220,
+        "loot_table": [
+            "Fungus",
+            "Stone of the Spore"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Spore Walker. A humanoid figure made of mushrooms and mycelium.",
+        "description": "A Elemental known as Spore Walker that spreads decay wherever it treads."
+    },
+    {
+        "name": "Mirror Mimic",
+        "race": "Construct",
+        "attributes": {
+            "Power": 150,
+            "Speed": 200,
+            "Spirit": 250,
+            "Recovery": 150
+        },
+        "xp_reward": 230,
+        "loot_table": [
+            "Glass",
+            "Stone of the Mirror"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Mirror Mimic. A shapeless form with a reflective surface.",
+        "description": "A Construct known as Mirror Mimic that copies the appearance of its foes."
+    },
+    {
+        "name": "Crystal Scorpion",
+        "race": "Beast",
+        "attributes": {
+            "Power": 240,
+            "Speed": 180,
+            "Spirit": 100,
+            "Recovery": 220
+        },
+        "xp_reward": 250,
+        "loot_table": [
+            "Crystal",
+            "Stone of the Shatter"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Crystal Scorpion. A giant scorpion with a carapace of jagged crystal.",
+        "description": "A Beast known as Crystal Scorpion whose sting turns flesh to glass."
+    },
+    {
+        "name": "Void Jellyfish",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 100,
+            "Speed": 150,
+            "Spirit": 300,
+            "Recovery": 100
+        },
+        "xp_reward": 260,
+        "loot_table": [
+            "Void",
+            "Stone of the Void"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Void Jellyfish. A floating jellyfish made of dark energy.",
+        "description": "A Magical Beast known as Void Jellyfish that floats through the air, consuming mana."
     }
 ]
