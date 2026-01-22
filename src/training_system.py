@@ -171,12 +171,12 @@ class TrainingManager:
         attr = character.attributes[attribute_name]
         old_rank = attr.rank
 
-        # Growth is slower as you rank up relative to the stat value
-        # But here we use a simple linear gain multiplied by the growth multiplier
-        gain = 1.0 * attr.growth_multiplier
+        # Diminishing returns based on rank: higher rank attributes are harder to train
+        rank_idx = RANK_INDICES.get(attr.rank, 0)
+        # 1.0 (Normal) -> 0.8 (Iron) -> 0.6 (Bronze) -> 0.4 (Silver) -> 0.2 (Gold) -> 0.1 (Diamond)
+        diminishing_factor = max(0.1, 1.0 - (rank_idx * 0.2))
 
-        # Optional: Diminishing returns based on rank?
-        # For now, keep it simple.
+        gain = 1.0 * attr.growth_multiplier * diminishing_factor
         attr.value += gain
 
         narrative = NarrativeGenerator.get_training_narrative(attribute_name, attr.value)
