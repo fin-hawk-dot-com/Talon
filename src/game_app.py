@@ -39,6 +39,8 @@ class GameApp:
         self.root.bind("<D>", lambda e: self.handle_movement("East"))
         self.root.bind("<e>", lambda e: self.handle_interaction())
         self.root.bind("<E>", lambda e: self.handle_interaction())
+        self.root.bind("<m>", lambda e: self.toggle_map_mode())
+        self.root.bind("<M>", lambda e: self.toggle_map_mode())
 
         # Dialogue State
         self.dialogue_npc_name = None
@@ -182,6 +184,11 @@ class GameApp:
         else:
             self.log(f"No path {direction}.", "info")
 
+    def toggle_map_mode(self):
+        new_mode = 'mini' if self.map_widget.mode == 'world' else 'world'
+        self.map_widget.set_mode(new_mode)
+        self.log(f"Map switched to {new_mode} view.", "info")
+
     def setup_styles(self):
         self.style = ttk.Style()
         self.style.theme_use('clam')
@@ -226,6 +233,12 @@ class GameApp:
         # Map (Top)
         self.map_widget = MapWidget(self.center_container, self.engine, height=350)
         self.map_widget.pack(fill=tk.BOTH, expand=False, pady=(0, 5))
+
+        # Map Controls
+        self.map_controls = ttk.Frame(self.center_container)
+        self.map_controls.pack(fill=tk.X, pady=(0, 5))
+
+        ttk.Button(self.map_controls, text="Toggle Map Mode (M)", command=self.toggle_map_mode).pack(side=tk.RIGHT)
 
         # Log (Bottom)
         self.center_panel = ttk.Frame(self.center_container, relief=tk.SUNKEN, borderwidth=2)
