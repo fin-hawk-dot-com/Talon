@@ -162,13 +162,15 @@ class TrainingManager:
         if attribute_name not in character.attributes:
             return "Invalid attribute."
 
-        # XP Cost
-        xp_cost = 100
+        # XP Cost increases with Rank
+        attr = character.attributes[attribute_name]
+        rank_idx = RANK_INDICES.get(attr.rank, 0)
+        xp_cost = 100 * (rank_idx + 1)
+
         if character.current_xp < xp_cost:
             return f"Not enough XP to train. Need {xp_cost}, have {character.current_xp}."
 
         character.current_xp -= xp_cost
-        attr = character.attributes[attribute_name]
         old_rank = attr.rank
 
         # Diminishing returns based on rank: higher rank attributes are harder to train

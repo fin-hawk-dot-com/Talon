@@ -117,7 +117,8 @@ class DataLoader:
                 starting_stage_id=q['starting_stage_id'],
                 rewards=q.get('rewards', []),
                 type=q.get('type', 'Side'),
-                image_prompt=q.get('image_prompt', "")
+                image_prompt=q.get('image_prompt', ""),
+                location=q.get('location')
             )
         return None
 

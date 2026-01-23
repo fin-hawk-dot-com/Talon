@@ -7,6 +7,14 @@ class CombatManager:
     def __init__(self, data_loader: DataLoader):
         self.data_loader = data_loader
 
+    def _train_tiny(self, character: Character, attribute_name: str, amount: float = 0.01):
+        """Applies a tiny stat increase based on usage."""
+        if attribute_name in character.attributes:
+            attr = character.attributes[attribute_name]
+            # Apply growth multiplier
+            final_amount = amount * attr.growth_multiplier
+            attr.value += final_amount
+
     def process_effects(self, character: Character, opponent: Optional[Character] = None) -> Tuple[List[str], bool]:
         """
         Process active status effects.
@@ -74,9 +82,11 @@ class CombatManager:
         if is_magical:
              damage = attacker.attributes["Spirit"].value * 1.5
              defense = defender.attributes["Spirit"].value * 0.5
+             self._train_tiny(attacker, "Spirit")
         else:
              damage = attacker.attributes["Power"].value * 1.5
              defense = defender.attributes["Recovery"].value * 0.5
+             self._train_tiny(attacker, "Power")
 
         damage *= multiplier
         final_damage = max(1.0, damage - defense)
@@ -89,6 +99,11 @@ class CombatManager:
 
         # Variance
         final_damage *= random.uniform(0.9, 1.1)
+
+        # Defender trains Recovery if hit
+        if final_damage > 0:
+            self._train_tiny(defender, "Recovery")
+
         return final_damage, is_crit, False
 
     def execute_ability(self, user: Character, target: Character, ability: Ability) -> List[str]:
@@ -123,6 +138,9 @@ class CombatManager:
         rank_mult = 1.0 + (RANK_INDICES[ability.rank] * 0.5)
         level_mult = 1.0 + (ability.level * 0.1)
         power_mult = rank_mult * level_mult
+
+        # Using abilities trains Spirit generally
+        self._train_tiny(user, "Spirit")
 
         effect_applied = None
 
@@ -199,6 +217,8 @@ class CombatManager:
             user.current_health = min(user.max_health, user.current_health + heal_amount)
             log.append(f"Used {ability.name} and restored {heal_amount:.1f} health/shield!")
 
+            self._train_tiny(user, "Recovery")
+
             # Apply Defensive Buff
             user.status_effects.append(StatusEffect("Regen", 3, heal_amount * 0.2, "Heal", "Regenerating health.", source_name=user.name))
             log.append(f"{user.name} gains Regen!")
@@ -251,6 +271,7 @@ class CombatManager:
              buff_val = 10.0 * power_mult
              user.status_effects.append(StatusEffect("Haste", 3, buff_val, "Buff", "Speed Increased.", source_name=user.name))
              log.append(f"{user.name} gains Haste!")
+             self._train_tiny(user, "Speed")
 
         elif "Perception" in function:
              # Buff Crit
@@ -322,6 +343,9 @@ class CombatManager:
                 p_speed = player.attributes["Speed"].value
                 e_speed = enemy.attributes["Speed"].value
                 chance = 0.5 + (p_speed - e_speed) * 0.01
+
+                self._train_tiny(player, "Speed")
+
                 if random.random() < chance:
                     log.append("You fled successfully!")
                     return log, True
