@@ -203,6 +203,41 @@ class GameEngine:
 
         return NarrativeGenerator.get_awakening_narrative(essence, stone, ability.name)
 
+    def train_attribute(self, attribute_name: str) -> str:
+        if not self.character: return "No character."
+        return self.training_mgr.train_attribute(self.character, attribute_name)
+
+    def practice_ability(self, essence_name: str, slot_index: int) -> str:
+        if not self.character: return "No character."
+
+        # We need ability name for better message, so look it up first
+        abilities = self.character.abilities.get(essence_name)
+        if not abilities or slot_index >= len(abilities) or not abilities[slot_index]:
+            return "No ability in that slot."
+
+        ability = abilities[slot_index]
+
+        leveled_up = self.training_mgr.practice_ability(self.character, essence_name, slot_index)
+
+        msg = f"Practiced {ability.name}. Gained XP."
+        if leveled_up:
+            msg += f" Level Up! {ability.name} is now level {ability.level}."
+
+        return msg
+
+    def can_rank_up_ability(self, essence_name: str, slot_index: int) -> bool:
+        if not self.character: return False
+
+        abilities = self.character.abilities.get(essence_name)
+        if not abilities or slot_index >= len(abilities) or not abilities[slot_index]:
+            return False
+
+        return self.training_mgr.can_rank_up(self.character, abilities[slot_index])
+
+    def rank_up_ability(self, essence_name: str, slot_index: int) -> str:
+        if not self.character: return "No character."
+        return self.training_mgr.attempt_rank_up_ability(self.character, essence_name, slot_index)
+
     def save_game(self, filename: str):
         if not self.character:
             return "No character to save."

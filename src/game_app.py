@@ -457,14 +457,64 @@ class GameApp:
         self.add_action_button("<< Back", self.enter_hub)
 
         def train(attr):
-            self.engine.training_mgr.train_attribute(self.engine.character, attr)
-            self.log(f"Trained {attr}!", "gain")
+            msg = self.engine.train_attribute(attr)
+            self.log(msg, "gain")
             self.update_status_display()
 
         self.add_action_button("Train Power", lambda: train("Power"))
         self.add_action_button("Train Speed", lambda: train("Speed"))
         self.add_action_button("Train Spirit", lambda: train("Spirit"))
         self.add_action_button("Train Recovery", lambda: train("Recovery"))
+
+        self.add_action_button("Practice Ability", self.show_practice_ability_options)
+        self.add_action_button("Rank Up Ability", self.show_rank_up_ability_options)
+
+    def show_practice_ability_options(self):
+        self.clear_actions()
+        self.add_action_button("<< Back", self.show_train_options)
+
+        char = self.engine.character
+        found_any = False
+
+        for ess_name, slots in char.abilities.items():
+            for i, ab in enumerate(slots):
+                if ab:
+                    found_any = True
+                    txt = f"{ab.name} (Lvl {ab.level})"
+                    self.add_action_button(txt, lambda e=ess_name, s=i: self.perform_practice(e, s))
+
+        if not found_any:
+            self.log("No abilities to practice.", "info")
+
+    def perform_practice(self, essence_name, slot_index):
+        msg = self.engine.practice_ability(essence_name, slot_index)
+        tag = "gain" if "XP" in msg else "info"
+        if "Level Up" in msg: tag = "event"
+        self.log(msg, tag)
+        self.show_practice_ability_options() # Refresh to show new level
+
+    def show_rank_up_ability_options(self):
+        self.clear_actions()
+        self.add_action_button("<< Back", self.show_train_options)
+
+        char = self.engine.character
+        found_any = False
+
+        for ess_name, slots in char.abilities.items():
+            for i, ab in enumerate(slots):
+                if ab and self.engine.can_rank_up_ability(ess_name, i): # Only show eligible
+                    found_any = True
+                    txt = f"Rank Up {ab.name} ({ab.rank})"
+                    self.add_action_button(txt, lambda e=ess_name, s=i: self.perform_rank_up(e, s))
+
+        if not found_any:
+            self.log("No abilities ready for Rank Up (Need Level 9).", "info")
+
+    def perform_rank_up(self, essence_name, slot_index):
+        msg = self.engine.rank_up_ability(essence_name, slot_index)
+        tag = "event" if "Success" in msg else "error"
+        self.log(msg, tag)
+        self.show_rank_up_ability_options() # Refresh
 
     def show_inventory_options(self):
         self.clear_actions()
