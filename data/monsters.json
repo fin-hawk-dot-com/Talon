@@ -1208,5 +1208,76 @@
         ],
         "image_prompt": "A dangerous Magical Beast creature known as Void Jellyfish. A floating jellyfish made of dark energy.",
         "description": "A Magical Beast known as Void Jellyfish that floats through the air, consuming mana."
+    },
+    {
+        "name": "Rotting Treant",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 260,
+            "Speed": 40,
+            "Spirit": 150,
+            "Recovery": 350
+        },
+        "xp_reward": 280,
+        "loot_table": [
+            "Rot",
+            "Stone of the Decay",
+            "Nature"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Rotting Treant. A giant tree collapsing under its own decay.",
+        "description": "A Elemental known as Rotting Treant that spreads rot to everything it touches."
+    },
+    {
+        "name": "Chaos Elemental",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 300,
+            "Speed": 300,
+            "Spirit": 300,
+            "Recovery": 300
+        },
+        "xp_reward": 400,
+        "loot_table": [
+            "Chaos",
+            "Stone of the Blast",
+            "Stone of the Blink"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Chaos Elemental. A shifting mass of colors and shapes.",
+        "description": "A Elemental known as Chaos Elemental formed from pure entropy."
+    },
+    {
+        "name": "Plague Rat",
+        "race": "Beast",
+        "attributes": {
+            "Power": 80,
+            "Speed": 120,
+            "Spirit": 40,
+            "Recovery": 60
+        },
+        "xp_reward": 50,
+        "loot_table": [
+            "Rot",
+            "Poison"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Plague Rat. A large rat covered in sores and green mists.",
+        "description": "A Beast known as Plague Rat carrying deadly diseases."
+    },
+    {
+        "name": "Spirit Guardian",
+        "race": "Construct",
+        "attributes": {
+            "Power": 200,
+            "Speed": 200,
+            "Spirit": 400,
+            "Recovery": 200
+        },
+        "xp_reward": 350,
+        "loot_table": [
+            "Spirit",
+            "Stone of the Shield",
+            "Light"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Spirit Guardian. A suit of armor animated by a glowing blue soul.",
+        "description": "A Construct known as Spirit Guardian bound to protect ancient sites."
     }
 ]

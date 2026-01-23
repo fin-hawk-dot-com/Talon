@@ -268,5 +268,23 @@
     "cooldown": "Medium",
     "cost_type": "Stamina",
     "image_prompt": "A Common Awakening Stone named Stone of the Shatter. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Decay",
+    "function": "Debuff",
+    "description": "Withers the target, reducing their strength and speed.",
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Mana",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Decay. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Might",
+    "function": "Buff",
+    "description": "Empowers the user with raw strength and endurance.",
+    "rarity": "Common",
+    "cooldown": "High",
+    "cost_type": "Stamina",
+    "image_prompt": "A Common Awakening Stone named Stone of the Might. Glowing magical artifact."
   }
 ]

@@ -264,4 +264,79 @@ ABILITY_TEMPLATES = [
         affinity_weight={"Mage": 10.0, "Warrior": 5.0, "General": 5.0},
         essence_tags=["Energy", "Elemental", "Destruction"]
     ),
+
+    # --- Control ---
+    AbilityTemplate(
+        pattern="Roar of {essence}",
+        function="Control",
+        description_template="Unleashes a terrifying roar of {essence} to stun or fear enemies.",
+        affinity_weight={"Warrior": 8.0, "Guardian": 8.0, "General": 5.0},
+        essence_tags=["Sound", "Fear", "Mind"]
+    ),
+    AbilityTemplate(
+        pattern="{essence} Command",
+        function="Control",
+        description_template="Uses the authority of {essence} to force obedience.",
+        affinity_weight={"Mage": 8.0, "Support": 8.0, "General": 5.0}
+    ),
+
+    # --- Evasion ---
+    AbilityTemplate(
+        pattern="{essence} Blur",
+        function="Evasion",
+        description_template="Distorts the air with {essence} to avoid attacks.",
+        affinity_weight={"Rogue": 10.0, "Mage": 5.0, "General": 5.0}
+    ),
+    AbilityTemplate(
+        pattern="Mist of {essence}",
+        function="Evasion",
+        description_template="Dissolves into a mist of {essence} to evade harm.",
+        affinity_weight={"Mage": 8.0, "Rogue": 8.0, "General": 5.0},
+        essence_tags=["Gas", "Liquid", "Air"]
+    ),
+
+    # --- Stability ---
+    AbilityTemplate(
+        pattern="{essence} Stance",
+        function="Stability",
+        description_template="Adopts a stance grounded by {essence} to resist movement.",
+        affinity_weight={"Warrior": 10.0, "Guardian": 10.0, "General": 5.0}
+    ),
+    AbilityTemplate(
+        pattern="{essence} Root",
+        function="Stability",
+        description_template="Roots the user to the ground with {essence}.",
+        affinity_weight={"Guardian": 10.0, "Mage": 5.0, "General": 5.0},
+        essence_tags=["Earth", "Nature", "Plant"]
+    ),
+
+    # --- Buff ---
+    AbilityTemplate(
+        pattern="{essence} Strength",
+        function="Buff",
+        description_template="Infuses muscles with {essence} to increase power.",
+        affinity_weight={"Warrior": 10.0, "Guardian": 5.0, "General": 5.0}
+    ),
+    AbilityTemplate(
+        pattern="{essence} Focus",
+        function="Buff",
+        description_template="Sharpens the mind with {essence} to improve concentration.",
+        affinity_weight={"Mage": 10.0, "Rogue": 5.0, "General": 5.0},
+        essence_tags=["Mind", "Light"]
+    ),
+
+    # --- Debuff ---
+    AbilityTemplate(
+        pattern="Touch of {essence}",
+        function="Debuff",
+        description_template="Infects the target with {essence}, weakening them.",
+        affinity_weight={"Mage": 8.0, "Rogue": 8.0, "General": 5.0}
+    ),
+    AbilityTemplate(
+        pattern="{essence} Rot",
+        function="Debuff",
+        description_template="Causes the target's gear or flesh to decay with {essence}.",
+        affinity_weight={"Mage": 8.0, "Support": 5.0, "General": 5.0},
+        essence_tags=["Decay", "Time", "Acid"]
+    ),
 ]

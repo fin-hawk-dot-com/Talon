@@ -25,7 +25,7 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 
 ## Essences
 
-**Known Tags**: Abstract, Aim, Air, Amplification, Armor, Artificial, Attraction, Biological, Blade, Body, Celestial, Chemical, Chronology, Cold, Combat, Concealment, Concept, Corrosion, Corruption, Death, Defense, Desiccation, Destruction, Disorder, Electricity, Elemental, Emotion, Empty, End, Energy, Entropy, Equilibrium, Fate, Flight, Flow, Focus, Force, Fundamental, Future, Gas, Growth, Hardness, Healing, Heat, Holy, Illumination, Illusion, Information, Judgment, Learning, Life, Light, Liquid, Logic, Macabre, Machinery, Magic, Metal, Mind, Movement, Mutation, Mythic, Nature, Negative, Night, Null, Physical, Plants, Power, Pressure, Protection, Ranged, Reaction, Reality, Recovery, Refraction, Shadow, Sleep, Solid, Space, Speed, Star, Strength, Structure, Temporal, Tides, Toxin, Travel, Velocity, Vibration, Vision, Vitality, Water, Wave, Weapon, Weight, Wind
+**Known Tags**: Abstract, Aim, Air, Amplification, Armor, Artificial, Attraction, Biological, Blade, Body, Celestial, Chemical, Chronology, Cold, Combat, Concealment, Concept, Consciousness, Corrosion, Corruption, Death, Decay, Defense, Desiccation, Destruction, Disorder, Electricity, Elemental, Emotion, Empty, End, Energy, Entropy, Equilibrium, Fate, Flight, Flow, Focus, Force, Fundamental, Future, Gas, Growth, Hardness, Healing, Heat, Holy, Illumination, Illusion, Information, Judgment, Learning, Life, Light, Liquid, Logic, Macabre, Machinery, Magic, Metal, Mind, Movement, Mutation, Mythic, Nature, Negative, Night, Null, Physical, Plants, Power, Pressure, Protection, Ranged, Reaction, Reality, Recovery, Refraction, Shadow, Sharp, Sleep, Solid, Soul, Space, Speed, Spore, Star, Strength, Structure, Temporal, Tides, Toxin, Transparent, Travel, Velocity, Vibration, Vision, Vitality, Water, Wave, Weapon, Weight, Will, Wind
 
 | Name | Type | Rarity | Tags | Description | Visual Prompt | Opposite | Synergy |
 |---|---|---|---|---|---|---|---|
@@ -46,6 +46,8 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 | Earth | Base | Common | Elemental, Solid, Defense, Nature | The essence of stability and stone. | An ethereal essence orb representing Earth. Visual style: Common magic, glowing with Elemental, Solid, Defense, Nature energy. The essence of stability and stone. | Air | Fire, Iron, Potent, Life, Armor |
 | Fire | Base | Common | Elemental, Heat, Energy, Destruction | The essence of combustion and heat. | An ethereal essence orb representing Fire. Visual style: Common magic, glowing with Elemental, Heat, Energy, Destruction energy. The essence of combustion and heat. | Water | Earth, Air, Potent, Renewal, Wing, Light |
 | Flesh | Base | Uncommon | Physical, Biological, Body, Mutation | The essence of muscle and tissue. | An ethereal essence orb representing Flesh. Visual style: Uncommon magic, glowing with Physical, Biological, Body, Mutation energy. The essence of muscle and tissue. | Spirit | Blood, Bone, Life, Might, Renewal |
+| Fungus | Base | Common | Biological, Decay, Growth, Spore | The essence of fungal life and decay. | An ethereal essence orb representing Fungus. Visual style: Common magic, glowing with Biological, Decay, Growth, Spore energy. | Fire | Nature, Death, Poison, Dark |
+| Glass | Base | Common | Elemental, Solid, Sharp, Transparent | The essence of amorphous solid and clarity. | An ethereal essence orb representing Glass. Visual style: Common magic, glowing with Elemental, Solid, Sharp, Transparent energy. | Stone | Fire, Sand, Light, Crystal |
 | Gravity | Base | Epic | Fundamental, Force, Weight, Attraction | The essence of gravitational pull. | An ethereal essence orb representing Gravity. Visual style: Epic magic, glowing with Fundamental, Force, Weight, Attraction energy. The essence of gravitational pull. | Wing | Earth, Void, Star, Moon, Sun |
 | Gun | Base | Uncommon | Artificial, Weapon, Ranged | The essence of firearms. | An ethereal essence orb representing Gun. Visual style: Uncommon magic, glowing with Artificial, Weapon, Ranged energy. The essence of firearms. | Shield | Technology, Armor, Directed, Iron, Fire |
 | Hope | Base | Epic | Abstract, Emotion, Future | The essence of belief in a better future. | An ethereal essence orb representing Hope. Visual style: Epic magic, glowing with Abstract, Emotion, Future energy. The essence of belief in a better future. | Doom | Light, Life, Renewal, Sun, Balance |
@@ -62,10 +64,12 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 | Poison | Base | Uncommon | Biological, Toxin, Death, Liquid | The essence of toxicity and venom. | An ethereal essence orb representing Poison. Visual style: Uncommon magic, glowing with Biological, Toxin, Death, Liquid energy. The essence of toxicity and venom. | Renewal | Death, Water, Nature, Blood, Dark |
 | Potent | Base | Uncommon | Abstract, Power, Amplification, Energy | The essence of raw power and intensity. | An ethereal essence orb representing Potent. Visual style: Uncommon magic, glowing with Abstract, Power, Amplification, Energy energy. The essence of raw power and intensity. | Balance | Fire, Earth, Might, Sun, Dragon |
 | Renewal | Base | Uncommon | Recovery, Life, Healing | The essence of rebirth and healing. | An ethereal essence orb representing Renewal. Visual style: Uncommon magic, glowing with Recovery, Life, Healing energy. The essence of rebirth and healing. | Death | Life, Water, Fire, Wing, Light |
+| Rot | Base | Rare | Biological, Decay, Death, Entropy | The essence of advanced decomposition. | An ethereal essence orb representing Rot. Visual style: Rare magic, glowing with Biological, Decay, Death, Entropy energy. The essence of advanced decomposition. | Renewal | Fungus, Death, Poison, Earth |
 | Sand | Base | Common | Elemental, Solid, Flow, Desiccation | The essence of erosion and granules. | An ethereal essence orb representing Sand. Visual style: Common magic, glowing with Elemental, Solid, Flow, Desiccation energy. The essence of erosion and granules. | Water | Earth, Wind, Time, Heat |
 | Shield | Base | Common | Physical, Armor, Defense, Protection | The essence of defense and blocking. | An ethereal essence orb representing Shield. Visual style: Common magic, glowing with Physical, Armor, Defense, Protection energy. The essence of defense and blocking. | Sword | Iron, Earth, Armor, Life |
 | Sin | Base | Legendary | Abstract, Concept, Corruption, Judgment | The essence of transgression. | An ethereal essence orb representing Sin. Visual style: Legendary magic, glowing with Abstract, Concept, Corruption, Judgment energy. The essence of transgression. | Balance | Dark, Blood, Doom, Fire, Potent |
 | Sound | Base | Common | Physical, Vibration, Wave | The essence of sound and vibration. | An ethereal essence orb representing Sound. Visual style: Common magic, glowing with Physical, Vibration, Wave energy. The essence of sound and vibration. | Silence | Air, Wind, Void, Thunder |
+| Spirit | Base | Rare | Abstract, Soul, Will, Consciousness | The essence of the soul and willpower. | An ethereal essence orb representing Spirit. Visual style: Rare magic, glowing with Abstract, Soul, Will, Consciousness energy. The essence of the soul and willpower. | Flesh | Mind, Light, Life, Mana |
 | Steam | Base | Uncommon | Elemental, Gas, Heat, Pressure | The essence of heated vapor. | An ethereal essence orb representing Steam. Visual style: Uncommon magic, glowing with Elemental, Gas, Heat, Pressure energy. The essence of heated vapor. | Ice | Water, Fire, Air, Technology, Cloud |
 | Sun | Base | Epic | Celestial, Light, Heat, Star | The essence of the sun. | An ethereal essence orb representing Sun. Visual style: Epic magic, glowing with Celestial, Light, Heat, Star energy. The essence of the sun. | Moon | Light, Fire, Dragon, Potent, Life |
 | Swift | Base | Common | Physical, Speed, Velocity, Reaction | The essence of speed. | An ethereal essence orb representing Swift. Visual style: Common magic, glowing with Physical, Speed, Velocity, Reaction energy. The essence of speed. | Iron | Might, Wind, Lightning, Directed, Wing |
@@ -100,6 +104,7 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 | Stone of the Blast | Ranged Attack | Projects a bolt/beam of Essence. | A Common Awakening Stone named Stone of the Blast, inscribed with runes of Ranged Attack. Projects a bolt/beam of Essence. Glowing magical artifact. | Common | Low | Mana |
 | Stone of the Blink | Mobility | Instantly teleports the user a short distance. | A Rare Awakening Stone named Stone of the Blink, inscribed with runes of Mobility. Instantly teleports the user a short distance. Glowing magical artifact. | Rare | Medium | Mana |
 | Stone of the Breath | Area Attack | Exhales a cone of Essence. | A Uncommon Awakening Stone named Stone of the Breath, inscribed with runes of Area Attack. Exhales a cone of Essence. Glowing magical artifact. | Uncommon | Medium | Mana |
+| Stone of the Decay | Debuff | Withers the target, reducing their strength and speed. | A Uncommon Awakening Stone named Stone of the Decay. Glowing magical artifact. | Uncommon | Medium | Mana |
 | Stone of the Echo | Replication | Repeats previous action or creates decoy. | A Rare Awakening Stone named Stone of the Echo, inscribed with runes of Replication. Repeats previous action or creates decoy. Glowing magical artifact. | Rare | Medium | Mana |
 | Stone of the Familiar | Summoning | Spawns an AI minion based on Essence. | A Rare Awakening Stone named Stone of the Familiar, inscribed with runes of Summoning. Spawns an AI minion based on Essence. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Feast | Drain/Sustain | Drains enemy resource to refill user. | A Rare Awakening Stone named Stone of the Feast, inscribed with runes of Drain/Sustain. Drains enemy resource to refill user. Glowing magical artifact. | Rare | High | Health |
@@ -107,12 +112,17 @@ Abilities are awakened by combining an **Essence** with an **Awakening Stone**.
 | Stone of the Foot | Mobility | Enhances movement or adds teleportation. | A Common Awakening Stone named Stone of the Foot, inscribed with runes of Mobility. Enhances movement or adds teleportation. Glowing magical artifact. | Common | Low | Stamina |
 | Stone of the Leap | Mobility | Allows the user to jump great distances. | A Common Awakening Stone named Stone of the Leap, inscribed with runes of Mobility. Allows the user to jump great distances. Glowing magical artifact. | Common | Low | Stamina |
 | Stone of the Lens | Perception | Allows the user to sense Essence and hidden things. | A Rare Awakening Stone named Stone of the Lens, inscribed with runes of Perception. Allows the user to sense Essence and hidden things. Glowing magical artifact. | Rare | None | Stamina |
+| Stone of the Might | Buff | Empowers the user with raw strength and endurance. | A Common Awakening Stone named Stone of the Might. Glowing magical artifact. | Common | High | Stamina |
+| Stone of the Mirror | Replication | Reflects a portion of incoming damage back to the attacker. | A Rare Awakening Stone named Stone of the Mirror. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Nova | Area Attack | Explodes with Essence energy in all directions. | A Rare Awakening Stone named Stone of the Nova, inscribed with runes of Area Attack. Explodes with Essence energy in all directions. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Phantom | Evasion | Grants temporary intangibility or invisibility. | A Rare Awakening Stone named Stone of the Phantom, inscribed with runes of Evasion. Grants temporary intangibility or invisibility. Glowing magical artifact. | Rare | High | Mana |
+| Stone of the Prism | Multi-Hit | Refracts magical energy into multiple beams. | A Rare Awakening Stone named Stone of the Prism. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Prison | Terrain Control | Encases the enemy in a structure of Essence. | A Rare Awakening Stone named Stone of the Prison, inscribed with runes of Terrain Control. Encases the enemy in a structure of Essence. Glowing magical artifact. | Rare | High | Mana |
 | Stone of the Roar | Control | Emits a terrifying sound that stuns or fears enemies. | A Uncommon Awakening Stone named Stone of the Roar, inscribed with runes of Control. Emits a terrifying sound that stuns or fears enemies. Glowing magical artifact. | Uncommon | Medium | Stamina |
+| Stone of the Shatter | Area Attack | Shatters the ground or air, causing widespread damage. | A Common Awakening Stone named Stone of the Shatter. Glowing magical artifact. | Common | Medium | Stamina |
 | Stone of the Shell | Defense | Summons a hardened carapace around the user. | A Uncommon Awakening Stone named Stone of the Shell, inscribed with runes of Defense. Summons a hardened carapace around the user. Glowing magical artifact. | Uncommon | Medium | Mana |
 | Stone of the Shield | Defense | Creates a barrier or armor buff. | A Common Awakening Stone named Stone of the Shield, inscribed with runes of Defense. Creates a barrier or armor buff. Glowing magical artifact. | Common | Medium | Mana |
+| Stone of the Spore | Area Denial | Releases a cloud of choking spores. | A Uncommon Awakening Stone named Stone of the Spore. Glowing magical artifact. | Uncommon | Medium | Stamina |
 | Stone of the Stars | Celestial/Augment | Adds light/cosmic properties or massive buff. | A Epic Awakening Stone named Stone of the Stars, inscribed with runes of Celestial/Augment. Adds light/cosmic properties or massive buff. Glowing magical artifact. | Epic | High | Mana |
 | Stone of the Strike | Melee Attack | Imbues physical strike with Essence element. | A Common Awakening Stone named Stone of the Strike, inscribed with runes of Melee Attack. Imbues physical strike with Essence element. Glowing magical artifact. | Common | Low | Stamina |
 | Stone of the Swarm | Multi-Hit | Splits effect into multiple small projectiles. | A Uncommon Awakening Stone named Stone of the Swarm, inscribed with runes of Multi-Hit. Splits effect into multiple small projectiles. Glowing magical artifact. | Uncommon | Medium | Mana |
@@ -132,13 +142,21 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Area Denial | `Field of {essence}` | Covers an area in {essence}, damaging or hindering enemies within. | None | **Mage**, Support, Guardian, General |
 | Body Mod | `{essence} Form` | Transforms the body into {essence}, altering physiology. | None | Warrior, Guardian, Mage, General |
 | Body Mod | `{essence} Eyes` | Mutates the eyes to see {essence} spectrums. | Perception, Light, Dark, Vision | **Rogue**, Support, General |
+| Buff | `{essence} Strength` | Infuses muscles with {essence} to increase power. | None | **Warrior**, Guardian, General |
+| Buff | `{essence} Focus` | Sharpens the mind with {essence} to improve concentration. | Mind, Light | **Mage**, Rogue, General |
 | Celestial/Augment | `Avatar of {essence}` | Channels {essence} to vastly increase attributes. | None | Warrior, Mage, General |
 | Celestial/Augment | `{essence} Blessing` | Grants a holy blessing of {essence} to allies. | Light, Life, Holy, Recovery | **Support**, Guardian, General |
+| Control | `Roar of {essence}` | Unleashes a terrifying roar of {essence} to stun or fear enemies. | Sound, Fear, Mind | **Warrior**, **Guardian**, General |
+| Control | `{essence} Command` | Uses the authority of {essence} to force obedience. | None | **Mage**, **Support**, General |
+| Debuff | `Touch of {essence}` | Infects the target with {essence}, weakening them. | None | **Mage**, **Rogue**, General |
+| Debuff | `{essence} Rot` | Causes the target's gear or flesh to decay with {essence}. | Decay, Time, Acid | **Mage**, Support, General |
 | Defense | `{essence} Shield` | Creates a barrier of {essence} to block attacks. | None | **Guardian**, Mage, **Support**, General |
 | Defense | `{essence} Skin` | Coats the user's skin in {essence}, increasing durability. | Physical, Biological, Earth, Metal | **Warrior**, **Guardian**, General |
 | Defense | `{essence} Aura` | Radiates a protective aura of {essence}. | Energy, Light, Dark, Holy | **Support**, Mage, Guardian, General |
 | Drain/Sustain | `{essence} Drain` | Saps energy from the target to fuel {essence}. | None | **Mage**, Rogue, General |
 | Drain/Sustain | `Feast of {essence}` | Consumes the target's vitality to restore health. | Blood, Life, Dark, Biological | Warrior, Guardian, Mage, General |
+| Evasion | `{essence} Blur` | Distorts the air with {essence} to avoid attacks. | None | **Rogue**, Mage, General |
+| Evasion | `Mist of {essence}` | Dissolves into a mist of {essence} to evade harm. | Gas, Liquid, Air | **Mage**, **Rogue**, General |
 | Execute | `{essence} Execution` | Delivers a fatal blow using the power of {essence}. | None | **Rogue**, **Warrior**, General |
 | Execute | `{essence} Guillotine` | A merciless strike of {essence} intended to sever. | Physical, Metal, Wind | **Warrior**, **Rogue**, General |
 | Melee Attack | `{essence} Strike` | Delivers a powerful physical blow infused with {essence}. | None | **Warrior**, Rogue, Guardian, General |
@@ -156,6 +174,8 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Ranged Attack | `{essence} Shot` | A precise shot imbued with {essence}. | Physical, Weapon | **Rogue**, Warrior, General |
 | Replication | `{essence} Clone` | Creates a copy of the user made of {essence}. | None | **Rogue**, **Mage**, General |
 | Replication | `{essence} Echo` | Repeats the last action with an echo of {essence}. | None | **Mage**, Support, General |
+| Stability | `{essence} Stance` | Adopts a stance grounded by {essence} to resist movement. | None | **Warrior**, **Guardian**, General |
+| Stability | `{essence} Root` | Roots the user to the ground with {essence}. | Earth, Nature, Plant | **Guardian**, Mage, General |
 | Summoning | `Summon {essence} Spirit` | Calls forth a spirit composed of {essence}. | None | **Mage**, Support, General |
 | Summoning | `{essence} Golem` | Constructs a golem from {essence} to fight for you. | Earth, Metal, Ice, Solid | **Mage**, Guardian, General |
 | Terrain Control | `Wall of {essence}` | Raises a solid wall of {essence}. | None | **Guardian**, **Mage**, Support, General |
@@ -175,6 +195,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Bronze Drake | Dragonkin | A Dragonkin known as Bronze Drake. | A dangerous Dragonkin creature known as Bronze Drake. High fantasy art style, detailed creature design. | 250/220/200/280 | 500 | Fire, Dragon, Stone of the Breath |
 | Celestial Fiend | Demon | A Demon known as Celestial Fiend. | A dangerous Demon creature known as Celestial Fiend. High fantasy art style, detailed creature design. | 58/66/55/77 | 41 | Knowledge |
 | Celestial Lich | Undead | A Undead known as Celestial Lich. | A dangerous Undead creature known as Celestial Lich. High fantasy art style, detailed creature design. | 475/470/436/435 | 509 | Stone of the Feast, Chaos, Time |
+| Chaos Elemental | Elemental | A Elemental known as Chaos Elemental formed from pure entropy. | A dangerous Elemental creature known as Chaos Elemental. A shifting mass of colors and shapes. | 300/300/300/300 | 400 | Chaos, Stone of the Blast, Stone of the Blink |
 | Chaotic Hawk | Beast | A Beast known as Chaotic Hawk. | A dangerous Beast creature known as Chaotic Hawk. High fantasy art style, detailed creature design. | 370/332/337/384 | 390 | Stone of the Feast, Wind |
 | Chaotic Pegasus | Magical Beast | A Magical Beast known as Chaotic Pegasus. | A dangerous Magical Beast creature known as Chaotic Pegasus. High fantasy art style, detailed creature design. | 443/454/456/455 | 508 | Stone of the Blast, Poison, Directed |
 | Clockwork Sentinel | Construct | A Construct known as Clockwork Sentinel that guards ancient vaults. | A dangerous Construct creature known as Clockwork Sentinel. A brass automaton with ticking gears visible in its chest. | 210/110/130/250 | 230 | Time, Iron, Stone of the Shield |
@@ -183,6 +204,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Corrupted Wraith | Undead | A Undead known as Corrupted Wraith. | A dangerous Undead creature known as Corrupted Wraith. High fantasy art style, detailed creature design. | 80/43/34/38 | 35 | Poison |
 | Crystal Gargoyle | Construct | A Construct known as Crystal Gargoyle. | A dangerous Construct creature known as Crystal Gargoyle. High fantasy art style, detailed creature design. | 461/477/478/451 | 514 | Stone of the Wall, Stone of the Swarm, Stone of the Trap |
 | Crystal Golem | Construct | A Construct known as Crystal Golem made of shimmering ice crystals. | A dangerous Construct creature known as Crystal Golem. High fantasy art style, detailed creature design. | 200/60/150/100 | 200 | Ice, Earth, Stone of the Shield |
+| Crystal Scorpion | Beast | A Beast known as Crystal Scorpion whose sting turns flesh to glass. | A dangerous Beast creature known as Crystal Scorpion. A giant scorpion with a carapace of jagged crystal. | 240/180/100/220 | 250 | Crystal, Stone of the Shatter |
 | Crystal Spider | Beast | A Beast known as Crystal Spider with a carapace of sharp gems. | A dangerous Beast creature known as Crystal Spider. High fantasy art style, detailed creature design. | 150/220/180/160 | 180 | Crystal, Poison, Stone of the Trap |
 | Crystal Wyrm | Dragonkin | A Dragonkin known as Crystal Wyrm. | A dangerous Dragonkin creature known as Crystal Wyrm. High fantasy art style, detailed creature design. | 212/256/214/250 | 261 | Doom, Technology |
 | Cursed Snake | Beast | A Beast known as Cursed Snake. | A dangerous Beast creature known as Cursed Snake. High fantasy art style, detailed creature design. | 180/186/171/188 | 160 | Armor |
@@ -194,6 +216,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Ghostly Griffin | Magical Beast | A Magical Beast known as Ghostly Griffin. | A dangerous Magical Beast creature known as Ghostly Griffin. High fantasy art style, detailed creature design. | 153/175/161/128 | 149 | Swift |
 | Ghostly Rat | Beast | A Beast known as Ghostly Rat. | A dangerous Beast creature known as Ghostly Rat. High fantasy art style, detailed creature design. | 75/34/70/91 | 43 | Stone of the Flesh |
 | Giant Rat | Beast | A Beast known as Giant Rat. | A dangerous Beast creature known as Giant Rat. High fantasy art style, detailed creature design. | 20/30/5/15 | 10 | Stone of the Strike |
+| Glass Serpent | Construct | A Construct known as Glass Serpent that refracts light to hide itself. | A dangerous Construct creature known as Glass Serpent. A snake made of transparent glass segments. | 220/250/150/100 | 240 | Glass, Stone of the Prism |
 | Gloomstalker Bear | Beast | A massive ursine predator that absorbs light. It is a favored target for elite Hawksley hunters due to its cunning. | A giant bear with fur like shadows, glowing purple eyes, in a dark forest. | 300/200/150/400 | 450 | Dark, Stone of the Phantom |
 | Inferno Demon | Demon | A Demon known as Inferno Demon wrapped in hellfire. | A dangerous Demon creature known as Inferno Demon. High fantasy art style, detailed creature design. | 350/280/300/320 | 400 | Fire, Sin, Stone of the Nova |
 | Iron Wolf | Magical Beast | A Magical Beast known as Iron Wolf. | A dangerous Magical Beast creature known as Iron Wolf. High fantasy art style, detailed creature design. | 120/140/80/110 | 100 | Swift, Stone of the Reflex |
@@ -201,6 +224,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Mechanical Knight | Humanoid | A Humanoid known as Mechanical Knight. | A dangerous Humanoid creature known as Mechanical Knight. High fantasy art style, detailed creature design. | 182/150/131/161 | 150 | Moon |
 | Mechanical Phoenix | Magical Beast | A Magical Beast known as Mechanical Phoenix. | A dangerous Magical Beast creature known as Mechanical Phoenix. High fantasy art style, detailed creature design. | 245/263/225/214 | 262 | Stone of the Trap, Iron |
 | Mechanical Wyrm | Dragonkin | A Dragonkin known as Mechanical Wyrm. | A dangerous Dragonkin creature known as Mechanical Wyrm. High fantasy art style, detailed creature design. | 99/46/35/56 | 39 | Renewal |
+| Mirror Mimic | Construct | A Construct known as Mirror Mimic that copies the appearance of its foes. | A dangerous Construct creature known as Mirror Mimic. A shapeless form with a reflective surface. | 150/200/250/150 | 230 | Glass, Stone of the Mirror |
 | Mystic Scarecrow | Construct | A Construct known as Mystic Scarecrow. | A dangerous Construct creature known as Mystic Scarecrow. High fantasy art style, detailed creature design. | 289/280/232/223 | 270 | Dark, Wing |
 | Mystic Wyrm | Dragonkin | A Dragonkin known as Mystic Wyrm. | A dangerous Dragonkin creature known as Mystic Wyrm. High fantasy art style, detailed creature design. | 331/362/368/375 | 391 | Might |
 | Noble Demon | Demon | A Demon known as Noble Demon. | A dangerous Demon creature known as Noble Demon. High fantasy art style, detailed creature design. | 266/259/234/258 | 269 | Stone of the Wall, Earth |
@@ -208,16 +232,20 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Noble Imp | Demon | A Demon known as Noble Imp. | A dangerous Demon creature known as Noble Imp. High fantasy art style, detailed creature design. | 241/288/215/237 | 266 | Balance, Fire |
 | Noble Phoenix | Magical Beast | A Magical Beast known as Noble Phoenix. | A dangerous Magical Beast creature known as Noble Phoenix. High fantasy art style, detailed creature design. | 53/24/93/35 | 36 | Nature |
 | Obsidian Golem | Construct | A Construct known as Obsidian Golem made of volcanic glass. | A dangerous Construct creature known as Obsidian Golem. High fantasy art style, detailed creature design. | 220/80/100/250 | 220 | Earth, Fire, Stone of the Shield, Stone of the Wall |
+| Plague Rat | Beast | A Beast known as Plague Rat carrying deadly diseases. | A dangerous Beast creature known as Plague Rat. A large rat covered in sores and green mists. | 80/120/40/60 | 50 | Rot, Poison |
 | Rabid Automaton | Construct | A Construct known as Rabid Automaton. | A dangerous Construct creature known as Rabid Automaton. High fantasy art style, detailed creature design. | 131/140/119/161 | 143 | Moon |
 | Rabid Elemental | Elemental | A Elemental known as Rabid Elemental. | A dangerous Elemental creature known as Rabid Elemental. High fantasy art style, detailed creature design. | 343/385/368/350 | 392 | Swift, Shield |
 | Rabid Spirit | Elemental | A Elemental known as Rabid Spirit. | A dangerous Elemental creature known as Rabid Spirit. High fantasy art style, detailed creature design. | 220/258/288/262 | 270 | Stone of the Blast, Sound |
 | Razor-Tusk Boar | Beast | A boar whose tusks have calcified into organic steel. Hunting one is the standard rite of passage for Hawksley initiates. | A wild boar with metallic silver tusks, charging through underbrush. | 150/180/50/200 | 200 | Iron, Stone of the Strike |
 | Rock Golem | Construct | A Construct known as Rock Golem. | A dangerous Construct creature known as Rock Golem. High fantasy art style, detailed creature design. | 180/50/50/190 | 150 | Earth, Stone of the Shield |
+| Rotting Treant | Elemental | A Elemental known as Rotting Treant that spreads rot to everything it touches. | A dangerous Elemental creature known as Rotting Treant. A giant tree collapsing under its own decay. | 260/40/150/350 | 280 | Rot, Stone of the Decay, Nature |
 | Runed Wisp | Elemental | A Elemental known as Runed Wisp. | A dangerous Elemental creature known as Runed Wisp. High fantasy art style, detailed creature design. | 169/167/110/129 | 145 | Knowledge |
 | Savage Zombie | Undead | A Undead known as Savage Zombie. | A dangerous Undead creature known as Savage Zombie. High fantasy art style, detailed creature design. | 149/153/157/162 | 150 | Stone of the Shield |
 | Shadow Automaton | Construct | A Construct known as Shadow Automaton. | A dangerous Construct creature known as Shadow Automaton. High fantasy art style, detailed creature design. | 126/139/114/115 | 137 | Stone of the Feast |
 | Shadow Stalker | Magical Beast | A Magical Beast known as Shadow Stalker that blends into the darkness. | A dangerous Magical Beast creature known as Shadow Stalker. High fantasy art style, detailed creature design. | 100/250/120/80 | 180 | Dark, Poison, Stone of the Strike |
 | Shadow Unicorn | Magical Beast | A Magical Beast known as Shadow Unicorn. | A dangerous Magical Beast creature known as Shadow Unicorn. High fantasy art style, detailed creature design. | 374/351/338/341 | 388 | Stone of the Feast, Stone of the Flesh |
+| Spirit Guardian | Construct | A Construct known as Spirit Guardian bound to protect ancient sites. | A dangerous Construct creature known as Spirit Guardian. A suit of armor animated by a glowing blue soul. | 200/200/400/200 | 350 | Spirit, Stone of the Shield, Light |
+| Spore Walker | Elemental | A Elemental known as Spore Walker that spreads decay wherever it treads. | A dangerous Elemental creature known as Spore Walker. A humanoid figure made of mushrooms and mycelium. | 180/120/200/300 | 220 | Fungus, Stone of the Spore |
 | Storm Drake | Dragonkin | A Dragonkin known as Storm Drake, crackling with electricity. | A dangerous Dragonkin creature known as Storm Drake. High fantasy art style, detailed creature design. | 300/350/320/280 | 450 | Lightning, Wind, Dragon, Stone of the Breath |
 | Storm Fiend | Demon | A Demon known as Storm Fiend. | A dangerous Demon creature known as Storm Fiend. High fantasy art style, detailed creature design. | 135/177/132/113 | 143 | Mana |
 | Storm Spirit | Elemental | A Elemental known as Storm Spirit. | A dangerous Elemental creature known as Storm Spirit. High fantasy art style, detailed creature design. | 344/320/338/333 | 381 | Stone of the Anchor, Stone of the Foot |
@@ -225,6 +253,7 @@ When an Essence and Stone are combined, one of the following templates is chosen
 | Swift Bandit | Humanoid | A Humanoid known as Swift Bandit. | A dangerous Humanoid creature known as Swift Bandit. High fantasy art style, detailed creature design. | 89/51/50/47 | 39 | Stone of the Flesh |
 | Swift Bat | Beast | A Beast known as Swift Bat. | A dangerous Beast creature known as Swift Bat. High fantasy art style, detailed creature design. | 376/374/360/315 | 390 | Balance, Moon |
 | Void Demon | Demon | A Demon known as Void Demon. | A dangerous Demon creature known as Void Demon. High fantasy art style, detailed creature design. | 177/150/134/130 | 147 | Directed |
+| Void Jellyfish | Magical Beast | A Magical Beast known as Void Jellyfish that floats through the air, consuming mana. | A dangerous Magical Beast creature known as Void Jellyfish. A floating jellyfish made of dark energy. | 100/150/300/100 | 260 | Void, Stone of the Void |
 | Void Stalker | Magical Beast | A Magical Beast known as Void Stalker that shifts between dimensions. | A dangerous Magical Beast creature known as Void Stalker. High fantasy art style, detailed creature design. | 180/400/250/150 | 300 | Void, Dark, Dimension, Stone of the Phantom |
 | Void Weaver | Magical Beast | A Magical Beast known as Void Weaver that spins webs of pure nothingness. | A dangerous Magical Beast creature known as Void Weaver. A spider-like creature made of purple void energy. | 160/200/220/140 | 210 | Void, Stone of the Web, Stone of the Blink |
 | Void Wisp | Elemental | A Elemental known as Void Wisp that flickers in and out of existence. | A dangerous Elemental creature known as Void Wisp. High fantasy art style, detailed creature design. | 100/250/200/50 | 130 | Void, Swift, Stone of the Void, Stone of the Leap |
@@ -438,6 +467,14 @@ The Clockwork Sentinels are the eternal guardians of the Aethel's time-locked va
 Crystal Golems are semi-sentient constructs native to the Crystal Caverns. They are not built; they grow from the rock when mana density reaches a critical point. Their faceted bodies reflect magical attacks, making them highly resistant to spells. They attack by firing concentrated beams of light from their cores or by bludgeoning with their diamond-hard fists. Shattering a Crystal Golem yields valuable mana crystals, making them a prime target for miners despite the danger.
 > **Visual Prompt**: A large golem made of jagged crystals, glowing core, lumbering forward.
 
+#### Crystal Scorpion
+Crystal Scorpions are terrifying predators of the Crystal Caverns. Their carapace is made of diamond-hard crystal that refracts light, making them difficult to target with spells. Their stinger delivers a unique venom that doesn't kill, but crystallizes the victim's blood, slowly turning them into a statue. These statues are then harvested by the scorpion's young for food.
+> **Visual Prompt**: A giant scorpion made of jagged purple crystals, glowing stinger.
+
+#### Glass Serpent
+Glass Serpents are native to the Mirror Plains, evolving to blend in with the shimmering landscape. Their bodies are composed of living glass segments held together by a strong magnetic field. They hunt by coiling around their prey and constricting, their sharp scales slicing through armor with ease. Some theorize they are not natural beasts, but constructs left behind by an ancient glass-shaper.
+> **Visual Prompt**: A snake made of clear glass segments, background of reflective salt flats.
+
 #### Iron Wolf
 Iron Wolves are a mutated species of canine native to the metallic mountains of the north. Over generations of consuming ore-rich prey and water, their fur has incorporated trace metals, granting them a coat that acts as natural chainmail. Their claws are razor-sharp and can shear through standard leather armor. They hunt in coordinated packs, using complex flanking tactics. An Alpha Iron Wolf can grow to the size of a horse and is a formidable opponent even for a seasoned knight.
 > **Visual Prompt**: A wolf with metallic grey fur, glowing yellow eyes, snowy background.
@@ -453,6 +490,10 @@ Mana Moths are small, harmless insects that are naturally attracted to high conc
 #### Mechanical Knight
 Mechanical Knights are ancient automatons left behind by the Aethel civilization. Powered by eternal mana cores, they still patrol the ruins of their creators, following orders given thousands of years ago. They are armed with high-frequency vibration blades and integrated energy shields. Unlike modern golems, they possess combat algorithms that allow them to adapt to an enemy's fighting style. Defeating one is a test of skill, often yielding ancient technology as a reward.
 > **Visual Prompt**: A clockwork knight in rusted armor, gears visible, glowing blue eye slit.
+
+#### Mirror Mimic
+Mirror Mimics are insidious constructs found in ruins where high-level illusion magic has leaked. They appear as pools of mercury or polished metal until a victim approaches. Then, they rise up, assuming the shape and abilities of their target. While they cannot copy complex spells, their physical mimicry is perfect. The only way to tell the original from the mimic is that the mimic's reflection is always inverted.
+> **Visual Prompt**: A silver, liquid metal humanoid reflecting the viewer, featureless face.
 
 #### Monsters
 Monsters are not natural evolutionary distinct species, but rather corruptions of existing life forms caused by exposure to chaotic mana or the influence of the Void. They are ranked by the System similarly to Awakened individuals (Iron, Bronze, Silver, etc.), a classification based on their mana density and threat level. Monsters possess 'Cores'—crystallized organs that store their magical power. These Cores are highly conducting and are the primary power source for modern magitech. Unlike animals, monsters are often driven by an unnatural aggression and a hunger for Essence, leading them to attack settlements and consume weaker magical beings.
@@ -478,6 +519,10 @@ Shadow Stalkers are apex predators that have adapted to the thinning veil of the
 Sky Whales are colossal, peaceful beasts that drift through the upper atmosphere, feeding on cloud-mana. They are rarely seen from the ground, but airship travelers sometimes report hearing their mournful, resonant songs vibrating through the hull. Their bodies are buoyant due to naturally occurring anti-gravity organs, which are highly sought after by the Arcane Assembly for airship construction.
 > **Visual Prompt**: Giant whale with four wings flying in the clouds, tiny airship for scale, sunset.
 
+#### Spore Walker
+Spore Walkers are mobile fungal colonies that have achieved a hive-mind intelligence. They roam damp, dark places like the Fungal Depths, spreading their spores to convert all organic matter into more fungus. A Spore Walker's touch can accelerate decay instantly, rotting wood and flesh in seconds. They are immune to pain and fear, making them relentless pursuers.
+> **Visual Prompt**: A humanoid shape made of mushrooms and moss, releasing green spore clouds.
+
 #### Treant Shepherds
 Treant Shepherds, or 'Tree-Herders', are ancient, sentient plant-beings that inhabit the deepest groves of the Whispering Woods. Standing over thirty feet tall, they look like walking trees. They are the guardians of the forest, slow to anger but terrifying when roused. They view themselves as shepherds of the trees, protecting them from industrial expansion. They speak in a slow, rumbling language that can take hours to say 'hello'. In times of great war, they have been known to march on fortresses, tearing down stone walls like paper.
 > **Visual Prompt**: A giant tree with a face and limbs, walking through a forest, mossy and ancient.
@@ -485,6 +530,10 @@ Treant Shepherds, or 'Tree-Herders', are ancient, sentient plant-beings that inh
 #### Void Demon
 Void Demons are abominations that have crossed over from the Void Rift. Their forms are inconsistent—shifting masses of tentacles, eyes, and teeth that seem to reject the laws of physics. Their very presence corrupts the area around them, causing plants to wither and stone to crack. They attack not just the body, but the mind, projecting waves of psychic dread. Killing a Void Demon requires destroying every piece of it, as even a severed limb can continue to attack.
 > **Visual Prompt**: A shifting mass of tentacles and eyes, purple and black void energy.
+
+#### Void Jellyfish
+Void Jellyfish are airborne horrors that drift on mana currents. They originate from the Void Rift, resembling their aquatic counterparts but composed of dark energy and starlight. Their tentacles trail for meters, invisible to the naked eye, and drain the mana of anything they touch. Swarms of them can leave an entire region magically barren for weeks.
+> **Visual Prompt**: Floating jellyfish in the sky, dark purple bodies, long glowing tentacles.
 
 #### Void Weaver
 Void Weavers are terrifying predators that dwell near the edges of the Void Rift. Resembling giant arachnids composed of shifting shadows and purple light, they do not spin silk, but rather threads of concentrated Void essence. These webs do not just trap prey; they slowly erase them from existence. A Void Weaver can blink in and out of reality, making them incredibly difficult to target. Their fangs inject a venom that destabilizes the victim's mana, causing their own spells to backfire.
@@ -567,6 +616,10 @@ Clan Hawksley is an ancient noble family of monster hunters who view beast slayi
 #### College of Silver Strings
 The College of Silver Strings is a guild of bards who have discovered that specific musical frequencies can resonate with the System. They use music to buff allies or sow confusion in enemies. They are headquartered in a magically acoustic amphitheater in the hills east of Greenstone. Their 'Spellsingers' can literally sing a man to death or heal wounds with a lullaby, making them powerful support units in any party.
 > **Visual Prompt**: Bards playing glowing instruments in a stone amphitheater, magical sound waves visible.
+
+#### Order of the Cleansing Flame
+The Order of the Cleansing Flame is a radical sect that broke away from the Church of the Light. They believe that corruption (Void, Rot, and Undead) cannot be healed, only burned. They wield Fire and Light essences with fanatical zeal, often causing collateral damage in their pursuit of 'purity'. Their inquisitors wear red robes and silver masks, and they view any tolerance of dark magic as heresy. They are often at odds with the more moderate factions, who view them as dangerous zealots.
+> **Visual Prompt**: Fanatics in red robes burning a pile of corrupted artifacts, fire magic, silver masks.
 
 #### The Adventurer's Guild
 The Adventurer's Guild has evolved from a loose coalition of mercenaries into a global institution. They assign ranks (Iron to Diamond), distribute quests, and buy monster parts. They are the de facto law in the borderlands. Their motto, 'Ad Astra Per Aspera' (To the Stars Through Difficulties), reflects the belief that humanity's destiny lies in mastering the System. The Guild operates independently of any national government, a point of contention with the Iron Vanguard, but their monopoly on monster hunting makes them indispensable.
@@ -768,6 +821,10 @@ The Black Mountain, also known as Mount Cinder, is a solitary, massive volcano l
 To the far north, beyond the Razor Peaks, lies the Frozen Wastes, a desolate expanse of eternal ice and blinding snowstorms. The temperature here is so low that standard fire magic flickers and dies instantly. It is the domain of the Ice Essence in its purest, most hostile form. Massive glaciers shift and groan like living beasts, and beneath the ice, ancient things slumber. Crystal Golems patrol the tundra, and the wind itself seems to whisper in forgotten tongues. Despite the danger, miners flock here to harvest Perma-Ice, a material essential for cooling high-grade mana engines.
 > **Visual Prompt**: An ancient illustration or text related to The Frozen Wastes (Location). Parchment style or historical scene.
 
+#### The Fungal Depths
+Beneath the Whispering Woods lies a subterranean network known as the Fungal Depths. It is a bio-luminescent wonderland of giant mushrooms, phosphorescent moss, and deadly spores. The air is thick and humid, requiring filtration masks to breathe safely. The ecosystem here is aggressive; even the plants are predatory. It is the domain of the Spore Walkers and other decay-based entities. Alchemists brave the dangers to harvest rare molds found nowhere else.
+> **Visual Prompt**: Underground cave forest of giant glowing mushrooms, green and purple lighting.
+
 #### The Glass Sanctum
 The Glass Sanctum is a spherical meditation chamber suspended by gravity magic, three hundred feet above Orizon's plaza. It is a 'Null-State' environment designed for high-level cultivation. The floor is made of perfect Titan-glass, and the room is soundproofed against the city's eternal thrum. It was here that Commodore Elara was found dead, with no signs of entry or struggle.
 > **Visual Prompt**: A floating glass sphere in the sky, minimalist interior, meditation mat, view of the city below.
@@ -780,6 +837,10 @@ The Great Barrier is a massive energy shield erected by the Iron Vanguard to con
 Below Orizon churns the Luminous Deep, an ocean so rich in raw mana that the spray creates 'Arcane Salt'. The toxicity is lethal to the unwarded. It is the source of the city's power and its greatest threat. The deep glow of the water illuminates the underbelly of the city day and night. Monstrosities from the deep occasionally breach the surface, requiring the Sentinel's intervention.
 > **Visual Prompt**: Glowing neon blue ocean, turbulent waves, magical energy mist.
 
+#### The Mirror Plains
+The Mirror Plains are a vast expanse of flat, polished salt that reflects the sky perfectly. Located to the east of the Scorched Wastes, the ground is so smooth that travelers often lose their sense of direction, unable to tell the earth from the sky. It is a place of intense light during the day, blinding the unwary. At night, it reflects the stars, making one feel as if they are walking through space. It is home to crystalline life forms and is a favored training ground for Light and Illusion mages.
+> **Visual Prompt**: A vast salt flat reflecting the sky perfectly, horizon blurred, bright and surreal.
+
 #### The Scorched Wastes
 The Scorched Wastes are a scar on the face of the world, a desert of black glass and ash. Legend says a duel between two Ascended Pyromancers incinerated the land centuries ago, burning away the very concept of moisture. The region is dotted with active volcanoes and fissures that spew liquid fire. Pockets of volatile Fire Essence spontaneously combust, creating firestorms that can strip flesh from bone in seconds. Only the hardiest creatures, like the Magma Crabs and Salamanders, survive here. It is a place of death, yet Fire Mages flock here to train in the intense heat.
 > **Visual Prompt**: Red and black desert landscape, heat waves, obsidian rocks, fissures glowing with lava.
@@ -788,9 +849,17 @@ The Scorched Wastes are a scar on the face of the world, a desert of black glass
 The Shadowfen is a treacherous, sprawling swamp where the sun never fully penetrates the thick canopy of twisted cypress trees. The water is black and oily, thick with Decay Essence. The air hangs heavy with the scent of rot and old magic. It is a place where the veil between the material world and the Shadow Plane is thin. Spirits and undead often wander the mists. The fauna has adapted to be ambush predators, utilizing poison and stealth. Navigating the fen requires a guide, as the paths seem to shift when one isn't looking.
 > **Visual Prompt**: Dark swamp, twisted roots, purple fog, eerie green lights, dangerous atmosphere.
 
+#### The Shifting Expanse
+The Shifting Expanse is a region of chaotic instability located in the western badlands. Here, the laws of physics are suggestions. The terrain reshapes itself daily: a mountain might be a lake by noon, and a forest by dusk. Gravity fluctuates, and weather fronts move backwards. It is the domain of Chaos Essence. Only the most adaptable adventurers dare to traverse it, as maps are useless. It is rumored that at the center lies the Eye of Chaos, a stable point of pure entropy.
+> **Visual Prompt**: A surreal landscape with floating rocks, melting clocks, and changing seasons in one frame.
+
 #### The Singing Dunes
 South of the Scorched Wastes lie the Singing Dunes, a vast desert of golden sand that hums a constant, low-frequency melody. This phenomenon is caused by the high concentration of Sound and Sand Essences. The dunes shift constantly, not by wind, but by the music of the earth. Travelers report hearing beautiful symphonies that lure them off the path, leading them into the waiting maws of Sandworms. At night, the sand glows with trapped starlight, creating a breathtaking, deadly landscape.
 > **Visual Prompt**: Golden desert dunes at night, glowing sand, musical notes visually represented in the air.
+
+#### The Spirit Well
+The Spirit Well is a mystical cenote hidden deep within the Whispering Woods. The water is not water, but liquified Spirit Essence. It glows with a pale, ghostly light. Pilgrims come here to commune with their ancestors, as the veil between the living and the dead is thin. However, staying too long can cause one's soul to detach from their body, becoming a Spirit Guardian bound to the well forever.
+> **Visual Prompt**: A glowing blue pool in a forest clearing, ghostly figures rising from the water, peaceful but eerie.
 
 #### The Sunken Ruins
 The Sunken Ruins are the skeletal remains of a pre-Awakening metropolis that collapsed into a massive sinkhole during the Celestial Fall. Now submerged beneath a subterranean lake, the ruins are preserved in eerie silence. Aquatic beasts, mutated by the leaking mana from ancient reactors, patrol the flooded streets. Divers and water mages explore the depths, seeking lost technology and artifacts from the 'Golden Age' of humanity. The ruins still hum with residual power, and automated defense systems often activate when intruders approach the deeper vaults.
