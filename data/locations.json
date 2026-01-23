@@ -64,7 +64,9 @@
                 "type": "Shop",
                 "image_prompt": "Cluttered alchemy shop, crooked shelves, colorful potions."
             }
-        ]
+        ],
+        "x": 500,
+        "y": 500
     },
     {
         "name": "The Whispering Woods",
@@ -102,7 +104,9 @@
                 "type": "Area",
                 "image_prompt": "Dark forest clearing, spooky, shadows, twilight, mysterious"
             }
-        ]
+        ],
+        "x": 650,
+        "y": 450
     },
     {
         "name": "Crystal Caverns",
@@ -140,7 +144,9 @@
                 "type": "Landmark",
                 "image_prompt": "Deep pit in cave, darkness below, edge of cliff, danger"
             }
-        ]
+        ],
+        "x": 400,
+        "y": 550
     },
     {
         "name": "Ironhold",
@@ -182,7 +188,9 @@
                 "type": "Area",
                 "image_prompt": "Castle walls, snow, mountains view, guard patrol"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 150
     },
     {
         "name": "The Sunken Ruins",
@@ -219,7 +227,9 @@
                 "type": "Landmark",
                 "image_prompt": "Magical bubble underwater, dry inside, campfire, adventurers resting"
             }
-        ]
+        ],
+        "x": 400,
+        "y": 650
     },
     {
         "name": "The Scorched Wastes",
@@ -257,7 +267,9 @@
                 "type": "Landmark",
                 "image_prompt": "Ground vents, fire, smoke, lava, hellish landscape"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 800
     },
     {
         "name": "The Shadowfen",
@@ -295,7 +307,9 @@
                 "type": "Landmark",
                 "image_prompt": "Green glowing swamp water, toxic, eerie mist"
             }
-        ]
+        ],
+        "x": 800,
+        "y": 500
     },
     {
         "name": "Highland Watch",
@@ -332,7 +346,9 @@
                 "type": "Landmark",
                 "image_prompt": "Huge wood pile, unlit bonfire, mountaintop"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 50
     },
     {
         "name": "The Ancient Spire",
@@ -370,7 +386,9 @@
                 "type": "Area",
                 "image_prompt": "Spiral stairs, interior tower, floating steps, magical void"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 900
     },
     {
         "name": "Void Rift",
@@ -407,7 +425,9 @@
                 "type": "Landmark",
                 "image_prompt": "Black hole, energy swirl, destruction, cosmic horror"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 980
     },
     {
         "name": "Mistfall Village",
@@ -444,7 +464,9 @@
                 "type": "Area",
                 "image_prompt": "Floating garden beds, strange plants, mist"
             }
-        ]
+        ],
+        "x": 900,
+        "y": 550
     },
     {
         "name": "Azure Coast",
@@ -481,7 +503,9 @@
                 "type": "Building",
                 "image_prompt": "Old stone lighthouse, coast, ocean waves, sunset"
             }
-        ]
+        ],
+        "x": 200,
+        "y": 500
     },
     {
         "name": "Orizon",
@@ -528,6 +552,8 @@
                 "type": "District",
                 "image_prompt": "Sci-fi fantasy docks, glowing water, barnacles, ships"
             }
-        ]
+        ],
+        "x": 950,
+        "y": 200
     }
 ]
