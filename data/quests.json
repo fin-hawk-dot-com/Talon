@@ -59,7 +59,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Awakening'. You find yourself in a strange new world, with no memory of how you arrived."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Awakening'. You find yourself in a strange new world, with no memory of how you arrived.",
+        "location": "Greenstone City"
     },
     {
         "id": "main_monster_surge",
@@ -121,7 +122,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Monster Surge'. Unusual monster activity is threatening the region."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Monster Surge'. Unusual monster activity is threatening the region.",
+        "location": "Greenstone City"
     },
     {
         "id": "main_ancient_ruins",
@@ -183,7 +185,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Ancient Ruins'. An ancient structure has been unearthed nearby."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Ancient Ruins'. An ancient structure has been unearthed nearby.",
+        "location": "The Scorched Wastes"
     },
     {
         "id": "side_lost_cat",
@@ -218,7 +221,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Lost Cat'. Mrs. Higgins has lost her cat, Mittens."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Lost Cat'. Mrs. Higgins has lost her cat, Mittens.",
+        "location": "Greenstone City"
     },
     {
         "id": "side_herb_gathering",
@@ -253,7 +257,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'Herb Gathering'. The local alchemist needs Moonleaf."
+        "image_prompt": "Fantasy illustration depicting the quest 'Herb Gathering'. The local alchemist needs Moonleaf.",
+        "location": "Greenstone City"
     },
     {
         "id": "side_rival_duel",
@@ -304,7 +309,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Duel'. A rival adventurer has challenged you."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Duel'. A rival adventurer has challenged you.",
+        "location": "Greenstone City"
     },
     {
         "id": "side_syndicate_offer",
@@ -356,7 +362,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Syndicate's Offer'. A shady figure approaches you with a job offer from the Iron Syndicate."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Syndicate's Offer'. A shady figure approaches you with a job offer from the Iron Syndicate.",
+        "location": "Greenstone City"
     },
     {
         "id": "side_nature_wrath",
@@ -407,7 +414,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'Nature's Wrath'. The Verdant Circle needs help calming a corrupted spirit."
+        "image_prompt": "Fantasy illustration depicting the quest 'Nature's Wrath'. The Verdant Circle needs help calming a corrupted spirit.",
+        "location": "The Whispering Woods"
     },
     {
         "id": "main_secrets_deep",
@@ -454,7 +462,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'Secrets of the Deep'. Rumors of a submerged city draw you to the coast."
+        "image_prompt": "Fantasy illustration depicting the quest 'Secrets of the Deep'. Rumors of a submerged city draw you to the coast.",
+        "location": "Azure Coast"
     },
     {
         "id": "side_shadow_threat",
@@ -516,7 +525,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Shadow Threat'. The Silent Hand has marked a target.",
+        "location": "Greenstone City"
     },
     {
         "id": "main_void_call",
@@ -579,7 +589,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Void's Call'. The fabric of reality is thinning in the Scorched Wastes."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Void's Call'. The fabric of reality is thinning in the Scorched Wastes.",
+        "location": "The Ancient Spire"
     },
     {
         "id": "side_merchant_cargo",
@@ -615,7 +626,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'Merchant's Dilemma'. A shipment was lost in the Shadowfen."
+        "image_prompt": "Fantasy illustration depicting the quest 'Merchant's Dilemma'. A shipment was lost in the Shadowfen.",
+        "location": "Mistfall Village"
     },
     {
         "id": "side_frozen_silence",
@@ -651,7 +663,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Frozen Silence'. Highland Watch has stopped sending reports."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Frozen Silence'. Highland Watch has stopped sending reports.",
+        "location": "Highland Watch"
     },
     {
         "id": "side_alchemist_mistake",
@@ -714,7 +727,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy market square filled with pink mist, people laughing, chaotic but funny scene."
+        "image_prompt": "Fantasy market square filled with pink mist, people laughing, chaotic but funny scene.",
+        "location": "Greenstone City"
     },
     {
         "id": "side_echoes_past",
@@ -750,7 +764,8 @@
                 ]
             }
         },
-        "image_prompt": "Ghostly woman in a dark forest, glowing blue, standing by a large tree root."
+        "image_prompt": "Ghostly woman in a dark forest, glowing blue, standing by a large tree root.",
+        "location": "The Whispering Woods"
     },
     {
         "id": "side_culinary_chaos",
@@ -813,7 +828,8 @@
                 ]
             }
         },
-        "image_prompt": "A fat chef in a kitchen panic, holding a ladle, fire in the background."
+        "image_prompt": "A fat chef in a kitchen panic, holding a ladle, fire in the background.",
+        "location": "Greenstone City"
     },
     {
         "id": "side_glass_sanctum",
@@ -909,7 +925,8 @@
                 ]
             }
         },
-        "image_prompt": "A detective standing in a glass room floating above a neon city, rain falling, mystery noir atmosphere."
+        "image_prompt": "A detective standing in a glass room floating above a neon city, rain falling, mystery noir atmosphere.",
+        "location": "Orizon"
     },
     {
         "id": "side_silent_hum",
@@ -983,7 +1000,8 @@
                 ]
             }
         },
-        "image_prompt": "Fantasy illustration depicting the quest 'The Silent Hum'. A glowing green monolith looming over a city, with sound waves visualized."
+        "image_prompt": "Fantasy illustration depicting the quest 'The Silent Hum'. A glowing green monolith looming over a city, with sound waves visualized.",
+        "location": "Greenstone City"
     },
     {
         "id": "faction_artifact_dispute",
@@ -1035,7 +1053,8 @@
                 ]
             }
         },
-        "image_prompt": "Two wizards arguing over a glowing blue crystal in a guild hall."
+        "image_prompt": "Two wizards arguing over a glowing blue crystal in a guild hall.",
+        "location": "Greenstone City"
     },
     {
         "id": "faction_cold_commerce",
@@ -1098,7 +1117,8 @@
                 ]
             }
         },
-        "image_prompt": "A merchant in fine furs arguing with a knight in a snowy fortress."
+        "image_prompt": "A merchant in fine furs arguing with a knight in a snowy fortress.",
+        "location": "Ironhold"
     },
     {
         "id": "faction_beast_honor",
@@ -1150,6 +1170,7 @@
                 ]
             }
         },
-        "image_prompt": "A glowing white deer in a dark forest, with a hunter aiming a spear."
+        "image_prompt": "A glowing white deer in a dark forest, with a hunter aiming a spear.",
+        "location": "The Whispering Woods"
     }
 ]

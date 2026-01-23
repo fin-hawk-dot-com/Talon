@@ -104,6 +104,7 @@ class Quest:
     rewards: List[str]
     image_prompt: str = ""
     type: str = "Side"
+    location: Optional[str] = None
 
 @dataclass
 class QuestProgress:

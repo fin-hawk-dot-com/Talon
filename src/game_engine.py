@@ -1,9 +1,10 @@
 import os
 import json
+import random
 import dataclasses
 from typing import List, Optional
 
-from src.models import Character, Attribute, Essence, Ability, AwakeningStone, QuestProgress, StatusEffect, Consumable, RANK_INDICES
+from src.models import Character, Attribute, Essence, Ability, AwakeningStone, QuestProgress, StatusEffect, Consumable, RANK_INDICES, RANKS
 from src.data_loader import DataLoader, DATA_DIR
 from src.combat_system import CombatManager
 from src.quest_system import QuestManager
@@ -92,9 +93,17 @@ class GameEngine:
         if not loc: return []
 
         # Danger Rank Mapping
-        target_rank = loc.danger_rank # e.g. "Iron", "Bronze"
+        base_rank = loc.danger_rank # e.g. "Iron", "Bronze"
+        rank_idx = RANK_INDICES.get(base_rank, 0)
 
-        rank_idx = RANK_INDICES.get(target_rank, 0)
+        # 5% chance to increase difficulty (User's category + 5% user's category+1 logic applied to Location)
+        if random.random() < 0.05:
+            rank_idx += 1
+            # Clamp to max rank
+            if rank_idx >= len(RANKS):
+                rank_idx = len(RANKS) - 1
+
+        target_rank = RANKS[rank_idx]
 
         valid_monsters = []
         all_monsters = self.data_loader.get_all_monsters()
@@ -104,20 +113,31 @@ class GameEngine:
             if not m: continue
 
             # Use Character.rank property
-            m_rank = m.rank
-            m_rank_idx = RANK_INDICES.get(m_rank, 0)
-
-            # Allow monsters of same rank or one rank lower/higher?
-            if m_rank == target_rank:
-                valid_monsters.append(m)
-            elif m_rank_idx == rank_idx - 1: # Also allow slightly weaker ones
+            if m.rank == target_rank:
                 valid_monsters.append(m)
 
-        # If no monsters found for rank, fallback to all (or random subset) to avoid empty list
+        # If no monsters found for rank, fallback to base rank if we bumped it up
+        if not valid_monsters and target_rank != base_rank:
+             target_rank = base_rank
+             for m_name in all_monsters:
+                m = self.data_loader.get_monster(m_name)
+                if m and m.rank == target_rank:
+                    valid_monsters.append(m)
+
+        # Final fallback: if still empty, return all
         if not valid_monsters:
             return [self.data_loader.get_monster(m) for m in all_monsters]
 
         return valid_monsters
+
+    def get_location_details(self, location_name: str) -> dict:
+        loc = self.data_loader.get_location(location_name)
+        if not loc: return {}
+
+        return {
+            "connected_locations": loc.connected_locations,
+            "points_of_interest": [dataclasses.asdict(poi) for poi in loc.points_of_interest]
+        }
 
     def absorb_essence(self, essence_index: int, attribute: str) -> str:
         if not self.character: return "No character."

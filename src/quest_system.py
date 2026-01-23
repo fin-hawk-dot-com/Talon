@@ -6,6 +6,25 @@ class QuestManager:
     def __init__(self, data_loader: DataLoader):
         self.data_loader = data_loader
 
+    def check_for_new_quests(self, character: Character) -> List[Quest]:
+        """Returns a list of quests available at the character's current location."""
+        available = []
+        loc = character.current_location
+
+        # Check all quests
+        all_quests = self.data_loader.get_all_quests()
+
+        for q in all_quests:
+            # Check if already started or completed
+            if q.id in character.quests:
+                continue
+
+            # Check location match
+            if q.location == loc:
+                available.append(q)
+
+        return available
+
     def get_available_quests(self, character: Character) -> List[Quest]:
         # Return quests that are not started or completed
         all_quests = self.data_loader.get_all_quests()
