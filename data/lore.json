@@ -999,5 +999,26 @@
     "category": "Location",
     "text": "Beneath the Whispering Woods lies a subterranean network known as the Fungal Depths. It is a bio-luminescent wonderland of giant mushrooms, phosphorescent moss, and deadly spores. The air is thick and humid, requiring filtration masks to breathe safely. The ecosystem here is aggressive; even the plants are predatory. It is the domain of the Spore Walkers and other decay-based entities. Alchemists brave the dangers to harvest rare molds found nowhere else.",
     "image_prompt": "Underground cave forest of giant glowing mushrooms, green and purple lighting."
+    },
+    {
+    "id": "lore_cleansing_flame",
+    "title": "Order of the Cleansing Flame",
+    "category": "Faction",
+    "text": "The Order of the Cleansing Flame is a radical sect that broke away from the Church of the Light. They believe that corruption (Void, Rot, and Undead) cannot be healed, only burned. They wield Fire and Light essences with fanatical zeal, often causing collateral damage in their pursuit of 'purity'. Their inquisitors wear red robes and silver masks, and they view any tolerance of dark magic as heresy. They are often at odds with the more moderate factions, who view them as dangerous zealots.",
+    "image_prompt": "Fanatics in red robes burning a pile of corrupted artifacts, fire magic, silver masks."
+    },
+    {
+    "id": "lore_shifting_expanse",
+    "title": "The Shifting Expanse",
+    "category": "Location",
+    "text": "The Shifting Expanse is a region of chaotic instability located in the western badlands. Here, the laws of physics are suggestions. The terrain reshapes itself daily: a mountain might be a lake by noon, and a forest by dusk. Gravity fluctuates, and weather fronts move backwards. It is the domain of Chaos Essence. Only the most adaptable adventurers dare to traverse it, as maps are useless. It is rumored that at the center lies the Eye of Chaos, a stable point of pure entropy.",
+    "image_prompt": "A surreal landscape with floating rocks, melting clocks, and changing seasons in one frame."
+    },
+    {
+    "id": "lore_spirit_well",
+    "title": "The Spirit Well",
+    "category": "Location",
+    "text": "The Spirit Well is a mystical cenote hidden deep within the Whispering Woods. The water is not water, but liquified Spirit Essence. It glows with a pale, ghostly light. Pilgrims come here to commune with their ancestors, as the veil between the living and the dead is thin. However, staying too long can cause one's soul to detach from their body, becoming a Spirit Guardian bound to the well forever.",
+    "image_prompt": "A glowing blue pool in a forest clearing, ghostly figures rising from the water, peaceful but eerie."
     }
 ]

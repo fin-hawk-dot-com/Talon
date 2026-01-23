@@ -1003,5 +1003,45 @@
       "Dark"
     ],
     "image_prompt": "An ethereal essence orb representing Fungus. Visual style: Common magic, glowing with Biological, Decay, Growth, Spore energy."
+  },
+  {
+    "name": "Rot",
+    "type": "Base",
+    "rarity": "Rare",
+    "tags": [
+      "Biological",
+      "Decay",
+      "Death",
+      "Entropy"
+    ],
+    "description": "The essence of advanced decomposition.",
+    "opposite": "Renewal",
+    "synergy": [
+      "Fungus",
+      "Death",
+      "Poison",
+      "Earth"
+    ],
+    "image_prompt": "An ethereal essence orb representing Rot. Visual style: Rare magic, glowing with Biological, Decay, Death, Entropy energy. The essence of advanced decomposition."
+  },
+  {
+    "name": "Spirit",
+    "type": "Base",
+    "rarity": "Rare",
+    "tags": [
+      "Abstract",
+      "Soul",
+      "Will",
+      "Consciousness"
+    ],
+    "description": "The essence of the soul and willpower.",
+    "opposite": "Flesh",
+    "synergy": [
+      "Mind",
+      "Light",
+      "Life",
+      "Mana"
+    ],
+    "image_prompt": "An ethereal essence orb representing Spirit. Visual style: Rare magic, glowing with Abstract, Soul, Will, Consciousness energy. The essence of the soul and willpower."
   }
 ]
