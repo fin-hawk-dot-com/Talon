@@ -207,6 +207,7 @@ class GameApp:
         text += f"HP: {char.current_health:.0f}/{char.max_health:.0f}\n"
         text += f"MP: {char.current_mana:.0f}/{char.max_mana:.0f}\n"
         text += f"SP: {char.current_stamina:.0f}/{char.max_stamina:.0f}\n"
+        text += f"WP: {char.current_willpower:.0f}/{char.max_willpower:.0f}\n"
 
         if char.status_effects:
             text += "-"*10 + "\n"

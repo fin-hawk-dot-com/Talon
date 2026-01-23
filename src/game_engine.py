@@ -45,16 +45,19 @@ class GameEngine:
             self.character.current_health = self.character.max_health
             self.character.current_mana = self.character.max_mana
             self.character.current_stamina = self.character.max_stamina
-            msg = f"Rested at {self.character.current_location}. Health, Mana, and Stamina fully restored."
+            self.character.current_willpower = self.character.max_willpower
+            msg = f"Rested at {self.character.current_location}. Vitals fully restored."
         else:
             # Wilderness Rest - Partial restore
             h_gain = self.character.max_health * 0.5
             m_gain = self.character.max_mana * 0.5
             s_gain = self.character.max_stamina * 0.5
+            w_gain = self.character.max_willpower * 0.5
 
             self.character.current_health = min(self.character.max_health, self.character.current_health + h_gain)
             self.character.current_mana = min(self.character.max_mana, self.character.current_mana + m_gain)
             self.character.current_stamina = min(self.character.max_stamina, self.character.current_stamina + s_gain)
+            self.character.current_willpower = min(self.character.max_willpower, self.character.current_willpower + w_gain)
 
             msg = f"Camped in the wilderness ({self.character.current_location}). Recovered some vitality."
 
@@ -237,6 +240,7 @@ class GameEngine:
                 current_health=data.get('current_health', -1),
                 current_mana=data.get('current_mana', -1),
                 current_stamina=data.get('current_stamina', -1),
+                current_willpower=data.get('current_willpower', -1),
                 xp_reward=data.get('xp_reward', 0),
                 loot_table=data.get('loot_table', []),
                 lore=data.get('lore', []),
