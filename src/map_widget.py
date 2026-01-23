@@ -14,10 +14,14 @@ class MapWidget(tk.Canvas):
         self.logical_height = 1000
         self.padding = 40
 
-        self.node_radius = 6
-        self.player_radius = 5
+        self.node_radius = 8
+        self.player_radius = 6
         self.player_img = None
         self.last_affinity = None
+
+        # View State
+        self.mode = 'world' # 'world' or 'mini'
+        self.zoom = 1.0
 
         # Cache coordinates for quick lookup: name -> (x, y)
         self.loc_coords = {}
@@ -36,21 +40,48 @@ class MapWidget(tk.Canvas):
     def on_resize(self, event):
         self.draw_map()
 
-    def transform_coords(self, lx: int, ly: int) -> Tuple[float, float]:
-        # Scale to fit canvas
-        w = self.winfo_width()
-        h = self.winfo_height()
+    def set_mode(self, mode: str):
+        if mode not in ['world', 'mini']: return
+        self.mode = mode
+        self.draw_map()
 
-        # Fallback if not yet mapped
+    def transform_coords(self, lx: int, ly: int) -> Tuple[float, float]:
+        # Dimensions
+        w = self.winfo_width()
         if w <= 1: w = int(self['width'])
+        h = self.winfo_height()
         if h <= 1: h = int(self['height'])
 
         usable_w = w - 2 * self.padding
         usable_h = h - 2 * self.padding
 
-        cx = self.padding + (lx / self.logical_width) * usable_w
-        cy = self.padding + (ly / self.logical_height) * usable_h
-        return cx, cy
+        if self.mode == 'world':
+            # Stretch to fit
+            cx = self.padding + (lx / self.logical_width) * usable_w
+            cy = self.padding + (ly / self.logical_height) * usable_h
+            return cx, cy
+
+        elif self.mode == 'mini':
+            # Center on Player
+            char = self.engine.character
+            px, py = 500, 500
+            if char and char.current_location in self.loc_coords:
+                px, py = self.loc_coords[char.current_location]
+
+            # Zoom Factor: 4x zoom compared to world view average scale
+            scale_x = usable_w / self.logical_width
+            scale_y = usable_h / self.logical_height
+            avg_base_scale = (scale_x + scale_y) / 2
+            final_scale = avg_base_scale * 4.0
+
+            center_x = w / 2
+            center_y = h / 2
+
+            cx = center_x + (lx - px) * final_scale
+            cy = center_y + (ly - py) * final_scale
+            return cx, cy
+
+        return 0, 0
 
     def draw_map(self):
         self.delete("all")
@@ -74,35 +105,73 @@ class MapWidget(tk.Canvas):
 
         # 2. Nodes
         for loc in self.locations:
-            cx, cy = self.transform_coords(getattr(loc, 'x', 500), getattr(loc, 'y', 500))
-
-            # Determine Color
-            color = "#888888" # Default
-            rank = loc.danger_rank
-
-            # Color coding by Danger Rank
-            if rank == "Iron": color = "#aaaaaa"      # Light Grey
-            elif rank == "Bronze": color = "#cd7f32"  # Bronze
-            elif rank == "Silver": color = "#c0c0c0"  # Silver
-            elif rank == "Gold": color = "#ffd700"    # Gold
-            elif rank == "Diamond": color = "#00ffff" # Cyan/Diamond
-
-            # Special override for specific Regions or Types
-            if loc.region == "Void": color = "#9400d3" # Purple
-
-            # Draw Node
-            r = self.node_radius
-            if loc.type == "City": r += 2 # Make cities slightly bigger
-
-            self.create_oval(cx - r, cy - r, cx + r, cy + r,
-                             fill=color, outline="#ffffff", width=1, tags=("node", loc.name))
-
-            # Labels for Cities or special nodes
-            if loc.type in ["City", "Village", "Outpost"]:
-                 self.create_text(cx, cy - 15, text=loc.name, fill="white", font=("Helvetica", 8))
+            self.draw_location_node(loc)
 
         # 3. Player Marker & HUD
         self.update_player()
+
+    def draw_location_node(self, loc):
+        cx, cy = self.transform_coords(getattr(loc, 'x', 500), getattr(loc, 'y', 500))
+
+        # Colors
+        colors = {
+            "Iron": "#aaaaaa",
+            "Bronze": "#cd7f32",
+            "Silver": "#c0c0c0",
+            "Gold": "#ffd700",
+            "Diamond": "#00ffff",
+            "Void": "#9400d3"
+        }
+        color = colors.get(loc.danger_rank, "#888888")
+        if loc.region == "Void": color = "#9400d3"
+
+        # Shape based on Type
+        r = self.node_radius
+
+        # Helper to create styled polygon
+        def draw_poly(points):
+            self.create_polygon(points, fill=color, outline="#ffffff", width=1, tags=("node", loc.name))
+
+        if loc.type == "City":
+            # Square
+            self.create_rectangle(cx - r, cy - r, cx + r, cy + r, fill=color, outline="#ffffff", width=1, tags=("node", loc.name))
+
+        elif loc.type in ["Village", "Outpost"]:
+            # Pentagon (House-ish)
+            points = [cx, cy - r, cx + r, cy - r*0.3, cx + r*0.6, cy + r, cx - r*0.6, cy + r, cx - r, cy - r*0.3]
+            draw_poly(points)
+
+        elif loc.type == "Dungeon":
+            # Diamond
+            points = [cx, cy - r, cx + r, cy, cx, cy + r, cx - r, cy]
+            draw_poly(points)
+
+        elif loc.type == "Wilderness":
+            # Triangle
+            points = [cx, cy - r, cx + r, cy + r, cx - r, cy + r]
+            draw_poly(points)
+
+        elif loc.type == "Dimension":
+            # Star / Spiky (4-point star)
+            r2 = r / 2
+            points = [cx, cy - r, cx + r2, cy - r2, cx + r, cy, cx + r2, cy + r2, cx, cy + r, cx - r2, cy + r2, cx - r, cy, cx - r2, cy - r2]
+            draw_poly(points)
+
+        else:
+            # Circle Default
+            self.create_oval(cx - r, cy - r, cx + r, cy + r, fill=color, outline="#ffffff", width=1, tags=("node", loc.name))
+
+        # Labels
+        # Show labels for Cities always, others only in mini mode or if selected?
+        # Let's show all labels in mini mode for clarity, and only major ones in world mode
+        show_label = False
+        if loc.type in ["City", "Village", "Outpost"]:
+            show_label = True
+        if self.mode == 'mini':
+            show_label = True
+
+        if show_label:
+             self.create_text(cx, cy - 15, text=loc.name, fill="white", font=("Helvetica", 8))
 
     def load_player_image(self):
         char = self.engine.character
@@ -123,8 +192,6 @@ class MapWidget(tk.Canvas):
         if os.path.exists(path):
             try:
                 self.player_img = tk.PhotoImage(file=path)
-                # Note: No easy resize in raw Tkinter without subsample/zoom integers
-                # We assume assets are sized correctly (e.g. 32x32)
             except Exception as e:
                 print(f"Failed to load avatar: {e}")
                 self.player_img = None
@@ -151,12 +218,10 @@ class MapWidget(tk.Canvas):
             else:
                 # Fallback: Draw a distinct marker (Target icon style)
                 r = self.player_radius
-                # Outer ring
-                self.create_oval(px - r - 3, py - r - 3, px + r + 3, py + r + 3,
-                                 outline="#ff3333", width=2, tags="player")
-                # Inner dot
-                self.create_oval(px - r, py - r, px + r, py + r,
-                                 fill="#ff3333", outline="white", width=1, tags="player")
+                # Use Cyan for high visibility
+                self.create_oval(px - r, py - r, px + r, py + r, fill="#00ffff", outline="white", width=2, tags="player")
+                # Pulse ring
+                self.create_oval(px - r*1.5, py - r*1.5, px + r*1.5, py + r*1.5, outline="#00ffff", width=1, tags="player")
 
         # Draw HUD on top
         self.draw_hud()
@@ -204,5 +269,8 @@ class MapWidget(tk.Canvas):
         draw_bar(3, char.current_willpower, char.max_willpower, "#aa33ff", "WP")
 
     def refresh(self):
-        # Triggered externally to update player position
-        self.update_player()
+        # In mini mode, player movement changes map center, so we must redraw all connections/nodes
+        if self.mode == 'mini':
+            self.draw_map()
+        else:
+            self.update_player()
