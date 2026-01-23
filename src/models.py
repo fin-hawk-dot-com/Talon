@@ -220,6 +220,7 @@ class Character:
     current_health: float = field(default=-1.0)
     current_mana: float = field(default=-1.0)
     current_stamina: float = field(default=-1.0)
+    current_willpower: float = field(default=-1.0)
     xp_reward: int = 0
     loot_table: List[str] = field(default_factory=list)
     lore: List[str] = field(default_factory=list)
@@ -243,6 +244,8 @@ class Character:
             self.current_mana = self.max_mana
         if self.current_stamina < 0:
             self.current_stamina = self.max_stamina
+        if self.current_willpower < 0:
+            self.current_willpower = self.max_willpower
 
     @property
     def max_health(self) -> float:
@@ -255,6 +258,10 @@ class Character:
     @property
     def max_stamina(self) -> float:
         return self.attributes["Recovery"].value * 10.0
+
+    @property
+    def max_willpower(self) -> float:
+        return self.attributes["Spirit"].value * 10.0
 
     @property
     def rank(self) -> str:
