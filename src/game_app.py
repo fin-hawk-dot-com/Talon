@@ -2,12 +2,14 @@ import tkinter as tk
 from tkinter import ttk, messagebox, font
 import sys
 import os
+import math
 
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.mechanics import GameEngine
 from src.models import Character
+from src.map_widget import MapWidget
 
 class GameApp:
     def __init__(self, root):
@@ -26,8 +28,78 @@ class GameApp:
         # Layout
         self.create_layout()
 
+        # Bindings
+        self.root.bind("<w>", lambda e: self.handle_movement("North"))
+        self.root.bind("<a>", lambda e: self.handle_movement("West"))
+        self.root.bind("<s>", lambda e: self.handle_movement("South"))
+        self.root.bind("<d>", lambda e: self.handle_movement("East"))
+        self.root.bind("<W>", lambda e: self.handle_movement("North"))
+        self.root.bind("<A>", lambda e: self.handle_movement("West"))
+        self.root.bind("<S>", lambda e: self.handle_movement("South"))
+        self.root.bind("<D>", lambda e: self.handle_movement("East"))
+
         # Initial Screen
         self.show_main_menu()
+
+    def handle_movement(self, direction):
+        if self.state != "HUB" or not self.engine.character:
+            return
+
+        char = self.engine.character
+        curr_loc_name = char.current_location
+        # Need to fetch object from loader
+        curr_loc = self.engine.data_loader.get_location(curr_loc_name)
+
+        if not curr_loc: return
+
+        # Target vectors
+        vectors = {
+            "North": (0, -1),
+            "South": (0, 1),
+            "West": (-1, 0),
+            "East": (1, 0)
+        }
+        target_dx, target_dy = vectors[direction]
+
+        best_neighbor = None
+        best_score = -1.0 # Cosine similarity
+
+        for neighbor_name in curr_loc.connected_locations:
+            n_loc = self.engine.data_loader.get_location(neighbor_name)
+            if not n_loc: continue
+
+            # Vector to neighbor
+            # Use getattr with defaults just in case
+            nx = getattr(n_loc, 'x', 500)
+            ny = getattr(n_loc, 'y', 500)
+            cx = getattr(curr_loc, 'x', 500)
+            cy = getattr(curr_loc, 'y', 500)
+
+            dx = nx - cx
+            dy = ny - cy
+
+            # Normalize
+            dist = math.sqrt(dx*dx + dy*dy)
+            if dist == 0: continue
+
+            ndx = dx / dist
+            ndy = dy / dist
+
+            # Dot product
+            score = ndx * target_dx + ndy * target_dy
+
+            # Threshold: Must be roughly in that direction (> 0.5 is 60 deg cone)
+            if score > 0.5 and score > best_score:
+                best_score = score
+                best_neighbor = neighbor_name
+
+        if best_neighbor:
+            # Travel
+            res = self.engine.travel(best_neighbor)
+            self.log(res, "event")
+            self.update_status_display() # Updates map too
+        else:
+            self.log(f"No path {direction}.", "info")
 
     def setup_styles(self):
         self.style = ttk.Style()
@@ -66,9 +138,17 @@ class GameApp:
         self.status_text = tk.Text(self.left_panel, wrap=tk.WORD, height=30, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
         self.status_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
-        # 3. Center Panel: Game Log / Output
-        self.center_panel = ttk.Frame(self.main_container, relief=tk.SUNKEN, borderwidth=2)
-        self.center_panel.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=5, pady=5)
+        # 3. Center Panel: Map + Game Log
+        self.center_container = ttk.Frame(self.main_container)
+        self.center_container.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=5, pady=5)
+
+        # Map (Top)
+        self.map_widget = MapWidget(self.center_container, self.engine, height=350)
+        self.map_widget.pack(fill=tk.BOTH, expand=False, pady=(0, 5))
+
+        # Log (Bottom)
+        self.center_panel = ttk.Frame(self.center_container, relief=tk.SUNKEN, borderwidth=2)
+        self.center_panel.pack(fill=tk.BOTH, expand=True)
 
         self.log_text = tk.Text(self.center_panel, wrap=tk.WORD, state=tk.DISABLED, font=('Georgia', 11), bg="#1e1e1e", fg="#cccccc")
         self.log_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
@@ -152,6 +232,9 @@ class GameApp:
         self.status_text.delete("1.0", tk.END)
         self.status_text.insert(tk.END, text)
         self.status_text.config(state=tk.DISABLED)
+
+        # Also update map
+        self.map_widget.refresh()
 
     # --- MENUS & STATES ---
 

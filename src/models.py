@@ -46,6 +46,8 @@ class Location:
     npcs: List[str] = field(default_factory=list)
     narrative: str = ""
     points_of_interest: List[PointOfInterest] = field(default_factory=list)
+    x: int = 500
+    y: int = 500
 
 @dataclass
 class LoreEntry:
