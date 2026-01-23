@@ -8,10 +8,10 @@
         "connected_locations": [
             "The Whispering Woods",
             "Crystal Caverns",
-            "Azure Coast",
-            "Ironhold",
-            "The Scorched Wastes",
-            "Orizon"
+            "Orizon",
+            "North Road",
+            "Southern Crossroads",
+            "Western Pass"
         ],
         "resources": [
             "Basic Supplies",
@@ -156,7 +156,7 @@
         "danger_rank": "Bronze",
         "connected_locations": [
             "Highland Watch",
-            "Greenstone City"
+            "North Road"
         ],
         "resources": [
             "Iron Essence",
@@ -239,7 +239,7 @@
         "danger_rank": "Silver",
         "connected_locations": [
             "The Ancient Spire",
-            "Greenstone City"
+            "Southern Crossroads"
         ],
         "resources": [
             "Fire Essence",
@@ -475,7 +475,7 @@
         "region": "Western Coast",
         "danger_rank": "Iron",
         "connected_locations": [
-            "Greenstone City"
+            "Western Pass"
         ],
         "resources": [
             "Water Essence",
@@ -555,5 +555,68 @@
         ],
         "x": 950,
         "y": 200
+    },
+    {
+        "name": "North Road",
+        "description": "A well-traveled road leading north towards the mountains. Bandits often ambush careless travelers here.",
+        "type": "Wilderness",
+        "region": "Central Plains",
+        "danger_rank": "Iron",
+        "connected_locations": [
+            "Greenstone City",
+            "Ironhold"
+        ],
+        "resources": [
+            "Stone",
+            "Wildflowers"
+        ],
+        "image_prompt_positive": "Fantasy road, mountains in distance, green plains, sunny, dirt path",
+        "image_prompt_negative": "city, dark, ocean",
+        "narrative": "The North Road is the main artery connecting the fertile plains to the mineral-rich mountains. While patrols are frequent closer to the city, the stretch near the foothills is notorious for bandit activity.",
+        "points_of_interest": [],
+        "x": 500,
+        "y": 325
+    },
+    {
+        "name": "Southern Crossroads",
+        "description": "A dusty intersection where the grass begins to fade into the scorched earth of the badlands.",
+        "type": "Wilderness",
+        "region": "Central Plains",
+        "danger_rank": "Iron",
+        "connected_locations": [
+            "Greenstone City",
+            "The Scorched Wastes"
+        ],
+        "resources": [
+            "Dry Wood",
+            "Sand"
+        ],
+        "image_prompt_positive": "Crossroads, dusty, transition from grass to desert, signpost",
+        "image_prompt_negative": "snow, forest, water",
+        "narrative": "Here, the vibrant green of the plains gives way to the unnatural grey and red of the Scorched Wastes. A weathered signpost points south to 'Heat and Ruin' and north to 'Safety'.",
+        "points_of_interest": [],
+        "x": 500,
+        "y": 650
+    },
+    {
+        "name": "Western Pass",
+        "description": "A narrow pass cutting through the hills towards the coast. The smell of salt is faint in the air.",
+        "type": "Wilderness",
+        "region": "Central Plains",
+        "danger_rank": "Iron",
+        "connected_locations": [
+            "Greenstone City",
+            "Azure Coast"
+        ],
+        "resources": [
+            "Wind Essence",
+            "Rock Salt"
+        ],
+        "image_prompt_positive": "Hills, grassy path, rocks, blue sky, clouds",
+        "image_prompt_negative": "forest, city, night",
+        "narrative": "The Western Pass winds through the limestone hills that separate the plains from the ocean. The wind here is constant and carries the distant sound of crashing waves.",
+        "points_of_interest": [],
+        "x": 350,
+        "y": 500
     }
 ]

@@ -57,7 +57,8 @@ class InteractionManager:
             return None
 
         choices = [DialogueChoice(**c) for c in node_data['choices']]
-        return DialogueNode(text=node_data['text'], choices=choices)
+        hub_text = node_data.get('hub_text')
+        return DialogueNode(text=node_data['text'], choices=choices, hub_text=hub_text)
 
     def modify_relationship(self, player: Character, npc_name: str, amount: int):
         current = player.relationships.get(npc_name, 0)

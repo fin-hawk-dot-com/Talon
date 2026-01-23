@@ -76,6 +76,7 @@ class DialogueChoice:
 class DialogueNode:
     text: str
     choices: List[DialogueChoice]
+    hub_text: Optional[str] = None
 
 @dataclass
 class QuestChoice:
