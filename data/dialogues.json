@@ -2,6 +2,7 @@
   "Rufus": {
     "root": {
       "text": "Hmph. You look fresh. The Adventure Society doesn't baby newcomers. Keep your weapon sharp and your wits sharper. What do you want?",
+      "hub_text": "What else do you need?",
       "choices": [
         {
           "text": "Who are you?",
@@ -82,6 +83,7 @@
   "Thadwick": {
     "root": {
       "text": "Hmm? Oh, pardon me! I was just calculating the etheric resonance of this location. It's quite fascinating, isn't it? The way the ley lines intersect here...",
+      "hub_text": "Any other questions?",
       "choices": [
         {
           "text": "What are you working on?",
@@ -175,6 +177,7 @@
   "Elara": {
     "root": {
       "text": "Halt. State your business with the Order of the Shield. We are currently on high alert.",
+      "hub_text": "Is there something else, citizen?",
       "choices": [
         {
           "text": "I'm an adventurer looking to help.",
@@ -277,6 +280,7 @@
   "Cassian Thorne": {
     "root": {
       "text": "Don't touch anything. I'm measuring the background mana flux. Wait... you're not from the Authority.",
+      "hub_text": "Make it quick.",
       "choices": [
         {
           "text": "Who are you?",
@@ -314,6 +318,7 @@
   "The Bell-Ringer": {
     "root": {
       "text": "I... I just ring the bell! That's all I do! The Authority gave me the schedule!",
+      "hub_text": "Please... anything else?",
       "choices": [
         {
           "text": "Calm down.",
@@ -351,6 +356,7 @@
   "Old Man Silas": {
     "root": {
       "text": "WHAT? Speak up! No, wait, don't speak! The Hum... it's too loud today. Can't you hear it? Screaming! Screaming in green!",
+      "hub_text": "What?! What else?",
       "choices": [
         {
           "text": "Who are you?",
@@ -436,6 +442,7 @@
   "Professor Vane": {
     "root": {
       "text": "Ah, a new student? Or perhaps a wanderer drawn by the city's... harmony? I am Professor Vane. Welcome to the Academy.",
+      "hub_text": "Do you require further enlightenment?",
       "choices": [
         {
           "text": "I'm looking for information on the Monolith.",
@@ -517,6 +524,7 @@
   "Trader Midas": {
     "root": {
       "text": "Welcome! Welcome! Finest goods in Ironhold! Though, supply is a bit... tight these days.",
+      "hub_text": "Looking for something else?",
       "choices": [
         {
           "text": "Why are prices so high?",
@@ -558,6 +566,7 @@
   "Huntsman Valerius": {
     "root": {
       "text": "The air smells of prey today. Are you a hunter, stranger? Or just another city-dweller?",
+      "hub_text": "What is it?",
       "choices": [
         {
           "text": "I can handle myself.",

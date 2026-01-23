@@ -37,9 +37,90 @@ class GameApp:
         self.root.bind("<A>", lambda e: self.handle_movement("West"))
         self.root.bind("<S>", lambda e: self.handle_movement("South"))
         self.root.bind("<D>", lambda e: self.handle_movement("East"))
+        self.root.bind("<e>", lambda e: self.handle_interaction())
+        self.root.bind("<E>", lambda e: self.handle_interaction())
+
+        # Dialogue State
+        self.dialogue_npc_name = None
+        self.dialogue_visited_roots = set()
 
         # Initial Screen
         self.show_main_menu()
+
+    def handle_interaction(self):
+        if self.state != "HUB" or not self.engine.character:
+            return
+
+        char = self.engine.character
+        curr_loc_name = char.current_location
+        loc = self.engine.data_loader.get_location(curr_loc_name)
+        if not loc: return
+
+        # Check for NPCs
+        if loc.npcs:
+            # For simplicity, if multiple, just pick first or show list.
+            # Showing a list in Actions panel is best.
+            if len(loc.npcs) == 1:
+                self.start_dialogue(loc.npcs[0])
+            else:
+                self.show_interaction_menu(loc.npcs, loc.points_of_interest)
+            return
+
+        # Check POIs if no NPCs
+        if loc.points_of_interest:
+             self.show_interaction_menu([], loc.points_of_interest)
+             return
+
+        self.log("Nothing to interact with here.", "info")
+
+    def show_interaction_menu(self, npcs, pois):
+        self.clear_actions()
+        self.add_action_button("<< Cancel", self.enter_hub)
+        self.log("\n--- Interact ---", "info")
+
+        for npc in npcs:
+            self.add_action_button(f"Talk to {npc}", lambda n=npc: self.start_dialogue(n))
+
+        for poi in pois:
+             # Placeholder for POI interaction
+            self.add_action_button(f"Inspect {poi.name}", lambda p=poi: self.log(f"{p.name}: {p.description}", "event"))
+
+    def start_dialogue(self, npc_name):
+        self.state = "DIALOGUE"
+        self.dialogue_npc_name = npc_name
+        self.dialogue_visited_roots = set()
+        self.log(f"\n--- Dialogue: {npc_name} ---", "event")
+        self.show_dialogue_node("root")
+
+    def show_dialogue_node(self, node_id):
+        node = self.engine.interaction_mgr.get_dialogue_node(self.dialogue_npc_name, node_id)
+        if not node:
+            self.log("Dialogue Error: Node not found.", "error")
+            self.enter_hub()
+            return
+
+        self.clear_actions()
+
+        # Determine Text (Handle Hub Logic)
+        text_to_show = node.text
+        if node_id == "root":
+            if self.dialogue_npc_name in self.dialogue_visited_roots and node.hub_text:
+                text_to_show = node.hub_text
+            self.dialogue_visited_roots.add(self.dialogue_npc_name)
+
+        # Show Text in Log
+        # Use a distinct color for dialogue
+        self.log_text.config(state=tk.NORMAL)
+        self.log_text.insert(tk.END, f"{self.dialogue_npc_name}: \"{text_to_show}\"\n", "info")
+        self.log_text.see(tk.END)
+        self.log_text.config(state=tk.DISABLED)
+
+        # Show Choices
+        for choice in node.choices:
+            if choice.next_id == "exit":
+                self.add_action_button(choice.text, self.enter_hub)
+            else:
+                self.add_action_button(choice.text, lambda nid=choice.next_id: self.show_dialogue_node(nid))
 
     def handle_movement(self, direction):
         if self.state != "HUB" or not self.engine.character:
