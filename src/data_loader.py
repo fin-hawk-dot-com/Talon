@@ -218,7 +218,9 @@ class DataLoader:
                 resources=l.get('resources', []),
                 npcs=l.get('npcs', []),
                 narrative=l.get('narrative', ""),
-                points_of_interest=pois
+                points_of_interest=pois,
+                x=l.get('x', 500),
+                y=l.get('y', 500)
             )
         return None
 
@@ -246,7 +248,9 @@ class DataLoader:
                 resources=l.get('resources', []),
                 npcs=l.get('npcs', []),
                 narrative=l.get('narrative', ""),
-                points_of_interest=pois
+                points_of_interest=pois,
+                x=l.get('x', 500),
+                y=l.get('y', 500)
             ))
         return result
 
