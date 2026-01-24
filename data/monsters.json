@@ -40,6 +40,27 @@
             "Spirit": 80,
             "Recovery": 110
         },
+        "abilities": [
+            {
+                "name": "Steel Bite",
+                "function": "Attack",
+                "description": "A powerful bite that can pierce armor.",
+                "damage_multiplier": 1.2,
+                "cost": 10,
+                "cost_type": "Stamina",
+                "cooldown": 2
+            },
+            {
+                "name": "Howl of Iron",
+                "function": "Buff",
+                "description": "Hardens the wolf's fur like iron.",
+                "effect_type": "Defense",
+                "value": 20,
+                "cost": 15,
+                "cost_type": "Mana",
+                "cooldown": 4
+            }
+        ],
         "xp_reward": 100,
         "loot_table": [
             "Swift",
@@ -57,6 +78,26 @@
             "Spirit": 50,
             "Recovery": 190
         },
+        "abilities": [
+            {
+                "name": "Boulder Throw",
+                "function": "Ranged Attack",
+                "description": "Throws a massive rock at the enemy.",
+                "damage_multiplier": 1.5,
+                "cost": 20,
+                "cost_type": "Stamina",
+                "cooldown": 3
+            },
+            {
+                "name": "Harden",
+                "function": "Defense",
+                "description": "Increases defense significantly.",
+                "value": 50,
+                "cost": 10,
+                "cost_type": "Mana",
+                "cooldown": 5
+            }
+        ],
         "xp_reward": 150,
         "loot_table": [
             "Earth",
@@ -74,6 +115,26 @@
             "Spirit": 200,
             "Recovery": 280
         },
+        "abilities": [
+            {
+                "name": "Bronze Breath",
+                "function": "Area Attack",
+                "description": "Exhales a cone of searing bronze fire.",
+                "damage_multiplier": 2.0,
+                "cost": 50,
+                "cost_type": "Mana",
+                "cooldown": 4
+            },
+            {
+                "name": "Tail Swipe",
+                "function": "Attack",
+                "description": "A sweeping tail attack.",
+                "damage_multiplier": 1.2,
+                "cost": 15,
+                "cost_type": "Stamina",
+                "cooldown": 2
+            }
+        ],
         "xp_reward": 500,
         "loot_table": [
             "Fire",

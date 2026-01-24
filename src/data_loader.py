@@ -2,7 +2,7 @@ import json
 import os
 import sys
 from typing import List, Optional, Dict, Any
-from src.models import Essence, AwakeningStone, Character, Faction, Quest, QuestStage, QuestObjective, QuestChoice, Location, LoreEntry, PointOfInterest, Consumable, DialogueNode, DialogueChoice
+from src.models import Essence, AwakeningStone, Character, Faction, Quest, QuestStage, QuestObjective, QuestChoice, Location, LoreEntry, PointOfInterest, Consumable, DialogueNode, DialogueChoice, Ability
 
 if hasattr(sys, '_MEIPASS'):
     DATA_DIR = os.path.join(sys._MEIPASS, 'data')
@@ -329,6 +329,56 @@ class DataLoader:
                         char.attributes[attr_name].value = value
             # Recalculate health
             char.current_health = char.max_health
+
+            # Load Monster Abilities
+            if 'abilities' in m:
+                # Create a dummy essence for natural abilities
+                natural_essence = Essence(
+                    name="Natural",
+                    type="Base",
+                    rarity="Common",
+                    tags=["Natural"],
+                    description="Natural capabilities of the creature."
+                )
+
+                monster_abilities = []
+
+                for ab_data in m['abilities']:
+                    # Create dummy stone
+                    stone = AwakeningStone(
+                        name="Natural Instinct",
+                        function=ab_data.get('function', "Attack"),
+                        description=ab_data.get('description', ""),
+                        rarity="Common",
+                        cost_type=ab_data.get('cost_type', "Stamina"),
+                        cooldown="Medium"
+                    )
+
+                    ability = Ability(
+                        name=ab_data['name'],
+                        description=ab_data.get('description', ""),
+                        rank=char.rank,
+                        level=5,
+                        parent_essence=natural_essence,
+                        parent_stone=stone,
+                        cost=ab_data.get('cost', 10),
+                        cooldown=ab_data.get('cooldown', 2),
+                        current_cooldown=0
+                    )
+                    # Support overriding damage multiplier via description or specialized handling in CombatManager
+                    # Ideally we would pass it to Ability, but Ability dataclass is strict.
+                    # We can monkey-patch or use a subclass, but for now we rely on CombatManager checks?
+                    # Actually, we can't easily pass 'damage_multiplier' to Ability unless we change the model.
+                    # However, CombatManager.execute_ability calculates damage based on rank/level.
+                    # If we want custom multipliers, we might need to store them in description or a custom attribute.
+                    # Let's attach it dynamically.
+                    ability.custom_damage_multiplier = ab_data.get('damage_multiplier', 1.0)
+                    ability.custom_effect_value = ab_data.get('value', 0)
+
+                    monster_abilities.append(ability)
+
+                char.abilities["Natural"] = monster_abilities
+
             return char
         return None
 
