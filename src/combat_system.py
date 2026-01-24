@@ -162,6 +162,10 @@ class CombatManager:
             elif "Area Attack" in function or "Nova" in ability.name:
                 damage_multiplier = 1.2 # Slightly weaker single target but implied AoE
 
+            # Apply Custom Damage Multiplier (Monkey-patched from DataLoader for Monsters)
+            if hasattr(ability, 'custom_damage_multiplier'):
+                damage_multiplier = ability.custom_damage_multiplier
+
             damage_multiplier *= power_mult
 
             hits_landed = 0
@@ -214,6 +218,10 @@ class CombatManager:
 
         elif "Defense" in function or "Shield" in function:
             heal_amount = user.attributes["Spirit"].value * power_mult
+
+            if hasattr(ability, 'custom_effect_value') and ability.custom_effect_value > 0:
+                heal_amount = ability.custom_effect_value * power_mult
+
             user.current_health = min(user.max_health, user.current_health + heal_amount)
             log.append(f"Used {ability.name} and restored {heal_amount:.1f} health/shield!")
 
@@ -225,6 +233,9 @@ class CombatManager:
 
         elif "Heal" in function or "Sustain" in function:
              heal_amount = user.attributes["Spirit"].value * power_mult
+
+             if hasattr(ability, 'custom_effect_value') and ability.custom_effect_value > 0:
+                heal_amount = ability.custom_effect_value * power_mult
 
              if "Drain" in function or "Sustain" in function:
                   # Deal damage then heal
@@ -386,29 +397,29 @@ class CombatManager:
 
         # 2. Enemy Turn
         if not e_stunned:
-            ai_action = "Attack"
-            if random.random() < 0.2:
-                ai_action = "Special"
+            # Check for abilities
+            valid_abilities = []
+            for essence_name, slots in enemy.abilities.items():
+                for ab in slots:
+                    if ab and ab.current_cooldown == 0:
+                         cost_ok = True
+                         if ab.parent_stone.cost_type == "Mana" and enemy.current_mana < ab.cost: cost_ok = False
+                         elif ab.parent_stone.cost_type == "Stamina" and enemy.current_stamina < ab.cost: cost_ok = False
+                         elif ab.parent_stone.cost_type == "Health" and enemy.current_health < ab.cost: cost_ok = False
 
-            if ai_action == "Special":
-                ability_names = ["Power Strike", "Shadow Blast", "Roar", "Bite"]
-                ab_name = random.choice(ability_names)
-                is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
-                dmg, is_crit, is_miss = self.calculate_damage(enemy, player, is_magical=is_magical, multiplier=1.3)
+                         if cost_ok:
+                             valid_abilities.append(ab)
 
-                if is_miss:
-                    log.append(f"{enemy.name} used {ab_name} but missed you!")
-                else:
-                    player.current_health -= dmg
-                    crit_text = " (CRITICAL!)" if is_crit else ""
-                    log.append(f"{enemy.name} used {ab_name} on you for {dmg:.1f} damage{crit_text}!")
+            action_taken = False
+            # 50% chance to use ability if available (higher for bosses?)
+            if valid_abilities and random.random() < 0.5:
+                ability = random.choice(valid_abilities)
+                ability_log = self.execute_ability(enemy, player, ability)
+                log.extend(ability_log)
+                action_taken = True
 
-                    # Enemy Special Effect Chance
-                    if random.random() < 0.3:
-                         player.status_effects.append(StatusEffect("Bleed", 3, 2.0, "DoT", "Bleeding.", source_name=enemy.name))
-                         log.append(f"{enemy.name}'s attack caused you to Bleed!")
-
-            else:
+            if not action_taken:
+                # Basic Attack
                 is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
                 dmg, is_crit, is_miss = self.calculate_damage(enemy, player, is_magical=is_magical)
                 atk_type = "magically attacked" if is_magical else "attacked"
