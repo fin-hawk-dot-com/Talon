@@ -210,6 +210,22 @@ class TrainingManager:
         return leveled_up
 
     @staticmethod
+    def can_rank_up(character: Character, ability: Ability) -> bool:
+        if ability.level < 9:
+            return False
+
+        current_rank_idx = RANK_INDICES.get(ability.rank, 0)
+        char_rank_idx = RANK_INDICES.get(character.rank, 0)
+
+        if current_rank_idx >= char_rank_idx:
+            return False
+
+        if current_rank_idx >= len(RANKS) - 1:
+            return False
+
+        return True
+
+    @staticmethod
     def attempt_rank_up_ability(character: Character, essence_name: str, slot_index: int) -> str:
         """
         Attempts to rank up an ability (e.g., Iron -> Bronze).
