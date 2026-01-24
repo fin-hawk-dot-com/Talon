@@ -128,61 +128,21 @@ class GameApp:
         if self.state != "HUB" or not self.engine.character:
             return
 
-        char = self.engine.character
-        curr_loc_name = char.current_location
-        # Need to fetch object from loader
-        curr_loc = self.engine.data_loader.get_location(curr_loc_name)
+        # Continuous movement logic
+        step_size = 20
+        dx, dy = 0, 0
+        if direction == "North": dy = -step_size
+        elif direction == "South": dy = step_size
+        elif direction == "West": dx = -step_size
+        elif direction == "East": dx = step_size
 
-        if not curr_loc: return
+        msg = self.engine.update_position(dx, dy)
+        if msg:
+            self.log(msg, "event")
+            self.update_status_display()
 
-        # Target vectors
-        vectors = {
-            "North": (0, -1),
-            "South": (0, 1),
-            "West": (-1, 0),
-            "East": (1, 0)
-        }
-        target_dx, target_dy = vectors[direction]
-
-        best_neighbor = None
-        best_score = -1.0 # Cosine similarity
-
-        for neighbor_name in curr_loc.connected_locations:
-            n_loc = self.engine.data_loader.get_location(neighbor_name)
-            if not n_loc: continue
-
-            # Vector to neighbor
-            # Use getattr with defaults just in case
-            nx = getattr(n_loc, 'x', 500)
-            ny = getattr(n_loc, 'y', 500)
-            cx = getattr(curr_loc, 'x', 500)
-            cy = getattr(curr_loc, 'y', 500)
-
-            dx = nx - cx
-            dy = ny - cy
-
-            # Normalize
-            dist = math.sqrt(dx*dx + dy*dy)
-            if dist == 0: continue
-
-            ndx = dx / dist
-            ndy = dy / dist
-
-            # Dot product
-            score = ndx * target_dx + ndy * target_dy
-
-            # Threshold: Must be roughly in that direction (> 0.5 is 60 deg cone)
-            if score > 0.5 and score > best_score:
-                best_score = score
-                best_neighbor = neighbor_name
-
-        if best_neighbor:
-            # Travel
-            res = self.engine.travel(best_neighbor)
-            self.log(res, "event")
-            self.update_status_display() # Updates map too
-        else:
-            self.log(f"No path {direction}.", "info")
+        # Always refresh map to show movement
+        self.map_widget.refresh()
 
     def toggle_map_mode(self):
         new_mode = 'mini' if self.map_widget.mode == 'world' else 'world'

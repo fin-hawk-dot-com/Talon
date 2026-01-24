@@ -1,5 +1,6 @@
 import os
 import json
+import math
 import random
 import dataclasses
 from typing import List, Optional
@@ -29,6 +30,11 @@ class GameEngine:
 
     def create_character(self, name: str, race: str):
         self.character = Character(name=name, race=race)
+        # Initialize coordinates
+        loc = self.data_loader.get_location(self.character.current_location)
+        if loc:
+            self.character.x = loc.x
+            self.character.y = loc.y
         return self.character
 
     def rest(self) -> str:
@@ -89,7 +95,33 @@ class GameEngine:
             return "Location data not found."
 
         self.character.current_location = location_name
+        self.character.x = target_loc.x
+        self.character.y = target_loc.y
         return f"Traveled to {location_name}."
+
+    def update_position(self, dx: int, dy: int) -> Optional[str]:
+        if not self.character: return None
+
+        # Calculate new position
+        new_x = max(0, min(1000, self.character.x + dx))
+        new_y = max(0, min(1000, self.character.y + dy))
+
+        self.character.x = new_x
+        self.character.y = new_y
+
+        # Check for Arrival
+        all_locs = self.data_loader.get_all_locations()
+        arrival_msg = None
+
+        for loc in all_locs:
+            dist = math.sqrt((loc.x - new_x)**2 + (loc.y - new_y)**2)
+            if dist < 20:
+                if self.character.current_location != loc.name:
+                    self.character.current_location = loc.name
+                    arrival_msg = f"Arrived at {loc.name}"
+                break
+
+        return arrival_msg
 
     def get_monsters_for_location(self, location_name: str) -> List[Character]:
         loc = self.data_loader.get_location(location_name)
@@ -347,6 +379,17 @@ class GameEngine:
             # Reconstruct Location
             if 'current_location' in data:
                 char.current_location = data['current_location']
+
+            # Reconstruct Position
+            char.x = data.get('x', -1)
+            char.y = data.get('y', -1)
+
+            # If position is invalid (legacy save), resolve from location
+            if char.x == -1 or char.y == -1:
+                loc = self.data_loader.get_location(char.current_location)
+                if loc:
+                    char.x = loc.x
+                    char.y = loc.y
 
             # Reconstruct Summons
             if 'summons' in data:

@@ -65,8 +65,11 @@ class MapWidget(tk.Canvas):
             # Center on Player
             char = self.engine.character
             px, py = 500, 500
-            if char and char.current_location in self.loc_coords:
-                px, py = self.loc_coords[char.current_location]
+            if char:
+                if char.x != -1 and char.y != -1:
+                    px, py = char.x, char.y
+                elif char.current_location in self.loc_coords:
+                    px, py = self.loc_coords[char.current_location]
 
             # Zoom Factor: 4x zoom compared to world view average scale
             scale_x = usable_w / self.logical_width
@@ -208,20 +211,27 @@ class MapWidget(tk.Canvas):
         # Load Image if needed
         self.load_player_image()
 
-        curr_name = char.current_location
-        if curr_name in self.loc_coords:
-            lx, ly = self.loc_coords[curr_name]
-            px, py = self.transform_coords(lx, ly)
+        # Use exact coordinates if available, otherwise fallback to location
+        if char.x != -1 and char.y != -1:
+             lx, ly = char.x, char.y
+        else:
+             curr_name = char.current_location
+             if curr_name in self.loc_coords:
+                 lx, ly = self.loc_coords[curr_name]
+             else:
+                 lx, ly = 500, 500 # Fallback
 
-            if self.player_img:
-                self.create_image(px, py, image=self.player_img, tags="player")
-            else:
-                # Fallback: Draw a distinct marker (Target icon style)
-                r = self.player_radius
-                # Use Cyan for high visibility
-                self.create_oval(px - r, py - r, px + r, py + r, fill="#00ffff", outline="white", width=2, tags="player")
-                # Pulse ring
-                self.create_oval(px - r*1.5, py - r*1.5, px + r*1.5, py + r*1.5, outline="#00ffff", width=1, tags="player")
+        px, py = self.transform_coords(lx, ly)
+
+        if self.player_img:
+            self.create_image(px, py, image=self.player_img, tags="player")
+        else:
+            # Fallback: Draw a distinct marker (Target icon style)
+            r = self.player_radius
+            # Use Cyan for high visibility
+            self.create_oval(px - r, py - r, px + r, py + r, fill="#00ffff", outline="white", width=2, tags="player")
+            # Pulse ring
+            self.create_oval(px - r*1.5, py - r*1.5, px + r*1.5, py + r*1.5, outline="#00ffff", width=1, tags="player")
 
         # Draw HUD on top
         self.draw_hud()
