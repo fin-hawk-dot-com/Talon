@@ -339,4 +339,38 @@ ABILITY_TEMPLATES = [
         affinity_weight={"Mage": 8.0, "Support": 5.0, "General": 5.0},
         essence_tags=["Decay", "Time", "Acid"]
     ),
+    AbilityTemplate(
+        pattern="{essence} Tide",
+        function="Control",
+        description_template="Unleashes a tidal force of {essence} to push and pull enemies.",
+        affinity_weight={"Mage": 8.0, "Support": 5.0, "General": 5.0},
+        essence_tags=["Water", "Force", "Liquid"]
+    ),
+    AbilityTemplate(
+        pattern="{essence} Pressure",
+        function="Debuff",
+        description_template="Crushes the target under the weight of {essence}.",
+        affinity_weight={"Mage": 8.0, "Guardian": 5.0, "General": 5.0},
+        essence_tags=["Physical", "Force", "Gravity"]
+    ),
+    AbilityTemplate(
+        pattern="{essence} Comet",
+        function="Ranged Attack",
+        description_template="Calls down a falling star of {essence}.",
+        affinity_weight={"Mage": 10.0, "Warrior": 5.0, "General": 5.0},
+        essence_tags=["Celestial", "Fire", "Ice", "Rock"]
+    ),
+    AbilityTemplate(
+        pattern="{essence} Orbit",
+        function="Defense",
+        description_template="Creates orbiting spheres of {essence} that intercept attacks.",
+        affinity_weight={"Mage": 10.0, "Guardian": 8.0, "Support": 5.0, "General": 5.0}
+    ),
+    AbilityTemplate(
+        pattern="{essence} Lure",
+        function="Control",
+        description_template="Manifests an enticing display of {essence} to draw enemies in.",
+        affinity_weight={"Support": 10.0, "Rogue": 8.0, "General": 5.0},
+        essence_tags=["Light", "Mind", "Illusion"]
+    ),
 ]

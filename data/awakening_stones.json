@@ -286,5 +286,50 @@
     "cooldown": "High",
     "cost_type": "Stamina",
     "image_prompt": "A Common Awakening Stone named Stone of the Might. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Tide",
+    "function": "Control",
+    "description": "Unleashes a tidal force to push and pull enemies.",
+    "rarity": "Rare",
+    "cooldown": "High",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Tide, inscribed with runes of Control. Unleashes a tidal force to push and pull enemies. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Depths",
+    "function": "Debuff",
+    "description": "Crushes the target under immense pressure.",
+    "rarity": "Uncommon",
+    "cooldown": "Medium",
+    "cost_type": "Mana",
+    "image_prompt": "A Uncommon Awakening Stone named Stone of the Depths, inscribed with runes of Debuff. Crushes the target under immense pressure. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Comet",
+    "function": "Ranged Attack",
+    "description": "Calls down a falling star to strike an area.",
+    "rarity": "Epic",
+    "cooldown": "High",
+    "cost_type": "Mana",
+    "image_prompt": "A Epic Awakening Stone named Stone of the Comet, inscribed with runes of Ranged Attack. Calls down a falling star to strike an area. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Orbit",
+    "function": "Defense",
+    "description": "Creates orbiting spheres that intercept attacks.",
+    "rarity": "Rare",
+    "cooldown": "Medium",
+    "cost_type": "Mana",
+    "image_prompt": "A Rare Awakening Stone named Stone of the Orbit, inscribed with runes of Defense. Creates orbiting spheres that intercept attacks. Glowing magical artifact."
+  },
+  {
+    "name": "Stone of the Wing",
+    "function": "Mobility",
+    "description": "Grants the ability to fly.",
+    "rarity": "Epic",
+    "cooldown": "High",
+    "cost_type": "Stamina",
+    "image_prompt": "A Epic Awakening Stone named Stone of the Wing, inscribed with runes of Mobility. Grants the ability to fly. Glowing magical artifact."
   }
 ]

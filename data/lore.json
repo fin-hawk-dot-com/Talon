@@ -1020,5 +1020,68 @@
     "category": "Location",
     "text": "The Spirit Well is a mystical cenote hidden deep within the Whispering Woods. The water is not water, but liquified Spirit Essence. It glows with a pale, ghostly light. Pilgrims come here to commune with their ancestors, as the veil between the living and the dead is thin. However, staying too long can cause one's soul to detach from their body, becoming a Spirit Guardian bound to the well forever.",
     "image_prompt": "A glowing blue pool in a forest clearing, ghostly figures rising from the water, peaceful but eerie."
-    }
+    },
+    {
+    "id": "lore_sunless_trench",
+    "title": "The Sunless Trench",
+    "category": "Location",
+    "text": "The Sunless Trench is a chasm in the ocean floor so deep that light has never touched its bottom. It is the domain of Pressure Essence, where water weighs as much as mountains. Strange bioluminescent creatures thrive here, feeding on the thermal vents and mana geysers. It is rumored to be the resting place of a Leviathan from the First Age.",
+    "image_prompt": "A deep underwater trench, bioluminescent plants, dark blue water, glowing vents."
+  },
+  {
+    "id": "lore_starforge",
+    "title": "The Starforge",
+    "category": "Location",
+    "text": "The Starforge is a mythical facility floating in the upper atmosphere, accessible only by flight or teleportation. Built by the Aethel to harness the power of direct sunlight and starlight, it is now an automated factory churning out Star Constructs. The machinery still hums with cosmic energy, and the view of the stars from its observation decks is said to drive lesser minds mad with the scale of the universe.",
+    "image_prompt": "A floating metal station in the clouds, glowing with white light, stars visible in the day."
+  },
+  {
+    "id": "lore_deep_sea_serpent",
+    "title": "Deep Sea Serpent",
+    "category": "Bestiary",
+    "text": "Deep Sea Serpents are the apex predators of the open ocean. Growing up to a hundred meters long, their scales are harder than steel and capable of withstanding the immense pressure of the deep. They are solitary hunters, often mistaking submarines and whales for prey. Their breath weapon is a jet of super-pressurized water that can cut through hull plating like paper.",
+    "image_prompt": "A giant sea serpent wrapping around a submarine, dark water, glowing eyes."
+  },
+  {
+    "id": "lore_abyssal_angler",
+    "title": "Abyssal Angler",
+    "category": "Bestiary",
+    "text": "The Abyssal Angler is a nightmare of the deep. Its lure is not just bioluminescent; it emits a hypnotic light pattern that paralyzes victims with a specialized Light Essence spell. Once the prey is immobile, the Angler swallows them whole. They are surprisingly intelligent, often setting traps for unwary divers.",
+    "image_prompt": "A monstrous fish with huge teeth and a glowing lure, darkness all around."
+  },
+  {
+    "id": "lore_coral_golem",
+    "title": "Coral Golem",
+    "category": "Bestiary",
+    "text": "Coral Golems are unique constructs that are simultaneously mineral and biological. They are colonies of coral polyps animated by a central mana core. They can regenerate damage rapidly as long as they remain in saltwater. Often found guarding reefs, they are peaceful unless provoked, at which point they can manipulate the coral around them to impale intruders.",
+    "image_prompt": "A humanoid figure made of colorful brain coral and rock, standing on a reef."
+  },
+  {
+    "id": "lore_cloud_ray",
+    "title": "Cloud Ray",
+    "category": "Bestiary",
+    "text": "Cloud Rays are gentle giants of the sky. Resembling manta rays, they glide on currents of Air Essence rather than water. They feed on atmospheric mana and moisture. They are often used as mounts by the Sky-Tribes, though taming one requires a bond of trust rather than force. Their skin camouflages perfectly with the clouds.",
+    "image_prompt": "A giant ray flying through white clouds, blue sky, translucent wings."
+  },
+  {
+    "id": "lore_star_construct",
+    "title": "Star Construct",
+    "category": "Bestiary",
+    "text": "Star Constructs are elegant machines made of star-metal and bound light. Created by the Starforge, they serve as its maintenance crew and security. They attack with beams of searing heat and gravity manipulation. Defeating one releases a burst of stardust that is highly prized by alchemists.",
+    "image_prompt": "A robot made of floating geometric shapes and starlight, glowing white."
+  },
+  {
+    "id": "lore_essence_pressure",
+    "title": "Pressure Essence",
+    "category": "Magic",
+    "text": "Pressure Essence is a derivative of Gravity and Water. It represents the crushing weight of the deep and the inevitability of force. Mages who wield it can increase the atmospheric pressure around an enemy, crushing them into the ground or causing their lungs to collapse. It is a slow, oppressive magic that wears down defenses.",
+    "image_prompt": "Visual effect of air distortion crushing a rock, heavy atmosphere."
+  },
+  {
+    "id": "lore_essence_star",
+    "title": "Star Essence",
+    "category": "Magic",
+    "text": "Star Essence is the power of the cosmos. It combines the heat of Fire with the purity of Light and the distance of the Void. It is incredibly potent but difficult to control, as it seeks to burn everything it touches. Star Mages are rare, often identifiable by the constellations that appear on their skin when they cast.",
+    "image_prompt": "A glowing white star in a hand, casting long shadows, cosmic background."
+  }
 ]
