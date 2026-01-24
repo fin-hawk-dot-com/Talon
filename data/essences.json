@@ -1043,5 +1043,85 @@
       "Mana"
     ],
     "image_prompt": "An ethereal essence orb representing Spirit. Visual style: Rare magic, glowing with Abstract, Soul, Will, Consciousness energy. The essence of the soul and willpower."
+  },
+  {
+    "name": "Coral",
+    "type": "Base",
+    "rarity": "Uncommon",
+    "tags": [
+      "Biological",
+      "Solid",
+      "Sea",
+      "Structure"
+    ],
+    "description": "The essence of living stone.",
+    "opposite": "Fire",
+    "synergy": [
+      "Water",
+      "Life",
+      "Earth",
+      "Shield"
+    ],
+    "image_prompt": "An ethereal essence orb representing Coral. Visual style: Uncommon magic, glowing with Biological, Solid, Sea, Structure energy. The essence of living stone."
+  },
+  {
+    "name": "Pressure",
+    "type": "Base",
+    "rarity": "Rare",
+    "tags": [
+      "Physical",
+      "Force",
+      "Weight",
+      "Depth"
+    ],
+    "description": "The essence of crushing weight.",
+    "opposite": "Air",
+    "synergy": [
+      "Water",
+      "Gravity",
+      "Earth",
+      "Dark"
+    ],
+    "image_prompt": "An ethereal essence orb representing Pressure. Visual style: Rare magic, glowing with Physical, Force, Weight, Depth energy. The essence of crushing weight."
+  },
+  {
+    "name": "Cloud",
+    "type": "Base",
+    "rarity": "Common",
+    "tags": [
+      "Elemental",
+      "Gas",
+      "Weather"
+    ],
+    "description": "The essence of condensed vapor.",
+    "opposite": "Earth",
+    "synergy": [
+      "Air",
+      "Water",
+      "Lightning",
+      "Steam"
+    ],
+    "image_prompt": "An ethereal essence orb representing Cloud. Visual style: Common magic, glowing with Elemental, Gas, Weather energy. The essence of condensed vapor."
+  },
+  {
+    "name": "Star",
+    "type": "Base",
+    "rarity": "Epic",
+    "tags": [
+      "Celestial",
+      "Light",
+      "Heat",
+      "Distance"
+    ],
+    "description": "The essence of distant suns.",
+    "opposite": "Void",
+    "synergy": [
+      "Sun",
+      "Light",
+      "Fire",
+      "Gravity",
+      "Dimension"
+    ],
+    "image_prompt": "An ethereal essence orb representing Star. Visual style: Epic magic, glowing with Celestial, Light, Heat, Distance energy. The essence of distant suns."
   }
 ]

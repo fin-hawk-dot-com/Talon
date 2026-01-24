@@ -1279,5 +1279,97 @@
         ],
         "image_prompt": "A dangerous Construct creature known as Spirit Guardian. A suit of armor animated by a glowing blue soul.",
         "description": "A Construct known as Spirit Guardian bound to protect ancient sites."
+    },
+    {
+        "name": "Deep Sea Serpent",
+        "race": "Beast",
+        "attributes": {
+            "Power": 450,
+            "Speed": 300,
+            "Spirit": 200,
+            "Recovery": 400
+        },
+        "xp_reward": 550,
+        "loot_table": [
+            "Water",
+            "Dragon",
+            "Stone of the Tide"
+        ],
+        "image_prompt": "A massive sea serpent with bioluminescent scales, swimming in the deep ocean.",
+        "description": "A Beast known as Deep Sea Serpent that crushes ships with its coils."
+    },
+    {
+        "name": "Abyssal Angler",
+        "race": "Beast",
+        "attributes": {
+            "Power": 250,
+            "Speed": 200,
+            "Spirit": 350,
+            "Recovery": 150
+        },
+        "xp_reward": 400,
+        "loot_table": [
+            "Water",
+            "Light",
+            "Stone of the Lens",
+            "Stone of the Depths"
+        ],
+        "image_prompt": "A terrifying anglerfish with a glowing lure that hypnotizes prey, in the dark abyss.",
+        "description": "A Beast known as Abyssal Angler that hunts in the crushing depths."
+    },
+    {
+        "name": "Coral Golem",
+        "race": "Construct",
+        "attributes": {
+            "Power": 300,
+            "Speed": 100,
+            "Spirit": 150,
+            "Recovery": 500
+        },
+        "xp_reward": 450,
+        "loot_table": [
+            "Coral",
+            "Water",
+            "Stone of the Shell"
+        ],
+        "image_prompt": "A golem made of colorful living coral and rock, walking on the ocean floor.",
+        "description": "A Construct known as Coral Golem that regenerates as long as it remains submerged."
+    },
+    {
+        "name": "Cloud Ray",
+        "race": "Beast",
+        "attributes": {
+            "Power": 200,
+            "Speed": 500,
+            "Spirit": 400,
+            "Recovery": 200
+        },
+        "xp_reward": 500,
+        "loot_table": [
+            "Cloud",
+            "Air",
+            "Stone of the Wing"
+        ],
+        "image_prompt": "A majestic mantra ray flying through the clouds, trailing mist.",
+        "description": "A Beast known as Cloud Ray that soars through the upper atmosphere."
+    },
+    {
+        "name": "Star Construct",
+        "race": "Construct",
+        "attributes": {
+            "Power": 400,
+            "Speed": 400,
+            "Spirit": 400,
+            "Recovery": 400
+        },
+        "xp_reward": 600,
+        "loot_table": [
+            "Star",
+            "Iron",
+            "Stone of the Comet",
+            "Stone of the Orbit"
+        ],
+        "image_prompt": "A construct made of constellation lines and star stuff, geometric and beautiful.",
+        "description": "A Construct known as Star Construct forged from the light of dying stars."
     }
 ]
