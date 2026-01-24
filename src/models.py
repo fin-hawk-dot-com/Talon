@@ -232,6 +232,8 @@ class Character:
     image_prompt: str = ""
     status_effects: List[StatusEffect] = field(default_factory=list)
     current_location: str = "Greenstone City"
+    x: int = -1
+    y: int = -1
     currency: int = 0
     materials: Dict[str, int] = field(default_factory=dict)
     current_xp: int = 0
