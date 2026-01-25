@@ -37,6 +37,40 @@ class GameEngine:
             self.character.y = loc.y
         return self.character
 
+    def meditate_tick(self) -> dict:
+        if not self.character:
+            return {}
+
+        char = self.character
+        gains = {}
+
+        # Restore percentage (e.g. 2% per tick)
+        restore_pct = 0.02
+
+        hp_gain = char.max_health * restore_pct
+        mp_gain = char.max_mana * restore_pct
+        sp_gain = char.max_stamina * restore_pct
+        wp_gain = char.max_willpower * restore_pct
+
+        # Apply gains (clamped to max)
+        char.current_health = min(char.max_health, char.current_health + hp_gain)
+        char.current_mana = min(char.max_mana, char.current_mana + mp_gain)
+        char.current_stamina = min(char.max_stamina, char.current_stamina + sp_gain)
+        char.current_willpower = min(char.max_willpower, char.current_willpower + wp_gain)
+
+        gains['hp'] = hp_gain
+        gains['mp'] = mp_gain
+        gains['sp'] = sp_gain
+        gains['wp'] = wp_gain
+
+        # XP Gain (Small, based on Spirit)
+        # Spirit * 0.1 per tick, minimum 1
+        xp_gain = max(1, int(char.attributes['Spirit'].value * 0.1))
+        char.current_xp += xp_gain
+        gains['xp'] = xp_gain
+
+        return gains
+
     def rest(self) -> str:
         if not self.character: return "No character."
 
