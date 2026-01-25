@@ -1371,5 +1371,59 @@
         ],
         "image_prompt": "A construct made of constellation lines and star stuff, geometric and beautiful.",
         "description": "A Construct known as Star Construct forged from the light of dying stars."
+    },
+    {
+        "name": "Skeletal Juggernaut",
+        "race": "Undead",
+        "attributes": {
+            "Power": 300,
+            "Speed": 100,
+            "Spirit": 50,
+            "Recovery": 200
+        },
+        "xp_reward": 400,
+        "loot_table": [
+            "Bone",
+            "Stone of the Spine",
+            "Iron"
+        ],
+        "image_prompt": "A massive skeleton warrior clad in heavy bone armor, wielding a giant bone mace.",
+        "description": "A gargantuan undead construct made of fused bones."
+    },
+    {
+        "name": "Ink Horror",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 150,
+            "Speed": 250,
+            "Spirit": 200,
+            "Recovery": 100
+        },
+        "xp_reward": 300,
+        "loot_table": [
+            "Ink",
+            "Stone of the Script",
+            "Dark"
+        ],
+        "image_prompt": "A shapeless monster made of spilling black ink, forming claws and mouths.",
+        "description": "A living puddle of cursed ink that drowns its victims."
+    },
+    {
+        "name": "Wax Golem",
+        "race": "Construct",
+        "attributes": {
+            "Power": 200,
+            "Speed": 150,
+            "Spirit": 100,
+            "Recovery": 150
+        },
+        "xp_reward": 250,
+        "loot_table": [
+            "Wax",
+            "Stone of the Hive",
+            "Fire"
+        ],
+        "image_prompt": "A humanoid golem made of dripping candle wax, with a wick burning on its head.",
+        "description": "A construct kept malleable by an internal flame."
     }
 ]

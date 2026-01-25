@@ -950,138 +950,187 @@
         "category": "Magic",
         "text": "Sand Essence is often mistaken for a sub-type of Earth, but it is distinct in its fluidity. It embodies erosion, time, and the power of the many over the one. Sand Mages can strip flesh from bone with abrasive storms or bury entire cities under shifting dunes. It is a patient magic, one that wins through attrition. It has a strong synergy with Time Essence, as sand is the measure of the hourglass.",
         "image_prompt": "A flowing stream of golden sand floating in the air, forming shapes."
-  },
-  {
-    "id": "lore_glass_serpent",
-    "title": "Glass Serpent",
-    "category": "Bestiary",
-    "text": "Glass Serpents are native to the Mirror Plains, evolving to blend in with the shimmering landscape. Their bodies are composed of living glass segments held together by a strong magnetic field. They hunt by coiling around their prey and constricting, their sharp scales slicing through armor with ease. Some theorize they are not natural beasts, but constructs left behind by an ancient glass-shaper.",
-    "image_prompt": "A snake made of clear glass segments, background of reflective salt flats."
-  },
-  {
-    "id": "lore_spore_walker",
-    "title": "Spore Walker",
-    "category": "Bestiary",
-    "text": "Spore Walkers are mobile fungal colonies that have achieved a hive-mind intelligence. They roam damp, dark places like the Fungal Depths, spreading their spores to convert all organic matter into more fungus. A Spore Walker's touch can accelerate decay instantly, rotting wood and flesh in seconds. They are immune to pain and fear, making them relentless pursuers.",
-    "image_prompt": "A humanoid shape made of mushrooms and moss, releasing green spore clouds."
-  },
-  {
-    "id": "lore_mirror_mimic",
-    "title": "Mirror Mimic",
-    "category": "Bestiary",
-    "text": "Mirror Mimics are insidious constructs found in ruins where high-level illusion magic has leaked. They appear as pools of mercury or polished metal until a victim approaches. Then, they rise up, assuming the shape and abilities of their target. While they cannot copy complex spells, their physical mimicry is perfect. The only way to tell the original from the mimic is that the mimic's reflection is always inverted.",
-    "image_prompt": "A silver, liquid metal humanoid reflecting the viewer, featureless face."
-  },
-  {
-    "id": "lore_crystal_scorpion",
-    "title": "Crystal Scorpion",
-    "category": "Bestiary",
-    "text": "Crystal Scorpions are terrifying predators of the Crystal Caverns. Their carapace is made of diamond-hard crystal that refracts light, making them difficult to target with spells. Their stinger delivers a unique venom that doesn't kill, but crystallizes the victim's blood, slowly turning them into a statue. These statues are then harvested by the scorpion's young for food.",
-    "image_prompt": "A giant scorpion made of jagged purple crystals, glowing stinger."
-  },
-  {
-    "id": "lore_void_jellyfish",
-    "title": "Void Jellyfish",
-    "category": "Bestiary",
-    "text": "Void Jellyfish are airborne horrors that drift on mana currents. They originate from the Void Rift, resembling their aquatic counterparts but composed of dark energy and starlight. Their tentacles trail for meters, invisible to the naked eye, and drain the mana of anything they touch. Swarms of them can leave an entire region magically barren for weeks.",
-    "image_prompt": "Floating jellyfish in the sky, dark purple bodies, long glowing tentacles."
-  },
-  {
-    "id": "lore_mirror_plains",
-    "title": "The Mirror Plains",
-    "category": "Location",
-    "text": "The Mirror Plains are a vast expanse of flat, polished salt that reflects the sky perfectly. Located to the east of the Scorched Wastes, the ground is so smooth that travelers often lose their sense of direction, unable to tell the earth from the sky. It is a place of intense light during the day, blinding the unwary. At night, it reflects the stars, making one feel as if they are walking through space. It is home to crystalline life forms and is a favored training ground for Light and Illusion mages.",
-    "image_prompt": "A vast salt flat reflecting the sky perfectly, horizon blurred, bright and surreal."
-  },
-  {
-    "id": "lore_fungal_depths",
-    "title": "The Fungal Depths",
-    "category": "Location",
-    "text": "Beneath the Whispering Woods lies a subterranean network known as the Fungal Depths. It is a bio-luminescent wonderland of giant mushrooms, phosphorescent moss, and deadly spores. The air is thick and humid, requiring filtration masks to breathe safely. The ecosystem here is aggressive; even the plants are predatory. It is the domain of the Spore Walkers and other decay-based entities. Alchemists brave the dangers to harvest rare molds found nowhere else.",
-    "image_prompt": "Underground cave forest of giant glowing mushrooms, green and purple lighting."
     },
     {
-    "id": "lore_cleansing_flame",
-    "title": "Order of the Cleansing Flame",
-    "category": "Faction",
-    "text": "The Order of the Cleansing Flame is a radical sect that broke away from the Church of the Light. They believe that corruption (Void, Rot, and Undead) cannot be healed, only burned. They wield Fire and Light essences with fanatical zeal, often causing collateral damage in their pursuit of 'purity'. Their inquisitors wear red robes and silver masks, and they view any tolerance of dark magic as heresy. They are often at odds with the more moderate factions, who view them as dangerous zealots.",
-    "image_prompt": "Fanatics in red robes burning a pile of corrupted artifacts, fire magic, silver masks."
+        "id": "lore_glass_serpent",
+        "title": "Glass Serpent",
+        "category": "Bestiary",
+        "text": "Glass Serpents are native to the Mirror Plains, evolving to blend in with the shimmering landscape. Their bodies are composed of living glass segments held together by a strong magnetic field. They hunt by coiling around their prey and constricting, their sharp scales slicing through armor with ease. Some theorize they are not natural beasts, but constructs left behind by an ancient glass-shaper.",
+        "image_prompt": "A snake made of clear glass segments, background of reflective salt flats."
     },
     {
-    "id": "lore_shifting_expanse",
-    "title": "The Shifting Expanse",
-    "category": "Location",
-    "text": "The Shifting Expanse is a region of chaotic instability located in the western badlands. Here, the laws of physics are suggestions. The terrain reshapes itself daily: a mountain might be a lake by noon, and a forest by dusk. Gravity fluctuates, and weather fronts move backwards. It is the domain of Chaos Essence. Only the most adaptable adventurers dare to traverse it, as maps are useless. It is rumored that at the center lies the Eye of Chaos, a stable point of pure entropy.",
-    "image_prompt": "A surreal landscape with floating rocks, melting clocks, and changing seasons in one frame."
+        "id": "lore_spore_walker",
+        "title": "Spore Walker",
+        "category": "Bestiary",
+        "text": "Spore Walkers are mobile fungal colonies that have achieved a hive-mind intelligence. They roam damp, dark places like the Fungal Depths, spreading their spores to convert all organic matter into more fungus. A Spore Walker's touch can accelerate decay instantly, rotting wood and flesh in seconds. They are immune to pain and fear, making them relentless pursuers.",
+        "image_prompt": "A humanoid shape made of mushrooms and moss, releasing green spore clouds."
     },
     {
-    "id": "lore_spirit_well",
-    "title": "The Spirit Well",
-    "category": "Location",
-    "text": "The Spirit Well is a mystical cenote hidden deep within the Whispering Woods. The water is not water, but liquified Spirit Essence. It glows with a pale, ghostly light. Pilgrims come here to commune with their ancestors, as the veil between the living and the dead is thin. However, staying too long can cause one's soul to detach from their body, becoming a Spirit Guardian bound to the well forever.",
-    "image_prompt": "A glowing blue pool in a forest clearing, ghostly figures rising from the water, peaceful but eerie."
+        "id": "lore_mirror_mimic",
+        "title": "Mirror Mimic",
+        "category": "Bestiary",
+        "text": "Mirror Mimics are insidious constructs found in ruins where high-level illusion magic has leaked. They appear as pools of mercury or polished metal until a victim approaches. Then, they rise up, assuming the shape and abilities of their target. While they cannot copy complex spells, their physical mimicry is perfect. The only way to tell the original from the mimic is that the mimic's reflection is always inverted.",
+        "image_prompt": "A silver, liquid metal humanoid reflecting the viewer, featureless face."
     },
     {
-    "id": "lore_sunless_trench",
-    "title": "The Sunless Trench",
-    "category": "Location",
-    "text": "The Sunless Trench is a chasm in the ocean floor so deep that light has never touched its bottom. It is the domain of Pressure Essence, where water weighs as much as mountains. Strange bioluminescent creatures thrive here, feeding on the thermal vents and mana geysers. It is rumored to be the resting place of a Leviathan from the First Age.",
-    "image_prompt": "A deep underwater trench, bioluminescent plants, dark blue water, glowing vents."
-  },
-  {
-    "id": "lore_starforge",
-    "title": "The Starforge",
-    "category": "Location",
-    "text": "The Starforge is a mythical facility floating in the upper atmosphere, accessible only by flight or teleportation. Built by the Aethel to harness the power of direct sunlight and starlight, it is now an automated factory churning out Star Constructs. The machinery still hums with cosmic energy, and the view of the stars from its observation decks is said to drive lesser minds mad with the scale of the universe.",
-    "image_prompt": "A floating metal station in the clouds, glowing with white light, stars visible in the day."
-  },
-  {
-    "id": "lore_deep_sea_serpent",
-    "title": "Deep Sea Serpent",
-    "category": "Bestiary",
-    "text": "Deep Sea Serpents are the apex predators of the open ocean. Growing up to a hundred meters long, their scales are harder than steel and capable of withstanding the immense pressure of the deep. They are solitary hunters, often mistaking submarines and whales for prey. Their breath weapon is a jet of super-pressurized water that can cut through hull plating like paper.",
-    "image_prompt": "A giant sea serpent wrapping around a submarine, dark water, glowing eyes."
-  },
-  {
-    "id": "lore_abyssal_angler",
-    "title": "Abyssal Angler",
-    "category": "Bestiary",
-    "text": "The Abyssal Angler is a nightmare of the deep. Its lure is not just bioluminescent; it emits a hypnotic light pattern that paralyzes victims with a specialized Light Essence spell. Once the prey is immobile, the Angler swallows them whole. They are surprisingly intelligent, often setting traps for unwary divers.",
-    "image_prompt": "A monstrous fish with huge teeth and a glowing lure, darkness all around."
-  },
-  {
-    "id": "lore_coral_golem",
-    "title": "Coral Golem",
-    "category": "Bestiary",
-    "text": "Coral Golems are unique constructs that are simultaneously mineral and biological. They are colonies of coral polyps animated by a central mana core. They can regenerate damage rapidly as long as they remain in saltwater. Often found guarding reefs, they are peaceful unless provoked, at which point they can manipulate the coral around them to impale intruders.",
-    "image_prompt": "A humanoid figure made of colorful brain coral and rock, standing on a reef."
-  },
-  {
-    "id": "lore_cloud_ray",
-    "title": "Cloud Ray",
-    "category": "Bestiary",
-    "text": "Cloud Rays are gentle giants of the sky. Resembling manta rays, they glide on currents of Air Essence rather than water. They feed on atmospheric mana and moisture. They are often used as mounts by the Sky-Tribes, though taming one requires a bond of trust rather than force. Their skin camouflages perfectly with the clouds.",
-    "image_prompt": "A giant ray flying through white clouds, blue sky, translucent wings."
-  },
-  {
-    "id": "lore_star_construct",
-    "title": "Star Construct",
-    "category": "Bestiary",
-    "text": "Star Constructs are elegant machines made of star-metal and bound light. Created by the Starforge, they serve as its maintenance crew and security. They attack with beams of searing heat and gravity manipulation. Defeating one releases a burst of stardust that is highly prized by alchemists.",
-    "image_prompt": "A robot made of floating geometric shapes and starlight, glowing white."
-  },
-  {
-    "id": "lore_essence_pressure",
-    "title": "Pressure Essence",
-    "category": "Magic",
-    "text": "Pressure Essence is a derivative of Gravity and Water. It represents the crushing weight of the deep and the inevitability of force. Mages who wield it can increase the atmospheric pressure around an enemy, crushing them into the ground or causing their lungs to collapse. It is a slow, oppressive magic that wears down defenses.",
-    "image_prompt": "Visual effect of air distortion crushing a rock, heavy atmosphere."
-  },
-  {
-    "id": "lore_essence_star",
-    "title": "Star Essence",
-    "category": "Magic",
-    "text": "Star Essence is the power of the cosmos. It combines the heat of Fire with the purity of Light and the distance of the Void. It is incredibly potent but difficult to control, as it seeks to burn everything it touches. Star Mages are rare, often identifiable by the constellations that appear on their skin when they cast.",
-    "image_prompt": "A glowing white star in a hand, casting long shadows, cosmic background."
-  }
+        "id": "lore_crystal_scorpion",
+        "title": "Crystal Scorpion",
+        "category": "Bestiary",
+        "text": "Crystal Scorpions are terrifying predators of the Crystal Caverns. Their carapace is made of diamond-hard crystal that refracts light, making them difficult to target with spells. Their stinger delivers a unique venom that doesn't kill, but crystallizes the victim's blood, slowly turning them into a statue. These statues are then harvested by the scorpion's young for food.",
+        "image_prompt": "A giant scorpion made of jagged purple crystals, glowing stinger."
+    },
+    {
+        "id": "lore_void_jellyfish",
+        "title": "Void Jellyfish",
+        "category": "Bestiary",
+        "text": "Void Jellyfish are airborne horrors that drift on mana currents. They originate from the Void Rift, resembling their aquatic counterparts but composed of dark energy and starlight. Their tentacles trail for meters, invisible to the naked eye, and drain the mana of anything they touch. Swarms of them can leave an entire region magically barren for weeks.",
+        "image_prompt": "Floating jellyfish in the sky, dark purple bodies, long glowing tentacles."
+    },
+    {
+        "id": "lore_mirror_plains",
+        "title": "The Mirror Plains",
+        "category": "Location",
+        "text": "The Mirror Plains are a vast expanse of flat, polished salt that reflects the sky perfectly. Located to the east of the Scorched Wastes, the ground is so smooth that travelers often lose their sense of direction, unable to tell the earth from the sky. It is a place of intense light during the day, blinding the unwary. At night, it reflects the stars, making one feel as if they are walking through space. It is home to crystalline life forms and is a favored training ground for Light and Illusion mages.",
+        "image_prompt": "A vast salt flat reflecting the sky perfectly, horizon blurred, bright and surreal."
+    },
+    {
+        "id": "lore_fungal_depths",
+        "title": "The Fungal Depths",
+        "category": "Location",
+        "text": "Beneath the Whispering Woods lies a subterranean network known as the Fungal Depths. It is a bio-luminescent wonderland of giant mushrooms, phosphorescent moss, and deadly spores. The air is thick and humid, requiring filtration masks to breathe safely. The ecosystem here is aggressive; even the plants are predatory. It is the domain of the Spore Walkers and other decay-based entities. Alchemists brave the dangers to harvest rare molds found nowhere else.",
+        "image_prompt": "Underground cave forest of giant glowing mushrooms, green and purple lighting."
+    },
+    {
+        "id": "lore_cleansing_flame",
+        "title": "Order of the Cleansing Flame",
+        "category": "Faction",
+        "text": "The Order of the Cleansing Flame is a radical sect that broke away from the Church of the Light. They believe that corruption (Void, Rot, and Undead) cannot be healed, only burned. They wield Fire and Light essences with fanatical zeal, often causing collateral damage in their pursuit of 'purity'. Their inquisitors wear red robes and silver masks, and they view any tolerance of dark magic as heresy. They are often at odds with the more moderate factions, who view them as dangerous zealots.",
+        "image_prompt": "Fanatics in red robes burning a pile of corrupted artifacts, fire magic, silver masks."
+    },
+    {
+        "id": "lore_shifting_expanse",
+        "title": "The Shifting Expanse",
+        "category": "Location",
+        "text": "The Shifting Expanse is a region of chaotic instability located in the western badlands. Here, the laws of physics are suggestions. The terrain reshapes itself daily: a mountain might be a lake by noon, and a forest by dusk. Gravity fluctuates, and weather fronts move backwards. It is the domain of Chaos Essence. Only the most adaptable adventurers dare to traverse it, as maps are useless. It is rumored that at the center lies the Eye of Chaos, a stable point of pure entropy.",
+        "image_prompt": "A surreal landscape with floating rocks, melting clocks, and changing seasons in one frame."
+    },
+    {
+        "id": "lore_spirit_well",
+        "title": "The Spirit Well",
+        "category": "Location",
+        "text": "The Spirit Well is a mystical cenote hidden deep within the Whispering Woods. The water is not water, but liquified Spirit Essence. It glows with a pale, ghostly light. Pilgrims come here to commune with their ancestors, as the veil between the living and the dead is thin. However, staying too long can cause one's soul to detach from their body, becoming a Spirit Guardian bound to the well forever.",
+        "image_prompt": "A glowing blue pool in a forest clearing, ghostly figures rising from the water, peaceful but eerie."
+    },
+    {
+        "id": "lore_sunless_trench",
+        "title": "The Sunless Trench",
+        "category": "Location",
+        "text": "The Sunless Trench is a chasm in the ocean floor so deep that light has never touched its bottom. It is the domain of Pressure Essence, where water weighs as much as mountains. Strange bioluminescent creatures thrive here, feeding on the thermal vents and mana geysers. It is rumored to be the resting place of a Leviathan from the First Age.",
+        "image_prompt": "A deep underwater trench, bioluminescent plants, dark blue water, glowing vents."
+    },
+    {
+        "id": "lore_starforge",
+        "title": "The Starforge",
+        "category": "Location",
+        "text": "The Starforge is a mythical facility floating in the upper atmosphere, accessible only by flight or teleportation. Built by the Aethel to harness the power of direct sunlight and starlight, it is now an automated factory churning out Star Constructs. The machinery still hums with cosmic energy, and the view of the stars from its observation decks is said to drive lesser minds mad with the scale of the universe.",
+        "image_prompt": "A floating metal station in the clouds, glowing with white light, stars visible in the day."
+    },
+    {
+        "id": "lore_deep_sea_serpent",
+        "title": "Deep Sea Serpent",
+        "category": "Bestiary",
+        "text": "Deep Sea Serpents are the apex predators of the open ocean. Growing up to a hundred meters long, their scales are harder than steel and capable of withstanding the immense pressure of the deep. They are solitary hunters, often mistaking submarines and whales for prey. Their breath weapon is a jet of super-pressurized water that can cut through hull plating like paper.",
+        "image_prompt": "A giant sea serpent wrapping around a submarine, dark water, glowing eyes."
+    },
+    {
+        "id": "lore_abyssal_angler",
+        "title": "Abyssal Angler",
+        "category": "Bestiary",
+        "text": "The Abyssal Angler is a nightmare of the deep. Its lure is not just bioluminescent; it emits a hypnotic light pattern that paralyzes victims with a specialized Light Essence spell. Once the prey is immobile, the Angler swallows them whole. They are surprisingly intelligent, often setting traps for unwary divers.",
+        "image_prompt": "A monstrous fish with huge teeth and a glowing lure, darkness all around."
+    },
+    {
+        "id": "lore_coral_golem",
+        "title": "Coral Golem",
+        "category": "Bestiary",
+        "text": "Coral Golems are unique constructs that are simultaneously mineral and biological. They are colonies of coral polyps animated by a central mana core. They can regenerate damage rapidly as long as they remain in saltwater. Often found guarding reefs, they are peaceful unless provoked, at which point they can manipulate the coral around them to impale intruders.",
+        "image_prompt": "A humanoid figure made of colorful brain coral and rock, standing on a reef."
+    },
+    {
+        "id": "lore_cloud_ray",
+        "title": "Cloud Ray",
+        "category": "Bestiary",
+        "text": "Cloud Rays are gentle giants of the sky. Resembling manta rays, they glide on currents of Air Essence rather than water. They feed on atmospheric mana and moisture. They are often used as mounts by the Sky-Tribes, though taming one requires a bond of trust rather than force. Their skin camouflages perfectly with the clouds.",
+        "image_prompt": "A giant ray flying through white clouds, blue sky, translucent wings."
+    },
+    {
+        "id": "lore_star_construct",
+        "title": "Star Construct",
+        "category": "Bestiary",
+        "text": "Star Constructs are elegant machines made of star-metal and bound light. Created by the Starforge, they serve as its maintenance crew and security. They attack with beams of searing heat and gravity manipulation. Defeating one releases a burst of stardust that is highly prized by alchemists.",
+        "image_prompt": "A robot made of floating geometric shapes and starlight, glowing white."
+    },
+    {
+        "id": "lore_essence_pressure",
+        "title": "Pressure Essence",
+        "category": "Magic",
+        "text": "Pressure Essence is a derivative of Gravity and Water. It represents the crushing weight of the deep and the inevitability of force. Mages who wield it can increase the atmospheric pressure around an enemy, crushing them into the ground or causing their lungs to collapse. It is a slow, oppressive magic that wears down defenses.",
+        "image_prompt": "Visual effect of air distortion crushing a rock, heavy atmosphere."
+    },
+    {
+        "id": "lore_essence_star",
+        "title": "Star Essence",
+        "category": "Magic",
+        "text": "Star Essence is the power of the cosmos. It combines the heat of Fire with the purity of Light and the distance of the Void. It is incredibly potent but difficult to control, as it seeks to burn everything it touches. Star Mages are rare, often identifiable by the constellations that appear on their skin when they cast.",
+        "image_prompt": "A glowing white star in a hand, casting long shadows, cosmic background."
+    },
+    {
+        "id": "lore_essence_bone",
+        "title": "Bone Essence",
+        "category": "Magic",
+        "text": "Bone Essence is the foundation of physical structure in the animal kingdom. Mages who wield it can manipulate calcium and marrow, reinforcing their own skeletons to be harder than steel or shaping weapons from their own bodies. It is a gruesome but effective art, often associated with necromancers, though its use is not inherently evil. Masters of Bone Essence can even sense the skeletal structure of enemies, identifying weak points instantly.",
+        "image_prompt": "A glowing white essence forming a spinal column."
+    },
+    {
+        "id": "lore_essence_ink",
+        "title": "Ink Essence",
+        "category": "Magic",
+        "text": "Ink Essence is an abstract power derived from the concept of communication and creation. It appears as a viscous, black liquid that defies gravity. Ink Mages, or 'Scribes', can bring drawings to life or rewrite the properties of objects by inscribing runes upon them. It is highly versatile but requires a sharp mind and steady hand; a misspelled rune can have disastrous consequences.",
+        "image_prompt": "Black ink floating in the air, forming words and shapes."
+    },
+    {
+        "id": "lore_essence_wax",
+        "title": "Wax Essence",
+        "category": "Magic",
+        "text": "Wax Essence embodies the duality of preservation and malleability. It can seal wounds, preserve artifacts, or trap enemies in rapidly hardening amber-like substances. Wax Mages often carry an internal heat, like a living candle, to keep their essence fluid. This magic is favored by archivists and those who wish to leave a lasting mark on the world.",
+        "image_prompt": "Melting yellow wax glowing with a soft inner light."
+    },
+    {
+        "id": "lore_skeletal_juggernaut",
+        "title": "Skeletal Juggernaut",
+        "category": "Bestiary",
+        "text": "The Skeletal Juggernaut is a colossal undead monstrosity created when hundreds of skeletons fuse together under high necromantic pressure. Standing over twenty feet tall, it wields weapons made from the femurs of giants. Its bone density is so high that it is immune to most non-blunt trauma. Defeating one requires shattering its central core, usually located deep within its ribcage.",
+        "image_prompt": "A giant skeleton made of many smaller skeletons, towering over a battlefield."
+    },
+    {
+        "id": "lore_ink_horror",
+        "title": "Ink Horror",
+        "category": "Bestiary",
+        "text": "Ink Horrors are accidental creations, usually birthed from spilled magical ink in abandoned libraries. They are sentient puddles of darkness that seek to 'erase' living beings, adding their biological data to their own chaotic script. They can slip under doors and form blades from their liquid bodies. Fire is their greatest weakness, as it dries them out instantly.",
+        "image_prompt": "A monster made of black ink, looking like a glitch in reality."
+    },
+    {
+        "id": "lore_wax_golem",
+        "title": "Wax Golem",
+        "category": "Bestiary",
+        "text": "Wax Golems are often used as guardians in the archives of the Arcane Assembly. They appear as featureless mannequins that can reshape their limbs into keys or weapons as needed. If damaged, they can simply melt and reform. However, they are extremely vulnerable to intense heat, which turns them into harmless puddles.",
+        "image_prompt": "A smooth, yellow humanoid figure, face featureless, hands turning into blades."
+    },
+    {
+        "id": "lore_library_lost_words",
+        "title": "The Library of Lost Words",
+        "category": "Location",
+        "text": "The Library of Lost Words is a semi-mythical location that exists in a pocket dimension. It is said to contain every book that has ever been burned or lost to time. The air is filled with floating Ink Essence, and the silence is absolute. It is guarded by Ink Horrors and the ghost of the First Librarian. Adventurers seek it to find forbidden spells, but many become so engrossed in the reading that they forget to eat or sleep, eventually becoming part of the library's collection.",
+        "image_prompt": "Endless rows of bookshelves spiraling into a void, floating black letters."
+    }
 ]
