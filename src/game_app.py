@@ -516,17 +516,77 @@ class GameApp:
         ttk.Button(popup, text="Recovery", command=lambda: confirm("Recovery")).pack()
 
     def show_awaken_options(self):
-        # Simplified flow: Select Stone -> Select Essence -> Select Slot
-        # This is complex to GUI-ify in one go, so I'll just check if possible
+        self.clear_actions()
+        self.add_action_button("<< Back", self.enter_hub)
+
         char = self.engine.character
-        stones = [x for x in char.inventory if hasattr(x, 'function')]
+        # Filter for Awakening Stones
+        # We need to keep track of the REAL index in the inventory
+        stones = []
+        for i, item in enumerate(char.inventory):
+            if hasattr(item, 'function'): # AwakeningStone identifier
+                stones.append((i, item))
 
         if not stones:
             self.log("No Awakening Stones in inventory.", "error")
             return
 
-        self.log("Logic for Awakening via GUI is complex (needs wizard). Use CLI for full features or wait for updates.", "error")
-        # For now, just placeholder or basic hint
+        self.log("\n--- Awaken Ability: Select Stone ---", "info")
+        for idx, stone in stones:
+            self.add_action_button(f"{stone.name} ({stone.function})", lambda i=idx: self.select_stone_for_awakening(i))
+
+    def select_stone_for_awakening(self, stone_index):
+        self.clear_actions()
+        self.add_action_button("<< Back", self.show_awaken_options)
+
+        char = self.engine.character
+        # Verify stone still exists (edge case)
+        if stone_index >= len(char.inventory):
+            self.show_awaken_options()
+            return
+
+        stone = char.inventory[stone_index]
+        self.log(f"\nSelected Stone: {stone.name}", "event")
+        self.log("Select Essence to bond with:", "info")
+
+        # List Essences
+        essences = char.get_all_essences()
+        if not essences:
+            self.log("No Essences bonded!", "error")
+            return
+
+        for ess in essences:
+            self.add_action_button(f"{ess.name}", lambda e=ess.name: self.select_essence_for_awakening(stone_index, e))
+
+    def select_essence_for_awakening(self, stone_index, essence_name):
+        self.clear_actions()
+        self.add_action_button("<< Back", lambda: self.select_stone_for_awakening(stone_index))
+
+        self.log(f"\nSelected Essence: {essence_name}", "event")
+        self.log("Select a Slot:", "info")
+
+        char = self.engine.character
+        slots = char.abilities.get(essence_name)
+        if not slots:
+            self.log("Error accessing ability slots.", "error")
+            return
+
+        for i in range(5):
+            occupant = slots[i]
+            if occupant:
+                self.add_action_button(f"Slot {i+1}: {occupant.name} (Occupied)", lambda: None)
+            else:
+                self.add_action_button(f"Slot {i+1}: [Empty]", lambda s=i: self.select_slot_for_awakening(stone_index, essence_name, s))
+
+    def select_slot_for_awakening(self, stone_index, essence_name, slot_index):
+        result = self.engine.awaken_ability(essence_name, stone_index, slot_index)
+
+        tag = "event" if "Awakened" in result or "Success" in result else "error"
+        self.log(result, tag)
+
+        # Refresh status and return to Hub or Awakening menu
+        self.update_status_display()
+        self.show_awaken_options()
 
     def show_quest_log(self):
         self.clear_actions()
