@@ -34,11 +34,68 @@ class MapWidget(tk.Canvas):
         # Bind resize event
         self.bind("<Configure>", self.on_resize)
 
+        # Tooltip
+        self.tooltip_item = None
+        self.tooltip_bg = None
+
+        # Callback
+        self.on_location_click_callback = None
+
+        # Bind events
+        self.bind("<Button-1>", self.on_click)
+        self.bind("<Motion>", self.on_mouse_move)
+
+        # Cache for hit testing: list of (loc, screen_x, screen_y, radius)
+        self.hit_cache = []
+
         # Initial draw
         self.draw_map()
 
+    def set_callback(self, callback):
+        self.on_location_click_callback = callback
+
     def on_resize(self, event):
         self.draw_map()
+
+    def on_click(self, event):
+        node = self._get_node_at(event.x, event.y)
+        if node:
+            if self.on_location_click_callback:
+                self.on_location_click_callback(node.name)
+
+    def on_mouse_move(self, event):
+        node = self._get_node_at(event.x, event.y)
+        self.delete("tooltip")
+
+        if node:
+            # Show tooltip
+            rank = getattr(node, 'danger_rank', 'Unknown')
+            text = f"{node.name} ({rank})"
+            # Draw bg
+            padding = 4
+
+            # Estimate text size (approx)
+            w = len(text) * 7
+            h = 20
+
+            x, y = event.x + 10, event.y + 10
+
+            # Boundary checks
+            if x + w > self.winfo_width(): x -= (w + 20)
+            if y + h > self.winfo_height(): y -= (h + 20)
+
+            self.create_rectangle(x, y, x + w, y + h, fill="#333333", outline="#aaaaaa", tags="tooltip")
+            self.create_text(x + w/2, y + h/2, text=text, fill="white", font=("Helvetica", 9), tags="tooltip")
+
+            # Highlight node?
+            # Maybe later
+
+    def _get_node_at(self, sx, sy):
+        for loc, cx, cy, r in self.hit_cache:
+            # Simple circle check for all shapes for click detection
+            if (sx - cx)**2 + (sy - cy)**2 <= (r + 4)**2: # Add a bit of padding
+                return loc
+        return None
 
     def set_mode(self, mode: str):
         if mode not in ['world', 'mini']: return
@@ -88,6 +145,7 @@ class MapWidget(tk.Canvas):
 
     def draw_map(self):
         self.delete("all")
+        self.hit_cache = []
 
         # 1. Connections
         drawn_connections = set()
@@ -115,6 +173,10 @@ class MapWidget(tk.Canvas):
 
     def draw_location_node(self, loc):
         cx, cy = self.transform_coords(getattr(loc, 'x', 500), getattr(loc, 'y', 500))
+        r = self.node_radius
+
+        # Cache for hit testing
+        self.hit_cache.append((loc, cx, cy, r))
 
         # Colors
         colors = {

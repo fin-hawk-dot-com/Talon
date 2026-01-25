@@ -29,18 +29,29 @@ class GameApp:
         self.create_layout()
 
         # Bindings
-        self.root.bind("<w>", lambda e: self.handle_movement("North"))
-        self.root.bind("<a>", lambda e: self.handle_movement("West"))
-        self.root.bind("<s>", lambda e: self.handle_movement("South"))
-        self.root.bind("<d>", lambda e: self.handle_movement("East"))
-        self.root.bind("<W>", lambda e: self.handle_movement("North"))
-        self.root.bind("<A>", lambda e: self.handle_movement("West"))
-        self.root.bind("<S>", lambda e: self.handle_movement("South"))
-        self.root.bind("<D>", lambda e: self.handle_movement("East"))
+        self.root.bind("<KeyPress>", self.on_key_press)
+        self.root.bind("<KeyRelease>", self.on_key_release)
+
+        # Specific actions
         self.root.bind("<e>", lambda e: self.handle_interaction())
         self.root.bind("<E>", lambda e: self.handle_interaction())
         self.root.bind("<m>", lambda e: self.toggle_map_mode())
         self.root.bind("<M>", lambda e: self.toggle_map_mode())
+
+        # Movement State
+        self.pressed_keys = {}
+        self.target_coords = None # For click-to-move
+
+        # Map Callback
+        self.map_widget.set_callback(self.on_map_location_click)
+
+        # Shortcuts
+        self.root.bind("<i>", lambda e: self.safe_action(self.show_inventory_options))
+        self.root.bind("<I>", lambda e: self.safe_action(self.show_inventory_options))
+        self.root.bind("<q>", lambda e: self.safe_action(self.show_quest_log))
+        self.root.bind("<Q>", lambda e: self.safe_action(self.show_quest_log))
+
+        self.update_movement_loop()
 
         # Dialogue State
         self.dialogue_npc_name = None
@@ -48,6 +59,18 @@ class GameApp:
 
         # Initial Screen
         self.show_main_menu()
+
+    def safe_action(self, func):
+        if self.state == "HUB":
+            func()
+
+    def on_map_location_click(self, loc_name):
+        if self.state != "HUB" or not self.engine.character: return
+
+        loc = self.engine.data_loader.get_location(loc_name)
+        if loc:
+            self.log(f"Moving to {loc_name}...", "event")
+            self.target_coords = (loc.x, loc.y)
 
     def handle_interaction(self):
         if self.state != "HUB" or not self.engine.character:
@@ -124,25 +147,67 @@ class GameApp:
             else:
                 self.add_action_button(choice.text, lambda nid=choice.next_id: self.show_dialogue_node(nid))
 
-    def handle_movement(self, direction):
-        if self.state != "HUB" or not self.engine.character:
-            return
+    def on_key_press(self, event):
+        self.pressed_keys[event.keysym.lower()] = True
 
-        # Continuous movement logic
-        step_size = 20
-        dx, dy = 0, 0
-        if direction == "North": dy = -step_size
-        elif direction == "South": dy = step_size
-        elif direction == "West": dx = -step_size
-        elif direction == "East": dx = step_size
+    def on_key_release(self, event):
+        self.pressed_keys[event.keysym.lower()] = False
 
-        msg = self.engine.update_position(dx, dy)
-        if msg:
-            self.log(msg, "event")
-            self.update_status_display()
+    def update_movement_loop(self):
+        if self.state == "HUB" and self.engine.character:
+            # Check keys
+            dx, dy = 0, 0
+            step = 3.0 # Speed per tick (20ms) -> 150 pixels/sec
 
-        # Always refresh map to show movement
-        self.map_widget.refresh()
+            if self.pressed_keys.get('w'): dy -= 1
+            if self.pressed_keys.get('s'): dy += 1
+            if self.pressed_keys.get('a'): dx -= 1
+            if self.pressed_keys.get('d'): dx += 1
+
+            moved = False
+
+            if dx != 0 or dy != 0:
+                # Cancel target if manual move
+                self.target_coords = None
+
+                # Normalize
+                length = math.sqrt(dx*dx + dy*dy)
+                dx = (dx / length) * step
+                dy = (dy / length) * step
+
+                msg = self.engine.update_position(dx, dy)
+                if msg:
+                    self.log(msg, "event")
+                    self.update_status_display()
+                moved = True
+
+            elif self.target_coords:
+                # Auto-move to target
+                tx, ty = self.target_coords
+                cx, cy = self.engine.character.x, self.engine.character.y
+
+                dist = math.sqrt((tx-cx)**2 + (ty-cy)**2)
+                if dist < step:
+                    # Arrived
+                    self.engine.character.x = tx
+                    self.engine.character.y = ty
+                    self.target_coords = None
+                    moved = True
+                else:
+                    # Move towards
+                    dx = (tx - cx) / dist * step
+                    dy = (ty - cy) / dist * step
+                    msg = self.engine.update_position(dx, dy)
+                    if msg:
+                         self.log(msg, "event")
+                         self.update_status_display()
+                         self.target_coords = None # Stop if we hit a location trigger
+                    moved = True
+
+            if moved:
+                self.map_widget.refresh()
+
+        self.root.after(20, self.update_movement_loop)
 
     def toggle_map_mode(self):
         new_mode = 'mini' if self.map_widget.mode == 'world' else 'world'
@@ -197,6 +262,9 @@ class GameApp:
         # Map Controls
         self.map_controls = ttk.Frame(self.center_container)
         self.map_controls.pack(fill=tk.X, pady=(0, 5))
+
+        self.interaction_label = ttk.Label(self.map_controls, text="", foreground="#55aaff", font=('Helvetica', 10, 'bold'))
+        self.interaction_label.pack(side=tk.LEFT, padx=5)
 
         ttk.Button(self.map_controls, text="Toggle Map Mode (M)", command=self.toggle_map_mode).pack(side=tk.RIGHT)
 
