@@ -29,14 +29,11 @@ class GameApp:
         self.create_layout()
 
         # Bindings
-        self.root.bind("<w>", lambda e: self.handle_movement("North"))
-        self.root.bind("<a>", lambda e: self.handle_movement("West"))
-        self.root.bind("<s>", lambda e: self.handle_movement("South"))
-        self.root.bind("<d>", lambda e: self.handle_movement("East"))
-        self.root.bind("<W>", lambda e: self.handle_movement("North"))
-        self.root.bind("<A>", lambda e: self.handle_movement("West"))
-        self.root.bind("<S>", lambda e: self.handle_movement("South"))
-        self.root.bind("<D>", lambda e: self.handle_movement("East"))
+        self.pressed_keys = {'w': False, 'a': False, 's': False, 'd': False}
+        for key in ['w', 'a', 's', 'd', 'W', 'A', 'S', 'D']:
+            self.root.bind(f"<KeyPress-{key}>", self.on_key_press)
+            self.root.bind(f"<KeyRelease-{key}>", self.on_key_release)
+
         self.root.bind("<e>", lambda e: self.handle_interaction())
         self.root.bind("<E>", lambda e: self.handle_interaction())
         self.root.bind("<m>", lambda e: self.toggle_map_mode())
@@ -46,8 +43,21 @@ class GameApp:
         self.dialogue_npc_name = None
         self.dialogue_visited_roots = set()
 
+        # Start Game Loop
+        self.movement_loop()
+
         # Initial Screen
         self.show_main_menu()
+
+    def on_key_press(self, event):
+        key = event.char.lower()
+        if key in self.pressed_keys:
+            self.pressed_keys[key] = True
+
+    def on_key_release(self, event):
+        key = event.char.lower()
+        if key in self.pressed_keys:
+            self.pressed_keys[key] = False
 
     def handle_interaction(self):
         if self.state != "HUB" or not self.engine.character:
@@ -124,25 +134,37 @@ class GameApp:
             else:
                 self.add_action_button(choice.text, lambda nid=choice.next_id: self.show_dialogue_node(nid))
 
-    def handle_movement(self, direction):
-        if self.state != "HUB" or not self.engine.character:
-            return
+    def movement_loop(self):
+        if self.state == "HUB" and self.engine.character:
+            dx, dy = 0.0, 0.0
+            speed = 4.0
 
-        # Continuous movement logic
-        step_size = 20
-        dx, dy = 0, 0
-        if direction == "North": dy = -step_size
-        elif direction == "South": dy = step_size
-        elif direction == "West": dx = -step_size
-        elif direction == "East": dx = step_size
+            if self.pressed_keys['w']: dy -= speed
+            if self.pressed_keys['s']: dy += speed
+            if self.pressed_keys['a']: dx -= speed
+            if self.pressed_keys['d']: dx += speed
 
-        msg = self.engine.update_position(dx, dy)
-        if msg:
-            self.log(msg, "event")
-            self.update_status_display()
+            if dx != 0 or dy != 0:
+                if dx != 0 and dy != 0:
+                    dx *= 0.7071
+                    dy *= 0.7071
 
-        # Always refresh map to show movement
-        self.map_widget.refresh()
+                msg = self.engine.update_position(int(dx), int(dy))
+                if msg:
+                    self.log(msg, "event")
+                    self.update_status_display()
+
+                self.map_widget.refresh()
+
+        elif self.state == "MEDITATION" and self.engine.character:
+             if not hasattr(self, 'meditation_counter'): self.meditation_counter = 0
+             self.meditation_counter += 1
+             if self.meditation_counter >= 50: # Approx 1 second
+                 self.meditation_counter = 0
+                 self.engine.meditate_tick()
+                 self.update_status_display()
+
+        self.root.after(20, self.movement_loop)
 
     def toggle_map_mode(self):
         new_mode = 'mini' if self.map_widget.mode == 'world' else 'world'
@@ -183,8 +205,24 @@ class GameApp:
         self.left_panel.pack_propagate(False) # Don't shrink
 
         ttk.Label(self.left_panel, text="Character Status", style="Title.TLabel").pack(pady=10)
-        self.status_text = tk.Text(self.left_panel, wrap=tk.WORD, height=30, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
-        self.status_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+
+        # Details Text (Name, Race, Rank, XP, Dram)
+        self.status_details_text = tk.Text(self.left_panel, wrap=tk.WORD, height=8, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
+        self.status_details_text.pack(fill=tk.X, padx=5, pady=5)
+
+        # Bars
+        self.bars_frame = ttk.Frame(self.left_panel)
+        self.bars_frame.pack(fill=tk.X, padx=5, pady=5)
+
+        self.hp_bar, self.hp_val = self.create_resource_bar("Health", "#ff5555")
+        self.mp_bar, self.mp_val = self.create_resource_bar("Mana", "#5555ff")
+        self.sp_bar, self.sp_val = self.create_resource_bar("Stamina", "#55ff55")
+        self.wp_bar, self.wp_val = self.create_resource_bar("Willpower", "#aa55aa")
+
+        # Attributes
+        ttk.Label(self.left_panel, text="Attributes & Effects", font=('Helvetica', 12, 'bold')).pack(pady=(10, 5))
+        self.attributes_text = tk.Text(self.left_panel, wrap=tk.WORD, height=15, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
+        self.attributes_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
         # 3. Center Panel: Map + Game Log
         self.center_container = ttk.Frame(self.main_container)
@@ -243,50 +281,81 @@ class GameApp:
         btn.pack(fill=tk.X, pady=2)
         return btn
 
+    def create_resource_bar(self, name, color):
+        frame = ttk.Frame(self.bars_frame)
+        frame.pack(fill=tk.X, pady=2)
+
+        lbl_frame = ttk.Frame(frame)
+        lbl_frame.pack(fill=tk.X)
+        ttk.Label(lbl_frame, text=name, font=('Consolas', 9)).pack(side=tk.LEFT)
+        val_lbl = ttk.Label(lbl_frame, text="0/0", font=('Consolas', 9))
+        val_lbl.pack(side=tk.RIGHT)
+
+        # Style for colored bar
+        style_name = f"{name}.Horizontal.TProgressbar"
+        self.style.configure(style_name, troughcolor='#404040', background=color, thickness=15)
+
+        bar = ttk.Progressbar(frame, style=style_name, orient=tk.HORIZONTAL, mode='determinate', length=200)
+        bar.pack(fill=tk.X)
+
+        return bar, val_lbl
+
+    def update_bar(self, bar, label, current, maximum):
+        bar['maximum'] = maximum
+        bar['value'] = current
+        label.config(text=f"{int(current)}/{int(maximum)}")
+
     def update_status_display(self):
         if not self.engine.character:
-            self.status_text.config(state=tk.NORMAL)
-            self.status_text.delete("1.0", tk.END)
-            self.status_text.insert(tk.END, "No Character Loaded")
-            self.status_text.config(state=tk.DISABLED)
+            self.status_details_text.config(state=tk.NORMAL)
+            self.status_details_text.delete("1.0", tk.END)
+            self.status_details_text.insert(tk.END, "No Character Loaded")
+            self.status_details_text.config(state=tk.DISABLED)
             return
 
         char = self.engine.character
+
+        # Details
         text = f"Name: {char.name}\n"
         text += f"Race: {char.race}\n"
         text += f"Rank: {char.rank}\n"
         text += f"XP: {char.current_xp}\n"
         text += f"Dram: {char.currency}\n"
-        text += "-"*20 + "\n"
-        text += f"HP: {char.current_health:.0f}/{char.max_health:.0f}\n"
-        text += f"MP: {char.current_mana:.0f}/{char.max_mana:.0f}\n"
-        text += f"SP: {char.current_stamina:.0f}/{char.max_stamina:.0f}\n"
-        text += f"WP: {char.current_willpower:.0f}/{char.max_willpower:.0f}\n"
-
-        if char.status_effects:
-            text += "-"*10 + "\n"
-            text += "Status Effects:\n"
-            for e in char.status_effects:
-                text += f"[{e.name} {e.duration}]\n"
 
         active_q_count = len([q for q in char.quests.values() if q.status == "Active"])
         if active_q_count > 0:
             text += f"Active Quests: {active_q_count}\n"
 
-        text += "-"*20 + "\n"
-        text += "Attributes:\n"
+        self.status_details_text.config(state=tk.NORMAL)
+        self.status_details_text.delete("1.0", tk.END)
+        self.status_details_text.insert(tk.END, text)
+        self.status_details_text.config(state=tk.DISABLED)
+
+        # Bars
+        self.update_bar(self.hp_bar, self.hp_val, char.current_health, char.max_health)
+        self.update_bar(self.mp_bar, self.mp_val, char.current_mana, char.max_mana)
+        self.update_bar(self.sp_bar, self.sp_val, char.current_stamina, char.max_stamina)
+        self.update_bar(self.wp_bar, self.wp_val, char.current_willpower, char.max_willpower)
+
+        # Attributes & Rest
+        text = "Attributes:\n"
         for attr in char.attributes.values():
             text += f" {attr.name[:3]}: {attr.value:.1f} ({attr.rank})\n"
 
-        text += "-"*20 + "\n"
+        text += "-"*10 + "\n"
+        text += "Status Effects:\n"
+        for e in char.status_effects:
+             text += f"[{e.name} {e.duration}]\n"
+
+        text += "-"*10 + "\n"
         text += "Equipment/Essences:\n"
         for e in char.get_all_essences():
             text += f"- {e.name}\n"
 
-        self.status_text.config(state=tk.NORMAL)
-        self.status_text.delete("1.0", tk.END)
-        self.status_text.insert(tk.END, text)
-        self.status_text.config(state=tk.DISABLED)
+        self.attributes_text.config(state=tk.NORMAL)
+        self.attributes_text.delete("1.0", tk.END)
+        self.attributes_text.insert(tk.END, text)
+        self.attributes_text.config(state=tk.DISABLED)
 
         # Also update map
         self.map_widget.refresh()
@@ -405,12 +474,20 @@ class GameApp:
         self.log("\n--- You are in a safe location ---", "info")
 
         self.add_action_button("Train Attribute", self.show_train_options)
+        self.add_action_button("Meditate", self.start_meditation)
         self.add_action_button("Adventure (Combat)", self.start_combat_encounter)
         self.add_action_button("Inventory / Absorb", self.show_inventory_options)
         self.add_action_button("Awaken Ability", self.show_awaken_options)
         self.add_action_button("Quests", self.show_quest_log)
         self.add_action_button("Rest (Save)", self.save_game_dialog)
         self.add_action_button("Main Menu", self.show_main_menu)
+
+    def start_meditation(self):
+        self.state = "MEDITATION"
+        self.clear_actions()
+        self.log("\n--- Entering Meditation ---", "event")
+        self.log("You focus your mind to gather energy.", "info")
+        self.add_action_button("Stop Meditating", self.enter_hub)
 
     def show_train_options(self):
         self.clear_actions()
