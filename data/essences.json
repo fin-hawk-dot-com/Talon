@@ -1,1127 +1,1186 @@
 [
-  {
-    "name": "Sword",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Physical",
-      "Weapon",
-      "Blade",
-      "Combat"
-    ],
-    "description": "The essence of the blade.",
-    "opposite": "Shield",
-    "synergy": [
-      "Might",
-      "Swift",
-      "Iron",
-      "Battle"
-    ],
-    "image_prompt": "An ethereal essence orb representing Sword. Visual style: Common magic, glowing with Physical, Weapon, Blade, Combat energy. The essence of the blade."
-  },
-  {
-    "name": "Shield",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Physical",
-      "Armor",
-      "Defense",
-      "Protection"
-    ],
-    "description": "The essence of defense and blocking.",
-    "opposite": "Sword",
-    "synergy": [
-      "Iron",
-      "Earth",
-      "Armor",
-      "Life"
-    ],
-    "image_prompt": "An ethereal essence orb representing Shield. Visual style: Common magic, glowing with Physical, Armor, Defense, Protection energy. The essence of defense and blocking."
-  },
-  {
-    "name": "Mana",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Abstract",
-      "Magic",
-      "Energy",
-      "Power"
-    ],
-    "description": "The essence of raw magical energy.",
-    "opposite": "Void",
-    "synergy": [
-      "Potent",
-      "Fire",
-      "Water",
-      "Air",
-      "Earth",
-      "Light",
-      "Dark"
-    ],
-    "image_prompt": "An ethereal essence orb representing Mana. Visual style: Common magic, glowing with Abstract, Magic, Energy, Power energy. The essence of raw magical energy."
-  },
-  {
-    "name": "Knowledge",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Abstract",
-      "Mind",
-      "Information",
-      "Learning"
-    ],
-    "description": "The essence of understanding and lore.",
-    "opposite": "Chaos",
-    "synergy": [
-      "Mana",
-      "Dimension",
-      "Light",
-      "Technology"
-    ],
-    "image_prompt": "An ethereal essence orb representing Knowledge. Visual style: Uncommon magic, glowing with Abstract, Mind, Information, Learning energy. The essence of understanding and lore."
-  },
-  {
-    "name": "Fire",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Heat",
-      "Energy",
-      "Destruction"
-    ],
-    "description": "The essence of combustion and heat.",
-    "opposite": "Water",
-    "synergy": [
-      "Earth",
-      "Air",
-      "Potent",
-      "Renewal",
-      "Wing",
-      "Light"
-    ],
-    "image_prompt": "An ethereal essence orb representing Fire. Visual style: Common magic, glowing with Elemental, Heat, Energy, Destruction energy. The essence of combustion and heat."
-  },
-  {
-    "name": "Water",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Liquid",
-      "Flow",
-      "Life"
-    ],
-    "description": "The essence of fluidity and life.",
-    "opposite": "Fire",
-    "synergy": [
-      "Earth",
-      "Life",
-      "Renewal",
-      "Dark",
-      "Moon"
-    ],
-    "image_prompt": "An ethereal essence orb representing Water. Visual style: Common magic, glowing with Elemental, Liquid, Flow, Life energy. The essence of fluidity and life."
-  },
-  {
-    "name": "Earth",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Solid",
-      "Defense",
-      "Nature"
-    ],
-    "description": "The essence of stability and stone.",
-    "opposite": "Air",
-    "synergy": [
-      "Fire",
-      "Iron",
-      "Potent",
-      "Life",
-      "Armor"
-    ],
-    "image_prompt": "An ethereal essence orb representing Earth. Visual style: Common magic, glowing with Elemental, Solid, Defense, Nature energy. The essence of stability and stone."
-  },
-  {
-    "name": "Air",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Gas",
-      "Movement",
-      "Wind"
-    ],
-    "description": "The essence of wind and atmosphere.",
-    "opposite": "Earth",
-    "synergy": [
-      "Fire",
-      "Lightning",
-      "Swift",
-      "Wing",
-      "Dimension"
-    ],
-    "image_prompt": "An ethereal essence orb representing Air. Visual style: Common magic, glowing with Elemental, Gas, Movement, Wind energy. The essence of wind and atmosphere."
-  },
-  {
-    "name": "Might",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Physical",
-      "Strength",
-      "Force",
-      "Body"
-    ],
-    "description": "The essence of physical power.",
-    "opposite": "Directed",
-    "synergy": [
-      "Swift",
-      "Iron",
-      "Potent",
-      "Armor",
-      "Light"
-    ],
-    "image_prompt": "An ethereal essence orb representing Might. Visual style: Common magic, glowing with Physical, Strength, Force, Body energy. The essence of physical power."
-  },
-  {
-    "name": "Swift",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Physical",
-      "Speed",
-      "Velocity",
-      "Reaction"
-    ],
-    "description": "The essence of speed.",
-    "opposite": "Iron",
-    "synergy": [
-      "Might",
-      "Wind",
-      "Lightning",
-      "Directed",
-      "Wing"
-    ],
-    "image_prompt": "An ethereal essence orb representing Swift. Visual style: Common magic, glowing with Physical, Speed, Velocity, Reaction energy. The essence of speed."
-  },
-  {
-    "name": "Potent",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Abstract",
-      "Power",
-      "Amplification",
-      "Energy"
-    ],
-    "description": "The essence of raw power and intensity.",
-    "opposite": "Balance",
-    "synergy": [
-      "Fire",
-      "Earth",
-      "Might",
-      "Sun",
-      "Dragon"
-    ],
-    "image_prompt": "An ethereal essence orb representing Potent. Visual style: Uncommon magic, glowing with Abstract, Power, Amplification, Energy energy. The essence of raw power and intensity."
-  },
-  {
-    "name": "Dark",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Abstract",
-      "Shadow",
-      "Concealment",
-      "Negative"
-    ],
-    "description": "The essence of darkness and shadow.",
-    "opposite": "Light",
-    "synergy": [
-      "Blood",
-      "Sin",
-      "Death",
-      "Moon",
-      "Dimension"
-    ],
-    "image_prompt": "An ethereal essence orb representing Dark. Visual style: Rare magic, glowing with Abstract, Shadow, Concealment, Negative energy. The essence of darkness and shadow."
-  },
-  {
-    "name": "Blood",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Physical",
-      "Biological",
-      "Vitality",
-      "Liquid",
-      "Macabre"
-    ],
-    "description": "The essence of lifeblood.",
-    "opposite": "Technology",
-    "synergy": [
-      "Dark",
-      "Sin",
-      "Life",
-      "Death",
-      "Renewal"
-    ],
-    "image_prompt": "An ethereal essence orb representing Blood. Visual style: Rare magic, glowing with Physical, Biological, Vitality, Liquid, Macabre energy. The essence of lifeblood."
-  },
-  {
-    "name": "Sin",
-    "type": "Base",
-    "rarity": "Legendary",
-    "tags": [
-      "Abstract",
-      "Concept",
-      "Corruption",
-      "Judgment"
-    ],
-    "description": "The essence of transgression.",
-    "opposite": "Balance",
-    "synergy": [
-      "Dark",
-      "Blood",
-      "Doom",
-      "Fire",
-      "Potent"
-    ],
-    "image_prompt": "An ethereal essence orb representing Sin. Visual style: Legendary magic, glowing with Abstract, Concept, Corruption, Judgment energy. The essence of transgression."
-  },
-  {
-    "name": "Dimension",
-    "type": "Base",
-    "rarity": "Epic",
-    "tags": [
-      "Abstract",
-      "Space",
-      "Reality",
-      "Travel"
-    ],
-    "description": "The essence of spatial dimensions.",
-    "opposite": "Earth",
-    "synergy": [
-      "Air",
-      "Light",
-      "Dark",
-      "Moon",
-      "Sun"
-    ],
-    "image_prompt": "An ethereal essence orb representing Dimension. Visual style: Epic magic, glowing with Abstract, Space, Reality, Travel energy. The essence of spatial dimensions."
-  },
-  {
-    "name": "Iron",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Physical",
-      "Metal",
-      "Hardness",
-      "Defense"
-    ],
-    "description": "The essence of metal.",
-    "opposite": "Swift",
-    "synergy": [
-      "Earth",
-      "Might",
-      "Technology",
-      "Armor",
-      "Lightning"
-    ],
-    "image_prompt": "An ethereal essence orb representing Iron. Visual style: Uncommon magic, glowing with Physical, Metal, Hardness, Defense energy. The essence of metal."
-  },
-  {
-    "name": "Lightning",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Elemental",
-      "Electricity",
-      "Speed",
-      "Energy"
-    ],
-    "description": "The essence of storm and electricity.",
-    "opposite": "Earth",
-    "synergy": [
-      "Air",
-      "Swift",
-      "Iron",
-      "Technology",
-      "Sun"
-    ],
-    "image_prompt": "An ethereal essence orb representing Lightning. Visual style: Uncommon magic, glowing with Elemental, Electricity, Speed, Energy energy. The essence of storm and electricity."
-  },
-  {
-    "name": "Technology",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Artificial",
-      "Machinery",
-      "Logic"
-    ],
-    "description": "The essence of machines and invention.",
-    "opposite": "Nature",
-    "synergy": [
-      "Gun",
-      "Armor",
-      "Iron",
-      "Lightning",
-      "Directed"
-    ],
-    "image_prompt": "An ethereal essence orb representing Technology. Visual style: Uncommon magic, glowing with Artificial, Machinery, Logic energy. The essence of machines and invention."
-  },
-  {
-    "name": "Renewal",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Recovery",
-      "Life",
-      "Healing"
-    ],
-    "description": "The essence of rebirth and healing.",
-    "opposite": "Death",
-    "synergy": [
-      "Life",
-      "Water",
-      "Fire",
-      "Wing",
-      "Light"
-    ],
-    "image_prompt": "An ethereal essence orb representing Renewal. Visual style: Uncommon magic, glowing with Recovery, Life, Healing energy. The essence of rebirth and healing."
-  },
-  {
-    "name": "Wing",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Physical",
-      "Flight",
-      "Air"
-    ],
-    "description": "The essence of flight.",
-    "opposite": "Earth",
-    "synergy": [
-      "Air",
-      "Swift",
-      "Fire",
-      "Renewal",
-      "Dragon"
-    ],
-    "image_prompt": "An ethereal essence orb representing Wing. Visual style: Common magic, glowing with Physical, Flight, Air energy. The essence of flight."
-  },
-  {
-    "name": "Light",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Abstract",
-      "Illumination",
-      "Holy",
-      "Vision"
-    ],
-    "description": "The essence of light.",
-    "opposite": "Dark",
-    "synergy": [
-      "Sun",
-      "Fire",
-      "Might",
-      "Swift",
-      "Renewal"
-    ],
-    "image_prompt": "An ethereal essence orb representing Light. Visual style: Rare magic, glowing with Abstract, Illumination, Holy, Vision energy. The essence of light."
-  },
-  {
-    "name": "Wind",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Gas",
-      "Movement"
-    ],
-    "description": "The essence of moving air.",
-    "opposite": "Earth",
-    "synergy": [
-      "Air",
-      "Swift",
-      "Directed",
-      "Lightning",
-      "Wing"
-    ],
-    "image_prompt": "An ethereal essence orb representing Wind. Visual style: Common magic, glowing with Elemental, Gas, Movement energy. The essence of moving air."
-  },
-  {
-    "name": "Directed",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Abstract",
-      "Focus",
-      "Aim"
-    ],
-    "description": "The essence of precision.",
-    "opposite": "Might",
-    "synergy": [
-      "Gun",
-      "Swift",
-      "Wind",
-      "Technology",
-      "Potent"
-    ],
-    "image_prompt": "An ethereal essence orb representing Directed. Visual style: Uncommon magic, glowing with Abstract, Focus, Aim energy. The essence of precision."
-  },
-  {
-    "name": "Gun",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Artificial",
-      "Weapon",
-      "Ranged"
-    ],
-    "description": "The essence of firearms.",
-    "opposite": "Shield",
-    "synergy": [
-      "Technology",
-      "Armor",
-      "Directed",
-      "Iron",
-      "Fire"
-    ],
-    "image_prompt": "An ethereal essence orb representing Gun. Visual style: Uncommon magic, glowing with Artificial, Weapon, Ranged energy. The essence of firearms."
-  },
-  {
-    "name": "Armor",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Physical",
-      "Defense",
-      "Protection"
-    ],
-    "description": "The essence of protection.",
-    "opposite": "Gun",
-    "synergy": [
-      "Iron",
-      "Technology",
-      "Earth",
-      "Might",
-      "Shield"
-    ],
-    "image_prompt": "An ethereal essence orb representing Armor. Visual style: Common magic, glowing with Physical, Defense, Protection energy. The essence of protection."
-  },
-  {
-    "name": "Life",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Biological",
-      "Vitality",
-      "Nature"
-    ],
-    "description": "The essence of living things.",
-    "opposite": "Death",
-    "synergy": [
-      "Renewal",
-      "Water",
-      "Earth",
-      "Blood",
-      "Sun"
-    ],
-    "image_prompt": "An ethereal essence orb representing Life. Visual style: Common magic, glowing with Biological, Vitality, Nature energy. The essence of living things."
-  },
-  {
-    "name": "Death",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Abstract",
-      "End",
-      "Macabre"
-    ],
-    "description": "The essence of the end.",
-    "opposite": "Life",
-    "synergy": [
-      "Dark",
-      "Blood",
-      "Sin",
-      "Moon",
-      "Balance"
-    ],
-    "image_prompt": "An ethereal essence orb representing Death. Visual style: Rare magic, glowing with Abstract, End, Macabre energy. The essence of the end."
-  },
-  {
-    "name": "Balance",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Abstract",
-      "Equilibrium"
-    ],
-    "description": "The essence of equality.",
-    "opposite": "Potent",
-    "synergy": [
-      "Life",
-      "Death",
-      "Sun",
-      "Moon",
-      "Light",
-      "Dark"
-    ],
-    "image_prompt": "An ethereal essence orb representing Balance. Visual style: Rare magic, glowing with Abstract, Equilibrium energy. The essence of equality."
-  },
-  {
-    "name": "Dragon",
-    "type": "Base",
-    "rarity": "Epic",
-    "tags": [
-      "Biological",
-      "Mythic",
-      "Power"
-    ],
-    "description": "The essence of the great drakes.",
-    "opposite": "None",
-    "synergy": [
-      "Sun",
-      "Moon",
-      "Fire",
-      "Potent",
-      "Wing"
-    ],
-    "image_prompt": "An ethereal essence orb representing Dragon. Visual style: Epic magic, glowing with Biological, Mythic, Power energy. The essence of the great drakes."
-  },
-  {
-    "name": "Sun",
-    "type": "Base",
-    "rarity": "Epic",
-    "tags": [
-      "Celestial",
-      "Light",
-      "Heat",
-      "Star"
-    ],
-    "description": "The essence of the sun.",
-    "opposite": "Moon",
-    "synergy": [
-      "Light",
-      "Fire",
-      "Dragon",
-      "Potent",
-      "Life"
-    ],
-    "image_prompt": "An ethereal essence orb representing Sun. Visual style: Epic magic, glowing with Celestial, Light, Heat, Star energy. The essence of the sun."
-  },
-  {
-    "name": "Moon",
-    "type": "Base",
-    "rarity": "Epic",
-    "tags": [
-      "Celestial",
-      "Night",
-      "Tides"
-    ],
-    "description": "The essence of the moon.",
-    "opposite": "Sun",
-    "synergy": [
-      "Dark",
-      "Water",
-      "Dragon",
-      "Dimension",
-      "Death"
-    ],
-    "image_prompt": "An ethereal essence orb representing Moon. Visual style: Epic magic, glowing with Celestial, Night, Tides energy. The essence of the moon."
-  },
-  {
-    "name": "Void",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Abstract",
-      "Empty",
-      "Null",
-      "Space"
-    ],
-    "description": "The essence of nothingness.",
-    "opposite": "Mana",
-    "synergy": [
-      "Dark",
-      "Dimension",
-      "Death",
-      "Chaos"
-    ],
-    "image_prompt": "An ethereal essence orb representing Void. Visual style: Rare magic, glowing with Abstract, Empty, Null, Space energy. The essence of nothingness."
-  },
-  {
-    "name": "Chaos",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Abstract",
-      "Disorder",
-      "Entropy"
-    ],
-    "description": "The essence of randomness and disorder.",
-    "opposite": "Knowledge",
-    "synergy": [
-      "Void",
-      "Fire",
-      "Lightning",
-      "Sin",
-      "Doom"
-    ],
-    "image_prompt": "An ethereal essence orb representing Chaos. Visual style: Rare magic, glowing with Abstract, Disorder, Entropy energy. The essence of randomness and disorder."
-  },
-  {
-    "name": "Nature",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Biological",
-      "Plants",
-      "Growth"
-    ],
-    "description": "The essence of the natural world.",
-    "opposite": "Technology",
-    "synergy": [
-      "Life",
-      "Earth",
-      "Water",
-      "Sun",
-      "Renewal"
-    ],
-    "image_prompt": "An ethereal essence orb representing Nature. Visual style: Common magic, glowing with Biological, Plants, Growth energy. The essence of the natural world."
-  },
-  {
-    "name": "Doom",
-    "type": "Base",
-    "rarity": "Epic",
-    "tags": [
-      "Abstract",
-      "Fate",
-      "Destruction"
-    ],
-    "description": "The essence of inevitable end.",
-    "opposite": "Hope",
-    "synergy": [
-      "Death",
-      "Sin",
-      "Dark",
-      "Chaos",
-      "Fire"
-    ],
-    "image_prompt": "An ethereal essence orb representing Doom. Visual style: Epic magic, glowing with Abstract, Fate, Destruction energy. The essence of inevitable end."
-  },
-  {
-    "name": "Hope",
-    "type": "Base",
-    "rarity": "Epic",
-    "tags": [
-      "Abstract",
-      "Emotion",
-      "Future"
-    ],
-    "description": "The essence of belief in a better future.",
-    "opposite": "Doom",
-    "synergy": [
-      "Light",
-      "Life",
-      "Renewal",
-      "Sun",
-      "Balance"
-    ],
-    "image_prompt": "An ethereal essence orb representing Hope. Visual style: Epic magic, glowing with Abstract, Emotion, Future energy. The essence of belief in a better future."
-  },
-  {
-    "name": "Sound",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Physical",
-      "Vibration",
-      "Wave"
-    ],
-    "description": "The essence of sound and vibration.",
-    "opposite": "Silence",
-    "synergy": [
-      "Air",
-      "Wind",
-      "Void",
-      "Thunder"
-    ],
-    "image_prompt": "An ethereal essence orb representing Sound. Visual style: Common magic, glowing with Physical, Vibration, Wave energy. The essence of sound and vibration."
-  },
-  {
-    "name": "Time",
-    "type": "Base",
-    "rarity": "Legendary",
-    "tags": [
-      "Abstract",
-      "Temporal",
-      "Chronology"
-    ],
-    "description": "The essence of time itself.",
-    "opposite": "Dimension",
-    "synergy": [
-      "Dimension",
-      "Void",
-      "Balance",
-      "Chaos"
-    ],
-    "image_prompt": "An ethereal essence orb representing Time. Visual style: Legendary magic, glowing with Abstract, Temporal, Chronology energy. The essence of time itself."
-  },
-  {
-    "name": "Ice",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Cold",
-      "Solid",
-      "Water"
-    ],
-    "description": "The essence of cold and freezing.",
-    "opposite": "Fire",
-    "synergy": [
-      "Water",
-      "Earth",
-      "Air",
-      "Iron",
-      "Shield"
-    ],
-    "image_prompt": "An ethereal essence orb representing Ice. Visual style: Common magic, glowing with Elemental, Cold, Solid, Water energy. The essence of cold and freezing."
-  },
-  {
-    "name": "Poison",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Biological",
-      "Toxin",
-      "Death",
-      "Liquid"
-    ],
-    "description": "The essence of toxicity and venom.",
-    "opposite": "Renewal",
-    "synergy": [
-      "Death",
-      "Water",
-      "Nature",
-      "Blood",
-      "Dark"
-    ],
-    "image_prompt": "An ethereal essence orb representing Poison. Visual style: Uncommon magic, glowing with Biological, Toxin, Death, Liquid energy. The essence of toxicity and venom."
-  },
-  {
-    "name": "Acid",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Elemental",
-      "Liquid",
-      "Corrosion",
-      "Chemical"
-    ],
-    "description": "The essence of corrosive fluids.",
-    "opposite": "Iron",
-    "synergy": [
-      "Water",
-      "Poison",
-      "Earth",
-      "Death"
-    ],
-    "image_prompt": "An ethereal essence orb representing Acid. Visual style: Uncommon magic, glowing with Elemental, Liquid, Corrosion, Chemical energy. The essence of corrosive fluids."
-  },
-  {
-    "name": "Crystal",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Solid",
-      "Structure",
-      "Refraction"
-    ],
-    "description": "The essence of ordered structure and gems.",
-    "opposite": "Sound",
-    "synergy": [
-      "Earth",
-      "Light",
-      "Ice",
-      "Iron",
-      "Order"
-    ],
-    "image_prompt": "An ethereal essence orb representing Crystal. Visual style: Common magic, glowing with Elemental, Solid, Structure, Refraction energy. The essence of ordered structure and gems."
-  },
-  {
-    "name": "Gravity",
-    "type": "Base",
-    "rarity": "Epic",
-    "tags": [
-      "Fundamental",
-      "Force",
-      "Weight",
-      "Attraction"
-    ],
-    "description": "The essence of gravitational pull.",
-    "opposite": "Wing",
-    "synergy": [
-      "Earth",
-      "Void",
-      "Star",
-      "Moon",
-      "Sun"
-    ],
-    "image_prompt": "An ethereal essence orb representing Gravity. Visual style: Epic magic, glowing with Fundamental, Force, Weight, Attraction energy. The essence of gravitational pull."
-  },
-  {
-    "name": "Dream",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Abstract",
-      "Mind",
-      "Illusion",
-      "Sleep"
-    ],
-    "description": "The essence of the subconscious.",
-    "opposite": "Iron",
-    "synergy": [
-      "Moon",
-      "Dark",
-      "Knowledge",
-      "Dimension",
-      "Chaos"
-    ],
-    "image_prompt": "An ethereal essence orb representing Dream. Visual style: Rare magic, glowing with Abstract, Mind, Illusion, Sleep energy. The essence of the subconscious."
-  },
-  {
-    "name": "Sand",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Solid",
-      "Flow",
-      "Desiccation"
-    ],
-    "description": "The essence of erosion and granules.",
-    "opposite": "Water",
-    "synergy": [
-      "Earth",
-      "Wind",
-      "Time",
-      "Heat"
-    ],
-    "image_prompt": "An ethereal essence orb representing Sand. Visual style: Common magic, glowing with Elemental, Solid, Flow, Desiccation energy. The essence of erosion and granules."
-  },
-  {
-    "name": "Steam",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Elemental",
-      "Gas",
-      "Heat",
-      "Pressure"
-    ],
-    "description": "The essence of heated vapor.",
-    "opposite": "Ice",
-    "synergy": [
-      "Water",
-      "Fire",
-      "Air",
-      "Technology",
-      "Cloud"
-    ],
-    "image_prompt": "An ethereal essence orb representing Steam. Visual style: Uncommon magic, glowing with Elemental, Gas, Heat, Pressure energy. The essence of heated vapor."
-  },
-  {
-    "name": "Flesh",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Physical",
-      "Biological",
-      "Body",
-      "Mutation"
-    ],
-    "description": "The essence of muscle and tissue.",
-    "opposite": "Spirit",
-    "synergy": [
-      "Blood",
-      "Bone",
-      "Life",
-      "Might",
-      "Renewal"
-    ],
-    "image_prompt": "An ethereal essence orb representing Flesh. Visual style: Uncommon magic, glowing with Physical, Biological, Body, Mutation energy. The essence of muscle and tissue."
-  },
-  {
-    "name": "Glass",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Solid",
-      "Sharp",
-      "Transparent"
-    ],
-    "description": "The essence of amorphous solid and clarity.",
-    "opposite": "Stone",
-    "synergy": [
-      "Fire",
-      "Sand",
-      "Light",
-      "Crystal"
-    ],
-    "image_prompt": "An ethereal essence orb representing Glass. Visual style: Common magic, glowing with Elemental, Solid, Sharp, Transparent energy."
-  },
-  {
-    "name": "Fungus",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Biological",
-      "Decay",
-      "Growth",
-      "Spore"
-    ],
-    "description": "The essence of fungal life and decay.",
-    "opposite": "Fire",
-    "synergy": [
-      "Nature",
-      "Death",
-      "Poison",
-      "Dark"
-    ],
-    "image_prompt": "An ethereal essence orb representing Fungus. Visual style: Common magic, glowing with Biological, Decay, Growth, Spore energy."
-  },
-  {
-    "name": "Rot",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Biological",
-      "Decay",
-      "Death",
-      "Entropy"
-    ],
-    "description": "The essence of advanced decomposition.",
-    "opposite": "Renewal",
-    "synergy": [
-      "Fungus",
-      "Death",
-      "Poison",
-      "Earth"
-    ],
-    "image_prompt": "An ethereal essence orb representing Rot. Visual style: Rare magic, glowing with Biological, Decay, Death, Entropy energy. The essence of advanced decomposition."
-  },
-  {
-    "name": "Spirit",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Abstract",
-      "Soul",
-      "Will",
-      "Consciousness"
-    ],
-    "description": "The essence of the soul and willpower.",
-    "opposite": "Flesh",
-    "synergy": [
-      "Mind",
-      "Light",
-      "Life",
-      "Mana"
-    ],
-    "image_prompt": "An ethereal essence orb representing Spirit. Visual style: Rare magic, glowing with Abstract, Soul, Will, Consciousness energy. The essence of the soul and willpower."
-  },
-  {
-    "name": "Coral",
-    "type": "Base",
-    "rarity": "Uncommon",
-    "tags": [
-      "Biological",
-      "Solid",
-      "Sea",
-      "Structure"
-    ],
-    "description": "The essence of living stone.",
-    "opposite": "Fire",
-    "synergy": [
-      "Water",
-      "Life",
-      "Earth",
-      "Shield"
-    ],
-    "image_prompt": "An ethereal essence orb representing Coral. Visual style: Uncommon magic, glowing with Biological, Solid, Sea, Structure energy. The essence of living stone."
-  },
-  {
-    "name": "Pressure",
-    "type": "Base",
-    "rarity": "Rare",
-    "tags": [
-      "Physical",
-      "Force",
-      "Weight",
-      "Depth"
-    ],
-    "description": "The essence of crushing weight.",
-    "opposite": "Air",
-    "synergy": [
-      "Water",
-      "Gravity",
-      "Earth",
-      "Dark"
-    ],
-    "image_prompt": "An ethereal essence orb representing Pressure. Visual style: Rare magic, glowing with Physical, Force, Weight, Depth energy. The essence of crushing weight."
-  },
-  {
-    "name": "Cloud",
-    "type": "Base",
-    "rarity": "Common",
-    "tags": [
-      "Elemental",
-      "Gas",
-      "Weather"
-    ],
-    "description": "The essence of condensed vapor.",
-    "opposite": "Earth",
-    "synergy": [
-      "Air",
-      "Water",
-      "Lightning",
-      "Steam"
-    ],
-    "image_prompt": "An ethereal essence orb representing Cloud. Visual style: Common magic, glowing with Elemental, Gas, Weather energy. The essence of condensed vapor."
-  },
-  {
-    "name": "Star",
-    "type": "Base",
-    "rarity": "Epic",
-    "tags": [
-      "Celestial",
-      "Light",
-      "Heat",
-      "Distance"
-    ],
-    "description": "The essence of distant suns.",
-    "opposite": "Void",
-    "synergy": [
-      "Sun",
-      "Light",
-      "Fire",
-      "Gravity",
-      "Dimension"
-    ],
-    "image_prompt": "An ethereal essence orb representing Star. Visual style: Epic magic, glowing with Celestial, Light, Heat, Distance energy. The essence of distant suns."
-  }
+    {
+        "name": "Sword",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Weapon",
+            "Blade",
+            "Combat"
+        ],
+        "description": "The essence of the blade.",
+        "opposite": "Shield",
+        "synergy": [
+            "Might",
+            "Swift",
+            "Iron",
+            "Battle"
+        ],
+        "image_prompt": "An ethereal essence orb representing Sword. Visual style: Common magic, glowing with Physical, Weapon, Blade, Combat energy. The essence of the blade."
+    },
+    {
+        "name": "Shield",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Armor",
+            "Defense",
+            "Protection"
+        ],
+        "description": "The essence of defense and blocking.",
+        "opposite": "Sword",
+        "synergy": [
+            "Iron",
+            "Earth",
+            "Armor",
+            "Life"
+        ],
+        "image_prompt": "An ethereal essence orb representing Shield. Visual style: Common magic, glowing with Physical, Armor, Defense, Protection energy. The essence of defense and blocking."
+    },
+    {
+        "name": "Mana",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Abstract",
+            "Magic",
+            "Energy",
+            "Power"
+        ],
+        "description": "The essence of raw magical energy.",
+        "opposite": "Void",
+        "synergy": [
+            "Potent",
+            "Fire",
+            "Water",
+            "Air",
+            "Earth",
+            "Light",
+            "Dark"
+        ],
+        "image_prompt": "An ethereal essence orb representing Mana. Visual style: Common magic, glowing with Abstract, Magic, Energy, Power energy. The essence of raw magical energy."
+    },
+    {
+        "name": "Knowledge",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Abstract",
+            "Mind",
+            "Information",
+            "Learning"
+        ],
+        "description": "The essence of understanding and lore.",
+        "opposite": "Chaos",
+        "synergy": [
+            "Mana",
+            "Dimension",
+            "Light",
+            "Technology"
+        ],
+        "image_prompt": "An ethereal essence orb representing Knowledge. Visual style: Uncommon magic, glowing with Abstract, Mind, Information, Learning energy. The essence of understanding and lore."
+    },
+    {
+        "name": "Fire",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Heat",
+            "Energy",
+            "Destruction"
+        ],
+        "description": "The essence of combustion and heat.",
+        "opposite": "Water",
+        "synergy": [
+            "Earth",
+            "Air",
+            "Potent",
+            "Renewal",
+            "Wing",
+            "Light"
+        ],
+        "image_prompt": "An ethereal essence orb representing Fire. Visual style: Common magic, glowing with Elemental, Heat, Energy, Destruction energy. The essence of combustion and heat."
+    },
+    {
+        "name": "Water",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Liquid",
+            "Flow",
+            "Life"
+        ],
+        "description": "The essence of fluidity and life.",
+        "opposite": "Fire",
+        "synergy": [
+            "Earth",
+            "Life",
+            "Renewal",
+            "Dark",
+            "Moon"
+        ],
+        "image_prompt": "An ethereal essence orb representing Water. Visual style: Common magic, glowing with Elemental, Liquid, Flow, Life energy. The essence of fluidity and life."
+    },
+    {
+        "name": "Earth",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Solid",
+            "Defense",
+            "Nature"
+        ],
+        "description": "The essence of stability and stone.",
+        "opposite": "Air",
+        "synergy": [
+            "Fire",
+            "Iron",
+            "Potent",
+            "Life",
+            "Armor"
+        ],
+        "image_prompt": "An ethereal essence orb representing Earth. Visual style: Common magic, glowing with Elemental, Solid, Defense, Nature energy. The essence of stability and stone."
+    },
+    {
+        "name": "Air",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Gas",
+            "Movement",
+            "Wind"
+        ],
+        "description": "The essence of wind and atmosphere.",
+        "opposite": "Earth",
+        "synergy": [
+            "Fire",
+            "Lightning",
+            "Swift",
+            "Wing",
+            "Dimension"
+        ],
+        "image_prompt": "An ethereal essence orb representing Air. Visual style: Common magic, glowing with Elemental, Gas, Movement, Wind energy. The essence of wind and atmosphere."
+    },
+    {
+        "name": "Might",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Strength",
+            "Force",
+            "Body"
+        ],
+        "description": "The essence of physical power.",
+        "opposite": "Directed",
+        "synergy": [
+            "Swift",
+            "Iron",
+            "Potent",
+            "Armor",
+            "Light"
+        ],
+        "image_prompt": "An ethereal essence orb representing Might. Visual style: Common magic, glowing with Physical, Strength, Force, Body energy. The essence of physical power."
+    },
+    {
+        "name": "Swift",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Speed",
+            "Velocity",
+            "Reaction"
+        ],
+        "description": "The essence of speed.",
+        "opposite": "Iron",
+        "synergy": [
+            "Might",
+            "Wind",
+            "Lightning",
+            "Directed",
+            "Wing"
+        ],
+        "image_prompt": "An ethereal essence orb representing Swift. Visual style: Common magic, glowing with Physical, Speed, Velocity, Reaction energy. The essence of speed."
+    },
+    {
+        "name": "Potent",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Abstract",
+            "Power",
+            "Amplification",
+            "Energy"
+        ],
+        "description": "The essence of raw power and intensity.",
+        "opposite": "Balance",
+        "synergy": [
+            "Fire",
+            "Earth",
+            "Might",
+            "Sun",
+            "Dragon"
+        ],
+        "image_prompt": "An ethereal essence orb representing Potent. Visual style: Uncommon magic, glowing with Abstract, Power, Amplification, Energy energy. The essence of raw power and intensity."
+    },
+    {
+        "name": "Dark",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Abstract",
+            "Shadow",
+            "Concealment",
+            "Negative"
+        ],
+        "description": "The essence of darkness and shadow.",
+        "opposite": "Light",
+        "synergy": [
+            "Blood",
+            "Sin",
+            "Death",
+            "Moon",
+            "Dimension"
+        ],
+        "image_prompt": "An ethereal essence orb representing Dark. Visual style: Rare magic, glowing with Abstract, Shadow, Concealment, Negative energy. The essence of darkness and shadow."
+    },
+    {
+        "name": "Blood",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Physical",
+            "Biological",
+            "Vitality",
+            "Liquid",
+            "Macabre"
+        ],
+        "description": "The essence of lifeblood.",
+        "opposite": "Technology",
+        "synergy": [
+            "Dark",
+            "Sin",
+            "Life",
+            "Death",
+            "Renewal"
+        ],
+        "image_prompt": "An ethereal essence orb representing Blood. Visual style: Rare magic, glowing with Physical, Biological, Vitality, Liquid, Macabre energy. The essence of lifeblood."
+    },
+    {
+        "name": "Sin",
+        "type": "Base",
+        "rarity": "Legendary",
+        "tags": [
+            "Abstract",
+            "Concept",
+            "Corruption",
+            "Judgment"
+        ],
+        "description": "The essence of transgression.",
+        "opposite": "Balance",
+        "synergy": [
+            "Dark",
+            "Blood",
+            "Doom",
+            "Fire",
+            "Potent"
+        ],
+        "image_prompt": "An ethereal essence orb representing Sin. Visual style: Legendary magic, glowing with Abstract, Concept, Corruption, Judgment energy. The essence of transgression."
+    },
+    {
+        "name": "Dimension",
+        "type": "Base",
+        "rarity": "Epic",
+        "tags": [
+            "Abstract",
+            "Space",
+            "Reality",
+            "Travel"
+        ],
+        "description": "The essence of spatial dimensions.",
+        "opposite": "Earth",
+        "synergy": [
+            "Air",
+            "Light",
+            "Dark",
+            "Moon",
+            "Sun"
+        ],
+        "image_prompt": "An ethereal essence orb representing Dimension. Visual style: Epic magic, glowing with Abstract, Space, Reality, Travel energy. The essence of spatial dimensions."
+    },
+    {
+        "name": "Iron",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Physical",
+            "Metal",
+            "Hardness",
+            "Defense"
+        ],
+        "description": "The essence of metal.",
+        "opposite": "Swift",
+        "synergy": [
+            "Earth",
+            "Might",
+            "Technology",
+            "Armor",
+            "Lightning"
+        ],
+        "image_prompt": "An ethereal essence orb representing Iron. Visual style: Uncommon magic, glowing with Physical, Metal, Hardness, Defense energy. The essence of metal."
+    },
+    {
+        "name": "Lightning",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Elemental",
+            "Electricity",
+            "Speed",
+            "Energy"
+        ],
+        "description": "The essence of storm and electricity.",
+        "opposite": "Earth",
+        "synergy": [
+            "Air",
+            "Swift",
+            "Iron",
+            "Technology",
+            "Sun"
+        ],
+        "image_prompt": "An ethereal essence orb representing Lightning. Visual style: Uncommon magic, glowing with Elemental, Electricity, Speed, Energy energy. The essence of storm and electricity."
+    },
+    {
+        "name": "Technology",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Artificial",
+            "Machinery",
+            "Logic"
+        ],
+        "description": "The essence of machines and invention.",
+        "opposite": "Nature",
+        "synergy": [
+            "Gun",
+            "Armor",
+            "Iron",
+            "Lightning",
+            "Directed"
+        ],
+        "image_prompt": "An ethereal essence orb representing Technology. Visual style: Uncommon magic, glowing with Artificial, Machinery, Logic energy. The essence of machines and invention."
+    },
+    {
+        "name": "Renewal",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Recovery",
+            "Life",
+            "Healing"
+        ],
+        "description": "The essence of rebirth and healing.",
+        "opposite": "Death",
+        "synergy": [
+            "Life",
+            "Water",
+            "Fire",
+            "Wing",
+            "Light"
+        ],
+        "image_prompt": "An ethereal essence orb representing Renewal. Visual style: Uncommon magic, glowing with Recovery, Life, Healing energy. The essence of rebirth and healing."
+    },
+    {
+        "name": "Wing",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Flight",
+            "Air"
+        ],
+        "description": "The essence of flight.",
+        "opposite": "Earth",
+        "synergy": [
+            "Air",
+            "Swift",
+            "Fire",
+            "Renewal",
+            "Dragon"
+        ],
+        "image_prompt": "An ethereal essence orb representing Wing. Visual style: Common magic, glowing with Physical, Flight, Air energy. The essence of flight."
+    },
+    {
+        "name": "Light",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Abstract",
+            "Illumination",
+            "Holy",
+            "Vision"
+        ],
+        "description": "The essence of light.",
+        "opposite": "Dark",
+        "synergy": [
+            "Sun",
+            "Fire",
+            "Might",
+            "Swift",
+            "Renewal"
+        ],
+        "image_prompt": "An ethereal essence orb representing Light. Visual style: Rare magic, glowing with Abstract, Illumination, Holy, Vision energy. The essence of light."
+    },
+    {
+        "name": "Wind",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Gas",
+            "Movement"
+        ],
+        "description": "The essence of moving air.",
+        "opposite": "Earth",
+        "synergy": [
+            "Air",
+            "Swift",
+            "Directed",
+            "Lightning",
+            "Wing"
+        ],
+        "image_prompt": "An ethereal essence orb representing Wind. Visual style: Common magic, glowing with Elemental, Gas, Movement energy. The essence of moving air."
+    },
+    {
+        "name": "Directed",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Abstract",
+            "Focus",
+            "Aim"
+        ],
+        "description": "The essence of precision.",
+        "opposite": "Might",
+        "synergy": [
+            "Gun",
+            "Swift",
+            "Wind",
+            "Technology",
+            "Potent"
+        ],
+        "image_prompt": "An ethereal essence orb representing Directed. Visual style: Uncommon magic, glowing with Abstract, Focus, Aim energy. The essence of precision."
+    },
+    {
+        "name": "Gun",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Artificial",
+            "Weapon",
+            "Ranged"
+        ],
+        "description": "The essence of firearms.",
+        "opposite": "Shield",
+        "synergy": [
+            "Technology",
+            "Armor",
+            "Directed",
+            "Iron",
+            "Fire"
+        ],
+        "image_prompt": "An ethereal essence orb representing Gun. Visual style: Uncommon magic, glowing with Artificial, Weapon, Ranged energy. The essence of firearms."
+    },
+    {
+        "name": "Armor",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Defense",
+            "Protection"
+        ],
+        "description": "The essence of protection.",
+        "opposite": "Gun",
+        "synergy": [
+            "Iron",
+            "Technology",
+            "Earth",
+            "Might",
+            "Shield"
+        ],
+        "image_prompt": "An ethereal essence orb representing Armor. Visual style: Common magic, glowing with Physical, Defense, Protection energy. The essence of protection."
+    },
+    {
+        "name": "Life",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Biological",
+            "Vitality",
+            "Nature"
+        ],
+        "description": "The essence of living things.",
+        "opposite": "Death",
+        "synergy": [
+            "Renewal",
+            "Water",
+            "Earth",
+            "Blood",
+            "Sun"
+        ],
+        "image_prompt": "An ethereal essence orb representing Life. Visual style: Common magic, glowing with Biological, Vitality, Nature energy. The essence of living things."
+    },
+    {
+        "name": "Death",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Abstract",
+            "End",
+            "Macabre"
+        ],
+        "description": "The essence of the end.",
+        "opposite": "Life",
+        "synergy": [
+            "Dark",
+            "Blood",
+            "Sin",
+            "Moon",
+            "Balance"
+        ],
+        "image_prompt": "An ethereal essence orb representing Death. Visual style: Rare magic, glowing with Abstract, End, Macabre energy. The essence of the end."
+    },
+    {
+        "name": "Balance",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Abstract",
+            "Equilibrium"
+        ],
+        "description": "The essence of equality.",
+        "opposite": "Potent",
+        "synergy": [
+            "Life",
+            "Death",
+            "Sun",
+            "Moon",
+            "Light",
+            "Dark"
+        ],
+        "image_prompt": "An ethereal essence orb representing Balance. Visual style: Rare magic, glowing with Abstract, Equilibrium energy. The essence of equality."
+    },
+    {
+        "name": "Dragon",
+        "type": "Base",
+        "rarity": "Epic",
+        "tags": [
+            "Biological",
+            "Mythic",
+            "Power"
+        ],
+        "description": "The essence of the great drakes.",
+        "opposite": "None",
+        "synergy": [
+            "Sun",
+            "Moon",
+            "Fire",
+            "Potent",
+            "Wing"
+        ],
+        "image_prompt": "An ethereal essence orb representing Dragon. Visual style: Epic magic, glowing with Biological, Mythic, Power energy. The essence of the great drakes."
+    },
+    {
+        "name": "Sun",
+        "type": "Base",
+        "rarity": "Epic",
+        "tags": [
+            "Celestial",
+            "Light",
+            "Heat",
+            "Star"
+        ],
+        "description": "The essence of the sun.",
+        "opposite": "Moon",
+        "synergy": [
+            "Light",
+            "Fire",
+            "Dragon",
+            "Potent",
+            "Life"
+        ],
+        "image_prompt": "An ethereal essence orb representing Sun. Visual style: Epic magic, glowing with Celestial, Light, Heat, Star energy. The essence of the sun."
+    },
+    {
+        "name": "Moon",
+        "type": "Base",
+        "rarity": "Epic",
+        "tags": [
+            "Celestial",
+            "Night",
+            "Tides"
+        ],
+        "description": "The essence of the moon.",
+        "opposite": "Sun",
+        "synergy": [
+            "Dark",
+            "Water",
+            "Dragon",
+            "Dimension",
+            "Death"
+        ],
+        "image_prompt": "An ethereal essence orb representing Moon. Visual style: Epic magic, glowing with Celestial, Night, Tides energy. The essence of the moon."
+    },
+    {
+        "name": "Void",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Abstract",
+            "Empty",
+            "Null",
+            "Space"
+        ],
+        "description": "The essence of nothingness.",
+        "opposite": "Mana",
+        "synergy": [
+            "Dark",
+            "Dimension",
+            "Death",
+            "Chaos"
+        ],
+        "image_prompt": "An ethereal essence orb representing Void. Visual style: Rare magic, glowing with Abstract, Empty, Null, Space energy. The essence of nothingness."
+    },
+    {
+        "name": "Chaos",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Abstract",
+            "Disorder",
+            "Entropy"
+        ],
+        "description": "The essence of randomness and disorder.",
+        "opposite": "Knowledge",
+        "synergy": [
+            "Void",
+            "Fire",
+            "Lightning",
+            "Sin",
+            "Doom"
+        ],
+        "image_prompt": "An ethereal essence orb representing Chaos. Visual style: Rare magic, glowing with Abstract, Disorder, Entropy energy. The essence of randomness and disorder."
+    },
+    {
+        "name": "Nature",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Biological",
+            "Plants",
+            "Growth"
+        ],
+        "description": "The essence of the natural world.",
+        "opposite": "Technology",
+        "synergy": [
+            "Life",
+            "Earth",
+            "Water",
+            "Sun",
+            "Renewal"
+        ],
+        "image_prompt": "An ethereal essence orb representing Nature. Visual style: Common magic, glowing with Biological, Plants, Growth energy. The essence of the natural world."
+    },
+    {
+        "name": "Doom",
+        "type": "Base",
+        "rarity": "Epic",
+        "tags": [
+            "Abstract",
+            "Fate",
+            "Destruction"
+        ],
+        "description": "The essence of inevitable end.",
+        "opposite": "Hope",
+        "synergy": [
+            "Death",
+            "Sin",
+            "Dark",
+            "Chaos",
+            "Fire"
+        ],
+        "image_prompt": "An ethereal essence orb representing Doom. Visual style: Epic magic, glowing with Abstract, Fate, Destruction energy. The essence of inevitable end."
+    },
+    {
+        "name": "Hope",
+        "type": "Base",
+        "rarity": "Epic",
+        "tags": [
+            "Abstract",
+            "Emotion",
+            "Future"
+        ],
+        "description": "The essence of belief in a better future.",
+        "opposite": "Doom",
+        "synergy": [
+            "Light",
+            "Life",
+            "Renewal",
+            "Sun",
+            "Balance"
+        ],
+        "image_prompt": "An ethereal essence orb representing Hope. Visual style: Epic magic, glowing with Abstract, Emotion, Future energy. The essence of belief in a better future."
+    },
+    {
+        "name": "Sound",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Vibration",
+            "Wave"
+        ],
+        "description": "The essence of sound and vibration.",
+        "opposite": "Silence",
+        "synergy": [
+            "Air",
+            "Wind",
+            "Void",
+            "Thunder"
+        ],
+        "image_prompt": "An ethereal essence orb representing Sound. Visual style: Common magic, glowing with Physical, Vibration, Wave energy. The essence of sound and vibration."
+    },
+    {
+        "name": "Time",
+        "type": "Base",
+        "rarity": "Legendary",
+        "tags": [
+            "Abstract",
+            "Temporal",
+            "Chronology"
+        ],
+        "description": "The essence of time itself.",
+        "opposite": "Dimension",
+        "synergy": [
+            "Dimension",
+            "Void",
+            "Balance",
+            "Chaos"
+        ],
+        "image_prompt": "An ethereal essence orb representing Time. Visual style: Legendary magic, glowing with Abstract, Temporal, Chronology energy. The essence of time itself."
+    },
+    {
+        "name": "Ice",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Cold",
+            "Solid",
+            "Water"
+        ],
+        "description": "The essence of cold and freezing.",
+        "opposite": "Fire",
+        "synergy": [
+            "Water",
+            "Earth",
+            "Air",
+            "Iron",
+            "Shield"
+        ],
+        "image_prompt": "An ethereal essence orb representing Ice. Visual style: Common magic, glowing with Elemental, Cold, Solid, Water energy. The essence of cold and freezing."
+    },
+    {
+        "name": "Poison",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Biological",
+            "Toxin",
+            "Death",
+            "Liquid"
+        ],
+        "description": "The essence of toxicity and venom.",
+        "opposite": "Renewal",
+        "synergy": [
+            "Death",
+            "Water",
+            "Nature",
+            "Blood",
+            "Dark"
+        ],
+        "image_prompt": "An ethereal essence orb representing Poison. Visual style: Uncommon magic, glowing with Biological, Toxin, Death, Liquid energy. The essence of toxicity and venom."
+    },
+    {
+        "name": "Acid",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Elemental",
+            "Liquid",
+            "Corrosion",
+            "Chemical"
+        ],
+        "description": "The essence of corrosive fluids.",
+        "opposite": "Iron",
+        "synergy": [
+            "Water",
+            "Poison",
+            "Earth",
+            "Death"
+        ],
+        "image_prompt": "An ethereal essence orb representing Acid. Visual style: Uncommon magic, glowing with Elemental, Liquid, Corrosion, Chemical energy. The essence of corrosive fluids."
+    },
+    {
+        "name": "Crystal",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Solid",
+            "Structure",
+            "Refraction"
+        ],
+        "description": "The essence of ordered structure and gems.",
+        "opposite": "Sound",
+        "synergy": [
+            "Earth",
+            "Light",
+            "Ice",
+            "Iron",
+            "Order"
+        ],
+        "image_prompt": "An ethereal essence orb representing Crystal. Visual style: Common magic, glowing with Elemental, Solid, Structure, Refraction energy. The essence of ordered structure and gems."
+    },
+    {
+        "name": "Gravity",
+        "type": "Base",
+        "rarity": "Epic",
+        "tags": [
+            "Fundamental",
+            "Force",
+            "Weight",
+            "Attraction"
+        ],
+        "description": "The essence of gravitational pull.",
+        "opposite": "Wing",
+        "synergy": [
+            "Earth",
+            "Void",
+            "Star",
+            "Moon",
+            "Sun"
+        ],
+        "image_prompt": "An ethereal essence orb representing Gravity. Visual style: Epic magic, glowing with Fundamental, Force, Weight, Attraction energy. The essence of gravitational pull."
+    },
+    {
+        "name": "Dream",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Abstract",
+            "Mind",
+            "Illusion",
+            "Sleep"
+        ],
+        "description": "The essence of the subconscious.",
+        "opposite": "Iron",
+        "synergy": [
+            "Moon",
+            "Dark",
+            "Knowledge",
+            "Dimension",
+            "Chaos"
+        ],
+        "image_prompt": "An ethereal essence orb representing Dream. Visual style: Rare magic, glowing with Abstract, Mind, Illusion, Sleep energy. The essence of the subconscious."
+    },
+    {
+        "name": "Sand",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Solid",
+            "Flow",
+            "Desiccation"
+        ],
+        "description": "The essence of erosion and granules.",
+        "opposite": "Water",
+        "synergy": [
+            "Earth",
+            "Wind",
+            "Time",
+            "Heat"
+        ],
+        "image_prompt": "An ethereal essence orb representing Sand. Visual style: Common magic, glowing with Elemental, Solid, Flow, Desiccation energy. The essence of erosion and granules."
+    },
+    {
+        "name": "Steam",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Elemental",
+            "Gas",
+            "Heat",
+            "Pressure"
+        ],
+        "description": "The essence of heated vapor.",
+        "opposite": "Ice",
+        "synergy": [
+            "Water",
+            "Fire",
+            "Air",
+            "Technology",
+            "Cloud"
+        ],
+        "image_prompt": "An ethereal essence orb representing Steam. Visual style: Uncommon magic, glowing with Elemental, Gas, Heat, Pressure energy. The essence of heated vapor."
+    },
+    {
+        "name": "Flesh",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Physical",
+            "Biological",
+            "Body",
+            "Mutation"
+        ],
+        "description": "The essence of muscle and tissue.",
+        "opposite": "Spirit",
+        "synergy": [
+            "Blood",
+            "Bone",
+            "Life",
+            "Might",
+            "Renewal"
+        ],
+        "image_prompt": "An ethereal essence orb representing Flesh. Visual style: Uncommon magic, glowing with Physical, Biological, Body, Mutation energy. The essence of muscle and tissue."
+    },
+    {
+        "name": "Glass",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Solid",
+            "Sharp",
+            "Transparent"
+        ],
+        "description": "The essence of amorphous solid and clarity.",
+        "opposite": "Stone",
+        "synergy": [
+            "Fire",
+            "Sand",
+            "Light",
+            "Crystal"
+        ],
+        "image_prompt": "An ethereal essence orb representing Glass. Visual style: Common magic, glowing with Elemental, Solid, Sharp, Transparent energy."
+    },
+    {
+        "name": "Fungus",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Biological",
+            "Decay",
+            "Growth",
+            "Spore"
+        ],
+        "description": "The essence of fungal life and decay.",
+        "opposite": "Fire",
+        "synergy": [
+            "Nature",
+            "Death",
+            "Poison",
+            "Dark"
+        ],
+        "image_prompt": "An ethereal essence orb representing Fungus. Visual style: Common magic, glowing with Biological, Decay, Growth, Spore energy."
+    },
+    {
+        "name": "Rot",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Biological",
+            "Decay",
+            "Death",
+            "Entropy"
+        ],
+        "description": "The essence of advanced decomposition.",
+        "opposite": "Renewal",
+        "synergy": [
+            "Fungus",
+            "Death",
+            "Poison",
+            "Earth"
+        ],
+        "image_prompt": "An ethereal essence orb representing Rot. Visual style: Rare magic, glowing with Biological, Decay, Death, Entropy energy. The essence of advanced decomposition."
+    },
+    {
+        "name": "Spirit",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Abstract",
+            "Soul",
+            "Will",
+            "Consciousness"
+        ],
+        "description": "The essence of the soul and willpower.",
+        "opposite": "Flesh",
+        "synergy": [
+            "Mind",
+            "Light",
+            "Life",
+            "Mana"
+        ],
+        "image_prompt": "An ethereal essence orb representing Spirit. Visual style: Rare magic, glowing with Abstract, Soul, Will, Consciousness energy. The essence of the soul and willpower."
+    },
+    {
+        "name": "Coral",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Biological",
+            "Solid",
+            "Sea",
+            "Structure"
+        ],
+        "description": "The essence of living stone.",
+        "opposite": "Fire",
+        "synergy": [
+            "Water",
+            "Life",
+            "Earth",
+            "Shield"
+        ],
+        "image_prompt": "An ethereal essence orb representing Coral. Visual style: Uncommon magic, glowing with Biological, Solid, Sea, Structure energy. The essence of living stone."
+    },
+    {
+        "name": "Pressure",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Physical",
+            "Force",
+            "Weight",
+            "Depth"
+        ],
+        "description": "The essence of crushing weight.",
+        "opposite": "Air",
+        "synergy": [
+            "Water",
+            "Gravity",
+            "Earth",
+            "Dark"
+        ],
+        "image_prompt": "An ethereal essence orb representing Pressure. Visual style: Rare magic, glowing with Physical, Force, Weight, Depth energy. The essence of crushing weight."
+    },
+    {
+        "name": "Cloud",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Gas",
+            "Weather"
+        ],
+        "description": "The essence of condensed vapor.",
+        "opposite": "Earth",
+        "synergy": [
+            "Air",
+            "Water",
+            "Lightning",
+            "Steam"
+        ],
+        "image_prompt": "An ethereal essence orb representing Cloud. Visual style: Common magic, glowing with Elemental, Gas, Weather energy. The essence of condensed vapor."
+    },
+    {
+        "name": "Star",
+        "type": "Base",
+        "rarity": "Epic",
+        "tags": [
+            "Celestial",
+            "Light",
+            "Heat",
+            "Distance"
+        ],
+        "description": "The essence of distant suns.",
+        "opposite": "Void",
+        "synergy": [
+            "Sun",
+            "Light",
+            "Fire",
+            "Gravity",
+            "Dimension"
+        ],
+        "image_prompt": "An ethereal essence orb representing Star. Visual style: Epic magic, glowing with Celestial, Light, Heat, Distance energy. The essence of distant suns."
+    },
+    {
+        "name": "Bone",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Structure",
+            "Death",
+            "Solid"
+        ],
+        "description": "The essence of skeletal structure and calcification.",
+        "opposite": "Flesh",
+        "synergy": [
+            "Death",
+            "Earth",
+            "Armor",
+            "Structure"
+        ],
+        "image_prompt": "An ethereal essence orb representing Bone. Visual style: Common magic, glowing with Physical, Structure, Death, Solid energy."
+    },
+    {
+        "name": "Ink",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Abstract",
+            "Liquid",
+            "Creation",
+            "Communication"
+        ],
+        "description": "The essence of written word and symbols.",
+        "opposite": "Sound",
+        "synergy": [
+            "Knowledge",
+            "Water",
+            "Dark"
+        ],
+        "image_prompt": "An ethereal essence orb representing Ink. Visual style: Uncommon magic, glowing with black and glossy liquid energy."
+    },
+    {
+        "name": "Wax",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Solid",
+            "Preservation",
+            "Heat"
+        ],
+        "description": "The essence of candles and preservation.",
+        "opposite": "Fire",
+        "synergy": [
+            "Fire",
+            "Light",
+            "Earth",
+            "Time"
+        ],
+        "image_prompt": "An ethereal essence orb representing Wax. Visual style: Common magic, glowing with soft yellow and melting energy."
+    }
 ]
