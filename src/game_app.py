@@ -650,8 +650,44 @@ class GameApp:
              self.add_action_button("Find New Quests", self.show_available_quests)
 
         self.add_action_button("Quests", lambda: self.right_notebook.select(self.quest_tab))
+        self.add_action_button("Meditate", self.start_meditation)
         self.add_action_button("Rest (Save)", self.save_game_dialog)
         self.add_action_button("Main Menu", self.show_main_menu)
+
+    def start_meditation(self):
+        self.state = "MEDITATION"
+        self.clear_actions()
+        self.log("\n--- Entering Meditation ---", "info")
+        self.log("Regenerating Health, Mana, Stamina, Willpower...", "info")
+
+        self.add_action_button("Stop Meditating", self.stop_meditation)
+
+        # Reset counters or state for loop if needed
+        self.meditation_ticks = 0
+        self.meditation_loop()
+
+    def stop_meditation(self):
+        if self.state == "MEDITATION":
+            self.log("Meditation stopped.", "info")
+            self.enter_hub()
+
+    def meditation_loop(self):
+        if self.state != "MEDITATION":
+            return
+
+        gains = self.engine.meditate_tick()
+        self.update_status_display()
+
+        self.meditation_ticks += 1
+
+        # Log every 5 seconds (5 ticks)
+        if self.meditation_ticks % 5 == 0:
+            xp = gains.get('xp_gain', 0)
+            if xp > 0:
+                self.log(f"Meditating... (XP +{xp:.1f})", "gain")
+
+        # Schedule next tick (1 second = 1000ms)
+        self.root.after(1000, self.meditation_loop)
 
     def show_train_options(self):
         self.clear_actions()

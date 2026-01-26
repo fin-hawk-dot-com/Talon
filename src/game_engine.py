@@ -69,6 +69,39 @@ class GameEngine:
 
         return msg
 
+    def meditate_tick(self) -> dict:
+        if not self.character: return {}
+
+        # 2% Regen
+        h_gain = self.character.max_health * 0.02
+        m_gain = self.character.max_mana * 0.02
+        s_gain = self.character.max_stamina * 0.02
+        w_gain = self.character.max_willpower * 0.02
+
+        self.character.current_health = min(self.character.max_health, self.character.current_health + h_gain)
+        self.character.current_mana = min(self.character.max_mana, self.character.current_mana + m_gain)
+        self.character.current_stamina = min(self.character.max_stamina, self.character.current_stamina + s_gain)
+        self.character.current_willpower = min(self.character.max_willpower, self.character.current_willpower + w_gain)
+
+        # XP Gain based on Spirit
+        # E.g. 0.1 * Spirit. If Spirit is 10, gain 1 XP.
+        spirit = self.character.attributes.get("Spirit").value if "Spirit" in self.character.attributes else 10.0
+        xp_gain = max(0.1, spirit * 0.05)
+        self.character.current_xp += xp_gain
+
+        return {
+            "hp_gain": h_gain,
+            "mp_gain": m_gain,
+            "sp_gain": s_gain,
+            "wp_gain": w_gain,
+            "xp_gain": xp_gain,
+            "current_health": self.character.current_health,
+            "current_mana": self.character.current_mana,
+            "current_stamina": self.character.current_stamina,
+            "current_willpower": self.character.current_willpower,
+            "current_xp": self.character.current_xp
+        }
+
     def travel(self, location_name: str) -> str:
         if not self.character: return "No character."
 
