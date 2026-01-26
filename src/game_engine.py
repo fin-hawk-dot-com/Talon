@@ -3,7 +3,7 @@ import json
 import math
 import random
 import dataclasses
-from typing import List, Optional
+from typing import List, Optional, Union
 
 from src.models import Character, Attribute, Essence, Ability, AwakeningStone, QuestProgress, StatusEffect, Consumable, RANK_INDICES, RANKS
 from src.data_loader import DataLoader, DATA_DIR
@@ -46,13 +46,16 @@ class GameEngine:
         if loc and loc.type in ["City", "Village", "Outpost"]:
             is_safe = True
 
+        # Clear Status Effects
+        self.character.status_effects = []
+
         msg = ""
         if is_safe:
             self.character.current_health = self.character.max_health
             self.character.current_mana = self.character.max_mana
             self.character.current_stamina = self.character.max_stamina
             self.character.current_willpower = self.character.max_willpower
-            msg = f"Rested at {self.character.current_location}. Vitals fully restored."
+            msg = f"Rested at {self.character.current_location}. Vitals fully restored and effects cleared."
         else:
             # Wilderness Rest - Partial restore
             h_gain = self.character.max_health * 0.5
@@ -65,9 +68,77 @@ class GameEngine:
             self.character.current_stamina = min(self.character.max_stamina, self.character.current_stamina + s_gain)
             self.character.current_willpower = min(self.character.max_willpower, self.character.current_willpower + w_gain)
 
-            msg = f"Camped in the wilderness ({self.character.current_location}). Recovered some vitality."
+            msg = f"Camped in the wilderness ({self.character.current_location}). Recovered some vitality and cleared effects."
 
         return msg
+
+    def use_consumable(self, inventory_index: int) -> str:
+        if not self.character: return "No character."
+        if inventory_index < 0 or inventory_index >= len(self.character.inventory):
+            return "Invalid inventory index."
+
+        item = self.character.inventory[inventory_index]
+        if not isinstance(item, Consumable):
+            return "Item is not a consumable."
+
+        # Apply Effect
+        msg = f"Used {item.name}. "
+
+        if item.effect_type == "Heal":
+            restore = item.value
+            self.character.current_health = min(self.character.max_health, self.character.current_health + restore)
+            msg += f"Restored {restore} Health."
+        elif item.effect_type == "RestoreMana":
+            restore = item.value
+            self.character.current_mana = min(self.character.max_mana, self.character.current_mana + restore)
+            msg += f"Restored {restore} Mana."
+        elif item.effect_type == "Cure":
+             # Remove all negative effects? Or specific? For now, all debuffs.
+             new_effects = [e for e in self.character.status_effects if e.type == "Buff"]
+             removed_count = len(self.character.status_effects) - len(new_effects)
+             self.character.status_effects = new_effects
+             msg += f"Cured {removed_count} negative effects."
+        elif item.effect_type == "Buff":
+             # Add a buff effect
+             buff = StatusEffect(
+                 name=f"Buff: {item.name}",
+                 duration=item.duration if item.duration > 0 else 5,
+                 value=item.value,
+                 type="Buff",
+                 description=item.description,
+                 source_name="Consumable"
+             )
+             self.character.status_effects.append(buff)
+             msg += "Applied Buff."
+
+        # Consume Item
+        self.character.inventory.pop(inventory_index)
+        return msg
+
+    # --- Market Wrappers ---
+    def get_shop_inventory(self) -> List[Union[Consumable, AwakeningStone, Essence]]:
+        if not self.character: return []
+        return self.market_mgr.get_shop_inventory(self.character.current_location)
+
+    def buy_item(self, item: Union[Consumable, AwakeningStone, Essence]) -> str:
+        if not self.character: return "No character."
+        return self.market_mgr.buy_item(self.character, item)
+
+    def sell_item(self, inventory_index: int) -> str:
+        if not self.character: return "No character."
+        return self.market_mgr.sell_item(self.character, inventory_index)
+
+    # --- Crafting Wrappers ---
+    def gather_resources(self) -> str:
+        if not self.character: return "No character."
+        return self.crafting_mgr.gather_resources(self.character, self.character.current_location)
+
+    def get_craftable_recipes(self) -> List[str]:
+        return list(self.crafting_mgr.recipes.keys())
+
+    def craft_item(self, recipe_name: str) -> str:
+        if not self.character: return "No character."
+        return self.crafting_mgr.craft_item(self.character, recipe_name)
 
     def travel(self, location_name: str) -> str:
         if not self.character: return "No character."
