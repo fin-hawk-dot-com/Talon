@@ -1,0 +1,21 @@
+{
+    "id": "lore_mirror_mimic",
+    "title": "Mirror Mimic",
+    "category": "Bestiary",
+    "text": "Mirror Mimics are insidious constructs found in ruins where high-level illusion magic has leaked. They appear as pools of mercury or polished metal until a victim approaches. Then, they rise up, assuming the shape and abilities of their target. While they cannot copy complex spells, their physical mimicry is perfect. The only way to tell the original from the mimic is that the mimic's reflection is always inverted.",
+    "image_prompt": "A dangerous Construct creature known as Mirror Mimic. A shapeless form with a reflective surface.",
+    "name": "Mirror Mimic",
+    "race": "Construct",
+    "attributes": {
+        "Power": 150,
+        "Speed": 200,
+        "Spirit": 250,
+        "Recovery": 150
+    },
+    "xp_reward": 230,
+    "loot_table": [
+        "Glass",
+        "Stone of the Mirror"
+    ],
+    "description": "A Construct known as Mirror Mimic that copies the appearance of its foes."
+}

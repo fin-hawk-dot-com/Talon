@@ -1,0 +1,21 @@
+{
+    "id": "lore_void_jellyfish",
+    "title": "Void Jellyfish",
+    "category": "Bestiary",
+    "text": "Void Jellyfish are airborne horrors that drift on mana currents. They originate from the Void Rift, resembling their aquatic counterparts but composed of dark energy and starlight. Their tentacles trail for meters, invisible to the naked eye, and drain the mana of anything they touch. Swarms of them can leave an entire region magically barren for weeks.",
+    "image_prompt": "A dangerous Magical Beast creature known as Void Jellyfish. A floating jellyfish made of dark energy.",
+    "name": "Void Jellyfish",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 100,
+        "Speed": 150,
+        "Spirit": 300,
+        "Recovery": 100
+    },
+    "xp_reward": 260,
+    "loot_table": [
+        "Void",
+        "Stone of the Void"
+    ],
+    "description": "A Magical Beast known as Void Jellyfish that floats through the air, consuming mana."
+}

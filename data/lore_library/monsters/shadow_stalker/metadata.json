@@ -1,0 +1,22 @@
+{
+    "id": "lore_shadow_stalker",
+    "title": "Shadow Stalker",
+    "category": "Bestiary",
+    "text": "Shadow Stalkers are apex predators that have adapted to the thinning veil of the Shadowfen. They possess the ability to 'phase' partially into the Shadow Plane, rendering them invisible in dim light and intangible to physical attacks for short bursts. They strike from the darkness with paralyzing venom, dragging their paralyzed prey back to their lairs to be consumed at leisure. They are the primary reason why travel at night in the Fen is considered suicide.",
+    "image_prompt": "A dangerous Magical Beast creature known as Shadow Stalker. High fantasy art style, detailed creature design.",
+    "name": "Shadow Stalker",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 100,
+        "Speed": 250,
+        "Spirit": 120,
+        "Recovery": 80
+    },
+    "xp_reward": 180,
+    "loot_table": [
+        "Dark",
+        "Poison",
+        "Stone of the Strike"
+    ],
+    "description": "A Magical Beast known as Shadow Stalker that blends into the darkness."
+}

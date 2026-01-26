@@ -1,0 +1,25 @@
+{
+    "name": "Rufus",
+    "race": "Human",
+    "faction": "Adventure Society",
+    "affinity": "Warrior",
+    "description": "A battle-hardened veteran of the Adventure Society. He has a scar running down his left cheek.",
+    "dialogue": {
+        "default": "Hmph. Keep your weapon sharp and your wits sharper.",
+        "friendly": "You've got a good arm. Maybe we can spar sometime.",
+        "hostile": "Get out of my face before I make you."
+    },
+    "attributes": {
+        "Power": 120,
+        "Speed": 110,
+        "Spirit": 80,
+        "Recovery": 115
+    },
+    "base_essences": [
+        "Sword",
+        "Might",
+        "Swift"
+    ],
+    "confluence_essence": "Blade",
+    "image_prompt": "A Human character named Rufus. A battle-hardened veteran of the Adventure Society. He has a scar running down his left cheek. Fantasy portrait."
+}

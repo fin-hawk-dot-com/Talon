@@ -1,0 +1,18 @@
+{
+    "name": "Inferno Demon",
+    "race": "Demon",
+    "attributes": {
+        "Power": 350,
+        "Speed": 280,
+        "Spirit": 300,
+        "Recovery": 320
+    },
+    "xp_reward": 400,
+    "loot_table": [
+        "Fire",
+        "Sin",
+        "Stone of the Nova"
+    ],
+    "image_prompt": "A dangerous Demon creature known as Inferno Demon. High fantasy art style, detailed creature design.",
+    "description": "A Demon known as Inferno Demon wrapped in hellfire."
+}

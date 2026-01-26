@@ -1,0 +1,17 @@
+{
+    "name": "Granite Golem",
+    "race": "Construct",
+    "attributes": {
+        "Power": 180,
+        "Speed": 136,
+        "Spirit": 175,
+        "Recovery": 165
+    },
+    "xp_reward": 144,
+    "loot_table": [
+        "Earth",
+        "Stone of the Wall"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Granite Golem. A humanoid figure made of grey granite blocks. High fantasy art style, detailed creature design.",
+    "description": "A golem hewn from solid granite."
+}

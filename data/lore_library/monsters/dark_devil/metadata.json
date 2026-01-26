@@ -1,0 +1,17 @@
+{
+    "name": "Dark Devil",
+    "race": "Demon",
+    "attributes": {
+        "Power": 276,
+        "Speed": 234,
+        "Spirit": 246,
+        "Recovery": 225
+    },
+    "xp_reward": 266,
+    "loot_table": [
+        "Stone of the Echo",
+        "Stone of the Shield"
+    ],
+    "image_prompt": "A dangerous Demon creature known as Dark Devil. High fantasy art style, detailed creature design.",
+    "description": "A Demon known as Dark Devil."
+}

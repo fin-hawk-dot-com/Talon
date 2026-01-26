@@ -1,0 +1,21 @@
+{
+    "name": "Southern Crossroads",
+    "description": "A dusty intersection where the grass begins to fade into the scorched earth of the badlands.",
+    "type": "Wilderness",
+    "region": "Central Plains",
+    "danger_rank": "Iron",
+    "connected_locations": [
+        "Greenstone City",
+        "The Scorched Wastes"
+    ],
+    "resources": [
+        "Dry Wood",
+        "Sand"
+    ],
+    "image_prompt_positive": "Crossroads, dusty, transition from grass to desert, signpost",
+    "image_prompt_negative": "snow, forest, water",
+    "narrative": "Here, the vibrant green of the plains gives way to the unnatural grey and red of the Scorched Wastes. A weathered signpost points south to 'Heat and Ruin' and north to 'Safety'.",
+    "points_of_interest": [],
+    "x": 500,
+    "y": 650
+}

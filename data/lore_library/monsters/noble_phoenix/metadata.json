@@ -1,0 +1,20 @@
+{
+    "id": "lore_noble_phoenix",
+    "title": "Noble Phoenix",
+    "category": "Bestiary",
+    "text": "The Noble Phoenix is a legendary avian creature wreathed in holy fire. It is a symbol of purity and rebirth. Unlike the elemental firebirds, a Noble Phoenix possesses high intelligence and a benevolent nature. It is said that a single feather from a Noble Phoenix can cure any disease and that its tears can close wounds instantly. They are exceedingly rare, nesting only in the craters of active volcanoes or atop the highest peaks where the sun hits first.",
+    "image_prompt": "A dangerous Magical Beast creature known as Noble Phoenix. High fantasy art style, detailed creature design.",
+    "name": "Noble Phoenix",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 53,
+        "Speed": 24,
+        "Spirit": 93,
+        "Recovery": 35
+    },
+    "xp_reward": 36,
+    "loot_table": [
+        "Nature"
+    ],
+    "description": "A Magical Beast known as Noble Phoenix."
+}

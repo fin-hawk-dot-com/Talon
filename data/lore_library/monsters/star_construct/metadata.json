@@ -1,0 +1,23 @@
+{
+    "id": "lore_star_construct",
+    "title": "Star Construct",
+    "category": "Bestiary",
+    "text": "Star Constructs are elegant machines made of star-metal and bound light. Created by the Starforge, they serve as its maintenance crew and security. They attack with beams of searing heat and gravity manipulation. Defeating one releases a burst of stardust that is highly prized by alchemists.",
+    "image_prompt": "A construct made of constellation lines and star stuff, geometric and beautiful.",
+    "name": "Star Construct",
+    "race": "Construct",
+    "attributes": {
+        "Power": 400,
+        "Speed": 400,
+        "Spirit": 400,
+        "Recovery": 400
+    },
+    "xp_reward": 600,
+    "loot_table": [
+        "Star",
+        "Iron",
+        "Stone of the Comet",
+        "Stone of the Orbit"
+    ],
+    "description": "A Construct known as Star Construct forged from the light of dying stars."
+}

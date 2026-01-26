@@ -1,0 +1,7 @@
+{
+    "name": "Mercenary Guild",
+    "description": "A loose association of soldiers of fortune. While less regulated than the Adventure Society, they handle contracts that others won't touch.",
+    "type": "Guild",
+    "rank_requirement": "Normal",
+    "image_prompt": "Emblem or headquarters of Mercenary Guild, a Guild faction. A loose association of soldiers of fortune. While less regulated than the Adventure Society, they handle contracts that others won't touch. Fantasy setting."
+}

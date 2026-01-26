@@ -1,0 +1,22 @@
+{
+    "id": "lore_deep_sea_serpent",
+    "title": "Deep Sea Serpent",
+    "category": "Bestiary",
+    "text": "Deep Sea Serpents are the apex predators of the open ocean. Growing up to a hundred meters long, their scales are harder than steel and capable of withstanding the immense pressure of the deep. They are solitary hunters, often mistaking submarines and whales for prey. Their breath weapon is a jet of super-pressurized water that can cut through hull plating like paper.",
+    "image_prompt": "A massive sea serpent with bioluminescent scales, swimming in the deep ocean.",
+    "name": "Deep Sea Serpent",
+    "race": "Beast",
+    "attributes": {
+        "Power": 450,
+        "Speed": 300,
+        "Spirit": 200,
+        "Recovery": 400
+    },
+    "xp_reward": 550,
+    "loot_table": [
+        "Water",
+        "Dragon",
+        "Stone of the Tide"
+    ],
+    "description": "A Beast known as Deep Sea Serpent that crushes ships with its coils."
+}

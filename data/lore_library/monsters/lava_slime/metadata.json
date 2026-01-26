@@ -1,0 +1,17 @@
+{
+    "name": "Lava Slime",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 206,
+        "Speed": 187,
+        "Spirit": 167,
+        "Recovery": 163
+    },
+    "xp_reward": 151,
+    "loot_table": [
+        "Fire",
+        "Ember"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Lava Slime. A slime made of lava, dripping and burning. High fantasy art style, detailed creature design.",
+    "description": "A slime composed of molten rock."
+}

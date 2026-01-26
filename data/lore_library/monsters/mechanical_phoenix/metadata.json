@@ -1,0 +1,17 @@
+{
+    "name": "Mechanical Phoenix",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 245,
+        "Speed": 263,
+        "Spirit": 225,
+        "Recovery": 214
+    },
+    "xp_reward": 262,
+    "loot_table": [
+        "Stone of the Trap",
+        "Iron"
+    ],
+    "image_prompt": "A dangerous Magical Beast creature known as Mechanical Phoenix. High fantasy art style, detailed creature design.",
+    "description": "A Magical Beast known as Mechanical Phoenix."
+}

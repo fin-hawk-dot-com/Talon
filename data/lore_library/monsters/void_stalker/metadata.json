@@ -1,0 +1,19 @@
+{
+    "name": "Void Stalker",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 180,
+        "Speed": 400,
+        "Spirit": 250,
+        "Recovery": 150
+    },
+    "xp_reward": 300,
+    "loot_table": [
+        "Void",
+        "Dark",
+        "Dimension",
+        "Stone of the Phantom"
+    ],
+    "image_prompt": "A dangerous Magical Beast creature known as Void Stalker. High fantasy art style, detailed creature design.",
+    "description": "A Magical Beast known as Void Stalker that shifts between dimensions."
+}

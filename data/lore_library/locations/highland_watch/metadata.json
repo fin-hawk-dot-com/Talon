@@ -1,0 +1,39 @@
+{
+    "name": "Highland Watch",
+    "description": "A small outpost perched on a cliff edge, monitoring the northern passes for threats.",
+    "type": "Outpost",
+    "region": "Northern Peaks",
+    "danger_rank": "Iron",
+    "connected_locations": [
+        "Ironhold"
+    ],
+    "resources": [
+        "Wind Essence",
+        "Scout Reports"
+    ],
+    "image_prompt_positive": "Stone tower on cliff edge, snowy mountains background, wind flags, solitary guard, vast view, cold blue sky",
+    "image_prompt_negative": "forest, warm, city, crowd, underground",
+    "narrative": "Perched precariously on a knife-edge cliff of the Northern Peaks, Highland Watch is the first line of defense against threats from the frozen wastes beyond. The wind here screams constantly, biting through even the thickest furs. It is a lonely, austere assignment for the soldiers stationed here, offering a panoramic view of the snow-swept mountains and the encroaching storms that often herald the arrival of frost giants or ice drakes.",
+    "points_of_interest": [
+        {
+            "name": "The Lookout Tower",
+            "description": "The highest point, offering a strategic view of the north.",
+            "type": "Building",
+            "image_prompt": "Tall stone tower, mountains, snow, telescope"
+        },
+        {
+            "name": "Soldiers' Quarters",
+            "description": "Barracks for the stationed troops, warm and smelling of stew.",
+            "type": "Building",
+            "image_prompt": "Barracks interior, bunks, fireplace, soldiers"
+        },
+        {
+            "name": "The Signal Fire",
+            "description": "A large pyre ready to be lit in case of invasion.",
+            "type": "Landmark",
+            "image_prompt": "Huge wood pile, unlit bonfire, mountaintop"
+        }
+    ],
+    "x": 500,
+    "y": 50
+}

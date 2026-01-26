@@ -1,0 +1,16 @@
+{
+    "name": "Blood Spirit",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 44,
+        "Speed": 90,
+        "Spirit": 83,
+        "Recovery": 22
+    },
+    "xp_reward": 39,
+    "loot_table": [
+        "Dark"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Blood Spirit. High fantasy art style, detailed creature design.",
+    "description": "A Elemental known as Blood Spirit."
+}

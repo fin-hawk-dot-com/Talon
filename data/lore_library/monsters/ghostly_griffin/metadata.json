@@ -1,0 +1,16 @@
+{
+    "name": "Ghostly Griffin",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 153,
+        "Speed": 175,
+        "Spirit": 161,
+        "Recovery": 128
+    },
+    "xp_reward": 149,
+    "loot_table": [
+        "Swift"
+    ],
+    "image_prompt": "A dangerous Magical Beast creature known as Ghostly Griffin. High fantasy art style, detailed creature design.",
+    "description": "A Magical Beast known as Ghostly Griffin."
+}

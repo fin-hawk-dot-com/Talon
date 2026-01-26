@@ -1,0 +1,19 @@
+{
+    "name": "Obsidian Golem",
+    "race": "Construct",
+    "attributes": {
+        "Power": 220,
+        "Speed": 80,
+        "Spirit": 100,
+        "Recovery": 250
+    },
+    "xp_reward": 220,
+    "loot_table": [
+        "Earth",
+        "Fire",
+        "Stone of the Shield",
+        "Stone of the Wall"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Obsidian Golem. High fantasy art style, detailed creature design.",
+    "description": "A Construct known as Obsidian Golem made of volcanic glass."
+}

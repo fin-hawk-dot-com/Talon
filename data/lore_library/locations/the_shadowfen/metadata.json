@@ -1,0 +1,45 @@
+{
+    "id": "lore_shadowfen",
+    "title": "The Shadowfen",
+    "category": "Location",
+    "text": "The Shadowfen is a treacherous, sprawling swamp where the sun never fully penetrates the thick canopy of twisted cypress trees. The water is black and oily, thick with Decay Essence. The air hangs heavy with the scent of rot and old magic. It is a place where the veil between the material world and the Shadow Plane is thin. Spirits and undead often wander the mists. The fauna has adapted to be ambush predators, utilizing poison and stealth. Navigating the fen requires a guide, as the paths seem to shift when one isn't looking.",
+    "image_prompt": "Dark swamp, twisted roots, purple fog, eerie green lights, dangerous atmosphere.",
+    "name": "The Shadowfen",
+    "description": "A treacherous swamp shrouded in perpetual twilight, home to poisonous flora and dark secrets.",
+    "type": "Wilderness",
+    "region": "Eastern Swamps",
+    "danger_rank": "Bronze",
+    "connected_locations": [
+        "The Whispering Woods",
+        "Mistfall Village"
+    ],
+    "resources": [
+        "Decay Essence",
+        "Poisonous Plants"
+    ],
+    "image_prompt_positive": "Swamp, twisted trees, fog, dark water, purple and black tones, eerie, spooky, mysterious lights, moss, detailed textures",
+    "image_prompt_negative": "desert, bright sun, clean, dry, city, cheerful",
+    "narrative": "A place of perpetual twilight, the Shadowfen is a choking expanse of brackish water, twisted mangrove roots, and hanging moss. The sun never fully penetrates the canopy, leaving the swamp in a grey gloom. The water is still and dark, hiding predators that strike without a ripple. Poisonous spores drift in the air, and the ground itself is treacherous, eager to swallow the boots of the unwary.",
+    "points_of_interest": [
+        {
+            "name": "Rotting Boardwalk",
+            "description": "Treacherous wooden paths laid over the worst of the bog.",
+            "type": "Area",
+            "image_prompt": "Swamp, broken wooden path, fog, dark water"
+        },
+        {
+            "name": "The Mire",
+            "description": "Deep, sticky mud that threatens to swallow anyone who steps off the path.",
+            "type": "Area",
+            "image_prompt": "Muddy swamp, quicksand, dead trees, bubbles"
+        },
+        {
+            "name": "Glowing Pools",
+            "description": "Pools of water emitting a sickly green light, likely poisonous.",
+            "type": "Landmark",
+            "image_prompt": "Green glowing swamp water, toxic, eerie mist"
+        }
+    ],
+    "x": 800,
+    "y": 500
+}

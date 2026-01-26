@@ -1,0 +1,17 @@
+{
+    "name": "Steel Beak",
+    "race": "Beast",
+    "attributes": {
+        "Power": 142,
+        "Speed": 188,
+        "Spirit": 174,
+        "Recovery": 138
+    },
+    "xp_reward": 145,
+    "loot_table": [
+        "Iron",
+        "Wing"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Steel Beak. A large bird of prey with a metallic beak. High fantasy art style, detailed creature design.",
+    "description": "A bird with a beak as hard as steel."
+}

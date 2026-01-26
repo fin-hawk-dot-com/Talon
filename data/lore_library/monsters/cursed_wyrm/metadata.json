@@ -1,0 +1,18 @@
+{
+    "name": "Cursed Wyrm",
+    "race": "Dragonkin",
+    "attributes": {
+        "Power": 580,
+        "Speed": 517,
+        "Spirit": 552,
+        "Recovery": 518
+    },
+    "xp_reward": 624,
+    "loot_table": [
+        "Stone of Focus",
+        "Light",
+        "Lightning"
+    ],
+    "image_prompt": "A dangerous Dragonkin creature known as Cursed Wyrm. High fantasy art style, detailed creature design.",
+    "description": "A Dragonkin known as Cursed Wyrm."
+}

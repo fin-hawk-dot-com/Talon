@@ -1,0 +1,45 @@
+{
+    "id": "lore_crystal_caverns",
+    "title": "Crystal Caverns",
+    "category": "Location",
+    "text": "Beneath the Crust lie the Crystal Caverns, a labyrinthine network of tunnels where giant, bioluminescent crystals grow like forests. These crystals are natural mana capacitors, amplifying any magic cast near them. This makes the caverns extremely dangerous, as a simple spark can trigger a chain reaction of explosive energy. The caverns are inhabited by crystalline life forms that feed on this energy. Mages often venture here to meditate, as the high mana density accelerates mana regeneration, though the risk of attracting Crystal Golems is ever-present.",
+    "image_prompt": "Underground cave filled with giant blue and purple glowing crystals, reflective water pools.",
+    "name": "Crystal Caverns",
+    "description": "Deep underground caves filled with sharp, resonant crystals.",
+    "type": "Dungeon",
+    "region": "Central Plains",
+    "danger_rank": "Silver",
+    "connected_locations": [
+        "Greenstone City",
+        "The Sunken Ruins"
+    ],
+    "resources": [
+        "Crystal Essence",
+        "Rare Gems"
+    ],
+    "image_prompt_positive": "Underground cave, glowing blue and purple crystals, sharp jagged rocks, reflection in water pools, dark, ambient lighting, cinematic, 8k",
+    "image_prompt_negative": "sky, sun, grass, trees, flat, boring, noise",
+    "narrative": "Beneath the earth lies a world of sharp angles and refracted light. The Crystal Caverns are a labyrinth of jagged tunnels where massive gemstone formations grow like organic life. The air is cool and vibrates with a resonant frequency that can shatter glass. Adventurers flock here for the valuable essence-infused crystals, but many fall prey to the crystalline entities that detach from the walls to defend their glittering home.",
+    "points_of_interest": [
+        {
+            "name": "The Great Hall",
+            "description": "A natural cavern of immense size, illuminated by thousands of bioluminescent fungi and crystals.",
+            "type": "Area",
+            "image_prompt": "Huge underground cavern, glowing mushrooms, crystals, stalactites"
+        },
+        {
+            "name": "Echo Chamber",
+            "description": "A narrow passage where every sound is amplified and repeated, potentially disorienting travelers.",
+            "type": "Area",
+            "image_prompt": "Narrow cave tunnel, crystals on walls, claustrophobic"
+        },
+        {
+            "name": "Deep Shaft",
+            "description": "A vertical drop into the unknown depths. Cold air drafts up from below.",
+            "type": "Landmark",
+            "image_prompt": "Deep pit in cave, darkness below, edge of cliff, danger"
+        }
+    ],
+    "x": 400,
+    "y": 550
+}

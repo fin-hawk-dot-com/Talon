@@ -1,0 +1,16 @@
+{
+    "name": "Mystic Wyrm",
+    "race": "Dragonkin",
+    "attributes": {
+        "Power": 331,
+        "Speed": 362,
+        "Spirit": 368,
+        "Recovery": 375
+    },
+    "xp_reward": 391,
+    "loot_table": [
+        "Might"
+    ],
+    "image_prompt": "A dangerous Dragonkin creature known as Mystic Wyrm. High fantasy art style, detailed creature design.",
+    "description": "A Dragonkin known as Mystic Wyrm."
+}

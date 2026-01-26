@@ -1,0 +1,16 @@
+{
+    "name": "Mechanical Wyrm",
+    "race": "Dragonkin",
+    "attributes": {
+        "Power": 99,
+        "Speed": 46,
+        "Spirit": 35,
+        "Recovery": 56
+    },
+    "xp_reward": 39,
+    "loot_table": [
+        "Renewal"
+    ],
+    "image_prompt": "A dangerous Dragonkin creature known as Mechanical Wyrm. High fantasy art style, detailed creature design.",
+    "description": "A Dragonkin known as Mechanical Wyrm."
+}

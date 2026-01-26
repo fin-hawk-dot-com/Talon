@@ -1,0 +1,17 @@
+{
+    "name": "Gloomstalker Bear",
+    "race": "Beast",
+    "attributes": {
+        "Power": 300,
+        "Speed": 200,
+        "Spirit": 150,
+        "Recovery": 400
+    },
+    "xp_reward": 450,
+    "loot_table": [
+        "Dark",
+        "Stone of the Phantom"
+    ],
+    "image_prompt": "A giant bear with fur like shadows, glowing purple eyes, in a dark forest.",
+    "description": "A massive ursine predator that absorbs light. It is a favored target for elite Hawksley hunters due to its cunning."
+}

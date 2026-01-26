@@ -1,0 +1,17 @@
+{
+    "name": "Razor-Tusk Boar",
+    "race": "Beast",
+    "attributes": {
+        "Power": 150,
+        "Speed": 180,
+        "Spirit": 50,
+        "Recovery": 200
+    },
+    "xp_reward": 200,
+    "loot_table": [
+        "Iron",
+        "Stone of the Strike"
+    ],
+    "image_prompt": "A wild boar with metallic silver tusks, charging through underbrush.",
+    "description": "A boar whose tusks have calcified into organic steel. Hunting one is the standard rite of passage for Hawksley initiates."
+}

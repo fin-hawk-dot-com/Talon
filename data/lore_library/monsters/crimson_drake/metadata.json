@@ -1,0 +1,23 @@
+{
+    "id": "lore_crimson_drake",
+    "title": "Crimson Drake",
+    "category": "Bestiary",
+    "text": "Crimson Drakes are a subspecies of drake that inhabit the volcanic regions bordering the Ashen Plains. Their scales glow with an internal heat, and they can spit globs of sticky, burning magma. Unlike their bronze cousins, they are highly aggressive and will hunt anything that moves. Their nests are often built in the craters of active geysers.",
+    "image_prompt": "A dangerous Dragonkin creature known as Crimson Drake. A red drake with scales like burning coals.",
+    "name": "Crimson Drake",
+    "race": "Dragonkin",
+    "attributes": {
+        "Power": 320,
+        "Speed": 280,
+        "Spirit": 250,
+        "Recovery": 300
+    },
+    "xp_reward": 450,
+    "loot_table": [
+        "Ember",
+        "Fire",
+        "Dragon",
+        "Stone of the Ember"
+    ],
+    "description": "A Dragonkin known as Crimson Drake that breathes searing fire."
+}

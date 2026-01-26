@@ -1,0 +1,22 @@
+{
+    "id": "lore_clockwork_sentinel",
+    "title": "Clockwork Sentinel",
+    "category": "Bestiary",
+    "text": "The Clockwork Sentinels are the eternal guardians of the Aethel's time-locked vaults. Unlike other constructs, they are powered by Time Essence, allowing them to perceive moments before they happen. This limited precognition makes them master duelists, as they can parry attacks that haven't seemingly begun. They are built of brass and star-metal, with a ticking core that acts as their heartbeat. Rumor has it that if one listens closely to the ticking, they can hear the countdown to their own death.",
+    "image_prompt": "A dangerous Construct creature known as Clockwork Sentinel. A brass automaton with ticking gears visible in its chest.",
+    "name": "Clockwork Sentinel",
+    "race": "Construct",
+    "attributes": {
+        "Power": 210,
+        "Speed": 110,
+        "Spirit": 130,
+        "Recovery": 250
+    },
+    "xp_reward": 230,
+    "loot_table": [
+        "Time",
+        "Iron",
+        "Stone of the Shield"
+    ],
+    "description": "A Construct known as Clockwork Sentinel that guards ancient vaults."
+}

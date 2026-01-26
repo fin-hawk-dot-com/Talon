@@ -1,0 +1,16 @@
+{
+    "name": "Storm Fiend",
+    "race": "Demon",
+    "attributes": {
+        "Power": 135,
+        "Speed": 177,
+        "Spirit": 132,
+        "Recovery": 113
+    },
+    "xp_reward": 143,
+    "loot_table": [
+        "Mana"
+    ],
+    "image_prompt": "A dangerous Demon creature known as Storm Fiend. High fantasy art style, detailed creature design.",
+    "description": "A Demon known as Storm Fiend."
+}

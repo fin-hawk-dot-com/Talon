@@ -1,0 +1,17 @@
+{
+    "name": "Shadow Unicorn",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 374,
+        "Speed": 351,
+        "Spirit": 338,
+        "Recovery": 341
+    },
+    "xp_reward": 388,
+    "loot_table": [
+        "Stone of the Feast",
+        "Stone of the Flesh"
+    ],
+    "image_prompt": "A dangerous Magical Beast creature known as Shadow Unicorn. High fantasy art style, detailed creature design.",
+    "description": "A Magical Beast known as Shadow Unicorn."
+}

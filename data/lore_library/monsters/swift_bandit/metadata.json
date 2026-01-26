@@ -1,0 +1,16 @@
+{
+    "name": "Swift Bandit",
+    "race": "Humanoid",
+    "attributes": {
+        "Power": 89,
+        "Speed": 51,
+        "Spirit": 50,
+        "Recovery": 47
+    },
+    "xp_reward": 39,
+    "loot_table": [
+        "Stone of the Flesh"
+    ],
+    "image_prompt": "A dangerous Humanoid creature known as Swift Bandit. High fantasy art style, detailed creature design.",
+    "description": "A Humanoid known as Swift Bandit."
+}

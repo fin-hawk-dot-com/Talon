@@ -1,0 +1,7 @@
+{
+    "name": "System Auditors",
+    "description": "Bureaucrats tasked with investigating magical anomalies and enforcing the laws of physics. They view magic as a hazardous utility.",
+    "type": "Government",
+    "rank_requirement": "Silver",
+    "image_prompt": "Emblem of the System Auditors. A stylized eye or scale, minimalist, clean lines, metallic. Fantasy setting."
+}

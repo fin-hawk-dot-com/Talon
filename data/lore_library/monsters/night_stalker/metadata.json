@@ -1,0 +1,17 @@
+{
+    "name": "Night Stalker",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 193,
+        "Speed": 156,
+        "Spirit": 183,
+        "Recovery": 184
+    },
+    "xp_reward": 154,
+    "loot_table": [
+        "Dark",
+        "Stone of the Phantom"
+    ],
+    "image_prompt": "A dangerous Magical Beast creature known as Night Stalker. A panther-like creature that blends into shadows. High fantasy art style, detailed creature design.",
+    "description": "A predator that hunts in the dark."
+}

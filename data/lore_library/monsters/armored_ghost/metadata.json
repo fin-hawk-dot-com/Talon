@@ -1,0 +1,17 @@
+{
+    "name": "Armored Ghost",
+    "race": "Undead",
+    "attributes": {
+        "Power": 323,
+        "Speed": 382,
+        "Spirit": 355,
+        "Recovery": 368
+    },
+    "xp_reward": 390,
+    "loot_table": [
+        "Life",
+        "Mana"
+    ],
+    "image_prompt": "A dangerous Undead creature known as Armored Ghost. High fantasy art style, detailed creature design.",
+    "description": "A Undead known as Armored Ghost."
+}

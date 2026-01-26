@@ -1,0 +1,21 @@
+{
+    "id": "lore_rock_golem",
+    "title": "Rock Golem",
+    "category": "Bestiary",
+    "text": "Rock Golems are simple, brutish constructs of animated stone and earth. They are often created by novice Earth Mages or spontaneously formed in areas of high telluric current. They possess immense physical strength and durability but lack intelligence or speed. They follow simple patterns: crush, smash, protect. Their weakness lies in the runic core buried deep within their chest; destroying the core causes the golem to crumble instantly into a pile of rubble.",
+    "image_prompt": "A dangerous Construct creature known as Rock Golem. High fantasy art style, detailed creature design.",
+    "name": "Rock Golem",
+    "race": "Construct",
+    "attributes": {
+        "Power": 180,
+        "Speed": 50,
+        "Spirit": 50,
+        "Recovery": 190
+    },
+    "xp_reward": 150,
+    "loot_table": [
+        "Earth",
+        "Stone of the Shield"
+    ],
+    "description": "A Construct known as Rock Golem."
+}

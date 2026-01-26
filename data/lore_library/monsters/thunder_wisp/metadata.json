@@ -1,0 +1,17 @@
+{
+    "name": "Thunder Wisp",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 180,
+        "Speed": 190,
+        "Spirit": 198,
+        "Recovery": 175
+    },
+    "xp_reward": 141,
+    "loot_table": [
+        "Lightning",
+        "Stone of the Blast"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Thunder Wisp. A ball of lightning energy floating in the air. High fantasy art style, detailed creature design.",
+    "description": "A wisp crackling with electrical energy."
+}

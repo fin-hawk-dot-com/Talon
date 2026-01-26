@@ -1,0 +1,16 @@
+{
+    "name": "Cursed Snake",
+    "race": "Beast",
+    "attributes": {
+        "Power": 180,
+        "Speed": 186,
+        "Spirit": 171,
+        "Recovery": 188
+    },
+    "xp_reward": 160,
+    "loot_table": [
+        "Armor"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Cursed Snake. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Cursed Snake."
+}

@@ -1,0 +1,21 @@
+{
+    "name": "North Road",
+    "description": "A well-traveled road leading north towards the mountains. Bandits often ambush careless travelers here.",
+    "type": "Wilderness",
+    "region": "Central Plains",
+    "danger_rank": "Iron",
+    "connected_locations": [
+        "Greenstone City",
+        "Ironhold"
+    ],
+    "resources": [
+        "Stone",
+        "Wildflowers"
+    ],
+    "image_prompt_positive": "Fantasy road, mountains in distance, green plains, sunny, dirt path",
+    "image_prompt_negative": "city, dark, ocean",
+    "narrative": "The North Road is the main artery connecting the fertile plains to the mineral-rich mountains. While patrols are frequent closer to the city, the stretch near the foothills is notorious for bandit activity.",
+    "points_of_interest": [],
+    "x": 500,
+    "y": 325
+}

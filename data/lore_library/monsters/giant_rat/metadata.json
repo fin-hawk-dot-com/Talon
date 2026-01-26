@@ -1,0 +1,16 @@
+{
+    "name": "Giant Rat",
+    "race": "Beast",
+    "attributes": {
+        "Power": 20,
+        "Speed": 30,
+        "Spirit": 5,
+        "Recovery": 15
+    },
+    "xp_reward": 10,
+    "loot_table": [
+        "Stone of the Strike"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Giant Rat. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Giant Rat."
+}

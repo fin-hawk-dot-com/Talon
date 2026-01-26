@@ -1,0 +1,16 @@
+{
+    "name": "Feral Skeleton",
+    "race": "Undead",
+    "attributes": {
+        "Power": 156,
+        "Speed": 151,
+        "Spirit": 176,
+        "Recovery": 114
+    },
+    "xp_reward": 147,
+    "loot_table": [
+        "Armor"
+    ],
+    "image_prompt": "A dangerous Undead creature known as Feral Skeleton. High fantasy art style, detailed creature design.",
+    "description": "A Undead known as Feral Skeleton."
+}

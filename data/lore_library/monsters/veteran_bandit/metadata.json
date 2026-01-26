@@ -1,0 +1,17 @@
+{
+    "name": "Veteran Bandit",
+    "race": "Humanoid",
+    "attributes": {
+        "Power": 195,
+        "Speed": 187,
+        "Spirit": 157,
+        "Recovery": 148
+    },
+    "xp_reward": 169,
+    "loot_table": [
+        "Sword",
+        "Armor"
+    ],
+    "image_prompt": "A dangerous Humanoid creature known as Veteran Bandit. A bandit in chainmail armor with a scarred face. High fantasy art style, detailed creature design.",
+    "description": "A bandit who has survived many raids."
+}

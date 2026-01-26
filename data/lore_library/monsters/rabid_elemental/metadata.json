@@ -1,0 +1,17 @@
+{
+    "name": "Rabid Elemental",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 343,
+        "Speed": 385,
+        "Spirit": 368,
+        "Recovery": 350
+    },
+    "xp_reward": 392,
+    "loot_table": [
+        "Swift",
+        "Shield"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Rabid Elemental. High fantasy art style, detailed creature design.",
+    "description": "A Elemental known as Rabid Elemental."
+}

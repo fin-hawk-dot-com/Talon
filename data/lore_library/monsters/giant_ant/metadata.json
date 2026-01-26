@@ -1,0 +1,17 @@
+{
+    "name": "Giant Ant",
+    "race": "Beast",
+    "attributes": {
+        "Power": 56,
+        "Speed": 56,
+        "Spirit": 48,
+        "Recovery": 67
+    },
+    "xp_reward": 51,
+    "loot_table": [
+        "Stone of the Strike",
+        "Earth"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Giant Ant. A giant ant, size of a dog, chitinous armor. High fantasy art style, detailed creature design.",
+    "description": "An oversized ant with powerful mandibles."
+}

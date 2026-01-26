@@ -1,0 +1,39 @@
+{
+    "name": "Mistfall Village",
+    "description": "A secluded village of fishermen and herbalists living on stilts above the swamp waters.",
+    "type": "Village",
+    "region": "Eastern Swamps",
+    "danger_rank": "Iron",
+    "connected_locations": [
+        "The Shadowfen"
+    ],
+    "resources": [
+        "Fish",
+        "Herbal Medicine"
+    ],
+    "image_prompt_positive": "Wooden houses on stilts, swamp water, lanterns, mist, evening light, cozy but mysterious, reflections",
+    "image_prompt_negative": "city, stone buildings, desert, mountains",
+    "narrative": "Suspended above the murky waters of the Shadowfen on sturdy ironwood stilts, Mistfall Village is a sanctuary of lanterns and fog. The villagers, expert herbalists and fishermen, live in harmony with the swamp, harvesting its rare poisons for medicines. Ropes and walkways connect the huts, and the air smells of roasting fish and damp wood. It is a quiet, eerie place, but one of the few safe havens in the dangerous east.",
+    "points_of_interest": [
+        {
+            "name": "The Docks",
+            "description": "Rickety piers where fishing boats are moored.",
+            "type": "Area",
+            "image_prompt": "Wooden docks, fishing boats, nets, swamp water"
+        },
+        {
+            "name": "Elder's Hut",
+            "description": "The largest stilt-house, hung with dried herbs and charms.",
+            "type": "Building",
+            "image_prompt": "Large wooden hut on stilts, herbs hanging, mystical decorations"
+        },
+        {
+            "name": "The Herbalist's Garden",
+            "description": "A floating garden cultivating rare swamp plants.",
+            "type": "Area",
+            "image_prompt": "Floating garden beds, strange plants, mist"
+        }
+    ],
+    "x": 900,
+    "y": 550
+}

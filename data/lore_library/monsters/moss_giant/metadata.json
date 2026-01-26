@@ -1,0 +1,23 @@
+{
+    "id": "lore_moss_giant",
+    "title": "Moss Giant",
+    "category": "Bestiary",
+    "text": "Moss Giants are the silent guardians of the deep forests. They are not born, but grown from the forest floor over centuries. Composed of earth, stone, and ancient roots, they move with a slow, grinding purpose. They are generally peaceful unless the forest is threatened, at which point they can summon the very trees to fight alongside them.",
+    "image_prompt": "A dangerous Elemental creature known as Moss Giant. A towering giant made of moss-covered boulders and roots.",
+    "name": "Moss Giant",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 350,
+        "Speed": 80,
+        "Spirit": 200,
+        "Recovery": 400
+    },
+    "xp_reward": 400,
+    "loot_table": [
+        "Root",
+        "Nature",
+        "Earth",
+        "Stone of the Root"
+    ],
+    "description": "A Elemental known as Moss Giant that guards the ancient forests."
+}

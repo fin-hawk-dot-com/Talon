@@ -1,0 +1,16 @@
+{
+    "name": "Celestial Fiend",
+    "race": "Demon",
+    "attributes": {
+        "Power": 58,
+        "Speed": 66,
+        "Spirit": 55,
+        "Recovery": 77
+    },
+    "xp_reward": 41,
+    "loot_table": [
+        "Knowledge"
+    ],
+    "image_prompt": "A dangerous Demon creature known as Celestial Fiend. High fantasy art style, detailed creature design.",
+    "description": "A Demon known as Celestial Fiend."
+}

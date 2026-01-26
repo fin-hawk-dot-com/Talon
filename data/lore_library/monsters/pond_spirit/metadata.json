@@ -1,0 +1,17 @@
+{
+    "name": "Pond Spirit",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 52,
+        "Speed": 40,
+        "Spirit": 41,
+        "Recovery": 53
+    },
+    "xp_reward": 58,
+    "loot_table": [
+        "Water",
+        "Mist"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Pond Spirit. A watery figure rising from a pond. High fantasy art style, detailed creature design.",
+    "description": "A minor spirit inhabiting a pond."
+}

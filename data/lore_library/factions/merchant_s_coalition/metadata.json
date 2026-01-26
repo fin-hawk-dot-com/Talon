@@ -1,0 +1,7 @@
+{
+    "name": "Merchant's Coalition",
+    "description": "An alliance of wealthy trading families controlling the economy.",
+    "type": "Merchant",
+    "rank_requirement": "Normal",
+    "image_prompt": "Emblem of Merchant's Coalition, a Merchant faction. Scales of commerce balanced with mana crystals. Fantasy setting."
+}

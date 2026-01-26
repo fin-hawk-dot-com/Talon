@@ -1,0 +1,7 @@
+{
+    "name": "Spire Authority",
+    "description": "The ruling body of Orizon, responsible for maintaining the city's wards and managing the Ascension schedule. They prioritize stability above all else.",
+    "type": "Political",
+    "rank_requirement": "Gold",
+    "image_prompt": "Emblem of the Spire Authority, a Political faction. Geometric shapes, white marble, rigid structure. Fantasy setting."
+}

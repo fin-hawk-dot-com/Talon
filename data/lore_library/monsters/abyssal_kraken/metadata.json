@@ -1,0 +1,23 @@
+{
+    "id": "lore_abyssal_kraken",
+    "title": "Abyssal Kraken",
+    "category": "Bestiary",
+    "text": "The Abyssal Kraken is a legend of the high seas, a monster so large it can wrap its tentacles around a galleon and drag it under. It dwells in the deepest trenches, where the pressure is enough to crush steel. Its eyes glow with a hypnotic light that lures sailors to their doom. It is an ancient beast, rumored to be one of the original spawn of the deep waters.",
+    "image_prompt": "A dangerous Beast creature known as Abyssal Kraken. A colossal squid with glowing eyes and spiked tentacles.",
+    "name": "Abyssal Kraken",
+    "race": "Beast",
+    "attributes": {
+        "Power": 500,
+        "Speed": 200,
+        "Spirit": 300,
+        "Recovery": 450
+    },
+    "xp_reward": 700,
+    "loot_table": [
+        "Water",
+        "Dark",
+        "Pressure",
+        "Stone of the Tide"
+    ],
+    "description": "A Beast known as Abyssal Kraken that drags ships to the depths."
+}

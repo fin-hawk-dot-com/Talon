@@ -1,0 +1,22 @@
+{
+    "id": "lore_skeletal_juggernaut",
+    "title": "Skeletal Juggernaut",
+    "category": "Bestiary",
+    "text": "The Skeletal Juggernaut is a colossal undead monstrosity created when hundreds of skeletons fuse together under high necromantic pressure. Standing over twenty feet tall, it wields weapons made from the femurs of giants. Its bone density is so high that it is immune to most non-blunt trauma. Defeating one requires shattering its central core, usually located deep within its ribcage.",
+    "image_prompt": "A massive skeleton warrior clad in heavy bone armor, wielding a giant bone mace.",
+    "name": "Skeletal Juggernaut",
+    "race": "Undead",
+    "attributes": {
+        "Power": 300,
+        "Speed": 100,
+        "Spirit": 50,
+        "Recovery": 200
+    },
+    "xp_reward": 400,
+    "loot_table": [
+        "Bone",
+        "Stone of the Spine",
+        "Iron"
+    ],
+    "description": "A gargantuan undead construct made of fused bones."
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Living Shrub",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 32,
+        "Speed": 25,
+        "Spirit": 25,
+        "Recovery": 26
+    },
+    "xp_reward": 44,
+    "loot_table": [
+        "Nature",
+        "Root"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Living Shrub. A walking bush with glowing eyes. High fantasy art style, detailed creature design.",
+    "description": "A bush brought to life by stray magic."
+}

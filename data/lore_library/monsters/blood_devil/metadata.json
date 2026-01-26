@@ -1,0 +1,20 @@
+{
+    "id": "lore_blood_devil",
+    "title": "Blood Devil",
+    "category": "Bestiary",
+    "text": "Blood Devils are small, red-skinned demons that manifest from confluences of chaotic blood mana. They stand roughly three feet tall but possess strength disproportionate to their size. They are driven by a frenzy for fresh blood, which they can smell from miles away. When wounded, they do not flee; instead, they enter a berserker state, attacking faster and harder. They often swarm in groups of twenty or more, overwhelming larger prey through sheer numbers and ferocity.",
+    "image_prompt": "A dangerous Demon creature known as Blood Devil. High fantasy art style, detailed creature design.",
+    "name": "Blood Devil",
+    "race": "Demon",
+    "attributes": {
+        "Power": 39,
+        "Speed": 20,
+        "Spirit": 33,
+        "Recovery": 58
+    },
+    "xp_reward": 31,
+    "loot_table": [
+        "Stone of the Anchor"
+    ],
+    "description": "A Demon known as Blood Devil."
+}

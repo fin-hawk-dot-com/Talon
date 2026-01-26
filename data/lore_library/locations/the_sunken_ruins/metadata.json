@@ -1,0 +1,44 @@
+{
+    "id": "lore_sunken_ruins",
+    "title": "The Sunken Ruins",
+    "category": "Location",
+    "text": "The Sunken Ruins are the skeletal remains of a pre-Awakening metropolis that collapsed into a massive sinkhole during the Celestial Fall. Now submerged beneath a subterranean lake, the ruins are preserved in eerie silence. Aquatic beasts, mutated by the leaking mana from ancient reactors, patrol the flooded streets. Divers and water mages explore the depths, seeking lost technology and artifacts from the 'Golden Age' of humanity. The ruins still hum with residual power, and automated defense systems often activate when intruders approach the deeper vaults.",
+    "image_prompt": "Underwater ruins, bioluminescent algae, ancient stone structures, swimming monsters.",
+    "name": "The Sunken Ruins",
+    "description": "An ancient city partially submerged in a vast underground lake, glowing with eerie phosphorescence.",
+    "type": "Dungeon",
+    "region": "Deep Earth",
+    "danger_rank": "Gold",
+    "connected_locations": [
+        "Crystal Caverns"
+    ],
+    "resources": [
+        "Water Essence",
+        "Ancient Artifacts"
+    ],
+    "image_prompt_positive": "Underwater ruins, ancient stone architecture, bioluminescent algae, water reflections, submerged statues, mystical blue light, aquatic atmosphere, detailed",
+    "image_prompt_negative": "fire, desert, dry, sky, bright sun, modern",
+    "narrative": "Once a thriving metropolis of a forgotten era, this city now rests in the depths of a colossal underground lake. The water glows with an eerie blue phosphorescence, illuminating the preserved architecture of a civilization that drowned in its own hubris. Aquatic monsters roam the flooded boulevards, and the pressure is crushing, yet the allure of ancient artifacts draws the brave and the foolish alike into the watery abyss.",
+    "points_of_interest": [
+        {
+            "name": "The Submerged Temple",
+            "description": "A temple half-buried in water, dedicated to a forgotten sea god.",
+            "type": "Building",
+            "image_prompt": "Underwater temple, ruins, seaweed, fish, ancient statues"
+        },
+        {
+            "name": "Plaza of Tides",
+            "description": "A large open area that floods periodically. Currently accessible.",
+            "type": "Area",
+            "image_prompt": "Ruined plaza, wet stone, puddles, algae, ancient architecture"
+        },
+        {
+            "name": "The Air Pocket",
+            "description": "A magical dome maintaining a dry area deep within the ruins.",
+            "type": "Landmark",
+            "image_prompt": "Magical bubble underwater, dry inside, campfire, adventurers resting"
+        }
+    ],
+    "x": 400,
+    "y": 650
+}

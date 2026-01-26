@@ -1,0 +1,17 @@
+{
+    "name": "Crystal Wyrm",
+    "race": "Dragonkin",
+    "attributes": {
+        "Power": 212,
+        "Speed": 256,
+        "Spirit": 214,
+        "Recovery": 250
+    },
+    "xp_reward": 261,
+    "loot_table": [
+        "Doom",
+        "Technology"
+    ],
+    "image_prompt": "A dangerous Dragonkin creature known as Crystal Wyrm. High fantasy art style, detailed creature design.",
+    "description": "A Dragonkin known as Crystal Wyrm."
+}

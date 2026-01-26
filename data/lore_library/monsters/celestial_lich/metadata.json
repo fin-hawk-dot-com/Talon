@@ -1,0 +1,18 @@
+{
+    "name": "Celestial Lich",
+    "race": "Undead",
+    "attributes": {
+        "Power": 475,
+        "Speed": 470,
+        "Spirit": 436,
+        "Recovery": 435
+    },
+    "xp_reward": 509,
+    "loot_table": [
+        "Stone of the Feast",
+        "Chaos",
+        "Time"
+    ],
+    "image_prompt": "A dangerous Undead creature known as Celestial Lich. High fantasy art style, detailed creature design.",
+    "description": "A Undead known as Celestial Lich."
+}

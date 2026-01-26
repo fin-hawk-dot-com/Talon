@@ -1,0 +1,21 @@
+{
+    "id": "lore_crystal_scorpion",
+    "title": "Crystal Scorpion",
+    "category": "Bestiary",
+    "text": "Crystal Scorpions are terrifying predators of the Crystal Caverns. Their carapace is made of diamond-hard crystal that refracts light, making them difficult to target with spells. Their stinger delivers a unique venom that doesn't kill, but crystallizes the victim's blood, slowly turning them into a statue. These statues are then harvested by the scorpion's young for food.",
+    "image_prompt": "A dangerous Beast creature known as Crystal Scorpion. A giant scorpion with a carapace of jagged crystal.",
+    "name": "Crystal Scorpion",
+    "race": "Beast",
+    "attributes": {
+        "Power": 240,
+        "Speed": 180,
+        "Spirit": 100,
+        "Recovery": 220
+    },
+    "xp_reward": 250,
+    "loot_table": [
+        "Crystal",
+        "Stone of the Shatter"
+    ],
+    "description": "A Beast known as Crystal Scorpion whose sting turns flesh to glass."
+}

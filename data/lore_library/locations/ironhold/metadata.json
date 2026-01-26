@@ -1,0 +1,44 @@
+{
+    "name": "Ironhold",
+    "description": "A massive fortress city carved into the side of a mountain, headquarters of the Order of the Shield.",
+    "type": "City",
+    "region": "Northern Peaks",
+    "danger_rank": "Bronze",
+    "connected_locations": [
+        "Highland Watch",
+        "North Road"
+    ],
+    "resources": [
+        "Iron Essence",
+        "Weapons"
+    ],
+    "image_prompt_positive": "Massive stone fortress carved into mountain, snow-capped peaks, iron gates, banners, defensive walls, soldier patrols, cold atmosphere, epic scale, 8k",
+    "image_prompt_negative": "forest, beach, warm, sunny, wooden buildings, ruins",
+    "npcs": [
+        "Elara",
+        "Trader Midas"
+    ],
+    "narrative": "Carved directly into the granite face of the Northern Peaks, Ironhold is a testament to dwarven endurance and human ingenuity. It serves as the unyielding headquarters of the Order of the Shield. Massive iron gates, reinforced with defensive runes, bar entry to all but the authorized. Inside, the city is a vertical marvel of stone bridges, foundries, and barracks, constantly echoing with the ring of hammers on anvils.",
+    "points_of_interest": [
+        {
+            "name": "The Forge",
+            "description": "The heart of the city, a massive foundry where weapons and armor are crafted day and night using volcanic heat.",
+            "type": "Building",
+            "image_prompt": "Giant forge, lava, blacksmiths, anvils, fire, industrial fantasy"
+        },
+        {
+            "name": "High Command",
+            "description": "The headquarters of the Order of the Shield, strictly guarded and imposing.",
+            "type": "Building",
+            "image_prompt": "Military fortress, stone command center, flags, tactical maps"
+        },
+        {
+            "name": "The Ramparts",
+            "description": "The outer walls offering a view of the snowy peaks and the valleys below.",
+            "type": "Area",
+            "image_prompt": "Castle walls, snow, mountains view, guard patrol"
+        }
+    ],
+    "x": 500,
+    "y": 150
+}

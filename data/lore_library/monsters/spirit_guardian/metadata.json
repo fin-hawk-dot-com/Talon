@@ -1,0 +1,18 @@
+{
+    "name": "Spirit Guardian",
+    "race": "Construct",
+    "attributes": {
+        "Power": 200,
+        "Speed": 200,
+        "Spirit": 400,
+        "Recovery": 200
+    },
+    "xp_reward": 350,
+    "loot_table": [
+        "Spirit",
+        "Stone of the Shield",
+        "Light"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Spirit Guardian. A suit of armor animated by a glowing blue soul.",
+    "description": "A Construct known as Spirit Guardian bound to protect ancient sites."
+}

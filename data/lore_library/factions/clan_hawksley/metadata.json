@@ -1,0 +1,11 @@
+{
+    "id": "lore_clan_hawksley",
+    "title": "Clan Hawksley",
+    "category": "Faction",
+    "text": "Clan Hawksley is an ancient noble family of monster hunters who view beast slaying as a sacred art. They value precision and honor over brute force. While technically a noble house, they operate more like a guild, training their own in the ways of the hunt and maintaining a vast archive of monster lore. Their manor is filled with trophies of legendary beasts, and their library is said to contain the weaknesses of every monster species known to man. They are the only family allowed to wear the 'Green-Steel' armor reserved for royal guards.",
+    "image_prompt": "Emblem of Clan Hawksley. A stylized hawk holding a spear in its talons, green and silver colors. Fantasy setting.",
+    "name": "Clan Hawksley",
+    "description": "An ancient noble family of monster hunters who view beast slaying as a sacred art. They value precision and honor over brute force.",
+    "type": "Noble",
+    "rank_requirement": "Bronze"
+}

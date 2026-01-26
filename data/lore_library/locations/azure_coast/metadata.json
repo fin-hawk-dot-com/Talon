@@ -1,0 +1,44 @@
+{
+    "id": "lore_azure_coast",
+    "title": "Azure Coast",
+    "category": "Location",
+    "text": "The Azure Coast is a deceptive paradise. On the surface, it features pristine white sand beaches and crystal-clear turquoise waters. However, the deep waters just offshore harbor the greatest concentration of Water Essence in the world, drawing colossal sea monsters, Sirens, and Sea Serpents. The weather is unpredictable; calm skies can turn into a mana-storm in minutes. Coastal settlements are heavily fortified, often built on high cliffs to avoid the tsunamis that frequent the region. It is a land of high risk and high reward for maritime traders.",
+    "image_prompt": "Beautiful tropical beach with a dark shadow looming under the water in the distance.",
+    "name": "Azure Coast",
+    "description": "A beautiful coastline with sparkling blue waters and white sand, seemingly peaceful but hiding deep sea threats.",
+    "type": "Wilderness",
+    "region": "Western Coast",
+    "danger_rank": "Iron",
+    "connected_locations": [
+        "Western Pass"
+    ],
+    "resources": [
+        "Water Essence",
+        "Pearls"
+    ],
+    "image_prompt_positive": "Tropical beach, blue ocean, white sand, palm trees, bright sun, seagulls, crystal clear water",
+    "image_prompt_negative": "dark, snow, city, forest, night",
+    "narrative": "At first glance, the Azure Coast is paradise. White sands meet crystal-clear blue waters under a radiant sun. Palm trees sway in the gentle breeze, and the ocean teems with colorful life. However, veterans know that the beauty is a lure. The tides are controlled by temperamental water spirits, and the deep trenches just offshore harbor leviathans that view the beachgoers not as tourists, but as a buffet.",
+    "points_of_interest": [
+        {
+            "name": "The White Sands",
+            "description": "Pristine beaches stretching for miles.",
+            "type": "Area",
+            "image_prompt": "White sand beach, blue ocean, sunny, palm trees"
+        },
+        {
+            "name": "Coral Reefs",
+            "description": "Vibrant underwater ecosystems visible just off the shore.",
+            "type": "Area",
+            "image_prompt": "Underwater coral reef, colorful fish, clear water"
+        },
+        {
+            "name": "The Lighthouse",
+            "description": "An old, automated magical lighthouse guiding ships away from the reefs.",
+            "type": "Building",
+            "image_prompt": "Old stone lighthouse, coast, ocean waves, sunset"
+        }
+    ],
+    "x": 200,
+    "y": 500
+}

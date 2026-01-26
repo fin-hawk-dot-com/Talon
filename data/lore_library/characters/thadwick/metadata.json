@@ -1,0 +1,25 @@
+{
+    "name": "Thadwick",
+    "race": "Elf",
+    "faction": "Magic Association",
+    "affinity": "Mage",
+    "description": "An inquisitive elf with spectacles that seem to magnify his eyes a bit too much.",
+    "dialogue": {
+        "default": "The flow of essence... it's quite fascinating, isn't it?",
+        "friendly": "I've discovered a new resonance pattern! Would you like to see?",
+        "hostile": "Your understanding of magic is... primitive. Leave me to my studies."
+    },
+    "attributes": {
+        "Power": 60,
+        "Speed": 90,
+        "Spirit": 150,
+        "Recovery": 70
+    },
+    "base_essences": [
+        "Fire",
+        "Mana",
+        "Knowledge"
+    ],
+    "confluence_essence": "Inferno",
+    "image_prompt": "A Elf character named Thadwick. An inquisitive elf with spectacles that seem to magnify his eyes a bit too much. Fantasy portrait."
+}

@@ -1,0 +1,21 @@
+{
+    "id": "lore_iron_wolf",
+    "title": "Iron Wolf",
+    "category": "Bestiary",
+    "text": "Iron Wolves are a mutated species of canine native to the metallic mountains of the north. Over generations of consuming ore-rich prey and water, their fur has incorporated trace metals, granting them a coat that acts as natural chainmail. Their claws are razor-sharp and can shear through standard leather armor. They hunt in coordinated packs, using complex flanking tactics. An Alpha Iron Wolf can grow to the size of a horse and is a formidable opponent even for a seasoned knight.",
+    "image_prompt": "A dangerous Magical Beast creature known as Iron Wolf. High fantasy art style, detailed creature design.",
+    "name": "Iron Wolf",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 120,
+        "Speed": 140,
+        "Spirit": 80,
+        "Recovery": 110
+    },
+    "xp_reward": 100,
+    "loot_table": [
+        "Swift",
+        "Stone of the Reflex"
+    ],
+    "description": "A Magical Beast known as Iron Wolf."
+}

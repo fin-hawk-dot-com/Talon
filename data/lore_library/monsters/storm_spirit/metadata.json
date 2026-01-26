@@ -1,0 +1,17 @@
+{
+    "name": "Storm Spirit",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 344,
+        "Speed": 320,
+        "Spirit": 338,
+        "Recovery": 333
+    },
+    "xp_reward": 381,
+    "loot_table": [
+        "Stone of the Anchor",
+        "Stone of the Foot"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Storm Spirit. High fantasy art style, detailed creature design.",
+    "description": "A Elemental known as Storm Spirit."
+}

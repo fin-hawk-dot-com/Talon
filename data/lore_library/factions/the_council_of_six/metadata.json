@@ -1,0 +1,7 @@
+{
+    "name": "The Council of Six",
+    "description": "The governing body of Greenstone City, composed of representatives from major guilds and the common folk.",
+    "type": "Political",
+    "rank_requirement": "Iron",
+    "image_prompt": "Emblem of The Council of Six, a Political faction. Six distinct symbols arranged in a circle. Fantasy setting."
+}

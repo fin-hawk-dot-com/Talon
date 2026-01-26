@@ -1,0 +1,17 @@
+{
+    "name": "Silent Assassin",
+    "race": "Humanoid",
+    "attributes": {
+        "Power": 107,
+        "Speed": 104,
+        "Spirit": 109,
+        "Recovery": 133
+    },
+    "xp_reward": 160,
+    "loot_table": [
+        "Dark",
+        "Poison"
+    ],
+    "image_prompt": "A dangerous Humanoid creature known as Silent Assassin. A figure in tight black clothing with dual daggers. High fantasy art style, detailed creature design.",
+    "description": "A killer who moves without sound."
+}

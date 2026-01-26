@@ -1,0 +1,22 @@
+{
+    "id": "lore_cloud_ray",
+    "title": "Cloud Ray",
+    "category": "Bestiary",
+    "text": "Cloud Rays are gentle giants of the sky. Resembling manta rays, they glide on currents of Air Essence rather than water. They feed on atmospheric mana and moisture. They are often used as mounts by the Sky-Tribes, though taming one requires a bond of trust rather than force. Their skin camouflages perfectly with the clouds.",
+    "image_prompt": "A majestic mantra ray flying through the clouds, trailing mist.",
+    "name": "Cloud Ray",
+    "race": "Beast",
+    "attributes": {
+        "Power": 200,
+        "Speed": 500,
+        "Spirit": 400,
+        "Recovery": 200
+    },
+    "xp_reward": 500,
+    "loot_table": [
+        "Cloud",
+        "Air",
+        "Stone of the Wing"
+    ],
+    "description": "A Beast known as Cloud Ray that soars through the upper atmosphere."
+}

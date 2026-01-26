@@ -1,0 +1,22 @@
+{
+    "id": "lore_crystal_golem",
+    "title": "Crystal Golem",
+    "category": "Bestiary",
+    "text": "Crystal Golems are semi-sentient constructs native to the Crystal Caverns. They are not built; they grow from the rock when mana density reaches a critical point. Their faceted bodies reflect magical attacks, making them highly resistant to spells. They attack by firing concentrated beams of light from their cores or by bludgeoning with their diamond-hard fists. Shattering a Crystal Golem yields valuable mana crystals, making them a prime target for miners despite the danger.",
+    "image_prompt": "A dangerous Construct creature known as Crystal Golem. High fantasy art style, detailed creature design.",
+    "name": "Crystal Golem",
+    "race": "Construct",
+    "attributes": {
+        "Power": 200,
+        "Speed": 60,
+        "Spirit": 150,
+        "Recovery": 100
+    },
+    "xp_reward": 200,
+    "loot_table": [
+        "Ice",
+        "Earth",
+        "Stone of the Shield"
+    ],
+    "description": "A Construct known as Crystal Golem made of shimmering ice crystals."
+}

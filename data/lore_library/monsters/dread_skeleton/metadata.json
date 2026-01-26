@@ -1,0 +1,17 @@
+{
+    "name": "Dread Skeleton",
+    "race": "Undead",
+    "attributes": {
+        "Power": 159,
+        "Speed": 115,
+        "Spirit": 138,
+        "Recovery": 133
+    },
+    "xp_reward": 173,
+    "loot_table": [
+        "Bone",
+        "Death"
+    ],
+    "image_prompt": "A dangerous Undead creature known as Dread Skeleton. A skeleton in dark armor with a glowing red aura. High fantasy art style, detailed creature design.",
+    "description": "A skeleton warrior radiating dread."
+}

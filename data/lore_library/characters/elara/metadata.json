@@ -1,0 +1,25 @@
+{
+    "name": "Elara",
+    "race": "Human",
+    "faction": "Order of the Shield",
+    "affinity": "Guardian",
+    "description": "A stoic woman in polished plate armor, bearing the crest of the Shield.",
+    "dialogue": {
+        "default": "The Order protects those who cannot protect themselves.",
+        "friendly": "You have a noble heart. The Order would welcome your aid.",
+        "hostile": "Your actions threaten the peace. Walk away."
+    },
+    "attributes": {
+        "Power": 100,
+        "Speed": 80,
+        "Spirit": 110,
+        "Recovery": 140
+    },
+    "base_essences": [
+        "Iron",
+        "Life",
+        "Shield"
+    ],
+    "confluence_essence": "Bastion",
+    "image_prompt": "A Human character named Elara. A stoic woman in polished plate armor, bearing the crest of the Shield. Fantasy portrait."
+}
