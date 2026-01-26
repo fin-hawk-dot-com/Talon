@@ -248,7 +248,36 @@ class GameApp:
         self.left_panel.pack_propagate(False) # Don't shrink
 
         ttk.Label(self.left_panel, text="Character Status", style="Title.TLabel").pack(pady=10)
-        self.status_text = tk.Text(self.left_panel, wrap=tk.WORD, height=30, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
+
+        # Basic Info
+        self.basic_info_label = ttk.Label(self.left_panel, text="No Character", font=('Helvetica', 10, 'bold'))
+        self.basic_info_label.pack(pady=(0, 10))
+
+        # Status Bars Frame
+        self.status_frame = ttk.Frame(self.left_panel)
+        self.status_frame.pack(fill=tk.X, padx=5, pady=5)
+
+        def create_bar(label, color):
+            frame = ttk.Frame(self.status_frame)
+            frame.pack(fill=tk.X, pady=2)
+            lbl = ttk.Label(frame, text=f"{label}: 0/0", font=('Consolas', 9))
+            lbl.pack(anchor="w")
+            # Style for custom color
+            s_name = f"{label}.Horizontal.TProgressbar"
+            self.style.configure(s_name, background=color)
+            bar = ttk.Progressbar(frame, style=s_name, length=100, mode='determinate')
+            bar.pack(fill=tk.X)
+            return lbl, bar
+
+        self.hp_label, self.hp_bar = create_bar("HP", "#ff5555")
+        self.mp_label, self.mp_bar = create_bar("MP", "#5555ff")
+        self.sp_label, self.sp_bar = create_bar("SP", "#55ff55")
+        self.wp_label, self.wp_bar = create_bar("WP", "#aa55ff")
+
+        # Details
+        ttk.Separator(self.left_panel, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=10)
+
+        self.status_text = tk.Text(self.left_panel, wrap=tk.WORD, height=15, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
         self.status_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
         # 3. Center Panel: Map + Game Log
@@ -286,15 +315,49 @@ class GameApp:
         self.log_text.tag_config("event", foreground="#55aaff")
         self.log_text.tag_config("error", foreground="#ffaaff")
 
-        # 4. Right Panel: Actions
-        self.right_panel = ttk.Frame(self.main_container, width=200, relief=tk.RIDGE, borderwidth=2)
+        # 4. Right Panel: Tabs
+        self.right_panel = ttk.Frame(self.main_container, width=320, relief=tk.RIDGE, borderwidth=2)
         self.right_panel.pack(side=tk.RIGHT, fill=tk.Y, padx=5, pady=5)
         self.right_panel.pack_propagate(False)
 
-        ttk.Label(self.right_panel, text="Actions", style="Title.TLabel").pack(pady=10)
+        self.right_notebook = ttk.Notebook(self.right_panel)
+        self.right_notebook.pack(fill=tk.BOTH, expand=True)
 
-        self.action_frame = ttk.Frame(self.right_panel)
-        self.action_frame.pack(fill=tk.BOTH, expand=True, padx=5)
+        # Tab 1: Actions
+        self.action_tab = ttk.Frame(self.right_notebook)
+        self.right_notebook.add(self.action_tab, text="Actions")
+
+        self.action_frame = ttk.Frame(self.action_tab)
+        self.action_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+
+        # Tab 2: Inventory
+        self.inventory_tab = ttk.Frame(self.right_notebook)
+        self.right_notebook.add(self.inventory_tab, text="Inventory")
+
+        columns = ("Item", "Type")
+        self.inventory_tree = ttk.Treeview(self.inventory_tab, columns=columns, show='headings', selectmode='browse')
+        self.inventory_tree.heading("Item", text="Item")
+        self.inventory_tree.column("Item", width=180)
+        self.inventory_tree.heading("Type", text="Type")
+        self.inventory_tree.column("Type", width=100)
+        self.inventory_tree.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+
+        self.inv_action_frame = ttk.Frame(self.inventory_tab)
+        self.inv_action_frame.pack(fill=tk.X, padx=5, pady=5)
+
+        # Tab 3: Quests
+        self.quest_tab = ttk.Frame(self.right_notebook)
+        self.right_notebook.add(self.quest_tab, text="Quests")
+
+        self.quest_list = tk.Text(self.quest_tab, wrap=tk.WORD, state=tk.DISABLED, bg="#2b2b2b", fg="#e0e0e0", font=('Consolas', 9))
+        self.quest_list.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+
+        # Tab 4: Character
+        self.character_tab = ttk.Frame(self.right_notebook)
+        self.right_notebook.add(self.character_tab, text="Character")
+
+        self.character_details = tk.Text(self.character_tab, wrap=tk.WORD, state=tk.DISABLED, bg="#2b2b2b", fg="#e0e0e0", font=('Consolas', 9))
+        self.character_details.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
     def log(self, message, tag="info"):
         self.log_text.config(state=tk.NORMAL)
@@ -313,51 +376,155 @@ class GameApp:
 
     def update_status_display(self):
         if not self.engine.character:
+            self.basic_info_label.config(text="No Character Loaded")
             self.status_text.config(state=tk.NORMAL)
             self.status_text.delete("1.0", tk.END)
-            self.status_text.insert(tk.END, "No Character Loaded")
             self.status_text.config(state=tk.DISABLED)
             return
 
         char = self.engine.character
-        text = f"Name: {char.name}\n"
-        text += f"Race: {char.race}\n"
-        text += f"Rank: {char.rank}\n"
-        text += f"XP: {char.current_xp}\n"
-        text += f"Dram: {char.currency}\n"
-        text += "-"*20 + "\n"
-        text += f"HP: {char.current_health:.0f}/{char.max_health:.0f}\n"
-        text += f"MP: {char.current_mana:.0f}/{char.max_mana:.0f}\n"
-        text += f"SP: {char.current_stamina:.0f}/{char.max_stamina:.0f}\n"
-        text += f"WP: {char.current_willpower:.0f}/{char.max_willpower:.0f}\n"
 
+        # Basic Info
+        self.basic_info_label.config(text=f"{char.name} ({char.race}) - Rank: {char.rank}")
+
+        # Bars
+        self.hp_bar['maximum'] = char.max_health
+        self.hp_bar['value'] = char.current_health
+        self.hp_label.config(text=f"HP: {char.current_health:.0f}/{char.max_health:.0f}")
+
+        self.mp_bar['maximum'] = char.max_mana
+        self.mp_bar['value'] = char.current_mana
+        self.mp_label.config(text=f"MP: {char.current_mana:.0f}/{char.max_mana:.0f}")
+
+        self.sp_bar['maximum'] = char.max_stamina
+        self.sp_bar['value'] = char.current_stamina
+        self.sp_label.config(text=f"SP: {char.current_stamina:.0f}/{char.max_stamina:.0f}")
+
+        self.wp_bar['maximum'] = char.max_willpower
+        self.wp_bar['value'] = char.current_willpower
+        self.wp_label.config(text=f"WP: {char.current_willpower:.0f}/{char.max_willpower:.0f}")
+
+        # Text Details (Attributes & Effects)
+        text = ""
         if char.status_effects:
-            text += "-"*10 + "\n"
             text += "Status Effects:\n"
             for e in char.status_effects:
                 text += f"[{e.name} {e.duration}]\n"
+            text += "-"*10 + "\n"
 
-        active_q_count = len([q for q in char.quests.values() if q.status == "Active"])
-        if active_q_count > 0:
-            text += f"Active Quests: {active_q_count}\n"
-
-        text += "-"*20 + "\n"
         text += "Attributes:\n"
         for attr in char.attributes.values():
             text += f" {attr.name[:3]}: {attr.value:.1f} ({attr.rank})\n"
-
-        text += "-"*20 + "\n"
-        text += "Equipment/Essences:\n"
-        for e in char.get_all_essences():
-            text += f"- {e.name}\n"
 
         self.status_text.config(state=tk.NORMAL)
         self.status_text.delete("1.0", tk.END)
         self.status_text.insert(tk.END, text)
         self.status_text.config(state=tk.DISABLED)
 
+        # Update tabs
+        if hasattr(self, 'update_character_tab'): self.update_character_tab()
+        if hasattr(self, 'update_inventory_tab'): self.update_inventory_tab()
+        if hasattr(self, 'update_quest_tab'): self.update_quest_tab()
+
         # Also update map
         self.map_widget.refresh()
+
+    def update_inventory_tab(self):
+        if not self.engine.character: return
+
+        # Save selection
+        selected_iid = self.inventory_tree.selection()
+
+        # Clear existing
+        for item in self.inventory_tree.get_children():
+            self.inventory_tree.delete(item)
+
+        # Populate
+        for i, item in enumerate(self.engine.character.inventory):
+            # Determine type
+            itype = "Item"
+            if hasattr(item, 'type'): itype = "Essence"
+            elif hasattr(item, 'function'): itype = "Stone"
+            # Add to tree
+            self.inventory_tree.insert("", tk.END, iid=str(i), values=(item.name, itype))
+
+        # Restore selection if possible
+        if selected_iid and self.inventory_tree.exists(selected_iid[0]):
+            self.inventory_tree.selection_set(selected_iid[0])
+        else:
+            # Clear action frame if selection lost
+            for widget in self.inv_action_frame.winfo_children():
+                widget.destroy()
+
+        # Bind selection
+        self.inventory_tree.bind("<<TreeviewSelect>>", self.on_inventory_select)
+
+    def on_inventory_select(self, event):
+        selected = self.inventory_tree.selection()
+        if not selected: return
+
+        idx = int(selected[0])
+        # Update action buttons for this item
+        for widget in self.inv_action_frame.winfo_children():
+            widget.destroy()
+
+        # Check index validity (race condition safety)
+        if idx >= len(self.engine.character.inventory): return
+
+        item = self.engine.character.inventory[idx]
+        ttk.Label(self.inv_action_frame, text=f"Selected: {item.name}", font=('Helvetica', 9, 'bold')).pack(anchor='w', pady=(0,5))
+
+        # Actions based on type
+        if hasattr(item, 'type'): # Essence
+             ttk.Button(self.inv_action_frame, text="Absorb (Bond)", command=lambda: self.absorb_essence_dialog(idx)).pack(fill=tk.X, pady=2)
+        elif hasattr(item, 'function'): # Stone
+             ttk.Button(self.inv_action_frame, text="Use (Awaken)", command=self.show_awaken_options).pack(fill=tk.X, pady=2)
+
+        # Generic Inspect
+        if hasattr(item, 'description'):
+             ttk.Button(self.inv_action_frame, text="Inspect", command=lambda: self.log(f"{item.name}: {item.description}", "info")).pack(fill=tk.X, pady=2)
+
+    def update_quest_tab(self):
+        if not self.engine.character: return
+
+        self.quest_list.config(state=tk.NORMAL)
+        self.quest_list.delete("1.0", tk.END)
+
+        active = [q for q in self.engine.character.quests.values() if q.status == "Active"]
+        if not active:
+            self.quest_list.insert(tk.END, "No active quests.\n")
+        else:
+            for qp in active:
+                quest = self.engine.data_loader.get_quest(qp.quest_id)
+                self.quest_list.insert(tk.END, f"• {quest.title}\n", "event")
+                # Show current stage description
+                stage = quest.stages.get(qp.current_stage_id)
+                if stage:
+                     self.quest_list.insert(tk.END, f"  {stage['description']}\n\n")
+
+        self.quest_list.config(state=tk.DISABLED)
+
+    def update_character_tab(self):
+        if not self.engine.character: return
+
+        char = self.engine.character
+        text = f"XP: {char.current_xp}\n"
+        text += f"Dram: {char.currency}\n\n"
+
+        text += "Essences & Abilities:\n"
+        for ess_name, slots in char.abilities.items():
+            text += f"- {ess_name}:\n"
+            for ab in slots:
+                if ab:
+                    text += f"  • {ab.name} (Lvl {ab.level}, Rank {ab.rank})\n"
+                else:
+                    text += "  • [Empty]\n"
+            text += "\n"
+
+        self.character_details.config(state=tk.NORMAL)
+        self.character_details.delete("1.0", tk.END)
+        self.character_details.insert(tk.END, text)
+        self.character_details.config(state=tk.DISABLED)
 
     # --- MENUS & STATES ---
 
@@ -469,14 +636,20 @@ class GameApp:
         self.state = "HUB"
         self.update_status_display()
         self.clear_actions()
+        self.right_notebook.select(self.action_tab)
 
         self.log("\n--- You are in a safe location ---", "info")
 
         self.add_action_button("Train Attribute", self.show_train_options)
         self.add_action_button("Adventure (Combat)", self.start_combat_encounter)
-        self.add_action_button("Inventory / Absorb", self.show_inventory_options)
+        self.add_action_button("Inventory", lambda: self.right_notebook.select(self.inventory_tab))
         self.add_action_button("Awaken Ability", self.show_awaken_options)
-        self.add_action_button("Quests", self.show_quest_log)
+
+        # Check for available quests
+        if self.engine.quest_mgr.get_available_quests(self.engine.character):
+             self.add_action_button("Find New Quests", self.show_available_quests)
+
+        self.add_action_button("Quests", lambda: self.right_notebook.select(self.quest_tab))
         self.add_action_button("Rest (Save)", self.save_game_dialog)
         self.add_action_button("Main Menu", self.show_main_menu)
 
@@ -545,25 +718,7 @@ class GameApp:
         self.show_rank_up_ability_options() # Refresh
 
     def show_inventory_options(self):
-        self.clear_actions()
-        self.add_action_button("<< Back", self.enter_hub)
-
-        char = self.engine.character
-        if not char.inventory:
-            self.log("Inventory is empty.", "info")
-            return
-
-        def use_item(idx):
-            item = char.inventory[idx]
-            # Simple Absorb logic for Essences
-            if hasattr(item, 'type'): # Essence
-                # Ask for attribute (simplified: just popup)
-                self.absorb_essence_dialog(idx)
-            else:
-                self.log(f"Cannot 'use' {item.name} directly. Use Awaken menu.", "error")
-
-        for i, item in enumerate(char.inventory):
-            self.add_action_button(f"{item.name}", lambda idx=i: use_item(idx))
+        self.right_notebook.select(self.inventory_tab)
 
     def absorb_essence_dialog(self, idx):
         # Simplified dialog to pick attribute
@@ -576,7 +731,7 @@ class GameApp:
             self.log(res, "event")
             self.update_status_display()
             popup.destroy()
-            self.show_inventory_options() # Refresh
+            # Inventory list updates automatically via update_status_display
 
         ttk.Button(popup, text="Power", command=lambda: confirm("Power")).pack()
         ttk.Button(popup, text="Speed", command=lambda: confirm("Speed")).pack()
@@ -657,28 +812,31 @@ class GameApp:
         self.show_awaken_options()
 
     def show_quest_log(self):
-        self.clear_actions()
-        self.add_action_button("<< Back", self.enter_hub)
+        self.right_notebook.select(self.quest_tab)
+        # Check available quests button?
+        # We can add a button to the quest tab action area if we had one,
+        # or just add it to the main Action tab if we want.
+        # But wait, available quests are actionable.
+        # Let's check available quests here and if any, log a message or add button to Action tab?
 
         char = self.engine.character
-
-        self.log("\n--- Quest Log ---", "info")
-        active = [q for q in char.quests.values() if q.status == "Active"]
-        if not active:
-            self.log("No active quests.", "info")
-        else:
-            for qp in active:
-                quest = self.engine.data_loader.get_quest(qp.quest_id)
-                self.log(f"Active: {quest.title}", "event")
-
-        # Available quests
         available = self.engine.quest_mgr.get_available_quests(char)
         if available:
-            self.add_action_button("Find New Quests", self.show_available_quests)
+            # We should probably show this in the Action tab if we want the user to click it.
+            # But the user is now looking at Quest tab.
+            pass
+
+        # Since we moved Quest display to a tab, "Find New Quests" needs a home.
+        # It fits best in the "Actions" tab or as a button in the "Quests" tab if we added an action frame there.
+        # I didn't add an action frame to Quests tab.
+        # I will leave "Find New Quests" accessible from the Hub actions if needed,
+        # OR I can add it to the Hub menu in enter_hub if quests are available.
+        # For now, let's keep it simple.
 
     def show_available_quests(self):
         self.clear_actions()
-        self.add_action_button("<< Back", self.show_quest_log)
+        self.add_action_button("<< Back", self.enter_hub)
+        self.right_notebook.select(self.action_tab)
 
         char = self.engine.character
         available = self.engine.quest_mgr.get_available_quests(char)
@@ -686,8 +844,15 @@ class GameApp:
         def start(q_id):
             res = self.engine.quest_mgr.start_quest(char, q_id)
             self.log(res, "event")
-            self.show_quest_log()
+            self.update_quest_tab() # Update the tab
+            self.enter_hub() # Return to hub actions
 
+        if not available:
+            self.log("No new quests available.", "info")
+            self.enter_hub()
+            return
+
+        self.log("Select a quest to start:", "info")
         for q in available:
             self.add_action_button(f"Start: {q.title}", lambda qid=q.id: start(qid))
 
