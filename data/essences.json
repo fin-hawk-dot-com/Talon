@@ -1182,5 +1182,105 @@
             "Time"
         ],
         "image_prompt": "An ethereal essence orb representing Wax. Visual style: Common magic, glowing with soft yellow and melting energy."
+    },
+    {
+        "name": "Ember",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Fire",
+            "Heat",
+            "Weak"
+        ],
+        "description": "The dying spark of a fire.",
+        "opposite": "Water",
+        "synergy": [
+            "Fire",
+            "Ash",
+            "Smoke",
+            "Heat"
+        ],
+        "image_prompt": "An ethereal essence orb representing Ember. Visual style: Common magic, glowing with fading orange light."
+    },
+    {
+        "name": "Root",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Biological",
+            "Earth",
+            "Stability",
+            "Growth"
+        ],
+        "description": "The essence of anchoring and absorption.",
+        "opposite": "Air",
+        "synergy": [
+            "Earth",
+            "Nature",
+            "Water",
+            "Life"
+        ],
+        "image_prompt": "An ethereal essence orb representing Root. Visual style: Common magic, tangled brown and green energy."
+    },
+    {
+        "name": "Mist",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Water",
+            "Air",
+            "Obscurity"
+        ],
+        "description": "The essence of fine water vapor.",
+        "opposite": "Sun",
+        "synergy": [
+            "Water",
+            "Air",
+            "Cloud",
+            "Stealth"
+        ],
+        "image_prompt": "An ethereal essence orb representing Mist. Visual style: Common magic, pale grey and swirling dampness."
+    },
+    {
+        "name": "Ash",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Elemental",
+            "Residue",
+            "Death",
+            "Earth"
+        ],
+        "description": "The essence of what remains after the fire.",
+        "opposite": "Life",
+        "synergy": [
+            "Fire",
+            "Earth",
+            "Death",
+            "Ember"
+        ],
+        "image_prompt": "An ethereal essence orb representing Ash. Visual style: Uncommon magic, grey flakes falling in a void."
+    },
+    {
+        "name": "Smoke",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Elemental",
+            "Gas",
+            "Obscurity",
+            "Choking"
+        ],
+        "description": "The essence of particulate combustion.",
+        "opposite": "Air",
+        "synergy": [
+            "Fire",
+            "Air",
+            "Poison",
+            "Ash"
+        ],
+        "image_prompt": "An ethereal essence orb representing Smoke. Visual style: Common magic, billowing dark grey plumes."
     }
 ]

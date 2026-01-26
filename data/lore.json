@@ -1132,5 +1132,89 @@
         "category": "Location",
         "text": "The Library of Lost Words is a semi-mythical location that exists in a pocket dimension. It is said to contain every book that has ever been burned or lost to time. The air is filled with floating Ink Essence, and the silence is absolute. It is guarded by Ink Horrors and the ghost of the First Librarian. Adventurers seek it to find forbidden spells, but many become so engrossed in the reading that they forget to eat or sleep, eventually becoming part of the library's collection.",
         "image_prompt": "Endless rows of bookshelves spiraling into a void, floating black letters."
+    },
+    {
+        "id": "lore_crimson_drake",
+        "title": "Crimson Drake",
+        "category": "Bestiary",
+        "text": "Crimson Drakes are a subspecies of drake that inhabit the volcanic regions bordering the Ashen Plains. Their scales glow with an internal heat, and they can spit globs of sticky, burning magma. Unlike their bronze cousins, they are highly aggressive and will hunt anything that moves. Their nests are often built in the craters of active geysers.",
+        "image_prompt": "A red drake perched on a volcanic rock, smoke rising from its nostrils."
+    },
+    {
+        "id": "lore_moss_giant",
+        "title": "Moss Giant",
+        "category": "Bestiary",
+        "text": "Moss Giants are the silent guardians of the deep forests. They are not born, but grown from the forest floor over centuries. Composed of earth, stone, and ancient roots, they move with a slow, grinding purpose. They are generally peaceful unless the forest is threatened, at which point they can summon the very trees to fight alongside them.",
+        "image_prompt": "A giant humanoid made of mossy rocks and tree roots, blending into the forest."
+    },
+    {
+        "id": "lore_phase_spider",
+        "title": "Phase Spider",
+        "category": "Bestiary",
+        "text": "Phase Spiders are terrifying predators that originated from the Dimension of Shadows. They have the ability to shift their bodies out of phase with the material plane, appearing as flickering, translucent phantoms. This allows them to bypass physical armor and walls. They hunt by ambushing prey from the Ethereal Plane, dragging them back to their dimension to feed.",
+        "image_prompt": "A spider that is half-invisible, purple and blue energy shifting around it."
+    },
+    {
+        "id": "lore_sunfire_phoenix",
+        "title": "Sunfire Phoenix",
+        "category": "Bestiary",
+        "text": "The Sunfire Phoenix is a majestic creature composed of living solar plasma. It is said to be a messenger of the Sun God, appearing only during the height of summer. Its feathers burn with the intensity of a star, and its cry can banish shadows. Unlike the Noble Phoenix, which represents rebirth, the Sunfire Phoenix represents judgment and purification.",
+        "image_prompt": "A bird made of blinding white and gold fire, flying near the sun."
+    },
+    {
+        "id": "lore_abyssal_kraken",
+        "title": "Abyssal Kraken",
+        "category": "Bestiary",
+        "text": "The Abyssal Kraken is a legend of the high seas, a monster so large it can wrap its tentacles around a galleon and drag it under. It dwells in the deepest trenches, where the pressure is enough to crush steel. Its eyes glow with a hypnotic light that lures sailors to their doom. It is an ancient beast, rumored to be one of the original spawn of the deep waters.",
+        "image_prompt": "A giant squid attacking a ship in a storm, lightning illuminating its massive form."
+    },
+    {
+        "id": "lore_essence_ember",
+        "title": "Ember Essence",
+        "category": "Magic",
+        "text": "Ember Essence represents the lingering warmth and the potential for reignition. It is a subtle form of Fire magic, focusing on sustained heat rather than explosive destruction. Mages who wield Ember Essence are often patient, nurturing their power until it is needed. It is also used in enchantment to keep objects permanently warm.",
+        "image_prompt": "A glowing coal in a dark room, emitting soft orange light and heat."
+    },
+    {
+        "id": "lore_essence_root",
+        "title": "Root Essence",
+        "category": "Magic",
+        "text": "Root Essence is the magic of stability and connection. It draws power from the earth and the complex network of life beneath the soil. Root Mages can immobilize enemies, drain their stamina, and reinforce their own bodies. It is a slow, defensive magic that excels in attrition warfare.",
+        "image_prompt": "Glowing green roots spreading through dark soil, pulsing with life."
+    },
+    {
+        "id": "lore_essence_mist",
+        "title": "Mist Essence",
+        "category": "Magic",
+        "text": "Mist Essence is the magic of obscurity and transition. It exists between Water and Air. Mist Mages are masters of stealth and confusion, using their power to blind enemies and dampen sound. They can turn their bodies into vapor to escape harm or slip through cracks. It is the favored essence of spies and assassins.",
+        "image_prompt": "A thick grey fog rolling over a landscape, hiding everything within."
+    },
+    {
+        "id": "lore_essence_ash",
+        "title": "Ash Essence",
+        "category": "Magic",
+        "text": "Ash Essence is the magic of the aftermath. It is what remains when the fire burns out. Ash Mages wield the power of desolation, choking enemies with clouds of grit and draining the heat from their bodies. It is a melancholy magic, often associated with mourning and the end of things.",
+        "image_prompt": "Grey ash falling like snow on a ruined city, silent and cold."
+    },
+    {
+        "id": "lore_essence_smoke",
+        "title": "Smoke Essence",
+        "category": "Magic",
+        "text": "Smoke Essence is the magic of suffocation and signals. It is an aggressive form of Air magic, filled with toxic particles. Smoke Mages can create choking clouds, blind opponents, and even solidify smoke into temporary constructs. It is a chaotic, shifting magic that is difficult to master.",
+        "image_prompt": "Black smoke billowing from a fire, forming shapes of skulls or hands."
+    },
+    {
+        "id": "lore_ashen_plains",
+        "title": "The Ashen Plains",
+        "category": "Location",
+        "text": "The Ashen Plains are a vast, grey wasteland located downwind of the Black Mountain. Covered in a thick layer of volcanic ash, the landscape is monochromatic and deadly silent. Nothing grows here but twisted, blackened thorns. The air is filled with fine grit that clogs the lungs. It is home to Ash Mages and creatures that have adapted to the desolation, like the Ash Stalker.",
+        "image_prompt": "A grey landscape covered in ash, dead trees, distant volcano, somber atmosphere."
+    },
+    {
+        "id": "lore_mist_walkers",
+        "title": "The Mist Walkers",
+        "category": "Faction",
+        "text": "The Mist Walkers are a secretive guild of spies and scouts who operate in the Azure Coast and the damp marshlands. They specialize in Mist and Veil magic, allowing them to move unseen and unheard. They sell their services to the highest bidder, but they follow a strict code of neutrality. They are rumored to have a hidden sanctuary in the center of a perpetual fog bank at sea.",
+        "image_prompt": "Figures in grey cloaks walking through a thick fog, only their glowing eyes visible."
     }
 ]
