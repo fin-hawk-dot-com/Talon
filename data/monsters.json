@@ -1520,5 +1520,429 @@
         ],
         "image_prompt": "A dangerous Beast creature known as Abyssal Kraken. A colossal squid with glowing eyes and spiked tentacles.",
         "description": "A Beast known as Abyssal Kraken that drags ships to the depths."
+    },
+    {
+        "name": "Mud Slime",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 35,
+            "Speed": 29,
+            "Spirit": 31,
+            "Recovery": 33
+        },
+        "xp_reward": 59,
+        "loot_table": [
+            "Earth",
+            "Water"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Mud Slime. A slime creature made of brown mud and dirt. High fantasy art style, detailed creature design.",
+        "description": "A glob of animated mud."
+    },
+    {
+        "name": "Giant Ant",
+        "race": "Beast",
+        "attributes": {
+            "Power": 56,
+            "Speed": 56,
+            "Spirit": 48,
+            "Recovery": 67
+        },
+        "xp_reward": 51,
+        "loot_table": [
+            "Stone of the Strike",
+            "Earth"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Giant Ant. A giant ant, size of a dog, chitinous armor. High fantasy art style, detailed creature design.",
+        "description": "An oversized ant with powerful mandibles."
+    },
+    {
+        "name": "Thief",
+        "race": "Humanoid",
+        "attributes": {
+            "Power": 21,
+            "Speed": 20,
+            "Spirit": 22,
+            "Recovery": 20
+        },
+        "xp_reward": 45,
+        "loot_table": [
+            "Swift",
+            "Stone of the Foot"
+        ],
+        "image_prompt": "A dangerous Humanoid creature known as Thief. A hooded thief with a dagger. High fantasy art style, detailed creature design.",
+        "description": "A sneaky individual looking for easy prey."
+    },
+    {
+        "name": "Living Shrub",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 32,
+            "Speed": 25,
+            "Spirit": 25,
+            "Recovery": 26
+        },
+        "xp_reward": 44,
+        "loot_table": [
+            "Nature",
+            "Root"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Living Shrub. A walking bush with glowing eyes. High fantasy art style, detailed creature design.",
+        "description": "A bush brought to life by stray magic."
+    },
+    {
+        "name": "Dust Wisp",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 65,
+            "Speed": 58,
+            "Spirit": 60,
+            "Recovery": 68
+        },
+        "xp_reward": 31,
+        "loot_table": [
+            "Air",
+            "Sand"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Dust Wisp. A small tornado of dust and sand. High fantasy art style, detailed creature design.",
+        "description": "A small swirling vortex of dust."
+    },
+    {
+        "name": "Goblin Scout",
+        "race": "Humanoid",
+        "attributes": {
+            "Power": 51,
+            "Speed": 47,
+            "Spirit": 48,
+            "Recovery": 40
+        },
+        "xp_reward": 31,
+        "loot_table": [
+            "Swift",
+            "Stone of the Leap"
+        ],
+        "image_prompt": "A dangerous Humanoid creature known as Goblin Scout. A goblin with leather armor and a spear. High fantasy art style, detailed creature design.",
+        "description": "A small, green-skinned scout."
+    },
+    {
+        "name": "Rusty Automaton",
+        "race": "Construct",
+        "attributes": {
+            "Power": 36,
+            "Speed": 31,
+            "Spirit": 32,
+            "Recovery": 27
+        },
+        "xp_reward": 44,
+        "loot_table": [
+            "Iron",
+            "Stone of the Shield"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Rusty Automaton. A rusted metal robot, falling apart. High fantasy art style, detailed creature design.",
+        "description": "An old, creaking robot."
+    },
+    {
+        "name": "Weak Skeleton",
+        "race": "Undead",
+        "attributes": {
+            "Power": 24,
+            "Speed": 30,
+            "Spirit": 32,
+            "Recovery": 34
+        },
+        "xp_reward": 45,
+        "loot_table": [
+            "Bone",
+            "Stone of the Spine"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Weak Skeleton. A skeleton with cracked bones and no armor. High fantasy art style, detailed creature design.",
+        "description": "A fragile skeleton animated by weak necromancy."
+    },
+    {
+        "name": "Stray Dog",
+        "race": "Beast",
+        "attributes": {
+            "Power": 18,
+            "Speed": 21,
+            "Spirit": 23,
+            "Recovery": 19
+        },
+        "xp_reward": 46,
+        "loot_table": [
+            "Stone of the Strike"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Stray Dog. A scruffy, aggressive wild dog. High fantasy art style, detailed creature design.",
+        "description": "A wild dog, hungry and aggressive."
+    },
+    {
+        "name": "Garden Gnome",
+        "race": "Construct",
+        "attributes": {
+            "Power": 66,
+            "Speed": 51,
+            "Spirit": 63,
+            "Recovery": 53
+        },
+        "xp_reward": 54,
+        "loot_table": [
+            "Earth",
+            "Stone of the Anchor"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Garden Gnome. An animated garden gnome with a pickaxe. High fantasy art style, detailed creature design.",
+        "description": "A ceramic statue brought to life."
+    },
+    {
+        "name": "Pond Spirit",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 52,
+            "Speed": 40,
+            "Spirit": 41,
+            "Recovery": 53
+        },
+        "xp_reward": 58,
+        "loot_table": [
+            "Water",
+            "Mist"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Pond Spirit. A watery figure rising from a pond. High fantasy art style, detailed creature design.",
+        "description": "A minor spirit inhabiting a pond."
+    },
+    {
+        "name": "Feral Cat",
+        "race": "Beast",
+        "attributes": {
+            "Power": 79,
+            "Speed": 70,
+            "Spirit": 62,
+            "Recovery": 83
+        },
+        "xp_reward": 54,
+        "loot_table": [
+            "Swift",
+            "Stone of the Foot"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Feral Cat. A hissing feral cat with sharp claws. High fantasy art style, detailed creature design.",
+        "description": "A large, angry housecat."
+    },
+    {
+        "name": "Young Boar",
+        "race": "Beast",
+        "attributes": {
+            "Power": 61,
+            "Speed": 77,
+            "Spirit": 67,
+            "Recovery": 77
+        },
+        "xp_reward": 37,
+        "loot_table": [
+            "Might",
+            "Flesh"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Young Boar. A small but muscular wild boar. High fantasy art style, detailed creature design.",
+        "description": "A juvenile boar, still dangerous."
+    },
+    {
+        "name": "Granite Golem",
+        "race": "Construct",
+        "attributes": {
+            "Power": 180,
+            "Speed": 136,
+            "Spirit": 175,
+            "Recovery": 165
+        },
+        "xp_reward": 144,
+        "loot_table": [
+            "Earth",
+            "Stone of the Wall"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Granite Golem. A humanoid figure made of grey granite blocks. High fantasy art style, detailed creature design.",
+        "description": "A golem hewn from solid granite."
+    },
+    {
+        "name": "Steel Beak",
+        "race": "Beast",
+        "attributes": {
+            "Power": 142,
+            "Speed": 188,
+            "Spirit": 174,
+            "Recovery": 138
+        },
+        "xp_reward": 145,
+        "loot_table": [
+            "Iron",
+            "Wing"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Steel Beak. A large bird of prey with a metallic beak. High fantasy art style, detailed creature design.",
+        "description": "A bird with a beak as hard as steel."
+    },
+    {
+        "name": "Veteran Bandit",
+        "race": "Humanoid",
+        "attributes": {
+            "Power": 195,
+            "Speed": 187,
+            "Spirit": 157,
+            "Recovery": 148
+        },
+        "xp_reward": 169,
+        "loot_table": [
+            "Sword",
+            "Armor"
+        ],
+        "image_prompt": "A dangerous Humanoid creature known as Veteran Bandit. A bandit in chainmail armor with a scarred face. High fantasy art style, detailed creature design.",
+        "description": "A bandit who has survived many raids."
+    },
+    {
+        "name": "Cave Bear",
+        "race": "Beast",
+        "attributes": {
+            "Power": 189,
+            "Speed": 213,
+            "Spirit": 195,
+            "Recovery": 184
+        },
+        "xp_reward": 141,
+        "loot_table": [
+            "Might",
+            "Stone of the Roar"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Cave Bear. A huge bear with dark fur and glowing eyes. High fantasy art style, detailed creature design.",
+        "description": "A massive bear dwelling in deep caves."
+    },
+    {
+        "name": "Thunder Wisp",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 180,
+            "Speed": 190,
+            "Spirit": 198,
+            "Recovery": 175
+        },
+        "xp_reward": 141,
+        "loot_table": [
+            "Lightning",
+            "Stone of the Blast"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Thunder Wisp. A ball of lightning energy floating in the air. High fantasy art style, detailed creature design.",
+        "description": "A wisp crackling with electrical energy."
+    },
+    {
+        "name": "Dread Skeleton",
+        "race": "Undead",
+        "attributes": {
+            "Power": 159,
+            "Speed": 115,
+            "Spirit": 138,
+            "Recovery": 133
+        },
+        "xp_reward": 173,
+        "loot_table": [
+            "Bone",
+            "Death"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Dread Skeleton. A skeleton in dark armor with a glowing red aura. High fantasy art style, detailed creature design.",
+        "description": "A skeleton warrior radiating dread."
+    },
+    {
+        "name": "Night Stalker",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 193,
+            "Speed": 156,
+            "Spirit": 183,
+            "Recovery": 184
+        },
+        "xp_reward": 154,
+        "loot_table": [
+            "Dark",
+            "Stone of the Phantom"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Night Stalker. A panther-like creature that blends into shadows. High fantasy art style, detailed creature design.",
+        "description": "A predator that hunts in the dark."
+    },
+    {
+        "name": "Lava Slime",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 206,
+            "Speed": 187,
+            "Spirit": 167,
+            "Recovery": 163
+        },
+        "xp_reward": 151,
+        "loot_table": [
+            "Fire",
+            "Ember"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Lava Slime. A slime made of lava, dripping and burning. High fantasy art style, detailed creature design.",
+        "description": "A slime composed of molten rock."
+    },
+    {
+        "name": "Mist Wolf",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 167,
+            "Speed": 153,
+            "Spirit": 181,
+            "Recovery": 177
+        },
+        "xp_reward": 122,
+        "loot_table": [
+            "Mist",
+            "Swift"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Mist Wolf. A grey wolf whose fur fades into mist. High fantasy art style, detailed creature design.",
+        "description": "A wolf that can turn into mist."
+    },
+    {
+        "name": "Silent Assassin",
+        "race": "Humanoid",
+        "attributes": {
+            "Power": 107,
+            "Speed": 104,
+            "Spirit": 109,
+            "Recovery": 133
+        },
+        "xp_reward": 160,
+        "loot_table": [
+            "Dark",
+            "Poison"
+        ],
+        "image_prompt": "A dangerous Humanoid creature known as Silent Assassin. A figure in tight black clothing with dual daggers. High fantasy art style, detailed creature design.",
+        "description": "A killer who moves without sound."
+    },
+    {
+        "name": "Brass Soldier",
+        "race": "Construct",
+        "attributes": {
+            "Power": 130,
+            "Speed": 136,
+            "Spirit": 154,
+            "Recovery": 177
+        },
+        "xp_reward": 134,
+        "loot_table": [
+            "Iron",
+            "Technology"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Brass Soldier. A robot made of shiny brass gears and plates. High fantasy art style, detailed creature design.",
+        "description": "A clockwork soldier made of brass."
+    },
+    {
+        "name": "Plague Zombie",
+        "race": "Undead",
+        "attributes": {
+            "Power": 174,
+            "Speed": 161,
+            "Spirit": 139,
+            "Recovery": 149
+        },
+        "xp_reward": 146,
+        "loot_table": [
+            "Rot",
+            "Poison"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Plague Zombie. A rotting corpse surrounded by green flies. High fantasy art style, detailed creature design.",
+        "description": "A zombie spreading sickness."
     }
 ]
