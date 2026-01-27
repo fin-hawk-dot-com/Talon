@@ -425,6 +425,13 @@ Physics dissolves at the edge of the Void Rift. It is a tear in the fabric of re
 Null-Silk is a rare fabric that dampens magical energy. Used by System Auditors and sensitive individuals to block out background mana radiation. It is expensive and difficult to weave, as magic cannot be used in its creation. It is harvested from the Null-Spiders found in the deepest, magic-dead zones of the Underdark.
 > **Visual Prompt**: Grey, matte fabric, smooth texture, absorbing light.
 
+#### Spider's Bane
+An elven dagger of ancient make. It glows with a cold blue light whenever creatures of the Void or Orc-kin are nearby. It was famous for cutting the webs of the Great Spiders of the Dark Wood.
+> **Visual Prompt**: A glowing blue dagger on a forest floor, cutting through thick webs.
+
+#### The Band of Void
+The master ring forged by Mal'Gzar. It appears as a simple band of gold, but when heated, it reveals runes of the Black Speech. It grants invisibility and heightened senses but drains the user's sanity, eventually turning them into a wraith.
+> **Visual Prompt**: A gold ring glowing with fiery runes on a stone table.
 #### Seeing Stones
 The Seeing Stones, or Palantiri, are ancient spherical artifacts created by the Aethel. They allow the user to see across vast distances and communicate with other stones. However, many of the stones have been lost or captured by the Dark Lord. Using a Seeing Stone is dangerous, as one never knows who might be watching from the other side. Strong wills can dominate weaker ones through the link, driving the user to madness.
 > **Visual Prompt**: A dark crystal sphere on a pedestal, glowing with a fiery eye inside.
@@ -448,6 +455,7 @@ Ancient Bats are distinct from normal giant bats due to their immense lifespan a
 > **Visual Prompt**: A massive bat hanging from a cave ceiling, leather wings, dark atmosphere.
 
 #### Ancient Sentinel
+Towering constructs left behind by the Aethel to guard their secrets. Powered by an eternal core, they do not rust or decay, standing vigil for thousands of years.
 Ancient Sentinels are towering constructs left behind by the Aethel to guard their secrets. Powered by an eternal core, they do not rust or decay, standing vigil for thousands of years. They are armed with beam weaponry that can cut through Dragon scale, and their armor is resistant to most modern magic.
 > **Visual Prompt**: A giant robot/golem made of white stone and gold metal, standing still in ruins.
 
@@ -480,6 +488,7 @@ Iron Wolves are a mutated species of canine native to the metallic mountains of 
 > **Visual Prompt**: A wolf with metallic grey fur, glowing yellow eyes, snowy background.
 
 #### Magma Crab
+Native to volcanic regions, these crustaceans have shells made of cooling lava rock. They are surprisingly fast despite their heavy armor and can spew molten rock at attackers.
 Native to volcanic regions, Magma Crabs have shells made of cooling lava rock. They are surprisingly fast despite their heavy armor and can spew molten rock at attackers. Their meat is considered a delicacy, said to taste like spicy lobster, but preparing it requires a chef skilled in removing the toxic fire sacs.
 > **Visual Prompt**: A crab with a shell of glowing black rock and lava, volcanic background.
 
@@ -519,6 +528,9 @@ Shadow Stalkers are apex predators that have adapted to the thinning veil of the
 Sky Whales are colossal, peaceful beasts that drift through the upper atmosphere, feeding on cloud-mana. They are rarely seen from the ground, but airship travelers sometimes report hearing their mournful, resonant songs vibrating through the hull. Their bodies are buoyant due to naturally occurring anti-gravity organs, which are highly sought after by the Arcane Assembly for airship construction.
 > **Visual Prompt**: Giant whale with four wings flying in the clouds, tiny airship for scale, sunset.
 
+#### The Tree Shepherds
+Ancient tree-like giants known as Ents. They are the shepherds of the forest, slow to anger but devastating when roused. They marched on the wizard Saruman's tower when he began destroying their woods to fuel his war machines.
+> **Visual Prompt**: A giant walking tree with a face, tearing down a stone wall.
 #### Spore Walker
 Spore Walkers are mobile fungal colonies that have achieved a hive-mind intelligence. They roam damp, dark places like the Fungal Depths, spreading their spores to convert all organic matter into more fungus. A Spore Walker's touch can accelerate decay instantly, rotting wood and flesh in seconds. They are immune to pain and fear, making them relentless pursuers.
 > **Visual Prompt**: A humanoid shape made of mushrooms and moss, releasing green spore clouds.
@@ -531,6 +543,8 @@ Treant Shepherds, or 'Tree-Herders', are ancient, sentient plant-beings that inh
 Void Demons are abominations that have crossed over from the Void Rift. Their forms are inconsistent—shifting masses of tentacles, eyes, and teeth that seem to reject the laws of physics. Their very presence corrupts the area around them, causing plants to wither and stone to crack. They attack not just the body, but the mind, projecting waves of psychic dread. Killing a Void Demon requires destroying every piece of it, as even a severed limb can continue to attack.
 > **Visual Prompt**: A shifting mass of tentacles and eyes, purple and black void energy.
 
+#### Void Wisp
+Small, flickering entities of pure Void energy. They are often found near tears in reality. They feed on background mana and are difficult to hit with physical weapons.
 #### Void Jellyfish
 Void Jellyfish are airborne horrors that drift on mana currents. They originate from the Void Rift, resembling their aquatic counterparts but composed of dark energy and starlight. Their tentacles trail for meters, invisible to the naked eye, and drain the mana of anything they touch. Swarms of them can leave an entire region magically barren for weeks.
 > **Visual Prompt**: Floating jellyfish in the sky, dark purple bodies, long glowing tentacles.
@@ -707,6 +721,9 @@ Chronicle XII: The Treaty of Thorns recounts the peace agreement between the Iro
 Chronicle XIII: The Current Era describes the world thirty years later. We are now in the thirtieth year of the New Age. Society has rebuilt itself around the System. Schools now teach Mana Theory alongside Mathematics. The economy runs on Essence shards. The Adventurer's Guild regulates the population of 'Delvers' who enter the Rifts to harvest resources. While the major cities are safe, the wilderness remains deadly. Rumors whisper that the Seal is weakening again. New, unknown monster types are appearing, and the Void Rift in the badlands is pulsating with a rhythm that matches the heartbeat of something... massive.
 > **Visual Prompt**: A futuristic yet fantasy cityscape, magitech vehicles, people with glowing accessories, peaceful but alert.
 
+#### Chronicle XIV: The Shadow of Mal'Gzar
+Centuries ago, the sorcerer Mal'Gzar sought to dominate Aetheria. He forged the Bands of Void, artifacts that promised power to the leaders of the realms but enslaved their wills to his. His armies of Orc-kin swept across the lands until the Alliance of the Free broke his power at the foot of the Ash Mountains.
+> **Visual Prompt**: A towering armored figure in spiky black armor holding a mace, overlooking an army of monsters.
 #### History of Clan Hawksley
 Founded over two centuries ago by Silas 'Iron-Grip' Hawksley, the clan rose to prominence during the Great Beast Migration, a period where monstrous fauna displaced from the south flooded the northern kingdoms. Silas, originally a common trapper with no magical lineage, earned his nobility by strangling a rampaging Bear-King that had terrorized the northern duchies for a decade. Since then, the Hawksleys have served as the realm's premier beast hunters. Unlike the Adventure Society, which takes contracts for coin, the Hawksleys choose their targets based on the threat level and the 'honor' of the hunt, refusing to slay beasts that are merely pests. They faced a near-extinction event fifty years ago during the 'Red Winter', losing half their number to a hydra that possessed regenerative capabilities beyond any known science, but have since rebuilt their strength under the current Patriarch, who instituted the use of alchemical suppressants.
 > **Visual Prompt**: An oil painting of a rugged man wrestling a giant bear, historical style.
@@ -747,9 +764,17 @@ The Dark Winter was a year-long anomaly where volcanic ash from the Sundering bl
 The Day of Black Sun was a solar eclipse ten years ago that caused a global mana surge. Ten years ago, a solar eclipse coincided with a mana surge. For seven minutes, all Light magic ceased to function, while Dark and Void magic became uncontrollably potent. Thousands of low-ranked healers lost their connection to the light, while shadow mages inadvertently opened portals to the nether. It is remembered as a day of mourning, and many superstitious folk still hide indoors during any eclipse, fearing that this time, the sun might not come back.
 > **Visual Prompt**: A solar eclipse, black sun with purple corona, dark shadows stretching across the land, people cowering.
 
+#### The Fellowship of Nine
+A legendary group formed to destroy the Band of Void. It consisted of a wizard, two men, an elf, a dwarf, and four halflings. Their journey took them from the shire-lands to the very heart of Mal'Gzar's domain to cast the ring into the volcanic fires where it was forged.
+> **Visual Prompt**: Nine silhouettes walking in a single file across a mountain ridge, sun setting behind them.
+
 #### The First Archmage
 Valerius the Wise is revered as the First Archmage of the modern era. In the chaos following the Awakening, he was the first to systematically study and categorize magic, rather than just using it instinctively. He developed the 'Three Pillars of Mediation' which allow humans to bind multiple essences without going mad. He founded the Arcane Assembly and established the first laws of magic usage. He disappeared fifty years ago, presumably ascending to a higher plane of existence.
 > **Visual Prompt**: Portrait of an old wizard with a glowing staff, robes, benevolent expression.
+
+#### The Grey Pilgrim
+Mithrandir, the Grey Wizard, was a wandering sage who aided the free peoples in their fight against Mal'Gzar. He wielded a staff of light and the sword Glamdring. He famously fell fighting the Balrog of Khardum but returned as the White Wizard to finish his task.
+> **Visual Prompt**: An old wizard in grey robes and a pointy hat holding a glowing staff.
 
 #### The Lost Civilization
 Before the current era, spanning ten millennia, the civilization of the Aethel reigned supreme. They were not merely magic users; they were architects of reality. The Aethel built floating cities of white marble and gold that defied gravity, powered by the Eternal Engines. They mastered Confluence magic to such a degree that they eradicated disease, hunger, and even aging to an extent. However, their hubris was their undoing. In their attempt to create the Omni-Essence—a power to rival the creators—they fractured the foundation of the world, leading to their swift and total annihilation. Today, their ruins are scattered across the globe, filled with advanced automata and magical traps that still function perfectly after thousands of years.
@@ -797,6 +822,10 @@ Greenstone City is the beating heart of the Central Plains, a bustling metropoli
 Carved directly into the living granite of the Northern Peaks, Ironhold Fortress is a testament to dwarven engineering and human stubbornness. It is considered the most secure location on the continent, with walls fifty feet thick and reinforced with runic wards. Ironhold houses the legendary Anvil of Crom, an artifact from the First Age where the first magical weapons were forged. The city within the mountain is self-sufficient, powered by geothermal vents and mushroom farms. It is a grim, disciplined society where every citizen is trained in combat from the age of ten.
 > **Visual Prompt**: Massive fortress carved into a mountain, snowy peaks, fortified walls, dwarf-inspired architecture.
 
+#### Mines of Khardum
+Once the greatest kingdom of the Dwarves, Khardum fell when they delved too greedily and too deep, awakening a Balrog—a demon of shadow and flame. Now, it is a dark pit inhabited by goblins and cave trolls.
+> **Visual Prompt**: Massive underground pillared hall, dark, with a fiery demon in the distance.
+
 #### Orizon, City of Salt and Static
 Orizon, City of Salt and Static, hangs off the world's edge in the shell of a dead leviathan. The city doesn't just sit on the coast; it hangs off the edge of the world. Built into the spiraling, calcified shell of a dead leviathan, Orizon is a vertical maze of white marble and corroded iron. It breathes with a constant, low-frequency thrum—the heartbeat of the city’s wards keeping the ocean’s toxicity at bay. The people worship Stability, paying taxes in Spirit Coins and praying the Sentinel doesn't blink.
 > **Visual Prompt**: Vertical city built into a giant shell hanging off a cliff, white marble, iron, neon blue ocean below.
@@ -830,6 +859,7 @@ The Glass Sanctum is a spherical meditation chamber suspended by gravity magic, 
 > **Visual Prompt**: A floating glass sphere in the sky, minimalist interior, meditation mat, view of the city below.
 
 #### The Great Barrier
+A massive energy shield erected by the Iron Vanguard to contain the spread of the Void Rift. It consumes a tremendous amount of mana daily, requiring a constant supply of Essence crystals from the mines.
 The Great Barrier is a massive energy shield erected by the Iron Vanguard to contain the spread of the Void Rift. It consumes a tremendous amount of mana daily, requiring a constant supply of Essence crystals from the mines. Maintaining the Barrier is the primary drain on the Vanguard's resources, and any fluctuation in its power causes panic across the continent.
 > **Visual Prompt**: A giant translucent blue wall stretching across a wasteland, stopping purple void monsters.
 
@@ -873,6 +903,9 @@ The Void Rift is a jagged tear in the fabric of reality, located in the deepest 
 The Whispering Woods is a forest of ancient, towering redwoods that have absorbed ambient mana for centuries. The trees have developed a collective semi-consciousness. Travelers report hearing voices—whispers of their past mistakes, their fears, and their lost loves—emanating from the bark itself. These whispers are a psychic defense mechanism designed to disorient intruders. The woods are rich in Wood and Life Essence, but harvesting them requires a strong will to resist the psychological assault. It is the sovereign territory of the Circle of Thorns.
 > **Visual Prompt**: A spooky forest path, mist, trees with subtle faces in the bark, glowing eyes in the dark.
 
+#### The White Citadel
+The capital of the Western Kingdoms. Built in seven tiers into the side of Mount Mindoll, it stands as a beacon of hope. At its summit grows the White Tree, a sapling of the ancient Trees of Light, which blooms only when the true king returns.
+> **Visual Prompt**: A white multi-tiered city built against a mountain, white tree in a courtyard at the top.
 #### The White Tree
 In the courtyard of the Citadel of Kings stands the White Tree, a symbol of the line of kings. It has not bloomed in centuries, standing as a withered skeleton of white wood. Legend says that when the true King returns to the throne, the tree will blossom again. It is a descendant of the Telperion, the Silver Tree of the Aethel. Its sap is said to have miraculous healing properties.
 > **Visual Prompt**: A dead white tree standing in a stone courtyard, high white tower in background.
