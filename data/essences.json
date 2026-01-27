@@ -1282,5 +1282,65 @@
             "Ash"
         ],
         "image_prompt": "An ethereal essence orb representing Smoke. Visual style: Common magic, billowing dark grey plumes."
+    },
+    {
+        "name": "Magnetism",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Elemental",
+            "Metal",
+            "Force",
+            "Attraction"
+        ],
+        "description": "The essence of magnetic fields and attraction.",
+        "opposite": "Nature",
+        "synergy": [
+            "Iron",
+            "Lightning",
+            "Gravity",
+            "Technology"
+        ],
+        "image_prompt": "An ethereal essence orb representing Magnetism. Visual style: Uncommon magic, glowing with Elemental, Metal, Force, Attraction energy."
+    },
+    {
+        "name": "Radiation",
+        "type": "Base",
+        "rarity": "Rare",
+        "tags": [
+            "Elemental",
+            "Energy",
+            "Decay",
+            "Light"
+        ],
+        "description": "The essence of dangerous, invisible energy.",
+        "opposite": "Life",
+        "synergy": [
+            "Fire",
+            "Light",
+            "Poison",
+            "Chaos"
+        ],
+        "image_prompt": "An ethereal essence orb representing Radiation. Visual style: Rare magic, glowing sickly green with Energy, Decay, Light energy."
+    },
+    {
+        "name": "Chitin",
+        "type": "Base",
+        "rarity": "Common",
+        "tags": [
+            "Biological",
+            "Armor",
+            "Solid",
+            "Insect"
+        ],
+        "description": "The essence of insect armor.",
+        "opposite": "Fire",
+        "synergy": [
+            "Nature",
+            "Bone",
+            "Armor",
+            "Poison"
+        ],
+        "image_prompt": "An ethereal essence orb representing Chitin. Visual style: Common magic, glowing with Biological, Armor, Solid, Insect energy."
     }
 ]

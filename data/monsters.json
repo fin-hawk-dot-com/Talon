@@ -1944,5 +1944,95 @@
         ],
         "image_prompt": "A dangerous Undead creature known as Plague Zombie. A rotting corpse surrounded by green flies. High fantasy art style, detailed creature design.",
         "description": "A zombie spreading sickness."
+    },
+    {
+        "name": "Lodestone Golem",
+        "race": "Construct",
+        "attributes": {
+            "Power": 240,
+            "Speed": 80,
+            "Spirit": 150,
+            "Recovery": 300
+        },
+        "xp_reward": 250,
+        "loot_table": [
+            "Magnetism",
+            "Iron",
+            "Stone of the Magnet"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Lodestone Golem. A golem made of dark, magnetized metal attracting debris. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Lodestone Golem that uses magnetic fields to crush its foes."
+    },
+    {
+        "name": "Glowing Ghoul",
+        "race": "Undead",
+        "attributes": {
+            "Power": 160,
+            "Speed": 220,
+            "Spirit": 100,
+            "Recovery": 120
+        },
+        "xp_reward": 180,
+        "loot_table": [
+            "Radiation",
+            "Death",
+            "Light"
+        ],
+        "image_prompt": "A dangerous Undead creature known as Glowing Ghoul. A ghoul emitting a sickly green neon glow. High fantasy art style, detailed creature design.",
+        "description": "A Undead known as Glowing Ghoul twisted by radioactive magic."
+    },
+    {
+        "name": "Dune Thresher",
+        "race": "Beast",
+        "attributes": {
+            "Power": 350,
+            "Speed": 280,
+            "Spirit": 100,
+            "Recovery": 200
+        },
+        "xp_reward": 400,
+        "loot_table": [
+            "Chitin",
+            "Sand",
+            "Stone of the Dune"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Dune Thresher. A giant sand worm with insectoid legs and mandibles. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Dune Thresher that swims through sand."
+    },
+    {
+        "name": "Storm Raven",
+        "race": "Beast",
+        "attributes": {
+            "Power": 150,
+            "Speed": 300,
+            "Spirit": 250,
+            "Recovery": 100
+        },
+        "xp_reward": 220,
+        "loot_table": [
+            "Lightning",
+            "Air",
+            "Stone of the Storm"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Storm Raven. A large raven with lightning crackling in its feathers. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Storm Raven that brings the thunder."
+    },
+    {
+        "name": "Venomous Cobra",
+        "race": "Beast",
+        "attributes": {
+            "Power": 200,
+            "Speed": 250,
+            "Spirit": 150,
+            "Recovery": 120
+        },
+        "xp_reward": 200,
+        "loot_table": [
+            "Poison",
+            "Swift",
+            "Stone of the Fang"
+        ],
+        "image_prompt": "A dangerous Beast creature known as Venomous Cobra. A giant cobra with dripping fangs. High fantasy art style, detailed creature design.",
+        "description": "A Beast known as Venomous Cobra with lethal venom."
     }
 ]

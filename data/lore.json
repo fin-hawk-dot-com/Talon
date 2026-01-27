@@ -796,6 +796,8 @@
         "category": "Bestiary",
         "text": "Ancient tree-like giants known as Ents. They are the shepherds of the forest, slow to anger but devastating when roused. They marched on the wizard Saruman's tower when he began destroying their woods to fuel his war machines.",
         "image_prompt": "A giant walking tree with a face, tearing down a stone wall."
+    },
+    {
         "id": "lore_hawksley_history",
         "title": "History of Clan Hawksley",
         "category": "History",
@@ -1270,5 +1272,47 @@
         "category": "Faction",
         "text": "The Mist Walkers are a secretive guild of spies and scouts who operate in the Azure Coast and the damp marshlands. They specialize in Mist and Veil magic, allowing them to move unseen and unheard. They sell their services to the highest bidder, but they follow a strict code of neutrality. They are rumored to have a hidden sanctuary in the center of a perpetual fog bank at sea.",
         "image_prompt": "Figures in grey cloaks walking through a thick fog, only their glowing eyes visible."
+    },
+    {
+        "id": "lore_lodestone_peaks",
+        "title": "The Lodestone Peaks",
+        "category": "Location",
+        "text": "The Lodestone Peaks are a range of mountains composed almost entirely of magnetic iron. Compasses spin wildly here, and travelers in metal armor find their movement hindered by the magnetic pull. Floating islands of rock, held aloft by magnetic anomalies, drift between the summits. It is the home of the Lodestone Golems and a prime mining site for magnetic ore.",
+        "image_prompt": "Mountains floating in the air, rocks hovering, lightning arching between peaks."
+    },
+    {
+        "id": "lore_glowing_crater",
+        "title": "The Glowing Crater",
+        "category": "Location",
+        "text": "A massive impact site from the Celestial Fall, the Glowing Crater is irradiated with strange energies. The flora here is bioluminescent and deadly, mutating rapidly. Creatures that venture too close become Glowing Ghouls, their bodies twisted and sustaining themselves on the radiation. It is a forbidden zone, entered only by those seeking the rare Essence of Radiation.",
+        "image_prompt": "A crater glowing with green light, strange twisted plants, night scene."
+    },
+    {
+        "id": "lore_great_migration",
+        "title": "The Great Migration",
+        "category": "History",
+        "text": "Every decade, the beasts of the southern jungles undertake the Great Migration, moving north to the breeding grounds in the Whispering Woods. It is a time of danger and opportunity for hunters. The ground shakes with the passage of Dune Threshers crossing the sands, and the sky is darkened by flocks of Storm Ravens. The migration route is well-known, and settlements along the path fortify themselves months in advance.",
+        "image_prompt": "A massive herd of fantasy beasts crossing a plain, dust kicking up, hunters watching."
+    },
+    {
+        "id": "lore_essence_magnetism",
+        "title": "Magnetism Essence",
+        "category": "Magic",
+        "text": "Magnetism Essence allows the user to manipulate magnetic fields. It is powerful against armored opponents, allowing the mage to crush plate mail or rip weapons from hands. High-level Magnetism mages can even levitate by repelling the iron in the ground. It is a precise and calculating magic, favored by engineers and tacticians.",
+        "image_prompt": "A mage hovering in the air surrounded by floating metal scraps."
+    },
+    {
+        "id": "lore_essence_radiation",
+        "title": "Radiation Essence",
+        "category": "Magic",
+        "text": "Radiation Essence is a terrifying power that kills silently. It blasts enemies with invisible waves of energy that cause sickness and burns. While effective, it is dangerous to the user and their allies. prolonged use can lead to hair loss, weakness, and eventual death. It is often considered a cursed magic, used only by the desperate or the insane.",
+        "image_prompt": "A figure glowing green, ground withering around their feet, sickly aura."
+    },
+    {
+        "id": "lore_essence_chitin",
+        "title": "Chitin Essence",
+        "category": "Magic",
+        "text": "Chitin Essence draws upon the natural armor of insects. It allows the user to grow plates of hard, organic material over their skin, providing protection comparable to steel but much lighter. Mages who specialize in Chitin often adopt insect-like traits, such as multi-faceted eyes or extra limbs. It is a highly adaptive defense.",
+        "image_prompt": "A warrior with beetle-like armor growing from their skin, blocking a sword."
     }
 ]
