@@ -479,6 +479,8 @@ class GameApp:
              ttk.Button(self.inv_action_frame, text="Absorb (Bond)", command=lambda: self.absorb_essence_dialog(idx)).pack(fill=tk.X, pady=2)
         elif hasattr(item, 'function'): # Stone
              ttk.Button(self.inv_action_frame, text="Use (Awaken)", command=self.show_awaken_options).pack(fill=tk.X, pady=2)
+        elif hasattr(item, 'effect_type'): # Consumable
+             ttk.Button(self.inv_action_frame, text="Consume", command=lambda: self.perform_consume(idx)).pack(fill=tk.X, pady=2)
 
         # Generic Inspect
         if hasattr(item, 'description'):
@@ -645,13 +647,96 @@ class GameApp:
         self.add_action_button("Inventory", lambda: self.right_notebook.select(self.inventory_tab))
         self.add_action_button("Awaken Ability", self.show_awaken_options)
 
+        # New buttons
+        self.add_action_button("Gather Resources", self.perform_gather)
+        self.add_action_button("Rest (Recover)", self.perform_rest)
+        self.add_action_button("Visit Market", self.show_market_ui)
+        self.add_action_button("Crafting", self.show_crafting_ui)
+
         # Check for available quests
         if self.engine.quest_mgr.get_available_quests(self.engine.character):
              self.add_action_button("Find New Quests", self.show_available_quests)
 
         self.add_action_button("Quests", lambda: self.right_notebook.select(self.quest_tab))
-        self.add_action_button("Rest (Save)", self.save_game_dialog)
+        self.add_action_button("Save Game", self.save_game_dialog)
         self.add_action_button("Main Menu", self.show_main_menu)
+
+    def perform_rest(self):
+        msg = self.engine.rest()
+        self.log(msg, "event")
+        self.update_status_display()
+
+    def perform_gather(self):
+        msg = self.engine.gather_resources()
+        self.log(msg, "event")
+        self.update_status_display()
+
+    def perform_consume(self, idx):
+        msg = self.engine.use_consumable(idx)
+        self.log(msg, "event")
+        self.update_status_display()
+
+    def show_market_ui(self):
+        self.clear_actions()
+        self.add_action_button("<< Back", self.enter_hub)
+        self.log("\n--- Market ---", "info")
+
+        # Shop Inventory
+        stock = self.engine.get_shop_inventory()
+        if not stock:
+            self.log("Market is empty today.", "info")
+        else:
+            self.log("Items for sale:", "info")
+            for item in stock:
+                price = getattr(item, 'price', getattr(item, 'value', 0))
+                txt = f"Buy {item.name} ({price} Dram)"
+                self.add_action_button(txt, lambda i=item: self.perform_buy(i))
+
+        # Sell Options (simplified: link to Inventory tab or specific sell list)
+        self.add_action_button("Sell Item (Select from Inventory)", self.show_sell_options)
+
+    def perform_buy(self, item):
+        msg = self.engine.buy_item(item)
+        tag = "gain" if "Bought" in msg else "error"
+        self.log(msg, tag)
+        self.update_status_display()
+
+    def show_sell_options(self):
+        self.clear_actions()
+        self.add_action_button("<< Back", self.show_market_ui)
+        self.log("Select item to sell:", "info")
+
+        char = self.engine.character
+        if not char.inventory:
+            self.log("Inventory empty.", "info")
+            return
+
+        for i, item in enumerate(char.inventory):
+            val = getattr(item, 'price', getattr(item, 'value', 0)) // 2
+            txt = f"Sell {item.name} ({val} Dram)"
+            self.add_action_button(txt, lambda idx=i: self.perform_sell(idx))
+
+    def perform_sell(self, idx):
+        msg = self.engine.sell_item(idx)
+        tag = "gain" if "Sold" in msg else "error"
+        self.log(msg, tag)
+        self.update_status_display()
+        self.show_sell_options() # Refresh list
+
+    def show_crafting_ui(self):
+        self.clear_actions()
+        self.add_action_button("<< Back", self.enter_hub)
+        self.log("\n--- Crafting ---", "info")
+
+        recipes = self.engine.get_craftable_recipes()
+        for r_name in recipes:
+            self.add_action_button(f"Craft {r_name}", lambda r=r_name: self.perform_craft(r))
+
+    def perform_craft(self, recipe_name):
+        msg = self.engine.craft_item(recipe_name)
+        tag = "gain" if "Crafted" in msg else "error"
+        self.log(msg, tag)
+        self.update_status_display()
 
     def show_train_options(self):
         self.clear_actions()
@@ -860,13 +945,12 @@ class GameApp:
 
     def start_combat_encounter(self):
         import random
-        monsters = self.engine.data_loader.get_all_monsters()
+        monsters = self.engine.get_monsters_for_location(self.engine.character.current_location)
         if not monsters:
-            self.log("No monsters found in data!", "error")
+            self.log("No monsters found here!", "error")
             return
 
-        m_name = random.choice(monsters)
-        self.current_monster = self.engine.data_loader.get_monster(m_name)
+        self.current_monster = random.choice(monsters)
 
         self.log(f"\n!!! ENCOUNTER !!!", "combat")
         self.log(f"You faced a {self.current_monster.name} ({self.current_monster.rank})!", "combat")
