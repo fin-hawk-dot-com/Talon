@@ -96,5 +96,12 @@
     "type": "Government",
     "rank_requirement": "Silver",
     "image_prompt": "Emblem of the System Auditors. A stylized eye or scale, minimalist, clean lines, metallic. Fantasy setting."
+  },
+  {
+    "name": "Clan Hawksley",
+    "description": "An ancient noble family of monster hunters who view beast slaying as a sacred art. They value precision and honor over brute force.",
+    "type": "Noble",
+    "rank_requirement": "Bronze",
+    "image_prompt": "Emblem of Clan Hawksley. A stylized hawk holding a spear in its talons, green and silver colors. Fantasy setting."
   }
 ]

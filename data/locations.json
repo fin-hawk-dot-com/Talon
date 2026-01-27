@@ -8,10 +8,10 @@
         "connected_locations": [
             "The Whispering Woods",
             "Crystal Caverns",
-            "Azure Coast",
-            "Ironhold",
-            "The Scorched Wastes",
-            "Orizon"
+            "Orizon",
+            "North Road",
+            "Southern Crossroads",
+            "Western Pass"
         ],
         "resources": [
             "Basic Supplies",
@@ -21,7 +21,10 @@
         "image_prompt_negative": "dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts",
         "npcs": [
             "Rufus",
-            "Thadwick"
+            "Thadwick",
+            "Old Man Silas",
+            "Professor Vane",
+            "Huntsman Valerius"
         ],
         "narrative": "The heart of the Central Plains, Greenstone City is a marvel of both magic and engineering. Dominated by the Colossal Emerald Monolith at its center, the city bathes in a perpetual, gentle green hum that seems to suppress violent emotions within the city walls. Market stalls bustle with traders selling goods from across the continent, while the prestigious Academy of Arcane Arts trains the next generation of spellcasters under the Monolith's watchful gaze.",
         "points_of_interest": [
@@ -61,7 +64,9 @@
                 "type": "Shop",
                 "image_prompt": "Cluttered alchemy shop, crooked shelves, colorful potions."
             }
-        ]
+        ],
+        "x": 500,
+        "y": 500
     },
     {
         "name": "The Whispering Woods",
@@ -99,7 +104,9 @@
                 "type": "Area",
                 "image_prompt": "Dark forest clearing, spooky, shadows, twilight, mysterious"
             }
-        ]
+        ],
+        "x": 650,
+        "y": 450
     },
     {
         "name": "Crystal Caverns",
@@ -137,7 +144,9 @@
                 "type": "Landmark",
                 "image_prompt": "Deep pit in cave, darkness below, edge of cliff, danger"
             }
-        ]
+        ],
+        "x": 400,
+        "y": 550
     },
     {
         "name": "Ironhold",
@@ -147,7 +156,7 @@
         "danger_rank": "Bronze",
         "connected_locations": [
             "Highland Watch",
-            "Greenstone City"
+            "North Road"
         ],
         "resources": [
             "Iron Essence",
@@ -156,7 +165,8 @@
         "image_prompt_positive": "Massive stone fortress carved into mountain, snow-capped peaks, iron gates, banners, defensive walls, soldier patrols, cold atmosphere, epic scale, 8k",
         "image_prompt_negative": "forest, beach, warm, sunny, wooden buildings, ruins",
         "npcs": [
-            "Elara"
+            "Elara",
+            "Trader Midas"
         ],
         "narrative": "Carved directly into the granite face of the Northern Peaks, Ironhold is a testament to dwarven endurance and human ingenuity. It serves as the unyielding headquarters of the Order of the Shield. Massive iron gates, reinforced with defensive runes, bar entry to all but the authorized. Inside, the city is a vertical marvel of stone bridges, foundries, and barracks, constantly echoing with the ring of hammers on anvils.",
         "points_of_interest": [
@@ -178,7 +188,9 @@
                 "type": "Area",
                 "image_prompt": "Castle walls, snow, mountains view, guard patrol"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 150
     },
     {
         "name": "The Sunken Ruins",
@@ -215,7 +227,9 @@
                 "type": "Landmark",
                 "image_prompt": "Magical bubble underwater, dry inside, campfire, adventurers resting"
             }
-        ]
+        ],
+        "x": 400,
+        "y": 650
     },
     {
         "name": "The Scorched Wastes",
@@ -225,7 +239,7 @@
         "danger_rank": "Silver",
         "connected_locations": [
             "The Ancient Spire",
-            "Greenstone City"
+            "Southern Crossroads"
         ],
         "resources": [
             "Fire Essence",
@@ -253,7 +267,9 @@
                 "type": "Landmark",
                 "image_prompt": "Ground vents, fire, smoke, lava, hellish landscape"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 800
     },
     {
         "name": "The Shadowfen",
@@ -291,7 +307,9 @@
                 "type": "Landmark",
                 "image_prompt": "Green glowing swamp water, toxic, eerie mist"
             }
-        ]
+        ],
+        "x": 800,
+        "y": 500
     },
     {
         "name": "Highland Watch",
@@ -328,7 +346,9 @@
                 "type": "Landmark",
                 "image_prompt": "Huge wood pile, unlit bonfire, mountaintop"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 50
     },
     {
         "name": "The Ancient Spire",
@@ -366,7 +386,9 @@
                 "type": "Area",
                 "image_prompt": "Spiral stairs, interior tower, floating steps, magical void"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 900
     },
     {
         "name": "Void Rift",
@@ -403,7 +425,9 @@
                 "type": "Landmark",
                 "image_prompt": "Black hole, energy swirl, destruction, cosmic horror"
             }
-        ]
+        ],
+        "x": 500,
+        "y": 980
     },
     {
         "name": "Mistfall Village",
@@ -440,7 +464,9 @@
                 "type": "Area",
                 "image_prompt": "Floating garden beds, strange plants, mist"
             }
-        ]
+        ],
+        "x": 900,
+        "y": 550
     },
     {
         "name": "Azure Coast",
@@ -449,7 +475,7 @@
         "region": "Western Coast",
         "danger_rank": "Iron",
         "connected_locations": [
-            "Greenstone City"
+            "Western Pass"
         ],
         "resources": [
             "Water Essence",
@@ -477,7 +503,9 @@
                 "type": "Building",
                 "image_prompt": "Old stone lighthouse, coast, ocean waves, sunset"
             }
-        ]
+        ],
+        "x": 200,
+        "y": 500
     },
     {
         "name": "Orizon",
@@ -524,6 +552,71 @@
                 "type": "District",
                 "image_prompt": "Sci-fi fantasy docks, glowing water, barnacles, ships"
             }
-        ]
+        ],
+        "x": 950,
+        "y": 200
+    },
+    {
+        "name": "North Road",
+        "description": "A well-traveled road leading north towards the mountains. Bandits often ambush careless travelers here.",
+        "type": "Wilderness",
+        "region": "Central Plains",
+        "danger_rank": "Iron",
+        "connected_locations": [
+            "Greenstone City",
+            "Ironhold"
+        ],
+        "resources": [
+            "Stone",
+            "Wildflowers"
+        ],
+        "image_prompt_positive": "Fantasy road, mountains in distance, green plains, sunny, dirt path",
+        "image_prompt_negative": "city, dark, ocean",
+        "narrative": "The North Road is the main artery connecting the fertile plains to the mineral-rich mountains. While patrols are frequent closer to the city, the stretch near the foothills is notorious for bandit activity.",
+        "points_of_interest": [],
+        "x": 500,
+        "y": 325
+    },
+    {
+        "name": "Southern Crossroads",
+        "description": "A dusty intersection where the grass begins to fade into the scorched earth of the badlands.",
+        "type": "Wilderness",
+        "region": "Central Plains",
+        "danger_rank": "Iron",
+        "connected_locations": [
+            "Greenstone City",
+            "The Scorched Wastes"
+        ],
+        "resources": [
+            "Dry Wood",
+            "Sand"
+        ],
+        "image_prompt_positive": "Crossroads, dusty, transition from grass to desert, signpost",
+        "image_prompt_negative": "snow, forest, water",
+        "narrative": "Here, the vibrant green of the plains gives way to the unnatural grey and red of the Scorched Wastes. A weathered signpost points south to 'Heat and Ruin' and north to 'Safety'.",
+        "points_of_interest": [],
+        "x": 500,
+        "y": 650
+    },
+    {
+        "name": "Western Pass",
+        "description": "A narrow pass cutting through the hills towards the coast. The smell of salt is faint in the air.",
+        "type": "Wilderness",
+        "region": "Central Plains",
+        "danger_rank": "Iron",
+        "connected_locations": [
+            "Greenstone City",
+            "Azure Coast"
+        ],
+        "resources": [
+            "Wind Essence",
+            "Rock Salt"
+        ],
+        "image_prompt_positive": "Hills, grassy path, rocks, blue sky, clouds",
+        "image_prompt_negative": "forest, city, night",
+        "narrative": "The Western Pass winds through the limestone hills that separate the plains from the ocean. The wind here is constant and carries the distant sound of crashing waves.",
+        "points_of_interest": [],
+        "x": 350,
+        "y": 500
     }
 ]

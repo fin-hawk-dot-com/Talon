@@ -15,6 +15,7 @@ class Essence:
     bonded_attribute: Optional[str] = None
     opposite: Optional[str] = None
     synergy: List[str] = field(default_factory=list)
+    value: int = 0
 
 @dataclass
 class Faction:
@@ -45,6 +46,8 @@ class Location:
     npcs: List[str] = field(default_factory=list)
     narrative: str = ""
     points_of_interest: List[PointOfInterest] = field(default_factory=list)
+    x: int = 500
+    y: int = 500
 
 @dataclass
 class LoreEntry:
@@ -61,6 +64,7 @@ class StatusEffect:
     value: float # Magnitude (damage per turn, stat reduction amount, etc.)
     type: str # "DoT", "Buff", "Debuff", "CC" (Crowd Control)
     description: str
+    source_name: Optional[str] = None
 
 @dataclass
 class DialogueChoice:
@@ -72,6 +76,7 @@ class DialogueChoice:
 class DialogueNode:
     text: str
     choices: List[DialogueChoice]
+    hub_text: Optional[str] = None
 
 @dataclass
 class QuestChoice:
@@ -102,6 +107,7 @@ class Quest:
     rewards: List[str]
     image_prompt: str = ""
     type: str = "Side"
+    location: Optional[str] = None
 
 @dataclass
 class QuestProgress:
@@ -120,6 +126,16 @@ class AwakeningStone:
     rarity: str = "Common"
     cooldown: str = "Medium"
     cost_type: str = "Mana"
+    value: int = 0
+
+@dataclass
+class Consumable:
+    name: str
+    effect_type: str # "Heal", "RestoreMana", "Buff", "Cure"
+    value: float
+    description: str
+    duration: int = 0
+    price: int = 0
 
 @dataclass
 class Ability:
@@ -200,11 +216,12 @@ class Character:
     base_essences: List[Essence] = field(default_factory=list)
     confluence_essence: Optional[Essence] = None
     abilities: Dict[str, List[Optional[Ability]]] = field(default_factory=dict)
-    inventory: List[Union[Essence, AwakeningStone]] = field(default_factory=list)
+    inventory: List[Union[Essence, AwakeningStone, Consumable]] = field(default_factory=list)
     quests: Dict[str, QuestProgress] = field(default_factory=dict)
     current_health: float = field(default=-1.0)
     current_mana: float = field(default=-1.0)
     current_stamina: float = field(default=-1.0)
+    current_willpower: float = field(default=-1.0)
     xp_reward: int = 0
     loot_table: List[str] = field(default_factory=list)
     lore: List[str] = field(default_factory=list)
@@ -215,6 +232,13 @@ class Character:
     image_prompt: str = ""
     status_effects: List[StatusEffect] = field(default_factory=list)
     current_location: str = "Greenstone City"
+    x: int = -1
+    y: int = -1
+    currency: int = 0
+    materials: Dict[str, int] = field(default_factory=dict)
+    current_xp: int = 0
+    summons: List['Character'] = field(default_factory=list)
+    summon_duration: int = 0
 
     def __post_init__(self):
         if self.current_health < 0:
@@ -223,6 +247,8 @@ class Character:
             self.current_mana = self.max_mana
         if self.current_stamina < 0:
             self.current_stamina = self.max_stamina
+        if self.current_willpower < 0:
+            self.current_willpower = self.max_willpower
 
     @property
     def max_health(self) -> float:
@@ -235,6 +261,10 @@ class Character:
     @property
     def max_stamina(self) -> float:
         return self.attributes["Recovery"].value * 10.0
+
+    @property
+    def max_willpower(self) -> float:
+        return self.attributes["Spirit"].value * 10.0
 
     @property
     def rank(self) -> str:

@@ -1,6 +1,14 @@
-# How to Build the Essence Bound Windows Native App
+# How to Run Essence Bound on Windows
 
-This guide explains how to run the Essence Bound game as a native Windows application and how to package it into a standalone `.exe` file.
+## Quick Start (Recommended)
+
+To play the game, simply run the `run_windows.bat` file.
+1. Double-click `run_windows.bat` in the project folder.
+2. It will automatically check for Python, set up the environment, and launch the game.
+
+## Manual Setup
+
+This guide explains how to run the Essence Bound game manually as a native Windows application and how to package it into a standalone `.exe` file.
 
 ## Prerequisites
 
