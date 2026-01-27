@@ -20,7 +20,7 @@ These sprites represent the player on the world map based on their chosen Affini
 | **General Avatar** | `General.png` | Player | A balanced, versatile icon. A simple traveler's pack, a compass, or a plain sword. Brown leather and neutral earth tones. This is the default fallback. |
 
 ## Map HUD Elements
-*(Currently handled procedurally via code, but can be replaced by sprites in future updates)*
+*(Currently handled procedurally via code, but can be replaced by sprites in future updates. Place these in `assets/ui/`)*
 
 | Object Name | Filename | Layer | Description / Likeness |
 | :--- | :--- | :--- | :--- |
