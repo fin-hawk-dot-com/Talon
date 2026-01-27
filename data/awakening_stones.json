@@ -412,5 +412,59 @@
         "cooldown": "Low",
         "cost_type": "Mana",
         "image_prompt": "A Common Awakening Stone named Stone of the Whisper, etched with sound waves."
+    },
+    {
+        "name": "Stone of the Magnet",
+        "function": "Control",
+        "description": "Pulls enemies towards a specific point using magnetic force.",
+        "rarity": "Rare",
+        "cooldown": "Medium",
+        "cost_type": "Mana",
+        "image_prompt": "A Rare Awakening Stone named Stone of the Magnet, shaped like a horseshoe magnet with runes."
+    },
+    {
+        "name": "Stone of the Ray",
+        "function": "Ranged Attack",
+        "description": "Fires a concentrated beam of burning energy.",
+        "rarity": "Uncommon",
+        "cooldown": "Medium",
+        "cost_type": "Mana",
+        "image_prompt": "A Uncommon Awakening Stone named Stone of the Ray, glowing with intense focused light."
+    },
+    {
+        "name": "Stone of the Carapace",
+        "function": "Defense",
+        "description": "Hardens the skin into a chitinous armor.",
+        "rarity": "Common",
+        "cooldown": "High",
+        "cost_type": "Stamina",
+        "image_prompt": "A Common Awakening Stone named Stone of the Carapace, looking like a beetle shell."
+    },
+    {
+        "name": "Stone of the Storm",
+        "function": "Area Attack",
+        "description": "Summons a lightning storm over an area.",
+        "rarity": "Rare",
+        "cooldown": "High",
+        "cost_type": "Mana",
+        "image_prompt": "A Rare Awakening Stone named Stone of the Storm, crackling with electricity."
+    },
+    {
+        "name": "Stone of the Fang",
+        "function": "Melee Attack",
+        "description": "Infuses a strike with deadly poison.",
+        "rarity": "Common",
+        "cooldown": "Low",
+        "cost_type": "Stamina",
+        "image_prompt": "A Common Awakening Stone named Stone of the Fang, shaped like a serpent's tooth."
+    },
+    {
+        "name": "Stone of the Dune",
+        "function": "Terrain Control",
+        "description": "Creates an area of shifting sand that slows enemies.",
+        "rarity": "Uncommon",
+        "cooldown": "Medium",
+        "cost_type": "Mana",
+        "image_prompt": "A Uncommon Awakening Stone named Stone of the Dune, leaking sand."
     }
 ]
