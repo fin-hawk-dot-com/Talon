@@ -158,19 +158,26 @@ class AbilityGenerator:
 
 class TrainingManager:
     @staticmethod
+    def get_attribute_training_cost(character: Character, attribute_name: str) -> int:
+        if attribute_name not in character.attributes:
+            return 999999 # Should not happen
+
+        attr = character.attributes[attribute_name]
+        rank_idx = RANK_INDICES.get(attr.rank, 0)
+        return 100 * (rank_idx + 1)
+
+    @staticmethod
     def train_attribute(character: Character, attribute_name: str) -> str:
         if attribute_name not in character.attributes:
             return "Invalid attribute."
 
-        # XP Cost increases with Rank
-        attr = character.attributes[attribute_name]
-        rank_idx = RANK_INDICES.get(attr.rank, 0)
-        xp_cost = 100 * (rank_idx + 1)
+        xp_cost = TrainingManager.get_attribute_training_cost(character, attribute_name)
 
         if character.current_xp < xp_cost:
             return f"Not enough XP to train. Need {xp_cost}, have {character.current_xp}."
 
         character.current_xp -= xp_cost
+        attr = character.attributes[attribute_name]
         old_rank = attr.rank
 
         # Diminishing returns based on rank: higher rank attributes are harder to train
