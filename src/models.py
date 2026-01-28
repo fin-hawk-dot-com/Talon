@@ -234,6 +234,8 @@ class Character:
     current_location: str = "Greenstone City"
     x: int = -1
     y: int = -1
+    grid_x: int = -1
+    grid_y: int = -1
     currency: int = 0
     materials: Dict[str, int] = field(default_factory=dict)
     current_xp: int = 0
@@ -310,3 +312,27 @@ class Character:
         if self.confluence_essence:
             essences.append(self.confluence_essence)
         return essences
+
+@dataclass
+class Tile:
+    x: int
+    y: int
+    type: str # "floor", "wall", "water", "forest", "road", "gate"
+    is_passable: bool
+    symbol: str
+    color: str
+    entity: Optional[Union[Character, str]] = None # Character object or Object Name
+    exit_to: Optional[str] = None # Name of next location if this is an exit
+
+@dataclass
+class MapSection:
+    location_id: str
+    width: int
+    height: int
+    tiles: List[List[Tile]] = field(default_factory=list)
+    visited: bool = False
+
+    def get_tile(self, x: int, y: int) -> Optional[Tile]:
+        if 0 <= y < len(self.tiles) and 0 <= x < len(self.tiles[0]):
+            return self.tiles[y][x]
+        return None

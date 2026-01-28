@@ -3,9 +3,9 @@ import json
 import math
 import random
 import dataclasses
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Tuple
 
-from src.models import Character, Attribute, Essence, Ability, AwakeningStone, QuestProgress, StatusEffect, Consumable, RANK_INDICES, RANKS
+from src.models import Character, Attribute, Essence, Ability, AwakeningStone, QuestProgress, StatusEffect, Consumable, RANK_INDICES, RANKS, MapSection, Tile
 from src.data_loader import DataLoader, DATA_DIR
 from src.combat_system import CombatManager
 from src.quest_system import QuestManager
@@ -13,6 +13,7 @@ from src.inventory_system import LootManager, CraftingManager, MarketManager
 from src.training_system import TrainingManager, AbilityGenerator, ConfluenceManager
 from src.interaction_system import InteractionManager
 from src.narrative import NarrativeGenerator
+from src.map_generator import MapGenerator
 
 class GameEngine:
     def __init__(self):
@@ -26,7 +27,11 @@ class GameEngine:
         self.interaction_mgr = InteractionManager(self.data_loader)
         self.crafting_mgr = CraftingManager(self.data_loader)
         self.market_mgr = MarketManager(self.data_loader)
+        self.map_generator = MapGenerator()
+
         self.character = None
+        self.section_cache: List[MapSection] = [] # LRU Cache, max 5
+        self.current_section: Optional[MapSection] = None
 
     def _hydrate_monster_abilities(self, monster: Character):
         """
@@ -105,6 +110,87 @@ class GameEngine:
             self.character.x = loc.x
             self.character.y = loc.y
         return self.character
+
+    def load_location_section(self, location_name: str) -> MapSection:
+        # 1. Check Cache
+        for i, section in enumerate(self.section_cache):
+            if section.location_id == location_name:
+                # Move to front (LRU)
+                self.section_cache.pop(i)
+                self.section_cache.insert(0, section)
+                self.current_section = section
+                return section
+
+        # 2. Generate New
+        loc = self.data_loader.get_location(location_name)
+        if not loc:
+            # Fallback if location not found
+            loc = self.data_loader.get_location("Greenstone City")
+
+        section = self.map_generator.generate_section(loc)
+        self.section_cache.insert(0, section)
+
+        # Trim Cache
+        if len(self.section_cache) > 5:
+            self.section_cache.pop()
+
+        self.current_section = section
+
+        # Initialize character grid position if new section
+        # Default to center
+        if self.character:
+            self.character.grid_x = section.width // 2
+            self.character.grid_y = section.height // 2
+
+        return section
+
+    def move_player_local(self, dx: int, dy: int) -> Tuple[bool, str]:
+        if not self.character:
+            return False, "No character."
+
+        if not self.current_section:
+            # Try loading current location
+            self.load_location_section(self.character.current_location)
+
+        # Ensure grid pos is valid
+        if self.character.grid_x == -1:
+             self.character.grid_x = self.current_section.width // 2
+             self.character.grid_y = self.current_section.height // 2
+
+        nx = self.character.grid_x + dx
+        ny = self.character.grid_y + dy
+
+        # Bounds Check
+        if nx < 0 or ny < 0 or nx >= self.current_section.width or ny >= self.current_section.height:
+             return False, "Blocked by map edge."
+
+        tile = self.current_section.tiles[ny][nx]
+
+        # Passable Check
+        if not tile.is_passable:
+            return False, "Blocked."
+
+        # Exit Check
+        if tile.exit_to:
+            travel_msg = self.travel(tile.exit_to)
+            # Load new section
+            self.load_location_section(self.character.current_location)
+            return True, travel_msg
+
+        # Interaction / Entity Check
+        if tile.entity:
+            # Check if it's an NPC or POI
+            # We allow moving onto it to interact via 'E', or stop?
+            # For now, let's allow moving onto it so 'E' works on 'current tile' or 'facing tile'
+            # Or we can block movement and say "Bump interaction".
+            # Let's block movement if it's an entity to simulate collision,
+            # and return a message.
+            return False, f"Bumped into {tile.entity}"
+
+        # Move
+        self.character.grid_x = nx
+        self.character.grid_y = ny
+        return True, ""
 
     def rest(self) -> str:
         if not self.character: return "No character."
@@ -240,6 +326,10 @@ class GameEngine:
         return f"Traveled to {location_name}."
 
     def update_position(self, dx: int, dy: int) -> Optional[str]:
+        # This is strictly for Global Map movement (legacy or mini-map teleport debug)
+        # In the new system, we rely on move_player_local for main movement.
+        # But we keep this for compatibility if needed.
+
         if not self.character: return None
 
         # Calculate new position
@@ -429,8 +519,19 @@ class GameEngine:
         try:
             # Use dataclasses.asdict for serialization
             data = dataclasses.asdict(self.character)
+
+            # Add section cache
+            cache_data = []
+            for section in self.section_cache:
+                cache_data.append(dataclasses.asdict(section))
+
+            full_data = {
+                "character": data,
+                "section_cache": cache_data
+            }
+
             with open(filepath, 'w') as f:
-                json.dump(data, f, indent=2)
+                json.dump(full_data, f, indent=2)
             return f"Game saved to {filepath}"
         except Exception as e:
             return f"Error saving game: {e}"
@@ -444,7 +545,15 @@ class GameEngine:
 
         try:
             with open(filepath, 'r') as f:
-                data = json.load(f)
+                raw_data = json.load(f)
+
+            # Support legacy saves (no 'character' key)
+            if 'character' in raw_data:
+                data = raw_data['character']
+                section_data = raw_data.get('section_cache', [])
+            else:
+                data = raw_data
+                section_data = []
 
             # Reconstruct Character object manually because simple assignment won't restore nested dataclasses/objects
             char = Character(
@@ -531,6 +640,8 @@ class GameEngine:
             # Reconstruct Position
             char.x = data.get('x', -1)
             char.y = data.get('y', -1)
+            char.grid_x = data.get('grid_x', -1)
+            char.grid_y = data.get('grid_y', -1)
 
             # If position is invalid (legacy save), resolve from location
             if char.x == -1 or char.y == -1:
@@ -557,6 +668,41 @@ class GameEngine:
                     char.summons.append(summon)
 
             self.character = char
+
+            # Reconstruct Section Cache
+            self.section_cache = []
+            for s_dict in section_data:
+                # Reconstruct MapSection
+                # Reconstruct Tiles
+                tiles = []
+                for row in s_dict['tiles']:
+                    t_row = []
+                    for t_dict in row:
+                        t_row.append(Tile(**t_dict))
+                    tiles.append(t_row)
+
+                section = MapSection(
+                    location_id=s_dict['location_id'],
+                    width=s_dict['width'],
+                    height=s_dict['height'],
+                    tiles=tiles,
+                    visited=s_dict.get('visited', False)
+                )
+                self.section_cache.append(section)
+
+            # Set current section
+            if self.section_cache and self.character:
+                 # Check if current location matches any cache
+                 found = False
+                 for s in self.section_cache:
+                     if s.location_id == self.character.current_location:
+                         self.current_section = s
+                         found = True
+                         break
+                 if not found:
+                     # Load fresh if not in cache (should be unless cache was flushed or mismatch)
+                     self.load_location_section(self.character.current_location)
+
             return f"Game loaded from {filename}"
         except Exception as e:
             import traceback
