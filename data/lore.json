@@ -1314,5 +1314,19 @@
         "category": "Magic",
         "text": "Chitin Essence draws upon the natural armor of insects. It allows the user to grow plates of hard, organic material over their skin, providing protection comparable to steel but much lighter. Mages who specialize in Chitin often adopt insect-like traits, such as multi-faceted eyes or extra limbs. It is a highly adaptive defense.",
         "image_prompt": "A warrior with beetle-like armor growing from their skin, blocking a sword."
+    },
+    {
+        "id": "lore_location_mirror_hall",
+        "title": "The Hall of Infinite Reflections",
+        "category": "Location",
+        "text": "Deep within the Crystal Caverns lies a natural phenomenon known as the Hall of Infinite Reflections. The walls are lined with a naturally occurring mirror-like mineral that is perfectly smooth. Legends say that if one stares too long into their own reflection here, their soul might be trapped in the glass, leaving their body a hollow shell. Some adventurers claim to have seen their own doppelgangers stepping out of the walls to mimic their every move.",
+        "image_prompt": "A cavern with walls made of mirrors, infinite reflections of a torch."
+    },
+    {
+        "id": "lore_magic_red_dust",
+        "title": "The Red Dust Curse",
+        "category": "Magic",
+        "text": "The Red Dust, or 'Rust Plague', was a magical affliction that targeted not flesh, but the tools of civilization. It began in the Iron Mines of Oakhaven, where miners found their pickaxes crumbling to dust in their hands. The curse spread to armor, weapons, and even structural beams. It was later discovered to be the result of a rogue Rust Elemental that had been awakened by deep mining operations. The area is now quarantined, as metal dissolves within minutes of entering the zone.",
+        "image_prompt": "A pile of rusted weapons and armor crumbling to dust, orange haze."
     }
 ]

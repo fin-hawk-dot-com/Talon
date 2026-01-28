@@ -2034,5 +2034,41 @@
         ],
         "image_prompt": "A dangerous Beast creature known as Venomous Cobra. A giant cobra with dripping fangs. High fantasy art style, detailed creature design.",
         "description": "A Beast known as Venomous Cobra with lethal venom."
+    },
+    {
+        "name": "Glass Walker",
+        "race": "Construct",
+        "attributes": {
+            "Power": 150,
+            "Speed": 300,
+            "Spirit": 200,
+            "Recovery": 100
+        },
+        "xp_reward": 250,
+        "loot_table": [
+            "Mirror",
+            "Glass",
+            "Stone of the Mirror"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Glass Walker. A humanoid figure made of jagged mirror shards. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Glass Walker made of sharp, reflective glass."
+    },
+    {
+        "name": "Oxidized Golem",
+        "race": "Construct",
+        "attributes": {
+            "Power": 300,
+            "Speed": 50,
+            "Spirit": 100,
+            "Recovery": 150
+        },
+        "xp_reward": 300,
+        "loot_table": [
+            "Rust",
+            "Iron",
+            "Stone of Corrosion"
+        ],
+        "image_prompt": "A dangerous Construct creature known as Oxidized Golem. A massive iron golem covered in thick rust. High fantasy art style, detailed creature design.",
+        "description": "A Construct known as Oxidized Golem, a relic of a bygone war, now consumed by rust."
     }
 ]
