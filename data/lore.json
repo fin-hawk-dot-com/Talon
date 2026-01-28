@@ -910,6 +910,60 @@
         "image_prompt": "Diagram of a brain with sound waves entering and changing the color of the neurons."
     },
     {
+        "id": "lore_clan_telcontar",
+        "title": "Clan Telcontar",
+        "category": "Faction",
+        "text": "Clan Telcontar is not a typical noble house; they hold no lands and levy no taxes. Instead, they are a brotherhood of rangers, the last remnants of the Kingdom of Arnor, which fell to the Witch-King centuries ago. Led by the Chieftain Aragorn (a hereditary title), they patrol the wild lands, protecting the ignorant villages from the horrors of the Void and the remnants of the dark armies. They are masters of survival, stealth, and the longsword. Their grim demeanor hides a deep love for the land they protect.",
+        "image_prompt": "A group of rangers in weathered grey cloaks sitting around a campfire in ruins, smoking pipes."
+    },
+    {
+        "id": "lore_telcontar_history",
+        "title": "History of the Rangers",
+        "category": "History",
+        "text": "The history of Clan Telcontar is one of loss and duty. Once the rulers of the Western Kingdoms, their line was broken when the Great Enemy shattered their capital. The survivors took an oath to become the shield of the realms of men, fading into the wilderness. For generations, they have kept the bloodline of the True King pure, waiting for the day when the 'Sword That Was Broken' can be reforged. They preserve the memory of the Elder Days, speaking tongues that have long been forgotten by common folk.",
+        "image_prompt": "A broken statue of a king in a forest, vines growing over it, a ranger looking at it solemnly."
+    },
+    {
+        "id": "lore_telcontar_adventure",
+        "title": "The Shadow in the North",
+        "category": "History",
+        "text": "Recently, Clan Telcontar has reported a disturbance in the Barrow-downs. The ancient dead are stirring, animated by a sorcery not seen since the First Age. The current Chieftain, Strider, has issued a call for aid, fearing that the Nine Riders\u2014wraiths of immense power\u2014have returned to hunt for the 'Heirloom of Isildur'. The clan is currently engaged in a guerrilla war, burning the barrows and holding the fords against the encroaching darkness.",
+        "image_prompt": "Rangers fighting shadowy wraiths on a foggy hilltop, ancient stone circles."
+    },
+    {
+        "id": "lore_clan_oakenshield",
+        "title": "Clan Oakenshield",
+        "category": "Faction",
+        "text": "Clan Oakenshield is a proud but tragic dwarven clan. Unlike the prosperous dwarves of Ironhold, the Oakenshields are exiles. They wander the continent as smiths and mercenaries, singing songs of their lost home, Erebor, the Lonely Mountain. They are fiercely loyal to their leader, Thorin, who carries the burden of his people's displacement. They are renowned for their skill in crafting dragon-proof armor and their secret language of sign and knock.",
+        "image_prompt": "A group of dwarves in travel gear, carrying heavy packs and axes, looking at a map."
+    },
+    {
+        "id": "lore_oakenshield_history",
+        "title": "The Desolation of Smaug",
+        "category": "History",
+        "text": "Fifty years ago, the Clan Oakenshield lived in the glittering halls of Erebor. Their wealth was legendary, rivers of gold and mountains of gems. But this wealth attracted Smaug, a Bronze Drake of cataclysmic size and intelligence. Smaug descended upon the mountain in a storm of fire, incinerating the dwarven defenses and claiming the hoard for himself. The survivors fled, scattering across the lands, earning their living with coal and iron instead of gold and mithril.",
+        "image_prompt": "A giant red/bronze dragon breathing fire on a mountain city, dwarves fleeing."
+    },
+    {
+        "id": "lore_oakenshield_adventure",
+        "title": "The Quest for Erebor",
+        "category": "History",
+        "text": "Rumors are spreading that Smaug has not been seen in a decade. Thorin Oakenshield believes the beast may be dormant or dead. He is currently assembling a company of thirteen specially chosen warriors (and one 'burglar' to handle traps) to infiltrate the mountain and retake the Arkenstone\u2014the King's Jewel. Success would unite the dwarven clans and restore the Kingdom under the Mountain; failure would mean the extinction of his line.",
+        "image_prompt": "A secret meeting of dwarves in a tavern, unrolling a map with a dragon symbol on it."
+    },
+    {
+        "id": "lore_artifact_narsil",
+        "title": "The Shards of Narsil",
+        "category": "Artifacts",
+        "text": "Narsil, the sword of Elendil, was shattered when the High King fell fighting the Dark Lord Sauron. The shards are kept in the sanctuary of Clan Telcontar, wrapped in silk and starlight. It is said that the sword still glows with the light of the sun and moon, and that it cuts through fear as easily as flesh. Prophecy states it shall be reforged when the 'Crownless again shall be King'.",
+        "image_prompt": "Broken pieces of a sword on a velvet cushion, glowing faintly."
+    },
+    {
+        "id": "lore_artifact_arkenstone",
+        "title": "The Arkenstone",
+        "category": "Artifacts",
+        "text": "Also known as the Heart of the Mountain, the Arkenstone is a gem of impossible brilliance. It shines with its own inner light and reflects all other light in a thousand rainbow hues. It is the symbol of the King under the Mountain's divine right to rule. Clan Oakenshield believes that possessing it will compel all other dwarven clans to answer their call to war.",
+        "image_prompt": "A large, glowing white gem held in a gloved hand, radiating light."
         "id": "lore_sovereign_band",
         "title": "The Sovereign Band",
         "category": "Artifacts",
