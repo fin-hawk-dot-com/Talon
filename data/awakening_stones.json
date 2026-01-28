@@ -466,5 +466,23 @@
         "cooldown": "Medium",
         "cost_type": "Mana",
         "image_prompt": "A Uncommon Awakening Stone named Stone of the Dune, leaking sand."
+    },
+    {
+        "name": "Stone of the Mirror",
+        "function": "Defense",
+        "description": "Creates a reflective barrier that can bounce back spells.",
+        "rarity": "Rare",
+        "cooldown": "High",
+        "cost_type": "Mana",
+        "image_prompt": "A Rare Awakening Stone named Stone of the Mirror, with a perfectly reflective surface."
+    },
+    {
+        "name": "Stone of Corrosion",
+        "function": "Debuff",
+        "description": "Withers enemy armor and reduces physical resistance.",
+        "rarity": "Uncommon",
+        "cooldown": "Medium",
+        "cost_type": "Mana",
+        "image_prompt": "A Uncommon Awakening Stone named Stone of Corrosion, looking pitted and rusty."
     }
 ]

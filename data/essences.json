@@ -1342,5 +1342,46 @@
             "Poison"
         ],
         "image_prompt": "An ethereal essence orb representing Chitin. Visual style: Common magic, glowing with Biological, Armor, Solid, Insect energy."
+    },
+    {
+        "name": "Mirror",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Abstract",
+            "Illusion",
+            "Light",
+            "Surface",
+            "Reflection"
+        ],
+        "description": "The essence of reflection and duplication.",
+        "opposite": "Void",
+        "synergy": [
+            "Light",
+            "Glass",
+            "Mind",
+            "Water"
+        ],
+        "image_prompt": "An ethereal essence orb representing Mirror. Visual style: Uncommon magic, glowing with silver, reflective, and illusionary energy."
+    },
+    {
+        "name": "Rust",
+        "type": "Material",
+        "rarity": "Common",
+        "tags": [
+            "Physical",
+            "Decay",
+            "Metal",
+            "Earth"
+        ],
+        "description": "The essence of oxidation and metallic decay.",
+        "opposite": "Iron",
+        "synergy": [
+            "Time",
+            "Rot",
+            "Earth",
+            "Water"
+        ],
+        "image_prompt": "An ethereal essence orb representing Rust. Visual style: Common magic, glowing with orange-brown, gritty, and decaying energy."
     }
 ]
