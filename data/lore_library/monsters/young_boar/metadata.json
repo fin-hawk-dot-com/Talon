@@ -1,0 +1,17 @@
+{
+    "name": "Young Boar",
+    "race": "Beast",
+    "attributes": {
+        "Power": 61,
+        "Speed": 77,
+        "Spirit": 67,
+        "Recovery": 77
+    },
+    "xp_reward": 37,
+    "loot_table": [
+        "Might",
+        "Flesh"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Young Boar. A small but muscular wild boar. High fantasy art style, detailed creature design.",
+    "description": "A juvenile boar, still dangerous."
+}

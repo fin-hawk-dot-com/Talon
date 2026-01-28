@@ -1,0 +1,17 @@
+{
+    "name": "Armored Lion",
+    "race": "Beast",
+    "attributes": {
+        "Power": 316,
+        "Speed": 318,
+        "Spirit": 369,
+        "Recovery": 346
+    },
+    "xp_reward": 382,
+    "loot_table": [
+        "Swift",
+        "Water"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Armored Lion. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Armored Lion."
+}

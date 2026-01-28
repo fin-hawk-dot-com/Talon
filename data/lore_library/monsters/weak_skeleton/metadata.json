@@ -1,0 +1,17 @@
+{
+    "name": "Weak Skeleton",
+    "race": "Undead",
+    "attributes": {
+        "Power": 24,
+        "Speed": 30,
+        "Spirit": 32,
+        "Recovery": 34
+    },
+    "xp_reward": 45,
+    "loot_table": [
+        "Bone",
+        "Stone of the Spine"
+    ],
+    "image_prompt": "A dangerous Undead creature known as Weak Skeleton. A skeleton with cracked bones and no armor. High fantasy art style, detailed creature design.",
+    "description": "A fragile skeleton animated by weak necromancy."
+}

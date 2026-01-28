@@ -1,0 +1,17 @@
+{
+    "name": "Dust Wisp",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 65,
+        "Speed": 58,
+        "Spirit": 60,
+        "Recovery": 68
+    },
+    "xp_reward": 31,
+    "loot_table": [
+        "Air",
+        "Sand"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Dust Wisp. A small tornado of dust and sand. High fantasy art style, detailed creature design.",
+    "description": "A small swirling vortex of dust."
+}

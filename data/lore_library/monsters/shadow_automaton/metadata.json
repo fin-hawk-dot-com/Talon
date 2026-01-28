@@ -1,0 +1,16 @@
+{
+    "name": "Shadow Automaton",
+    "race": "Construct",
+    "attributes": {
+        "Power": 126,
+        "Speed": 139,
+        "Spirit": 114,
+        "Recovery": 115
+    },
+    "xp_reward": 137,
+    "loot_table": [
+        "Stone of the Feast"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Shadow Automaton. High fantasy art style, detailed creature design.",
+    "description": "A Construct known as Shadow Automaton."
+}

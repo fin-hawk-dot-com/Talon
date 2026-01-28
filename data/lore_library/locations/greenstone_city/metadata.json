@@ -1,0 +1,74 @@
+{
+    "id": "lore_greenstone_city",
+    "title": "Greenstone City",
+    "category": "Location",
+    "text": "Greenstone City is the beating heart of the Central Plains, a bustling metropolis built around the massive, glowing emerald monolith that predates the city by centuries. As a neutral ground designated by the Treaty of Greenstone, it is a melting pot of cultures and factions. The city is a hub of trade, where raw monster parts from the frontier are processed into goods for the civilized world. Its markets never close, lit by magitech lanterns. However, the city's rapid growth has led to a stark wealth disparity, with the glittering spires of the High District looking down upon the crime-ridden slums of the Undercity.",
+    "image_prompt": "Wide shot of Greenstone City with a giant green crystal structure in the center, bustling market, fantasy city.",
+    "name": "Greenstone City",
+    "description": "A bustling city built around a massive, glowing green stone structure.",
+    "type": "City",
+    "region": "Central Plains",
+    "danger_rank": "Iron",
+    "connected_locations": [
+        "The Whispering Woods",
+        "Crystal Caverns",
+        "Orizon",
+        "North Road",
+        "Southern Crossroads",
+        "Western Pass"
+    ],
+    "resources": [
+        "Basic Supplies",
+        "Iron Essence"
+    ],
+    "image_prompt_positive": "Fantasy city, large green glowing crystal monolith in center, medieval architecture, busy market streets, magical atmosphere, bright sunlight, detailed textures, 4k",
+    "image_prompt_negative": "dark, ruins, futuristic, sci-fi, blurry, low resolution, artifacts",
+    "npcs": [
+        "Rufus",
+        "Thadwick",
+        "Old Man Silas",
+        "Professor Vane",
+        "Huntsman Valerius"
+    ],
+    "narrative": "The heart of the Central Plains, Greenstone City is a marvel of both magic and engineering. Dominated by the Colossal Emerald Monolith at its center, the city bathes in a perpetual, gentle green hum that seems to suppress violent emotions within the city walls. Market stalls bustle with traders selling goods from across the continent, while the prestigious Academy of Arcane Arts trains the next generation of spellcasters under the Monolith's watchful gaze.",
+    "points_of_interest": [
+        {
+            "name": "Market District",
+            "description": "A crowded maze of stalls selling everything from fresh produce to minor magical trinkets. The scent of roasted meats and spices fills the air.",
+            "type": "District",
+            "image_prompt": "Medieval market, crowded, colorful stalls, spices, sunlight, fantasy city"
+        },
+        {
+            "name": "The Greenstone Monolith",
+            "description": "The massive, glowing green crystal for which the city is named. It hums with a low resonance that can be felt in your bones.",
+            "type": "Landmark",
+            "image_prompt": "Huge glowing green crystal monolith, city square, people worshipping, magical light"
+        },
+        {
+            "name": "City Gates",
+            "description": "Imposing iron-reinforced wooden gates manned by the city guard. Banners of the ruling council hang from the battlements.",
+            "type": "Building",
+            "image_prompt": "Large wooden gates, stone walls, guards, banners, fantasy city entrance"
+        },
+        {
+            "name": "The Guild Hall",
+            "description": "A grand stone building where adventurers gather to take contracts and trade information.",
+            "type": "Building",
+            "image_prompt": "Stone guild hall, adventurer gathering, notice board, interior tavern style"
+        },
+        {
+            "name": "The Silver Spoon Inn",
+            "description": "A high-end establishment run by the eccentric Chef Gordo. Famous for dishes that sometimes fight back.",
+            "type": "Building",
+            "image_prompt": "Fancy medieval inn exterior, sign with a silver spoon, warm light."
+        },
+        {
+            "name": "Tim's Alchemy Supplies",
+            "description": "A small, chaotic shop smelling of sulfur and peppermint. Run by an accident-prone novice.",
+            "type": "Shop",
+            "image_prompt": "Cluttered alchemy shop, crooked shelves, colorful potions."
+        }
+    ],
+    "x": 500,
+    "y": 500
+}

@@ -1,0 +1,23 @@
+{
+    "id": "lore_abyssal_angler",
+    "title": "Abyssal Angler",
+    "category": "Bestiary",
+    "text": "The Abyssal Angler is a nightmare of the deep. Its lure is not just bioluminescent; it emits a hypnotic light pattern that paralyzes victims with a specialized Light Essence spell. Once the prey is immobile, the Angler swallows them whole. They are surprisingly intelligent, often setting traps for unwary divers.",
+    "image_prompt": "A terrifying anglerfish with a glowing lure that hypnotizes prey, in the dark abyss.",
+    "name": "Abyssal Angler",
+    "race": "Beast",
+    "attributes": {
+        "Power": 250,
+        "Speed": 200,
+        "Spirit": 350,
+        "Recovery": 150
+    },
+    "xp_reward": 400,
+    "loot_table": [
+        "Water",
+        "Light",
+        "Stone of the Lens",
+        "Stone of the Depths"
+    ],
+    "description": "A Beast known as Abyssal Angler that hunts in the crushing depths."
+}

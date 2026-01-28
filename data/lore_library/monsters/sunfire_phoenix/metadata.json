@@ -1,0 +1,23 @@
+{
+    "id": "lore_sunfire_phoenix",
+    "title": "Sunfire Phoenix",
+    "category": "Bestiary",
+    "text": "The Sunfire Phoenix is a majestic creature composed of living solar plasma. It is said to be a messenger of the Sun God, appearing only during the height of summer. Its feathers burn with the intensity of a star, and its cry can banish shadows. Unlike the Noble Phoenix, which represents rebirth, the Sunfire Phoenix represents judgment and purification.",
+    "image_prompt": "A dangerous Magical Beast creature known as Sunfire Phoenix. A bird of prey made of blinding white and gold fire.",
+    "name": "Sunfire Phoenix",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 300,
+        "Speed": 350,
+        "Spirit": 400,
+        "Recovery": 500
+    },
+    "xp_reward": 600,
+    "loot_table": [
+        "Sun",
+        "Fire",
+        "Wing",
+        "Stone of the Ember"
+    ],
+    "description": "A Magical Beast known as Sunfire Phoenix that embodies the sun's wrath."
+}

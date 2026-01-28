@@ -1,0 +1,18 @@
+{
+    "name": "Frost Fiend",
+    "race": "Demon",
+    "attributes": {
+        "Power": 476,
+        "Speed": 444,
+        "Spirit": 456,
+        "Recovery": 470
+    },
+    "xp_reward": 512,
+    "loot_table": [
+        "Light",
+        "Dimension",
+        "Technology"
+    ],
+    "image_prompt": "A dangerous Demon creature known as Frost Fiend. High fantasy art style, detailed creature design.",
+    "description": "A Demon known as Frost Fiend."
+}

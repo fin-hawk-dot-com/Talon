@@ -1,0 +1,18 @@
+{
+    "name": "Rotting Treant",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 260,
+        "Speed": 40,
+        "Spirit": 150,
+        "Recovery": 350
+    },
+    "xp_reward": 280,
+    "loot_table": [
+        "Rot",
+        "Stone of the Decay",
+        "Nature"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Rotting Treant. A giant tree collapsing under its own decay.",
+    "description": "A Elemental known as Rotting Treant that spreads rot to everything it touches."
+}

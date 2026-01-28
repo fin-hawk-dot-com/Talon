@@ -1,0 +1,17 @@
+{
+    "name": "Garden Gnome",
+    "race": "Construct",
+    "attributes": {
+        "Power": 66,
+        "Speed": 51,
+        "Spirit": 63,
+        "Recovery": 53
+    },
+    "xp_reward": 54,
+    "loot_table": [
+        "Earth",
+        "Stone of the Anchor"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Garden Gnome. An animated garden gnome with a pickaxe. High fantasy art style, detailed creature design.",
+    "description": "A ceramic statue brought to life."
+}

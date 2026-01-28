@@ -1,0 +1,49 @@
+{
+    "name": "Orizon",
+    "description": "The City of Salt and Static, hanging off the edge of the world. A vertical maze of white marble and corroded iron.",
+    "type": "City",
+    "region": "The Edge",
+    "danger_rank": "Silver",
+    "connected_locations": [
+        "Greenstone City"
+    ],
+    "resources": [
+        "Arcane Salt",
+        "Spirit Coins"
+    ],
+    "image_prompt_positive": "Vertical city built into a giant shell hanging off a cliff, white marble, iron, neon blue ocean below, detailed, fantasy, cinematic lighting",
+    "image_prompt_negative": "flat, plain, forest, desert, ruins",
+    "npcs": [
+        "Cassian Thorne",
+        "The Bell-Ringer"
+    ],
+    "narrative": "The city doesn't just sit on the coast; it hangs off the edge of the world. Built into the spiraling, calcified shell of a dead leviathan, Orizon is a vertical maze of white marble and corroded iron. Below churns the Luminous Deep, an ocean so rich in raw mana that the spray creates 'Arcane Salt'. The city breathes. A constant, low-frequency thrum vibrates through the cobblestones\u2014the heartbeat of the city\u2019s wards keeping the ocean\u2019s toxicity at bay.",
+    "points_of_interest": [
+        {
+            "name": "The Spire",
+            "description": "The highest point of the city, where the Sentinel sits. Access is restricted by the Spire Authority.",
+            "type": "Landmark",
+            "image_prompt": "Tall white tower, glowing tip, clouds, imposing"
+        },
+        {
+            "name": "The Glass Sanctum",
+            "description": "A spherical meditation chamber suspended by gravity magic. Currently a crime scene.",
+            "type": "Building",
+            "image_prompt": "Floating glass sphere, police tape, magical barrier"
+        },
+        {
+            "name": "Bell-Tower of the Drowned",
+            "description": "A massive acoustic amplifier used to warn ships. It looms over the docks.",
+            "type": "Landmark",
+            "image_prompt": "Giant bell tower, rusty iron, fog, ominous"
+        },
+        {
+            "name": "The Docks",
+            "description": "Where low-rankers scrape barnacles that bleed neon light. The air tastes of salt and ozone.",
+            "type": "District",
+            "image_prompt": "Sci-fi fantasy docks, glowing water, barnacles, ships"
+        }
+    ],
+    "x": 950,
+    "y": 200
+}

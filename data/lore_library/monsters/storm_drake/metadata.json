@@ -1,0 +1,19 @@
+{
+    "name": "Storm Drake",
+    "race": "Dragonkin",
+    "attributes": {
+        "Power": 300,
+        "Speed": 350,
+        "Spirit": 320,
+        "Recovery": 280
+    },
+    "xp_reward": 450,
+    "loot_table": [
+        "Lightning",
+        "Wind",
+        "Dragon",
+        "Stone of the Breath"
+    ],
+    "image_prompt": "A dangerous Dragonkin creature known as Storm Drake. High fantasy art style, detailed creature design.",
+    "description": "A Dragonkin known as Storm Drake, crackling with electricity."
+}

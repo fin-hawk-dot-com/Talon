@@ -1,0 +1,17 @@
+{
+    "name": "Cave Bear",
+    "race": "Beast",
+    "attributes": {
+        "Power": 189,
+        "Speed": 213,
+        "Spirit": 195,
+        "Recovery": 184
+    },
+    "xp_reward": 141,
+    "loot_table": [
+        "Might",
+        "Stone of the Roar"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Cave Bear. A huge bear with dark fur and glowing eyes. High fantasy art style, detailed creature design.",
+    "description": "A massive bear dwelling in deep caves."
+}

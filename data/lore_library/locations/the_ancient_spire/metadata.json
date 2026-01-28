@@ -1,0 +1,45 @@
+{
+    "id": "lore_ancient_spire",
+    "title": "The Ancient Spire",
+    "category": "Location",
+    "text": "The Ancient Spire is a structural impossibility\u2014a tower that has shattered, yet its segments remain suspended in the air, held together by glowing blue chains of Arcane force. It floats above the cloud layer, accessible only by flight or teleportation. It is said to contain the library of Valerius the Wise, the First Archmage. The Spire is a dungeon of the highest order, filled with spatial anomalies, magical puzzles, and guardians constructed of pure energy. Only the most powerful Archmages dare to attempt the ascent to the Apex.",
+    "image_prompt": "A broken tower with floating sections, magical blue chains, sky background, high fantasy.",
+    "name": "The Ancient Spire",
+    "description": "A monolithic tower rising from the center of the Scorched Wastes, pulsing with unstable energy.",
+    "type": "Dungeon",
+    "region": "Southern Badlands",
+    "danger_rank": "Gold",
+    "connected_locations": [
+        "The Scorched Wastes",
+        "Void Rift"
+    ],
+    "resources": [
+        "Arcane Essence",
+        "Ancient Technology"
+    ],
+    "image_prompt_positive": "Tall black tower, glowing red runes, desert background, magical lightning, menacing, epic scale, low angle shot",
+    "image_prompt_negative": "nature, water, happy, bright colors, small",
+    "narrative": "Rising like a black needle from the center of the Scorched Wastes, the Ancient Spire defies gravity and architectural logic. Its surface is smooth, seamless obsidian, etched with glowing red runes that pulse like a heartbeat. No door exists at its base; entry must be forced or found through magical means. Inside, the geometry is non-Euclidean, and the tower is said to house the unstable core of the cataclysm that destroyed the region.",
+    "points_of_interest": [
+        {
+            "name": "Base Camp",
+            "description": "A temporary settlement of scholars and treasure hunters outside the tower.",
+            "type": "Area",
+            "image_prompt": "Tents, campfire, desert background, tower in distance"
+        },
+        {
+            "name": "The Runed Door",
+            "description": "The massive, sealed entrance to the spire covered in glowing glyphs.",
+            "type": "Landmark",
+            "image_prompt": "Giant metal door, glowing magical runes, mysterious"
+        },
+        {
+            "name": "The Ascending Stairs",
+            "description": "A spiral staircase inside the tower that seems to go on forever.",
+            "type": "Area",
+            "image_prompt": "Spiral stairs, interior tower, floating steps, magical void"
+        }
+    ],
+    "x": 500,
+    "y": 900
+}

@@ -1,0 +1,23 @@
+{
+    "id": "lore_phase_spider",
+    "title": "Phase Spider",
+    "category": "Bestiary",
+    "text": "Phase Spiders are terrifying predators that originated from the Dimension of Shadows. They have the ability to shift their bodies out of phase with the material plane, appearing as flickering, translucent phantoms. This allows them to bypass physical armor and walls. They hunt by ambushing prey from the Ethereal Plane, dragging them back to their dimension to feed.",
+    "image_prompt": "A dangerous Magical Beast creature known as Phase Spider. A spider shifting in and out of reality, purple and translucent.",
+    "name": "Phase Spider",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 220,
+        "Speed": 400,
+        "Spirit": 300,
+        "Recovery": 150
+    },
+    "xp_reward": 380,
+    "loot_table": [
+        "Mist",
+        "Dimension",
+        "Poison",
+        "Stone of the Veil"
+    ],
+    "description": "A Magical Beast known as Phase Spider that hunts between dimensions."
+}

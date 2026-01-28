@@ -1,0 +1,23 @@
+{
+    "id": "lore_void_wisp",
+    "title": "Void Wisp",
+    "category": "Bestiary",
+    "text": "Void Wisps are small, flickering entities of pure Void energy. They are often found near tears in reality. They feed on background mana and are difficult to hit with physical weapons. While a single wisp is a mere nuisance, a swarm can drain a mage dry of mana in seconds, leaving them defenseless against larger threats.",
+    "image_prompt": "A dangerous Elemental creature known as Void Wisp. High fantasy art style, detailed creature design.",
+    "name": "Void Wisp",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 100,
+        "Speed": 250,
+        "Spirit": 200,
+        "Recovery": 50
+    },
+    "xp_reward": 130,
+    "loot_table": [
+        "Void",
+        "Swift",
+        "Stone of the Void",
+        "Stone of the Leap"
+    ],
+    "description": "A Elemental known as Void Wisp that flickers in and out of existence."
+}

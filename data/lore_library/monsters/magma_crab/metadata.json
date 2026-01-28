@@ -1,0 +1,22 @@
+{
+    "id": "lore_magma_crab",
+    "title": "Magma Crab",
+    "category": "Bestiary",
+    "text": "Native to volcanic regions, Magma Crabs have shells made of cooling lava rock. They are surprisingly fast despite their heavy armor and can spew molten rock at attackers. Their meat is considered a delicacy, said to taste like spicy lobster, but preparing it requires a chef skilled in removing the toxic fire sacs.",
+    "image_prompt": "A dangerous Beast creature known as Magma Crab. High fantasy art style, detailed creature design.",
+    "name": "Magma Crab",
+    "race": "Beast",
+    "attributes": {
+        "Power": 150,
+        "Speed": 40,
+        "Spirit": 80,
+        "Recovery": 200
+    },
+    "xp_reward": 120,
+    "loot_table": [
+        "Fire",
+        "Armor",
+        "Stone of the Shell"
+    ],
+    "description": "A Beast known as Magma Crab with a shell of hardened lava."
+}

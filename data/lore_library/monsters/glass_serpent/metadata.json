@@ -1,0 +1,21 @@
+{
+    "id": "lore_glass_serpent",
+    "title": "Glass Serpent",
+    "category": "Bestiary",
+    "text": "Glass Serpents are native to the Mirror Plains, evolving to blend in with the shimmering landscape. Their bodies are composed of living glass segments held together by a strong magnetic field. They hunt by coiling around their prey and constricting, their sharp scales slicing through armor with ease. Some theorize they are not natural beasts, but constructs left behind by an ancient glass-shaper.",
+    "image_prompt": "A dangerous Construct creature known as Glass Serpent. A snake made of transparent glass segments.",
+    "name": "Glass Serpent",
+    "race": "Construct",
+    "attributes": {
+        "Power": 220,
+        "Speed": 250,
+        "Spirit": 150,
+        "Recovery": 100
+    },
+    "xp_reward": 240,
+    "loot_table": [
+        "Glass",
+        "Stone of the Prism"
+    ],
+    "description": "A Construct known as Glass Serpent that refracts light to hide itself."
+}

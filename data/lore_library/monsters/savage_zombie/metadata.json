@@ -1,0 +1,16 @@
+{
+    "name": "Savage Zombie",
+    "race": "Undead",
+    "attributes": {
+        "Power": 149,
+        "Speed": 153,
+        "Spirit": 157,
+        "Recovery": 162
+    },
+    "xp_reward": 150,
+    "loot_table": [
+        "Stone of the Shield"
+    ],
+    "image_prompt": "A dangerous Undead creature known as Savage Zombie. High fantasy art style, detailed creature design.",
+    "description": "A Undead known as Savage Zombie."
+}

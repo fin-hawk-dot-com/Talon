@@ -1,0 +1,17 @@
+{
+    "name": "Swift Bat",
+    "race": "Beast",
+    "attributes": {
+        "Power": 376,
+        "Speed": 374,
+        "Spirit": 360,
+        "Recovery": 315
+    },
+    "xp_reward": 390,
+    "loot_table": [
+        "Balance",
+        "Moon"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Swift Bat. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Swift Bat."
+}

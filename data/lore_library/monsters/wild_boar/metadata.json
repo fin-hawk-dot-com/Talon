@@ -1,0 +1,16 @@
+{
+    "name": "Wild Boar",
+    "race": "Beast",
+    "attributes": {
+        "Power": 40,
+        "Speed": 20,
+        "Spirit": 10,
+        "Recovery": 50
+    },
+    "xp_reward": 20,
+    "loot_table": [
+        "Might"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Wild Boar. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Wild Boar."
+}

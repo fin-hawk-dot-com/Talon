@@ -1,0 +1,18 @@
+{
+    "name": "Corrupted Scarecrow",
+    "race": "Construct",
+    "attributes": {
+        "Power": 417,
+        "Speed": 422,
+        "Spirit": 482,
+        "Recovery": 470
+    },
+    "xp_reward": 507,
+    "loot_table": [
+        "Stone of the Wall",
+        "Stone of Focus",
+        "Renewal"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Corrupted Scarecrow. High fantasy art style, detailed creature design.",
+    "description": "A Construct known as Corrupted Scarecrow."
+}

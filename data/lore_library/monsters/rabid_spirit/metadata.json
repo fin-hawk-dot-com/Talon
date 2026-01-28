@@ -1,0 +1,17 @@
+{
+    "name": "Rabid Spirit",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 220,
+        "Speed": 258,
+        "Spirit": 288,
+        "Recovery": 262
+    },
+    "xp_reward": 270,
+    "loot_table": [
+        "Stone of the Blast",
+        "Sound"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Rabid Spirit. High fantasy art style, detailed creature design.",
+    "description": "A Elemental known as Rabid Spirit."
+}

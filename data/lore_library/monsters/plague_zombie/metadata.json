@@ -1,0 +1,17 @@
+{
+    "name": "Plague Zombie",
+    "race": "Undead",
+    "attributes": {
+        "Power": 174,
+        "Speed": 161,
+        "Spirit": 139,
+        "Recovery": 149
+    },
+    "xp_reward": 146,
+    "loot_table": [
+        "Rot",
+        "Poison"
+    ],
+    "image_prompt": "A dangerous Undead creature known as Plague Zombie. A rotting corpse surrounded by green flies. High fantasy art style, detailed creature design.",
+    "description": "A zombie spreading sickness."
+}

@@ -1,0 +1,21 @@
+{
+    "id": "lore_ancient_bat",
+    "title": "Ancient Bat",
+    "category": "Bestiary",
+    "text": "Ancient Bats are distinct from normal giant bats due to their immense lifespan and size. Living for centuries in the deepest, most mana-rich caverns, they can grow to have wingspans of thirty feet. They have developed a form of sonic magic, using echolocation screams that can shatter stone and rupture eardrums. They are solitary hunters, swooping down from the cavern ceilings to snatch up large prey\u2014including unsuspecting adventurers.",
+    "image_prompt": "A dangerous Beast creature known as Ancient Bat. High fantasy art style, detailed creature design.",
+    "name": "Ancient Bat",
+    "race": "Beast",
+    "attributes": {
+        "Power": 251,
+        "Speed": 228,
+        "Spirit": 235,
+        "Recovery": 240
+    },
+    "xp_reward": 263,
+    "loot_table": [
+        "Air",
+        "Technology"
+    ],
+    "description": "A Beast known as Ancient Bat."
+}

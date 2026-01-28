@@ -1,0 +1,16 @@
+{
+    "name": "Runed Wisp",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 169,
+        "Speed": 167,
+        "Spirit": 110,
+        "Recovery": 129
+    },
+    "xp_reward": 145,
+    "loot_table": [
+        "Knowledge"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Runed Wisp. High fantasy art style, detailed creature design.",
+    "description": "A Elemental known as Runed Wisp."
+}

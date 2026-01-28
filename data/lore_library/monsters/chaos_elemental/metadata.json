@@ -1,0 +1,18 @@
+{
+    "name": "Chaos Elemental",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 300,
+        "Speed": 300,
+        "Spirit": 300,
+        "Recovery": 300
+    },
+    "xp_reward": 400,
+    "loot_table": [
+        "Chaos",
+        "Stone of the Blast",
+        "Stone of the Blink"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Chaos Elemental. A shifting mass of colors and shapes.",
+    "description": "A Elemental known as Chaos Elemental formed from pure entropy."
+}

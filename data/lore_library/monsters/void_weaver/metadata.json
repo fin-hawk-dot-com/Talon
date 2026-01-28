@@ -1,0 +1,22 @@
+{
+    "id": "lore_void_weaver",
+    "title": "Void Weaver",
+    "category": "Bestiary",
+    "text": "Void Weavers are terrifying predators that dwell near the edges of the Void Rift. Resembling giant arachnids composed of shifting shadows and purple light, they do not spin silk, but rather threads of concentrated Void essence. These webs do not just trap prey; they slowly erase them from existence. A Void Weaver can blink in and out of reality, making them incredibly difficult to target. Their fangs inject a venom that destabilizes the victim's mana, causing their own spells to backfire.",
+    "image_prompt": "A dangerous Magical Beast creature known as Void Weaver. A spider-like creature made of purple void energy.",
+    "name": "Void Weaver",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 160,
+        "Speed": 200,
+        "Spirit": 220,
+        "Recovery": 140
+    },
+    "xp_reward": 210,
+    "loot_table": [
+        "Void",
+        "Stone of the Web",
+        "Stone of the Blink"
+    ],
+    "description": "A Magical Beast known as Void Weaver that spins webs of pure nothingness."
+}

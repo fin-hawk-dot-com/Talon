@@ -1,0 +1,18 @@
+{
+    "name": "Crystal Spider",
+    "race": "Beast",
+    "attributes": {
+        "Power": 150,
+        "Speed": 220,
+        "Spirit": 180,
+        "Recovery": 160
+    },
+    "xp_reward": 180,
+    "loot_table": [
+        "Crystal",
+        "Poison",
+        "Stone of the Trap"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Crystal Spider. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Crystal Spider with a carapace of sharp gems."
+}

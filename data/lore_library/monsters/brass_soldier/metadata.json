@@ -1,0 +1,17 @@
+{
+    "name": "Brass Soldier",
+    "race": "Construct",
+    "attributes": {
+        "Power": 130,
+        "Speed": 136,
+        "Spirit": 154,
+        "Recovery": 177
+    },
+    "xp_reward": 134,
+    "loot_table": [
+        "Iron",
+        "Technology"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Brass Soldier. A robot made of shiny brass gears and plates. High fantasy art style, detailed creature design.",
+    "description": "A clockwork soldier made of brass."
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Noble Imp",
+    "race": "Demon",
+    "attributes": {
+        "Power": 241,
+        "Speed": 288,
+        "Spirit": 215,
+        "Recovery": 237
+    },
+    "xp_reward": 266,
+    "loot_table": [
+        "Balance",
+        "Fire"
+    ],
+    "image_prompt": "A dangerous Demon creature known as Noble Imp. High fantasy art style, detailed creature design.",
+    "description": "A Demon known as Noble Imp."
+}

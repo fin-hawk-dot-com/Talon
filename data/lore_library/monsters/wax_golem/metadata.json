@@ -1,0 +1,22 @@
+{
+    "id": "lore_wax_golem",
+    "title": "Wax Golem",
+    "category": "Bestiary",
+    "text": "Wax Golems are often used as guardians in the archives of the Arcane Assembly. They appear as featureless mannequins that can reshape their limbs into keys or weapons as needed. If damaged, they can simply melt and reform. However, they are extremely vulnerable to intense heat, which turns them into harmless puddles.",
+    "image_prompt": "A humanoid golem made of dripping candle wax, with a wick burning on its head.",
+    "name": "Wax Golem",
+    "race": "Construct",
+    "attributes": {
+        "Power": 200,
+        "Speed": 150,
+        "Spirit": 100,
+        "Recovery": 150
+    },
+    "xp_reward": 250,
+    "loot_table": [
+        "Wax",
+        "Stone of the Hive",
+        "Fire"
+    ],
+    "description": "A construct kept malleable by an internal flame."
+}

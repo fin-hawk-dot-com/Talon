@@ -1,0 +1,17 @@
+{
+    "name": "Mystic Scarecrow",
+    "race": "Construct",
+    "attributes": {
+        "Power": 289,
+        "Speed": 280,
+        "Spirit": 232,
+        "Recovery": 223
+    },
+    "xp_reward": 270,
+    "loot_table": [
+        "Dark",
+        "Wing"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Mystic Scarecrow. High fantasy art style, detailed creature design.",
+    "description": "A Construct known as Mystic Scarecrow."
+}

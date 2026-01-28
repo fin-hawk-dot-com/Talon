@@ -1,0 +1,17 @@
+{
+    "name": "Noble Hawk",
+    "race": "Beast",
+    "attributes": {
+        "Power": 247,
+        "Speed": 266,
+        "Spirit": 240,
+        "Recovery": 222
+    },
+    "xp_reward": 265,
+    "loot_table": [
+        "Directed",
+        "Gun"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Noble Hawk. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Noble Hawk."
+}

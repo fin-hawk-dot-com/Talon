@@ -1,0 +1,20 @@
+{
+    "id": "lore_void_demon",
+    "title": "Void Demon",
+    "category": "Bestiary",
+    "text": "Void Demons are abominations that have crossed over from the Void Rift. Their forms are inconsistent\u2014shifting masses of tentacles, eyes, and teeth that seem to reject the laws of physics. Their very presence corrupts the area around them, causing plants to wither and stone to crack. They attack not just the body, but the mind, projecting waves of psychic dread. Killing a Void Demon requires destroying every piece of it, as even a severed limb can continue to attack.",
+    "image_prompt": "A dangerous Demon creature known as Void Demon. High fantasy art style, detailed creature design.",
+    "name": "Void Demon",
+    "race": "Demon",
+    "attributes": {
+        "Power": 177,
+        "Speed": 150,
+        "Spirit": 134,
+        "Recovery": 130
+    },
+    "xp_reward": 147,
+    "loot_table": [
+        "Directed"
+    ],
+    "description": "A Demon known as Void Demon."
+}

@@ -1,0 +1,22 @@
+{
+    "id": "lore_bronze_drake",
+    "title": "Bronze Drake",
+    "category": "Bestiary",
+    "text": "Bronze Drakes are lesser cousins of the true dragons, found nesting in the cliffs of the badlands. Their scales are metallic and oxidized, possessing the hardness of bronze. Unlike their fire-breathing kin, Bronze Drakes possess a specialized gland that produces a highly corrosive acid gas. They are territorial and hoard shiny objects, often decorating their nests with the armor of fallen adventurers. Their hide is prized by smiths for creating lightweight, acid-resistant armor.",
+    "image_prompt": "A dangerous Dragonkin creature known as Bronze Drake. High fantasy art style, detailed creature design.",
+    "name": "Bronze Drake",
+    "race": "Dragonkin",
+    "attributes": {
+        "Power": 250,
+        "Speed": 220,
+        "Spirit": 200,
+        "Recovery": 280
+    },
+    "xp_reward": 500,
+    "loot_table": [
+        "Fire",
+        "Dragon",
+        "Stone of the Breath"
+    ],
+    "description": "A Dragonkin known as Bronze Drake."
+}

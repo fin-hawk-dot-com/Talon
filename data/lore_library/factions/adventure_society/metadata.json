@@ -1,0 +1,7 @@
+{
+    "name": "Adventure Society",
+    "description": "A global organization that manages monster hunting and exploration tasks. They rank members by their capability.",
+    "type": "Guild",
+    "rank_requirement": "Iron",
+    "image_prompt": "Emblem or headquarters of Adventure Society, a Guild faction. A global organization that manages monster hunting and exploration tasks. They rank members by their capability. Fantasy setting."
+}

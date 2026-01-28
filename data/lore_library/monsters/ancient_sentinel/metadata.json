@@ -1,0 +1,22 @@
+{
+    "id": "lore_ancient_sentinel",
+    "title": "Ancient Sentinel",
+    "category": "Bestiary",
+    "text": "Ancient Sentinels are towering constructs left behind by the Aethel to guard their secrets. Powered by an eternal core, they do not rust or decay, standing vigil for thousands of years. They are armed with beam weaponry that can cut through Dragon scale, and their armor is resistant to most modern magic.",
+    "image_prompt": "A dangerous Construct creature known as Ancient Sentinel. High fantasy art style, detailed creature design.",
+    "name": "Ancient Sentinel",
+    "race": "Construct",
+    "attributes": {
+        "Power": 220,
+        "Speed": 60,
+        "Spirit": 100,
+        "Recovery": 250
+    },
+    "xp_reward": 180,
+    "loot_table": [
+        "Iron",
+        "Stone of the Wall",
+        "Stone of the Shield"
+    ],
+    "description": "A Construct known as Ancient Sentinel guarding forgotten ruins."
+}

@@ -1,0 +1,45 @@
+{
+    "id": "lore_whispering_woods",
+    "title": "The Whispering Woods",
+    "category": "Location",
+    "text": "The Whispering Woods is a forest of ancient, towering redwoods that have absorbed ambient mana for centuries. The trees have developed a collective semi-consciousness. Travelers report hearing voices\u2014whispers of their past mistakes, their fears, and their lost loves\u2014emanating from the bark itself. These whispers are a psychic defense mechanism designed to disorient intruders. The woods are rich in Wood and Life Essence, but harvesting them requires a strong will to resist the psychological assault. It is the sovereign territory of the Circle of Thorns.",
+    "image_prompt": "A spooky forest path, mist, trees with subtle faces in the bark, glowing eyes in the dark.",
+    "name": "The Whispering Woods",
+    "description": "A dense forest where the trees seem to murmur secrets to those who listen.",
+    "type": "Wilderness",
+    "region": "Central Plains",
+    "danger_rank": "Bronze",
+    "connected_locations": [
+        "Greenstone City",
+        "The Shadowfen"
+    ],
+    "resources": [
+        "Wood Essence",
+        "Herbs"
+    ],
+    "image_prompt_positive": "Mystical forest, ancient trees with faces, bioluminescent plants, fog, ethereal light, fantasy landscape, mysterious, green and purple hues, detailed",
+    "image_prompt_negative": "city, buildings, desert, bright day, plain, simple, cartoon",
+    "narrative": "Step past the tree line, and the silence doesn't fall; it multiplies. The Whispering Woods are named for the incessant, unintelligible murmurs that seem to emanate from the ancient oaks themselves. Travelers speak of hearing the voices of lost loved ones or the taunts of their worst fears. The deeper one goes, the louder the whispers become, until they drown out thought itself. Bioluminescent fungi light the path, but they also attract the forest's strange, shifting inhabitants.",
+    "points_of_interest": [
+        {
+            "name": "Ancient Grove",
+            "description": "A circle of massive, ancient trees that seem to watch you. The air here is still and heavy with magic.",
+            "type": "Landmark",
+            "image_prompt": "Ancient trees, circle layout, magical atmosphere, fireflies, moss"
+        },
+        {
+            "name": "The Singing Stream",
+            "description": "A crystal-clear stream that makes melodic sounds as it flows over smooth stones.",
+            "type": "Area",
+            "image_prompt": "Forest stream, clear water, magical sparkles, peaceful"
+        },
+        {
+            "name": "Shadowed Clearing",
+            "description": "A part of the woods where the canopy is so thick that it is always twilight. Unsettling movements can be seen in the corners of your vision.",
+            "type": "Area",
+            "image_prompt": "Dark forest clearing, spooky, shadows, twilight, mysterious"
+        }
+    ],
+    "x": 650,
+    "y": 450
+}

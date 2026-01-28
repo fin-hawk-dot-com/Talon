@@ -1,0 +1,45 @@
+{
+    "id": "lore_scorched_wastes",
+    "title": "The Scorched Wastes",
+    "category": "Location",
+    "text": "The Scorched Wastes are a scar on the face of the world, a desert of black glass and ash. Legend says a duel between two Ascended Pyromancers incinerated the land centuries ago, burning away the very concept of moisture. The region is dotted with active volcanoes and fissures that spew liquid fire. Pockets of volatile Fire Essence spontaneously combust, creating firestorms that can strip flesh from bone in seconds. Only the hardiest creatures, like the Magma Crabs and Salamanders, survive here. It is a place of death, yet Fire Mages flock here to train in the intense heat.",
+    "image_prompt": "Red and black desert landscape, heat waves, obsidian rocks, fissures glowing with lava.",
+    "name": "The Scorched Wastes",
+    "description": "A desolate desert landscape scarred by ancient magical fires that never truly went out.",
+    "type": "Wilderness",
+    "region": "Southern Badlands",
+    "danger_rank": "Silver",
+    "connected_locations": [
+        "The Ancient Spire",
+        "Southern Crossroads"
+    ],
+    "resources": [
+        "Fire Essence",
+        "Obsidian"
+    ],
+    "image_prompt_positive": "Desert landscape, cracked earth, magical fire fissures, red and orange lighting, smoke, ruins of obsidian, heat haze, dangerous atmosphere",
+    "image_prompt_negative": "water, snow, green, trees, life, happy",
+    "narrative": "A scarred wound on the face of the world, the Scorched Wastes are the aftermath of a magical cataclysm that evaporated the sea that once lay here. The ground is cracked, dry, and hot to the touch. Fissures spew magical fire that burns without fuel, and the wind carries the taste of ash and sulfur. Obsidian shards litter the landscape, remnants of glassed sand, and only creatures forged in fire can survive this desolate hellscape.",
+    "points_of_interest": [
+        {
+            "name": "The Cracked Earth",
+            "description": "Miles of dry, cracked ground where heat radiates visibly.",
+            "type": "Area",
+            "image_prompt": "Desert, dry cracked ground, heat haze, red sky"
+        },
+        {
+            "name": "Obsidian Fields",
+            "description": "A field of sharp, jagged black glass formed by intense magical heat.",
+            "type": "Area",
+            "image_prompt": "Black sharp rocks, obsidian, dangerous terrain, volcanic"
+        },
+        {
+            "name": "The Fire Pits",
+            "description": "Natural vents spewing magical fire and smoke.",
+            "type": "Landmark",
+            "image_prompt": "Ground vents, fire, smoke, lava, hellish landscape"
+        }
+    ],
+    "x": 500,
+    "y": 800
+}

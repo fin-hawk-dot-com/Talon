@@ -1,0 +1,20 @@
+{
+    "id": "lore_mechanical_knight",
+    "title": "Mechanical Knight",
+    "category": "Bestiary",
+    "text": "Mechanical Knights are ancient automatons left behind by the Aethel civilization. Powered by eternal mana cores, they still patrol the ruins of their creators, following orders given thousands of years ago. They are armed with high-frequency vibration blades and integrated energy shields. Unlike modern golems, they possess combat algorithms that allow them to adapt to an enemy's fighting style. Defeating one is a test of skill, often yielding ancient technology as a reward.",
+    "image_prompt": "A dangerous Humanoid creature known as Mechanical Knight. High fantasy art style, detailed creature design.",
+    "name": "Mechanical Knight",
+    "race": "Humanoid",
+    "attributes": {
+        "Power": 182,
+        "Speed": 150,
+        "Spirit": 131,
+        "Recovery": 161
+    },
+    "xp_reward": 150,
+    "loot_table": [
+        "Moon"
+    ],
+    "description": "A Humanoid known as Mechanical Knight."
+}

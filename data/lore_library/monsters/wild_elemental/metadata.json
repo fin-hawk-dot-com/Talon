@@ -1,0 +1,16 @@
+{
+    "name": "Wild Elemental",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 24,
+        "Speed": 61,
+        "Spirit": 57,
+        "Recovery": 47
+    },
+    "xp_reward": 34,
+    "loot_table": [
+        "Stone of the Judgment"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Wild Elemental. High fantasy art style, detailed creature design.",
+    "description": "A Elemental known as Wild Elemental."
+}

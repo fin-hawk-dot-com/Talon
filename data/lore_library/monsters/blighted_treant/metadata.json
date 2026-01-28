@@ -1,0 +1,18 @@
+{
+    "name": "Blighted Treant",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 240,
+        "Speed": 60,
+        "Spirit": 180,
+        "Recovery": 300
+    },
+    "xp_reward": 250,
+    "loot_table": [
+        "Nature",
+        "Poison",
+        "Stone of the Anchor"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Blighted Treant. A rotting tree creature oozing black ichor.",
+    "description": "A Elemental known as Blighted Treant corrupted by foul magic."
+}

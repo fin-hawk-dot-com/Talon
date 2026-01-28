@@ -1,0 +1,16 @@
+{
+    "name": "Stray Dog",
+    "race": "Beast",
+    "attributes": {
+        "Power": 18,
+        "Speed": 21,
+        "Spirit": 23,
+        "Recovery": 19
+    },
+    "xp_reward": 46,
+    "loot_table": [
+        "Stone of the Strike"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Stray Dog. A scruffy, aggressive wild dog. High fantasy art style, detailed creature design.",
+    "description": "A wild dog, hungry and aggressive."
+}

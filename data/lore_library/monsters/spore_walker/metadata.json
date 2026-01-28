@@ -1,0 +1,21 @@
+{
+    "id": "lore_spore_walker",
+    "title": "Spore Walker",
+    "category": "Bestiary",
+    "text": "Spore Walkers are mobile fungal colonies that have achieved a hive-mind intelligence. They roam damp, dark places like the Fungal Depths, spreading their spores to convert all organic matter into more fungus. A Spore Walker's touch can accelerate decay instantly, rotting wood and flesh in seconds. They are immune to pain and fear, making them relentless pursuers.",
+    "image_prompt": "A dangerous Elemental creature known as Spore Walker. A humanoid figure made of mushrooms and mycelium.",
+    "name": "Spore Walker",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 180,
+        "Speed": 120,
+        "Spirit": 200,
+        "Recovery": 300
+    },
+    "xp_reward": 220,
+    "loot_table": [
+        "Fungus",
+        "Stone of the Spore"
+    ],
+    "description": "A Elemental known as Spore Walker that spreads decay wherever it treads."
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Corrupted Skeleton",
+    "race": "Undead",
+    "attributes": {
+        "Power": 283,
+        "Speed": 219,
+        "Spirit": 249,
+        "Recovery": 253
+    },
+    "xp_reward": 268,
+    "loot_table": [
+        "Moon",
+        "Stone of the Trap"
+    ],
+    "image_prompt": "A dangerous Undead creature known as Corrupted Skeleton. High fantasy art style, detailed creature design.",
+    "description": "A Undead known as Corrupted Skeleton."
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Goblin Scout",
+    "race": "Humanoid",
+    "attributes": {
+        "Power": 51,
+        "Speed": 47,
+        "Spirit": 48,
+        "Recovery": 40
+    },
+    "xp_reward": 31,
+    "loot_table": [
+        "Swift",
+        "Stone of the Leap"
+    ],
+    "image_prompt": "A dangerous Humanoid creature known as Goblin Scout. A goblin with leather armor and a spear. High fantasy art style, detailed creature design.",
+    "description": "A small, green-skinned scout."
+}

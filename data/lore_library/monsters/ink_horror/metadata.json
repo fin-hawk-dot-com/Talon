@@ -1,0 +1,22 @@
+{
+    "id": "lore_ink_horror",
+    "title": "Ink Horror",
+    "category": "Bestiary",
+    "text": "Ink Horrors are accidental creations, usually birthed from spilled magical ink in abandoned libraries. They are sentient puddles of darkness that seek to 'erase' living beings, adding their biological data to their own chaotic script. They can slip under doors and form blades from their liquid bodies. Fire is their greatest weakness, as it dries them out instantly.",
+    "image_prompt": "A shapeless monster made of spilling black ink, forming claws and mouths.",
+    "name": "Ink Horror",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 150,
+        "Speed": 250,
+        "Spirit": 200,
+        "Recovery": 100
+    },
+    "xp_reward": 300,
+    "loot_table": [
+        "Ink",
+        "Stone of the Script",
+        "Dark"
+    ],
+    "description": "A living puddle of cursed ink that drowns its victims."
+}

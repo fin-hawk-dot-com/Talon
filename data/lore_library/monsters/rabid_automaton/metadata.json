@@ -1,0 +1,16 @@
+{
+    "name": "Rabid Automaton",
+    "race": "Construct",
+    "attributes": {
+        "Power": 131,
+        "Speed": 140,
+        "Spirit": 119,
+        "Recovery": 161
+    },
+    "xp_reward": 143,
+    "loot_table": [
+        "Moon"
+    ],
+    "image_prompt": "A dangerous Construct creature known as Rabid Automaton. High fantasy art style, detailed creature design.",
+    "description": "A Construct known as Rabid Automaton."
+}

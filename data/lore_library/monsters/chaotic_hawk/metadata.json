@@ -1,0 +1,17 @@
+{
+    "name": "Chaotic Hawk",
+    "race": "Beast",
+    "attributes": {
+        "Power": 370,
+        "Speed": 332,
+        "Spirit": 337,
+        "Recovery": 384
+    },
+    "xp_reward": 390,
+    "loot_table": [
+        "Stone of the Feast",
+        "Wind"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Chaotic Hawk. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Chaotic Hawk."
+}

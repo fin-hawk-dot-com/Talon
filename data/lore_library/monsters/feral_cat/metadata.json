@@ -1,0 +1,17 @@
+{
+    "name": "Feral Cat",
+    "race": "Beast",
+    "attributes": {
+        "Power": 79,
+        "Speed": 70,
+        "Spirit": 62,
+        "Recovery": 83
+    },
+    "xp_reward": 54,
+    "loot_table": [
+        "Swift",
+        "Stone of the Foot"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Feral Cat. A hissing feral cat with sharp claws. High fantasy art style, detailed creature design.",
+    "description": "A large, angry housecat."
+}

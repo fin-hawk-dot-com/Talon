@@ -1,0 +1,17 @@
+{
+    "name": "Noble Demon",
+    "race": "Demon",
+    "attributes": {
+        "Power": 266,
+        "Speed": 259,
+        "Spirit": 234,
+        "Recovery": 258
+    },
+    "xp_reward": 269,
+    "loot_table": [
+        "Stone of the Wall",
+        "Earth"
+    ],
+    "image_prompt": "A dangerous Demon creature known as Noble Demon. High fantasy art style, detailed creature design.",
+    "description": "A Demon known as Noble Demon."
+}

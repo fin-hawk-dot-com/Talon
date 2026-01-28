@@ -1,0 +1,39 @@
+{
+    "name": "Void Rift",
+    "description": "A tear in reality where the laws of physics break down. Only the strongest dare enter.",
+    "type": "Dimension",
+    "region": "Void",
+    "danger_rank": "Diamond",
+    "connected_locations": [
+        "The Ancient Spire"
+    ],
+    "resources": [
+        "Void Essence",
+        "Chaos Stone"
+    ],
+    "image_prompt_positive": "Abstract landscape, floating rocks, purple and black swirling portal, stars, cosmic horror, surreal, dreamlike",
+    "image_prompt_negative": "normal world, ground, sky, buildings, trees",
+    "narrative": "Physics dissolves at the edge of the Void Rift. It is a tear in the fabric of reality, a swirling vortex of purple and black energy that hovers in a null-gravity field. Debris from the material world floats into it and disintegrates, while alien geometries seep out. Those who approach report a sensation of falling while standing still, and the whispers here are not from the past, but from entities that have never known existence in our universe.",
+    "points_of_interest": [
+        {
+            "name": "The Edge of Reality",
+            "description": "Where the ground simply ends and dissolves into the void.",
+            "type": "Landmark",
+            "image_prompt": "Cliff edge, dissolving into space, stars, purple nebula"
+        },
+        {
+            "name": "Floating Islands",
+            "description": "Chunks of land defying gravity, connected by magical tethers.",
+            "type": "Area",
+            "image_prompt": "Floating rocks, purple sky, magical bridges"
+        },
+        {
+            "name": "The Swirling Vortex",
+            "description": "The center of the rift, a terrifying maelstrom of raw energy.",
+            "type": "Landmark",
+            "image_prompt": "Black hole, energy swirl, destruction, cosmic horror"
+        }
+    ],
+    "x": 500,
+    "y": 980
+}

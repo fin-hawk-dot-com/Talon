@@ -1,0 +1,17 @@
+{
+    "name": "Plague Rat",
+    "race": "Beast",
+    "attributes": {
+        "Power": 80,
+        "Speed": 120,
+        "Spirit": 40,
+        "Recovery": 60
+    },
+    "xp_reward": 50,
+    "loot_table": [
+        "Rot",
+        "Poison"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Plague Rat. A large rat covered in sores and green mists.",
+    "description": "A Beast known as Plague Rat carrying deadly diseases."
+}

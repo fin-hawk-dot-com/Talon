@@ -1,0 +1,17 @@
+{
+    "name": "Mud Slime",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 35,
+        "Speed": 29,
+        "Spirit": 31,
+        "Recovery": 33
+    },
+    "xp_reward": 59,
+    "loot_table": [
+        "Earth",
+        "Water"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Mud Slime. A slime creature made of brown mud and dirt. High fantasy art style, detailed creature design.",
+    "description": "A glob of animated mud."
+}

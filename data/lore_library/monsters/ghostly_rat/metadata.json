@@ -1,0 +1,16 @@
+{
+    "name": "Ghostly Rat",
+    "race": "Beast",
+    "attributes": {
+        "Power": 75,
+        "Speed": 34,
+        "Spirit": 70,
+        "Recovery": 91
+    },
+    "xp_reward": 43,
+    "loot_table": [
+        "Stone of the Flesh"
+    ],
+    "image_prompt": "A dangerous Beast creature known as Ghostly Rat. High fantasy art style, detailed creature design.",
+    "description": "A Beast known as Ghostly Rat."
+}

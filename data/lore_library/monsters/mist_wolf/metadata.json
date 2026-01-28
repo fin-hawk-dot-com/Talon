@@ -1,0 +1,17 @@
+{
+    "name": "Mist Wolf",
+    "race": "Magical Beast",
+    "attributes": {
+        "Power": 167,
+        "Speed": 153,
+        "Spirit": 181,
+        "Recovery": 177
+    },
+    "xp_reward": 122,
+    "loot_table": [
+        "Mist",
+        "Swift"
+    ],
+    "image_prompt": "A dangerous Magical Beast creature known as Mist Wolf. A grey wolf whose fur fades into mist. High fantasy art style, detailed creature design.",
+    "description": "A wolf that can turn into mist."
+}

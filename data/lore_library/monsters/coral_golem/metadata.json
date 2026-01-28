@@ -1,0 +1,22 @@
+{
+    "id": "lore_coral_golem",
+    "title": "Coral Golem",
+    "category": "Bestiary",
+    "text": "Coral Golems are unique constructs that are simultaneously mineral and biological. They are colonies of coral polyps animated by a central mana core. They can regenerate damage rapidly as long as they remain in saltwater. Often found guarding reefs, they are peaceful unless provoked, at which point they can manipulate the coral around them to impale intruders.",
+    "image_prompt": "A golem made of colorful living coral and rock, walking on the ocean floor.",
+    "name": "Coral Golem",
+    "race": "Construct",
+    "attributes": {
+        "Power": 300,
+        "Speed": 100,
+        "Spirit": 150,
+        "Recovery": 500
+    },
+    "xp_reward": 450,
+    "loot_table": [
+        "Coral",
+        "Water",
+        "Stone of the Shell"
+    ],
+    "description": "A Construct known as Coral Golem that regenerates as long as it remains submerged."
+}

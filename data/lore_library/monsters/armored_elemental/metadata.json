@@ -1,0 +1,18 @@
+{
+    "name": "Armored Elemental",
+    "race": "Elemental",
+    "attributes": {
+        "Power": 524,
+        "Speed": 557,
+        "Spirit": 543,
+        "Recovery": 589
+    },
+    "xp_reward": 629,
+    "loot_table": [
+        "Life",
+        "Sin",
+        "Mana"
+    ],
+    "image_prompt": "A dangerous Elemental creature known as Armored Elemental. High fantasy art style, detailed creature design.",
+    "description": "A Elemental known as Armored Elemental."
+}
