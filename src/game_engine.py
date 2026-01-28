@@ -28,6 +28,75 @@ class GameEngine:
         self.market_mgr = MarketManager(self.data_loader)
         self.character = None
 
+    def _hydrate_monster_abilities(self, monster: Character):
+        """
+        Generates abilities for the monster based on its loot table.
+        """
+        # Find Primary Essence
+        primary_essence = None
+        stones = []
+
+        # We need to map loot item names to actual data
+        for loot_item in monster.loot_table:
+            # Check if it's an Essence
+            loot_lower = loot_item.lower()
+            if loot_lower in self.data_loader.essences_map:
+                e_data = self.data_loader.essences_map[loot_lower]
+                # Convert dict to Essence object
+                e = Essence(
+                    name=e_data['name'],
+                    type=e_data['type'],
+                    rarity=e_data['rarity'],
+                    tags=e_data['tags'],
+                    description=e_data['description'],
+                    image_prompt=e_data.get('image_prompt', ""),
+                    opposite=e_data.get('opposite'),
+                    synergy=e_data.get('synergy', [])
+                )
+                if not primary_essence:
+                    primary_essence = e
+
+            # Check if it's an Awakening Stone
+            elif loot_lower in self.data_loader.stones_map:
+                s_data = self.data_loader.stones_map[loot_lower]
+                s = AwakeningStone(
+                    name=s_data['name'],
+                    function=s_data['function'],
+                    description=s_data['description'],
+                    image_prompt=s_data.get('image_prompt', ""),
+                    rarity=s_data.get('rarity', "Common"),
+                    cooldown=s_data.get('cooldown', "Medium"),
+                    cost_type=s_data.get('cost_type', "Mana"),
+                    value=s_data.get('value', 100)
+                )
+                stones.append(s)
+
+        # Fallback Essence if none found
+        if not primary_essence:
+            primary_essence = Essence(
+                name="Natural",
+                type="Base",
+                rarity="Common",
+                tags=["Physical", "Nature"],
+                description="The natural essence of the creature."
+            )
+
+        # Bond Essence to Monster (needed for structure, though attribute growth matters less for monsters)
+        # We'll just bond it to Power for simplicity
+        try:
+             monster.add_essence(primary_essence, "Power")
+        except ValueError:
+             pass # Already has it or something
+
+        # Generate Abilities
+        for i, stone in enumerate(stones):
+            if i >= 5: break # Cap at 5 abilities per essence
+
+            # Use 'General' affinity or random for monsters
+            ability = self.ability_gen.generate(primary_essence, stone, monster.rank, affinity="General")
+
+            monster.abilities[primary_essence.name][i] = ability
+
     def create_character(self, name: str, race: str):
         self.character = Character(name=name, race=race)
         # Initialize coordinates
@@ -218,6 +287,9 @@ class GameEngine:
             m = self.data_loader.get_monster(m_name)
             if not m: continue
 
+            # Hydrate Abilities
+            self._hydrate_monster_abilities(m)
+
             # Use Character.rank property
             if m.rank == target_rank:
                 valid_monsters.append(m)
@@ -228,6 +300,7 @@ class GameEngine:
              for m_name in all_monsters:
                 m = self.data_loader.get_monster(m_name)
                 if m and m.rank == target_rank:
+                    self._hydrate_monster_abilities(m)
                     valid_monsters.append(m)
 
         # Final fallback: if still empty, return all

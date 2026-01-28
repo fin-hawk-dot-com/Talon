@@ -386,28 +386,33 @@ class CombatManager:
 
         # 2. Enemy Turn
         if not e_stunned:
-            ai_action = "Attack"
-            if random.random() < 0.2:
-                ai_action = "Special"
+            # Check for usable abilities
+            usable_abilities = []
+            if enemy.abilities:
+                for slots in enemy.abilities.values():
+                    for ability in slots:
+                        if not ability: continue
 
-            if ai_action == "Special":
-                ability_names = ["Power Strike", "Shadow Blast", "Roar", "Bite"]
-                ab_name = random.choice(ability_names)
-                is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
-                dmg, is_crit, is_miss = self.calculate_damage(enemy, player, is_magical=is_magical, multiplier=1.3)
+                        # Check Cooldown
+                        if ability.current_cooldown > 0: continue
 
-                if is_miss:
-                    log.append(f"{enemy.name} used {ab_name} but missed you!")
-                else:
-                    player.current_health -= dmg
-                    crit_text = " (CRITICAL!)" if is_crit else ""
-                    log.append(f"{enemy.name} used {ab_name} on you for {dmg:.1f} damage{crit_text}!")
+                        # Check Cost
+                        cost = ability.cost
+                        cost_type = ability.parent_stone.cost_type
+                        can_afford = False
+                        if cost_type == "Mana":
+                            if enemy.current_mana >= cost: can_afford = True
+                        elif cost_type == "Stamina":
+                             if enemy.current_stamina >= cost: can_afford = True
+                        elif cost_type == "Health":
+                             if enemy.current_health > cost: can_afford = True
 
-                    # Enemy Special Effect Chance
-                    if random.random() < 0.3:
-                         player.status_effects.append(StatusEffect("Bleed", 3, 2.0, "DoT", "Bleeding.", source_name=enemy.name))
-                         log.append(f"{enemy.name}'s attack caused you to Bleed!")
+                        if can_afford:
+                            usable_abilities.append(ability)
 
+            if usable_abilities and random.random() < 0.4: # 40% chance to use ability if available
+                selected_ability = random.choice(usable_abilities)
+                log.extend(self.execute_ability(enemy, player, selected_ability))
             else:
                 is_magical = enemy.attributes["Spirit"].value > enemy.attributes["Power"].value
                 dmg, is_crit, is_miss = self.calculate_damage(enemy, player, is_magical=is_magical)
