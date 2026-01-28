@@ -10,6 +10,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.mechanics import GameEngine
 from src.models import Character
 from src.map_widget import MapWidget
+from src.local_map_widget import LocalMapWidget
 
 class GameApp:
     def __init__(self, root):
@@ -40,18 +41,6 @@ class GameApp:
 
         # Movement State
         self.pressed_keys = {}
-        self.target_coords = None # For click-to-move
-
-        # Map Callback
-        self.map_widget.set_callback(self.on_map_location_click)
-
-        # Shortcuts
-        self.root.bind("<i>", lambda e: self.safe_action(self.show_inventory_options))
-        self.root.bind("<I>", lambda e: self.safe_action(self.show_inventory_options))
-        self.root.bind("<q>", lambda e: self.safe_action(self.show_quest_log))
-        self.root.bind("<Q>", lambda e: self.safe_action(self.show_quest_log))
-
-        self.update_movement_loop()
 
         # Dialogue State
         self.dialogue_npc_name = None
@@ -64,39 +53,36 @@ class GameApp:
         if self.state == "HUB":
             func()
 
-    def on_map_location_click(self, loc_name):
-        if self.state != "HUB" or not self.engine.character: return
-
-        loc = self.engine.data_loader.get_location(loc_name)
-        if loc:
-            self.log(f"Moving to {loc_name}...", "event")
-            self.target_coords = (loc.x, loc.y)
-
     def handle_interaction(self):
         if self.state != "HUB" or not self.engine.character:
             return
 
+        # Interaction is now handled by checking current tile or facing tile
+        # But we also support the old menu-based style for flexibility
         char = self.engine.character
         curr_loc_name = char.current_location
         loc = self.engine.data_loader.get_location(curr_loc_name)
-        if not loc: return
 
-        # Check for NPCs
-        if loc.npcs:
-            # For simplicity, if multiple, just pick first or show list.
-            # Showing a list in Actions panel is best.
-            if len(loc.npcs) == 1:
-                self.start_dialogue(loc.npcs[0])
-            else:
-                self.show_interaction_menu(loc.npcs, loc.points_of_interest)
-            return
+        # New: Check local tile entity
+        if self.engine.current_section:
+             tile = self.engine.current_section.get_tile(char.grid_x, char.grid_y)
+             if tile and tile.entity:
+                 self.log(f"Interacting with {tile.entity}...", "event")
+                 # Check if NPC
+                 if tile.entity in loc.npcs:
+                     self.start_dialogue(tile.entity)
+                     return
+                 # Check if POI
+                 for poi in loc.points_of_interest:
+                     if poi.name == tile.entity:
+                         self.log(f"{poi.name}: {poi.description}", "event")
+                         return
 
-        # Check POIs if no NPCs
-        if loc.points_of_interest:
-             self.show_interaction_menu([], loc.points_of_interest)
-             return
-
-        self.log("Nothing to interact with here.", "info")
+        # Fallback to menu if nothing on tile (or legacy support)
+        if loc.npcs or loc.points_of_interest:
+            self.show_interaction_menu(loc.npcs, loc.points_of_interest)
+        else:
+            self.log("Nothing to interact with here.", "info")
 
     def show_interaction_menu(self, npcs, pois):
         self.clear_actions()
@@ -107,7 +93,6 @@ class GameApp:
             self.add_action_button(f"Talk to {npc}", lambda n=npc: self.start_dialogue(n))
 
         for poi in pois:
-             # Placeholder for POI interaction
             self.add_action_button(f"Inspect {poi.name}", lambda p=poi: self.log(f"{p.name}: {p.description}", "event"))
 
     def start_dialogue(self, npc_name):
@@ -134,11 +119,7 @@ class GameApp:
             self.dialogue_visited_roots.add(self.dialogue_npc_name)
 
         # Show Text in Log
-        # Use a distinct color for dialogue
-        self.log_text.config(state=tk.NORMAL)
-        self.log_text.insert(tk.END, f"{self.dialogue_npc_name}: \"{text_to_show}\"\n", "info")
-        self.log_text.see(tk.END)
-        self.log_text.config(state=tk.DISABLED)
+        self.log(f"{self.dialogue_npc_name}: \"{text_to_show}\"", "info")
 
         # Show Choices
         for choice in node.choices:
@@ -150,78 +131,34 @@ class GameApp:
     def on_key_press(self, event):
         self.pressed_keys[event.keysym.lower()] = True
 
+        # Handle Movement directly
+        if self.state == "HUB" and self.engine.character:
+            key = event.keysym.lower()
+            dx, dy = 0, 0
+            if key == 'w': dy = -1
+            elif key == 's': dy = 1
+            elif key == 'a': dx = -1
+            elif key == 'd': dx = 1
+
+            if dx != 0 or dy != 0:
+                success, msg = self.engine.move_player_local(dx, dy)
+                if msg:
+                    self.log(msg, "event" if success else "error")
+
+                # Refresh UI logic
+                if success:
+                    self.local_map.render(self.engine.current_section, self.engine.character)
+                    # If we traveled, map changed, so full refresh
+                    if "Traveled" in msg:
+                        self.update_status_display() # full refresh
+
     def on_key_release(self, event):
         self.pressed_keys[event.keysym.lower()] = False
 
-    def update_movement_loop(self):
-        if self.state == "HUB" and self.engine.character:
-            # Check keys
-            dx, dy = 0, 0
-            step = 3.0 # Speed per tick (20ms) -> 150 pixels/sec
-
-            if self.pressed_keys.get('w'): dy -= 1
-            if self.pressed_keys.get('s'): dy += 1
-            if self.pressed_keys.get('a'): dx -= 1
-            if self.pressed_keys.get('d'): dx += 1
-
-            moved = False
-
-            if dx != 0 or dy != 0:
-                # Cancel target if manual move
-                self.target_coords = None
-
-                # Normalize
-                length = math.sqrt(dx*dx + dy*dy)
-                dx = (dx / length) * step
-                dy = (dy / length) * step
-
-                msg = self.engine.update_position(dx, dy)
-                if msg:
-                    self.log(msg, "event")
-                    self.update_status_display()
-                    self._check_interaction_on_arrival()
-                moved = True
-
-            elif self.target_coords:
-                # Auto-move to target
-                tx, ty = self.target_coords
-                cx, cy = self.engine.character.x, self.engine.character.y
-
-                dist = math.sqrt((tx-cx)**2 + (ty-cy)**2)
-                if dist < step:
-                    # Arrived
-                    self.engine.character.x = tx
-                    self.engine.character.y = ty
-                    self.target_coords = None
-                    moved = True
-                else:
-                    # Move towards
-                    dx = (tx - cx) / dist * step
-                    dy = (ty - cy) / dist * step
-                    msg = self.engine.update_position(dx, dy)
-                    if msg:
-                         self.log(msg, "event")
-                         self.update_status_display()
-                         self._check_interaction_on_arrival()
-                         self.target_coords = None # Stop if we hit a location trigger
-                    moved = True
-
-            if moved:
-                self.map_widget.refresh()
-
-        self.root.after(20, self.update_movement_loop)
-
-    def _check_interaction_on_arrival(self):
-        if not self.engine.character: return
-        loc_name = self.engine.character.current_location
-        loc = self.engine.data_loader.get_location(loc_name)
-        if loc and (loc.npcs or loc.points_of_interest):
-             self.log("Press E or click 'Inspect Area' to interact.", "info")
-
     def toggle_map_mode(self):
-        new_mode = 'mini' if self.map_widget.mode == 'world' else 'world'
-        self.map_widget.set_mode(new_mode)
-        self.log(f"Map switched to {new_mode} view.", "info")
+        new_mode = 'mini' if self.world_map.mode == 'world' else 'world'
+        self.world_map.set_mode(new_mode)
+        self.log(f"Global Map switched to {new_mode} view.", "info")
 
     def setup_styles(self):
         self.style = ttk.Style()
@@ -239,10 +176,9 @@ class GameApp:
         self.main_container = ttk.Frame(self.root)
         self.main_container.pack(fill=tk.BOTH, expand=True)
 
-        # 1. Top Menubar (Native)
+        # 1. Top Menubar
         self.menubar = tk.Menu(self.root)
         self.root.config(menu=self.menubar)
-
         file_menu = tk.Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label="File", menu=file_menu)
         file_menu.add_command(label="New Game", command=self.confirm_new_game)
@@ -251,27 +187,54 @@ class GameApp:
         file_menu.add_separator()
         file_menu.add_command(label="Exit", command=self.root.quit)
 
-        # 2. Left Panel: Character Status
+        # 2. Left Panel: Inventory (Width 250)
         self.left_panel = ttk.Frame(self.main_container, width=250, relief=tk.RIDGE, borderwidth=2)
-        self.left_panel.pack(side=tk.LEFT, fill=tk.Y, padx=5, pady=5)
-        self.left_panel.pack_propagate(False) # Don't shrink
+        self.left_panel.pack(side=tk.LEFT, fill=tk.Y, padx=2, pady=2)
+        self.left_panel.pack_propagate(False)
 
-        ttk.Label(self.left_panel, text="Character Status", style="Title.TLabel").pack(pady=10)
+        ttk.Label(self.left_panel, text="Inventory", style="Title.TLabel").pack(pady=5)
 
-        # Basic Info
-        self.basic_info_label = ttk.Label(self.left_panel, text="No Character", font=('Helvetica', 10, 'bold'))
-        self.basic_info_label.pack(pady=(0, 10))
+        columns = ("Item", "Type")
+        self.inventory_tree = ttk.Treeview(self.left_panel, columns=columns, show='headings', selectmode='browse')
+        self.inventory_tree.heading("Item", text="Item")
+        self.inventory_tree.column("Item", width=140)
+        self.inventory_tree.heading("Type", text="Type")
+        self.inventory_tree.column("Type", width=80)
+        self.inventory_tree.pack(fill=tk.BOTH, expand=True, padx=2, pady=2)
 
-        # Status Bars Frame
-        self.status_frame = ttk.Frame(self.left_panel)
-        self.status_frame.pack(fill=tk.X, padx=5, pady=5)
+        self.inv_action_frame = ttk.Frame(self.left_panel)
+        self.inv_action_frame.pack(fill=tk.X, padx=2, pady=2)
+
+        # 3. Right Panel: Status & Menus (Width 300)
+        self.right_panel = ttk.Frame(self.main_container, width=300, relief=tk.RIDGE, borderwidth=2)
+        self.right_panel.pack(side=tk.RIGHT, fill=tk.Y, padx=2, pady=2)
+        self.right_panel.pack_propagate(False)
+
+        self.right_notebook = ttk.Notebook(self.right_panel)
+        self.right_notebook.pack(fill=tk.BOTH, expand=True)
+
+        # Tab 1: Actions
+        self.action_tab = ttk.Frame(self.right_notebook)
+        self.right_notebook.add(self.action_tab, text="Actions")
+        self.action_frame = ttk.Frame(self.action_tab)
+        self.action_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+
+        # Tab 2: Character Status (Moved from old Left Panel)
+        self.status_tab = ttk.Frame(self.right_notebook)
+        self.right_notebook.add(self.status_tab, text="Status")
+
+        # Status Content
+        self.basic_info_label = ttk.Label(self.status_tab, text="No Character", font=('Helvetica', 10, 'bold'))
+        self.basic_info_label.pack(pady=(5, 5))
+
+        self.status_bars_frame = ttk.Frame(self.status_tab)
+        self.status_bars_frame.pack(fill=tk.X, padx=5, pady=5)
 
         def create_bar(label, color):
-            frame = ttk.Frame(self.status_frame)
+            frame = ttk.Frame(self.status_bars_frame)
             frame.pack(fill=tk.X, pady=2)
             lbl = ttk.Label(frame, text=f"{label}: 0/0", font=('Consolas', 9))
             lbl.pack(anchor="w")
-            # Style for custom color
             s_name = f"{label}.Horizontal.TProgressbar"
             self.style.configure(s_name, background=color)
             bar = ttk.Progressbar(frame, style=s_name, length=100, mode='determinate')
@@ -283,90 +246,52 @@ class GameApp:
         self.sp_label, self.sp_bar = create_bar("SP", "#55ff55")
         self.wp_label, self.wp_bar = create_bar("WP", "#aa55ff")
 
-        # Details
-        ttk.Separator(self.left_panel, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=10)
-
-        self.status_text = tk.Text(self.left_panel, wrap=tk.WORD, height=15, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
+        self.status_text = tk.Text(self.status_tab, wrap=tk.WORD, height=10, bg="#2b2b2b", fg="#e0e0e0", relief=tk.FLAT, state=tk.DISABLED, font=('Consolas', 9))
         self.status_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
-        # 3. Center Panel: Map + Game Log
-        self.center_container = ttk.Frame(self.main_container)
-        self.center_container.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=5, pady=5)
+        # Tab 3: Quests
+        self.quest_tab = ttk.Frame(self.right_notebook)
+        self.right_notebook.add(self.quest_tab, text="Quests")
+        self.quest_list = tk.Text(self.quest_tab, wrap=tk.WORD, state=tk.DISABLED, bg="#2b2b2b", fg="#e0e0e0", font=('Consolas', 9))
+        self.quest_list.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
-        # Map (Top)
-        self.map_widget = MapWidget(self.center_container, self.engine, height=350)
-        self.map_widget.pack(fill=tk.BOTH, expand=False, pady=(0, 5))
+        # Tab 4: Char Details
+        self.char_detail_tab = ttk.Frame(self.right_notebook)
+        self.right_notebook.add(self.char_detail_tab, text="Details")
+        self.character_details = tk.Text(self.char_detail_tab, wrap=tk.WORD, state=tk.DISABLED, bg="#2b2b2b", fg="#e0e0e0", font=('Consolas', 9))
+        self.character_details.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
-        # Map Controls
-        self.map_controls = ttk.Frame(self.center_container)
-        self.map_controls.pack(fill=tk.X, pady=(0, 5))
+        # 4. Center Panel (Map)
+        self.center_frame = ttk.Frame(self.main_container)
+        self.center_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=2, pady=2)
 
-        self.interaction_label = ttk.Label(self.map_controls, text="", foreground="#55aaff", font=('Helvetica', 10, 'bold'))
-        self.interaction_label.pack(side=tk.LEFT, padx=5)
+        # We need a bottom frame for Log
+        self.bottom_frame = ttk.Frame(self.center_frame, height=150)
+        self.bottom_frame.pack(side=tk.BOTTOM, fill=tk.X)
+        self.bottom_frame.pack_propagate(False)
 
-        ttk.Button(self.map_controls, text="Toggle Map Mode (M)", command=self.toggle_map_mode).pack(side=tk.RIGHT)
-
-        # Log (Bottom)
-        self.center_panel = ttk.Frame(self.center_container, relief=tk.SUNKEN, borderwidth=2)
-        self.center_panel.pack(fill=tk.BOTH, expand=True)
-
-        self.log_text = tk.Text(self.center_panel, wrap=tk.WORD, state=tk.DISABLED, font=('Georgia', 11), bg="#1e1e1e", fg="#cccccc")
+        self.log_text = tk.Text(self.bottom_frame, wrap=tk.WORD, state=tk.DISABLED, font=('Georgia', 11), bg="#1e1e1e", fg="#cccccc")
         self.log_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
-        log_scroll = ttk.Scrollbar(self.center_panel, orient=tk.VERTICAL, command=self.log_text.yview)
+        log_scroll = ttk.Scrollbar(self.bottom_frame, orient=tk.VERTICAL, command=self.log_text.yview)
         log_scroll.pack(side=tk.RIGHT, fill=tk.Y)
         self.log_text.configure(yscrollcommand=log_scroll.set)
 
-        # Tag configs for coloring text
         self.log_text.tag_config("info", foreground="#cccccc")
         self.log_text.tag_config("combat", foreground="#ff5555")
         self.log_text.tag_config("gain", foreground="#55ff55")
         self.log_text.tag_config("event", foreground="#55aaff")
         self.log_text.tag_config("error", foreground="#ffaaff")
 
-        # 4. Right Panel: Tabs
-        self.right_panel = ttk.Frame(self.main_container, width=320, relief=tk.RIDGE, borderwidth=2)
-        self.right_panel.pack(side=tk.RIGHT, fill=tk.Y, padx=5, pady=5)
-        self.right_panel.pack_propagate(False)
+        # Local Map takes remaining space
+        self.local_map = LocalMapWidget(self.center_frame)
+        self.local_map.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-        self.right_notebook = ttk.Notebook(self.right_panel)
-        self.right_notebook.pack(fill=tk.BOTH, expand=True)
-
-        # Tab 1: Actions
-        self.action_tab = ttk.Frame(self.right_notebook)
-        self.right_notebook.add(self.action_tab, text="Actions")
-
-        self.action_frame = ttk.Frame(self.action_tab)
-        self.action_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
-
-        # Tab 2: Inventory
-        self.inventory_tab = ttk.Frame(self.right_notebook)
-        self.right_notebook.add(self.inventory_tab, text="Inventory")
-
-        columns = ("Item", "Type")
-        self.inventory_tree = ttk.Treeview(self.inventory_tab, columns=columns, show='headings', selectmode='browse')
-        self.inventory_tree.heading("Item", text="Item")
-        self.inventory_tree.column("Item", width=180)
-        self.inventory_tree.heading("Type", text="Type")
-        self.inventory_tree.column("Type", width=100)
-        self.inventory_tree.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
-
-        self.inv_action_frame = ttk.Frame(self.inventory_tab)
-        self.inv_action_frame.pack(fill=tk.X, padx=5, pady=5)
-
-        # Tab 3: Quests
-        self.quest_tab = ttk.Frame(self.right_notebook)
-        self.right_notebook.add(self.quest_tab, text="Quests")
-
-        self.quest_list = tk.Text(self.quest_tab, wrap=tk.WORD, state=tk.DISABLED, bg="#2b2b2b", fg="#e0e0e0", font=('Consolas', 9))
-        self.quest_list.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
-
-        # Tab 4: Character
-        self.character_tab = ttk.Frame(self.right_notebook)
-        self.right_notebook.add(self.character_tab, text="Character")
-
-        self.character_details = tk.Text(self.character_tab, wrap=tk.WORD, state=tk.DISABLED, bg="#2b2b2b", fg="#e0e0e0", font=('Consolas', 9))
-        self.character_details.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+        # 5. World Map Overlay (GPS)
+        # We place it inside center_frame (or local_map)
+        self.world_map = MapWidget(self.local_map, self.engine, width=200, height=200)
+        self.world_map.set_mode('mini')
+        # Place at top-right corner
+        self.world_map.place(relx=1.0, rely=0.0, anchor="ne", x=-10, y=10)
 
     def log(self, message, tag="info"):
         self.log_text.config(state=tk.NORMAL)
@@ -431,12 +356,16 @@ class GameApp:
         self.status_text.config(state=tk.DISABLED)
 
         # Update tabs
-        if hasattr(self, 'update_character_tab'): self.update_character_tab()
-        if hasattr(self, 'update_inventory_tab'): self.update_inventory_tab()
-        if hasattr(self, 'update_quest_tab'): self.update_quest_tab()
+        self.update_character_tab()
+        self.update_inventory_tab()
+        self.update_quest_tab()
 
-        # Also update map
-        self.map_widget.refresh()
+        # Update maps
+        if not self.engine.current_section:
+             self.engine.load_location_section(char.current_location)
+
+        self.local_map.render(self.engine.current_section, char)
+        self.world_map.refresh() # Updates mini-map dot
 
     def update_inventory_tab(self):
         if not self.engine.character: return
@@ -917,28 +846,6 @@ class GameApp:
         # Refresh status and return to Hub or Awakening menu
         self.update_status_display()
         self.show_awaken_options()
-
-    def show_quest_log(self):
-        self.right_notebook.select(self.quest_tab)
-        # Check available quests button?
-        # We can add a button to the quest tab action area if we had one,
-        # or just add it to the main Action tab if we want.
-        # But wait, available quests are actionable.
-        # Let's check available quests here and if any, log a message or add button to Action tab?
-
-        char = self.engine.character
-        available = self.engine.quest_mgr.get_available_quests(char)
-        if available:
-            # We should probably show this in the Action tab if we want the user to click it.
-            # But the user is now looking at Quest tab.
-            pass
-
-        # Since we moved Quest display to a tab, "Find New Quests" needs a home.
-        # It fits best in the "Actions" tab or as a button in the "Quests" tab if we added an action frame there.
-        # I didn't add an action frame to Quests tab.
-        # I will leave "Find New Quests" accessible from the Hub actions if needed,
-        # OR I can add it to the Hub menu in enter_hub if quests are available.
-        # For now, let's keep it simple.
 
     def show_available_quests(self):
         self.clear_actions()
