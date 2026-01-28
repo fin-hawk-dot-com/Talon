@@ -72,7 +72,7 @@ def test_ability_rank_up():
     char.add_essence(essence, "Power")
 
     ability = Ability("TestMove", "Desc", "Iron", 9, essence, stone)
-    ability.xp = 0 # XP doesn't matter for rank up check in current impl, just level 9
+    ability.xp = ability.max_xp # XP matters now
 
     char.abilities[essence.name][0] = ability
 

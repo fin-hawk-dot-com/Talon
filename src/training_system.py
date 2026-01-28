@@ -221,6 +221,9 @@ class TrainingManager:
         if ability.level < 9:
             return False
 
+        if ability.xp < ability.max_xp:
+            return False
+
         current_rank_idx = RANK_INDICES.get(ability.rank, 0)
         char_rank_idx = RANK_INDICES.get(character.rank, 0)
 
@@ -248,6 +251,9 @@ class TrainingManager:
 
         if ability.level < 9:
             return "Ability not at max level (9)."
+
+        if ability.xp < ability.max_xp:
+            return "Ability XP not full."
 
         current_rank_idx = RANK_INDICES[ability.rank]
         char_rank_idx = RANK_INDICES[character.rank]

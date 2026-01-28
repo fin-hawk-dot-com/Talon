@@ -161,11 +161,15 @@ class Ability:
         self.xp += amount
         leveled_up = False
         while self.xp >= self.max_xp:
+            if self.level >= 9:
+                self.xp = self.max_xp
+                break
+
             self.xp -= self.max_xp
             if self.level_up():
                 leveled_up = True
             else:
-                # Cap reached
+                # Should be unreachable due to check above, but for safety
                 break
         return leveled_up
 
