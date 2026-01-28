@@ -306,6 +306,10 @@ class GameEngine:
 
         return NarrativeGenerator.get_awakening_narrative(essence, stone, ability.name)
 
+    def get_attribute_training_cost(self, attribute_name: str) -> int:
+        if not self.character: return 0
+        return self.training_mgr.get_attribute_training_cost(self.character, attribute_name)
+
     def train_attribute(self, attribute_name: str) -> str:
         if not self.character: return "No character."
         return self.training_mgr.train_attribute(self.character, attribute_name)

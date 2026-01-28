@@ -179,6 +179,7 @@ class GameApp:
                 if msg:
                     self.log(msg, "event")
                     self.update_status_display()
+                    self._check_interaction_on_arrival()
                 moved = True
 
             elif self.target_coords:
@@ -201,6 +202,7 @@ class GameApp:
                     if msg:
                          self.log(msg, "event")
                          self.update_status_display()
+                         self._check_interaction_on_arrival()
                          self.target_coords = None # Stop if we hit a location trigger
                     moved = True
 
@@ -208,6 +210,13 @@ class GameApp:
                 self.map_widget.refresh()
 
         self.root.after(20, self.update_movement_loop)
+
+    def _check_interaction_on_arrival(self):
+        if not self.engine.character: return
+        loc_name = self.engine.character.current_location
+        loc = self.engine.data_loader.get_location(loc_name)
+        if loc and (loc.npcs or loc.points_of_interest):
+             self.log("Press E or click 'Inspect Area' to interact.", "info")
 
     def toggle_map_mode(self):
         new_mode = 'mini' if self.map_widget.mode == 'world' else 'world'
@@ -642,6 +651,7 @@ class GameApp:
 
         self.log("\n--- You are in a safe location ---", "info")
 
+        self.add_action_button("Inspect Area (Interaction)", self.handle_interaction)
         self.add_action_button("Train Attribute", self.show_train_options)
         self.add_action_button("Adventure (Combat)", self.start_combat_encounter)
         self.add_action_button("Inventory", lambda: self.right_notebook.select(self.inventory_tab))
@@ -746,11 +756,23 @@ class GameApp:
             msg = self.engine.train_attribute(attr)
             self.log(msg, "gain")
             self.update_status_display()
+            self.show_train_options() # Refresh to update costs
 
-        self.add_action_button("Train Power", lambda: train("Power"))
-        self.add_action_button("Train Speed", lambda: train("Speed"))
-        self.add_action_button("Train Spirit", lambda: train("Spirit"))
-        self.add_action_button("Train Recovery", lambda: train("Recovery"))
+        for attr_name in ["Power", "Speed", "Spirit", "Recovery"]:
+            cost = self.engine.get_attribute_training_cost(attr_name)
+            attr = self.engine.character.attributes.get(attr_name)
+            rank = attr.rank if attr else "?"
+
+            # Button Text
+            text = f"Train {attr_name} ({rank}) - Cost: {cost} XP"
+
+            # Check affordability
+            can_afford = self.engine.character.current_xp >= cost
+
+            if can_afford:
+                self.add_action_button(text, lambda a=attr_name: train(a))
+            else:
+                self.add_action_button(f"{text} (Not Enough XP)", lambda: self.log("Not enough XP.", "error"))
 
         self.add_action_button("Practice Ability", self.show_practice_ability_options)
         self.add_action_button("Rank Up Ability", self.show_rank_up_ability_options)
@@ -766,7 +788,7 @@ class GameApp:
             for i, ab in enumerate(slots):
                 if ab:
                     found_any = True
-                    txt = f"{ab.name} (Lvl {ab.level})"
+                    txt = f"{ab.name} (Lvl {ab.level}) [{ab.xp:.0f}/{ab.max_xp:.0f} XP]"
                     self.add_action_button(txt, lambda e=ess_name, s=i: self.perform_practice(e, s))
 
         if not found_any:
