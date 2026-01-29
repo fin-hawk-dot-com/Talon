@@ -7,6 +7,8 @@ We are in the **Second Age of Magic**, thirty years after "The Awakening". The w
 **The System**:
 An interface that overlays reality for all Awakened individuals. It quantifies abstract concepts like soul strength into numbers, providing "Status Screens", "Inventories", and "Skill Trees". It acts as a mental buffer, allowing humanity to process the overwhelming complexity of magic without descending into madness. Scholars debate its origin—some claim it is a planetary defense mechanism, others an alien construct.
 
+*Deep Lore Note*: While most view the System as a gift, ancient texts suggest it is a "Cosmic Shackle." By quantifying magic into levels and cooldowns, it limits the infinite potential of the soul to prevent another "Great Hubris." It is a cage that keeps humanity safe, but also weak.
+
 ## 2. History & Timeline
 
 ### The First Age (The Age of Starlight)
@@ -48,7 +50,7 @@ An interface that overlays reality for all Awakened individuals. It quantifies a
 
 ### Southern Badlands
 *   **The Scorched Wastes**: Desert of black glass and ash, scarred by ancient fire.
-*   **The Ancient Spire**: A gravity-defying black tower in the wastes, pulsing with red runes. A dungeon of spatial anomalies.
+*   **The Ancient Spire**: A structure that predates the Aethel civilization. It acts as a "Reality Anchor," a cosmic pin holding the dimension's physical laws in place against the entropy of the Void. It is a non-Euclidean dungeon where up is down, and the System's code is visible as glowing glyphs on the walls.
 *   **Void Rift**: A tear in reality where physics dissolves. The frontline of the war against the Void.
 *   **The Singing Dunes**: A golden desert that hums with sonic energy.
 *   **The Shifting Expanse**: A region of chaotic instability where terrain reshapes daily.
@@ -75,7 +77,7 @@ An interface that overlays reality for all Awakened individuals. It quantifies a
 *   **The Merchant's Coalition**: Wealthy trading families controlling the economy. "Gold talks, but Dram screams."
 *   **The Church of the Healer**: Worshippers of "Restoration". Monopoly on high-tier healing.
 *   **Clan Hawksley**: Noble monster hunters who practice "The Silent Hunt" (no magic).
-*   **The Harmonists**: Secret society believing the Greenstone Monolith is a tool for order.
+*   **The Harmonists**: A philosophical movement led by Grand Conductor Vane. They view existence as a "Great Song" and the Void as "Noise." They seek to use sonic resonance to "tune" the world and eliminate conflict. However, a radical faction known as "The Composers" wants to rewrite the System's code entirely to create a utopia, regardless of the cost to free will.
 *   **Watchers of the North**: Secretive rangers patrolling the frozen borders.
 *   **The Mist Walkers**: Spies and scouts specializing in Mist/Veil magic.
 *   **College of Silver Strings**: Bards using sonic resonance to manipulate the System.
