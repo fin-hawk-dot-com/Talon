@@ -5,7 +5,7 @@
 We are in the **Second Age of Magic**, thirty years after "The Awakening". The world of Aetheria has been transformed by the shattering of the Great Seal, which released a deluge of cosmic mana and tore open the "Void Rift". This event rewrote the laws of physics, turning animals into monsters and granting humans the ability to wield "Essences" via a quantified interface known as "The System".
 
 **The System**:
-An interface that overlays reality for all Awakened individuals. It quantifies abstract concepts like soul strength into numbers, providing "Status Screens", "Inventories", and "Skill Trees". It acts as a mental buffer, allowing humanity to process the overwhelming complexity of magic without descending into madness.
+An interface that overlays reality for all Awakened individuals. It quantifies abstract concepts like soul strength into numbers, providing "Status Screens", "Inventories", and "Skill Trees". It acts as a mental buffer, allowing humanity to process the overwhelming complexity of magic without descending into madness. Scholars debate its origin—some claim it is a planetary defense mechanism, others an alien construct.
 
 ## 2. History & Timeline
 
@@ -17,10 +17,13 @@ An interface that overlays reality for all Awakened individuals. It quantifies a
 *   **Chronicle III**: The Aethel rose, perceiving magic threads and building floating cities. They mastered Confluence magic.
 *   **Chronicle IV (The Great Hubris)**: The Aethel attempted to create the "Omni-Essence" to become gods. The experiment failed, shattering dimensional barriers and creating the Void Rift.
 *   **Chronicle V (The Fall)**: The Aethel civilization was vaporized or twisted into horrors. Their cities fell from the sky ("Sky-Fall").
+*   **Chronicle VI (The First Breach)**: The Void poured through the Rift. Twisted geometric entities spilled into the ruins.
 
 ### The Age of Silence
 *   **Chronicle VII**: The Elemental Titans (Ignis, Terra, Zephyr, Aqua) sacrificed themselves to form the "Great Seal", locking away the Rift.
 *   **Chronicle VIII**: Magic faded. Science and steel ruled. The Kingdom of Ironhold was founded.
+*   **The Sundering**: 500 years ago, a cataclysmic event split the main continent.
+*   **The Ashen Year**: Following the Sundering, volcanic ash caused a global famine. Discovery of Life Essence by Saint Elara.
 
 ### The Awakening (30 Years Ago)
 *   **Chronicle IX**: The Great Seal shattered under a meteor shower of crystallized mana ("Starfall"). Magic returned violently. The System manifested.
@@ -32,39 +35,51 @@ An interface that overlays reality for all Awakened individuals. It quantifies a
 ## 3. Geography & Locations
 
 ### Central Plains
-*   **Greenstone City**: The neutral hub built around a glowing Emerald Monolith. A melting pot of trade and magic.
-*   **The Whispering Woods**: A dense forest where trees murmur secrets. Home to the Circle of Thorns.
-*   **Crystal Caverns**: Underground labyrinth of mana-rich crystals. Dangerous but lucrative.
+*   **Greenstone City**: The neutral hub built around a glowing Emerald Monolith. A melting pot of trade and magic. The Monolith emits "The Silent Hum", a psychic broadcast that suppresses violence.
+*   **The Whispering Woods**: A dense forest where trees murmur secrets. Home to the Circle of Thorns and the Fungal Depths beneath.
+*   **Crystal Caverns**: Underground labyrinth of mana-rich crystals. Contains the "Hall of Infinite Reflections".
 *   **North Road**: Connects Greenstone to Ironhold. Bandit territory.
 
 ### Northern Peaks
 *   **Ironhold Fortress**: Impregnable dwarven/human fortress carved into the mountain. HQ of the Iron Vanguard.
 *   **Highland Watch**: Lonely outpost monitoring the Frozen Wastes.
-*   **The Frozen Wastes**: Desolate ice fields north of the mountains. Domain of pure Ice Essence.
+*   **The Frozen Wastes**: Desolate ice fields north of the mountains. Domain of pure Ice Essence and Glacial Behemoths.
+*   **The Lodestone Peaks**: A mountain range of magnetic iron where floating islands drift.
 
 ### Southern Badlands
 *   **The Scorched Wastes**: Desert of black glass and ash, scarred by ancient fire.
-*   **The Ancient Spire**: A gravity-defying black tower in the wastes, pulsing with red runes.
+*   **The Ancient Spire**: A gravity-defying black tower in the wastes, pulsing with red runes. A dungeon of spatial anomalies.
 *   **Void Rift**: A tear in reality where physics dissolves. The frontline of the war against the Void.
+*   **The Singing Dunes**: A golden desert that hums with sonic energy.
+*   **The Shifting Expanse**: A region of chaotic instability where terrain reshapes daily.
 
-### Eastern Swamps
+### Eastern Swamps & Coast
 *   **The Shadowfen**: Perpetual twilight swamp. Poisonous and home to undead.
 *   **Mistfall Village**: Stilt-village of herbalists and fishermen.
+*   **Azure Coast**: Beautiful beaches hiding deep sea horrors.
+*   **Orizon (City of Salt and Static)**: Built into the shell of a dead leviathan hanging off the world's edge. Powered by the lethal "Luminous Deep".
+*   **The Arcanum of Whispers**: A fortress-university on a secluded island teaching Naming and Resonance magic.
 
-### Western Coast
-*   **Azure Coast**: Beautiful but dangerous beaches.
-*   **Orizon**: The City of Salt and Static, hanging off the world's edge in a dead leviathan's shell.
+### Subterranean & Other
+*   **The Sunken Ruins**: Skeletal remains of a pre-Awakening metropolis in a subterranean lake.
+*   **The Fungal Depths**: Bioluminescent cavern network beneath the Whispering Woods.
+*   **The Starforge**: A floating ancient factory in the upper atmosphere.
 
 ## 4. Factions
 
 *   **The Iron Vanguard**: Martial philosophy. Believes steel and discipline are the only defense. HQ: Ironhold.
-*   **The Arcane Assembly**: Scholars and researchers of magic. HQ: Floating Spire (implying a connection to Ancient Spire or separate location). Arrogant but knowledgeable.
+*   **The Arcane Assembly**: Scholars and researchers of magic. HQ: Floating Spire. Arrogant but knowledgeable.
 *   **The Shadow Syndicate**: Criminal underground running the black market. Leadership: "Circle of Silhouettes".
 *   **Circle of Thorns (Druids)**: Eco-militants defending nature. HQ: Whispering Woods. View industrialization as war.
 *   **The Adventurer's Guild**: Global institution regulating "Delvers". Neutral and indispensable.
 *   **The Merchant's Coalition**: Wealthy trading families controlling the economy. "Gold talks, but Dram screams."
 *   **The Church of the Healer**: Worshippers of "Restoration". Monopoly on high-tier healing.
-*   **Clan Hawksley**: Noble monster hunters. Value the "Silent Hunt" (no magic).
+*   **Clan Hawksley**: Noble monster hunters who practice "The Silent Hunt" (no magic).
+*   **The Harmonists**: Secret society believing the Greenstone Monolith is a tool for order.
+*   **Watchers of the North**: Secretive rangers patrolling the frozen borders.
+*   **The Mist Walkers**: Spies and scouts specializing in Mist/Veil magic.
+*   **College of Silver Strings**: Bards using sonic resonance to manipulate the System.
+*   **Order of the Cleansing Flame**: Radical sect believing corruption must be burned, not healed.
 
 ## 5. Magic System
 
@@ -72,24 +87,25 @@ An interface that overlays reality for all Awakened individuals. It quantifies a
 **Mana**: A resource generated by the soul. Depletion leads to "Mana Sickness".
 
 ### Base Essences
-*   **Fire**: Combustion, passion.
-*   **Water**: Adaptability, healing.
-*   **Earth**: Stability, defense.
-*   **Air**: Freedom, movement.
-*   **Life**: Vitality, regrowth.
-*   **Death**: Entropy, spirits.
-*   **Light/Hope**: Morale, anti-void.
-*   **Dark/Doom**: Curses, despair.
-*   **Void**: Erasure, non-existence.
-*   **Time**: Causality manipulation (Dangerous).
-*   **Space/Gravity**: Movement, weight.
+Fire, Water, Earth, Air, Life, Death, Light/Hope, Dark/Doom, Void.
 
-### Confluences
-Combining essences creates new forms:
-*   Fire + Earth = Magma
-*   Water + Air = Mist/Storm
-*   Earth + Water = Mud/Root? (Context implies Root is distinct but related)
-*   *Note*: Opposing essences (Fire + Water) cause instability (Explosion).
+### Esoteric Essences
+*   **Time**: Causality manipulation. Costs lifespan.
+*   **Space/Gravity**: Movement, weight.
+*   **Sand**: Erosion, time, attrition.
+*   **Bone**: Skeletal manipulation.
+*   **Ink**: Creation, writing reality.
+*   **Wax**: Preservation, malleability.
+*   **Pressure**: Crushing force of the deep.
+*   **Silence**: Negation of energy.
+*   **Memory**: Past manipulation, trauma.
+*   **Magnetism**: Metal manipulation.
+*   **Radiation**: Invisible, sickening energy.
+
+### Forbidden Magic
+*   **Soul Binding**: Binding souls to objects.
+*   **Psycho-Acoustics**: Reshaping neural pathways with sound.
+*   **Naming**: Controlling things by speaking their True Name.
 
 ### Ranks of Ascension
 1.  **Iron**: The foundation.
@@ -98,32 +114,48 @@ Combining essences creates new forms:
 4.  **Gold**: Radiance.
 5.  **Diamond**: Perfection (Near-immortality).
 
-### Artifacts & Items
-*   **Awakening Stones**: Crystallized mana nodes that unlock specific skills.
-*   **Dram**: Standard currency (crystallized mana).
-
 ## 6. Bestiary
 
 ### Monsters
-*   **Crystal Golems**: Semi-sentient constructs of the Caverns.
-*   **Iron Wolves**: Metal-furred canines of the north.
-*   **Bronze/Crimson Drakes**: Lesser dragons with specialized breaths (Acid/Magma).
-*   **Shadow Stalkers**: Phasing predators of the Fen.
-*   **Void Demons**: Abominations from the Rift.
-*   **Mechanical Knights**: Ancient automata from the Aethel era.
-*   **Spore Walkers**: Fungal hive-minds.
-*   **Sky Whales**: Gentle giants of the upper atmosphere.
+*   **Natural**: Iron Wolves, Bronze/Crimson Drakes, Magma Crabs, Ancient Bats, Deep Sea Serpents.
+*   **Constructs**: Crystal Golems, Mechanical Knights, Clockwork Sentinels, Obsidian Golems, Wax Golems.
+*   **Voidborn**: Void Demons, Void Wisps, Void Weavers, Void Jellyfish.
+*   **Undead/Cursed**: Skeletal Juggernauts, Ink Horrors, Mirror Mimics.
+*   **Flora**: Spore Walkers, Treant Shepherds, Moss Giants.
 
 ### Legendary Creatures
 *   **Noble Phoenix**: Symbol of purity.
-*   **Deep Sea Serpent**: Apex predator of the oceans.
-*   **Skeletal Juggernaut**: Colossal undead amalgamation.
+*   **Sunfire Phoenix**: Symbol of judgment (Plasma).
+*   **Abyssal Kraken**: Ancient horror of the deep.
+*   **Glacial Behemoth**: Living mountain of ice.
+*   **Sky Whales**: Gentle giants of the upper atmosphere.
 
-## 7. Characters
+## 7. Culture & Society
+
+*   **Essence Tea**: Brewed from Mana-fern, restores mana but causes "jitters".
+*   **Mage-Marking**: Tattoos indicating rank and affinity. Glowing marks are a status symbol.
+*   **Sky Burials**: Iron Vanguard tradition of feeding dead to griffins.
+*   **Festival of the Broken Moon**: Commemorates the Awakening. Lanterns lit for lost souls.
+*   **The Dram**: Currency made of crystallized mana. Can be eaten to restore mana.
+*   **Saint Elara's Day**: Holiday of peace and healing.
+
+## 8. Artifacts & Legends
+
+*   **Awakening Stones**: Unlock specific skills.
+*   **The Glass Shield**: Invisible shield forged by Titans.
+*   **The Sovereign Band**: Ring that harmonizes all essences but whispers void thoughts.
+*   **The Star Phial**: Captures starlight to repel shadow.
+*   **Spider's Bane**: Elven dagger glowing near Void/Orcs.
+*   **Null-Silk**: Fabric that dampens magic.
+
+## 9. Characters
+
 *   **Grand Archon Solus**: Leader of Arcane Assembly. Possibly a construct.
 *   **High King Thorian**: Ruler of Ironhold. Wields "Earth-Shaker".
 *   **Matriarch Verna**: Head of Church of the Healer. Diamond-rank Life Mage.
-*   **Cassian Thorne**: Silver-Rank System Auditor in Orizon.
-*   **The Sentinel**: Guardian of Orizon.
+*   **Cassian Thorne**: Silver-Rank System Auditor in Orizon. Weary detective.
+*   **The Sentinel**: Guardian of Orizon. Immobile Diamond Ranker.
 *   **Lord Alaric Hawksley**: Head of Clan Hawksley.
 *   **Old Man Silas**: "Mad" man in Greenstone who hears the Monolith.
+*   **Professor Vane**: Dean of Acoustics, leader of the Harmonists.
+*   **Commodore Elara**: Deceased hero of Orizon.
