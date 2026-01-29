@@ -19,10 +19,6 @@ class MapWidget(tk.Canvas):
         self.player_img = None
         self.last_affinity = None
 
-        # HUD Assets
-        self.hud_imgs = {}
-        self.load_hud_images()
-
         # View State
         self.mode = 'world' # 'world' or 'mini'
         self.zoom = 1.0
@@ -242,58 +238,11 @@ class MapWidget(tk.Canvas):
         if show_label:
              self.create_text(cx, cy - 15, text=loc.name, fill="white", font=("Helvetica", 8))
 
-    def load_hud_images(self):
-        # Load HUD frames
-        frames = {
-            "HP": "HUD_HP_Frame.png",
-            "MP": "HUD_MP_Frame.png",
-            "SP": "HUD_SP_Frame.png",
-            "WP": "HUD_WP_Frame.png"
-        }
-
-        self.hud_imgs = {}
-        for key, filename in frames.items():
-            path = os.path.join("assets", "ui", filename)
-            if os.path.exists(path):
-                try:
-                    self.hud_imgs[key] = tk.PhotoImage(file=path)
-                except Exception as e:
-                    print(f"Failed to load HUD asset {filename}: {e}")
-
-    def load_player_image(self):
-        char = self.engine.character
-        if not char: return
-
-        if self.player_img and self.last_affinity == char.affinity:
-            return
-
-        self.last_affinity = char.affinity
-        # Try loading specific affinity avatar
-        filename = f"{char.affinity}.png"
-        path = os.path.join("assets", "avatars", filename)
-
-        # Fallback to General if specific not found
-        if not os.path.exists(path):
-             path = os.path.join("assets", "avatars", "General.png")
-
-        if os.path.exists(path):
-            try:
-                self.player_img = tk.PhotoImage(file=path)
-            except Exception as e:
-                print(f"Failed to load avatar: {e}")
-                self.player_img = None
-        else:
-            self.player_img = None
-
     def update_player(self):
         self.delete("player")
-        self.delete("hud")
 
         char = self.engine.character
         if not char: return
-
-        # Load Image if needed
-        self.load_player_image()
 
         # Use exact coordinates if available, otherwise fallback to location
         if char.x != -1 and char.y != -1:
@@ -307,85 +256,12 @@ class MapWidget(tk.Canvas):
 
         px, py = self.transform_coords(lx, ly)
 
-        if self.player_img:
-            self.create_image(px, py, image=self.player_img, tags="player")
-        else:
-            # Fallback: Draw a distinct marker (Target icon style)
-            r = self.player_radius
-            # Use Cyan for high visibility
-            self.create_oval(px - r, py - r, px + r, py + r, fill="#00ffff", outline="white", width=2, tags="player")
-            # Pulse ring
-            self.create_oval(px - r*1.5, py - r*1.5, px + r*1.5, py + r*1.5, outline="#00ffff", width=1, tags="player")
-
-        # Draw HUD on top
-        self.draw_hud()
-
-    def draw_hud(self):
-        char = self.engine.character
-        if not char: return
-
-        # Dimensions
-        w = self.winfo_width()
-        if w <= 1: w = int(self['width'])
-        h = self.winfo_height()
-        if h <= 1: h = int(self['height'])
-
-        # Config
-        bar_width = 120
-        bar_height = 10
-        gap = 5
-        x_start = 10
-        y_start = h - 10 - (4 * (bar_height + gap)) # Bottom Left corner
-
-        # Helper to draw bar
-        def draw_bar(idx, current, max_val, color, label, frame_key):
-            y = y_start + idx * (bar_height + gap)
-
-            # Check for Frame Image
-            img = self.hud_imgs.get(frame_key)
-            if img:
-                # If frame exists, we assume it's a border/overlay.
-                # We draw the BG and Fill first, then the Frame.
-                # Assuming the frame image matches the bar dimensions or is centered.
-
-                # BG (Procedural)
-                self.create_rectangle(x_start, y, x_start + bar_width, y + bar_height,
-                                      fill="#222222", outline="", tags="hud")
-
-                # Fill
-                if max_val > 0:
-                    pct = max(0, min(1, current / max_val))
-                    fill_w = int(bar_width * pct)
-                    if fill_w > 0:
-                        self.create_rectangle(x_start, y, x_start + fill_w, y + bar_height,
-                                              fill=color, outline="", tags="hud")
-
-                # Frame Image (Top)
-                # We anchor NW to the same start point.
-                self.create_image(x_start, y, image=img, anchor="nw", tags="hud")
-
-            else:
-                # Procedural Fallback
-                # BG
-                self.create_rectangle(x_start, y, x_start + bar_width, y + bar_height,
-                                      fill="#222222", outline="#444444", tags="hud")
-
-                # Fill
-                if max_val > 0:
-                    pct = max(0, min(1, current / max_val))
-                    fill_w = int(bar_width * pct)
-                    if fill_w > 0:
-                        self.create_rectangle(x_start, y, x_start + fill_w, y + bar_height,
-                                              fill=color, outline="", tags="hud")
-
-            # Text (Overlay or Side)
-            self.create_text(x_start + bar_width + 5, y + bar_height/2,
-                             text=f"{label} {int(current)}", anchor="w", fill="white", font=("Consolas", 8), tags="hud")
-
-        draw_bar(0, char.current_health, char.max_health, "#ff3333", "HP", "HP")
-        draw_bar(1, char.current_mana, char.max_mana, "#3388ff", "MP", "MP")
-        draw_bar(2, char.current_stamina, char.max_stamina, "#33ff33", "SP", "SP")
-        draw_bar(3, char.current_willpower, char.max_willpower, "#aa33ff", "WP", "WP")
+        # Draw a distinct marker (Target icon style)
+        r = self.player_radius
+        # Use Cyan for high visibility
+        self.create_oval(px - r, py - r, px + r, py + r, fill="#00ffff", outline="white", width=2, tags="player")
+        # Pulse ring
+        self.create_oval(px - r*1.5, py - r*1.5, px + r*1.5, py + r*1.5, outline="#00ffff", width=1, tags="player")
 
     def refresh(self):
         # In mini mode, player movement changes map center, so we must redraw all connections/nodes
