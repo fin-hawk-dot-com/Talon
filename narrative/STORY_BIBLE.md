@@ -1,0 +1,129 @@
+# Aetheria: Story Bible
+
+## 1. World Overview
+**Premise**:
+We are in the **Second Age of Magic**, thirty years after "The Awakening". The world of Aetheria has been transformed by the shattering of the Great Seal, which released a deluge of cosmic mana and tore open the "Void Rift". This event rewrote the laws of physics, turning animals into monsters and granting humans the ability to wield "Essences" via a quantified interface known as "The System".
+
+**The System**:
+An interface that overlays reality for all Awakened individuals. It quantifies abstract concepts like soul strength into numbers, providing "Status Screens", "Inventories", and "Skill Trees". It acts as a mental buffer, allowing humanity to process the overwhelming complexity of magic without descending into madness.
+
+## 2. History & Timeline
+
+### The First Age (The Age of Starlight)
+*   **Chronicle I**: The world was dark and frozen, inhabited by formless Primordials (Stasis, Entropy, Depth, Silence).
+*   **Chronicle II**: The Solar Spark ignited the sun, banishing the Primordials to the deep core and birthing biological life.
+
+### The Aethel Civilization
+*   **Chronicle III**: The Aethel rose, perceiving magic threads and building floating cities. They mastered Confluence magic.
+*   **Chronicle IV (The Great Hubris)**: The Aethel attempted to create the "Omni-Essence" to become gods. The experiment failed, shattering dimensional barriers and creating the Void Rift.
+*   **Chronicle V (The Fall)**: The Aethel civilization was vaporized or twisted into horrors. Their cities fell from the sky ("Sky-Fall").
+
+### The Age of Silence
+*   **Chronicle VII**: The Elemental Titans (Ignis, Terra, Zephyr, Aqua) sacrificed themselves to form the "Great Seal", locking away the Rift.
+*   **Chronicle VIII**: Magic faded. Science and steel ruled. The Kingdom of Ironhold was founded.
+
+### The Awakening (30 Years Ago)
+*   **Chronicle IX**: The Great Seal shattered under a meteor shower of crystallized mana ("Starfall"). Magic returned violently. The System manifested.
+*   **Chronicle X (The Cull)**: Chaos ensued. 40% of the population died in the first year. Warlords rose.
+*   **Chronicle XI**: The Siege of Greenstone. First major Horde Event (Plague Lord Malakor). Factions united to defend the city.
+*   **Chronicle XII**: Treaty of Thorns. Peace established between Iron Vanguard and Druids' Circle.
+*   **Chronicle XIII (Current Era)**: Society has rebuilt around the System. Greenstone City is a neutral hub. The Void Rift is pulsing again.
+
+## 3. Geography & Locations
+
+### Central Plains
+*   **Greenstone City**: The neutral hub built around a glowing Emerald Monolith. A melting pot of trade and magic.
+*   **The Whispering Woods**: A dense forest where trees murmur secrets. Home to the Circle of Thorns.
+*   **Crystal Caverns**: Underground labyrinth of mana-rich crystals. Dangerous but lucrative.
+*   **North Road**: Connects Greenstone to Ironhold. Bandit territory.
+
+### Northern Peaks
+*   **Ironhold Fortress**: Impregnable dwarven/human fortress carved into the mountain. HQ of the Iron Vanguard.
+*   **Highland Watch**: Lonely outpost monitoring the Frozen Wastes.
+*   **The Frozen Wastes**: Desolate ice fields north of the mountains. Domain of pure Ice Essence.
+
+### Southern Badlands
+*   **The Scorched Wastes**: Desert of black glass and ash, scarred by ancient fire.
+*   **The Ancient Spire**: A gravity-defying black tower in the wastes, pulsing with red runes.
+*   **Void Rift**: A tear in reality where physics dissolves. The frontline of the war against the Void.
+
+### Eastern Swamps
+*   **The Shadowfen**: Perpetual twilight swamp. Poisonous and home to undead.
+*   **Mistfall Village**: Stilt-village of herbalists and fishermen.
+
+### Western Coast
+*   **Azure Coast**: Beautiful but dangerous beaches.
+*   **Orizon**: The City of Salt and Static, hanging off the world's edge in a dead leviathan's shell.
+
+## 4. Factions
+
+*   **The Iron Vanguard**: Martial philosophy. Believes steel and discipline are the only defense. HQ: Ironhold.
+*   **The Arcane Assembly**: Scholars and researchers of magic. HQ: Floating Spire (implying a connection to Ancient Spire or separate location). Arrogant but knowledgeable.
+*   **The Shadow Syndicate**: Criminal underground running the black market. Leadership: "Circle of Silhouettes".
+*   **Circle of Thorns (Druids)**: Eco-militants defending nature. HQ: Whispering Woods. View industrialization as war.
+*   **The Adventurer's Guild**: Global institution regulating "Delvers". Neutral and indispensable.
+*   **The Merchant's Coalition**: Wealthy trading families controlling the economy. "Gold talks, but Dram screams."
+*   **The Church of the Healer**: Worshippers of "Restoration". Monopoly on high-tier healing.
+*   **Clan Hawksley**: Noble monster hunters. Value the "Silent Hunt" (no magic).
+
+## 5. Magic System
+
+**Concept**: Magic is the manipulation of **Essences**, shards of a shattered creator deity.
+**Mana**: A resource generated by the soul. Depletion leads to "Mana Sickness".
+
+### Base Essences
+*   **Fire**: Combustion, passion.
+*   **Water**: Adaptability, healing.
+*   **Earth**: Stability, defense.
+*   **Air**: Freedom, movement.
+*   **Life**: Vitality, regrowth.
+*   **Death**: Entropy, spirits.
+*   **Light/Hope**: Morale, anti-void.
+*   **Dark/Doom**: Curses, despair.
+*   **Void**: Erasure, non-existence.
+*   **Time**: Causality manipulation (Dangerous).
+*   **Space/Gravity**: Movement, weight.
+
+### Confluences
+Combining essences creates new forms:
+*   Fire + Earth = Magma
+*   Water + Air = Mist/Storm
+*   Earth + Water = Mud/Root? (Context implies Root is distinct but related)
+*   *Note*: Opposing essences (Fire + Water) cause instability (Explosion).
+
+### Ranks of Ascension
+1.  **Iron**: The foundation.
+2.  **Bronze**: Hardening.
+3.  **Silver**: Refining.
+4.  **Gold**: Radiance.
+5.  **Diamond**: Perfection (Near-immortality).
+
+### Artifacts & Items
+*   **Awakening Stones**: Crystallized mana nodes that unlock specific skills.
+*   **Dram**: Standard currency (crystallized mana).
+
+## 6. Bestiary
+
+### Monsters
+*   **Crystal Golems**: Semi-sentient constructs of the Caverns.
+*   **Iron Wolves**: Metal-furred canines of the north.
+*   **Bronze/Crimson Drakes**: Lesser dragons with specialized breaths (Acid/Magma).
+*   **Shadow Stalkers**: Phasing predators of the Fen.
+*   **Void Demons**: Abominations from the Rift.
+*   **Mechanical Knights**: Ancient automata from the Aethel era.
+*   **Spore Walkers**: Fungal hive-minds.
+*   **Sky Whales**: Gentle giants of the upper atmosphere.
+
+### Legendary Creatures
+*   **Noble Phoenix**: Symbol of purity.
+*   **Deep Sea Serpent**: Apex predator of the oceans.
+*   **Skeletal Juggernaut**: Colossal undead amalgamation.
+
+## 7. Characters
+*   **Grand Archon Solus**: Leader of Arcane Assembly. Possibly a construct.
+*   **High King Thorian**: Ruler of Ironhold. Wields "Earth-Shaker".
+*   **Matriarch Verna**: Head of Church of the Healer. Diamond-rank Life Mage.
+*   **Cassian Thorne**: Silver-Rank System Auditor in Orizon.
+*   **The Sentinel**: Guardian of Orizon.
+*   **Lord Alaric Hawksley**: Head of Clan Hawksley.
+*   **Old Man Silas**: "Mad" man in Greenstone who hears the Monolith.
