@@ -484,5 +484,77 @@
         "cooldown": "Medium",
         "cost_type": "Mana",
         "image_prompt": "A Uncommon Awakening Stone named Stone of Corrosion, looking pitted and rusty."
+    },
+    {
+        "name": "Stone of Silence",
+        "function": "Area Denial",
+        "description": "Creates a zone of absolute silence where no magic can be cast.",
+        "rarity": "Rare",
+        "cooldown": "High",
+        "cost_type": "Mana",
+        "image_prompt": "A Rare Awakening Stone named Stone of Silence, absorbing all light and sound."
+    },
+    {
+        "name": "Stone of the Glacier",
+        "function": "Area Attack",
+        "description": "Freezes a massive area, slowing and damaging enemies.",
+        "rarity": "Epic",
+        "cooldown": "High",
+        "cost_type": "Mana",
+        "image_prompt": "A Epic Awakening Stone named Stone of the Glacier, glowing with deep blue cold."
+    },
+    {
+        "name": "Stone of the Inferno",
+        "function": "Area Attack",
+        "description": "Ignites the ground with unquenchable fire.",
+        "rarity": "Epic",
+        "cooldown": "High",
+        "cost_type": "Mana",
+        "image_prompt": "A Epic Awakening Stone named Stone of the Inferno, burning with white heat."
+    },
+    {
+        "name": "Stone of the Horizon",
+        "function": "Mobility",
+        "description": "Allows the user to teleport to any location within line of sight.",
+        "rarity": "Legendary",
+        "cooldown": "High",
+        "cost_type": "Stamina",
+        "image_prompt": "A Legendary Awakening Stone named Stone of the Horizon, swirling with distance and space."
+    },
+    {
+        "name": "Stone of Memory",
+        "function": "Utility",
+        "description": "Restores a recently used ability's cooldown.",
+        "rarity": "Rare",
+        "cooldown": "Medium",
+        "cost_type": "Mana",
+        "image_prompt": "A Rare Awakening Stone named Stone of Memory, glowing with a soft, nostalgic light."
+    },
+    {
+        "name": "Stone of the Soul",
+        "function": "Buff",
+        "description": "Greatly increases Mana regeneration.",
+        "rarity": "Rare",
+        "cooldown": "High",
+        "cost_type": "Health",
+        "image_prompt": "A Rare Awakening Stone named Stone of the Soul, pulsing like a heart."
+    },
+    {
+        "name": "Stone of the Mountain",
+        "function": "Defense",
+        "description": "Makes the user immovable and highly resistant to damage.",
+        "rarity": "Uncommon",
+        "cooldown": "Medium",
+        "cost_type": "Stamina",
+        "image_prompt": "A Uncommon Awakening Stone named Stone of the Mountain, heavy and solid rock."
+    },
+    {
+        "name": "Stone of the River",
+        "function": "Evasion",
+        "description": "Allows the user to flow around attacks like water.",
+        "rarity": "Uncommon",
+        "cooldown": "Low",
+        "cost_type": "Stamina",
+        "image_prompt": "A Uncommon Awakening Stone named Stone of the River, smooth and fluid."
     }
 ]

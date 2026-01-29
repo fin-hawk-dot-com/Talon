@@ -2070,5 +2070,95 @@
         ],
         "image_prompt": "A dangerous Construct creature known as Oxidized Golem. A massive iron golem covered in thick rust. High fantasy art style, detailed creature design.",
         "description": "A Construct known as Oxidized Golem, a relic of a bygone war, now consumed by rust."
+    },
+    {
+        "name": "Silent Stalker",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 180,
+            "Speed": 260,
+            "Spirit": 150,
+            "Recovery": 140
+        },
+        "xp_reward": 220,
+        "loot_table": [
+            "Silence",
+            "Stone of Silence",
+            "Dark"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Silent Stalker. A faceless humanoid wrapped in bandages that absorbs all sound.",
+        "description": "A Magical Beast known as Silent Stalker that hunts in absolute silence."
+    },
+    {
+        "name": "Glacial Behemoth",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 350,
+            "Speed": 50,
+            "Spirit": 200,
+            "Recovery": 400
+        },
+        "xp_reward": 500,
+        "loot_table": [
+            "Glacier",
+            "Ice",
+            "Stone of the Glacier"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Glacial Behemoth. A massive moving iceberg with frozen blue eyes.",
+        "description": "A Elemental known as Glacial Behemoth that brings winter wherever it goes."
+    },
+    {
+        "name": "Inferno Avatar",
+        "race": "Elemental",
+        "attributes": {
+            "Power": 400,
+            "Speed": 250,
+            "Spirit": 300,
+            "Recovery": 100
+        },
+        "xp_reward": 550,
+        "loot_table": [
+            "Inferno",
+            "Fire",
+            "Stone of the Inferno"
+        ],
+        "image_prompt": "A dangerous Elemental creature known as Inferno Avatar. A humanoid figure made of white-hot plasma.",
+        "description": "A Elemental known as Inferno Avatar representing the destructive wrath of fire."
+    },
+    {
+        "name": "Horizon Strider",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 200,
+            "Speed": 450,
+            "Spirit": 250,
+            "Recovery": 200
+        },
+        "xp_reward": 400,
+        "loot_table": [
+            "Horizon",
+            "Stone of the Horizon",
+            "Dimension"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Horizon Strider. A tall, thin creature with legs that seem to stretch into the distance.",
+        "description": "A Magical Beast known as Horizon Strider that can cross continents in a single step."
+    },
+    {
+        "name": "Memory Eater",
+        "race": "Magical Beast",
+        "attributes": {
+            "Power": 150,
+            "Speed": 200,
+            "Spirit": 400,
+            "Recovery": 150
+        },
+        "xp_reward": 350,
+        "loot_table": [
+            "Memory",
+            "Stone of Memory",
+            "Mind"
+        ],
+        "image_prompt": "A dangerous Magical Beast creature known as Memory Eater. A floating brain-like creature with tentacles of blue light.",
+        "description": "A Magical Beast known as Memory Eater that feeds on the forgotten thoughts of travelers."
     }
 ]
