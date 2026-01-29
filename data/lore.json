@@ -1328,5 +1328,96 @@
         "category": "Magic",
         "text": "The Red Dust, or 'Rust Plague', was a magical affliction that targeted not flesh, but the tools of civilization. It began in the Iron Mines of Oakhaven, where miners found their pickaxes crumbling to dust in their hands. The curse spread to armor, weapons, and even structural beams. It was later discovered to be the result of a rogue Rust Elemental that had been awakened by deep mining operations. The area is now quarantined, as metal dissolves within minutes of entering the zone.",
         "image_prompt": "A pile of rusted weapons and armor crumbling to dust, orange haze."
+    },
+    {
+        "id": "lore_silent_stalker",
+        "title": "Silent Stalker",
+        "category": "Bestiary",
+        "text": "The Silent Stalker is a creature of nightmare. It makes no sound when it moves, breathes, or kills. Bandaged from head to toe, its true form has never been seen. It is drawn to loud noises and chaotic magic. Legends say it is the embodiment of the void's desire for quiet.",
+        "image_prompt": "A faceless humanoid wrapped in bandages that absorbs all sound, dark background."
+    },
+    {
+        "id": "lore_glacial_behemoth",
+        "title": "Glacial Behemoth",
+        "category": "Bestiary",
+        "text": "The Glacial Behemoth is a living mountain of ice. Found in the deepest parts of the Frozen Wastes, it moves with the inevitability of a glacier. Its body is so cold that it freezes the air around it, creating a perpetual blizzard. It is said to carry the souls of those lost to the cold within its crystal heart.",
+        "image_prompt": "A massive moving iceberg with frozen blue eyes, snowy landscape."
+    },
+    {
+        "id": "lore_inferno_avatar",
+        "title": "Inferno Avatar",
+        "category": "Bestiary",
+        "text": "An Inferno Avatar is not born; it is ignited. When a Fire Elemental consumes enough essence to rival the sun, it sheds its physical form and becomes pure plasma. It exists only to burn. It has no malice, only an overwhelming nature to consume fuel. Stopping one requires a deluge of water or the vacuum of space.",
+        "image_prompt": "A humanoid figure made of white-hot plasma, ground melting beneath it."
+    },
+    {
+        "id": "lore_horizon_strider",
+        "title": "Horizon Strider",
+        "category": "Bestiary",
+        "text": "Horizon Striders are creatures of distance. Their legs are impossibly long, and they seem to warp space as they walk. A Strider can cross a continent in a day. They are peaceful unless provoked, but their defensive mechanism is to teleport their attacker into the upper atmosphere. They are believed to be messengers of the gods.",
+        "image_prompt": "A tall, thin creature with legs stretching into the horizon, surreal perspective."
+    },
+    {
+        "id": "lore_memory_eater",
+        "title": "Memory Eater",
+        "category": "Bestiary",
+        "text": "The Memory Eater is a parasite of the mind. It looks like a floating brain with luminous tentacles. It latches onto a victim's head and drains their most cherished memories, leaving them a hollow shell. Survivors often suffer from amnesia or personality shifts. They are attracted to strong emotions, often found near battlefields or lovers' lanes.",
+        "image_prompt": "A floating brain-like creature with tentacles of blue light, latched onto a shadow."
+    },
+    {
+        "id": "lore_essence_silence",
+        "title": "Silence Essence",
+        "category": "Magic",
+        "text": "Silence Essence is the power of negation. It is not just the absence of sound, but the suppression of energy. Mages who wield it can cancel spells mid-cast, mute an entire battlefield, or stop a heart from beating. It is a subtle, dangerous art that requires absolute focus.",
+        "image_prompt": "A sphere of absolute blackness that seems to suck in the surrounding light."
+    },
+    {
+        "id": "lore_essence_glacier",
+        "title": "Glacier Essence",
+        "category": "Magic",
+        "text": "Glacier Essence is the magic of slow, unstoppable force. It combines Ice and Earth. Mages of this path do not rush; they endure. They can freeze time for a split second or crush enemies under the weight of a thousand winters. It is the essence of preservation and permanence.",
+        "image_prompt": "A massive block of blue ice with a mountain trapped inside."
+    },
+    {
+        "id": "lore_essence_inferno",
+        "title": "Inferno Essence",
+        "category": "Magic",
+        "text": "Inferno Essence is Fire pushed to its absolute limit. It burns not just matter, but magic itself. It is volatile and hard to control. Users often burn out their own mana channels, reducing themselves to ash. But for a brief moment, they hold the power of a star.",
+        "image_prompt": "White fire raging in a contained sphere, radiating intense heat."
+    },
+    {
+        "id": "lore_essence_horizon",
+        "title": "Horizon Essence",
+        "category": "Magic",
+        "text": "Horizon Essence is the magic of travel and perspective. It allows one to see what is far away and bring it closer. Masters of this essence can teleport, bend space to make distances irrelevant, or banish enemies to the far side of the world. It is the freedom of the open road made manifest.",
+        "image_prompt": "A line of light separating a blue sky from a golden earth."
+    },
+    {
+        "id": "lore_essence_memory",
+        "title": "Memory Essence",
+        "category": "Magic",
+        "text": "Memory Essence deals with the past. It can restore broken objects to their previous state, heal wounds by 'remembering' the healthy flesh, or drive enemies mad by forcing them to relive their worst traumas. It is a melancholy magic, as the user often feels the weight of everything they touch.",
+        "image_prompt": "Golden threads weaving together to form a complex, glowing web."
+    },
+    {
+        "id": "lore_essence_thorn",
+        "title": "Thorn Essence",
+        "category": "Magic",
+        "text": "Thorn Essence is the defense of nature. It is sharp, painful, and resilient. Mages who use it can grow armor of spiked vines, reflect damage back to attackers, and poison those who draw their blood. It teaches that survival often requires being difficult to swallow.",
+        "image_prompt": "Green vines with wicked black thorns wrapping around a stone."
+    },
+    {
+        "id": "lore_essence_harmony",
+        "title": "Harmony Essence",
+        "category": "Magic",
+        "text": "Harmony Essence is the magic of balance and resonance. It amplifies cooperation and suppresses conflict. A Harmony Mage can link the minds of a party, allowing them to fight as a single unit, or disrupt an enemy's spell by introducing a dissonant note. It is the music of the spheres.",
+        "image_prompt": "Perfectly symmetrical sound waves glowing in multiple colors."
+    },
+    {
+        "id": "lore_essence_rage",
+        "title": "Rage Essence",
+        "category": "Magic",
+        "text": "Rage Essence is raw, unfiltered emotion fueled by Fire. It grants immense physical strength and pain tolerance but clouds the judgment. Berserkers often tap into this essence unconsciously. It is a dangerous tool, as it can turn friends into foes in the heat of battle.",
+        "image_prompt": "A pulsing red aura that looks like a screaming face."
     }
 ]

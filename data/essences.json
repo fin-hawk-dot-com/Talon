@@ -1383,5 +1383,150 @@
             "Water"
         ],
         "image_prompt": "An ethereal essence orb representing Rust. Visual style: Common magic, glowing with orange-brown, gritty, and decaying energy."
+    },
+    {
+        "name": "Silence",
+        "type": "Abstract",
+        "rarity": "Rare",
+        "tags": [
+            "Sound",
+            "Void",
+            "Null"
+        ],
+        "description": "The essence of absolute quiet.",
+        "opposite": "Sound",
+        "synergy": [
+            "Void",
+            "Dark",
+            "Shadow"
+        ],
+        "image_prompt": "An ethereal essence orb representing Silence. Visual style: Rare magic, absorbing all sound."
+    },
+    {
+        "name": "Glacier",
+        "type": "Elemental",
+        "rarity": "Epic",
+        "tags": [
+            "Ice",
+            "Earth",
+            "Cold"
+        ],
+        "description": "The essence of moving ice.",
+        "opposite": "Inferno",
+        "synergy": [
+            "Ice",
+            "Water",
+            "Earth",
+            "Cold"
+        ],
+        "image_prompt": "An ethereal essence orb representing Glacier. Visual style: Epic magic, massive crushing ice."
+    },
+    {
+        "name": "Inferno",
+        "type": "Elemental",
+        "rarity": "Epic",
+        "tags": [
+            "Fire",
+            "Heat",
+            "Destruction"
+        ],
+        "description": "The essence of unquenchable fire.",
+        "opposite": "Glacier",
+        "synergy": [
+            "Fire",
+            "Chaos",
+            "Potent"
+        ],
+        "image_prompt": "An ethereal essence orb representing Inferno. Visual style: Epic magic, raging white fire."
+    },
+    {
+        "name": "Horizon",
+        "type": "Abstract",
+        "rarity": "Legendary",
+        "tags": [
+            "Space",
+            "Distance",
+            "Travel"
+        ],
+        "description": "The essence of the far distance.",
+        "opposite": "Wall",
+        "synergy": [
+            "Dimension",
+            "Sky",
+            "Light"
+        ],
+        "image_prompt": "An ethereal essence orb representing Horizon. Visual style: Legendary magic, a line separating sky and earth."
+    },
+    {
+        "name": "Memory",
+        "type": "Abstract",
+        "rarity": "Rare",
+        "tags": [
+            "Mind",
+            "Time",
+            "Record"
+        ],
+        "description": "The essence of remembrance.",
+        "opposite": "Void",
+        "synergy": [
+            "Mind",
+            "Time",
+            "Knowledge"
+        ],
+        "image_prompt": "An ethereal essence orb representing Memory. Visual style: Rare magic, golden threads of thought."
+    },
+    {
+        "name": "Thorn",
+        "type": "Base",
+        "rarity": "Uncommon",
+        "tags": [
+            "Nature",
+            "Pain",
+            "Defense"
+        ],
+        "description": "The essence of painful growth.",
+        "opposite": "Soft",
+        "synergy": [
+            "Nature",
+            "Poison",
+            "Blood"
+        ],
+        "image_prompt": "An ethereal essence orb representing Thorn. Visual style: Uncommon magic, sharp green spikes."
+    },
+    {
+        "name": "Harmony",
+        "type": "Abstract",
+        "rarity": "Rare",
+        "tags": [
+            "Sound",
+            "Order",
+            "Peace"
+        ],
+        "description": "The essence of perfect resonance.",
+        "opposite": "Chaos",
+        "synergy": [
+            "Sound",
+            "Light",
+            "Order"
+        ],
+        "image_prompt": "An ethereal essence orb representing Harmony. Visual style: Rare magic, perfectly symmetrical sound waves."
+    },
+    {
+        "name": "Rage",
+        "type": "Abstract",
+        "rarity": "Uncommon",
+        "tags": [
+            "Emotion",
+            "Fire",
+            "Power"
+        ],
+        "description": "The essence of pure anger.",
+        "opposite": "Peace",
+        "synergy": [
+            "Fire",
+            "Blood",
+            "Might"
+        ],
+        "image_prompt": "An ethereal essence orb representing Rage. Visual style: Uncommon magic, red pulsing energy."
     }
 ]
