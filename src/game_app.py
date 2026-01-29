@@ -167,7 +167,71 @@ class GameApp:
         default_font = font.nametofont("TkDefaultFont")
         default_font.configure(size=10)
 
-        self.style.configure("TButton", padding=6, font=('Helvetica', 10))
+        # Base Button Style (Tile-like)
+        self.style.configure("TButton",
+                             background="#333333",
+                             foreground="#ffffff",
+                             bordercolor="#555555",
+                             lightcolor="#666666",
+                             darkcolor="#111111",
+                             relief="raised",
+                             borderwidth=3,
+                             padding=6,
+                             font=('Helvetica', 10, 'bold'))
+        self.style.map("TButton",
+                       background=[('active', '#444444'), ('pressed', '#222222')],
+                       relief=[('pressed', 'sunken')])
+
+        # Combat Style (Red)
+        self.style.configure("Combat.TButton",
+                             background="#550000",
+                             foreground="#ffcccc",
+                             bordercolor="#ff3333",
+                             lightcolor="#ff6666",
+                             darkcolor="#330000")
+        self.style.map("Combat.TButton",
+                       background=[('active', '#770000'), ('pressed', '#330000')])
+
+        # Interact Style (Blue)
+        self.style.configure("Interact.TButton",
+                             background="#002255",
+                             foreground="#ccddff",
+                             bordercolor="#3388ff",
+                             lightcolor="#66aaff",
+                             darkcolor="#001133")
+        self.style.map("Interact.TButton",
+                       background=[('active', '#003377'), ('pressed', '#001133')])
+
+        # Growth Style (Green)
+        self.style.configure("Growth.TButton",
+                             background="#003300",
+                             foreground="#ccffcc",
+                             bordercolor="#33ff33",
+                             lightcolor="#66ff66",
+                             darkcolor="#002200")
+        self.style.map("Growth.TButton",
+                       background=[('active', '#005500'), ('pressed', '#002200')])
+
+        # Value Style (Gold/Yellow)
+        self.style.configure("Value.TButton",
+                             background="#443300",
+                             foreground="#ffffcc",
+                             bordercolor="#ffcc00",
+                             lightcolor="#ffee66",
+                             darkcolor="#221100")
+        self.style.map("Value.TButton",
+                       background=[('active', '#664400'), ('pressed', '#221100')])
+
+        # System Style (Grey/Neutral)
+        self.style.configure("System.TButton",
+                             background="#222222",
+                             foreground="#aaaaaa",
+                             bordercolor="#666666",
+                             lightcolor="#888888",
+                             darkcolor="#111111")
+        self.style.map("System.TButton",
+                       background=[('active', '#333333'), ('pressed', '#111111')])
+
         self.style.configure("Title.TLabel", font=('Helvetica', 18, 'bold'))
         self.style.configure("Status.TLabel", font=('Consolas', 10))
 
@@ -303,8 +367,23 @@ class GameApp:
         for widget in self.action_frame.winfo_children():
             widget.destroy()
 
+    def get_button_style(self, text):
+        t = text.lower()
+        if any(x in t for x in ["attack", "fight", "flee", "combat", "encounter", "ability"]):
+            return "Combat.TButton"
+        if any(x in t for x in ["inspect", "talk", "interact", "look", "bond", "absorb", "quest", "stage", "start"]):
+            return "Interact.TButton"
+        if any(x in t for x in ["train", "craft", "gather", "rest", "recover", "heal", "consume", "practice", "rank up"]):
+            return "Growth.TButton"
+        if any(x in t for x in ["inventory", "buy", "sell", "market", "trade", "loot", "awaken", "stone", "item", "found"]):
+            return "Value.TButton"
+        if any(x in t for x in ["exit", "back", "cancel", "save", "load", "menu", "game"]):
+            return "System.TButton"
+        return "TButton"
+
     def add_action_button(self, text, command):
-        btn = ttk.Button(self.action_frame, text=text, command=command)
+        style = self.get_button_style(text)
+        btn = ttk.Button(self.action_frame, text=text, command=command, style=style)
         btn.pack(fill=tk.X, pady=2)
         return btn
 
@@ -414,15 +493,15 @@ class GameApp:
 
         # Actions based on type
         if hasattr(item, 'type'): # Essence
-             ttk.Button(self.inv_action_frame, text="Absorb (Bond)", command=lambda: self.absorb_essence_dialog(idx)).pack(fill=tk.X, pady=2)
+             ttk.Button(self.inv_action_frame, text="Absorb (Bond)", command=lambda: self.absorb_essence_dialog(idx), style="Interact.TButton").pack(fill=tk.X, pady=2)
         elif hasattr(item, 'function'): # Stone
-             ttk.Button(self.inv_action_frame, text="Use (Awaken)", command=self.show_awaken_options).pack(fill=tk.X, pady=2)
+             ttk.Button(self.inv_action_frame, text="Use (Awaken)", command=self.show_awaken_options, style="Value.TButton").pack(fill=tk.X, pady=2)
         elif hasattr(item, 'effect_type'): # Consumable
-             ttk.Button(self.inv_action_frame, text="Consume", command=lambda: self.perform_consume(idx)).pack(fill=tk.X, pady=2)
+             ttk.Button(self.inv_action_frame, text="Consume", command=lambda: self.perform_consume(idx), style="Growth.TButton").pack(fill=tk.X, pady=2)
 
         # Generic Inspect
         if hasattr(item, 'description'):
-             ttk.Button(self.inv_action_frame, text="Inspect", command=lambda: self.log(f"{item.name}: {item.description}", "info")).pack(fill=tk.X, pady=2)
+             ttk.Button(self.inv_action_frame, text="Inspect", command=lambda: self.log(f"{item.name}: {item.description}", "info"), style="Interact.TButton").pack(fill=tk.X, pady=2)
 
     def update_quest_tab(self):
         if not self.engine.character: return
