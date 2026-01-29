@@ -237,13 +237,13 @@
 *   **Location**: [Southern Badlands - The Singing Dunes]
 *   **Characters**: Player
 *   **Visual Description**:
-    *   The desert is a golden ocean of standing waves. The sand doesn't shift; it vibrates.
-    *   The sky here is a bruised violet, and the clouds form perfect concentric circles above the Spire.
-    *   The "Hum" is so loud it rattles the Player's HUD, causing static interference.
+    *   The desert is a golden ocean of standing waves, frozen in cymatic patterns. The sand doesn't shift; it vibrates with a frequency that rattles the Player's teeth.
+    *   The sky here is a bruised violet, and the clouds form perfect concentric circles above the Spire, like ripples in a pond.
+    *   The "Hum" is visceral—a physical pressure pushing against the eardrums. It causes the Player's HUD to fuzz with static, text characters briefly flipping to alien glyphs.
 *   **Action/Dialogue**:
     *   **System Notification**: `Auditory Hallucinations Detected. Reality Stability: 85%.`
-    *   Player must traverse the dunes by timing movements with the "silence" between sonic pulses. Moving during a pulse causes damage (`Sonic Shear`).
-    *   **Environmental Storytelling**: Scattered armor of previous adventurers has been vibrated into dust, leaving only the heaviest metals behind.
+    *   Player must traverse the dunes by timing movements with the "silence" between sonic pulses. Moving during a pulse causes `Sonic Shear` damage (visualized as the screen cracking).
+    *   **Environmental Storytelling**: Scattered armor of previous adventurers has been vibrated into fine metallic dust. A skeletal hand still grips a sword hilt, but the blade has been sonically eroded into a needle.
 
 ### Scene 2: The Conductor's Baton
 *   **Location**: [The Ancient Spire - The Foyer of Echoes]
@@ -262,9 +262,10 @@
 *   **Location**: [The Ancient Spire - Inner Sanctum]
 *   **Characters**: Player
 *   **Visual Description**:
-    *   The interior is M.C. Escher-esque. Staircases lead to ceilings.
-    *   "System Code" floats in the air—literal strings of glowing text like `Gravity = True` or `Time_Flow = 0.5`.
-    *   The Player can interact with these nodes to solve puzzles (e.g., turning gravity "off" to cross a chasm).
+    *   The interior violates Euclidean geometry. Staircases wrap around pillars like DNA strands, leading to platforms that are simultaneously above and below the player.
+    *   Water from a fountain flows *upwards*, spiraling into a ceiling that mirrors the floor.
+    *   "System Code" permeates the air—literal strings of glowing gold text like `Gravity = True` or `Time_Flow = 0.5` hang like spiderwebs.
+    *   The Player can interact with these nodes to solve puzzles (e.g., toggling a boolean to walk on walls).
 *   **Action/Dialogue**:
     *   **Puzzle**: The path to the Anchor is blocked by a "Logic Gate." Player must align three rotating rings representing Mind, Body, and Soul to match the Spire's frequency.
     *   **Lore Found**: A stone tablet reveals the Spire wasn't built to *protect* the world, but to *contain* it—a cage for the "Human Experiment."
@@ -280,9 +281,10 @@
 *   **Characters**: Player, Vane, The Anchor (A massive, throbbing crystalline heart)
 *   **Visual Description**:
     *   Vane strikes the Anchor with his baton.
-    *   Instead of a clear tone, a sound like tearing metal erupts.
-    *   The "System Code" on the walls turns red: `ERROR. NULL REFERENCE EXCEPTION.`
-    *   The Harmonists don't die; they *unravel*. Their 3D models flatten into 2D sprites, then dissolve into pixels.
+    *   Instead of a clear tone, a sound like tearing metal—a cosmic screech—erupts, shattering the UI.
+    *   The "System Code" on the walls bleeds red: `ERROR. NULL REFERENCE EXCEPTION. FATAL EXCEPTION.`
+    *   The Harmonists don't die; they *glitch*. Their limbs stretch infinitely into the distance, their textures swap with the floor texture, and their screams loop in a stuttering audio buffer (s-s-screa-ea-m).
+    *   Finally, they flatten into paper-thin 2D sprites before pixelating into nothingness.
 *   **Action/Dialogue**:
     *   **Vane**: "No! The math was perfect! 1 + 1 = 2! Why is it returning NULL?!"
     *   **The Void**: A tear opens inside the Anchor. Not black, but a color that hurts to look at.
