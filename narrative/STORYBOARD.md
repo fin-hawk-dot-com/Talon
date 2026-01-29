@@ -83,6 +83,7 @@
     *   Player chooses **Yes**.
     *   Green energy flows from the essence into the Player's arm.
     *   *System Notification*: `New Ability Unlocked: Thorn Strike (Iron Rank)`.
+    *   *Lore Unlocked*: [Chronicle IX: The Awakening], [The System]
     *   Player looks at their hand, clenching it. The journey begins.
 
 ### Scene 7: Return to the Guild
@@ -172,6 +173,7 @@
     *   Player feels a debuff: `Static Interference (Mana Regen slowed)`.
     *   A citizen bumps into the player.
     *   **Citizen**: "Watch your step, mainlander. The Luminous Deep is hungry today."
+    *   *Lore Unlocked*: [Orizon, City of Salt and Static]
 
 ### Scene 3: The Auditor
 *   **Location**: [Orizon - The Spire Authority Office]
@@ -202,6 +204,7 @@
     *   In Greenstone, the Monolith flickers. In Orizon, the lights go out.
 *   **Action/Dialogue**:
     *   *Narrator*: " The Seal is not just cracked. It is dissolving."
+    *   *Lore Unlocked*: [The Void Rift]
 
 ### Scene 2: Breach at the Outpost
 *   **Location**: [Highland Watch - Northern Peaks]
@@ -267,6 +270,11 @@
     *   "System Code" permeates the air—literal strings of glowing gold text like `Gravity = True` or `Time_Flow = 0.5` hang like spiderwebs.
     *   The Player can interact with these nodes to solve puzzles (e.g., toggling a boolean to walk on walls).
 *   **Action/Dialogue**:
+    *   **Vane**: "This 'Anchor' limits us. It defines what is 'real'. If we adjust its frequency, we can erase the Void. We can erase *pain*."
+    *   **Player**: "You'll erase free will."
+    *   **Vane**: "A small price for eternal harmony."
+    *   *Lore Unlocked*: [The Reality Anchor]
+    *   *Conflict*: Vane initiates the ritual. The Spire begins to scream.
     *   **Puzzle**: The path to the Anchor is blocked by a "Logic Gate." Player must align three rotating rings representing Mind, Body, and Soul to match the Spire's frequency.
     *   **Lore Found**: A stone tablet reveals the Spire wasn't built to *protect* the world, but to *contain* it—a cage for the "Human Experiment."
 
@@ -286,6 +294,11 @@
     *   The Harmonists don't die; they *glitch*. Their limbs stretch infinitely into the distance, their textures swap with the floor texture, and their screams loop in a stuttering audio buffer (s-s-screa-ea-m).
     *   Finally, they flatten into paper-thin 2D sprites before pixelating into nothingness.
 *   **Action/Dialogue**:
+    *   **Vane**: "No! The pitch is perfect! Why—"
+    *   **System Notification**: `Critical Error. External Signal Detected. Source: The Void.`
+    *   **Player**: "It's not noise, Vane. It's a counter-song!"
+    *   Vane is consumed by the resonance, becoming the "Avatar of Dissonance" (Boss Fight).
+    *   *Lore Unlocked*: [Avatar of Dissonance]
     *   **Vane**: "No! The math was perfect! 1 + 1 = 2! Why is it returning NULL?!"
     *   **The Void**: A tear opens inside the Anchor. Not black, but a color that hurts to look at.
     *   **Player**: "You tried to divide by zero, Vane!"
@@ -328,6 +341,12 @@
     *   The "Delete Line" is consuming the horizon. Greenstone City is erased in the distance.
     *   The only safe spot is the platform the Player stands on.
 *   **Action/Dialogue**:
+    *   **Solus**: "We cannot repair the Anchor from here. The tether has snapped to the *other side*."
+    *   **Player**: "The Void?"
+    *   **Solus**: "To save your world, you must leave it. You must dive into the Rift, find the Counter-Anchor in the Void, and re-bind it."
+    *   **Player**: "That's suicide."
+    *   **Solus**: "Staying is extinction."
+    *   *Lore Unlocked*: [The Counter-Anchor]
     *   **Solus**: "You have absorbed more Essence than any mortal. Your soul has mass. If you dive into the Rift... into the Heart of the Void... you might act as a living counter-weight."
     *   **Player**: "And if I don't?"
     *   **Solus**: "Then the simulation ends. We all become null."

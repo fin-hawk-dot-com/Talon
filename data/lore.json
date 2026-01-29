@@ -1419,5 +1419,40 @@
         "category": "Magic",
         "text": "Rage Essence is raw, unfiltered emotion fueled by Fire. It grants immense physical strength and pain tolerance but clouds the judgment. Berserkers often tap into this essence unconsciously. It is a dangerous tool, as it can turn friends into foes in the heat of battle.",
         "image_prompt": "A pulsing red aura that looks like a screaming face."
+    },
+    {
+        "id": "lore_highland_watch",
+        "title": "Highland Watch",
+        "category": "Location",
+        "text": "Highland Watch is the last bastion of civilization before the Frozen Wastes. Perched on a jagged cliff edge, it is a fortress of grey stone and frozen timber. Its fires are never allowed to go out, serving as a beacon for rangers lost in the blinding snow. The soldiers stationed here are hardened veterans, fighting a constant war against Ice Wraiths and the creeping cold that seeks to freeze the blood in their veins. It is said that the Watch never sleeps, for the Wastes are always listening.",
+        "image_prompt": "A lonely fortress on a snowy cliff edge, warm light from windows, blizzard outside."
+    },
+    {
+        "id": "lore_the_anchor",
+        "title": "The Reality Anchor",
+        "category": "Artifacts",
+        "text": "The Reality Anchor is a massive, throbbing crystal heart located at the center of the Ancient Spire. It acts as a metaphysical pin, holding the laws of physics in place against the entropy of the Void. It generates a stabilizing field that defines concepts like 'gravity', 'time', and 'matter' within its radius. Without the Anchor, reality would dissolve into a chaotic soup of raw energy. The Harmonists seek to retune it, believing they can rewrite the laws of the world to eliminate suffering.",
+        "image_prompt": "A giant pulsating crystal heart suspended in a chamber, glowing runes, geometric stabilizers."
+    },
+    {
+        "id": "lore_avatar_dissonance",
+        "title": "Avatar of Dissonance",
+        "category": "Bestiary",
+        "text": "The Avatar of Dissonance is the corrupted form of Professor Vane, twisted by the failure of his own ritual. Fused with the chaotic energies of the Void and the shattered harmonics of the Spire, he is a being of glitching reality. His physical form shifts constantly, and his voice is a chorus of screams. He commands the power of 'Noise', a destructive anti-sound that unravels matter. He is a tragic figure, a man who sought perfection and found only madness.",
+        "image_prompt": "A humanoid figure glitching like a bad video signal, screaming faces, purple and static effects."
+    },
+    {
+        "id": "lore_counter_anchor",
+        "title": "The Counter-Anchor",
+        "category": "Artifacts",
+        "text": "The Counter-Anchor is a theoretical construct located deep within the Void Rift. If the Reality Anchor pulls reality together, the Counter-Anchor pushes it apart. Archon Solus theorizes that to save the world from the expanding Rift, one must not just repair the Anchor, but travel to the Void and destroy or re-bind the Counter-Anchor. It is a suicide mission, as the Counter-Anchor exists in a realm where the concept of 'survival' does not apply.",
+        "image_prompt": "A dark, inverted crystal structure floating in a purple void, absorbing light."
+    },
+    {
+        "id": "lore_spire_authority",
+        "title": "The Spire Authority",
+        "category": "Faction",
+        "text": "The Spire Authority is the ruling council of Orizon. They are technocrats who view the city not as a home, but as a machine. They manage the 'Ascension' protocols and the distribution of energy from the Luminous Deep. Cold and calculating, they believe that individual lives are a small price to pay for the survival of the collective. They are led by the High Administrator, whose identity is a closely guarded secret.",
+        "image_prompt": "A council of figures in high-tech robes, faces hidden by screens, cold blue lighting."
     }
 ]
