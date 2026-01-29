@@ -4,7 +4,7 @@
         "description": "A bustling city built around a massive, glowing green stone structure.",
         "type": "City",
         "region": "Central Plains",
-        "danger_rank": "Iron",
+        "danger_rank": "Normal",
         "connected_locations": [
             "The Whispering Woods",
             "Crystal Caverns",
@@ -73,7 +73,7 @@
         "description": "A dense forest where the trees seem to murmur secrets to those who listen.",
         "type": "Wilderness",
         "region": "Central Plains",
-        "danger_rank": "Bronze",
+        "danger_rank": "Iron",
         "connected_locations": [
             "Greenstone City",
             "The Shadowfen"
@@ -561,7 +561,7 @@
         "description": "A well-traveled road leading north towards the mountains. Bandits often ambush careless travelers here.",
         "type": "Wilderness",
         "region": "Central Plains",
-        "danger_rank": "Iron",
+        "danger_rank": "Normal",
         "connected_locations": [
             "Greenstone City",
             "Ironhold"
@@ -582,7 +582,7 @@
         "description": "A dusty intersection where the grass begins to fade into the scorched earth of the badlands.",
         "type": "Wilderness",
         "region": "Central Plains",
-        "danger_rank": "Iron",
+        "danger_rank": "Normal",
         "connected_locations": [
             "Greenstone City",
             "The Scorched Wastes"
@@ -603,7 +603,7 @@
         "description": "A narrow pass cutting through the hills towards the coast. The smell of salt is faint in the air.",
         "type": "Wilderness",
         "region": "Central Plains",
-        "danger_rank": "Iron",
+        "danger_rank": "Normal",
         "connected_locations": [
             "Greenstone City",
             "Azure Coast"
