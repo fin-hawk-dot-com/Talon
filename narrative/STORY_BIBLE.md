@@ -50,7 +50,9 @@ An interface that overlays reality for all Awakened individuals. It quantifies a
 
 ### Southern Badlands
 *   **The Scorched Wastes**: Desert of black glass and ash, scarred by ancient fire.
-*   **The Ancient Spire**: A structure that predates the Aethel civilization. It acts as a "Reality Anchor," a cosmic pin holding the dimension's physical laws in place against the entropy of the Void. It is a non-Euclidean dungeon where up is down, and the System's code is visible as glowing glyphs on the walls.
+*   **The Ancient Spire**: Known to scholars as "The Needle," this structure predates even the Aethel civilization, likely built by the Primordials or the "Architects" of the First Age. It is not merely a building, but a **Cosmic Instrument**—a tuning fork that vibrates at the frequency of physical law. It acts as a "Reality Anchor," stitching the fabric of the 3rd dimension to the underlying mana-stream.
+    *   **The Geometry of Silence**: Inside, the Spire is non-Euclidean. Corridors loop back on themselves, gravity is subjective, and "Down" is simply towards the strongest mana-source. The walls pulse with glowing glyphs—raw System code visible to the naked eye.
+    *   **The Echoes**: Time does not flow linearly here. Explorers report meeting future versions of themselves or seeing "ghosts" of events that haven't happened yet.
 *   **Void Rift**: A tear in reality where physics dissolves. The frontline of the war against the Void.
 *   **The Singing Dunes**: A golden desert that hums with sonic energy.
 *   **The Shifting Expanse**: A region of chaotic instability where terrain reshapes daily.
@@ -77,7 +79,10 @@ An interface that overlays reality for all Awakened individuals. It quantifies a
 *   **The Merchant's Coalition**: Wealthy trading families controlling the economy. "Gold talks, but Dram screams."
 *   **The Church of the Healer**: Worshippers of "Restoration". Monopoly on high-tier healing.
 *   **Clan Hawksley**: Noble monster hunters who practice "The Silent Hunt" (no magic).
-*   **The Harmonists**: A philosophical movement led by Grand Conductor Vane. They view existence as a "Great Song" and the Void as "Noise." They seek to use sonic resonance to "tune" the world and eliminate conflict. However, a radical faction known as "The Composers" wants to rewrite the System's code entirely to create a utopia, regardless of the cost to free will.
+*   **The Harmonists**: More than a faction, they are "Audio-Engineers of Reality." Led by **Grand Conductor Vane**, they believe the System is a musical score and the world is the orchestra. To them, conflict, pain, and the Void are "Dissonance"—errors in the performance.
+    *   **Philosophy (The Great Score)**: They seek to "retune" reality to a state of perfect harmony. In their utopia, free will is removed because individual choice creates "improvisational chaos."
+    *   **Tech**: They wield "Resonance Weaponry"—tuning forks that shatter steel, bells that silence magic, and "Hush-Grenades" that create zones of absolute physics-nullifying silence.
+    *   **The Composers**: A radical inner circle that wants to rewrite the System's source code (The Score) to edit out the Void entirely, even if it means erasing half of existence to "balance the mix."
 *   **Watchers of the North**: Secretive rangers patrolling the frozen borders.
 *   **The Mist Walkers**: Spies and scouts specializing in Mist/Veil magic.
 *   **College of Silver Strings**: Bards using sonic resonance to manipulate the System.
@@ -159,5 +164,5 @@ Fire, Water, Earth, Air, Life, Death, Light/Hope, Dark/Doom, Void.
 *   **The Sentinel**: Guardian of Orizon. Immobile Diamond Ranker.
 *   **Lord Alaric Hawksley**: Head of Clan Hawksley.
 *   **Old Man Silas**: "Mad" man in Greenstone who hears the Monolith.
-*   **Professor Vane**: Dean of Acoustics, leader of the Harmonists.
+*   **Grand Conductor Vane**: Formerly a brilliant professor of Acoustics, Vane lost his wife and daughter to a chaotic "Wild Magic" surge during the Awakening. Broken by the randomness of their deaths, he became obsessed with Order. He is a tragic antagonist who believes he is saving the world from the "noise" of tragedy. He is always surrounded by a faint, perfect hum.
 *   **Commodore Elara**: Deceased hero of Orizon.
