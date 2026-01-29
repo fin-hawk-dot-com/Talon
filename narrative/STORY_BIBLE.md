@@ -149,6 +149,8 @@ Fire, Water, Earth, Air, Life, Death, Light/Hope, Dark/Doom, Void.
 *   **The Star Phial**: Captures starlight to repel shadow.
 *   **Spider's Bane**: Elven dagger glowing near Void/Orcs.
 *   **Null-Silk**: Fabric that dampens magic.
+*   **The Reality Anchor**: A crystal heart in the Ancient Spire that stabilizes physical laws.
+*   **The Counter-Anchor**: A theoretical Void-construct that pushes reality apart, existing within the Rift.
 
 ## 9. Characters
 

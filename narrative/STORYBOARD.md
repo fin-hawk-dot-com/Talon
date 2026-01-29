@@ -83,6 +83,7 @@
     *   Player chooses **Yes**.
     *   Green energy flows from the essence into the Player's arm.
     *   *System Notification*: `New Ability Unlocked: Thorn Strike (Iron Rank)`.
+    *   *Lore Unlocked*: [Chronicle IX: The Awakening], [The System]
     *   Player looks at their hand, clenching it. The journey begins.
 
 ### Scene 7: Return to the Guild
@@ -172,6 +173,7 @@
     *   Player feels a debuff: `Static Interference (Mana Regen slowed)`.
     *   A citizen bumps into the player.
     *   **Citizen**: "Watch your step, mainlander. The Luminous Deep is hungry today."
+    *   *Lore Unlocked*: [Orizon, City of Salt and Static]
 
 ### Scene 3: The Auditor
 *   **Location**: [Orizon - The Spire Authority Office]
@@ -202,6 +204,7 @@
     *   In Greenstone, the Monolith flickers. In Orizon, the lights go out.
 *   **Action/Dialogue**:
     *   *Narrator*: " The Seal is not just cracked. It is dissolving."
+    *   *Lore Unlocked*: [The Void Rift]
 
 ### Scene 2: Breach at the Outpost
 *   **Location**: [Highland Watch - Northern Peaks]
@@ -268,6 +271,7 @@
     *   **Vane**: "This 'Anchor' limits us. It defines what is 'real'. If we adjust its frequency, we can erase the Void. We can erase *pain*."
     *   **Player**: "You'll erase free will."
     *   **Vane**: "A small price for eternal harmony."
+    *   *Lore Unlocked*: [The Reality Anchor]
     *   *Conflict*: Vane initiates the ritual. The Spire begins to scream.
 
 ---
@@ -288,6 +292,7 @@
     *   **System Notification**: `Critical Error. External Signal Detected. Source: The Void.`
     *   **Player**: "It's not noise, Vane. It's a counter-song!"
     *   Vane is consumed by the resonance, becoming the "Avatar of Dissonance" (Boss Fight).
+    *   *Lore Unlocked*: [Avatar of Dissonance]
 
 ### Scene 2: The Collapse
 *   **Location**: [The Ancient Spire - Collapsing Interior]
@@ -327,6 +332,7 @@
     *   **Solus**: "To save your world, you must leave it. You must dive into the Rift, find the Counter-Anchor in the Void, and re-bind it."
     *   **Player**: "That's suicide."
     *   **Solus**: "Staying is extinction."
+    *   *Lore Unlocked*: [The Counter-Anchor]
 
 ### Scene 3: Into the Abyss
 *   **Location**: [The Void Rift]

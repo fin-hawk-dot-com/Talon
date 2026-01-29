@@ -6,7 +6,9 @@
         "type": "Main",
         "starting_stage_id": "stage_1",
         "rewards": [
-            "Starter Essence"
+            "Starter Essence",
+            "Lore: Chronicle IX: The Awakening",
+            "Lore: The System"
         ],
         "stages": {
             "stage_1": {
@@ -69,7 +71,8 @@
         "type": "Main",
         "starting_stage_id": "stage_1",
         "rewards": [
-            "Rare Awakening Stone"
+            "Rare Awakening Stone",
+            "Lore: Monsters"
         ],
         "stages": {
             "stage_1": {
@@ -132,7 +135,8 @@
         "type": "Main",
         "starting_stage_id": "stage_1",
         "rewards": [
-            "Confluence Essence"
+            "Confluence Essence",
+            "Lore: The Lost Civilization"
         ],
         "stages": {
             "stage_1": {
@@ -536,7 +540,8 @@
         "starting_stage_id": "stage_1",
         "rewards": [
             "Void Essence",
-            "Stone of the Echo"
+            "Stone of the Echo",
+            "Lore: The Void Rift"
         ],
         "stages": {
             "stage_1": {
@@ -637,7 +642,8 @@
         "starting_stage_id": "stage_1",
         "rewards": [
             "Wind Essence",
-            "Stone of the Wall"
+            "Stone of the Wall",
+            "Lore: Highland Watch"
         ],
         "stages": {
             "stage_1": {
@@ -839,7 +845,8 @@
         "starting_stage_id": "stage_1",
         "rewards": [
             "Spirit Coins",
-            "Null-Silk Cloak"
+            "Null-Silk Cloak",
+            "Lore: Orizon, City of Salt and Static"
         ],
         "stages": {
             "stage_1": {
@@ -936,7 +943,8 @@
         "starting_stage_id": "stage_1",
         "rewards": [
             "Mind Shield Trait",
-            "Reputation"
+            "Reputation",
+            "Lore: The Silent Hum"
         ],
         "stages": {
             "stage_1": {
@@ -1128,7 +1136,8 @@
         "starting_stage_id": "stage_1",
         "rewards": [
             "Reputation",
-            "Epic Awakening Stone"
+            "Epic Awakening Stone",
+            "Lore: Clan Hawksley"
         ],
         "stages": {
             "stage_1": {
